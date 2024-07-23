@@ -46,7 +46,8 @@
     <div class="price__regular mlmlmlm">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }}
+        {{ money_price | replace: "From", "Options Starting From" }}
+
       </span>
     </div>
     <div class="price__sale{% if show_in_card %} flex-column{% endif %}">
