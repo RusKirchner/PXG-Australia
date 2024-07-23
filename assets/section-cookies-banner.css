@@ -1,0 +1,27 @@
+.cookies-banner {
+  position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	transform: translateY(calc(100% + 3rem));
+	transition: transform 300ms ease;
+	z-index: 2;
+	box-shadow: 0px 0px 5px 0px rgb(var(--color-foreground), 0.15);
+	-webkit-box-shadow: 0px 0px 5px 0px rgb(var(--color-foreground), 0.15);
+	-moz-box-shadow: 0px 0px 5px 0px rgb(var(--color-foreground), 0.15);
+}
+
+.cookies-banner.open {
+	transform: translateY(0);
+	border-radius: 1rem;
+}
+
+.cookies-banner__inner {
+	width: min(calc(100vw - 3rem), 50rem);
+	padding: 2.3rem 2.7rem;
+	border-radius: 1rem;
+}
+
+.cookies-banner__content {
+	max-height: 10rem;
+	overflow-y: auto;
+}

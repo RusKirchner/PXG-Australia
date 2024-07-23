@@ -1,0 +1,95 @@
+.ba-image-slider {
+  height: var(--image-height);
+}
+
+.ba-image-slider__image--after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: inset(0 0 0 var(--drag-position));
+}
+
+.ba-image-slider__image--after:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(var(--color-background));
+}
+
+.ba-image-slider__drag-slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.ba-image-slider__drag-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: var(--image-height);
+  background: rgb(var(--drag-cursor-background));
+  cursor: pointer;
+}
+
+.ba-image-slider__drag-slider::-moz-range-thumb {
+  width: 6px;
+  height: var(--image-height);
+  background: rgb(var(--drag-cursor-background));
+  cursor: pointer;
+}
+
+.ba-image-slider__drag-slider:focus-visible {
+  outline: none;
+}
+
+.ba-image-slider__drag-slider:focus-visible + .ba-image-slider__slider-button {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+}
+
+.ba-image-slider__slider-button {
+  --button-width: 3rem;
+  --icon-width: 
+  pointer-events: none;
+  position: absolute;
+  width: var(--button-width);
+  height: var(--button-width);
+  border-radius: 50%;
+  background-color: rgb(var(--drag-cursor-background));
+  left: min(max(calc(var(--drag-position) - (var(--button-width) / 2)), 0px), calc(100% - var(--button-width)));
+  top: calc(50% - (var(--button-width) / 2));
+  color: rgb(var(--drag-cursor-foreground));
+}
+
+.ba-image-slider__text {
+  position: absolute;
+}
+
+.ba-image-slider__text--before {
+  left: var(--text-position-value);
+}
+
+.ba-image-slider__text--after {
+  right: var(--text-position-value);
+}
+
+@media screen and (max-width: 749px) {
+  .ba-image-slider__slider-button .icon {
+    min-width: 1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .ba-image-slider__slider-button {
+    --button-width: 4.4rem;
+  }
+}

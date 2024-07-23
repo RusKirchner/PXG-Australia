@@ -1,0 +1,327 @@
+<link rel="stylesheet" href="{{ 'section-scrolling-text.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>
+  {{ 'section-scrolling-text.css' | asset_url | stylesheet_tag }}
+  <style>
+    .scrolling-text__content--{{ section.id }} {
+      animation: scroll var(--scroll-speed) linear infinite {{ section.settings.direction }};
+    }
+  </style>
+</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --gap: {{ section.settings.spacing }}rem;
+    --scroll-speed: {{ section.settings.scrolling_speed }}s;
+    --font-size: {{ section.settings.font_size | times: 0.75 | round: 0 }}px;
+    --animation-direction: {{ section.settings.direction }};
+  }
+
+  {%- if section.blocks.size > 0 -%}
+    .scrolling-text__list--{{ section.id }} {
+      flex-shrink: 0;
+      justify-content: space-around;
+      gap: var(--gap);
+      min-width: 100%;
+    }
+
+    .scrolling-text__item--{{ section.id }} {
+      --font-scale: var(--font-body-scale);
+      font-size: calc(var(--font-scale) * var(--font-size));
+    }
+
+    .scrolling-text__item--{{ section.id }}.heading-font {
+      --font-scale: var(--font-heading-scale);
+    }
+
+    {%- for block in section.blocks -%}
+      .scrolling-text__item--{{ section.id }}-{{ block.id }} {
+        --text-stroke: {{ block.settings.text_stroke }}px;
+        {%- if block.settings.gradient_color != blank -%}     
+          --gradient-text: {{ block.settings.gradient_color }};
+        {%- endif -%}  
+      }
+    {%- endfor -%}  
+  {%- endif -%}  
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      --font-size: {{ section.settings.font_size }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="isolate{% unless section.settings.layout == 'full_bleed' %} page-width{% if section.settings.layout == 'stretched_grid' %}--full{% endif %}{% endunless %}">
+  <div class="scrolling-text color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    {%- if section.blocks.size > 0 -%}
+      <scrolling-text class="scrolling-text__content scrolling-text__content--{{ section.id }} por flex overflow-hidden{% if section.settings.pause_on_hover %} scrolling-text__content--pause-on-hover{% endif %}{% if section.settings.font_type == 'headings' %} heading-font{% endif %}">
+        <ul class="list-unstyled scrolling-text__list scrolling-text__list--{{ section.id }} flex align-center">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}>
+              <{% unless block.settings.link != blank %}span{% else %}a href="{{ block.settings.link }}"{% endunless %} class="scrolling-text__item scrolling-text__item--{{ section.id }} scrolling-text__item--{{ section.id }}-{{ block.id }}
+                {% if block.type == 'extra_bold_heading_text' %} heading-font{% endif %}
+                {% if block.type == 'extra_bold_heading_text' %} font-heading-extra-bold{% endif %}
+                {% if block.settings.use_outline_text %} scrolling-text__item--outline{% endif %}
+                {% if block.settings.gradient_color != blank %} scrolling-text__item--gradient{% endif %}
+                {% if block.settings.link != blank %} full-link full-unstyled-link por{% endif %}">
+                {{ block.settings.title }}
+              </{% unless block.settings.link != blank %}span{% else %}a{% endunless %}>
+            </li>
+          {%- endfor -%}  
+          {%- if section.blocks.size == 1 -%}
+            <li>
+              <{% unless section.blocks[0].settings.link != blank %}span{% else %}a href="{{ section.blocks[0].settings.link }}"{% endunless %} class="scrolling-text__item scrolling-text__item--{{ section.id }} scrolling-text__item--{{ section.id }}-{{ section.blocks[0].id }}
+                {% if section.blocks[0].type == 'extra_bold_heading_text' %} heading-font{% endif %}
+                {% if section.blocks[0].type == 'extra_bold_heading_text' %} font-heading-extra-bold{% endif %}
+                {% if section.blocks[0].settings.use_outline_text %} scrolling-text__item--outline{% endif %}
+                {% if section.blocks[0].settings.gradient_color != blank %} scrolling-text__item--gradient{% endif %}
+                {% if section.blocks[0].settings.link != blank %} full-link full-unstyled-link por{% endif %}">
+                {{ section.blocks[0].settings.title }}
+              </{% unless section.blocks[0].settings.link != blank %}span{% else %}a{% endunless %}>
+            </li>
+          {%- endif -%}  
+        </ul>
+        <ul class="list-unstyled scrolling-text__list scrolling-text__list--{{ section.id }} flex align-center" aria-hidden="true">
+          {%- for block in section.blocks -%}
+            <li>
+              <{% unless block.settings.link != blank %}span{% else %}a href="{{ block.settings.link }}"{% endunless %} class="scrolling-text__item scrolling-text__item--{{ section.id }} scrolling-text__item--{{ section.id }}-{{ block.id }}
+                {% if block.type == 'extra_bold_heading_text' %} heading-font{% endif %}
+                {% if block.type == 'extra_bold_heading_text' %} font-heading-extra-bold{% endif %}
+                {% if block.settings.use_outline_text %} scrolling-text__item--outline{% endif %}
+                {% if block.settings.gradient_color != blank %} scrolling-text__item--gradient{% endif %}
+                {% if block.settings.link != blank %} full-link full-unstyled-link por{% endif %}">
+                {{ block.settings.title }}
+              </{% unless block.settings.link != blank %}span{% else %}a{% endunless %}>
+            </li>
+          {%- endfor -%}  
+          {%- if section.blocks.size == 1 -%}
+            <li>
+              <{% unless section.blocks[0].settings.link != blank %}span{% else %}a href="{{ section.blocks[0].settings.link }}"{% endunless %} class="scrolling-text__item scrolling-text__item--{{ section.id }} scrolling-text__item--{{ section.id }}-{{ section.blocks[0].id }}
+                {% if section.blocks[0].type == 'extra_bold_heading_text' %} heading-font{% endif %}
+                {% if section.blocks[0].type == 'extra_bold_heading_text' %} font-heading-extra-bold{% endif %}
+                {% if section.blocks[0].settings.use_outline_text %} scrolling-text__item--outline{% endif %}
+                {% if section.blocks[0].settings.gradient_color != blank %} scrolling-text__item--gradient{% endif %}
+                {% if section.blocks[0].settings.link != blank %} full-link full-unstyled-link por{% endif %}">
+                {{ section.blocks[0].settings.title }}
+              </{% unless section.blocks[0].settings.link != blank %}span{% else %}a{% endunless %}>
+            </li>
+          {%- endif -%}  
+        </scrolling-text>
+      </div>
+    {%- endif -%}  
+  </div>
+</div>
+<script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "t:sections.scrolling-text.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "full_bleed",
+          "label": "t:sections.all.grid_layout.options_1.label"
+        },
+        {
+          "value": "stretched_grid",
+          "label": "t:sections.all.grid_layout.options_2.label"
+        },
+        {
+          "value": "grid",
+          "label": "t:sections.all.grid_layout.options_3.label"
+        }
+      ],
+      "default": "full_bleed",
+      "label": "t:sections.all.grid_layout.label"
+    },
+    {
+      "type": "range",
+      "id": "scrolling_speed",
+      "label": "t:sections.scrolling-text.settings.scrolling_speed.label",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "t:sections.scrolling-text.settings.pause_on_hover.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "t:sections.scrolling-text.settings.direction.label",
+      "options": [
+        {
+          "value": "normal",
+          "label": "t:sections.scrolling-text.settings.direction.options__1.label"
+        },
+        {
+          "value": "reverse",
+          "label": "t:sections.scrolling-text.settings.direction.options__2.label"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "t:sections.scrolling-text.settings.spacing.label",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.scrolling-text.settings.typography_header.content"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "t:sections.scrolling-text.settings.font_size.label",
+      "min": 10,
+      "max": 100,
+      "unit": "px",
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "normal_text",
+      "name": "t:sections.scrolling-text.blocks.normal_text.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "Your text content",
+          "label": "t:sections.scrolling-text.blocks.all.settings.title.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.scrolling-text.blocks.all.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_outline_text",
+          "default": false,
+          "label": "t:sections.scrolling-text.blocks.all.settings.use_outline_text.label"
+        },
+        {
+          "type": "range",
+          "id": "text_stroke",
+          "label": "t:sections.scrolling-text.blocks.all.settings.text_stroke.label",
+          "info": "t:sections.scrolling-text.blocks.all.settings.text_stroke.info",
+          "min": 1,
+          "max": 7,
+          "unit": "px",
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "color_background",
+          "id": "gradient_color",
+          "label": "t:sections.scrolling-text.blocks.all.settings.gradient_color.label"
+        }
+      ]
+    },
+    {
+      "type": "extra_bold_heading_text",
+      "name": "t:sections.scrolling-text.blocks.extra_bold_heading_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Your text content",
+          "label": "t:sections.scrolling-text.blocks.all.settings.title.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.scrolling-text.blocks.all.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_outline_text",
+          "default": false,
+          "label": "t:sections.scrolling-text.blocks.all.settings.use_outline_text.label"
+        },
+        {
+          "type": "range",
+          "id": "text_stroke",
+          "label": "t:sections.scrolling-text.blocks.all.settings.text_stroke.label",
+          "info": "t:sections.scrolling-text.blocks.all.settings.text_stroke.info",
+          "min": 1,
+          "max": 7,
+          "unit": "px",
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "color_background",
+          "id": "gradient_color",
+          "label": "t:sections.scrolling-text.blocks.all.settings.gradient_color.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.scrolling-text.presets.name",
+      "blocks": [
+        {
+          "type": "normal_text",
+          "settings": {
+            "title": "<strong>Your text content</strong>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,382 @@
+{%- style -%}
+	.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+	.maps--{{ section.id }} {
+		column-gap: var(--grid-mobile-horizontal-spacing);
+		row-gap: var(--grid-mobile-vertical-spacing);
+	}
+
+	.button--map-{{ section.id }} {
+		gap: 0.5rem;
+	}
+
+  @media screen and (max-width: 749px) {
+		.maps--{{ section.id }} {
+			flex-wrap: wrap;
+		}
+		.maps__info--{{ section.id }} {
+			margin: 0 1.5rem;
+			padding-top: {{ section.settings.info_padding_top | times: 0.75 | round: 0 }}px;
+			padding-bottom: {{ section.settings.info_padding_bottom | times: 0.75 | round: 0 }}px;
+      width: 100%;
+		}
+    .maps__google-maps--{{ section.id }} {
+      height: {{ section.settings.map_height | times: 0.75 | round: 0 }}px;
+    }
+
+    .maps__error-message-{{ section.id }} {
+      margin: 1.5rem;
+    }
+	}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+		.maps--{{ section.id }} {
+			column-gap: var(--grid-desktop-horizontal-spacing);
+			row-gap: var(--grid-desktop-vertical-spacing);
+			margin-left: max(5rem, calc((100vw - var(--page-width) + 13rem - var(--grid-desktop-horizontal-spacing)) / 2));	
+		}
+		.maps__info--{{ section.id }} {
+			padding-top: {{ section.settings.info_padding_top }}px;
+			padding-bottom: {{ section.settings.info_padding_bottom }}px;
+		}
+    .maps__info--{{ section.id }} {
+      width: 30%;	
+    }	
+    .maps__google-maps--{{ section.id }} {
+      height: {{ section.settings.map_height }}px;
+    }
+    .maps__error-message-{{ section.id }} {
+      margin: 3rem;
+    }
+  }
+{%- endstyle -%}
+<div class="color-{{ section.settings.color_scheme }} gradient isolate">
+  <div class="section-{{ section.id }}-padding">
+		<div class="maps maps--{{ section.id }} maps--with-google-maps flex align-center">
+			<div class="maps__info maps__info--{{ section.id }}">
+				{%- if section.settings.title != blank -%}
+					<h2 class="title {{ section.settings.heading_size }} font-heading-bold">{{ section.settings.title | escape }}</h2>
+				{%- endif -%}
+				{%- if section.settings.description != blank -%}
+					<div class="maps__address rte small-margin-bottom">{{ section.settings.description }}</div>
+				{%- endif -%}
+				{%- if section.blocks.size > 0 -%}
+					<ul class="list-unstyled">
+						{%- for block in section.blocks -%}
+							<li {{ block.shopify_attributes }}>
+								{{ block.settings.title }}
+							</li>
+						{%- endfor -%}
+					</ul>	
+				{%- endif -%}	
+        {%- if section.settings.button_label != blank -%}
+          {%-liquid
+            assign button_link = section.settings.button_link
+            if section.settings.coordinates != blank
+              assign coor_url_encode = section.settings.coordinates | url_encode
+              assign button_link = "https://www.google.com/maps/dir/?api=1&destination=" | append: coor_url_encode
+            endif
+          -%}
+					<a {% if button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ button_link }}"{% endif %} class="button{% if section.settings.button_style_secondary %} button--secondary{% endif %} small-margin-top button--map-{{ section.id }}" target="_blank">
+						<svg class="icon" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+							<path d="M9.91038 18.5904L14.9458 9.80988C17.1744 5.9237 14.4213 1.03316 10.004 1.03316C5.61856 1.03316 2.85676 5.85475 5.01217 9.74644L9.91038 18.5904ZM10.004 0C4.84496 0 1.59264 5.67261 4.13039 10.2547L9.34236 19.6651C9.58751 20.1078 10.2108 20.1126 10.4625 19.6737L15.82 10.3316C18.4445 5.75498 15.2016 0 10.004 0Z" fill-rule="evenodd"/>
+							<path d="M12.9997 6.79602C12.9997 8.5559 11.6011 9.98256 9.87597 9.98256C8.1508 9.98256 6.75228 8.5559 6.75228 6.79602C6.75228 5.03615 8.1508 3.60949 9.87597 3.60949C11.6011 3.60949 12.9997 5.03615 12.9997 6.79602ZM9.87597 8.9494C11.0418 8.9494 11.9869 7.9853 11.9869 6.79602C11.9869 5.60675 11.0418 4.64265 9.87597 4.64265C8.71015 4.64265 7.76506 5.60675 7.76506 6.79602C7.76506 7.9853 8.71015 8.9494 9.87597 8.9494Z"/>
+						</svg>	
+						<span>{{ section.settings.button_label }}</span>
+					</a>
+				{%- endif -%}
+			</div>
+			{%- if section.settings.coordinates != blank and settings.google_maps_api_key != blank -%}
+				<div class="maps__google-maps maps__google-maps--{{ section.id }} flex-grow-1">
+          {%- if section.settings.api_library == 'embed' -%}
+            <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?q={{ section.settings.coordinates | escape }}&key={{ settings.google_maps_api_key | escape }}&zoom={{ section.settings.map_zoom }}&maptype={{ section.settings.map_type }}"
+              aria-label="{{ section.settings.accessibility_info | escape }}"></iframe>
+          {%- else -%}
+            <google-maps class="db h100" data-section-id="{{ section.id }}" data-coordinates="{{ section.settings.coordinates | escape }}" data-zoom="{{ section.settings.map_zoom }}" data-map-type="{{ section.settings.map_type }}">
+              <div id="map-{{ section.id }}" class="h100"></div>
+            </google-maps>
+          {%- endif -%}  
+				</div>
+      {%- else -%}
+        <div class="maps__google-maps maps__google-maps--{{ section.id }} flex-grow-1 flex align-center background-input">
+          {%- if section.settings.image != blank -%}
+            <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="media global-media-settings w100 h100">
+              {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | divided_by: 3 | times: 2 | at_least: 1100 }}px, (min-width: 750px) calc(100vw * 0.67), 100vw{%- endcapture -%}
+              {{ section.settings.image | image_url: width: 1500 | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '165, 360, 535, 700, 875, 1070, 1500'
+              }}
+            </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
+          {%- else -%}
+            <div class="alert alert--error rte maps__error-message-{{ section.id }}">
+              <ul>
+                {%- if section.settings.coordinates == blank -%}
+                  <li>{{ 'sections.google_maps.coordinate_empty_error_html' | t: link: "https://support.google.com/maps/answer/18539?hl=en" }}</li>
+                {%- endif -%}
+                {%- if settings.google_maps_api_key == blank -%}
+                  <li>{{ 'sections.google_maps.api_key_empty_error_html' | t: link: "https://developers.google.com/maps/documentation/embed/get-api-key" }}</li>
+                {%- endif -%}  
+              </ul>
+            </div>  
+          {%- endif -%}
+        </div> 
+			{%- endif -%}	
+		</div>
+	</div>
+</div>
+{%- if section.settings.coordinates == blank or settings.google_maps_api_key == blank -%}
+  <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>
+    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{%- endif -%}  	
+{%- unless request.design_mode -%}
+  {%- if section.settings.api_library == 'javascript' -%}
+    <script src="{{ 'google-maps.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}  
+{%- endunless -%}  
+{% schema %}
+{
+  "name": "t:sections.maps.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Our store",
+      "label": "t:sections.maps.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.maps.settings.description.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.maps.settings.image.label",
+      "info": "t:sections.maps.settings.image.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.maps.settings.google_maps_header.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.maps.settings.api_key_description.content"
+    },
+    {
+      "type": "select",
+      "id": "api_library",
+      "label": "t:sections.maps.settings.api_library.label",
+      "info": "t:sections.maps.settings.api_library.info",
+      "options": [
+        {
+          "value": "embed",
+          "label": "t:sections.maps.settings.api_library.options__1.label"
+        },
+        {
+          "value": "javascript",
+          "label": "t:sections.maps.settings.api_library.options__2.label"
+        }
+      ],
+      "default": "embed"
+    },
+    {
+      "type": "text",
+      "id": "coordinates",
+      "label": "t:sections.maps.settings.coordinates.label",
+      "info": "t:sections.maps.settings.coordinates.info"
+    },
+    {
+      "type": "range",
+      "id": "map_height",
+      "label": "t:sections.maps.settings.map_height.label",
+      "info": "t:sections.maps.settings.map_height.info",
+      "min": 300,
+      "max": 600,
+      "step": 25,
+      "unit": "px",
+      "default": 450
+    },
+    {
+      "type": "range",
+      "id": "map_zoom",
+      "label": "t:sections.maps.settings.map_zoom.label",
+      "min": 0,
+      "max": 21,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "radio",
+      "id": "map_type",
+      "label": "t:sections.maps.settings.map_type.label",
+      "options": [
+        {
+          "value": "roadmap",
+          "label": "Roadmap"
+        },
+        {
+          "value": "satellite",
+          "label": "Satellite"
+        }
+      ],
+      "default": "roadmap"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.maps.settings.button_header.content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.maps.settings.button_label.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "t:sections.maps.settings.button_style_secondary.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.maps.settings.button_link.label",
+      "info": "t:sections.maps.settings.button_link.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.maps.settings.accessibility.content"
+    },
+    {
+      "type": "text",
+      "id": "accessibility_info",
+      "label": "t:sections.maps.settings.accessibility.label",
+      "info": "t:sections.maps.settings.accessibility.info",
+      "default": "Google Maps"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.maps.settings.information_padding_header.content"
+    },
+    {
+      "type": "range",
+      "id": "info_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "info_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "working_time",
+      "name": "t:sections.maps.blocks.working_time.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.maps.blocks.working_time.settings.title.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.maps.presets.name",
+      "blocks": [
+        {
+          "type": "working_time",
+          "settings": {
+            "title": "Mon - Fri, 10am - 9pm"
+          }
+        },
+        {
+          "type": "working_time",
+          "settings": {
+            "title": "Saturday, 11am - 9pm"
+          }
+        },
+        {
+          "type": "working_time",
+          "settings": {
+            "title": "Sunday, 11am - 5pm"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

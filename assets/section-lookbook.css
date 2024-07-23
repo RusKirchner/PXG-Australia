@@ -1,0 +1,110 @@
+@keyframes fadeIn {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+@keyframes fadeOut {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@keyframes pulse {
+  from { box-shadow: 0 0 0 0px rgb(var(--color-background)); }
+  to { box-shadow: 0 0 0 var(--hotspot-shadow-size) rgba(0, 0, 0, 0); }
+}
+.lookbook__hotspot {
+	position: absolute;
+	top: calc((100% - var(--hotspot-size)) * var(--y-axis));
+	left: calc((100% - var(--hotspot-size)) * var(--x-axis));
+	width: var(--hotspot-size);
+	height: var(--hotspot-size);
+	--hotspot-shadow-size: calc(var(--hotspot-size) / 2);
+}
+.lookbook__hotspot__trigger {
+	border-radius: 50%;
+	animation: pulse 1.5s infinite;
+	transition: color 500ms cubic-bezier(.38,.65,.33,1), background 500ms cubic-bezier(.38,.65,.33,1);
+}
+.lookbook__hotspot__content {
+	z-index: 3;
+}
+@keyframes sweep {
+  0%    {transform: translateY(100%)}
+  100%  {transform: translateY(0)}
+}
+@media(max-width: 749px) {
+	.lookbook__hotspot__content {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		transition: transform 300ms cubic-bezier(.38,.65,.33,1);
+	}
+	.lookbook__hotspot__details[open] .lookbook__hotspot__content {
+		animation: sweep .3s ease-in-out;
+	}
+	.lookbook__hotspot__details.closing .lookbook__hotspot__content {
+		transform: translateY(100%);
+	}
+	.lookbook__hotspot__details[open] .lookbook__hotspot__trigger:before {
+		content: '';
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgb(var(--color-background), .3);
+		z-index: 1;
+		transition: opacity 500ms cubic-bezier(.38,.65,.33,1);
+	}
+	.lookbook__hotspot__details.closing .lookbook__hotspot__trigger:before {
+		opacity: 0;
+	}
+}
+@media(min-width: 750px) {
+	.lookbook__hotspot__content {
+		position: absolute;
+		left: var(--left);
+		top: var(--top);
+		transform: translate(var(--translate-x), var(--translate-y));
+		padding: var(--padding);
+		transition: opacity 500ms cubic-bezier(.38,.65,.33,1);
+		opacity: 0;
+	}
+	.lookbook__hotspot__details[open] .lookbook__hotspot__content {
+		opacity: 1;
+	}
+	.lookbook__hotspot__details.closing .lookbook__hotspot__content{
+		opacity: 0;
+	}
+}
+.lookbook__hotspot__details[open] .lookbook__hotspot__trigger{
+	color: rgb(var(--color-background));
+	background: rgb(var(--color-foreground));
+}
+.lookbook__hotspot__product {
+	display: grid;
+	grid-template-columns: 6rem auto;
+	column-gap: var(--grid-mobile-horizontal-spacing);
+	padding: 1.5rem;
+}
+
+.lookbook__hotspot__product-info > * {
+	margin-bottom: .5rem;
+}
+
+.lookbook__hotspot__link:after {
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+@media screen and (min-width: 750px) {
+	.lookbook__hotspot__product {
+		column-gap: var(--grid-desktop-horizontal-spacing);
+		min-width: 35rem;
+	}
+}

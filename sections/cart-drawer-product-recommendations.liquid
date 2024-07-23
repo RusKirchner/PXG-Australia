@@ -1,0 +1,80 @@
+<div class="item-list">
+{%- if recommendations.performed and recommendations.products_count > 0 -%}
+  {%- assign product_ids_in_cart = cart.items | map: 'product_id' -%}
+	{%- for recommendation in recommendations.products -%}
+		{%- unless product_ids_in_cart contains recommendation.id -%}
+			<cart-drawer-product-recommendation-item class="item cart-drawer__recommendation-item" data-product-id="{{ recommendation.id }}" data-variant-id="{{ recommendation.selected_or_first_available_variant.id }}">
+				<div class="cart-drawer__recommendation-item__info">
+					{%- if  recommendation.featured_image != blank -%}
+						<a class="cart-drawer__recommendation-item__media-wrapper" href="{{ recommendation.url }}" aria-label="{{ recommendation.featured_image.alt | default: recommendation.title | escape }}">
+							<{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="media">
+								{{ recommendation.featured_image | image_url: width: 150 | image_tag: width: recommendation.featured_image.width, height: recommendation.featured_image.height, class: 'cart-drawer__recommendation-item__image motion-reduce', loading: 'lazy' }}
+							</{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
+						</a>
+					{%- else -%}
+						{{ recommendation.title }}  
+					{%- endif -%}
+				</div>
+				<div class="cart-drawer__recommendation-item__info cart-drawer__recommendation-item__name">
+					<h3 class="h4 cart-drawer__recommendation-item__title font-heading-bold margin0" id="cart-drawer-recommendation-title-{{ section.id }}-{{ recommendation.id }}">
+						<a href="{{ recommendation.url }}" class="link link--text">{{ recommendation.title }}</a>
+					</h3>
+					<div class="margin-top-1rem">
+						{% render 'price', product: recommendation, show_in_card: true, use_variant: true, use_custom_element: true %}
+					</div>
+					{%- if recommendation.available -%}
+						{%- assign product_form_id = section.id | append: '-' | append: recommendation.id -%}
+						<product-form class="db margin-top-1rem margin-bottom-1rem">
+							{%- form 'product', recommendation, id: product_form_id, class: 'form flex cart-drawer__form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+								{%- unless recommendation.has_only_default_variant -%}
+									<div class="select">
+										<select
+											class="select__select cart-drawer__recommendation-item__select" name="id"
+										>
+											{%- for r_variant in recommendation.variants -%}
+												<option value="{{ r_variant.id | escape }}"
+													{% if r_variant.id == recommendation.first_available_variant.id %} selected="selected"{% endif %}
+													data-price="{{ r_variant.price }}"
+													data-compare-at-price="{{ r_variant.compare_at_price }}"
+													data-available="{{ r_variant.available }}"
+													{% unless r_variant.available %}disabled{% endunless %}
+													{% if r_variant.featured_image != blank %} data-featured-image="{{ r_variant.featured_image.src | image_url }}" data-featured-image-width="{{ r_variant.featured_image.width }}"{% endif %}
+												>
+													{{ r_variant.title }}
+												</option>
+											{%- endfor -%}
+										</select>
+										{% render 'icon-caret' %}
+									</div>
+								{%- else -%}
+									<input type="hidden" name="id" value="{{ recommendation.selected_or_first_available_variant.id }}">
+								{%- endunless -%}
+								<button
+									id="{{ product_form_id }}-submit"
+									type="submit"
+									name="add"
+									class="button cart-drawer__recommendation-item__button button--small cart-submit-button"
+									aria-haspopup="dialog"
+									aria-labelledby="cart-drawer-recommendation-title-{{ section.id }}-{{ recommendation.id }}"
+									aria-live="polite"
+									data-sold-out-message="false"
+									tabindex="-1"
+								>
+									{%- unless recommendation.has_only_default_variant -%}
+										{%- render 'icon-cart', icon_width: 20 -%}
+									{%- else -%}
+										<span>{{ "products.product.add_to_cart" | t }}</span>
+									{%- endunless -%}
+									<div class="loading-overlay__spinner hidden">
+										{%- render 'icon-cart-loading' -%}
+									</div>
+								</button>
+							{%- endform -%}
+						</product-form>
+					{%- endif -%}
+				</div>
+			</cart-drawer-product-recommendation-item>
+		{%- endunless -%}	
+	{%- endfor -%}	
+{%- endif -%}
+</div>

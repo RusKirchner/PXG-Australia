@@ -1,0 +1,98 @@
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - blog: {Object} Blog object
+    - article: {Object} Article object
+    - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
+    - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
+    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+    - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+    - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - show_excerpt: show 
+
+    Usage:
+    {% render 'article-card-standard', blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+  <div class="card-wrapper w100 por">
+    {%- unless no_line -%}<hr>{%- endunless -%}
+    <div class="card article-card
+      {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+      {% if article.image and show_image %} card--media{% endif %}"
+    >
+      <h2 class="font-heading-bold margin0 h0">
+        <a href="{{ article.url }}" class="full-unstyled-link full-link">
+          {{ article.title | truncatewords: 10 | escape }}
+        </a>
+      </h2>
+
+      {%- if show_date or show_author or blog.comments_enabled? and show_comment -%}
+        <div class="article-card__footer article-card__footer--standard w100 flex align-center margin-top-1rem">
+          {%- if show_date -%}
+            <div class="flex align-center">
+              {%- render 'icon-picker', icon: 'calendar', add_classes: 'article-card__footer__icon' -%}
+              <span class="font-body-bold">{{ article.published_at | time_tag: format: 'date' }}</span>
+            </div>  
+          {%- endif -%}
+          {%- if show_author -%}
+            <div class="flex align-center">
+              {%- render 'icon-picker', icon: 'user', add_classes: 'article-card__footer__icon' -%}
+              <span class="font-body-bold">{{ article.author }}</span>
+            </div>
+          {%- endif -%}
+          {%- if blog.comments_enabled? and show_comment -%}
+            <div class="flex align-center">
+              {%- render 'icon-picker', icon: 'chat', add_classes: 'article-card__footer__icon' -%}
+              <span class="font-body-bold">{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%} 
+
+      {%- if show_image and article.image -%}
+        <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="article-card__image media media--hover-effect w100 ratio element-margin-top"{% if media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+          {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+          <img
+            srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+              {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+            src="{{ article.image.src | image_url: width: 533 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ article.image.src.alt | escape }}"
+            class="motion-reduce"
+            {% unless lazy_load == false %}loading="lazy"{% endunless %}
+            width="{{ article.image.width }}"
+            height="{{ article.image.height }}"
+          >
+          {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+        </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
+      {%- endif -%}
+
+      {%- if show_excerpt and article.excerpt != blank -%}
+        <div class="rte small-margin-top subtitle">
+          {{ article.excerpt }}
+        </div>
+      {%- endif -%}
+
+      <div class="article__actions flex justify-space-between element-margin-top">
+        <a href="{{ article.url }}" class="link uppercase article__actions__link flex align-center font-body-bold">
+          {{ 'blogs.article.continue' | t }}
+          <svg class="icon" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M17 8L21 12M21 12L17 16M21 12L3 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+        </a>
+        {%- if share_enable -%}
+          {%- assign share_url = article.url | prepend: request.origin -%}
+          {%- render 'main-blog-share', share_url: share_url, title: article.title, obj: section, featured_media: article.image -%}
+        {%- endif -%}  
+      </div> 
+    </div>
+  </div>
+{%- endif -%}

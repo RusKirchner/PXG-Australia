@@ -1,0 +1,12 @@
+<free-shipping-bar class="free-shipping-bar db{% unless no_background %} background-input{% endunless %} no-js-hidden{% if wrapper_classes %} {{ wrapper_classes }}{% endif %}" data-threshold="{{ settings.free_shipping_threshold | times: 100 }}" data-total="{{ cart.total_price }}">
+  <div class="free-shipping-bar__unreached-message text-small hidden rte">{{ settings.free_shipping_unreached_message }}</div>
+  <div class="free-shipping-bar__reached-message text-small hidden rte">{{ settings.free_shipping_reached_message }}</div>
+  <div class="free-shipping-bar__progress-wrapper flex align-center{% unless no_progress_margin %} margin-top-1rem{% endunless %}">
+    <div class="free-shipping-bar__progress-bar por flex-grow-1">
+      <span class="free-shipping-bar__progress-bar__passed"></span>
+    </div>
+    <span class="free-shipping-bar__progress-number font-body-bold"></span>
+  </div>
+</free-shipping-bar>
+<script src="{{ 'free-shipping-bar.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'component-free-shipping-bar.css' | asset_url }}" media="print" onload="this.media='all'">

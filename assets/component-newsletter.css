@@ -1,0 +1,32 @@
+.newsletter__form-field-wrapper {
+  border-radius: var(--inputs-radius);
+  padding: 1rem;
+  background-color: rgb(var(--color-background-input));
+  box-shadow: 0rem 0.1rem 0.3rem rgb(0, 0, 0, 0.1), 0rem 0.1rem 0.2rem rgb(0, 0, 0, 0.06);
+  gap: 1rem;
+}
+
+.newsletter__input {
+  background-color: transparent;
+  box-shadow: none;
+  height: var(--newsletter-input-height);
+}
+
+input.newsletter__input::placeholder {
+  color: rgb(var(--color-foreground));
+  opacity: 1;
+}
+
+@media(max-width: 749px) {
+  .newsletter__button {
+    min-width: var(--newsletter-input-height);
+    padding: 0;
+  }
+}
+
+@media(min-width: 750px) {
+  .newsletter__button--square {
+    min-width: var(--newsletter-input-height);
+    padding: 0;
+  }
+}

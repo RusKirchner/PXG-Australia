@@ -1,0 +1,58 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{% comment %}
+	Renders a product thumbnail with the image_tag filter
+
+	Accepts:
+	- image: {Object} Image object
+	- sizes: {string} Image media sizes
+	- lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+	Usage:
+	{% render 'product-thumbnail-img',
+		image: image,
+		sizes: sizes
+	%}
+{% endcomment %}
+{%- liquid
+	assign widths = ''
+	if image.width >= 493
+		assign widths = widths | append: '493,'
+	endif	
+	if image.width >= 600
+		assign widths = widths | append: '600,'
+	endif	
+	if image.width >= 713
+		assign widths = widths | append: '713,'
+	endif	
+	if image.width >= 823
+		assign widths = widths | append: '823,'
+	endif	
+	if image.width >= 990
+		assign widths = widths | append: '990,'
+	endif	
+	if image.width >= 1100
+		assign widths = widths | append: '1100,'
+	endif	
+	if image.width >= 1206
+		assign widths = widths | append: '1206,'
+	endif	
+	if image.width >= 1346
+		assign widths = widths | append: '1346,'
+	endif	
+	if image.width >= 1426
+		assign widths = widths | append: '1426,'
+	endif	
+	if image.width >= 1646
+		assign widths = widths | append: '1646,'
+	endif	
+	if image.width >= 1946
+		assign widths = widths | append: '1946,'
+	endif	
+	assign widths = widths | append: image.width
+	assign height = 973 | divided_by: image.aspect_ratio | ceil
+-%}
+{%- unless lazy_load == false -%}
+	{{ image | image_url: width: 1946 | image_tag: sizes: sizes, widths: widths, width: image.width, height: height, loading: 'lazy' }}
+{%- else -%}
+	{{ image | image_url: width: 1946 | image_tag: sizes: sizes, widths: widths, width: image.width, height: height, preload: true, fetchpriority: 'high' }}
+{%- endunless -%}

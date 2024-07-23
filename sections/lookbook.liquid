@@ -1,0 +1,348 @@
+{{ 'section-lookbook.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --hotspot-size:{{ section.settings.hotspot_size }}rem;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      --hotspot-size:{{ section.settings.hotspot_size_desktop }}rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="lookbook section-{{ section.id }}-padding{% unless section.settings.full_width %} page-width{% endunless %}">
+	<div class="lookbook__inner por {% if section.settings.image == blank %} placeholder{% endif %}">
+		{%- if section.settings.image -%}
+      <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="media {% if section.settings.image_ratio != 'adapt' %} media--{{ section.settings.image_ratio }}{% else %}ratio{% endif %}"{% if section.settings.image_ratio == 'adapt' %} style="--ratio-percent:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+        {%- assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio -%}
+        {{ section.settings.image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
+      </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
+		{%- else -%}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+		{%- endif -%}
+		{%- liquid
+			assign threshold_1 = 15
+			assign threshold_2 = 85
+			assign arrow_size = '1.5rem'
+      assign threshold_vertical_center = 50
+		-%}
+		{%- for block in section.blocks -%}
+			{%- liquid
+        assign hotspot_product = block.settings.product
+				if block.settings.horizontal_axis <= threshold_1
+					if block.settings.vertical_axis <= threshold_1
+						assign left = '0'
+						assign top = '100%'
+						assign translate_x = '0'
+						assign translate_y = '0'
+						assign padding = arrow_size | append: ' 0 0'
+					elsif block.settings.vertical_axis < threshold_2
+						assign left = '100%'
+						assign top = '50%'
+						assign translate_x = '0'
+						assign translate_y = '-50%'
+						assign padding = '0 0 0 ' | append: arrow_size
+					else
+						assign left = '0'
+						assign top = '0'
+						assign translate_x = '0'
+						assign translate_y = '-100%'
+						assign padding = '0 0 ' | append: arrow_size
+					endif
+				elsif block.settings.horizontal_axis < threshold_2
+					if block.settings.vertical_axis <= threshold_vertical_center
+						assign left = '50%'
+						assign top = '100%'
+						assign translate_x = '-50%'
+						assign translate_y = '0'
+						assign padding = arrow_size | append: ' 0 0'
+					else
+						assign left = '50%'
+						assign top = '0'
+						assign translate_x = '-50%'
+						assign translate_y = '-100%'
+						assign padding = '0 0 ' | append: arrow_size
+					endif
+				else
+					if block.settings.vertical_axis <= threshold_1
+						assign left = '100%'
+						assign top = '100%'
+						assign translate_x = '-100%'
+						assign translate_y = '0'
+						assign padding = arrow_size | append: ' 0 0'
+					elsif block.settings.vertical_axis < threshold_2
+						assign left = '0'
+						assign top = '50%'
+						assign translate_x = '-100%'
+						assign translate_y = '-50%'
+						assign padding = '0 ' | append: arrow_size | append: ' 0 0'
+					else
+						assign left = '100%'
+						assign top = '0'
+						assign translate_x = '-100%'
+						assign translate_y = '-100%'
+						assign padding = '0 0 ' | append: arrow_size
+					endif
+				endif
+			-%}
+      <details-disclosure class="lookbook__hotspot lookbook__hotspot--{{ section.id }} lookbook__hotspot--{{ section.id }}-{{ block.id }}"
+        style="--x-axis:{{ block.settings.horizontal_axis | divided_by: 100.00 }};--y-axis:{{ block.settings.vertical_axis | divided_by: 100.00 }};" {{ block.shopify_attributes }}>
+        <details class="w100 h100 lookbook__hotspot__details">
+          <summary class="lookbook__hotspot__trigger w100 h100 color-background-1 flex justify-center align-center" style="--color-background:{{ block.settings.colors_background.red }}, {{ block.settings.colors_background.green }}, {{ block.settings.colors_background.blue }};--color-foreground: {{ block.settings.colors_text.red }}, {{ block.settings.colors_text.green }}, {{ block.settings.colors_text.blue }}">
+            {{ forloop.index }}
+          </summary>
+          <div class="lookbook__hotspot__content" style="--left:{{ left }};--top:{{ top }};--translate-x:{{ translate_x }};--translate-y:{{ translate_y }};--padding:{{ padding }};">
+            <div class="lookbook__hotspot__product por color-{{ block.settings.color_scheme }} gradient">
+              {%- if hotspot_product != blank -%}
+                <div class="media ratio" style="--ratio-percent: {{ 1 | divided_by: hotspot_product.featured_media.aspect_ratio | times: 100 }}%;">
+                  <img
+                    src="{{ hotspot_product.featured_media | image_url: width: 180 }}"
+                    alt="{{ hotspot_product.featured_media.alt | escape }}"
+                    class="motion-reduce"
+                    loading="lazy"
+                    width="{{ hotspot_product.featured_media.width }}"
+                    height="{{ hotspot_product.featured_media.height }}"
+                  >
+                </div>
+                <div class="lookbook__hotspot__product-info">
+                  <div class="h3">
+                    {{ hotspot_product.title | escape }}
+                  </div>
+                  {% render 'price', product: hotspot_product %}
+                  <div class="h3">
+                    <a href="{{ hotspot_product.url }}" class="lookbook__hotspot__link link light h4">
+                      {{ 'products.product.view_full_details' | t }}
+                    </a>
+                  </div>
+                </div>
+              {%- else -%}
+                <div class="media media--square">
+                  {%- capture current -%}{% cycle 1, 2, 3, 4 %}{%- endcapture -%}
+                  {{ 'product-apparel-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+                <div class="lookbook__hotspot__product-info">
+                  <div class="h3">
+                    {{ 'onboarding.product_title' | t }}
+                  </div>
+                  {% render 'price' %}
+                  <div class="h3">
+                    <a href="#" class="link light h4">
+                      {{ 'products.product.view_full_details' | t }}
+                    </a>
+                  </div>
+                </div>  
+              {%- endif -%}  
+            </div>
+          </div>
+        </details>
+      </details-disclosure>
+		{%- endfor -%}
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.lookbook.name",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.lookbook.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "t:sections.all.image_ratio.label",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.all.image_ratio.option_1.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.all.image_ratio.option_2.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.all.image_ratio.option_3.label"
+        },
+        {
+          "value": "landscape",
+          "label": "t:sections.all.image_ratio.option_4.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "hotspot_size",
+      "label": "t:sections.lookbook.settings.hotspot_size.label_mobile",
+      "options": [
+        {
+          "value": "2",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__1.label"
+        },
+        {
+          "value": "3",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__2.label"
+        },
+        {
+          "value": "4",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__3.label"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "hotspot_size_desktop",
+      "label": "t:sections.lookbook.settings.hotspot_size.label_desktop",
+      "options": [
+        {
+          "value": "2",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__1.label"
+        },
+        {
+          "value": "3",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__2.label"
+        },
+        {
+          "value": "4",
+          "label": "t:sections.lookbook.settings.hotspot_size.options__3.label"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.lookbook.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hotspot",
+      "name": "t:sections.lookbook.blocks.hotspot.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:sections.lookbook.blocks.hotspot.settings.product_header.content"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.lookbook.blocks.hotspot.settings.product.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "default": "background-1",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.lookbook.blocks.hotspot.settings.hotspot_header.content"
+        },
+        {
+          "type": "color",
+          "id": "colors_background",
+          "default": "#000",
+          "label": "t:sections.lookbook.blocks.hotspot.settings.colors_background.label"
+        },
+        {
+          "type": "color",
+          "id": "colors_text",
+          "default": "#fff",
+          "label": "t:sections.lookbook.blocks.hotspot.settings.colors_text.label"
+        },
+        {
+          "type": "range",
+          "id": "horizontal_axis",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 30,
+          "label": "t:sections.lookbook.blocks.hotspot.settings.horizontal_axis.label"
+        },
+        {
+          "type": "range",
+          "id": "vertical_axis",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 30,
+          "label": "t:sections.lookbook.blocks.hotspot.settings.vertical_axis.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.lookbook.presets.name",
+      "blocks": [
+        {
+          "type": "hotspot",
+          "settings": {
+            "horizontal_axis": 30,
+            "vertical_axis": 30
+          }
+        },
+        {
+          "type": "hotspot",
+          "settings": {
+            "horizontal_axis": 60,
+            "vertical_axis": 60
+          }
+        },
+        {
+          "type": "hotspot",
+          "settings": {
+            "horizontal_axis": 80,
+            "vertical_axis": 30
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

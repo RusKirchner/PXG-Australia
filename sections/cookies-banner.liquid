@@ -1,0 +1,58 @@
+{%- if section.settings.enable -%}
+	<script src="{{ 'cookies-banner.js' | asset_url }}" defer="defer"></script>
+  
+	<cookies-banner class="cookies-banner" id="cookies-banner">
+		{%- if template.suffix == 'ajax' or request.design_mode -%}
+      <div class="cookies-banner__inner color-{{ section.settings.color_scheme }}">
+        {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+        {{ 'section-cookies-banner.css' | asset_url | stylesheet_tag }}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="h3 margin0">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        <div class="cookies-banner__content rte small-margin-top">
+          {{ section.settings.content }}
+        </div>
+        <div class="cookies-banner__buttons small-margin-top right">
+          <button type="button" class="button cookies-banner__button cookies-banner__button--accept button--small">
+            <span>{{ 'sections.cookies_banner.accept' | t }}</span>
+          </button>
+          <button type="button" class="button button--secondary cookies-banner__button cookies-banner__button--decline button--small">
+            <span>{{ 'sections.cookies_banner.decline' | t }}</span>
+          </button>
+        </div>
+      </div>
+		{%- endif -%}	
+	</cookies-banner>
+{%- endif -%}	
+{% schema %}
+{
+  "name": "t:sections.cookies-banner.name",
+  "tag": "section",
+  "class": "section cookies-banner-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "t:sections.cookies-banner.settings.enable.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "We value your privacy",
+      "label": "t:sections.cookies-banner.settings.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:sections.cookies-banner.settings.content.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "inverse",
+      "label": "t:sections.all.colors.label"
+    }
+  ]
+}
+{% endschema %}

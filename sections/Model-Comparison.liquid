@@ -1,0 +1,311 @@
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+  padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width type-{{ section.settings.styles }}">
+  <h3 class="model-section-haeding">{{ section.settings.title }}</h3>
+    <div class="model-comp-container">
+    {% for block in section.blocks %} 
+   <div class="comparison-model">
+     <div class="comp-heading">{{ block.settings.title }}</div>
+    {% if block.settings.image != blank %}
+     <div class="model-img">
+      {{ block.settings.image | image_url: width: 1500 | image_tag:
+      loading: 'lazy',
+      sizes: sizes,
+      widths: '165, 360, 535, 700, 875, 1070, 1500'
+     }}
+     </div>
+     {% endif %}
+      <h4 class="indi-title">{{ block.settings.indi_title1 }}</h4>
+     <div class="model-indicator">
+       {% assign active = block.settings.active_indicator %}
+       <span {% if active == "active1" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "active2" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "active3" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "active4" %}class="active-ind"{% endif %}></span> 
+     </div>
+          <div class="comp-title">
+       <span>{{ block.settings.comp-ind-head1 }}</span>
+        <span>{{ block.settings.comp-ind-head2 }}</span>
+     </div>
+     {% if block.settings.indicator_layer2  %}
+       <h4 class="indi-title">{{ block.settings.indi_title2 }}</h4>
+       <div class="model-indicator">
+       {% assign active = block.settings.active_indicator2 %}
+       <span {% if active == "layer2_active1" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer2_active2" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer2_active3" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer2_active4" %}class="active-ind"{% endif %}></span> 
+       </div>
+       <div class="comp-title">
+       <span>{{ block.settings.compindl-lyr2-head1 }}</span>
+        <span>{{ block.settings.compindl-lyr2-head1 }}</span>
+     </div>
+      {% endif %}
+       {% if block.settings.indicator_layer3  %}
+      <h4 class="indi-title">{{ block.settings.indi_title3 }}</h4>
+       <div class="model-indicator">
+       {% assign active = block.settings.active_indicator3 %}
+       <span {% if active == "layer3_active1" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer3_active2" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer3_active3" %}class="active-ind"{% endif %}></span>
+       <span {% if active == "layer3_active4" %}class="active-ind"{% endif %}></span> 
+       </div>
+    <div class="comp-title">
+       <span>{{ block.settings.compindl-lyr3-head1 }}</span>
+        <span>{{ block.settings.compindl-lyr3-head2 }}</span>
+     </div>         
+      {% endif %}
+     <div class="model-content">{{ block.settings.model_content }}</div>
+     {% if  block.settings.btn_text != blank %}
+     <div class="model-btn">
+       <a href="{{ block.settings.btn_url }}">{{ block.settings.btn_text }}</a>
+     </div>
+     {% endif %}
+   </div>
+     {% endfor %}
+       </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Model Comparison",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+        "type": "select",
+        "id": "styles",
+        "label": "Styles",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ],
+        "default": "style1"
+      },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+"blocks": [
+  {
+    "type": "model",
+    "name": "Model",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title"
+      },
+      {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image"
+      },
+      {
+        "type": "text",
+        "label": "Indicator title",
+        "id": "indi_title1"
+      },
+      {
+        "type": "select",
+        "id": "active_indicator",
+        "label": "Active indicator",
+        "options": [
+          {
+            "value": "active1",
+            "label": "Active 1"
+          },
+          {
+            "value": "active2",
+            "label": "active 2"
+          },
+          {
+            "value": "active3",
+            "label": "Active 3"
+          },
+          {
+            "value": "active4",
+            "label": "Active 4"
+          }
+        ],
+        "default": "active1"
+      },
+
+      {
+        "type": "text",
+        "label": "Comparison indicator heading 1",
+        "id": "comp-ind-head1"
+      },
+       {
+        "type": "text",
+        "label": "Comparison indicator heading 2",
+        "id": "comp-ind-head2"
+      },
+       {
+        "type": "checkbox",
+        "label": "Indicator layer 2",
+        "id": "indicator_layer2"
+      },
+      {
+        "type": "text",
+        "label": "Indicator title",
+        "id": "indi_title2"
+      },
+      {
+        "type": "select",
+        "id": "active_indicator2",
+        "label": "Active indicator layer 2",
+        "options": [
+          {
+            "value": "layer2_active1",
+            "label": "Active 1"
+          },
+          {
+            "value": "layer2_active2",
+            "label": "active 2"
+          },
+          {
+            "value": "layer2_active3",
+            "label": "Active 3"
+          },
+          {
+            "value": "layer2_active4",
+            "label": "Active 4"
+          }
+        ],
+        "default": "layer2_active1"
+      },
+      {
+        "type": "text",
+        "label": "Comparison indicator heading 1",
+        "id": "compindl-lyr2-head1"
+      },
+       {
+        "type": "text",
+        "label": "Comparison indicator heading 2",
+        "id": "compindl-lyr2-head2"
+      },
+      {
+        "type": "checkbox",
+        "label": "Indicator layer 3",
+        "id": "indicator_layer3"
+      },
+      {
+        "type": "text",
+        "label": "Indicator title",
+        "id": "indi_title3"
+      },    
+      {
+        "type": "select",
+        "id": "active_indicator3",
+        "label": "Active indicator layer 3",
+        "options": [
+          {
+            "value": "layer3_active1",
+            "label": "Active 1"
+          },
+          {
+            "value": "layer3_active2",
+            "label": "Active 2"
+          },
+          {
+            "value": "layer3_active3",
+            "label": "Active 3"
+          },
+          {
+            "value": "layer3_active4",
+            "label": "Active 4"
+          }
+        ],
+        "default": "layer3_active1"
+      },
+       {
+        "type": "text",
+        "label": "Comparison indicator heading 1",
+        "id": "compindl-lyr3-head1"
+      },
+       {
+        "type": "text",
+        "label": "Comparison indicator heading 2",
+        "id": "compindl-lyr3-head2"
+      },
+      {
+        "type": "richtext",
+        "label": "Model content",
+        "id": "model_content"
+      },
+      {
+        "type": "text",
+        "label": "Button text",
+        "id": "btn_text"
+      },
+      {
+        "type": "url",
+        "label": "Button url",
+        "id": "btn_url"
+      }
+    ]
+  }
+],
+  "presets": [
+    {
+      "name": "Model Comparison"
+    }
+  ]
+}
+{% endschema %}
