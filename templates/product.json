@@ -53,6 +53,11 @@
           "settings": {
           }
         },
+        "infinite_options_app_block_BUpnDX": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
           "settings": {
@@ -114,16 +119,6 @@
             "button_label": "Add items to cart",
             "image_ratio": "square"
           }
-        },
-        "infinite_options_app_block_BUpnDX": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {
-          }
-        },
-        "infinite_options_app_block_iaG6PX": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -131,12 +126,11 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
+        "infinite_options_app_block_BUpnDX",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "infinite_options_app_block_BUpnDX",
-        "infinite_options_app_block_iaG6PX"
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "custom_css": [
         ".background-input {}",
