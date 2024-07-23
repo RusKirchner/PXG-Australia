@@ -46,7 +46,7 @@
     <div class="price__regular mlmlmlm">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular lmlm">
-        {{ money_price | replace: "From", "Options Starting From" }}
+        Options Starting From {{ money_price | replace: "From", "" }}
 
       </span>
     </div>
