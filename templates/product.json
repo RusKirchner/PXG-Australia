@@ -119,6 +119,11 @@
           "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {
           }
+        },
+        "infinite_options_app_block_iaG6PX": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -130,7 +135,8 @@
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "infinite_options_app_block_BUpnDX"
+        "infinite_options_app_block_BUpnDX",
+        "infinite_options_app_block_iaG6PX"
       ],
       "custom_css": [
         ".background-input {}",
