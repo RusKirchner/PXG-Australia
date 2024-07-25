@@ -36,7 +36,8 @@
       "page": "Page {{ number }}",
       "next": "Next page",
       "previous": "Previous page",
-      "load_more": "Load more"
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
       "search": "Search",
@@ -71,7 +72,10 @@
       "errors_heading": "Errors",
       "carriers": "Available shipping carriers",
       "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination."
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
     },
     "countdown": {
       "days": "Days",
@@ -86,6 +90,10 @@
       "recently_viewed_empty": "There are no recently viewed products.",
       "recently_viewed_open": "Open recently viewed box",
       "back_to_top": "Back to top"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
     }
   },
   "newsletter": {
@@ -148,6 +156,7 @@
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
+      "pre_order": "Pre-order",
       "on_sale": "Sale",
       "product_variants": "Product variants",
       "media": {
@@ -164,7 +173,22 @@
         "label": "Quantity",
         "input_label": "Quantity for {{ product }}",
         "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}"
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Increments of {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> in cart",
+        "note": "View quantity rules"
+      },
+      "volume_pricing": {
+        "title": "Volume Pricing",
+        "note": "Volume pricing available",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}",
+        "each": "{{ money }}/ea"
       },
       "pickup_availability": {
         "view_store_info": "View store information",
@@ -186,13 +210,14 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
-      "value_unavailable": "{{ option_value }} - Unavailable",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
       "inventory_in_stock": "In stock",
       "inventory_in_stock_show_count": "{{ quantity }} in stock",
       "inventory_low_stock": "Low stock",
@@ -200,6 +225,8 @@
       "inventory_out_of_stock": "Out of stock",
       "inventory_out_of_stock_continue_selling": "In stock",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+      "view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} reviews"
@@ -240,7 +267,8 @@
       "to": "To",
       "clear_filter": "Remove filter",
       "show_filter": "Show filter",
-      "hide_filter": "Hide filter"
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -394,7 +422,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
       "accept": "Accept",

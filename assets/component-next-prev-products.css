@@ -42,13 +42,13 @@
 }
 
 .product-nav__direction--previous {
-  transform: translateX(50%);
-  right: 0;
+  transform: translateX(calc(var(--transform-direction) * (-50%)));
+  inset-inline-end: 0;
 }
 
 .product-nav__direction--next {
-  transform: translateX(-50%);
-  left: 0;
+  transform: translateX(calc(var(--transform-direction) * 50%));
+  inset-inline-start: 0;
 }
 
 .product-nav__text {

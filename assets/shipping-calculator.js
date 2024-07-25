@@ -4,6 +4,7 @@ class ShippingCaculator extends HTMLElement {
 
     this.needEndLoading = false;
     this.showingErrors = false;
+    this.generatedShipping = 0;
 		this.button = this.querySelector('button');
 		this.addressCountrySelect = this.querySelector('#AddressCountryCalculator');
 		this.addressProvinceSelect = this.querySelector('#AddressProvinceCalculator');
@@ -15,10 +16,19 @@ class ShippingCaculator extends HTMLElement {
 
     this.button.addEventListener('click', this.onButtonClick.bind(this));
     this.addEventListener('change', this.hideErrorsTag.bind(this), false);
+
+    this.onCartChangeHandler = this.onCartChange.bind(this);
+    document.addEventListener('afterCartChanged', this.onCartChangeHandler);
+    document.addEventListener('afterUpdateQuantity', this.onCartChangeHandler);
 	}
 
   connectedCallback() {
     this.setupCountries();
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('afterCartChanged', this.onCartChangeHandler);
+    document.removeEventListener('afterUpdateQuantity', this.onCartChangeHandler);
   }
 
 	setupCountries() {
@@ -28,6 +38,10 @@ class ShippingCaculator extends HTMLElement {
         hideElement: 'AddressProvinceContainerCalculator'
       });
     }
+  }
+
+  onCartChange() {
+    this.resultsTag.classList.add('hidden');
   }
 
   serialize(obj, prefix) {
@@ -85,6 +99,24 @@ class ShippingCaculator extends HTMLElement {
             const node = document.createTextNode(text);
             li.appendChild(node);
             li.appendChild(spanPrice);
+            if(item.delivery_days.length > 0) {
+              const spanDate = document.createElement("span");
+              spanDate.classList.add('caption', 'shipping-calculator__date');
+              var spanDateText = '( ';
+              if(item.delivery_days[0] == item.delivery_days[1]) {
+                if(parseInt(item.delivery_days[0]) <= 1) {
+                  spanDateText += this.dataset.deliveryDateOne.replace('[count]', item.delivery_days[0]);
+                } else {
+                  spanDateText += this.dataset.deliveryDateMany.replace('[count]', item.delivery_days[0]);
+                }
+              } else {
+                spanDateText += this.dataset.deliveryDateRange.replace('[minimum]', item.delivery_days[0]) + this.dataset.deliveryDateRange.replace('[maximum]', item.delivery_days[1]);
+              }
+              spanDateText += ' )';
+              const nodeSpanDateText = document.createTextNode(spanDateText);
+              spanDate.appendChild(nodeSpanDateText);
+              li.appendChild(spanDate);
+            }
             this.resultsList.appendChild(li);
           } else {
             this.appendResultNode(item);
@@ -98,6 +130,7 @@ class ShippingCaculator extends HTMLElement {
   }
 
   handleErrorResponse(errors) {
+    this.generatedShipping = 0;
     this.showingErrors = true;
     this.resultsErrorHeading.classList.remove('hidden');
     this.resultsSuccessHeading.classList.add('hidden');
@@ -105,6 +138,7 @@ class ShippingCaculator extends HTMLElement {
   }
 
   handleSuccessResponse(list) {
+    this.generatedShipping = 0;
     this.showingErrors = false;
     this.resultsSuccessHeading.classList.remove('hidden');
     this.resultsErrorHeading.classList.add('hidden');
@@ -139,10 +173,20 @@ class ShippingCaculator extends HTMLElement {
         fetch(`${routes.cart_url}/async_shipping_rates.json?` + this.serialize(params), {...fetchConfig('json', 'GET'), ...{}})
         .then((finalResponse) => finalResponse.json())
         .then((finalResponse) => {
-          this.handleSuccessResponse(finalResponse);
+          if(finalResponse != null) {
+            this.needEndLoading = true;
+            this.handleSuccessResponse(finalResponse);
+          } else if(this.generatedShipping < 10) {
+            this.needEndLoading = false;
+            setTimeout(() => {
+              this.needEndLoading = true;
+              this.endLoading();
+              this.generatedShipping++;
+              this.button.dispatchEvent(new MouseEvent('click'));
+            }, 2300);
+          }
         })
         .finally(() => {
-          this.needEndLoading = true;
           this.endLoading();
         });
       } else {

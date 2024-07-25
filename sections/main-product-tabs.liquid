@@ -1,123 +1,14 @@
-<link rel="stylesheet" href="{{ 'component-tabs.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-tabs.css' | asset_url | stylesheet_tag }}</noscript>
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <div class="tabs color-{{ section.settings.color_scheme }} gradient isolate section-{{ section.id }}-padding">
   <div class="page-width{% if section.settings.grid_layout == 'stretched_grid' %}--full{% endif %}">
-    {%- liquid
-      assign active_tab_label_selector = ''
-      assign focus_tab_label_selector = ''
-      assign active_tab_content_selector = ''
-      assign available_tab_ids = ''
-      assign has_first_tab = false
+    {%-liquid
+      unless section.settings.enable_accordion_layout
+        render 'main-product-tabs-normal', section: section, product: product
+      else
+        render 'main-product-tabs-accordion', section: section, product: product
+      endunless
     -%}
-
-    {%- for block in section.blocks -%}
-      {%- liquid
-        if block.type == 'description_icon'
-          continue
-        endif
-        assign available_tab = true
-        if block.type != 'description' and request.design_mode == false
-          case block.type
-            when 'custom_text'
-              if block.settings.custom_text == blank
-                assign available_tab = false
-              endif
-            when 'page_content' 
-              if block.settings.page == blank
-                assign available_tab = false
-              endif
-            else
-              if block.settings.namespace_key == blank
-                assign available_tab = false
-              else
-                assign metafield_parts = block.settings.namespace_key | split: '.'
-                if product.metafields[metafield_parts[0]][metafield_parts[1]] == blank
-                  assign available_tab = false
-                endif
-              endif  
-          endcase
-        endif
-      -%}
-      {%- if available_tab -%}
-        {%- liquid
-          assign suffix = section.id | append: '-' | append: block.id
-          assign active_tab_label_selector = active_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .tabs__content .tabs__title-list label[for="tab-item-input-' | append: suffix | append: '"],'
-          assign focus_tab_label_selector = focus_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':focus-visible ~ .tabs__content .tabs__title-list label[for="tab-item-input-' | append: suffix | append: '"],'
-          assign active_tab_content_selector = active_tab_content_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .tabs__content .tabs__content-list .tabs__tab-content--' | append: suffix | append: ','
-          assign available_tab_ids = available_tab_ids | append: block.id | append: ','
-        -%}
-        <input type="radio" name="tab-item-input-{{ section.id }}" class="tabs__item-input visually-hidden small-hide" id="tab-item-input-{{ suffix }}"{% unless has_first_tab %} checked{% endunless %}>
-        {%- assign has_first_tab = true -%}
-      {%- endif -%}
-    {%- endfor -%}
-    {%- assign available_tab_ids = available_tab_ids | split: ',' | compact -%}
-    <div class="tabs__content">
-      <div class="tabs__title-list-wrapper flex">
-        <div class="tabs__title-list tabs__title-list--{{ section.id }}">
-          <ul class="margin0 list-unstyled tabs__title-list__content--{{ section.id }}">
-            {%- for block in section.blocks -%}
-              {%- if available_tab_ids contains block.id -%}
-                {%- assign suffix = section.id | append: '-' | append: block.id -%}
-                <li>
-                  <label for="tab-item-input-{{ suffix }}" class="tabs__item-label font-heading-bold light por db h4" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
-        </div>
-      </div>
-      <div class="tabs__content-list tabs__content-list--{{ section.id }} element-small-margin-top">
-        {%- for block in section.blocks -%}
-          {%- if available_tab_ids contains block.id -%}
-            {%- assign suffix = section.id | append: '-' | append: block.id -%}
-            <div class="tabs__tab-content tabs__tab-content--{{ section.id }} tabs__tab-content--{{ suffix }} w100" data-suffix="{{ suffix }}">
-              {%- case block.type -%}
-                {%- when 'description' -%}
-                  {%- if product.description != blank -%}
-                    <div class="product__description rte quick-add-hidden">
-                      {{ product.description }}
-                    </div>
-                    {%- assign icons = section.blocks | where: "type", "description_icon" -%}
-                    {%- if icons.size > 0 -%}
-                      <div class="element-small-margin-top">
-                        <div class="grid grid--2-col">
-                          {%- for icon in icons -%}
-                            <div class="grid__item flex align-center product__description-icon-{{ section.id }}" {{ icon.shopify_attributes }}>
-                              {%- render 'icon-picker' with icon: icon.settings.icon -%}
-                              {%- if icon.settings.title != blank -%}
-                                <span>{{ icon.settings.title }}</span>
-                              {%- endif -%}  
-                            </div>
-                          {%- endfor -%}  
-                        </div>
-                      </div>
-                    {%- endif -%}  
-                  {%- endif -%}
-                {%- when 'custom_text' -%}
-                  {%- if block.settings.custom_text != blank -%}  
-                    <div class="rich-text__text rte" {{ block.shopify_attributes }}>
-                      {{ block.settings.custom_text }}
-                    </div>
-                  {%- endif -%}
-                {%- when 'page_content' -%}
-                  {%- if block.settings.page != blank -%}
-                    {{ block.settings.page.content }}  
-                  {%- endif -%}
-                {%- when 'metafields' -%}
-                  {%- if block.settings.namespace_key != blank -%}
-                    {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
-                    {%- if product.metafields[metafield_parts[0]][metafield_parts[1]] != blank -%}
-                      {{ product.metafields[metafield_parts[0]][metafield_parts[1]] | metafield_tag }}
-                    {%- endif -%}  
-                  {%- endif -%}  
-              {%- endcase -%}  
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-    </div>
   </div>
 </div>
 {%- style -%}
@@ -125,45 +16,13 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  {%- if has_first_tab -%}
-    .tabs__title-list--{{ section.id }} {
-      overflow: auto;
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .tabs__title-list--{{ section.id }} li:first-child {
-      margin-left: 0.5rem;
-    }
-    .tabs__title-list--{{ section.id }} li:last-child {
-      margin-right: 0.5rem;
-    }
-    .tabs__title-list--{{ section.id }} .tabs__item-label {
-      padding: 2rem 0;
-    }
-    .tabs__title-list__content--{{ section.id }} {
-      display: inline-grid;
-      grid-auto-flow: column;
-      grid-auto-columns: max-content;
-      column-gap: 2.5rem;
-    }
-    .tabs__tab-content--{{ section.id }} {
-      display: none;
-    }
-    {%- if icons -%}
-      .product__description-icon-{{ section.id }} {
-        gap: 1.5rem;
-      }
-    {%- endif -%}  
-    {{ active_tab_label_selector | split: ',' | compact | join: ',' }} {
-      opacity: 1;
-      border-bottom: 0.1rem solid rgb(var(--color-foreground));
-    }
-    {{ focus_tab_label_selector | split: ',' | compact | join: ',' }} {
-      outline: 0.1rem solid rgba(var(--color-foreground), 1);
-      outline-offset: -0.1rem;
-    }
-    {{ active_tab_content_selector | split: ',' | compact | join: ',' }} {
-      display: block;
-    }
-  {%- endif -%}
+  }
 {%- endstyle -%}
 {% schema %}
 {
@@ -186,6 +45,13 @@
       ],
       "default": "grid",
       "label": "t:sections.all.grid_layout.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_accordion_layout",
+      "label": "t:sections.main-product-tabs.settings.enable_accordion_layout.label",
+      "info": "t:sections.main-product-tabs.settings.enable_accordion_layout.info",
+      "default": false
     },
     {
       "type": "color_scheme",
@@ -229,6 +95,24 @@
           "id": "title",
           "default": "Description",
           "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
+        },
+        {
+          "type": "range",
+          "id": "truncate_description",
+          "label": "t:sections.main-product-tabs.blocks.description.settings.truncate_description.label",
+          "info": "t:sections.main-product-tabs.blocks.description.settings.truncate_description.info",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "read_more_button",
+          "label": "t:sections.main-product-tabs.blocks.description.settings.read_more_button.label",
+          "info": "t:sections.main-product-tabs.blocks.description.settings.read_more_button.info",
+          "default": "Read more"
         }
       ]
     },
@@ -1283,11 +1167,9 @@
     "templates": [
       "404",
       "cart",
-      "checkpoint",
       "gift_card",
       "list-collections",
       "password",
-      "queue",
       "search",
       "article",
       "blog",

@@ -1,7 +1,7 @@
 <div class="header__cart-inner flex justify-center align-center">
   <div class="por flex">
     {%- render 'icon-cart' with add_classes: 'icon-open-state' -%}
-    <div class="cart-count-bubble flex justify-center align-center header__count-bubble font-body-semi-bold">
+    <div class="cart-count-bubble flex justify-center align-center header__count-bubble font-body-semi-bold{% if cart.item_count >= 100 %} visually-hidden{% endif %}">
       {%- if cart.item_count < 100 -%}
         <span aria-hidden="true" class="flex justify-center align-center">{{ cart.item_count }}</span>
       {%- endif -%}

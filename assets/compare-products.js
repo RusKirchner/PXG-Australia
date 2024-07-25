@@ -87,6 +87,19 @@ class BtCompareUtil
       popup.classList.add('empty');
     }
   }
+
+  static recheckItemCount(updatedResults) {
+    const updatedItemCount = parseInt(updatedResults.dataset.itemCount);
+    const currentProducts = BtCompareUtil.getCompareArray();
+    if(currentProducts.length > updatedItemCount) {
+      const updatedItemIds = updatedResults.dataset.itemIds.split(',');
+      currentProducts.forEach(productId => {
+        if(!updatedItemIds.includes(productId)) {
+          BtCompareUtil.removeCompareProduct(productId);
+        }
+      });
+    }
+  }
 }
 
 BtCompareUtil.init();
@@ -98,6 +111,11 @@ class ComparePopup extends HTMLElement
     this.assets = document.getElementById('compare-modal-assets');
     this.results = this.querySelector('.compare-modal__results');
     this.hasAssets = false;
+  }
+
+  connectedCallback() {
+    this.onSwapProductOutsideNodeHandler = this.onSwapProductOutsideNode.bind(this);
+    document.addEventListener('swapProductOutsideNode', this.onSwapProductOutsideNodeHandler);
   }
 
   loadContent() {
@@ -113,16 +131,66 @@ class ComparePopup extends HTMLElement
     .then((response) => response.text()) 
     .then(response => {
       const html = new DOMParser().parseFromString(response, 'text/html');
+      const updatedResults = html.querySelector('.results');
       if(!this.hasAssets) {
         this.assets.innerHTML = html.querySelector('.assets').innerHTML;
+        this.hasAssets = true;
+        HTMLUpdateUtility.reinjectsScripts(this.assets);
+        this.blockTypes = updatedResults.dataset.blockTypes.split(',');
       }
-      this.results.innerHTML = html.querySelector('.results').innerHTML;
+      
+      this.results.innerHTML = updatedResults.innerHTML;
+      BtCompareUtil.recheckItemCount(updatedResults);
       BtCompareUtil.toogleEmptyWarningClass(this);
     })
     .finally(() => {
       this.classList.remove('loading');
       BtCompareUtil.loadedContent = true;
     });
+  }
+
+  onSwapProductOutsideNode(event) {
+    const productUrl = event.detail.productUrl;
+    fetch(`${productUrl}.json`)
+    .then((response) => response.json())
+    .then(response => {
+      const productId = response.product.id;
+      const requestUrl = `${window.routes.search_url}?section_id=product-compare&q=id:${productId}&type="product"`;
+
+      const oldSectionId = event.detail.oldSectionId;
+      fetch(requestUrl)
+      .then((response) => response.text()) 
+      .then(response => {
+        const html = new DOMParser().parseFromString(response, 'text/html');
+        const newNode = html.querySelector('product-info');
+        const newSectionId = newNode.dataset.section;
+        const index = event.detail.index;
+        this.blockTypes.forEach((blockType) => {
+          this.updateSourceFromDestination(html, oldSectionId, newSectionId, index, blockType);
+        });
+      });
+    });
+
+    
+  }
+
+  updateSourceFromDestination(html, oldSectionId, newSectionId, index, id, shouldHide = (source) => false) {
+    const source = html.getElementById(`${newSectionId}-${id}-1`);
+    const destination = document.getElementById(`${oldSectionId}-${id}-${index}`);
+    if (source && destination) {
+      if(id == 'featured_image') {
+        destination.querySelector('.compare-popup__remove-link').dataset.productId = source.querySelector('.compare-popup__remove-link').dataset.productId;
+      }
+      destination.innerHTML = source.innerHTML;
+      destination.classList.toggle('hidden', shouldHide(source));
+      destination.id = `${newSectionId}-${id}-${index}`;
+      if(id == 'options') {
+        HTMLUpdateUtility.reinjectsScripts(destination);
+      }
+      if(id == 'add_to_cart') {
+        destination.querySelector('product-info').dataset.index = index;
+      }
+    }
   }
 }
 
@@ -182,111 +250,26 @@ class CompareRemoveButton extends HTMLElement
 
 customElements.define('compare-remove-button', CompareRemoveButton);
 
-class CompareVariantRadios extends VariantRadios
+class CompareVariants extends HTMLElement
 {
   constructor() {
     super();
-    this.isRadios = this.localName == 'compare-variant-radios';
-    this.dataset.originalSection = 'product-compare-item';
-    this.customSectionId = this.closest('div').dataset.customSectionId;
+    this.loadVariantPicker();
   }
 
-  onVariantChange(event) {
-    this.updateOptions();
-    this.updateMasterId();
-    this.toggleAddButton(true, '', false);
-    this.removeErrorMessage();
-    this.updateVariantStatuses();
-    this.updateSoldoutValues();
+  connectedCallback() {
     
-    if (!this.currentVariant) {
-      this.toggleAddButton(true, '', true);
-      this.setUnavailable();
-    } else {
-      // this.updateURL();
-      this.updateVariantInput();
-      this.renderProductInfo();
-    }
-    
-    if(this.isRadios && this.currentVariant) {
-      this.updateOptionLabel(event);
-    }
   }
 
-  renderProductInfo() {
-    fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
-      .then((response) => response.text())
-      .then((responseText) => {
-        const html = new DOMParser().parseFromString(responseText, 'text/html');
-        
-        this.updateElements(html);
-
-        const price = document.getElementById(`price-${this.customSectionId}`);
-
-        if (price) price.classList.remove('visibility-hidden');
-        this.toggleAddButton(!this.currentVariant || !this.currentVariant.available, window.variantStrings.soldOut);
-      });
-  }
-
-  updateElements(html) {
-    const elementKeys = ['featured-image', 'price', 'inventory'];
-    elementKeys.forEach(key => {
-      const destination = document.getElementById(`${key}-${this.customSectionId}`);
-      const source = html.getElementById(`product-compare-${key}`);
-      if (source && destination) destination.innerHTML = source.innerHTML;
+  loadVariantPicker() {
+    fetch(`${this.dataset.url}?section_id=product-compare-item`)
+    .then((response) => response.text())
+    .then((responseText) => {
+      const html = new DOMParser().parseFromString(responseText, 'text/html');
+      const variantPicker = html.getElementById(`compare-variants-${this.dataset.section}`);
+      HTMLUpdateUtility.viewTransition(this, variantPicker);
     });
-  }
-
-  toggleAddButton(disable = true, text, modifyClass = true) {
-    const productForm = document.getElementById(`product-form-${this.customSectionId}`);
-    if (!productForm) return;
-    const addButton = productForm.querySelector('[name="add"]');
-
-    if (!addButton) return;
-
-    if (disable) {
-      addButton.setAttribute('disabled', 'disabled');
-    } else {
-      addButton.removeAttribute('disabled');
-    }
-
-    if (!modifyClass) return;
-  }
-
-  updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.customSectionId}, #product-form-installment-${this.customSectionId}`);
-    productForms.forEach((productForm) => {
-      const input = productForm.querySelector('input[name="id"]');
-      input.value = this.currentVariant.id;
-      input.dispatchEvent(new Event('change', { bubbles: true }));
-    });
-  }
-
-  removeErrorMessage() {
-    const productForm = document.getElementById(`product-form-${this.customSectionId}`);
-    if (productForm) productForm.handleErrorMessage();
-  }
-
-  setUnavailable() {
-    const button = document.getElementById(`product-form-${this.customSectionId}`);
-    const addButton = button.querySelector('[name="add"]');
-    const price = document.getElementById(`price-${this.customSectionId}`);
-    if (addButton) addButton.setAttribute('disabled', 'disabled');;
-    if (price) price.classList.add('visibility-hidden');
   }
 }
 
-customElements.define('compare-variant-radios', CompareVariantRadios);
-
-class CompareVariantSelects extends CompareVariantRadios
-{
-  constructor() {
-    super();
-  }
-
-  updateOptions() {
-    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-  }
-}
-
-customElements.define('compare-variant-selects', CompareVariantSelects);
+customElements.define('compare-variants', CompareVariants);

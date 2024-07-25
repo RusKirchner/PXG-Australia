@@ -13,19 +13,22 @@
 		if body_font != body_font_medium
 			echo body_font_medium | font_face: font_display: 'swap'
 		endif
+		if body_font != body_font_large and body_font_medium != body_font_large
+			echo body_font_large | font_face: font_display: 'swap'
+		endif
 		if heading_font != body_font and heading_font != body_font_bold
 			echo heading_font | font_face: font_display: 'swap'
 		endif
-		if heading_font_bold != heading_font and heading_font_bold != body_font and heading_font_bold != body_font_bold and heading_font_bold != body_font_medium
+		if heading_font_bold != heading_font and heading_font_bold != body_font and heading_font_bold != body_font_bold and heading_font_bold != body_font_medium and heading_font_bold != body_font_large
 			echo heading_font_bold | font_face: font_display: 'swap'
 		endif
-		if heading_font_medium != heading_font_bold and heading_font_medium != heading_font and heading_font_medium != body_font and heading_font_medium != body_font_bold and heading_font_medium != body_font_medium
+		if heading_font_medium != heading_font_bold and heading_font_medium != heading_font and heading_font_medium != body_font and heading_font_medium != body_font_bold and heading_font_medium != body_font_medium and heading_font_medium != body_font_large
 			echo heading_font_medium | font_face: font_display: 'swap'
 		endif
-		if heading_font_semi_bold != heading_font_medium and heading_font_semi_bold != heading_font_bold and heading_font_semi_bold != heading_font and heading_font_semi_bold != body_font and heading_font_semi_bold != body_font_bold and heading_font_semi_bold != body_font_medium
+		if heading_font_semi_bold != heading_font_medium and heading_font_semi_bold != heading_font_bold and heading_font_semi_bold != heading_font and heading_font_semi_bold != body_font and heading_font_semi_bold != body_font_bold and heading_font_semi_bold != body_font_medium and heading_font_semi_bold != body_font_large
 			echo heading_font_semi_bold | font_face: font_display: 'swap'
 		endif
-		if heading_font_bold_rte != heading_font_semi_bold and heading_font_bold_rte != heading_font_medium and heading_font_bold_rte != heading_font_bold and heading_font_bold_rte != heading_font and heading_font_bold_rte != body_font and heading_font_bold_rte != body_font_bold and heading_font_bold_rte != body_font_medium
+		if heading_font_bold_rte != heading_font_semi_bold and heading_font_bold_rte != heading_font_medium and heading_font_bold_rte != heading_font_bold and heading_font_bold_rte != heading_font and heading_font_bold_rte != body_font and heading_font_bold_rte != body_font_bold and heading_font_bold_rte != body_font_medium and heading_font_bold_rte != body_font_large
 			echo heading_font_bold_rte | font_face: font_display: 'swap'
 		endif
 	-%}
@@ -50,28 +53,17 @@
 			--color-background-message-error: {{ scheme.settings.background_message_error.red }}, {{ scheme.settings.background_message_error.green }}, {{ scheme.settings.background_message_error.blue }};	
 		}
 	{%- endfor -%}
-	:root { 
-      {% if settings.ctm_type_body_font != 'none' %}
-        --font-body-family: {{ settings.ctm_type_body_font }}, {{ body_font.fallback_families }};
-		--font-body-style: {{ settings.ctm_type_body_font_style }};
-		--font-body-weight: {{ settings.ctm_type_body_font_weight }};
-      {% else %}
+	:root {
 		--font-body-family: {{ body_font.family }}, {{ body_font.fallback_families }};
 		--font-body-style: {{ body_font.style }};
 		--font-body-weight: {{ body_font.weight }};
-     {% endif %}
 		--font-body-weight-bold: {{ body_font_bold.weight }};
 		--font-body-weight-medium: {%- if body_font_medium -%}{{ body_font_medium.weight }}{%- else -%}{{ body_font.weight }}{%- endif -%};
+		--font-body-weight-large: {%- if body_font_large -%}{{ body_font_large.weight }}{%- else -%}{{ body_font.weight }}{%- endif -%};
 
-      {% if settings.ctm_type_header_font != 'none' %}
-        --font-heading-family: {{ settings.ctm_type_header_font }}, {{ heading_font.fallback_families }};
-		--font-heading-style: {{ settings.ctm_type_header_font_style }};
-		--font-heading-weight: {{ settings.ctm_type_header_font_weight }};
-      {% else %}
 		--font-heading-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
 		--font-heading-style: {{ heading_font.style }};
 		--font-heading-weight: {{ heading_font.weight }};
-    {% endif %}
 		--font-heading-weight-bold: {{ heading_font_bold.weight }};
 		--font-heading-weight-rte-bold: {{ heading_font_bold_rte.weight }};
 		--font-heading-weight-semi-bold: {%- if heading_font_semi_bold -%}{{ heading_font_semi_bold.weight }}{%- else -%}{{ heading_font.weight }}{%- endif -%};
@@ -79,6 +71,10 @@
 
 		--font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
 		--font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+		--color-global-shadow: {{ settings.color_scheme_body.settings.text.red }}, {{ settings.color_scheme_body.settings.text.green }}, {{ settings.color_scheme_body.settings.text.blue }};
+
+		--card-heading-product-weight: {% unless settings.card_heading_font_weight == 'thin' %}var(--font-heading-weight-{{ settings.card_heading_font_weight }}){% else %}var(--font-heading-weight){% endunless %};
 
 		{%- if settings.buttons_font == 'headings' -%}
 			--font-button-family: var(--font-heading-family);
@@ -93,19 +89,32 @@
 			--font-button-weight: var(--font-body-weight);
 			--font-button-scale: var(--font-body-scale);
 			--font-button-weight-medium: var(--font-body-weight-medium);
-			--font-button-weight-bold: var(--font-body-weight-bold);  
+			--font-button-weight-bold: var(--font-body-weight-large);  
 		{%- endif -%}  
 		
 		--page-width: {{ settings.page_width | divided_by: 10 }}rem;
 		--page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
-		--product-card-text-alignment: {{ settings.card_text_alignment }};
+		--transform-direction: {% unless direction == 'rtl' %}-1{% else %}1{% endunless %};
+		--left-holder: {% unless direction == 'rtl' %}left{% else %}right{% endunless %};
+		--right-holder: {% unless direction == 'rtl' %}right{% else %}left{% endunless %};
+		--center-holder: center;
+
+		--product-card-text-alignment: var(--{{ settings.card_text_alignment }}-holder);
 		--product-card-border-opacity: {% if settings.card_show_border %}0.05{% else %}0{% endif %};
 		--product-card-padding: {% if settings.card_show_border %}2rem{% else %}0{% endif %};
 		--product-card-shadow-position: {% if settings.card_show_border %}0rem{% else %}-2rem{% endif %};
 		--product-card-shadow-opacity: {{ settings.card_box_shadow_opacity | divided_by: 100.00 }};
+		--product-card-border-radius: {{ settings.card_border_radius }}px;
+		{%- if settings.card_border_radius > 0 -%}
+			--product-card-border-radius-image: {% if settings.card_show_border %}{{ settings.card_border_radius | minus: 20 | at_least: 4 }}{% else %}{{ settings.card_border_radius }}{% endif %}px;
+		{%- else -%}	
+			--product-card-border-radius-image: 0px;
+		{%- endif -%}	
+		--product-card-shadow-distance: {% if settings.card_buttons == 'hover' %}8rem{% else %}1.5rem{% endif %};
 		
-		--collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
+		--collection-card-text-alignment: var(--{{ settings.collection_card_text_alignment }}-holder);
+		--collection-card-border-radius: {% unless settings.collection_show_text_below %}1.6{% else %}1.2{% endunless %}rem;
 		
 		--color-sale-badge-foreground: {{ settings.sale_badge_text_color.red }}, {{ settings.sale_badge_text_color.green }}, {{ settings.sale_badge_text_color.blue }};
 		--color-sale-badge-background: {{ settings.sale_badge_background.red }}, {{ settings.sale_badge_background.green }}, {{ settings.sale_badge_background.blue }};
@@ -130,7 +139,8 @@
 		--grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
 		--grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
 
-		--variants-pills-color-radius: {%- if settings.color_swatches_shape == 'circle' -%}50%{%- else -%}0{%- endif -%};
+		--variants-pills-color-radius: {%- if settings.color_swatches_shape == 'circle' -%}50%{%- else -%}0.3rem{%- endif -%};
+		--card-product-color-radius: {%- if settings.color_swatches_shape == 'circle' -%}50%{%- else -%}0rem{%- endif -%};
 		{%- if request.page_type != 'index' and request.page_type != 'product' -%}
 			--color-page-heading-text: {{ settings.page_heading_color_text.red }}, {{ settings.page_heading_color_text.green }}, {{ settings.page_heading_color_text.blue }};
 		{%- endif -%}
@@ -156,12 +166,18 @@
 		background-color: rgb(var(--color-background));
 	}
 
+	{%- if direction == 'rtl' -%}
+		.icon-revert-in-rtl {
+			transform: rotate(180deg);
+		}
+	{%- endif -%}	
+
 	{%- if request.page_type == 'policy' -%}
 		.shopify-policy__container {
 			max-width: var(--page-width);
 		}
 		.shopify-policy__title {
-			text-align: left;
+			text-align: start;
 		}
 		.shopify-policy__title h1 {
 			font-weight: var(--font-heading-weight-bold);
@@ -200,12 +216,72 @@
 			font-weight: var(--font-body-weight);
 		}
 	{%- endunless -%}
-	{%- if settings.card_show_border -%}
+	{%- if settings.card_show_border and settings.card_border_radius == 0 -%}
 		ul.grid.contains-card--product {
 			--grid-horizontal-spacing: 0rem;
 			--grid-mobile-vertical-spacing: 0rem;
 			--grid-desktop-vertical-spacing: 0rem;
 			row-gap: 0rem;
+		}
+	{%- endif -%}
+	{%- if settings.card_image_fit != 'cover' -%}
+		.card--product .media, .cart-item__media .media {
+  		background-color: transparent;
+  	}
+		.card--product .media > img, .cart-item__media .media > img {
+			object-fit: contain;
+		}
+	{%- endif -%}
+	{%- if settings.enable_appear_effect -%}
+		.js appear-animate-single {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+		.js .appear-animate-item-in-list:not(.done) {
+			transform: translateY(3rem);
+			opacity: 0;
+		}
+		{%- if settings.card_show_border -%}
+			.js appear-animate-list:not(.start) .card-wrapper--product {
+				--product-card-border-opacity: 0;
+			}
+		{%- endif -%}
+	{%- endif -%}
+	{%- if settings.card_truncate_heading > 0 -%}
+		.card__heading--product a {
+			display: -webkit-box;
+			-webkit-line-clamp: {{ settings.card_truncate_heading }};
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	{%- endif -%}
+	{%- unless settings.collection_show_text_below -%}
+		{%- if settings.collection_card_enable_overlay -%}
+			.card__heading--collection a:before {
+				content: "";
+			}
+		{%- endif -%}
+	{%- else -%}
+		.card--collection {
+			row-gap: 1.6rem;
+		}	
+	{%- endunless -%}	
+	{%- if settings.card_buttons == 'hover' -%}
+		@media(hover: hover) and (min-width: 990px) {
+			.card__quick-buttons {
+				position: absolute;
+				top: calc(100% + 1rem);
+				inset-inline: var(--product-card-padding);
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 300ms ease, top 300ms ease;
+			}
+
+			.card-wrapper--product:hover .card__quick-buttons {
+				opacity: 1;
+				top: calc(100% - 2rem - var(--product-card-shadow-position));
+				visibility: visible;
+			}
 		}
 	{%- endif -%}
 {%- endstyle -%}

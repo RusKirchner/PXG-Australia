@@ -2,6 +2,9 @@ class BtRecentlyViewedUtil
 {
   static init() {
     BtRecentlyViewedUtil.key = 'recently_viewed';
+		if(window.currentProduct) {
+      BtRecentlyViewedUtil.addProduct(window.currentProduct.id, window.currentProduct.url, window.currentProduct.image);
+    }
   }
 
   static setArray(array) {
@@ -12,7 +15,7 @@ class BtRecentlyViewedUtil
     return BtStorageUtil.get(BtRecentlyViewedUtil.key, true) || [];
   }
 
-	static addProduct(productId, productUrl, productImage, limit) {
+	static addProduct(productId, productUrl, productImage) {
     let currentList = BtRecentlyViewedUtil.getArray();
 		let existProduct = currentList.filter(e => e.product_id != productId);
 
@@ -22,11 +25,22 @@ class BtRecentlyViewedUtil
 			"image": productImage
 		});
 
-		if(existProduct.length > limit) {
+		if(existProduct.length > window.recentlyViewedLimit) {
 			existProduct.pop();
 		}
 
 		BtRecentlyViewedUtil.setArray(existProduct);
+  }
+
+	static injectScriptTag(element) {
+    element.querySelectorAll('script').forEach((oldScriptTag) => {
+      const newScriptTag = document.createElement('script');
+      Array.from(oldScriptTag.attributes).forEach((attribute) => {
+        newScriptTag.setAttribute(attribute.name, attribute.value);
+      });
+      newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
+      oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
+    });
   }
 }
 
@@ -46,8 +60,6 @@ class RecentlyViewed extends HTMLElement
   constructor() {
 		super();
 
-		this.limit = parseInt(this.dataset.limit);
-		
 		this.isEmpty = true;
 		
 		this.updatedContent = false;
@@ -64,7 +76,7 @@ class RecentlyViewed extends HTMLElement
 	}
 
 	addProduct(productId, productUrl, productImage) {
-		BtRecentlyViewedUtil.addProduct(productId, productUrl, productImage, this.limit);
+		BtRecentlyViewedUtil.addProduct(productId, productUrl, productImage);
 		this.updatedContent = false;
 	}
 
@@ -75,16 +87,15 @@ class RecentlyViewed extends HTMLElement
 			itemList.forEach((item) => {
 				newIds.push(`id:${item.product_id}`);
 			});
-			const idsQuery =  newIds.join(' OR ');
+			const idsQuery = newIds.join(' OR ');
 			fetch(`${window.routes.search_url}?section_id=recently-viewed-products-ajax&q=${idsQuery}&type="product"`)
 			.then((response) => response.text()) 
 			.then(response => {
 				const html = new DOMParser().parseFromString(response, 'text/html');
 				if(!this.hasAssets) {
-					html.querySelectorAll('.assets > *').forEach(asset => {
-						document.body.appendChild(asset);
-					});
 					this.hasAssets = true;
+					document.body.appendChild(html.querySelector('.assets'));
+          BtRecentlyViewedUtil.injectScriptTag(document.getElementById('recently-viewed-assets'));
 				}
 				const sliderComponent = html.querySelector('slider-component');
 				if(sliderComponent) {
@@ -106,9 +117,6 @@ class RecentlyViewed extends HTMLElement
 				} else {
 					this.section.classList.add('hidden');
 				}
-			})
-			.finally(() => {
-				BtCompareUtil.loadedContent = true;
 			});
 		}
 		this.updatedContent = true;

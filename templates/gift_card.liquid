@@ -1,7 +1,7 @@
 {% layout none %}
-
+{%- capture direction -%}{%- render 'direction' -%}{%- endcapture -%}
 <!doctype html>
-<html lang="{{ request.locale.iso_code }}">
+<html lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
   <head>
     <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     <meta charset="utf-8">
@@ -40,6 +40,9 @@
       if settings.auto_generate_font_weight
         assign body_font_medium_weight = body_font.weight | plus: 100 | at_most: 600 | at_least: body_font.weight | append: ''
         assign body_font_medium = body_font | font_modify: 'weight', body_font_medium_weight
+
+        assign body_font_large_weight = body_font.weight | plus: 200 | at_most: 600 | at_least: body_font.weight | append: ''
+        assign body_font_large = body_font | font_modify: 'weight', body_font_large_weight
         
         assign heading_font_bold_weight = heading_font.weight | plus: 300 | at_most: 1000 | append: ''
         assign heading_font_bold = heading_font | font_modify: 'weight', heading_font_bold_weight
@@ -54,6 +57,7 @@
         assign heading_font_semi_bold = heading_font | font_modify: 'weight', heading_font_semi_bold_weight
       else
         assign body_font_medium = body_font
+        assign body_font_large = body_font
         
         assign heading_font_bold = heading_font
         
@@ -81,7 +85,7 @@
     {%- endunless -%}
     {% # theme-check-enable AssetPreload %}
     
-    {%- render 'critical-inline-styles', body_font: body_font, body_font_bold: body_font_bold, body_font_medium: body_font_medium, body_font_italic: body_font_italic, body_font_bold_italic: body_font_bold_italic, heading_font: heading_font, heading_font_bold: heading_font_bold, heading_font_medium: heading_font_medium, heading_font_semi_bold: heading_font_semi_bold, only_variables: true -%}
+    {%- render 'critical-inline-styles', body_font: body_font, body_font_bold: body_font_bold, body_font_medium: body_font_medium, body_font_large: body_font_large, body_font_italic: body_font_italic, body_font_bold_italic: body_font_bold_italic, heading_font: heading_font, heading_font_bold: heading_font_bold, heading_font_medium: heading_font_medium, heading_font_semi_bold: heading_font_semi_bold, only_variables: true, direction: direction -%}
 
     {{ 'critical-base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}

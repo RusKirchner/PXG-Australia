@@ -1,6 +1,6 @@
 
 .button-show-more {
-  padding-left: 0;
+  padding-inline-start: 0;
   justify-content: flex-start;
   padding-bottom: 1.1rem;
 }

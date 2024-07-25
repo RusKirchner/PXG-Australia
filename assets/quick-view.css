@@ -8,8 +8,7 @@ div.quick-view-modal__content-info {
 
 @media screen and (max-width: 749px) {
   quick-view-modal .slider .product__media-item.grid__item {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-inline: 1.5rem;
     padding-top: 0;
   }
   
@@ -59,7 +58,8 @@ quick-view-modal .product__media-wrapper {
   }
 
   quick-view-modal .product__media-wrapper {
-    padding: 10rem 0 4rem 4rem;
+    padding-block: 4rem;
+    padding-inline: 4rem 0;
     height: min-content;
   }
 

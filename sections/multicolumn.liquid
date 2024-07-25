@@ -1,21 +1,12 @@
+{%-liquid
+  assign has_background_image = false
+  if section.settings.background_image_section != blank and section.settings.enable_section_box_layout == false
+    assign has_background_image = true
+  endif  
+-%}
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
-{%- if section.settings.background_image_section != blank -%}
-  <script src="{{ 'lazy-background.js' | asset_url }}" defer="defer"></script>
-  <noscript>
-    <style>
-      .section-{{ section.id }}-padding.gradient {
-        background-image: url({{ section.settings.background_image_section | image_url }});
-        background-size: cover;
-        background-position: var(--focal-point, center);
-        background-repeat: no-repeat;
-        background-attachment: initial;
-      }
-    </style>
-  </noscript>
-{%- endif -%} 
-
 {%- style -%}
-  {%- if section.settings.background_image_section != blank -%}
+  {%- if has_background_image -%}
     .section-{{ section.id }} {
       --focal-point: {{ section.settings.background_image_section.presentation.focal_point }};
       {%- if section.settings.background_image_overlay_color != 'no_display' -%}
@@ -41,6 +32,14 @@
         --color-background: {{ block.settings.card_color_background.red }}, {{ block.settings.card_color_background.green }}, {{ block.settings.card_color_background.blue }};
         --gradient-background: {% if block.settings.card_color_background_gradient != blank %}{{ block.settings.card_color_background_gradient }}{% else %}{{ block.settings.card_color_background }}{% endif %};
       {%- endunless -%}
+      {%- if block.settings.link_label != blank -%}
+        {%- if block.settings.button_style == 'solid' -%}
+          --color-button: {{ block.settings.color_button.red }}, {{ block.settings.color_button.green }}, {{ block.settings.color_button.blue }};
+          --color-button-text: {{ block.settings.color_button_text.red }}, {{ block.settings.color_button_text.green }}, {{ block.settings.color_button_text.blue }};
+        {%- elsif block.settings.button_style == 'secondary' -%}
+          --color-button-text-outline: {{ block.settings.color_button.red }}, {{ block.settings.color_button.green }}, {{ block.settings.color_button.blue }};
+        {%- endif -%}  
+      {%- endif -%}  
     }
   {%- endfor -%}  
 
@@ -55,6 +54,8 @@
       --grid-desktop-vertical-spacing: {{ section.settings.desktop_gap }}px;
     }
   }
+
+  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -69,8 +70,23 @@
   endif
 -%}
 
-<{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %} class="section-{{ section.id }} isolate multicolumn color-{{ section.settings.color_scheme }} gradient{% if section.settings.background_image_section != blank and section.settings.background_image_overlay_color != 'no_display' %} background-overlay{% endif %}"{% if section.settings.background_image_section != blank %} data-background-image="{{ section.settings.background_image_section | image_url }}"{% endif %}>
+<parallax-element class="db section-{{ section.id }}{% unless section.settings.enable_section_box_layout %} isolate multicolumn color-{{ section.settings.color_scheme }} gradient{% endunless %}{% if has_background_image and section.settings.background_image_overlay_color != 'no_display' %} background-overlay{% endif %}{% if has_background_image %} overflow-hidden{% endif %}"{% if has_background_image and section.settings.enable_parallax_scrolling_effect %} data-speed="0.5" style="--speed: 0.5;"{% endif %}{% unless has_background_image and section.settings.enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
+  {%- if has_background_image -%}
+    {%- assign image_height = section.settings.background_image_section.width | divided_by: section.settings.background_image_section.aspect_ratio -%}
+    <appear-animate-single class="parallax-inner w100 h100 db media media--background">
+      {{ section.settings.background_image_section | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.background_image_section.width,
+        height: image_height,
+        sizes: '100vw',
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
+    </appear-animate-single>
+  {%- endif -%}
   <div class="page-width section-{{ section.id }}-padding">
+    {%- if section.settings.enable_section_box_layout -%}
+      <div class="section__box isolate multicolumn color-{{ section.settings.color_scheme }} gradient">
+    {%- endif -%}  
     {%- render 'section-heading', show_desktop_slider: false, show_tablet_slider: false, show_mobile_slider: show_mobile_slider -%}
     <slider-component class="slider-mobile-gutter por{% if show_mobile_slider %} slider-component-mobile{% endif %}"{% if section.settings.title != blank and show_mobile_slider %} data-outside-prev-button-id="Slider-{{ section.id }}-prev-button" data-outside-next-button-id="Slider-{{ section.id }}-next-button"{% endif %}>
       <ul class="multicolumn-list grid grid--{% if section.settings.text_position == 'bottom' %}{{ section.settings.columns_mobile }}{% else %}1{% endif %}-col grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile{% endif %}"
@@ -101,10 +117,10 @@
           -%}
 
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item{% if section.settings.auto_fit %} flex-grow-1{% endif %}{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} {{ section.settings.column_alignment }}{{ empty_column }}" {{ block.shopify_attributes }}>            
-            <div id="card-{{ section.id }}-{{ block.id }}" class="multicolumn-card por{% if has_padding %} has-padding{% endif %}{% if section.settings.text_position != 'bottom' %} flex{% if section.settings.text_position == 'left' %} multicolumn-card--reverse{% endif %}{% endif %}
+            <div id="card-{{ section.id }}-{{ block.id }}" class="multicolumn-card por h100{% if has_padding %} has-padding{% endif %}{% if section.settings.text_position != 'bottom' %} flex{% if section.settings.text_position == 'left' %} multicolumn-card--reverse{% endif %}{% endif %}
               {% if section.settings.media_type == 'image' and section.settings.text_position == 'bottom' %}{% if section.settings.media_width_mobile == '100' %} multicolumn-card--image-full-width-mobile{% endif %}{% if section.settings.media_width_desktop == '100' %} multicolumn-card--image-full-width-desktop{% endif %}{% endif %}{% unless section.settings.background_transparent %} gradient{% endunless %}{% if section.settings.enable_shadow %} has-shadow{% endif %}">
               {%- if section.settings.media_type == 'image' or has_icon -%}
-                <div class="multicolumn-card__image-wrapper{% if section.settings.text_position != 'bottom' %} multicolumn-card__image-wrapper--onside multicolumn-card__image-wrapper--onside-{{ section.settings.text_position }}{% endif %} overflow-hidden">
+                <div class="multicolumn-card__image-wrapper{% if section.settings.text_position != 'bottom' %} multicolumn-card__image-wrapper--onside multicolumn-card__image-wrapper--onside-{{ section.settings.text_position }}{% endif %} overflow-hidden{% if section.settings.media_type == 'image' and section.settings.enable_shadow %} multicolumn-card__image-wrapper--shadow{% endif %}">
                   {%- if section.settings.media_type == 'image' -%}  
                     <div class="media media--transparent media--{{ section.settings.image_ratio }}{% if block.settings.image == blank %} placeholder{% endif %}"
                       {% if section.settings.image_ratio == 'adapt' %}
@@ -130,16 +146,19 @@
               {%- endif -%}
               <div class="multicolumn-card__info {% if section.settings.text_position != 'bottom' %}multicolumn-card__info--onside multicolumn-card__info--onside-{{ section.settings.text_position }}{% else %}multicolumn-card__info--bottom{% endif %}">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="font-heading-bold card__heading--letter-spacing">{{ block.settings.title | escape }}</h3>
+                  <h3 class="font-heading-extra-bold h4" id="column-card-heading-{{ section.id }}-{{ block.id }}">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte color-foreground break">{{ block.settings.text }}</div>
+                  <div class="rte color-foreground break multicolumn-card__info__text" id="column-card-text-{{ section.id }}-{{ block.id }}">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
-                  <a class="multicolumn-card__link small-margin-top link link-with-icon link-effect-no-underline align-center text-small" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>
-                    {{ block.settings.link_label | escape }}
+                  <a class="multicolumn-card__link element-small-margin-top {% unless block.settings.button_style == 'link' %}button button--{{ block.settings.button_style }}{% else %}link link-with-icon link-effect-no-underline{% endunless %} align-center text-small" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}{% endif %}>
+                    <span>{{ block.settings.link_label | escape }}</span>
                     {%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}
                   </a>
+                {%- endif -%}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="full-link w100 h100 multicolumn-card__full-link" aria-labelledby="column-card-heading-{{ section.id }}-{{ block.id }} column-card-text-{{ section.id }}-{{ block.id }}"></a>
                 {%- endif -%}
               </div>
             </div>
@@ -149,7 +168,7 @@
 
       <div class="center element-small-margin-top element-margin">
         {%- if section.settings.button_label != blank -%}
-          <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
+          <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% if section.settings.button_open_new_tab %} target="_blank"{% endif %}{% endif %}>
             <span>{{ section.settings.button_label | escape }}</span>
           </a>
         {%- endif -%}
@@ -159,8 +178,11 @@
         {%- render 'slider-controls', wrapper_classes: 'medium-hide large-up-hide slider-buttons--box element-small-margin-top', suffix_id: section.id, total_items: section.blocks.size -%}
       {%- endif -%}
     </slider-component>
+    {%- if section.settings.enable_section_box_layout -%}
+      </div>
+    {%- endif -%}  
   </div>
-</{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %}>
+</parallax-element>
 
 {% schema %}
 {
@@ -323,22 +345,8 @@
       "default": false
     },
     {
-      "type": "select",
+      "type": "text_alignment",
       "id": "column_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.promotion-cards.settings.column_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.promotion-cards.settings.column_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.promotion-cards.settings.column_alignment.options__3.label"
-        }
-      ],
       "default": "left",
       "label": "t:sections.promotion-cards.settings.column_alignment.label"
     },
@@ -366,6 +374,18 @@
       "label": "t:sections.promotion-cards.settings.button_link.label"
     },
     {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "t:sections.all.open_link_in_new_tab.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
+      "default": false
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "default": "background-1",
@@ -374,7 +394,15 @@
     {
       "type": "image_picker",
       "id": "background_image_section",
-      "label": "t:sections.all.background_image_section.label"
+      "label": "t:sections.all.background_image_section.label",
+      "info": "t:sections.all.background_image_section.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax_scrolling_effect",
+      "label": "t:sections.all.enable_parallax_scrolling_effect.label",
+      "info": "t:sections.all.enable_parallax_scrolling_effect.info_for_background",
+      "default": true
     },
     {
       "type": "select",
@@ -1500,12 +1528,38 @@
         {
           "type": "text",
           "id": "link_label",
-          "label": "t:sections.promotion-cards.blocks.column.settings.link_label.label"
+          "label": "t:sections.promotion-cards.blocks.column.settings.button_label.label"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.promotion-cards.blocks.column.settings.link.label"
+          "label": "t:sections.promotion-cards.blocks.column.settings.button_link.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "t:sections.all.button_style.option_1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.all.button_style.option_2.label"
+            },
+            {
+              "value": "link",
+              "label": "t:sections.all.button_style.option_3.label"
+            }
+          ],
+          "default": "solid",
+          "label": "t:sections.all.button_style.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_open_new_tab",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
         },
         {
           "type": "header",
@@ -1516,6 +1570,18 @@
           "id": "card_color_text",
           "label": "t:sections.promotion-cards.blocks.column.settings.card_color_text.label",
           "default": "#121212"
+        },
+        {
+          "type": "color",
+          "id": "color_button_text",
+          "default": "#fff",
+          "label": "t:sections.promotion-cards.blocks.column.settings.card_color_button_text.label"
+        },
+        {
+          "type": "color",
+          "id": "color_button",
+          "default": "#2563eb",
+          "label": "t:sections.promotion-cards.blocks.column.settings.card_color_button.label"
         },
         {
           "type": "color",

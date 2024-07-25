@@ -29,7 +29,7 @@ class CartItems extends HTMLElement {
   }
 
   onChange(event) {
-    this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
+    this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'), event.target.dataset.quantityVariantId);
   }
 
   getSectionsToRender() {
@@ -57,7 +57,7 @@ class CartItems extends HTMLElement {
     ];
   }
 
-  updateQuantity(line, quantity, name) {
+  updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -97,9 +97,13 @@ class CartItems extends HTMLElement {
 
         const lineItem =  document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
         this.renderContents(parsedState, lineItem, name);
-        document.dispatchEvent(new CustomEvent('afterUpdateQuantity'));
+        document.dispatchEvent(new CustomEvent('afterUpdateQuantity', {detail: {
+          source: 'cart-items',
+          cartData: parsedState,
+          variantId: variantId
+        }}));
         errors.classList.add('hidden');
-      }).catch(() => {
+      }).catch((e) => {
         errors.classList.remove('hidden');
         errors.querySelector('span').textContent = window.cartStrings.error;
       }).finally(() => {
@@ -113,6 +117,12 @@ class CartItems extends HTMLElement {
     if(lineItemError) {
       lineItemError.querySelector('.cart-item__error-text').innerHTML = message;
       lineItemError.classList.remove('hidden');
+    }
+
+    const lineItemError2 = document.getElementById(`Line-item-error-2-${line}`);
+    if(lineItemError2) {
+      lineItemError2.querySelector('.cart-item__error-text').innerHTML = message;
+      lineItemError2.classList.remove('hidden');
     }
 
     this.lineItemStatusElement.setAttribute('aria-hidden', true);

@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "在 Facebook 上共享",
         "share_on_twitter": "在 Twitter 上发推文",
-        "share_on_pinterest": "固定在 Pinterest 上"
+        "share_on_pinterest": "固定在 Pinterest 上",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "继续购物",
@@ -33,10 +35,21 @@
       "label": "分页",
       "page": "第 {{ number }} 页",
       "next": "下一页",
-      "previous": "上一页"
+      "previous": "上一页",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "搜索"
+      "search": "搜索",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "查看我的购物车 ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "向右滑动",
       "previous_slide": "向左滑动",
       "name": "滑块"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "总评论数",
     "star_reviews_info": "{{ rating_value }}/{{ rating_max }} 星",
     "collapsible_content_title": "可折叠内容",
-    "complementary_products": "互补产品"
+    "complementary_products": "互补产品",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -95,7 +138,12 @@
       "back_to_blog": "返回博客",
       "share": "分享此文章",
       "success": "您的评论已成功发布！谢谢！",
-      "success_moderated": "您的评论已成功发布。由于我们的博客要经过审核，我们会在稍后将其发布。"
+      "success_moderated": "您的评论已成功发布。由于我们的博客要经过审核，我们会在稍后将其发布。",
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -106,13 +154,21 @@
     "product": {
       "add_to_cart": "添加到购物车",
       "description": "描述",
+      "pre_order": "Pre-order",
       "on_sale": "销售额",
       "product_variants": "产品多属性",
       "quantity": {
         "label": "数量",
         "input_label": "{{ product }} 的数量",
         "increase": "增加 {{ product }} 的数量",
-        "decrease": "减少 {{ product }} 的数量"
+        "decrease": "减少 {{ product }} 的数量",
+        "minimum_of": "最小值为 {{ quantity }}",
+        "maximum_of": "最大值为 {{ quantity }}",
+        "multiples_of": "增量为 {{ quantity }}",
+        "in_cart_html": "购物车中 <strong class=\"quantity-cart\">{{ quantity }}</strong> 件",
+        "note": "查看数量规则",
+        "min_of": "最小值 {{ quantity }}",
+        "max_of": "最大值 {{ quantity }}"
       },
       "price": {
         "from_price_html": "来自 {{ price }}",
@@ -151,7 +207,30 @@
       "include_taxes": "含税费。",
       "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费</a>。",
       "choose_options": "选择选项",
-      "choose_product_options": "选择用于 {{ product_name }} 的选项"
+      "choose_product_options": "选择用于 {{ product_name }} 的选项",
+      "value_unavailable": "{{ option_value }} - 不可用",
+      "variant_sold_out_or_unavailable": "多属性已售罄或不可用",
+      "inventory_in_stock": "现货",
+      "inventory_in_stock_show_count": "{{ quantity }} 件存货",
+      "inventory_low_stock": "低库存",
+      "inventory_low_stock_show_count": "低库存：剩余 {{ quantity }}",
+      "inventory_out_of_stock": "缺货",
+      "inventory_out_of_stock_continue_selling": "现货",
+      "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "批量定价",
+        "note": "提供批量定价",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/件",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "媒体图库"
@@ -185,7 +264,10 @@
       "clear_filter": "删除筛选条件",
       "filter_selected_accessibility": "{{ type }}（已选择 {{ count }} 个筛选条件）",
       "show_more": "显示更多内容",
-      "show_less": "隐藏部分内容"
+      "show_less": "隐藏部分内容",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -202,7 +284,13 @@
       "results_with_count_and_term": {
         "one": "找到“{{ terms }}”的 {{ count }} 条结果",
         "other": "找到“{{ terms }}”的 {{ count }} 条结果"
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "购物车"
@@ -217,11 +305,27 @@
         "post_success": "感谢您联系我们。我们会尽快回复您。",
         "error_heading": "请调整以下内容：",
         "title": "联系表"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "找不到页面",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -231,7 +335,11 @@
       "cart_count": {
         "one": "{{ count }} 件产品",
         "other": "{{ count }} 件产品"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "您的购物车",
@@ -259,7 +367,13 @@
       "login": {
         "title": "已有账户？",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登录</a>以快速结账。"
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "付款方式"
@@ -271,7 +385,8 @@
     },
     "featured_collection": {
       "view_all": "查看全部",
-      "view_all_label": "查看 {{ collection_name }} 产品系列中的所有产品"
+      "view_all_label": "查看 {{ collection_name }} 产品系列中的所有产品",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "查看全部"
@@ -298,7 +413,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -311,6 +427,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -324,7 +444,8 @@
       "title": "账户",
       "details": "账户详细信息",
       "view_addresses": "查看地址",
-      "return": "返回账户详细信息"
+      "return": "返回账户详细信息",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "账户",
     "activate_account": {
@@ -426,7 +547,8 @@
       "tracking_number": "跟踪编号",
       "subtotal": "小计",
       "total_duties": "关税"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -441,6 +563,21 @@
       "expired": "已过期",
       "copy_code_success": "已成功复制代码",
       "print_gift_card": "打印"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

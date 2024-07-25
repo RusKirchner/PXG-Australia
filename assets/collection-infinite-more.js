@@ -14,18 +14,37 @@ class CollectionLoadingButton extends HTMLElement
 		.then(responseText => {
 			productGrid.parentElement.classList.remove('loading');
 			const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
-			const responseProductItems = responseHTML.querySelectorAll(`#${this.dataset.productGrid} .grid__item`);
+			let responseProductItems = responseHTML.querySelectorAll(`#${this.dataset.productGrid} > *`);
 			
 			if(responseProductItems.length > 0) {
-				responseProductItems.forEach(element => {
-					productGrid.appendChild(element);
-				});
+				if(this.dataset.loadingType == 'next') {
+					responseProductItems.forEach(element => {
+						productGrid.appendChild(element);
+					});
+				} else {
+					Array.from(responseProductItems).reverse().forEach(element => productGrid.prepend(element));
+				}
+				if(window.appearAnimate) {
+					const appear_animate_list = this.closest('appear-animate-list');
+					if(appear_animate_list) {
+						appear_animate_list.reset();
+					}
+				}
 			}
-			
-			const newButton = responseHTML.querySelector('.collection__loading-button');
+
+			const newButton = responseHTML.querySelector(`.collection__loading-button[data-loading-type="${this.dataset.loadingType}"]`);
 			if(newButton) {
-				this.parentElement.appendChild(newButton);
+				if(this.dataset.loadingType == 'next') {
+					this.parentElement.appendChild(newButton);
+				} else {
+					this.parentElement.prepend(newButton);
+				}
 			}
+
+			let urlParams = new URLSearchParams(this.dataset.url.split('?')[1]);
+			urlParams.delete('section_id');
+			const params = urlParams.toString();
+			history.pushState({ params }, "", `${this.dataset.url.split('?')[0]}?${params}`);
 
 			this.remove();
 

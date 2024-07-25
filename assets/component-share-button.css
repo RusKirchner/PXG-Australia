@@ -2,7 +2,7 @@
 
 .share-button--floating {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: -4rem;
 }
 
@@ -14,14 +14,14 @@
 
 .share-button__network__list {
 	gap: 2.8rem;
-	margin-left: 1rem;
+	margin-inline-start: 1rem;
 }
 
 .share-button__network__list--floating {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
-.share-button__button--floating {
+.share-button__button--circle {
 	width: 4.4rem;
 	height: 4.4rem;
 	padding: 0;
@@ -30,37 +30,21 @@
 	box-shadow: 0px 1px 2px rgb(var(--color-highlight), 0.05);
 }
 
-.share-button__button--floating:before, .share-button__button--floating:after {
+.share-button__button--circle:before, .share-button__button--circle:after {
 	border-radius: var(--buttons-radius);
 }
 
-.share-button__button--floating svg {
+.share-button__button--circle svg {
 	transition: transform 300ms cubic-bezier(.03,.93,.97,1);
 }
 
-.share-button__button--floating.open svg {
+.share-button__button--circle.open svg {
 	transform: rotate(90deg);
-}
-
-.share-button__button--article {
-	color: rgb(var(--color-foreground), 0.1);
-	border: 0.2rem solid rgb(var(--color-foreground), 0.1);
-	width: 5rem;
-	height: 5rem;
-}
-
-.share-button__button--article svg {
-	stroke-width: 0.2rem;
-}
-
-.share-button__button--article:hover {
-	color: rgb(var(--color-foreground));
-	border: 0.2rem solid rgb(var(--color-foreground));
 }
 
 .share-button__network--floating {
 	position: absolute;
-	right: 0;
+	inset-inline-start: 50%;
 	top: 5rem;
 	opacity: 0;
 	visibility: hidden;
@@ -69,6 +53,9 @@
 	border-radius: 0.5rem;
 	transition: opacity 300ms ease, visibility 300ms ease;
 	box-shadow: 0px 4px 6px -1px rgb(var(--color-foreground), 0.1), 0px 2px 4px -1px rgb(var(--color-foreground), 0.06);
+	z-index: 1;
+	width: 5.2rem;
+	transform: translateX(calc(var(--transform-direction) * 50%));
 }
 
 .share-button__network__link {

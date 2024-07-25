@@ -1,0 +1,89 @@
+{{ 'component-tabs-accordion.css' | asset_url | stylesheet_tag }}
+{%-liquid
+  assign description_block = section.blocks | where: "type", "description" | first
+  assign description_icon_blocks = section.blocks | where: "type", "description_icon"
+-%}
+<div class="tabs-accordion flex flex-column">
+  {%- if product.description != blank and description_block != blank -%}
+    <div class="tabs-accordion__item tabs-accordion__item--description">
+      <p class="tabs-accordion__item__description-badge caption-with-letter-spacing--medium caption-large highlight margin0 uppercase font-body-semi-bold light">{{ description_block.settings.title }}</p>
+      {%-liquid
+        render 'main-product-description', product: product, section: section, block: description_block, no_shopify_attributes: true
+      -%}
+      {%- if description_icon_blocks.size > 0 -%}
+        <div class="element-small-margin-top">
+          <div class="grid grid--2-col">
+            {%- for icon in description_icon_blocks -%}
+              <div class="grid__item flex align-center product__description-icon" {{ icon.shopify_attributes }}>
+                {%- render 'icon-picker' with icon: icon.settings.icon -%}
+                {%- if icon.settings.title != blank -%}
+                  <span>{{ icon.settings.title }}</span>
+                {%- endif -%}  
+              </div>
+            {%- endfor -%}  
+          </div>
+        </div>
+      {%- endif -%}
+    </div>  
+  {%- endif -%}
+  {%- capture accordion_content -%}
+    {%- for block in section.blocks -%}
+      {%- unless block.type contains 'description' -%}
+        <details-accordion class="tabs-accordion__accordion accordion db" {{ block.shopify_attributes }}>
+          <details id="Details-{{ block.id }}-{{ section.id }}">
+            <summary class="tabs-accordion__accordion__summary summary-accordion summary-accordion--has-hover flex justify-space-between align-center por" id="Summary-{{ block.id }}-{{ section.id }}">
+              <div class="summary__title flex align-center flex-grow-1">
+                <h2 class="h5 accordion__title font-heading-extra-bold margin0">
+                  {{ block.settings.title }}
+                </h2>
+              </div>
+              <div class="tabs-accordion__accordion__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M13 6.50049L8 11.5005L3 6.50049" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="tabs-accordion__accordion__content accordion__content" id="TabsAccordion-{{ block.id }}-{{ section.id }}" role="region" aria-labelledby="Summary-{{ block.id }}-{{ section.id }}">
+              <div class="tabs-accordion__accordion__content-inner">
+                {%- case block.type -%}
+                  {%- when 'custom_text' -%}
+                    {%- if block.settings.custom_text != blank -%}  
+                      <div class="rich-text__text rte">
+                        {{ block.settings.custom_text }}
+                      </div>
+                    {%- endif -%}
+                  {%- when 'custom_liquid' -%}
+                    {%-liquid
+                      if block.settings.custom_liquid_code != blank
+                        echo block.settings.custom_liquid_code
+                      endif
+                    -%}
+                  {%- when 'page_content' -%}
+                    {%- if block.settings.page != blank -%}
+                      {{ block.settings.page.content }}  
+                    {%- endif -%}
+                  {%- when 'metafields' -%}
+                    {%- if block.settings.namespace_key != blank -%}
+                      {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
+                      {%- if product.metafields[metafield_parts[0]][metafield_parts[1]] != blank -%}
+                        {{ product.metafields[metafield_parts[0]][metafield_parts[1]] | metafield_tag }}
+                      {%- endif -%}  
+                    {%- endif -%}  
+                {%- endcase -%}  
+              </div>
+            </div>
+          </details>
+        </details-accordion>
+        {%- unless forloop.last -%}
+          <hr class="tabs-accordion__line">
+        {%- endunless -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if accordion_content != blank -%}
+    <div class="tabs-accordion__item">{{ accordion_content }}</div>
+  {%- endif -%}
+</div>
+{%- if accordion_content != blank -%}
+  {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{%- endif -%}

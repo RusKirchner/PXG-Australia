@@ -108,7 +108,7 @@ use-animate img {
 }
 
 noscript .localization-form__select {
-  padding-left: 0rem;
+  padding-inline-start: 0rem;
 }
 
 @media screen and (min-width: 750px) {

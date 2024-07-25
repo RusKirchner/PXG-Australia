@@ -13,9 +13,9 @@
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag: preload: true }}
   {%- if section.settings.filter_type == 'horizontal' -%}
-    {{ 'component-facets-horizontal.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 750px)' }}
+    {{ 'component-facets-horizontal.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 990px)' }}
   {%- elsif section.settings.filter_type == 'vertical' -%}
-    {{ 'component-facets-vertical.css' | asset_url | stylesheet_tag: preload: true, media: 'screen and (min-width: 750px)' }}  
+    {{ 'component-facets-vertical.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 750px)' }}  
   {%- endif -%}  
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
@@ -68,9 +68,10 @@
   }
 
   .search__button--in-template {
-    width: 5rem;
-    height: 5rem;
-    top: calc(50% - 2.5rem);
+    width: 3rem;
+    height: 3rem;
+    top: calc(50% - 1.5rem);
+    padding: 0;
   }
 
   .search__button--in-template .icon {
@@ -81,16 +82,12 @@
   {%- if section.settings.filter_type == 'drawer' -%}
     body {
       padding-bottom: 6.5rem;
-    }
-    body .floating-element {
       --floating-element-position: 7rem;
     }
   {%- else -%}
     @media screen and (max-width: 749px) {
       body {
         padding-bottom: 6.5rem;
-      }
-      body .floating-element {
         --floating-element-position: 7rem;
       }
     }  
@@ -117,6 +114,17 @@
     assign enable_compare = true
   else
     assign enable_compare = false
+  endif
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  if columns_mobile_int == 1
+    assign full_on_mobile = true
+  endif
+  assign has_sidebar = false
+  if section.settings.enable_filtering and search.filters.size > 0
+    assign has_sidebar = true
+  endif
+  if has_sidebar and section.settings.filter_type == 'vertical' and section.settings.columns_desktop >= 4
+    assign small_space_on_large_screen = true
   endif
 -%}
 
@@ -147,7 +155,7 @@
           <label class="visually-hidden" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
           <input name="options[prefix]" type="hidden" value="last">
 
-          <button type="submit" class="search__button field__button search__button--in-template light flex justify-center align-center overflow-hidden" aria-label="{{ 'general.search.search' | t }}">
+          <button type="submit" class="search__button field__button search__button--in-template light flex justify-center align-center tap-area-icon" aria-label="{{ 'general.search.search' | t }}">
             <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation" width="24" height="24">
               <use href="#icon-search">
             </svg>
@@ -156,7 +164,7 @@
       </div>
     {%- endif -%}
     {%- if search.performed -%}
-      {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
+      {%- unless has_sidebar or section.settings.enable_sorting -%}
         {%- if search.results_count > 0 -%}
           <p role="status" class="alert alert--success margin0">{{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}</p>
         {%- endif -%}
@@ -168,16 +176,20 @@
   </div>
   {%- if search.performed -%}
     <div class="{% if section.settings.filter_type == 'vertical' %}facets-vertical page-width flex{% endif %}{% if search.results_count == 0 and search.filters == empty %} hidden{% endif %}">
-      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-        <aside aria-labelledby="verticalTitle" class="facets-wrapper facets-wrapper--{{ section.settings.filter_type }}{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}" id="main-search-filters" data-id="{{ section.id }}">
+      {%- if has_sidebar or section.settings.enable_sorting -%}
+        <aside aria-labelledby="verticalTitle" class="facets-wrapper facets-wrapper--{{ section.settings.filter_type }}{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type == 'horizontal' %} page-width{% endif %}" id="main-search-filters" data-id="{{ section.id }}">
           {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, filter_include_group_name: section.settings.filter_include_group_name %}
         </aside>
       {%- endif -%}
       <div class="product-grid-container{% if section.settings.filter_type == 'drawer' %} element-small-margin-top{% endif %}{% if section.settings.filter_type == 'vertical' %} flex-grow-1{% endif %}" id="ProductGridContainer">
         <div class="template-search__results collection por{% if search.results.size == 0 %} collection--empty{% endif %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"{% if search.results.size == 0 %} id="product-grid" data-id="{{ section.id }}"{% endif %}>
           <div class="loading-overlay gradient"></div>
-          {%- render 'facets-toolbar', results: search, is_collection: false -%}
-          {%- render 'facets-active', results: search, results_url: search_url -%}
+          {%-liquid
+            if section.settings.filter_type == 'vertical'
+              render 'facets-toolbar', results: search, is_collection: false, has_sidebar: has_sidebar
+            endif
+            render 'facets-active', results: search, results_url: search_url
+          -%}
           {%- if search.results.size == 0 and search.filters != empty -%}
             <div class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
@@ -190,10 +202,18 @@
             </div>
           {%- else -%}
             {% paginate search.results by section.settings.items_per_page %}
+              {%- if paginate.pages > 1 and section.settings.pagination_style != 'numbers' and paginate.previous -%}
+                <div class="w100 flex justify-center element-small-margin-top">
+                  <collection-load-more-button data-product-grid="product-grid" data-url="{{ paginate.previous.url }}&section_id={{ section.id }}" data-loading-type="prev" class="collection__loading-button button">
+                    <span>{{ 'general.pagination.load_previous_items' | t }}</span>
+                  </collection-load-more-button>  
+                </div>
+              {%- endif -%} 
+              
               <div id="product-grid" class="element-margin-top" data-id="{{ section.id }}">
                 {%- assign products = search.results | where: 'object_type', 'product' -%}
                 {%- if products.size > 0 -%}
-                  <ul class="contains-card--product grid product-grid  grid--{{ section.settings.columns_mobile }}-col grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop" role="list" id="results-product-list">
+                  <ul class="contains-card--product grid product-grid  grid--{{ section.settings.columns_mobile }}-col grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop" role="list" id="results-product-list-{{ current_page }}">
                     {%- for item in products -%}
                       <li class="grid__item">
                         {%- render 'card-product',
@@ -209,7 +229,9 @@
                           section_id: section.id,
                           show_color_swatches: section.settings.show_color_swatches,
                           color_swatches_style: section.settings.color_swatches_style,
-                          no_lazy_load: forloop.first
+                          no_lazy_load: forloop.first,
+                          full_on_mobile: full_on_mobile,
+                          small_space_on_large_screen: small_space_on_large_screen
                         -%}
                       </li>
                     {%- endfor -%}
@@ -221,7 +243,7 @@
                     <hr>
                   {%- endif -%}  
                   <h2 class="title">{{ 'general.search.type.articles' | t }}</h2>
-                  <ul class="grid grid--1-col" role="list" id="results-article-list">
+                  <ul class="grid grid--1-col" role="list" id="results-article-list-{{ current_page }}">
                     {% for article in articles %}
                       <li class="grid__item por{% unless article.image != blank %} predictive-search__item--empty{% endunless %}">
                         <div class="template-search__article{% unless article.image != blank %} template-search__article--empty{% endunless %}">
@@ -272,7 +294,7 @@
                     <hr>
                   {%- endif -%}
                   <h2 class="title">{{ 'general.search.type.pages' | t }}</h2>
-                  <ul class="list-unstyled" role="list" id="results-pages-list">
+                  <ul class="list-unstyled" role="list" id="results-pages-list-{{ current_page }}">
                     {%- for item in pages -%}
                       <li>
                         <h3 class="h4 template-search__item__title font-heading-bold por">
@@ -291,19 +313,23 @@
                   <collection-pagination-numbers>
                     {% render 'pagination', paginate: paginate %}
                   </collection-pagination-numbers>
-                {%- elsif paginate.next -%}
-                  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
-                  <div class="w100 flex justify-center">
-                    {%- if section.settings.pagination_style == 'infinite' -%}
-                      <collection-infinite-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" class="collection__loading-button">
-                        {%- render 'icon-loading' -%}
-                      </collection-infinite-button>
-                    {%- else -%}
-                      <collection-load-more-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" class="collection__loading-button button">
-                        {{ 'general.pagination.load_more' | t }}
-                      </collection-load-more-button>  
-                    {%- endif -%}  
-                  </div>
+                {%- else -%}
+                  {%- unless request.design_mode -%}
+                    <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+                  {%- endunless -%}
+                  {%- if paginate.next -%}  
+                    <div class="w100 flex justify-center">
+                      {%- if section.settings.pagination_style == 'infinite' -%}
+                        <collection-infinite-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" data-loading-type="next" class="collection__loading-button">
+                          {%- render 'icon-loading' -%}
+                        </collection-infinite-button>
+                      {%- else -%}
+                        <collection-load-more-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" data-loading-type="next" class="collection__loading-button button">
+                          {{ 'general.pagination.load_more' | t }}
+                        </collection-load-more-button>  
+                      {%- endif -%}  
+                    </div>
+                  {%- endif -%}
                 {%- endif -%}  
               {%- endif -%}
             {% endpaginate %}
@@ -313,6 +339,9 @@
     </div>
   {%- endif -%}
 </div>
+{%- if request.design_mode -%}
+  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -488,6 +517,10 @@
       "id": "filter_type",
       "options": [
         {
+          "value": "horizontal",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+        },
+        {
           "value": "vertical",
           "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
         },
@@ -511,6 +544,22 @@
       "id": "enable_sorting",
       "default": true,
       "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "select",
+      "id": "filter_collapse",
+      "label": "t:sections.main-collection-product-grid.settings.filter_collapse.label",
+      "options": [
+        {
+          "value": "collapse",
+          "label": "t:sections.main-collection-product-grid.settings.filter_collapse.options__1.label"
+        },
+        {
+          "value": "expand",
+          "label": "t:sections.main-collection-product-grid.settings.filter_collapse.options__2.label"
+        }
+      ],
+      "default": "expand"
     },
     {
       "type": "header",

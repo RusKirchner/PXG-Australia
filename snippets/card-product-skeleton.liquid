@@ -10,15 +10,19 @@
 			<div class="card__information">
 				{%- if show_vendor -%}
 					<span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-					<div class="caption light card__vendor">{{ 'products.product.vendor' | t }}</div>
+					<div class="skeleton-box small-margin-bottom">
+						<span class="w100 db margin-top-1rem"></span>
+					</div>
 				{%- endif -%}
 				<h3 class="card__heading card__heading--product font-heading-bold h4">
-					<a role="link" aria-disabled="true" class="full-unstyled-link">
-						{{ 'onboarding.product_title' | t }}
-					</a>
+					<div class="skeleton-box small-margin-bottom">
+						<span class="w100 db margin-top-1rem"></span>
+					</div>
 				</h3>
 				<div class="card-information w100">
-					{% render 'price', show_in_card: true %}
+					<div class="skeleton-box small-margin-bottom">
+						<span class="w100 db margin-top-1rem"></span>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -35,7 +35,7 @@ predictive-search:not(.run-top) .predictive-search {
 
 @media screen and (min-width: 475px) {
   [data-predictive-search] {
-    right: 0;
+    inset-inline-end: 0;
     width: 100%;
   }
 }
@@ -54,9 +54,17 @@ predictive-search[open] .search__input {
   transition: background 300ms ease;
 }
 
-.predictive-search__header, .predictive-search__notification, .predictive-search__search-url {
+.predictive-search__notification, .predictive-search__search-url {
   padding: 0 2.5rem;
-  word-break: break-word;
+}
+
+.predictive-search__header {
+  margin: -2.5rem 0;
+  padding: 2.5rem;
+}
+
+.predictive-search__header:hover {
+  background: rgb(var(--color-foreground), 0.05);
 }
 
 .predictive-search__group {
@@ -97,8 +105,7 @@ predictive-search[open] .search__input {
 }
 
 .predictive-search__group--with-media {
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline: 0;
   padding-bottom: 0;
 }
 
@@ -154,13 +161,13 @@ a.predictive-search__item {
 .predictive-search[open] > form,
 .predictive-search[open] > [data-predictive-search],
 .header__search--has-predictive > details[open] .search--header {
-  z-index: 2;
+  z-index: 4;
 }
 
 .predictive-search[open] .predictive-search__overlay,
 .header__search--has-predictive > details[open] .predictive-search__overlay {
   position: fixed;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   width: 100vw;
   height: 100vh;

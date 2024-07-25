@@ -6,11 +6,18 @@
 			</span>
 			<ul class="list-unstyled" role="list">
 				{%- for i in (1..10) -%}
-					{%- assign brand_index = 'brand_' | append: i -%}
-					{%- assign brand_image_index = 'brand_image_' | append: i -%}
+					{%- liquid
+            assign brand_index = 'brand_' | append: i
+            assign brand_image_index = 'brand_image_' | append: i
+            assign brand_link_index = 'brand_link_' | append: i
+            assign brand_link = block.settings[brand_link_index]
+            if brand_link == blank
+              assign brand_link = block.settings[brand_index] | url_for_vendor
+            endif
+          -%}
 					{%- if block.settings[brand_index] != blank -%}
 						<li>
-							<a href="{{ block.settings[brand_index] | url_for_vendor }}" class="mega-menu__link link header-menu__link-sub font-body-semi-bold{% if block.settings[brand_image_index] != blank %} mega-menu__link--has-small-image align-center{% endif %}">
+							<a href="{{ brand_link }}" class="mega-menu__link link header-menu__link-sub font-body-semi-bold{% if block.settings[brand_image_index] != blank %} mega-menu__link--has-small-image align-center{% endif %}">
 								{%- if block.settings[brand_image_index] != blank -%}
 									<div class="mega-menu__small-image mega-menu__small-image--{{ block.settings.image_ratio }}">
 										<div class="media media--{{ block.settings.image_ratio }}">

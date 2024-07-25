@@ -61,7 +61,7 @@
     <div class="recipient-fields element-small-margin-top left">
       <div class="recipient-fields__field">
         <div class="field">
-          <label class="field__label text-small font-body-bold uppercase" for="Recipient-email-{{ section.id }}">
+          <label class="field__label text-small font-body-semi-bold uppercase" for="Recipient-email-{{ section.id }}">
             <span class="recipient-email-label required">{{ 'recipient.form.email_label' | t }}</span>
             <span class="recipient-email-label optional">
               {{- 'recipient.form.email_label_optional_for_no_js_behavior' | t -}}
@@ -96,7 +96,7 @@
 
       <div class="recipient-fields__field margin-top-1rem">
         <div class="field">
-          <label class="field__label text-small font-body-bold uppercase" for="Recipient-name-{{ section.id }}">
+          <label class="field__label text-small font-body-semi-bold uppercase" for="Recipient-name-{{ section.id }}">
             {{- 'recipient.form.name_label' | t -}}
           </label>
           <input
@@ -132,7 +132,7 @@
         {%- assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message -%}
         {%- assign message_label_rendered = 'recipient.form.message_label' | t -%}
         <div class="field">
-          <label class="form__label field__label text-small font-body-bold uppercase" for="Recipient-message-{{ section.id }}">
+          <label class="form__label field__label text-small font-body-semi-bold uppercase" for="Recipient-message-{{ section.id }}">
             {{ message_label_rendered }}
           </label>
           <textarea
@@ -169,7 +169,7 @@
 
       <div class="recipient-fields__field margin-top-1rem">
         <div class="field">
-          <label class="form__label field__label text-small font-body-bold uppercase" for="Recipient-send-on-{{ section.id }}">
+          <label class="form__label field__label text-small font-body-semi-bold uppercase" for="Recipient-send-on-{{ section.id }}">
             {{ 'recipient.form.send_on_label' | t }}
           </label>
           <input

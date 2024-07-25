@@ -74,8 +74,7 @@
 	.cart-page__content__right:before, .cart-page__content__right:after {
 		content: "";
 		position: absolute;
-		left: 0;
-		right: 0;
+		inset-inline: 0;
 		height: 2rem;
 		display: block;
 		background: linear-gradient(45deg, rgb(var(--color-foreground), 0.03) 0, rgb(var(--color-foreground), 0.03) 25%, rgb(var(--color-foreground), 0) 25%, rgb(var(--color-foreground), 0) 100%), linear-gradient(-45deg, rgb(var(--color-foreground), 0.03) 0, rgb(var(--color-foreground), 0.03) 25%, rgb(var(--color-foreground), 0) 25%, rgb(var(--color-foreground), 0) 100%), rgb(var(--color-background));
@@ -100,19 +99,45 @@
 	}
 
 	.cart-page__content .cart-items tr.cart-item td:last-child {
-		padding-right: 0;
+		padding-inline-end: 0;
 	}
-}
 
-@media(min-width: 750px) and (max-width: 989px) {
-	.cart-page__content .cart-items tr.cart-item {
-		gap: 0;
+	@keyframes animateVolumePricingContent {
+		0% {
+			opacity: 0;
+			transform: translate(-50%, 0);
+		}
+	
+		100% {
+			opacity: 1;
+			transform: translate(-50%, var(--disclosure-direction, -1rem));
+		}
 	}
+
+	.disclosure__list-wrapper.product-volume-pricing--cart-page {
+    left: 50%;
+    transform: translate(-50%, var(--disclosure-direction, -1rem));
+  }
+
+	.disclosure.closing .disclosure__list-wrapper.product-volume-pricing--cart-page {
+		transform: translate(-50%, 0);
+	}
+
+  .disclosure[open] .disclosure__list-wrapper.product-volume-pricing--cart-page {
+    animation: animateVolumePricingContent 350ms ease;
+  }
 }
 
 @media (max-width: 989px) {
-	.cart-page__content .cart-items tr.cart-item:not(:last-child) {
-		border-bottom: 0.1rem solid rgb(var(--color-foreground), 0.08);
+	.cart-page__content .cart-items tr.cart-item:not(:first-child) {
+		border-top: 0.1rem solid rgb(var(--color-foreground), 0.08);
+		margin-top: 2rem;
+	}
+}
+
+@media (min-width: 750px) and (max-width: 989px) {
+	.cart-page__item-totals {
+		align-items: flex-end;
 	}
 }
 
@@ -139,8 +164,9 @@
 		padding: 1.7rem 0;
 	}
 
-	.cart-page__content .cart-item__media {
+	.cart-page__content .cart-items tr.cart-item td.cart-item__media {
 		width: 25%;
+		vertical-align: top;
 	}
 
 	.cart-item__name {
@@ -148,11 +174,12 @@
 	}
 
 	.cart-page__content .cart-item .cart-item__quantity-wrapper {
-		justify-content: left;
+		justify-content: flex-start;
+		flex-direction: row;
 	}
 
 	.cart-item__totals .price {
-		text-align: left;
+		text-align: start;
 	}
 
 	.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) ~ .content-for-layout .cart-page__content .cart__footer {

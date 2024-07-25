@@ -57,8 +57,7 @@
 .list-social__transparent:after {
   content: "";
   position: absolute;
-  left: -1rem;
-  right: -1rem;
+  inset-inline: -1rem;
   top: -1rem;
   bottom: -1rem;
   background: rgb(var(--color-foreground), 0.1);

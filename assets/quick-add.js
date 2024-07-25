@@ -25,11 +25,12 @@ if (!customElements.get('quick-add-drawer-opener')) {
         const newQuickAddDrawer = getDomHtmlFromText(responseText, 'quick-add-drawer');
         if(window.hasQuickAddDrawer) {
           const quickAddDrawer = document.querySelector('quick-add-drawer');
-          quickAddDrawer.setInnerHTML(newQuickAddDrawer.querySelector('.quick-add-main-product').innerHTML);
+          quickAddDrawer.setInnerHTML(newQuickAddDrawer);
           quickAddDrawer.open(this.button);
         } else {
           document.body.appendChild(newQuickAddDrawer);
-          newQuickAddDrawer.reInjectScript(newQuickAddDrawer);
+          HTMLUpdateUtility.reinjectsScripts(document.querySelector('quick-add-drawer'));
+          newQuickAddDrawer.runAfterUpdateHtml();
           setTimeout(() => {
             newQuickAddDrawer.open(this.button);
           }, 300);
@@ -50,6 +51,11 @@ if (!customElements.get('quick-add-drawer')) {
       super();
 
       this.querySelector('.drawer__overlay').addEventListener('click', this.close.bind(this));
+      this.postProcessHtmlCallbacks = [];
+    }
+
+    connectedCallback() {
+      this.initializeCallbackUtility();
     }
 
     close(evt) {
@@ -62,21 +68,24 @@ if (!customElements.get('quick-add-drawer')) {
 
     open(opener) {
       this.assignProductElement();
-      this.preventDuplicatedIDs();
-      this.removeDOMElements();
-      
-      if (window.Shopify && Shopify.PaymentButton) {
-        Shopify.PaymentButton.init();
-      }
-
-      if (window.ProductModel) window.ProductModel.loadShopifyXR();
-
-      this.removeGalleryListSemantic();
-      this.preventVariantURLSwitching();
       super.open(opener);
       setTimeout(() => {
         this.classList.add('open-content');
       }, 300);
+    }
+
+    initializeCallbackUtility() {
+      this.postProcessHtmlCallbacks.push((newNode) => {
+        this.runAfterUpdateHtml();
+      });
+    }
+
+    runAfterUpdateHtml() {
+      this.productElement = this.querySelector('.quick-add-main-product');
+      window?.Shopify?.PaymentButton?.init();
+      window?.ProductModel?.loadShopifyXR();
+      this.removeDOMElements();
+      this.removeGalleryListSemantic();
     }
 
     assignProductElement() {
@@ -85,27 +94,14 @@ if (!customElements.get('quick-add-drawer')) {
       }
     }
 
-    setInnerHTML(html) {
+    setInnerHTML(newQuickAddDrawer) {
       this.assignProductElement();
-      this.productElement.innerHTML = html;
-
-      // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
-      this.reInjectScript(this.productElement);
+      const newProductElement = newQuickAddDrawer.querySelector('.quick-add-main-product');
+      HTMLUpdateUtility.viewTransition(this.productElement, newProductElement, [], this.postProcessHtmlCallbacks);
     }
 
     reInjectScript(element) {
-      element.querySelectorAll('script').forEach(oldScriptTag => {
-        const newScriptTag = document.createElement('script');
-        Array.from(oldScriptTag.attributes).forEach(attribute => {
-          newScriptTag.setAttribute(attribute.name, attribute.value)
-        });
-        newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
-        oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
-      });
-    }
-
-    preventVariantURLSwitching() {
-      this.productElement.querySelector('variant-radios,variant-selects').setAttribute('data-update-url', 'false');
+      HTMLUpdateUtility.reinjectsScripts(element);
     }
     
     removeDOMElements() {
@@ -113,14 +109,6 @@ if (!customElements.get('quick-add-drawer')) {
         if(element) {
           element.remove();
         }
-      });
-    }
-
-    preventDuplicatedIDs() {
-      const sectionId = this.productElement.dataset.section;
-      this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${ sectionId }`);
-      this.productElement.querySelectorAll('variant-selects, variant-radios').forEach((variantSelect) => {
-        variantSelect.dataset.originalSection = sectionId;
       });
     }
 

@@ -27,6 +27,10 @@ class EmailSignUpPopup extends ModalDialog
           this.querySelector('.popup-modal__content').appendChild(content);
           this.openPopup();
           this.attachEvents();
+          const checkbox = this.querySelector('.email-signup-popup__checkbox');
+          if(checkbox && checkbox.checked) {
+            BtStorageUtil.set(this.key, (new Date(new Date().setDate(new Date().getDate() + parseInt(this.dataset.expirationTime)))).toString());
+          }
         }, 500);
       });
     }, delayTime);

@@ -1,6 +1,5 @@
 <quick-view-modal id="QuickView-Modal" class="popup-modal quick-view-modal">
-	{{ 'component-popup.css' | asset_url | stylesheet_tag }}
-    {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+	{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
     {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
     {{ 'component-price.css' | asset_url | stylesheet_tag }}
     {{ 'component-rte.css' | asset_url | stylesheet_tag }}
@@ -13,4 +12,5 @@
         <div id="QuickViewInfo-QuickView" class="quick-view-modal__content-info popup-modal__content-info flex">
         </div>
 	</div>
+    <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 </quick-view-modal>

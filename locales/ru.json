@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "Поделиться в Facebook",
         "share_on_twitter": "Опубликовать в Твиттере",
-        "share_on_pinterest": "Сохранить в Pinterest"
+        "share_on_pinterest": "Сохранить в Pinterest",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Твиттер",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Продолжить покупки",
@@ -33,10 +35,21 @@
       "label": "Разбивка на страницы",
       "page": "Страница {{ number }}",
       "next": "Следующая страница",
-      "previous": "Предыдущая страница"
+      "previous": "Предыдущая страница",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "Поиск"
+      "search": "Поиск",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "Просмотреть корзину ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "Листать вперед",
       "previous_slide": "Листать назад",
       "name": "Ползунок"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "всего отзывов",
     "star_reviews_info": "{{ rating_value }} из {{ rating_max }} звезд",
     "collapsible_content_title": "Контент, который можно свернуть",
-    "complementary_products": "Дополнительные товары"
+    "complementary_products": "Дополнительные товары",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -97,7 +140,12 @@
         "other": "Комментариев: {{ count }}",
         "few": "Комментариев: {{ count }}",
         "many": "Комментариев: {{ count }}"
-      }
+      },
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -108,6 +156,7 @@
     "product": {
       "add_to_cart": "Добавить в корзину",
       "description": "Описание",
+      "pre_order": "Pre-order",
       "on_sale": "Распродажа",
       "product_variants": "Варианты товара",
       "share": "Поделиться этим продуктом",
@@ -121,7 +170,14 @@
         "label": "Количество",
         "input_label": "Количество: {{ product }}",
         "increase": "Увеличить количество {{ product }}",
-        "decrease": "Уменьшить количество {{ product }}"
+        "decrease": "Уменьшить количество {{ product }}",
+        "minimum_of": "Минимум {{ quantity }}",
+        "maximum_of": "Максимум {{ quantity }}",
+        "multiples_of": "Прирост: {{ quantity }}",
+        "in_cart_html": "В корзине: <strong class=\"quantity-cart\">{{ quantity }}</strong>",
+        "note": "Просмотреть правила количества позиций",
+        "min_of": "Мин. {{ quantity }}",
+        "max_of": "Макс. {{ quantity }}"
       },
       "price": {
         "from_price_html": "От {{ price }}",
@@ -153,7 +209,30 @@
       "include_taxes": "Сумма налога включена.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
       "choose_options": "Выберите варианты",
-      "choose_product_options": "Выберите варианты для {{ product_name }}"
+      "choose_product_options": "Выберите варианты для {{ product_name }}",
+      "value_unavailable": "{{ option_value }} — Недоступно",
+      "variant_sold_out_or_unavailable": "Вариант распродан или недоступен",
+      "inventory_in_stock": "В наличии",
+      "inventory_in_stock_show_count": "В наличии: {{ quantity }}",
+      "inventory_low_stock": "Заканчивается",
+      "inventory_low_stock_show_count": "Заканчивается. Осталось: {{ quantity }}",
+      "inventory_out_of_stock": "Нет в наличии",
+      "inventory_out_of_stock_continue_selling": "В наличии",
+      "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Оптовая цена",
+        "note": "Доступны оптовые цены",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/кажд.",
+        "price_range": "{{ minimum }} — {{ maximum }}"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "Галерея мультимедиа"
@@ -193,7 +272,10 @@
       "clear_filter": "Снять фильтр",
       "filter_selected_accessibility": "{{ type }} (установлены фильтры: {{ count }})",
       "show_more": "Показать больше",
-      "show_less": "Показать меньше"
+      "show_less": "Показать меньше",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -214,7 +296,13 @@
         "other": "{{ count }} рез. по запросу «{{ terms }}»",
         "few": "{{ count }} рез. по запросу «{{ terms }}»",
         "many": "{{ count }} рез. по запросу «{{ terms }}»"
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "Корзина"
@@ -229,11 +317,27 @@
         "post_success": "Спасибо за обращение. Мы свяжемся с вами как можно скорее.",
         "error_heading": "Измените следующие элементы:",
         "title": "Форма для связи"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Страница не найдена",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -245,7 +349,11 @@
         "other": "Элементов: {{ count }}",
         "few": "Элементов: {{ count }}",
         "many": "Элементов: {{ count }}"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "Корзина",
@@ -273,7 +381,13 @@
       "login": {
         "title": "Уже есть учетная запись?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Войти</a>, чтобы оформить заказ быстрее."
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "Способы оплаты"
@@ -285,7 +399,8 @@
     },
     "featured_collection": {
       "view_all": "Посмотреть все",
-      "view_all_label": "Посмотреть все продукты в коллекции \"{{ collection_name }}\""
+      "view_all_label": "Посмотреть все продукты в коллекции \"{{ collection_name }}\"",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "Посмотреть все"
@@ -312,7 +427,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -325,6 +441,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -338,7 +458,8 @@
       "title": "Учетная запись",
       "details": "Сведения учетной записи",
       "view_addresses": "Посмотреть адреса",
-      "return": "Вернуться к сведениям учетной записи"
+      "return": "Вернуться к сведениям учетной записи",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "Учетная запись",
     "log_in": "Войти",
@@ -440,7 +561,8 @@
       "tracking_number": "Номер для отслеживания",
       "subtotal": "Промежуточный итог",
       "total_duties": "Пошлины"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -455,6 +577,21 @@
       "expired": "Срок действия истек",
       "copy_code_success": "Код скопирован",
       "print_gift_card": "Печать"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

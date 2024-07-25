@@ -5,7 +5,7 @@
   {%- unless block.settings.payment_badge -%} 
     {% unless shop.enabled_payment_types == empty %}
       {%- assign has_payment_badge = true -%}
-      <ul class="list-unstyled trusted-payment-badges flex">
+      <ul class="list-unstyled trusted-payment-badges flex flex-wrap">
         {%- for type in shop.enabled_payment_types -%}
           <li class="trusted-payment-badge">
             {{ type | payment_type_svg_tag }}

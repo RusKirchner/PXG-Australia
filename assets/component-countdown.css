@@ -49,7 +49,7 @@
   border: 0.1rem solid rgb(var(--color-foreground), 0.05);
   background: var(--color-background);
   box-shadow: 0px 1px 2px 0px rgba(var(--color-foreground), 0.07);
-  min-width: 6rem;
+  min-width: 4.5rem;
   height: 5rem;
   padding: 0.8rem 1.2rem;
 }
@@ -61,7 +61,7 @@
 
 .countdown__text--simple {
   color: rgb(var(--color-foreground));
-  font-size: calc(1rem * var(--font-body-scale));
+  font-size: calc(0.8rem * var(--font-body-scale));
   letter-spacing: 0.5px;
 }
 
@@ -71,4 +71,14 @@
 
 .countdown__part--simple.hidden + .countdown__sep {
   display: none;
+}
+
+@media (min-width: 425px) {
+  .countdown__part--simple {
+    min-width: 6rem;
+  }
+
+  .countdown__part__value--simple {
+    font-size: calc(1rem * var(--font-body-scale));
+  }
 }

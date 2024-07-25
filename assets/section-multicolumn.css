@@ -5,12 +5,12 @@
 .multicolumn-list__item.center
   .multicolumn-card__image-wrapper,
 .multicolumn-list__item:only-child {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .multicolumn-list__item.right .multicolumn-card__image-wrapper {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .multicolumn-list {
@@ -28,7 +28,7 @@
 }
 
 .has-padding {
-  padding: 2.5rem;
+  padding: 3rem 3rem 3.4rem;
 }
 
 .multicolumn-card--reverse {
@@ -49,7 +49,7 @@
 }
 
 .multicolumn-card__info > :nth-child(2) {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
 }
 
 .multicolumn-list__item.center .media--adapt,
@@ -58,8 +58,8 @@
 }
 
 .multicolumn-list__item.center .media--adapt img {
-  left: 50%;
-  transform: translateX(-50%);
+  inset-inline-start: 50%;
+  transform: translateX(calc(var(--transform-direction) * 50%));
 }
 
 .multicolumn-card {
@@ -72,13 +72,15 @@
 .multicolumn-card.has-shadow:after {
   content: '';
   position: absolute;
-  top: calc(var(--text-boxes-border-width) * -1);
-  right: calc(var(--text-boxes-border-width) * -1);
-  bottom: calc(var(--text-boxes-border-width) * -1);
-  left: calc(var(--text-boxes-border-width) * -1);
+  inset-block: calc(var(--text-boxes-border-width) * -1);
+  inset-inline: calc(var(--text-boxes-border-width) * -1);
   border-radius: var(--text-boxes-radius);
-  box-shadow: rgb(var(--color-background)) 0px 0px 0px 0px, rgba(var(--color-foreground), 0.03) 0px 0px 0px 1px, rgba(var(--color-foreground), 0.1) 0px 10px 15px -3px, rgba(var(--color-foreground), 0.1) 0px 4px 6px -4px;
+  box-shadow: 0px 10px 10px -5px rgba(var(--color-foreground), 0.04), 0px 20px 25px -5px rgba(var(--color-foreground), 0.10);
   z-index: -1;
+}
+
+.multicolumn-card__image-wrapper {
+  box-shadow: 0px 10px 10px -5px rgba(var(--color-foreground), 0.04), 0px 20px 25px -5px rgba(var(--color-foreground), 0.10);
 }
 
 .multicolumn.background-none .multicolumn-card {
@@ -97,6 +99,19 @@
   height: min-content;
 }
 
+.multicolumn-card__link, .multicolumn-card__info__text a {
+  z-index: 2;
+}
+
+.multicolumn-card__info__text a {
+  position: relative;
+}
+
+.multicolumn-card__full-link:empty {
+  display: block;
+  margin-top: 0;
+}
+
 @media(max-width: 749px) {
   .multicolumn-list {
     margin: 0;
@@ -104,16 +119,16 @@
   }
 
   .multicolumn-list.slider {
-    scroll-padding-left: 1.5rem;
+    scroll-padding-inline-start: 1.5rem;
   }
 
   .multicolumn-card--image-full-width-mobile.has-padding > .multicolumn-card__image-wrapper {
-    width: calc(var(--media-width) + 2.5rem * 2);
-    margin: -2.5rem -2.5rem 0 -2.5rem;
+    width: calc(var(--media-width) + 3rem * 2);
+    margin: -3rem -3rem 0 -3rem;
   }
   
   .multicolumn-card--image-full-width-mobile.has-padding > .multicolumn-card__image-wrapper {
-    border-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width)) calc(var(--text-boxes-radius) - var(--text-boxes-border-width)) 0 0;
+    border-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width));
   }
 }
 
@@ -129,12 +144,12 @@
   }
 
   .multicolumn-card--image-full-width-desktop.has-padding >.multicolumn-card__image-wrapper {
-    width: calc(var(--media-width) + 2.5rem * 2);
-    margin: -2.5rem -2.5rem 0 -2.5rem;
+    width: calc(var(--media-width) + 3rem * 2);
+    margin: -3rem -3rem 0 -3rem;
   }
   
   .multicolumn-card--image-full-width-desktop.has-padding > .multicolumn-card__image-wrapper {
-    border-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width)) calc(var(--text-boxes-radius) - var(--text-boxes-border-width)) 0 0;
+    border-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width));
   }
 }
 
@@ -149,13 +164,13 @@
 }
 
 .multicolumn-card__image-wrapper + .multicolumn-card__info--onside-right {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 .multicolumn-card__image-wrapper + .multicolumn-card__info--onside-left {
-  padding-right: 1.5rem;
+  padding-inline-end: 1.5rem;
 }
 
 .multicolumn-card__image-wrapper + .multicolumn-card__info--bottom {
-  padding-top: 1.5rem;
+  padding-top: 2.6rem;
 }
