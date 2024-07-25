@@ -12,11 +12,8 @@
     "color_scheme_body": "inverse",
     "auto_generate_font_weight": false,
     "type_header_font": "quantico_n7",
-    "ctm_type_header_font": "prohibition",
-    "ctm_type_header_font_weight": "400",
     "heading_scale": 100,
     "type_body_font": "inter_n4",
-    "ctm_type_body_font": "proxima-nova",
     "body_scale": 100,
     "page_width": 1400,
     "spacing_sections": 0,
@@ -34,6 +31,7 @@
     "card_text_alignment": "left",
     "card_show_border": false,
     "card_box_shadow_opacity": 10,
+    "enable_product_compare": false,
     "collection_card_color_scheme": "inverse",
     "sale_badge_label": "amount",
     "sale_badge_text_color": "#DA2127",
@@ -59,7 +57,9 @@
     "recently_viewed_enable_quick_add": true,
     "recently_viewed_enable_quick_view": true,
     "recently_viewed_columns_mobile": "1",
-    "enable_product_compare": false,
+    "ctm_type_header_font": "prohibition",
+    "ctm_type_header_font_weight": "400",
+    "ctm_type_body_font": "proxima-nova",
     "checkout_logo_image": "shopify:\/\/shop_images\/PXG_Logo.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "medium",
@@ -634,10 +634,7 @@
           "26bc3da8-b83a-4fb7-9472-d4ba3cb40f4e": {
             "type": "options",
             "settings": {
-              "title": "Options",
-              "picker_type": "button",
-              "enable_color_swatches": true,
-              "color_swatches_style": "custom"
+              "title": "Options"
             }
           },
           "bbf86ff5-5b81-42c9-a4a2-69b873970097": {
