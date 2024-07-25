@@ -932,7 +932,7 @@
       ],
       "settings": {
         "section_width": "page-width",
-        "use_background_input": true,
+        "use_background_input": false,
         "enable_sticky_info": true,
         "enable_sticky_cart": false,
         "show_next_prev_products": false,
