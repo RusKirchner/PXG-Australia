@@ -1657,6 +1657,25 @@ ul.main_redirectTabs li a.active {
     width: var(--_first-column-width);
       background: #000;
 }
+div#infiniteoptions-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 530px;
+}
+div#infiniteoptions-container>div {
+    height: 90px;
+    width: calc(33.333% - 20px);
+    border-right: 1px solid #000;
+    padding-right: 20px;
+}
+div#infiniteoptions-container>div.shaft {
+    height: calc(100% - 170px);
+}
+div#infiniteoptions-container>div.grip {
+    border: 0;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
