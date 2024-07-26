@@ -11,10 +11,10 @@
 }
 
 @font-face {
-    font-family: 'Proxima-Nova';
+    font-family: 'proxima_novabold';
     src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff2') format('woff2'),
          url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff') format('woff');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
