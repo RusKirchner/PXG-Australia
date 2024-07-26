@@ -18,6 +18,7 @@
     font-style: normal;
 }
 
+
 strong {
   /* font-weight: var(--font-body-weight-bold); */
       font-family: 'proxima_novabold';
@@ -34,9 +35,9 @@ strong {
   font-family: 'Prohibition';
 
   src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff2?v=1697423696') format('woff2');  
-
+  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff?v=1697423696') format('woff');  
   font-style: normal;
-
+  font-weight: normal;
  
 
   }
