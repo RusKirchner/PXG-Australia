@@ -1016,7 +1016,13 @@
   },
   "platform_customizations": {
     "custom_css": [
-
+      "h1 {font-family: \"Prohibition\" !important; letter-spacing: 0.42rem; line-height: ;}",
+      "h2 {font-family: \"Prohibition\" !important; letter-spacing: 0.2rem; line-height: ;}",
+      "h3 {font-family: \"Prohibition\" !important; letter-spacing: 0.9rem; line-height: ;}",
+      "h4 {font-family: \"Proxima-Nova\";}",
+      "h5 {font-family: \"Proxima-Nova\", sans-serif;}",
+      "p {font-family: \"Proxima-Nova\", sans-serif;}",
+      ".body {font-family: \"Proxima-Nova\" !important; letter-spacing: 0.082rem; line-height: 1.54;}"
     ]
   }
 }
