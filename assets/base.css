@@ -17,6 +17,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff2?v=1697424276') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff?v=1697424276') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 strong {
