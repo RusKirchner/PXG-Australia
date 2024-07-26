@@ -1,19 +1,22 @@
+.mega-menu {
+  position: static;
+}
+
 .mega-menu__content {
   background-color: rgb(var(--color-background));
-  border-inline-start: 0;
-  border-inline-end: 0;
+  border-left: 0;
   border-radius: 0;
-  inset-inline: 0;
+  border-right: 0;  
+  left: 0;
   overflow-y: auto;
   padding-bottom: 2.4rem;
   padding-top: 2.4rem;
+  right: 0;
   transition: opacity 500ms cubic-bezier(.38,.65,.33,1), transform 500ms cubic-bezier(.38,.65,.33,1);
 }
 
-@media screen and (min-width: 990px) {
-  .mega-menu__content.outside-viewport {
-    max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
-  }
+.shopify-section-header-sticky .mega-menu__content {
+  max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
 }
 
 .header-wrapper--border-bottom .mega-menu__content {
@@ -47,14 +50,6 @@
   --total-columns: 4;
 }
 
-.mega-menu__column--span5 {
-  --total-columns: 5;
-}
-
-.mega-menu__column--span6 {
-  --total-columns: 6;
-}
-
 .mega-menu__column {
   display: grid;
   grid-template-columns: repeat(var(--total-columns), 1fr);
@@ -85,16 +80,13 @@
   flex: 1;
 }
 
-.mega-menu__list .list-menu__item--level2 {
-  padding: 0;
-}
-
 .mega-menu__link {
   display: inline-block;
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
   text-decoration: none;
   word-wrap: break-word;
+  text-transform: capitalize;
 }
 
 .mega-menu__link:hover .mega-menu__small-image {
@@ -125,8 +117,10 @@
 
 .mega-menu__column__item .card__inner .card__content--overlay-text {
   position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 div.mega-menu__promotion-info {
@@ -155,28 +149,13 @@ div.mega-menu__promotion-info {
 }
 
 .mega-menu__small-image {
-  min-width: 5rem;
   width: 5rem;
   border: 1px solid rgb(var(--color-foreground), .1);
   padding: 0.3rem;
-  margin-inline-end: 1rem;
+  margin-right: 1rem;
   transition: border-color .5s ease;
 }
 
 .mega-menu__small-image--circle {
   border-radius: 50%;
-}
-
-.menu-drawer__menu-labels {
-  padding: 16px 24px;
-  border: 1px solid rgb(var(--color-foreground), 0.05);
-  border-radius: 0.8rem;
-}
-
-.menu-drawer__menu-labels__list {
-  gap: 4rem;
-}
-
-.menu-drawer__menu-labels__item-gap {
-  gap: 0.8rem;
 }

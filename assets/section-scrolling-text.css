@@ -7,7 +7,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc((100% + var(--gap)) * var(--transform-direction)));
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
@@ -24,10 +24,6 @@
 
 .scrolling-text__item--gradient:not(.scrolling-text__item--outline) {
   -webkit-text-fill-color: transparent;
-}
-
-.scrolling-text__item {
-  padding: 5px;
 }
 
 /* Pause animation when reduced-motion is set */

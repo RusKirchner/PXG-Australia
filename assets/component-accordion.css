@@ -8,14 +8,15 @@
 .accordion + .accordion:before {
   content: "";
   position: absolute;
-  inset-inline: 0;
+  left: 0;
+  right: 0;
   top: 0;
   border-top: 1px solid rgb(var(--color-foreground), 0.1);
 }
 
 .accordion .icon-accordion {
   align-self: center;
-  margin-inline-end: calc(var(--font-heading-scale) * 1rem);
+  margin-right: calc(var(--font-heading-scale) * 1rem);
 }
 
 .accordion summary {
@@ -31,7 +32,7 @@
 }
 
 .accordion__content--no-icon {
-  padding-inline-start: 0;
+  padding-left: 0;
 }
 
 .accordion__content--empty {

@@ -1,6 +1,3 @@
-.totals {
-  row-gap: 1rem;
-}
 
 .totals > * {
   font-size: 1.6rem;
@@ -18,7 +15,7 @@
 }
 
 .totals > * + * {
-  margin-inline-start: 2rem;
+  margin-left: 2rem;
 }
 
 .totals__subtotal-value.price {

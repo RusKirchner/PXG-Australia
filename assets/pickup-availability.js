@@ -36,15 +36,6 @@ if (!customElements.get('pickup-availability')) {
       this.fetchAvailability(this.dataset.variantId);
     }
 
-    update(variant) {
-      if (variant?.available) {
-        this.fetchAvailability(variant.id);
-      } else {
-        this.removeAttribute('available');
-        this.innerHTML = '';
-      }
-    }
-
     renderError() {
       this.innerHTML = '';
       this.appendChild(this.errorHtml);

@@ -14,8 +14,7 @@
       "alt_text": {
         "share_on_facebook": "Chia sẻ trên Facebook",
         "share_on_twitter": "Tweet trên Twitter",
-        "share_on_pinterest": "Ghim trên Pinterest",
-        "share_by_email": "Share by email"
+        "share_on_pinterest": "Ghim trên Pinterest"
       },
       "links": {
         "twitter": "Twitter",
@@ -26,8 +25,7 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok",
-        "linkedin": "Linkedin"
+        "tiktok": "TikTok"
       }
     },
     "continue_shopping": "Tiếp tục mua sắm",
@@ -35,21 +33,10 @@
       "label": "Phân trang",
       "page": "Trang {{ number }}",
       "next": "Trang sau",
-      "previous": "Trang trước",
-      "load_more": "Load more",
-      "load_previous_items": "Load previous items"
+      "previous": "Trang trước"
     },
     "search": {
-      "search": "Tìm kiếm",
-      "clear": "Clear",
-      "view_all_results": "View all results",
-      "type": {
-        "products": "Products",
-        "articles": "Articles",
-        "collections": "Collections",
-        "pages": "Pages",
-        "suggestions": "Suggestions"
-      }
+      "search": "Tìm kiếm"
     },
     "cart": {
       "view": "Xem giỏ hàng của tôi ({{ count }})",
@@ -66,34 +53,6 @@
       "next_slide": "Trượt sang phải",
       "previous_slide": "Trượt sang trái",
       "name": "Thanh trượt"
-    },
-    "boolean": {
-      "true": "Yes",
-      "false": "No"
-    },
-    "shipping_calculator": {
-      "heading": "Shipping calculator",
-      "errors_heading": "Errors",
-      "carriers": "Available shipping carriers",
-      "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination.",
-      "delivery_date_one": "{{ count }} business day",
-      "delivery_date_many": "{{ count }} business days",
-      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
-    },
-    "countdown": {
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
-      "expired_msg": "The countdown timer has been expired."
-    },
-    "floating_bar": {
-      "recently_viewed": "Recently viewed",
-      "recently_viewed_empty": "There are no recently viewed products.",
-      "recently_viewed_open": "Open recently viewed box",
-      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -117,9 +76,7 @@
     "total_reviews": "tổng số lượt đánh giá",
     "star_reviews_info": "{{ rating_value }}/{{ rating_max }} sao",
     "collapsible_content_title": "Nội dung có thể thu gọn",
-    "complementary_products": "Sản phẩm bổ sung",
-    "skip_to_product_grid": "Skip to product grid",
-    "navigation_toggle": "Navigation toggle in sticky header"
+    "complementary_products": "Sản phẩm bổ sung"
   },
   "blogs": {
     "article": {
@@ -138,12 +95,7 @@
       "back_to_blog": "Quay lại blog",
       "share": "Chia sẻ bài viết này",
       "success": "Bạn đã gửi bình luận thành công! Xin cảm ơn!",
-      "success_moderated": "Bạn đã gửi bình luận thành công. Chúng tôi sẽ đăng bình luận sau chốc lát, khi blog của chúng tôi được kiểm duyệt.",
-      "author_html": "Posted by <strong>{{ author }}</strong>",
-      "previous": "Previous",
-      "next": "Next",
-      "tags_all": "All",
-      "continue": "Continue"
+      "success_moderated": "Bạn đã gửi bình luận thành công. Chúng tôi sẽ đăng bình luận sau chốc lát, khi blog của chúng tôi được kiểm duyệt."
     }
   },
   "onboarding": {
@@ -154,21 +106,13 @@
     "product": {
       "add_to_cart": "Thêm vào giỏ hàng",
       "description": "Mô tả",
-      "pre_order": "Pre-order",
       "on_sale": "Giảm giá",
       "product_variants": "Mẫu mã sản phẩm",
       "quantity": {
         "label": "Số lượng",
         "input_label": "Số lượng của {{ product }}",
         "increase": "Tăng số lượng của {{ product }}",
-        "decrease": "Giảm số lượng của {{ product }}",
-        "minimum_of": "Tối thiểu {{ quantity }}",
-        "maximum_of": "Tối đa {{ quantity }}",
-        "multiples_of": "Số lượng gia tăng {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> trong giỏ hàng",
-        "note": "Xem quy tắc số lượng",
-        "min_of": "Tối thiểu {{ quantity }}",
-        "max_of": "Tối đa {{ quantity }}"
+        "decrease": "Giảm số lượng của {{ product }}"
       },
       "price": {
         "from_price_html": "Từ {{ price }}",
@@ -207,30 +151,7 @@
       "include_taxes": "Đã bao gồm thuế.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Phí vận chuyển</a> được tính khi thanh toán.",
       "choose_options": "Chọn các tùy chọn",
-      "choose_product_options": "Chọn tùy chọn cho {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Không khả dụng",
-      "variant_sold_out_or_unavailable": "Mẫu mã đã bán hết hoặc không còn hàng",
-      "inventory_in_stock": "Còn hàng",
-      "inventory_in_stock_show_count": "Còn {{ quantity }} hàng lưu kho",
-      "inventory_low_stock": "Sắp hết hàng",
-      "inventory_low_stock_show_count": "Sắp hết hàng: Còn {{ quantity }}",
-      "inventory_out_of_stock": "Hết hàng",
-      "inventory_out_of_stock_continue_selling": "Còn hàng",
-      "quick_view": "Quick view a product",
-      "quick_view_button": "Quick view",
-"view_product": "View product",
-      "number_of_reviews": {
-        "one": "{{ count }} review",
-        "other": "{{ count }} review"
-      },
-      "volume_pricing": {
-        "title": "Định giá theo số lượng",
-        "note": "Có sẵn định giá theo số lượng",
-        "minimum": "Hơn {{ quantity }}",
-        "price_at_each": "{{ price }}/chiếc",
-        "price_range": "{{ minimum }} - {{ maximum }}"
-      },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "choose_product_options": "Chọn tùy chọn cho {{ product_name }}"
     },
     "modal": {
       "label": "Thư viện phương tiện"
@@ -264,10 +185,7 @@
       "clear_filter": "Xóa bộ lọc",
       "filter_selected_accessibility": "{{ type }} (Đã chọn {{ count }} bộ lọc)",
       "show_more": "Hiển thị thêm",
-      "show_less": "Rút gọn",
-      "show_filter": "Show filter",
-      "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "show_less": "Rút gọn"
     }
   },
   "templates": {
@@ -284,13 +202,7 @@
       "results_with_count_and_term": {
         "one": "Tìm thấy {{ count }} kết quả cho “{{ terms }}”",
         "other": "Tìm thấy {{ count }} kết quả cho “{{ terms }}”"
-      },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "cart": "Giỏ hàng"
@@ -305,27 +217,11 @@
         "post_success": "Cảm ơn đã liên hệ với chúng tôi. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
         "error_heading": "Vui lòng điều chỉnh các mục sau:",
         "title": "Biểu mẫu liên hệ"
-      },
-      "address": {
-        "heading": "Our address"
-      },
-      "opening_hour": {
-        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Không tìm thấy trang",
       "subtext": "404"
-    },
-    "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
     }
   },
   "sections": {
@@ -335,11 +231,7 @@
       "cart_count": {
         "one": "{{ count }} mặt hàng",
         "other": "{{ count }} mặt hàng"
-      },
-      "breadcrumbs": {
-        "home": "Home"
-      },
-      "go_to_link": "Go to {{ title }}"
+      }
     },
     "cart": {
       "title": "Giỏ hàng của bạn",
@@ -367,13 +259,7 @@
       "login": {
         "title": "Bạn đã có tài khoản?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập</a> để thanh toán nhanh hơn."
-      },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      }
     },
     "footer": {
       "payment": "Phương thức thanh toán"
@@ -385,8 +271,7 @@
     },
     "featured_collection": {
       "view_all": "Xem tất cả",
-      "view_all_label": "Xem toàn bộ sản phẩm trong bộ sưu tập {{ collection_name }}",
-      "slider": "Slider"
+      "view_all_label": "Xem toàn bộ sản phẩm trong bộ sưu tập {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "Xem tất cả"
@@ -413,8 +298,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -427,10 +311,6 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
-    },
-    "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -444,8 +324,7 @@
       "title": "Tài khoản",
       "details": "Chi tiết tài khoản",
       "view_addresses": "Xem địa chỉ",
-      "return": "Quay lại Chi tiết tài khoản",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
+      "return": "Quay lại Chi tiết tài khoản"
     },
     "account_fallback": "Tài khoản",
     "activate_account": {
@@ -547,8 +426,7 @@
       "tracking_number": "Mã theo dõi",
       "subtotal": "Tổng phụ",
       "total_duties": "Thuế hải quan"
-    },
-    "back_to_login": "Back to the login page"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -563,21 +441,6 @@
       "expired": "Đã hết hạn",
       "copy_code_success": "Đã sao chép mã thành công",
       "print_gift_card": "In"
-    }
-  },
-  "recipient": {
-    "form": {
-      "checkbox": "I want to send this as a gift",
-      "email_label": "Recipient email",
-      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
-      "email": "Email",
-      "name_label": "Recipient email (optional)",
-      "name": "Name",
-      "message_label": "Message ( optional)",
-      "message": "Message",
-      "max_characters": "{{ max_chars }} characters max",
-      "send_on": "YYYY-MM-DD",
-      "send_on_label": "Send on (optional)"
     }
   }
 }

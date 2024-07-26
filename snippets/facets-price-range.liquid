@@ -11,18 +11,24 @@
     assign uses_comma_decimals = true
   endif
 %}
-<{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %} class="db facets__item-filter" data-ignore-setup-event="true">
-  <details id="Details-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__details facets__details--{{ filter_type }} {% if filter_type == 'horizontal' %}disclosure-has-popup por facets__disclosure{% else %} facets__accordion{% endif %} js-filter"{% if section.settings.filter_collapse == 'expand' and filter_type != 'horizontal' %} open{% endif %}>
-    <summary class="facets__summary facets__summary--{{ filter_type }}{% if filter_type == 'vertical' or filter_type == 'drawer' %} h6 font-heading-bold{% elsif filter_type == 'horizontal' %} font-body-semi-bold text-small background-input{% if has_price_active %} facets__summary--has-actives{% endif %}{% endif %}{% if summary_classes %} {{ summary_classes }}{% endif %}"
-      {% unless filter_type == 'horizontal' %} onclick="return this.closest('details-accordion').toggleContent();"{% if section.settings.filter_collapse == 'expand' %} aria-expanded="true"{% endif %}{% endunless %}>
+<details-accordion class="db" data-ignore-setup-event="true">
+  <details id="Details-{{ suffix_id }}{{ forloop.index }}-{{ section.id }}" class="facets__details {% if filter_type == 'horizontal' %}disclosure-has-popup por facets__disclosure{% else %} facets__accordion{% endif %} js-filter{% if forloop.first %} first{% endif %}" data-index="{{ forloop.index }}" open>
+    <summary class="facets__summary facets__summary--{{ filter_type }}{% if filter_type != 'drawer' %} facets__summary--plus-minus{% endif %} {% if filter_type == 'horizontal' %}h5 facets__summary--box{% if has_price_active %} facets__summary--has-actives{% endif %}{% else %}h4{% endif %} font-heading-bold{% if summary_classes %} {{ summary_classes }}{% endif %}"
+      onclick="return this.closest('details-accordion').toggleContent();"
+      aria-expanded="true">
       <div class="flex align-center justify-space-between facets__label-wrapper">
         <span>{{ filter.label | escape }}</span>
-        {% render 'facets-heading-icon', filter_type: filter_type %}
+        {% render 'facets-heading-icon' %}
       </div>
     </summary>
-    <div id="Facet-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__display facets__display--{{ filter_type }}">
-      <price-range class="facets__price flex flex-wrap" style="--range-used-start-width:{%- if filter.min_value.value -%}{{ filter.min_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%};--range-used-end-width:{%- if filter.max_value.value -%}{{ filter.range_max | minus: filter.max_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%};">
+    <div id="Facet-{{ suffix_id }}{{ forloop.index }}-{{ section.id }}" class="facets__display facets__display--{{ filter_type }}">
+      <price-range class="facets__price flex flex-wrap">
         <div class="range-slider w100 por center no-js-hidden">
+          <div class="range-slider-used range-slider-used--lower" style="--range-used-bar-width:{%- if filter.min_value.value -%}{{ filter.min_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%}">
+            <span class="range-slider-used__inner w100 h100">
+            </span>
+          </div>
+
           <input type="range" min="0" class="w100 range-slider__input range-slider__input--lower"
             {%- if filter.min_value.value -%}
               value="{{ filter.min_value.value }}"
@@ -51,6 +57,11 @@
             id="Filter-{{ suffix_id }}range-{{ filter.label | escape }}-LTE"
             aria-labelledby="lbl-Filter-{{ suffix_id }}-{{ filter.label | escape }}-LTE"
           />
+
+          <div class="range-slider-used range-slider-used--upper" style="--range-used-bar-width:{%- if filter.max_value.value -%}{{ filter.range_max | minus: filter.max_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%}">
+            <span class="range-slider-used__inner w100 h100">
+            </span>
+          </div>
         </div>
         <div class="facets__price__results no-js-hidden flex align-center caption-large">
           {%- capture price_label -%}<span class="facets__price__label">{{ filter.label }}:</span>{%- endcapture -%}
@@ -101,7 +112,7 @@
           </div>
           <span class="field-currency">{{ cart.currency.symbol }}</span>
           <div class="field field--price align-center">
-            <label class="field__label" for="Filter-{{ suffix_id }}{{ filter.label | escape }}-LTE" id="lbl-Filter-{{ suffix_id }}-{{ filter.label | escape }}-LTE">{{ 'products.facets.to' | t }}</label>
+            <label class="field__label" for="Filter-{{ filter.label | escape }}-LTE" id="lbl-Filter-{{ suffix_id }}-{{ filter.label | escape }}-LTE">{{ 'products.facets.to' | t }}</label>
             <input class="field__input field__input--price field__input--price-lte"
               name="{{ filter.max_value.param_name }}"
               id="Filter-{{ suffix_id }}{{ filter.label | escape }}-LTE"
@@ -129,4 +140,4 @@
       </price-range>
     </div>
   </details>
-</{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %}>
+</details-accordion>

@@ -12,7 +12,7 @@
         <span class="information__value font-body-semi-bold text-small inventory-{{ section.id }}">
           {%- liquid
           if product.selected_or_first_available_variant.inventory_management == 'shopify'
-            if product.selected_or_first_available_variant.inventory_quantity >= product.selected_or_first_available_variant.quantity_rule.min
+            if product.selected_or_first_available_variant.inventory_quantity > 0
               if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold
                 if block.settings.show_inventory_quantity
                   echo 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity
@@ -41,7 +41,7 @@
     {%- if block.settings.sku_enable -%}
       <div class="information flex">
         <span class="information__label text-small db">{{ block.settings.sku_label }}:</span>
-        <span class="information__value font-body-semi-bold text-small sku-{{ section.id }}">{{ product.selected_or_first_available_variant.sku }}</span>
+        <span class="information__value font-body-semi-bold text-small">{{ product.selected_or_first_available_variant.sku }}</span>
       </div>
     {%- endif -%} 
     {%- if block.settings.tags_enable and product.tags.size > 0 -%}
@@ -51,12 +51,11 @@
           <ul class="list-unstyled flex flex-wrap">
             {%- for tag in product.tags -%}
               <li>
-                <a
-                  class="link information__value--link link-effect-no-underline{% if forloop.first %} first{% endif %}"
-                  href="{{ routes.all_products_collection_url }}/{{ tag | handleize }}"
-                >
-                  {{- tag -}}
-                </a>{%- unless forloop.last -%},{%- endunless -%}
+                {%- unless forloop.first -%}
+                  {{- tag | link_to_tag: tag | replace: 'href="', 'class="link information__value--link link-effect-no-underline" href="' -}}{%- unless forloop.last -%},{%- endunless -%}
+                {%- else -%}
+                  {{ tag | link_to_tag: tag | replace: 'href="', 'class="link information__value--link link-effect-no-underline first" href="' }}  
+                {%- endunless -%}
               </li>
             {%- endfor -%}  
           </ul>

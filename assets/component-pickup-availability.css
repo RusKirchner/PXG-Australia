@@ -27,7 +27,7 @@ pickup-availability[available] {
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.06rem;
   padding: 0 0 0.2rem;
-  text-align: start;
+  text-align: left;
 }
 
 .pickup-availability-button:hover {
@@ -46,11 +46,11 @@ pickup-availability-drawer {
   padding: 2rem;
   position: fixed;
   top: 0;
-  inset-inline-end: 0;
+  right: 0;
   z-index: 5;
   transition: opacity 300ms ease,
     transform 300ms ease;
-  transform: translateX(calc(var(--transform-direction) * (-100%)));
+  transform: translateX(100%);
   width: 100%;
 }
 
@@ -63,15 +63,16 @@ pickup-availability-drawer[open] + .pickup-overlay {
   display: block;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  inset-inline: 0;
   z-index: 4;
   background: rgb(var(--color-foreground), 0.05);
 }
 
 @media screen and (min-width: 750px) {
   pickup-availability-drawer {
-    transform: translateX(calc(var(--transform-direction) * (-100%)));
+    transform: translateX(100%);
     width: 37.5rem;
   }
 
@@ -121,7 +122,7 @@ pickup-availability-drawer[open] + .pickup-overlay {
 }
 
 .pickup-availability-variant > * + strong {
-  margin-inline-start: 1rem;
+  margin-left: 1rem;
 }
 
 .pickup-availability-list__item {
@@ -146,13 +147,27 @@ pickup-availability-drawer[open] + .pickup-overlay {
 }
 
 @keyframes animateDrawerOpen {
-  0% {
-    opacity: 0;
-    transform: translateX(calc(var(--transform-direction) * (-100%)));
+  @media screen and (max-width: 749px) {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  @media screen and (min-width: 750px) {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

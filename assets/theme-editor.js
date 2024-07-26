@@ -72,8 +72,6 @@ function reloadSlideshow(event) {
       const parentMenu = event.target.closest('header-menu');
       parentMenu.classList.add('ignore-close');
       parentMenu.open();
-      const sectionHeader = event.target.closest('.section-header');
-      sectionHeader.classList.add('focus-by-admin');
     } else {
       const headerDrawer = document.getElementById('header-drawer-menu-mobile');
       const summaryElement = headerDrawer.querySelector('.header__icon--summary');
@@ -127,8 +125,6 @@ function reloadSlideshow(event) {
     const parentMenu = event.target.closest('header-menu');
     parentMenu.classList.remove('ignore-close');
     parentMenu.close();
-    const sectionHeader = event.target.closest('.section-header');
-    sectionHeader.classList.remove('focus-by-admin');
   }
 
   const blockSelectedIsRegionSupport = event.target.classList.contains('header__customer-support-region__region');
@@ -156,11 +152,8 @@ function reloadSlideshow(event) {
   const blockSelectedIsLookbookItem = event.target.classList.contains('lookbook__hotspot');
   if (!blockSelectedIsLookbookItem) return;
 
-  if(!event.target.classList.contains('lookbook__hotspot--with-slider')) {
-    event.target.open();
-  } else {
-    event.target.closest('lookbook-slider').openProductTarget(event.target.querySelector('button'));
-  }
+  event.target.classList.add('ignore-close');
+  event.target.open();
 }
 
 /**
@@ -173,9 +166,8 @@ function reloadSlideshow(event) {
   const blockSelectedIsLookbookItem = event.target.classList.contains('lookbook__hotspot');
   if (!blockSelectedIsLookbookItem) return;
 
-  if(!event.target.classList.contains('lookbook__hotspot--with-slider')) {
-    event.target.closeWithClosingClass();
-  }
+  event.target.classList.remove('ignore-close');
+  event.target.closeWithClosingClass();
 }
 
 /**

@@ -14,8 +14,7 @@
       "alt_text": {
         "share_on_facebook": "Споделяне чрез Facebook",
         "share_on_twitter": "Изпращане на туит в Twitter",
-        "share_on_pinterest": "Отбелязване в Pinterest",
-        "share_by_email": "Share by email"
+        "share_on_pinterest": "Отбелязване в Pinterest"
       },
       "links": {
         "twitter": "Twitter",
@@ -26,8 +25,7 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok",
-        "linkedin": "Linkedin"
+        "tiktok": "TikTok"
       }
     },
     "continue_shopping": "Продължете да пазарувате",
@@ -35,21 +33,10 @@
       "label": "Страниране",
       "page": "Страница {{ number }}",
       "next": "Следваща страница",
-      "previous": "Предишна страница",
-      "load_more": "Load more",
-      "load_previous_items": "Load previous items"
+      "previous": "Предишна страница"
     },
     "search": {
-      "search": "Търсене",
-      "clear": "Clear",
-      "view_all_results": "View all results",
-      "type": {
-        "products": "Products",
-        "articles": "Articles",
-        "collections": "Collections",
-        "pages": "Pages",
-        "suggestions": "Suggestions"
-      }
+      "search": "Търсене"
     },
     "cart": {
       "view": "Покажи количката ми ({{ count }})",
@@ -66,34 +53,6 @@
       "next_slide": "Плъзгане надясно",
       "previous_slide": "Плъзгане наляво",
       "name": "Плъзгач"
-    },
-    "boolean": {
-      "true": "Yes",
-      "false": "No"
-    },
-    "shipping_calculator": {
-      "heading": "Shipping calculator",
-      "errors_heading": "Errors",
-      "carriers": "Available shipping carriers",
-      "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination.",
-      "delivery_date_one": "{{ count }} business day",
-      "delivery_date_many": "{{ count }} business days",
-      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
-    },
-    "countdown": {
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
-      "expired_msg": "The countdown timer has been expired."
-    },
-    "floating_bar": {
-      "recently_viewed": "Recently viewed",
-      "recently_viewed_empty": "There are no recently viewed products.",
-      "recently_viewed_open": "Open recently viewed box",
-      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -117,9 +76,7 @@
     "total_reviews": "общ брой мнения",
     "star_reviews_info": "{{ rating_value }} от {{ rating_max }} звезди",
     "collapsible_content_title": "Съдържание, което може да се свива",
-    "complementary_products": "Допълващи продукти",
-    "skip_to_product_grid": "Skip to product grid",
-    "navigation_toggle": "Navigation toggle in sticky header"
+    "complementary_products": "Допълващи продукти"
   },
   "blogs": {
     "article": {
@@ -138,12 +95,7 @@
       "back_to_blog": "Назад към блога",
       "share": "Споделяне на тази статия",
       "success": "Коментарът ви е публикуван успешно. Благодарим.",
-      "success_moderated": "Коментарът ви е изпратен успешно. Ще бъде публикуван след малко, тъй като блогът има модератор.",
-      "author_html": "Posted by <strong>{{ author }}</strong>",
-      "previous": "Previous",
-      "next": "Next",
-      "tags_all": "All",
-      "continue": "Continue"
+      "success_moderated": "Коментарът ви е изпратен успешно. Ще бъде публикуван след малко, тъй като блогът има модератор."
     }
   },
   "onboarding": {
@@ -154,21 +106,13 @@
     "product": {
       "add_to_cart": "Добавяне към количката",
       "description": "Описание",
-      "pre_order": "Pre-order",
       "on_sale": "Разпродажба",
       "product_variants": "Варианти на продукта",
       "quantity": {
         "label": "Количество",
         "input_label": "Количество за {{ product }}",
         "increase": "Увеличаване на количеството за {{ product }}",
-        "decrease": "Намаляване на количеството за {{ product }}",
-        "minimum_of": "Минимум: {{ quantity }}",
-        "maximum_of": "Максимум: {{ quantity }}",
-        "multiples_of": "Стъпки от {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> в количката",
-        "note": "Преглед на правилата за количества",
-        "min_of": "Мин. {{ quantity }}",
-        "max_of": "Макс. {{ quantity }}"
+        "decrease": "Намаляване на количеството за {{ product }}"
       },
       "price": {
         "from_price_html": "От {{ price }}",
@@ -207,30 +151,7 @@
       "include_taxes": "С включени данъци.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Доставката</a> се изчислява при плащане.",
       "choose_options": "Изберете опции",
-      "choose_product_options": "Изберете опции за {{ product_name }}",
-      "value_unavailable": "{{ option_value }} – неналично",
-      "variant_sold_out_or_unavailable": "Вариантът е изчерпан или неналичен.",
-      "inventory_in_stock": "В наличност",
-      "inventory_in_stock_show_count": "{{ quantity }} в наличност",
-      "inventory_low_stock": "Ниски наличности",
-      "inventory_low_stock_show_count": "Ниски наличности: остават {{ quantity }}",
-      "inventory_out_of_stock": "Изчерпано количество",
-      "inventory_out_of_stock_continue_selling": "В наличност",
-      "quick_view": "Quick view a product",
-      "quick_view_button": "Quick view",
-"view_product": "View product",
-      "number_of_reviews": {
-        "one": "{{ count }} review",
-        "other": "{{ count }} review"
-      },
-      "volume_pricing": {
-        "title": "Цени на едро",
-        "note": "Има възможност за цени на едро",
-        "minimum": "{{ quantity }}+",
-        "price_at_each": "{{ price }}/бр.",
-        "price_range": "{{ minimum }} – {{ maximum }}"
-      },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "choose_product_options": "Изберете опции за {{ product_name }}"
     },
     "modal": {
       "label": "Мултимедийна галерия"
@@ -264,10 +185,7 @@
       "clear_filter": "Премахване на филтъра",
       "filter_selected_accessibility": "{{ type }} ({{ count }} избрани филтъра)",
       "show_more": "Покажи повече",
-      "show_less": "Покажи по-малко",
-      "show_filter": "Show filter",
-      "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "show_less": "Покажи по-малко"
     }
   },
   "templates": {
@@ -284,13 +202,7 @@
       "results_with_count_and_term": {
         "one": "Открит е {{ count }} резултат за „{{ terms }}“",
         "other": "Открити са {{ count }} резултата за „{{ terms }}“"
-      },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "cart": "Количка"
@@ -305,27 +217,11 @@
         "error_heading": "Коригирайте следното:",
         "phone": "Телефонен номер",
         "title": "Формуляр за контакт"
-      },
-      "address": {
-        "heading": "Our address"
-      },
-      "opening_hour": {
-        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Страницата не е открита",
       "subtext": "404"
-    },
-    "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
     }
   },
   "sections": {
@@ -335,11 +231,7 @@
       "cart_count": {
         "one": "{{ count }} артикул",
         "other": "{{ count }} артикула"
-      },
-      "breadcrumbs": {
-        "home": "Home"
-      },
-      "go_to_link": "Go to {{ title }}"
+      }
     },
     "cart": {
       "title": "Вашата количка",
@@ -367,13 +259,7 @@
       "login": {
         "title": "Имате профил?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Влезте</a> за по-бързо преминаване към плащане."
-      },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      }
     },
     "footer": {
       "payment": "Начини на плащане"
@@ -385,8 +271,7 @@
     },
     "featured_collection": {
       "view_all": "Покажи всички",
-      "view_all_label": "Покажи всички продукти в колекция {{ collection_name }}",
-      "slider": "Slider"
+      "view_all_label": "Покажи всички продукти в колекция {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "Покажи всички"
@@ -413,8 +298,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -427,10 +311,6 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
-    },
-    "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -440,13 +320,6 @@
     "update_country": "Актуализиране на държава/регион"
   },
   "customer": {
-    "account": {
-      "title": "Профил",
-      "details": "Информация за профила",
-      "view_addresses": "Покажи адресите",
-      "return": "Назад към информацията за профила",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
-    },
     "account_fallback": "Профил",
     "activate_account": {
       "subtext": "Създайте парола, за да активирате профила си.",
@@ -523,6 +396,12 @@
       "password_confirm": "Потвърждаване на паролата",
       "submit": "Подновяване на паролата"
     },
+    "account": {
+      "title": "Профил",
+      "details": "Информация за профила",
+      "view_addresses": "Покажи адресите",
+      "return": "Назад към информацията за профила"
+    },
     "order": {
       "title": "Поръчка {{ name }}",
       "date_html": "Направена на {{ date }}",
@@ -547,8 +426,7 @@
       "tracking_number": "Номер за проследяване",
       "subtotal": "Междинна сума",
       "total_duties": "Мито"
-    },
-    "back_to_login": "Back to the login page"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -563,21 +441,6 @@
       "copy_code_success": "Кодът е копиран успешно",
       "print_gift_card": "Печат",
       "subtext": "Вашият ваучер за подарък"
-    }
-  },
-  "recipient": {
-    "form": {
-      "checkbox": "I want to send this as a gift",
-      "email_label": "Recipient email",
-      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
-      "email": "Email",
-      "name_label": "Recipient email (optional)",
-      "name": "Name",
-      "message_label": "Message ( optional)",
-      "message": "Message",
-      "max_characters": "{{ max_chars }} characters max",
-      "send_on": "YYYY-MM-DD",
-      "send_on_label": "Send on (optional)"
     }
   }
 }

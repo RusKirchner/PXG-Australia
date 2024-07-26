@@ -29,7 +29,7 @@
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
       <div class="field">
-        <label for="RecoverEmail" class="field__label text-small font-body-semi-bold uppercase">
+        <label for="RecoverEmail" class="field__label text-small font-body-bold uppercase">
           {{ 'customer.login_page.email' | t }}
         </label>
         <input type="email"
@@ -104,7 +104,7 @@
       {%- endif -%}
 
       <div class="field">
-        <label for="CustomerEmail" class="field__label text-small font-body-semi-bold uppercase">
+        <label for="CustomerEmail" class="field__label text-small font-body-bold uppercase">
           {{ 'customer.login_page.email' | t }}
         </label>        
         <input
@@ -124,7 +124,7 @@
 
       {%- if form.password_needed -%}
         <div class="field">
-          <label for="CustomerPassword" class="field__label text-small font-body-semi-bold uppercase margin-top-1rem">
+          <label for="CustomerPassword" class="field__label text-small font-body-bold uppercase margin-top-1rem">
             {{ 'customer.login_page.password' | t }}
           </label>          
           <input

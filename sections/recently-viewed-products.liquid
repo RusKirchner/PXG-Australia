@@ -11,8 +11,6 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
-
-    {%- render 'section-heading-styles' -%}
   {%- endstyle -%}
 
   <recently-viewed class="db recently-viewed-products"
@@ -20,7 +18,6 @@
     {% if section.settings.full_width %} data-full-width="true"{% endif %}
     data-prev-button="Slider-{{ section.id }}-prev-button"
     data-next-button="Slider-{{ section.id }}-next-button"
-    data-limit="{{ settings.recently_viewed_products_to_show }}"
   >
     <div class="recently-viewed-products__section color-{{ section.settings.color_scheme }} gradient hidden">
       <div class="collection section-{{ section.id }}-padding">
@@ -108,7 +105,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
+      "label": "t:sections.all.padding.padding_top",
       "default": 48
     }
   ],

@@ -1,5 +1,5 @@
 .list-menu--right {
-  inset-inline-end: 0;
+  right: 0;
 }
 
 .list-menu--disclosure:focus {
@@ -24,6 +24,6 @@
 
 .header__submenu--last-level {
   position: absolute;
-  inset-inline-start: 100%;
+  left: 100%;
   top: -3rem;
 }

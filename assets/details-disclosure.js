@@ -10,12 +10,6 @@ class DetailsDisclosure extends HTMLElement {
 
     this.openHandler = this.open.bind(this);
     this.closeWithClosingClassHandler = this.closeWithClosingClass.bind(this);
-
-    this.closeButton = this.querySelector('.disclosure__close-button');
-    if(this.closeButton) {
-      this.onClickCloseButtonHandler = this.onClickCloseButton.bind(this);
-      this.closeButton.addEventListener('click', this.onClickCloseButtonHandler);
-    }
     
     if(!this.dataset.ignoreHover) {
       this.isAbleToUseMouse = matchMedia('(hover: hover)').matches;
@@ -24,30 +18,13 @@ class DetailsDisclosure extends HTMLElement {
         this.isAbleToUseMouse = matchMedia('(hover: hover)').matches;
         this.initHoverDetails();
       }, 300);
-
-      this.debouncedOnChangeHandler = this.debouncedOnChange.bind(this);
   
-      window.addEventListener('resize', this.debouncedOnChangeHandler);
+      window.addEventListener('resize', this.debouncedOnChange.bind(this));
   
       this.initHoverDetails();
     }
     
     this.initClickSummary();
-  }
-
-  disconnectedCallback() {
-    if(this.isAbleToUseMouse) {
-      Shopify.removeEventListener(this.mainDetailsToggle, 'mouseenter', this.openHandler);
-      Shopify.removeEventListener(this.mainDetailsToggle, 'mouseleave', this.closeWithClosingClassHandler);
-    }
-
-    if(this.closeButton) {
-      this.closeButton.removeEventListener('click', this.onClickCloseButtonHandler);
-    }
-
-    if(this.debouncedOnChangeHandler) {
-      window.removeEventListener('resize', this.debouncedOnChangeHandler);
-    }
   }
 
   initHoverDetails () {
@@ -96,10 +73,6 @@ class DetailsDisclosure extends HTMLElement {
     })
   }
 
-  onClickCloseButton() {
-    this.closeWithClosingClass();
-  }
-
   playAnimation() {
     if (!this.animations) this.animations = this.content.getAnimations();
     if (this.mainDetailsToggle.hasAttribute('open')) {
@@ -145,18 +118,9 @@ class HeaderMenu extends DetailsDisclosure {
 
   onToggle() {
     if (!this.header) return;
-    if (document.documentElement.style.getPropertyValue('--header-bottom-position-desktop') === '') {
-      document.documentElement.style.setProperty('--header-bottom-position-desktop', `${Math.floor(this.header.getBoundingClientRect().bottom)}px`);
-    }
-    if(this.mainDetailsToggle.hasAttribute('open')) {
-      if(this.content.getBoundingClientRect().bottom > document.documentElement.clientHeight - 170) {
-        this.content.classList.add('outside-viewport');
-        document.body.classList.add('overflow-hidden');
-      }
-    } else {
-      this.content.classList.remove('outside-viewport');
-      document.body.classList.remove('overflow-hidden');
-    }
+    this.header.preventHide = this.mainDetailsToggle.open;
+    if (document.documentElement.style.getPropertyValue('--header-bottom-position-desktop') !== '') return;
+    document.documentElement.style.setProperty('--header-bottom-position-desktop', `${Math.floor(this.header.getBoundingClientRect().bottom)}px`);
   }
 }
 

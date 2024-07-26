@@ -12,19 +12,11 @@
 
 @font-face {
     font-family: 'proxima_novabold';
-    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff2') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff') format('woff');
+    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff2?v=1697424275') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff?v=1697424276') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Proxima-Nova';
-    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff2') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 strong {
   /* font-weight: var(--font-body-weight-bold); */
@@ -37,15 +29,6 @@ strong {
     animation: none !important;
   }
 }
-@font-face {
-  font-family: 'Prohibition';
-  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff2') format('woff2');  
-  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff') format('woff');  
-  font-style: normal;
-  font-weight: normal;
- 
-
-  }
 
 .underlined-link:hover {
   color: rgb(var(--color-link));
@@ -1439,11 +1422,11 @@ back-to-top .icon {
 
 
 /* Adobe Typekit RK Image */
-/* :root {
---font-body-family: "Inter", sans-serif; 
+:root {
+--font-body-family:"proxima-nova",sans-serif; 
 --font-heading-family:"prohibition",sans-serif;   
 }
- */
+
 
 .table-responsive {
     display: block;
@@ -1656,25 +1639,6 @@ ul.main_redirectTabs li a.active {
     left: 0;
     width: var(--_first-column-width);
       background: #000;
-}
-div#infiniteoptions-container {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    height: 530px;
-}
-div#infiniteoptions-container>div {
-    height: 90px;
-    width: calc(33.333% - 20px);
-    border-right: 1px solid #000;
-    padding-right: 20px;
-}
-div#infiniteoptions-container>div.shaft {
-    height: calc(100% - 170px);
-}
-div#infiniteoptions-container>div.grip {
-    border: 0;
 }
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {

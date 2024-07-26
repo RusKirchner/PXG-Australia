@@ -6,15 +6,11 @@
       {%- assign color_size = card_product.options_by_name[color_name].values.size -%}	
       {%- for color in card_product.options_by_name[color_name].values limit: 5 -%}
         {%- liquid
-          assign variant_color = color.variant
-          unless variant_color and variant_color.featured_image
-            assign variants = card_product.variants | where: attribute, color
-            assign variant_color = variants | where: 'featured_image' | first
-            unless variant_color
-              assign variant_color = variants | first
-            endunless
+          assign variants = card_product.variants | where: attribute, color
+          assign variant_color = variants | where: 'featured_image' | first
+          unless variant_color
+            assign variant_color = variants | first
           endunless
-          
           assign srcset = ''
           if variant_color.featured_image != blank
             if variant_color.featured_image.width >= 165
@@ -34,7 +30,7 @@
           endif
         -%}
         <li>
-          <a href="{{ variant_color.url }}" class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% if variant_color != null %} color-swatch-own-image{% endif %}{% endif %}"{% if srcset != '' %} data-srcset="{{ srcset | escape }}"{% endif %} data-color="{{ color | handleize }}">
+          <a href="{{ variant_color.url }}" class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% if variant_color != null %} color-swatch-own-image{% endif %}{% endif %}"{% if srcset != '' %} data-srcset="{{ srcset | escape }}"{% endif %} data-color="{{ color | handleize }}" aria-label="{{ card_product.title | escape }} - {{ color | escape }}">
             {%- if color_swatches_style == 'variant' and variant_color != null and variant_color.featured_image != blank -%}
               <img src="{{ variant_color.featured_image | image_url: width: 100, height: 100, crop: 'center' }}" width="100" height="100" loading="lazy" class="w100 h100" alt="{{ card_product.title | escape }} - {{ color | escape }}"/>
             {%- endif -%}
@@ -44,7 +40,7 @@
       {%- endfor -%}
       {%- if color_size > 5 -%}
         <li>
-          <a href="{{ card_product.url }}" class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}">
+          <a href="{{ card_product.url }}" class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}" aria-label="{{ card_product.title | escape }}">
             +{{ color_size | minus: 5 }}
           </a>
         </li>

@@ -266,7 +266,7 @@ h2,
   letter-spacing: 0.05rem;
   font-weight: var(--font-body-weight-medium);
   display: inline;
-  margin-inline-start: 1rem;
+  margin-left: 1rem;
 }
 
 .badge {
@@ -385,7 +385,7 @@ h2,
 .form__message .icon {
   flex-shrink: 0;
   height: 1.3rem;
-  margin-inline-end: 0.5rem;
+  margin-right: 0.5rem;
   width: 1.3rem;
 }
 

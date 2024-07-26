@@ -22,11 +22,6 @@ if (!customElements.get('cart-product-recommendations')) {
           const productIds = cart.items.map((item) => {
             return item.product_id;
           });
-          if(productIds.length == 0) {
-            this.classList.add('hidden');
-            return;
-          }
-          this.classList.remove('hidden');
           const cartItemsLength = productIds.length;
           const limit = Math.round(parseFloat(this.limit / cartItemsLength)) + cartItemsLength - 1;
           productIds.forEach((pId, index) => {
@@ -38,23 +33,17 @@ if (!customElements.get('cart-product-recommendations')) {
               .then(response => response.text())
               .then(text => {
                 const resultList = getDomHtmlFromText(text, '.item-list');
-                if(resultList) {
-                  resultList.querySelectorAll(this.dataset.itemSelector).forEach((item, itemIndex) => {
-                    const itemId = item.dataset.productId;
-                    if(!resultIds.includes(itemId)) {
-                      results.push(item);
-                      resultIds.push(itemId);
-                    }
-                  });
-                }
-                
+                resultList.querySelectorAll(this.dataset.itemSelector).forEach((item, itemIndex) => {
+                  const itemId = item.dataset.productId;
+                  if(!resultIds.includes(itemId)) {
+                    results.push(item);
+                    resultIds.push(itemId);
+                  }
+                });
                 totalItem++;
                 if(totalItem == cartItemsLength) {
                   this.classList.remove('loading');
                   this.renderResults(results);
-                  if(!this.querySelector('.cart__recommendation-list .grid__item')) {
-                    this.classList.add('hidden');
-                  }
                 }
               });
           });

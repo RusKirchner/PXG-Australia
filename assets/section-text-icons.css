@@ -3,7 +3,7 @@
 }
 
 .text-icons__card:hover .text-icons__card__icon {
-	transform: translate(calc(var(--transform-direction) * 50%), -50%) scale(1.1);
+	transform: translate(-50%, -50%) scale(1.1);
 }
 
 .text-icons__card__heading-box {

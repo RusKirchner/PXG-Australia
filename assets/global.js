@@ -3,73 +3,18 @@ class QuantityInput extends HTMLElement {
     super();
     this.input = this.querySelector('input');
     this.changeEvent = new Event('change', { bubbles: true });
-    this.input.addEventListener('change', this.onInputChange.bind(this));
+
     this.querySelectorAll('button').forEach(
       (button) => button.addEventListener('click', this.onButtonClick.bind(this))
     );
-  }
-
-  connectedCallback() {
-    this.validateQtyRules();
-    this.quantityUpdateHandler = this.onQuantityUpdate.bind(this);
-    document.addEventListener('afterQuantityUpdate', this.quantityUpdateHandler);
-  }
-
-  disconnectedCallback() {
-    if (this.quantityUpdateHandler) {
-      document.removeEventListener('afterQuantityUpdate', this.quantityUpdateHandler);
-    }
-  }
-
-  onInputChange(event) {
-    this.validateQtyRules();
   }
 
   onButtonClick(event) {
     event.preventDefault();
     const previousValue = this.input.value;
 
-    if (event.target.name === 'plus') {
-      if (parseInt(this.input.dataset.min) > parseInt(this.input.step) && this.input.value == 0) {
-        this.input.value = this.input.dataset.min;
-      } else {
-        this.input.stepUp();
-      }
-    } else {
-      this.input.stepDown();
-    }
-
+    event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
-
-    if (this.input.dataset.min === previousValue && event.target.name === 'minus') {
-      this.input.value = parseInt(this.input.min);
-    }
-  }
-
-  onQuantityUpdate() {
-    this.validateQtyRules();
-  }
-
-  validateQtyRules() {
-    if(this.input.value == '' || this.input.value == null) {
-      this.input.value = this.input.min;
-    } else if(parseInt(this.input.value) % parseInt(this.input.step) > 0) {
-      this.input.stepUp();
-    }
-    const value = parseInt(this.input.value);
-    if(this.input.max && (value > parseInt(this.input.max))) {
-      this.input.value = this.input.max;
-    }
-    const finalValue = parseInt(this.input.value);
-    if (this.input.min) {
-      const buttonMinus = this.querySelector(".quantity__button[name='minus']");
-      buttonMinus.classList.toggle('disabled', finalValue <= parseInt(this.input.min));
-    }
-    if (this.input.max) {
-      const max = parseInt(this.input.max);
-      const buttonPlus = this.querySelector(".quantity__button[name='plus']");
-      buttonPlus.classList.toggle('disabled', finalValue >= max);
-    }
   }
 }
 
@@ -196,7 +141,6 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
     this.header = this.header || document.querySelector('.section-header');
     this.headerContent = document.querySelector('.header');
     document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.headerContent.getBoundingClientRect().bottom)}px`);
@@ -208,6 +152,7 @@ class HeaderDrawer extends MenuDrawer {
 
     summaryElement.setAttribute('aria-expanded', true);
     trapFocus(this.mainDetailsToggle, summaryElement);
+    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
@@ -369,3 +314,17 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
+document.addEventListener("DOMContentLoaded", (event) => {
+$('a[href*="#"]').click(function(e) {
+      // Your code here, for example, scroll to the target
+      // For example, smooth scroll to the target element
+     e.preventDefault();
+      var target = $(this.hash);
+      if (target.length) {
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 1000);
+          return false;
+      }
+  });
+  });

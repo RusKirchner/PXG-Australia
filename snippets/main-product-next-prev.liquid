@@ -75,16 +75,16 @@
 	width: 32rem;
 }
 .product-nav__item--previous {
-  inset-inline-start: 0;
+  left: 0;
 }
 .product-nav__item--transform-left {
-  transform: translate(calc((100% - 3.5rem) * var(--transform-direction)), -50%);
+  transform: translate(calc(-100% + 3.5rem), -50%);
 }
 .product-nav__item--next {
-  inset-inline-end: 0;
+  right: 0;
 }
 .product-nav__item--transform-right {
-  transform: translate(calc((-100% + 3.5rem) * var(--transform-direction)), -50%);
+  transform: translate(calc(100% - 3.5rem), -50%);
 }
 .product-nav__info {
   padding: 0 15px;

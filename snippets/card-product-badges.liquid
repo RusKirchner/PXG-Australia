@@ -12,10 +12,8 @@
 {%- liquid
 	assign custom_badges = ''
 	assign total = 0
-	assign index_badge_position = 1
-	if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none'
+	if card_product.compare_at_price > card_product.price and card_product.available
 		assign total = total | plus: 1
-		assign index_badge_position = 2
 	endif	
 	for i in (1..5)
 		assign index_badge = 'custom_badge_metafield_' | append: i
@@ -23,14 +21,12 @@
 			assign metafield_parts = settings[index_badge] | split: '.'
 			if card_product.metafields[metafield_parts[0]][metafield_parts[1]] != blank
 				if card_product.metafields[metafield_parts[0]][metafield_parts[1]].type == 'single_line_text_field'
-					assign custom_badges = custom_badges | append: '<span class="badge badge--bottom-left badge--custom-' | append: i | append: ' badge--position-' | append: index_badge_position | append: ' font-body-bold">' | append: card_product.metafields[metafield_parts[0]][metafield_parts[1]].value | append: '</span>'
+					assign custom_badges = custom_badges | append: '<span class="badge badge--bottom-left badge--custom-' | append: i | append: ' badge--position-' | append: total | append: ' font-body-bold">' | append: card_product.metafields[metafield_parts[0]][metafield_parts[1]].value | append: '</span>'
 					assign total = total | plus: 1
-					assign index_badge_position = index_badge_position | plus: 1
 				elsif card_product.metafields[metafield_parts[0]][metafield_parts[1]].type == 'list.single_line_text_field'
 					for value in card_product.metafields[metafield_parts[0]][metafield_parts[1]].value
-						assign custom_badges = custom_badges | append: '<span class="badge badge--bottom-left badge--custom-' | append: i | append: ' badge--position-' | append: index_badge_position | append: ' font-body-bold">' | append: value | append: '</span>'
+						assign custom_badges = custom_badges | append: '<span class="badge badge--bottom-left badge--custom-' | append: i | append: ' badge--position-' | append: total | append: ' font-body-bold">' | append: value | append: '</span>'
 						assign total = total | plus: 1
-						assign index_badge_position = index_badge_position | plus: 1
 					endfor
 				endif	
 			endif
@@ -38,12 +34,12 @@
 	endfor
 -%}
 {%- if total > 0 or card_product.available == false -%}
-	{%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
+	{%- if card_product.compare_at_price > card_product.price and card_product.available -%}
 		<span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold">
 			{%- if settings.sale_badge_label == 'text' -%}
 				{{ 'products.product.on_sale' | t }}
 			{%- elsif settings.sale_badge_label == 'percent' -%}
-				{{ card_product.price | minus: card_product.compare_at_price | times: 100.00 | divided_by: card_product.compare_at_price | round }}%
+				-{{ card_product.compare_at_price | minus: card_product.price | times: 100 | divided_by: card_product.compare_at_price | floor }}%
 			{%- else -%}
 				{%- if settings.currency_code_enabled -%}
 					-{{ card_product.compare_at_price | minus: card_product.price | money_with_currency }}	

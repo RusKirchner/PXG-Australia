@@ -15,8 +15,9 @@
   display: flex;
   row-gap: 1.5rem;
   flex-direction: column;
-  transform: translateX(calc(var(--transform-direction) * (-100%)));
+  transform: translateX(100%);
   transition: transform 300ms ease;
+  padding-bottom: 1.5rem;
 }
 
 .drawer__inner > * {
@@ -28,7 +29,7 @@
 }
 
 .drawer__header {
-  padding-inline-end: 0.5rem;
+  padding-right: 0.5rem;
   border-bottom: 1px solid rgb(var(--color-foreground),.05);
   box-shadow: 0px 1px 2px 0px rgba(var(--color-foreground), 0.03);
   padding-top: 0.5rem;
@@ -57,6 +58,12 @@
   flex-direction: column;
 }
 
+.drawer__footer {
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 @media(min-width: 750px) {
   .drawer__inner {
     width: 50rem;
@@ -77,8 +84,9 @@
 div.drawer__overlay:empty {
   position: fixed;
   top: 0;
+  right: 0;
   bottom: 0;
-  inset-inline: 0;
+  left: 0;
   display: block;
   cursor: pointer;
 }

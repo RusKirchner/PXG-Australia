@@ -25,7 +25,7 @@
 		id="url"
 		value="{{ share_url }}"
 		>
-	<button class="share-button__button flex align-center large-up-hide button button--small{% if block.settings.enable_floating_layout %} bt-tooltip share-button__button--floating share-button__button--circle{% endif %}">
+	<button class="share-button__button flex align-center large-up-hide button button--small{% if block.settings.enable_floating_layout %} bt-tooltip share-button__button--floating{% endif %}">
 		{% render 'icon-share' %}
 		{%- if block.settings.enable_floating_layout -%}
 			<span class="bt-tooltip__inner bt-tooltip__inner--left">{{ block.settings.share_label | escape }}</span>
@@ -33,7 +33,7 @@
 			<span>{{ block.settings.share_label | escape }}</span>	
 		{%- endif -%}
 	</button>
-	<div class="share-button__network{% if block.settings.enable_floating_layout %} share-button__network--floating{% endif %} flex small-hide medium-hide">
+	<div class="share-button__network{% if block.settings.enable_floating_layout %} share-button__network--floating{% endif %} w100 flex small-hide medium-hide">
 		{%- unless block.settings.enable_floating_layout -%}
 			<span class="share-button__label information__label text-small">{{ block.settings.share_label | escape }}</span>
 		{%- endunless -%}
@@ -48,7 +48,7 @@
 			{%- endif -%}
 			{%- if block.settings.share_on_twitter -%}
 				<li>
-					<a target="_blank" href="//twitter.com/intent/tweet?text={{ title | url_param_escape }}&amp;url={{ share_url | url_encode }}" rel="nofollow" class="bt-tooltip share-button__network__link tap-area-icon flex align-center justify-center" aria-label="{{ 'general.social.alt_text.share_on_twitter' | t | escape }}">
+					<a target="_blank" href="//twitter.com/share?text={{ title | url_param_escape }}&amp;url={{ share_url | url_encode }}" rel="nofollow" class="bt-tooltip share-button__network__link tap-area-icon flex align-center justify-center" aria-label="{{ 'general.social.alt_text.share_on_twitter' | t | escape }}">
 						{%- render 'icon-twitter', icon_width: 20 -%}
 						<span class="bt-tooltip__inner bt-tooltip__inner--{{ tooltip_pos }}">{{ 'general.social.alt_text.share_on_twitter' | t | escape }}</span>
 					</a>

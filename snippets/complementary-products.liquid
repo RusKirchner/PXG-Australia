@@ -1,9 +1,6 @@
 <product-recommendations class="complementary-products no-js-hidden db{% if block.settings.make_collapsible_row %} is-accordion accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
-    {%-liquid
-      assign section_id = section.id | append: '-' | append: block.id
-      assign has_footer = false
-    -%}
+    {%- assign section_id = section.id | append: '-' | append: block.id -%}
     <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}>
       <div class="complementary-products__container">
         {%- if block.settings.make_collapsible_row -%}
@@ -40,11 +37,6 @@
                     {%- if r_product.featured_image.width >= 1420 -%}{{ r_product.featured_image | image_url: width: 1420 }} 1420w,{%- endif -%}
                     {{ r_product.featured_image | image_url }} {{ r_product.featured_image.width }}w
                   {%- endcapture -%}
-                  {%-liquid
-                    unless customer.b2b? or r_product.variants.size > 99
-                      assign has_footer = true
-                    endunless
-                  -%}
                   <li class="complementary__item"{% if r_product.variants.size > 1 and r_product.featured_image != blank %} data-featured-image="{{ srcset }}"{% endif %}>
                     <div class="complementary__item__info complementary__item__info--media{% unless r_product.has_only_default_variant %} complementary__item__info--has-variants{% endunless %}">
                       {%- if  r_product.featured_image != blank -%}
@@ -73,79 +65,55 @@
                       {% render 'price', product: r_product, show_in_card: true, use_variant: true, use_custom_element: true %}
                     </div>
                     <div class="complementary__item__info complementary__item__info--variant flex align-center">
-                      {%- unless customer.b2b? or r_product.variants.size > 99 -%}
-                        {%- unless r_product.has_only_default_variant -%}
-                          <label class="form__label visually-hidden" for="Complementary-Option-{{ section_id }}-{{ forloop.index0 }}">
-                            {{ 'products.product.product_variants' | t }}
-                          </label>
-                          <div class="select">
-                            <select
-                              class="select__select complementary__item__select complementary-variant-id"
-                              name="items[][id]"
-                              id="Complementary-Option-{{ section_id }}-{{ forloop.index0 }}"
-                            >
-                              {%- for r_variant in r_product.variants -%}
-                                <option value="{{ r_variant.id | escape }}"
-                                  {% if r_variant.id == r_product.first_available_variant.id %} selected="selected"{% endif %}
-                                  data-price="{{ r_variant.price }}"
-                                  data-compare-at-price="{{ r_variant.compare_at_price }}"
-                                  data-available="{{ r_variant.available }}"
-                                  {% unless r_variant.available %}disabled{% endunless %}
-                                  {% if r_variant.featured_image != blank %} data-featured-image="{{ r_variant.featured_image.src | image_url }}" data-featured-image-width="{{ r_variant.featured_image.width }}"{% endif %}
-                                >
-                                  {{ r_variant.title }}
-                                </option>
-                              {%- endfor -%}
-                            </select>
-                            {% render 'icon-caret' %}
-                          </div>
-                        {%- else -%}
-                          <input type="hidden" name="items[][id]" value="{{ r_product.selected_or_first_available_variant.id }}" data-price="{{ r_product.selected_or_first_available_variant.price }}" data-compare-at-price="{{ r_product.selected_or_first_available_variant.compare_at_price }}" data-available="{{ r_product.selected_or_first_available_variant.available }}" class="complementary-variant-id">  
-                        {%- endunless -%}  
-                        {%- if r_product.available -%}
-                          <label class="form__label visually-hidden" for="Complementary-Quantity-{{ section_id }}-{{ r_product.id }}">
-                            {{ 'products.product.quantity.label' | t }}
-                          </label>
-                          <quantity-input class="quantity flex align-center color-foreground por complementary__item__quantity">
-                            <input class="quantity__input flex-grow-1 center background-input"
-                                type="number"
-                                name="quantity"
-                                id="Complementary-Quantity-{{ section_id }}-{{ r_product.id }}"
-                                min="0"
-                                value="0"
-                              >
-                            <div class="quantity__buttons flex flex-column flex-grow-1">    
-                              <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">
-                                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: r_product.title | escape }}</span>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.6666 5.33331L5.99992 0.666646L1.33325 5.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </button>
-                              <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="minus" type="button">
-                                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: r_product.title | escape }}</span>
-                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.6666 1.16663L5.99992 5.83329L1.33325 1.16663" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </button>
-                            </div>
-                          </quantity-input>
-                        {%- endif -%}
-                      {%- else -%}
-                        <quick-view-modal-opener data-modal="#QuickView-Modal">
-                          <button
-                            type="button"
-                            class="button button--small"
-                            aria-haspopup="dialog"
-                            data-product-url="{{ r_product.url }}"
-                            tabindex="-1"
+                      {%- unless r_product.has_only_default_variant -%}
+                        <div class="select">
+                          <select
+                            class="select__select complementary__item__select complementary-variant-id"
+                            name="items[][id]"
                           >
-                            <span>{{ 'products.product.quick_view_button' | t }}</span>
-                            <div class="loading-overlay__spinner hidden">
-                              {%- render 'icon-cart-loading' -%}
-                            </div>
-                          </button>
-                        </quick-view-modal-opener>  
+                            {%- for r_variant in r_product.variants -%}
+                              <option value="{{ r_variant.id | escape }}"
+                                {% if r_variant.id == r_product.first_available_variant.id %} selected="selected"{% endif %}
+                                data-price="{{ r_variant.price }}"
+                                data-compare-at-price="{{ r_variant.compare_at_price }}"
+                                data-available="{{ r_variant.available }}"
+                                {% unless r_variant.available %}disabled{% endunless %}
+                                {% if r_variant.featured_image != blank %} data-featured-image="{{ r_variant.featured_image.src | image_url }}" data-featured-image-width="{{ r_variant.featured_image.width }}"{% endif %}
+                              >
+                                {{ r_variant.title }}
+                              </option>
+                            {%- endfor -%}
+                          </select>
+                          {% render 'icon-caret' %}
+                        </div>
+                      {%- else -%}
+                        <input type="hidden" name="items[][id]" value="{{ r_product.selected_or_first_available_variant.id }}" data-price="{{ r_product.selected_or_first_available_variant.price }}" data-compare-at-price="{{ r_product.selected_or_first_available_variant.compare_at_price }}" data-available="{{ r_product.selected_or_first_available_variant.available }}" class="complementary-variant-id">  
                       {%- endunless -%}  
+                      {%- if r_product.available -%}
+                        <quantity-input class="quantity flex align-center color-foreground por complementary__item__quantity">
+                          <input class="quantity__input flex-grow-1 center background-input"
+                              type="number"
+                              name="quantity"
+                              id="Quantity-{{ block.id }}-{{ r_product.id }}"
+                              min="0"
+                              value="0"
+                            >
+                          <div class="quantity__buttons flex flex-column flex-grow-1">    
+                            <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">
+                              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: r_product.title | escape }}</span>
+                              <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6666 5.33331L5.99992 0.666646L1.33325 5.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                            <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="minus" type="button">
+                              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: r_product.title | escape }}</span>
+                              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6666 1.16663L5.99992 5.83329L1.33325 1.16663" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </quantity-input>
+                      {%- endif -%}
                     </div>
                   </li>
                   {%- unless forloop.last -%}
@@ -154,51 +122,51 @@
                 {%- endfor -%}
               </ul>
             </div>  
-            {%- if has_footer -%}
-              {%- if block.settings.total_enable or block.settings.button_enable -%}
-                <div class="complementary__actions w100 flex align-center product__sale-box__footer por flex justify-space-between">
-                  {%- if block.settings.total_enable -%}
-                    {%- liquid
-                      assign money_price = 0 | money
-                      if settings.currency_code_enabled
-                        assign money_price = 0 | money_with_currency
-                      endif
-                    -%}
-                    <div class="complementary__total flex flex-column">
-                      <span class="complementary__total__label text-small lh1">{{ block.settings.total_label }}</span>
-                      <product-price class="price complementary__total__price font-body-semi-bold">
-                        <div class="price__container">
-                          <div class="price__regular">
-                            <span class="price-item price-item--regular">
-                              {{ money_price }}
-                            </span>
-                          </div>
-                          <div class="price__sale">
-                            <span>
-                              <s class="price-item price-item--regular light">
-                                {{ money_price }}
-                              </s>
-                            </span>
-                            <span class="price-item price-item--sale price-item--last">
-                              {{ money_price }}
-                            </span>
-                          </div>
+            {%- if block.settings.total_enable or block.settings.button_enable -%}
+              <div class="complementary__actions w100 flex align-center product__sale-box__footer por flex justify-space-between">
+                {%- if block.settings.total_enable -%}
+                  {%- liquid
+                    assign money_price = 0 | money
+                    if settings.currency_code_enabled
+                      assign money_price = 0 | money_with_currency
+                    endif
+                  -%}
+                  <div class="complementary__total flex flex-column">
+                    <span class="complementary__total__label text-small lh1">{{ block.settings.total_label }}</span>
+                    <product-price class="price complementary__total__price font-body-semi-bold">
+                      <div class="price__container">
+                        <div class="price__regular">
+                          <span class="price-item price-item--regular">
+                            {{ money_price }}
+                          </span>
                         </div>
-                      </product-price>
-                    </div>
-                  {%- endif -%}
-                  {%- if block.settings.button_enable -%}
-                    <button type="submit" class="button button--secondary button--medium" disabled>
-                      <span>
-                        {{ block.settings.button_label }}
-                      </span>
-                      <div class="loading-overlay__spinner hidden">
-                        {%- render 'icon-cart-loading' -%}
+                        <div class="price__sale">
+                          <span>
+                            <s class="price-item price-item--regular light">
+                              {{ money_price }}
+                            </s>
+                          </span>
+                          <span class="price-item price-item--sale price-item--last">
+                            {{ money_price }}
+                          </span>
+                        </div>
                       </div>
-                    </button>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+                    </product-price>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.button_enable -%}
+                  <button type="submit" class="button button--secondary" disabled>
+                    <span>
+                      {{ block.settings.button_label }}
+                    </span>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                {%- endif -%}
+              </div>
             {%- endif -%}
           </form>
         </complementary-products>
@@ -214,10 +182,11 @@
     <script src="{{ 'product-price.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'complementary-products.js' | asset_url }}" defer="defer"></script>
   {%- endunless -%}
-  <link rel="stylesheet" href="{{ 'quick-view.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+  {%- if block.settings.enable_quick_add -%}
+    <link rel="stylesheet" href="{{ 'component-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
   {%- if block.settings.make_collapsible_row -%}
     <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}  
 </product-recommendations>
-<script src="{{ 'product-recommendation.js' | asset_url }}" defer="defer"></script>

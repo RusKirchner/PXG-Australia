@@ -1,13 +1,15 @@
-{%- capture direction -%}{%- render 'direction' -%}{%- endcapture -%}
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
+<html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    <script src="//d1liekpayvooaz.cloudfront.net/apps/customizery/customizery.js?shop={{shop.permanent_domain}}"></script>
+    <meta name="facebook-domain-verification" content="sngh0b8ruaonvi9medu84hen06ldjt" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/fur1doe.css">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -26,9 +28,6 @@
       if settings.auto_generate_font_weight
         assign body_font_medium_weight = body_font.weight | plus: 100 | at_most: 600 | at_least: body_font.weight | append: ''
         assign body_font_medium = body_font | font_modify: 'weight', body_font_medium_weight
-
-        assign body_font_large_weight = body_font.weight | plus: 200 | at_most: 600 | at_least: body_font.weight | append: ''
-        assign body_font_large = body_font | font_modify: 'weight', body_font_large_weight
         
         assign heading_font_bold_weight = heading_font.weight | plus: 300 | at_most: 1000 | append: ''
         assign heading_font_bold = heading_font | font_modify: 'weight', heading_font_bold_weight
@@ -45,7 +44,6 @@
         assign heading_font_semi_bold = heading_font | font_modify: 'weight', heading_font_semi_bold_weight
       else
         assign body_font_medium = body_font
-        assign body_font_large = body_font
         
         assign heading_font_bold = heading_font
 
@@ -75,18 +73,19 @@
     {% # theme-check-enable AssetPreload %}
 
     {%- unless request.page_type == 'list-collections' -%}
+      <title>{{ settings.collections_list_meta_title | default: page_title }}</title>
+      <meta name="description" content="{{ settings.collections_list_meta_description | default: page_description | escape }}">
+    {%- else -%}  
       <title>
         {{ page_title }}
         {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
         {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
       </title>
 
       {% if page_description %}
         <meta name="description" content="{{ page_description | escape }}">
       {% endif %}
-    {%- else -%}  
-      <title>{{ settings.collections_list_meta_title | default: page_title }}</title>
-      <meta name="description" content="{{ settings.collections_list_meta_description | default: page_description | escape }}">
     {%- endunless -%}
 
     {%- render 'meta-tags' -%}
@@ -138,31 +137,17 @@
         window.recentlyViewedStrings = {
           empty: {{ 'general.floating_bar.recently_viewed_empty' | t | json }}
         };
-        window.recentlyViewedLimit = {{ settings.recently_viewed_products_to_show }};
-        {%- if request.page_type == 'product' and product -%}
-          window.currentProduct = {
-            id: {{ product.id | json }},
-            url: {{ product.url | json }},
-            image: {{ product.featured_media | image_url: width: 100 | json }}
-          };
-        {%- endif -%}
       {%- endif -%}  
 
       {%- if settings.enable_product_compare -%}
         window.addedCompareStrings = {
           success: {{ 'templates.compare.success' | t | json }}
         };
-      {%- endif -%}
-
-      {%- if settings.free_shipping_enable -%}
-        window.freeShippingBarExcludeProducts = {%- if settings.free_shipping_exclude_products != blank and settings.free_shipping_exclude_products.count > 0 -%}{{ settings.free_shipping_exclude_products | map: 'id' | json }}{%- else -%}[]{%- endif -%};
       {%- endif -%}  
 
       window.moneyFormat = {% unless settings.currency_code_enabled %}{{ shop.money_format | json }}{% else %}{{ shop.money_with_currency_format | json }}{% endunless %};
       window.loadedBackgroundColorSwatches = {%- if request.design_mode or template.name == 'collection' or template.name == 'search' -%}true{%- else -%}false{%- endif -%};
       window.currencyMain = {{ shop.currency | json }};
-      window.appearAnimate = {% if settings.enable_appear_effect %}true{% else %}false{% endif %};
-      window.hideUnavailableOptions = {{ settings.hide_unavailable_options | json }};
     </script>
     {%- if settings.google_maps_api_key != blank -%}
       <script>
@@ -173,29 +158,57 @@
       </script>
     {%- endif -%}  
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ 'critical-global.js' | asset_url }}" defer="defer"></script>
+    
     {{ content_for_header }}
 
-    <script src="{{ 'critical-global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'motion.min.js' | asset_url }}" defer="defer"></script>
+    
+    {%- render 'critical-inline-styles', body_font: body_font, body_font_bold: body_font_bold, body_font_medium: body_font_medium, body_font_italic: body_font_italic, body_font_bold_italic: body_font_bold_italic, heading_font: heading_font, heading_font_bold: heading_font_bold, heading_font_medium: heading_font_medium, heading_font_semi_bold: heading_font_semi_bold, heading_font_bold_rte: heading_font_bold_rte, only_variables: false -%}
 
-    {%- render 'critical-inline-styles', body_font: body_font, body_font_bold: body_font_bold, body_font_medium: body_font_medium, body_font_large: body_font_large, body_font_italic: body_font_italic, body_font_bold_italic: body_font_bold_italic, heading_font: heading_font, heading_font_bold: heading_font_bold, heading_font_medium: heading_font_medium, heading_font_semi_bold: heading_font_semi_bold, heading_font_bold_rte: heading_font_bold_rte, only_variables: false, direction: direction -%}
-
+    
     {{ 'critical-base.css' | asset_url | stylesheet_tag: preload: true }}
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-    {%- if customer.b2b? -%}
-      {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
-        <link rel="stylesheet" href="{{ 'component-volume-pricing-note.css' | asset_url }}" media="print" onload="this.media='all'">
-      {%- else -%}
-        {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
-      {%- endunless -%}  
-    {%- endif -%}  
-   
+   {% if product.tags contains 'retail only' %}
+      {% style %}
+        #infiniteoptions-container{display:block !important;}
+      {% endstyle %}
+    {% endif %}
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  </head>
+  <script type="text/javascript">
+    adroll_adv_id = "LMURLS7YWJCWHI5A6M2NGF";
+    adroll_pix_id = "7SVSN2CQNJCABCJXVN2STA";
+    adroll_version = "2.0";
+
+    (function(w, d, e, o, a) {
+        w.__adroll_loaded = true;
+        w.adroll = w.adroll || [];
+        w.adroll.f = [ 'setProperties', 'identify', 'track' ];
+        var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id
+                + "/roundtrip.js";
+        for (a = 0; a < w.adroll.f.length; a++) {
+            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
+                return function() {
+                    w.adroll.push([ n, arguments ])
+                }
+            })(w.adroll.f[a])
+        }
+
+        e = d.createElement('script');
+        o = d.getElementsByTagName('script')[0];
+        e.async = 1;
+        e.src = roundtripUrl;
+        o.parentNode.insertBefore(e, o);
+    })(window, document);
+    adroll.track("pageView");
+</script>
+  
+  {% render 'bookthatapp-widgets' %}
+</head>
 
   <body class="gradient">
     <a class="skip-to-content-link skip-to-content-link--all button visually-hidden" href="#MainContent">
@@ -228,60 +241,12 @@
     </ul>
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    {%- if settings.enable_appear_effect or request.design_mode -%}
-      <script src="{{ 'appear-animate.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-    {%- if request.design_mode -%}
-      <script src="{{ 'truncate-text.js' | asset_url }}" defer="defer"></script>
-      {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
     
     {%- if settings.cart_type == "drawer" and request.page_type != 'cart' -%}
       <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
       {%- section 'cart-drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
-
-    {%- if settings.cart_type == "notification" and request.page_type != 'cart' -%}
-      <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
-      <modal-dialog id="Cart-Notification-Modal" class="popup-modal cart-notification-modal" hidden>
-        <div role="dialog" aria-modal="true" aria-label="{{ 'templates.compare.popup' | t | escape }}" class="popup-modal__content cart-notification-modal__content" tabindex="-1">
-          <div class="cart-notification__header por flex justify-space-between align-center">
-            <h2 class="text-body flex align-center margin0">
-              {%- render 'icon-checkmark', add_classes: 'cart-notification__header__checkmark' -%}
-              <span>{{ 'general.cart.item_added' | t }}</span>
-            </h2>
-            <button id="ModalClose-Cart-Notification" type="button" class="cart-notification-modal__toggle flex justify-center align-center color-foreground" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close', icon_width: 22 %}</button>
-          </div>
-          <cart-notification class="cart-notification-modal__content-info flex flex-column por empty cart-items">
-            <div id="cart-notification-product" class="cart-notification-product cart-item"></div>
-            <div class="cart-notification__links">
-              <a
-                href="{{ routes.cart_url }}"
-                id="cart-notification-button"
-                class="button button--secondary"
-              >
-                <span>{{ 'sections.cart.view_cart' | t }}</span>
-              </a>
-              <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
-                <button class="button w100" name="checkout">
-                  {%- render 'icon-lock' -%}
-                  <span>{{ 'sections.cart.checkout' | t }}</span>
-                </button>
-              </form>
-              <div class="cart-notification__continue-wrapper center">
-                <button class="cart-notification__continue unstyled-button link light link--text underlined-link lh1" type="button">{{ 'general.continue_shopping' | t }}</button>
-              </div>
-            </div>
-          </cart-notification>
-        </div>
-      </modal-dialog>
-      <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-    {%- endif -%}  
-
-    <script src="{{ 'parallax-element.js' | asset_url }}" defer="defer"></script>
     
     <toast-message-manager></toast-message-manager>
     <back-button-menu class="back-button-menu">
@@ -312,6 +277,7 @@
           </compare-popup>
         </div>
       </modal-dialog>
+      <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
       <link rel="stylesheet" href="{{ 'compare-popup.css' | asset_url }}" media="print" onload="this.media='all'">
       {%- if request.design_mode -%}
         {%- section 'product-compare' -%}
@@ -326,7 +292,6 @@
       <script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>  
       <script src="{{ 'before-after-image-slider.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'google-maps.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- if settings.recently_viewed_enable -%}
       <script src="{{ 'recently-viewed.js' | asset_url }}" defer="defer"></script>
@@ -344,11 +309,6 @@
       {{ 'component-card.css' | asset_url | stylesheet_tag }}
       {%- if settings.predictive_search_enabled -%}
         {{ 'component-predictive-search.css' | asset_url | stylesheet_tag }}
-      {%- endif -%}  
-      {%- if customer.b2b? -%}
-        {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
-          {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
-        {%- endunless -%}  
       {%- endif -%}  
       {{ 'no-js.css' | asset_url | stylesheet_tag }}
     </noscript>

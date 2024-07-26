@@ -7,14 +7,10 @@
   font-weight: var(--font-heading-weight-medium);
 }
 
-.cart-drawer__recommendation-title-wrapper {
-	margin-bottom: 1.2rem;
-}
-
 .cart-drawer__recommendation-item {
 	display: grid;
-	grid-template-columns: 9rem 1fr;
-	gap: 2rem;
+	grid-template-columns: 5rem 1fr;
+	gap: 1rem;
 }
 
 .cart-drawer__recommendation-item .media {
@@ -45,4 +41,7 @@
 	.cart-drawer__recommendation-item {
 		grid-template-columns: 8rem 1fr;
 	}
+	.cart-drawer__recommendation-title-wrapper h2 {
+    font-size: calc(var(--font-heading-scale) * 1.8rem);
+  }
 }

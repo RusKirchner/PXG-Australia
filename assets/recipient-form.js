@@ -25,21 +25,48 @@ if (!customElements.get('recipient-form')) {
         this.onChange();
       }
 
+      // cartUpdateUnsubscriber = undefined;
+      // variantChangeUnsubscriber = undefined;
+      // cartErrorUnsubscriber = undefined;
+
       connectedCallback() {
         this.onCartChangeHandler = this.onCartChange.bind(this);
         document.addEventListener('afterCartChanged', this.onCartChangeHandler);
+        // this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
+        //   if (event.source === 'product-form' && event.productVariantId.toString() === this.currentProductVariantId) {
+        //     this.resetRecipientForm();
+        //   }
+        // });
 
         this.onVariantChangeHandler = this.onVariantChange.bind(this);
         this.variantInput.addEventListener('change', this.onVariantChangeHandler);
+        // this.variantChangeUnsubscriber = subscribe(PUB_SUB_EVENTS.variantChange, (event) => {
+        //   if (event.data.sectionId === this.dataset.sectionId) {
+        //     this.currentProductVariantId = event.data.variant.id.toString();
+        //   }
+        // });
 
         this.onCartErrorHandler = this.onCartError.bind(this);
         document.addEventListener('afterAddCartError', this.onCartErrorHandler);
+        // this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartError, (event) => {
+        //   if (event.source === 'product-form' && event.productVariantId.toString() === this.currentProductVariantId) {
+        //     this.displayErrorMessage(event.message, event.errors);
+        //   }
+        // });
       }
 
       disconnectedCallback() {
+        // if (this.cartUpdateUnsubscriber) {
+        //   this.cartUpdateUnsubscriber();
+        // }
+
         this.variantInput.removeEventListener('change', this.onVariantChangeHandler);
         document.removeEventListener('afterCartChanged', this.onCartChangeHandler);
         document.removeEventListener('afterAddCartError', this.onCartErrorHandler);
+
+        // if (this.cartErrorUnsubscriber) {
+        //   this.cartErrorUnsubscriber();
+        // }
       }
 
       onChange() {
@@ -53,7 +80,7 @@ if (!customElements.get('recipient-form')) {
       }
 
       onCartChange(event) {
-        if(event.detail.productVariantId && event.detail.productVariantId.toString() === this.currentProductVariantId) {
+        if(event.detail.productVariantId.toString() === this.currentProductVariantId) {
           this.resetRecipientForm();
         }
       }

@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if section.settings.enable_collapse -%}
   <script src="{{ 'footer-collapse-block.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
@@ -13,7 +12,7 @@
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+
 {%- liquid
   assign has_localization = false
   if section.settings.enable_country_selector and localization.available_countries.size > 1
@@ -73,7 +72,7 @@
           -%}
           <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
-              <{% if section.settings.enable_collapse and block.settings.heading != blank %}footer-collapse-block{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}{% else %}div{% endif %} class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if section.settings.auto_fit %} flex-grow-1{% endif %}" {{ block.shopify_attributes }}>
+              <{% if section.settings.enable_collapse and block.settings.heading != blank %}footer-collapse-block{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}{% else %}div{% endif %} class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.type == 'store_information' and block.settings.footer_logo_enable -%}
                   <div class="footer__logo{% unless forloop.first %} footer__logo--margin-top-mobile{% endunless %} {{ block.settings.footer_logo_alignment }}">
                     {%- if block.settings.footer_logo != blank -%}
@@ -98,7 +97,7 @@
                 {%- endif -%}
                 
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading h5 font-heading-extra-bold">
+                  <h2 class="footer-block__heading h4 font-heading-bold">
                     {%- if section.settings.enable_collapse -%}
                       <a class="full-unstyled-link footer-block__collapse-link" href="#">
                         <span>{{- block.settings.heading | escape -}}</span>
@@ -193,15 +192,11 @@
                             </label>
                           </div>
                           <button type="submit" class="footer-block__newsletter-form-button button button--small newsletter__button newsletter__button--square" name="commit" id="FooterSubscribe" aria-label="{{ 'newsletter.button_label' | t | escape }}">
-                            {%- render 'icon-arrow', custom_classes: 'icon-revert-in-rtl' -%}
+                            {%- render 'icon-arrow' -%}
                           </button>
                         </div>
                       {%- endform -%}
                     </div>
-                  {%- when 'custom_liquid' -%}
-                    <div class="footer-block__details-content">
-                      {{ block.settings.custom_liquid_code }}
-                    </div>  
                   {%- endcase -%}
               </{% if section.settings.enable_collapse and block.settings.heading != blank %}footer-collapse-block{% else %}div{% endif %}>
             {%- endfor -%}
@@ -266,7 +261,7 @@
                     <div class="no-js-hidden">
                       <h2 class="visually-hidden text-small text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
                       <details class="disclosure por">
-                        <summary class="disclosure__button localization-form__select localization-selector link link--text flex align-center left por footer__text-color text-small footer__localization-selector" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
+                        <summary class="disclosure__button localization-form__select localization-selector link link--text flex align-center left por footer__text-color text-small" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
                           {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
                           {% render 'icon-caret' %}
                         </summary>
@@ -311,7 +306,7 @@
                     <div class="no-js-hidden">
                       <h2 class="visually-hidden text-small text-body" id="FooterLanguageLabel">{{ 'localization.language_label' | t }}</h2>
                       <details class="disclosure por">
-                        <summary type="button" class="disclosure__button localization-form__select localization-selector link link--text flex align-center left por footer__text-color text-small footer__localization-selector" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
+                        <summary type="button" class="disclosure__button localization-form__select localization-selector link link--text flex align-center left por footer__text-color text-small" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
                           {{ localization.language.endonym_name | capitalize }}
                           {% render 'icon-caret' %}
                         </summary>
@@ -350,7 +345,7 @@
         </div>
       </div>
     {%- endif -%}
-    <div class="footer__content-bottom {% if section.settings.color_scheme_bottom == section.settings.color_scheme %}background-input{% else %}color-{{ section.settings.color_scheme_bottom }} gradient{% endif %}">
+    <div class="footer__content-bottom background-input">
       <div class="page-width flex w100 footer__content-sub-wrapper">
         {%- if section.settings.payment_enable -%}
           <div class="footer__column w100 flex align-center justify-center footer__payment w100">
@@ -465,9 +460,23 @@
           "default": 100
         },
         {
-          "type": "text_alignment",
+          "type": "select",
           "id": "footer_logo_alignment",
           "label": "t:sections.footer.blocks.store_information.settings.footer_logo_alignment.label",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.footer.blocks.store_information.settings.footer_logo_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.footer.blocks.store_information.settings.footer_logo_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.footer.blocks.store_information.settings.footer_logo_alignment.options__3.label"
+            }
+          ],
           "default": "center"
         }
       ]
@@ -491,23 +500,6 @@
           "label": "t:sections.footer.blocks.newsletter.settings.description.label"
         }
       ]
-    },
-    {
-      "type": "custom_liquid",
-      "name": "t:sections.footer.blocks.custom_liquid.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "t:sections.footer.blocks.text.settings.heading.label",
-          "default": "Liquid code"
-        },
-        {
-          "type": "liquid",
-          "id": "custom_liquid_code",
-          "label": "t:sections.footer.blocks.custom_liquid.settings.custom_liquid_code.label"
-        }
-      ]
     }
   ],
   "settings": [
@@ -516,20 +508,6 @@
       "id": "color_scheme",
       "default": "background-1",
       "label": "t:sections.all.colors.label"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme_bottom",
-      "default": "background-1",
-      "label": "t:sections.footer.settings.color_scheme_bottom.label",
-      "info": "t:sections.footer.settings.color_scheme_bottom.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "auto_fit",
-      "label": "t:sections.footer.settings.auto_fit.label",
-      "info": "t:sections.footer.settings.auto_fit.info",
-      "default": false
     },
     {
       "type": "header",

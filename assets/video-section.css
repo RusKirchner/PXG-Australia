@@ -1,8 +1,5 @@
-.video-section__media:not(.video-section__media--abs) {
-  position: relative;
-}
-
 .video-section__media {
+  position: relative;
   padding-bottom: var(--video-ratio, 56.25%);
 }
 

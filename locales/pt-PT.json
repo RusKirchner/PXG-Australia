@@ -14,8 +14,7 @@
       "alt_text": {
         "share_on_facebook": "Partilhar no Facebook",
         "share_on_twitter": "Twittar no Twitter",
-        "share_on_pinterest": "Marcar com um pin no Pinterest",
-        "share_by_email": "Share by email"
+        "share_on_pinterest": "Marcar com um pin no Pinterest"
       },
       "links": {
         "twitter": "Twitter",
@@ -26,8 +25,7 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok",
-        "linkedin": "Linkedin"
+        "tiktok": "TikTok"
       }
     },
     "continue_shopping": "Continuar a comprar",
@@ -35,21 +33,10 @@
       "label": "Paginação",
       "page": "Página {{ number }}",
       "next": "Página seguinte",
-      "previous": "Página anterior",
-      "load_more": "Load more",
-      "load_previous_items": "Carregar itens anteriores"
+      "previous": "Página anterior"
     },
     "search": {
-      "search": "Pesquisar",
-      "clear": "Clear",
-      "view_all_results": "View all results",
-      "type": {
-        "products": "Products",
-        "articles": "Articles",
-        "collections": "Collections",
-        "pages": "Pages",
-        "suggestions": "Suggestions"
-      }
+      "search": "Pesquisar"
     },
     "cart": {
       "view": "Ver o meu carrinho ({{ count }})",
@@ -66,34 +53,6 @@
       "next_slide": "Deslizar para a direita",
       "previous_slide": "Deslizar para a esquerda",
       "name": "Slider"
-    },
-    "boolean": {
-      "true": "Yes",
-      "false": "No"
-    },
-    "shipping_calculator": {
-      "heading": "Shipping calculator",
-      "errors_heading": "Errors",
-      "carriers": "Available shipping carriers",
-      "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination.",
-      "delivery_date_one": "{{ count }} business day",
-      "delivery_date_many": "{{ count }} business days",
-      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
-    },
-    "countdown": {
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
-      "expired_msg": "The countdown timer has been expired."
-    },
-    "floating_bar": {
-      "recently_viewed": "Recently viewed",
-      "recently_viewed_empty": "There are no recently viewed products.",
-      "recently_viewed_open": "Open recently viewed box",
-      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -117,9 +76,7 @@
     "total_reviews": "análises totais",
     "star_reviews_info": "{{ rating_value }} de {{ rating_max }} estrelas",
     "collapsible_content_title": "Conteúdo recolhível",
-    "complementary_products": "Produtos complementares",
-    "skip_to_product_grid": "Skip to product grid",
-    "navigation_toggle": "Navigation toggle in sticky header"
+    "complementary_products": "Produtos complementares"
   },
   "blogs": {
     "article": {
@@ -139,12 +96,7 @@
       "back_to_blog": "Voltar para o blogue",
       "share": "Partilhar este artigo",
       "success": "O seu comentário foi publicado com sucesso! Obrigado!",
-      "success_moderated": "O seu comentário foi publicado com sucesso. Será publicado em alguns instantes, já que o nosso blogue é moderado.",
-      "author_html": "Posted by <strong>{{ author }}</strong>",
-      "previous": "Previous",
-      "next": "Next",
-      "tags_all": "All",
-      "continue": "Continue"
+      "success_moderated": "O seu comentário foi publicado com sucesso. Será publicado em alguns instantes, já que o nosso blogue é moderado."
     }
   },
   "onboarding": {
@@ -155,21 +107,13 @@
     "product": {
       "add_to_cart": "Adicionar ao carrinho",
       "description": "Descrição",
-      "pre_order": "Pre-order",
       "on_sale": "Em promoção",
       "product_variants": "Variantes de produtos",
       "quantity": {
         "label": "Quantidade",
         "input_label": "Quantidade de {{ product }}",
         "increase": "Aumentar a quantidade de {{ product }}",
-        "decrease": "Diminuir a quantidade de {{ product }}",
-        "minimum_of": "Mínimo de {{ quantity }}",
-        "maximum_of": "Máximo de {{ quantity }}",
-        "multiples_of": "Incrementos de {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> no carrinho",
-        "note": "Ver regras de quantidade",
-        "min_of": "Mín. de {{ quantity }}",
-        "max_of": "Máx. de {{ quantity }}"
+        "decrease": "Diminuir a quantidade de {{ product }}"
       },
       "price": {
         "from_price_html": "A partir de {{ price }}",
@@ -208,30 +152,7 @@
       "include_taxes": "Imposto incluído.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Envio</a> calculado na finalização da compra.",
       "choose_options": "Escolher opções",
-      "choose_product_options": "Escolha opções para {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Indisponível",
-      "variant_sold_out_or_unavailable": "Variante esgotada ou indisponível",
-      "inventory_in_stock": "Em stock",
-      "inventory_in_stock_show_count": "{{ quantity }} em stock",
-      "inventory_low_stock": "Stock reduzido",
-      "inventory_low_stock_show_count": "Stock reduzido: {{ quantity }} restantes",
-      "inventory_out_of_stock": "Esgotado",
-      "inventory_out_of_stock_continue_selling": "Em stock",
-      "quick_view": "Quick view a product",
-      "quick_view_button": "Quick view",
-"view_product": "View product",
-      "number_of_reviews": {
-        "one": "{{ count }} review",
-        "other": "{{ count }} review"
-      },
-      "volume_pricing": {
-        "title": "Preços por volume",
-        "note": "Preços por volume disponível",
-        "minimum": "{{ quantity }} ou mais",
-        "price_at_each": "{{ price }}/ea",
-        "price_range": "{{ minimum }} - {{ maximum }}"
-      },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "choose_product_options": "Escolha opções para {{ product_name }}"
     },
     "modal": {
       "label": "Galeria de conteúdo multimédia"
@@ -268,10 +189,7 @@
       "clear_filter": "Remover filtro",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtros selecionados)",
       "show_more": "Mostrar mais",
-      "show_less": "Mostrar menos",
-      "show_filter": "Show filter",
-      "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "show_less": "Mostrar menos"
     }
   },
   "templates": {
@@ -290,13 +208,7 @@
         "one": "{{ count }} resultado encontrado para “{{ terms }}”",
         "other": "{{ count }} resultado encontrado para “{{ terms }}”",
         "many": "{{ count }} resultado encontrado para “{{ terms }}”"
-      },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "cart": "Carrinho"
@@ -311,27 +223,11 @@
         "post_success": "Obrigado por entrar em contacto connosco. Responder-lhe-emos logo que possível.",
         "error_heading": "Ajuste o seguinte:",
         "title": "Formulário de contacto"
-      },
-      "address": {
-        "heading": "Our address"
-      },
-      "opening_hour": {
-        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Página não encontrada",
       "subtext": "404"
-    },
-    "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
     }
   },
   "sections": {
@@ -342,11 +238,7 @@
         "one": "{{ count }} item",
         "other": "{{ count }} itens",
         "many": "{{ count }} itens"
-      },
-      "breadcrumbs": {
-        "home": "Home"
-      },
-      "go_to_link": "Go to {{ title }}"
+      }
     },
     "cart": {
       "title": "O seu carrinho",
@@ -374,13 +266,7 @@
       "login": {
         "title": "Tem uma conta?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicie sessão</a> para finalizar a compra mais rápido."
-      },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      }
     },
     "footer": {
       "payment": "Métodos de pagamento"
@@ -392,8 +278,7 @@
     },
     "featured_collection": {
       "view_all": "Ver tudo",
-      "view_all_label": "Ver todos os produtos da coleção {{ collection_name }}",
-      "slider": "Slider"
+      "view_all_label": "Ver todos os produtos da coleção {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "Ver tudo"
@@ -420,8 +305,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -434,10 +318,6 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
-    },
-    "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -451,8 +331,7 @@
       "title": "Conta",
       "details": "Detalhes da conta",
       "view_addresses": "Ver endereços",
-      "return": "Regressar aos detalhes da conta",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
+      "return": "Regressar aos detalhes da conta"
     },
     "account_fallback": "Conta",
     "activate_account": {
@@ -554,8 +433,7 @@
       "password": "Palavra-passe",
       "password_confirm": "Confirmar palavra-passe",
       "submit": "Repor palavra-passe"
-    },
-    "back_to_login": "Back to the login page"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -570,21 +448,6 @@
       "expired": "Expirado",
       "copy_code_success": "Código copiado com sucesso",
       "print_gift_card": "Imprimir"
-    }
-  },
-  "recipient": {
-    "form": {
-      "checkbox": "I want to send this as a gift",
-      "email_label": "Recipient email",
-      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
-      "email": "Email",
-      "name_label": "Recipient email (optional)",
-      "name": "Name",
-      "message_label": "Message ( optional)",
-      "message": "Message",
-      "max_characters": "{{ max_chars }} characters max",
-      "send_on": "YYYY-MM-DD",
-      "send_on_label": "Send on (optional)"
     }
   }
 }

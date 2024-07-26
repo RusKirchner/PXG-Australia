@@ -1,6 +1,7 @@
 .search-modal {
   position: absolute;
-  inset-inline: 0;
+  left: 0;
+  right: 0;
   top: 100%;
   padding: 1.5rem 0;
 }
@@ -31,8 +32,9 @@ details[open] > .search-modal {
   transition: opacity 300ms ease, visibility 300ms ease;
   position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
-  inset-inline: 0;
+  right: 0;
   z-index: 1;
   transition: opacity .3s ease, visibility .3s ease;
   background: rgb(var(--color-foreground),.1);

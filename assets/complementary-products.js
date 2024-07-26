@@ -28,27 +28,16 @@ if (!customElements.get('complementary-products')) {
       this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
 
       const config = fetchConfig('javascript');
-      
-      let formData = {};
+      config.headers['X-Requested-With'] = 'XMLHttpRequest';
+      delete config.headers['Content-Type'];
+
+      const formData = new FormData(this.form);
       if (this.cart) {
-        formData.sections = this.cart.getSectionsToRender().map((section) => section.id);
-        formData.sections_url = window.location.pathname;
+        formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
+        formData.append('sections_url', window.location.pathname);
         this.cart.setActiveElement(document.activeElement);
       }
-      
-      /* Collection items */
-      let items = [];
-      this.querySelectorAll('.complementary__item').forEach((item) => {
-        const quantityInput = item.querySelector('.quantity__input');
-        if(parseInt(quantityInput.value) > 0) {
-          items.push({
-            id: item.querySelector('.complementary-variant-id').value,
-            quantity: quantityInput.value
-          });
-        }
-      });
-      formData.items = items;
-      config.body = JSON.stringify(formData);
+      config.body = formData;
 
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
@@ -67,7 +56,6 @@ if (!customElements.get('complementary-products')) {
             return;
           }
           this.error = false;
-          document.dispatchEvent(new CustomEvent('afterCartChanged'));
           this.cart.renderContents(response);
         })
         .catch((e) => {
@@ -85,7 +73,7 @@ if (!customElements.get('complementary-products')) {
       if(evt.target.classList.contains('select__select')) {
         const currentItem = evt.target.closest('.complementary__item');
         const itemAttributeTag = evt.target.querySelector('option:checked');
-        this.updatePrice(currentItem.querySelector('.price'), parseInt(itemAttributeTag.dataset.price), parseInt(itemAttributeTag.dataset.compareAtPrice), true);
+        this.updatePrice(currentItem.querySelector('.price'), parseInt(itemAttributeTag.dataset.price), parseInt(itemAttributeTag.dataset.compareAtPrice));
         const imageTag = currentItem.querySelector('img');
         if(itemAttributeTag.dataset.featuredImage) {
           let srcset = '';

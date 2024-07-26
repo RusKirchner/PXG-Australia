@@ -24,10 +24,12 @@
 <noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
 
-{{ 'section-featured-product-tabs.css' | asset_url | stylesheet_tag }}
-
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="collection featured-products-tabs tabs fpt section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+    <div class="page-width{% if section.settings.full_width %}--full{% endif %}">
+      {%- render 'section-heading' -%}
+    </div>
+
     {%- liquid
       assign active_tab_label_selector = ''
       assign focus_tab_label_selector = ''
@@ -44,8 +46,8 @@
     {%- for block in section.blocks -%}
       {%- liquid
         assign suffix = section.id | append: '-' | append: block.id
-        assign active_tab_label_selector = active_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .fpt__heading .fpt__tab-title-list label[for="tab-item-input-' | append: suffix | append: '"],'
-        assign focus_tab_label_selector = focus_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':focus-visible ~ .fpt__heading .fpt__tab-title-list label[for="tab-item-input-' | append: suffix | append: '"],'
+        assign active_tab_label_selector = active_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .tabs__content .tabs__title-list label[for="tab-item-input-' | append: suffix | append: '"],'
+        assign focus_tab_label_selector = focus_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':focus-visible ~ .tabs__content .tabs__title-list label[for="tab-item-input-' | append: suffix | append: '"],'
         assign active_tab_content_selector = active_tab_content_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .tabs__content .tabs__content-list .tabs__tab-content--' | append: suffix | append: ','
         assign available_tab_ids = available_tab_ids | append: block.id | append: ','
       -%}
@@ -53,39 +55,23 @@
       {%- assign has_first_tab = true -%}
     {%- endfor -%}
 
-    <div class="page-width{% if section.settings.full_width %}--full{% endif %} fpt__heading">
-      {%- if section.settings.title != blank -%}
-        <div class="title">
-          <div class="flex justify-space-between w100 align-center title__gap por flex-wrap">
-            {%- unless section.settings.subtitle != blank -%}
-              <h2 class="title__heading h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }} font-heading-extra-bold margin0 lh1 title__heading--before-line">{{ section.settings.title | escape }}</h2>	
-              <hr class="title__line flex-grow-1 margin0">
-            {%- else -%}
-              <div class="flex flex-column justify-right align-start">
-                <h2 class="title__heading title__back title__back--{{ section.settings.heading_size }} font-heading-bold margin0 lh1">{{ section.settings.title | escape }}</h2>
-                <h3 class="title__subtitle margin0 title__front {% if section.settings.heading_size != 'h2' %}h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }}{% else %}title__front--small{% endif %} lh1">{{ section.settings.subtitle }}</h3>
-              </div>
-            {%- endunless -%}	
-            {%- if section.blocks.size > 0 -%}
-              <div class="title__buttons title__buttons--{{ section.id }}{% if section.settings.enable_desktop_slider or section.settings.swipe_on_mobile %} flex title__gap justify-space-between align-center{% endif %}">
-                <ul class="fpt__tab-title-list list-unstyled margin0 flex fpt__tab-title-list--{{ section.id }}">
-                  {%- for block in section.blocks -%}
-                    {%- if available_tab_ids contains block.id -%}
-                      {%- assign suffix = section.id | append: '-' | append: block.id -%}
-                      <li>
-                        <label for="tab-item-input-{{ suffix }}" class="fpt__tab-item-label button button--secondary ignore-effect fpt__tab-item-label--{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
-                      </li>
-                    {%- endif -%}  
-                  {%- endfor -%}  
-                </ul>
-              </div>  
-            {%- endif -%}  
+    <div class="tabs__content">
+      <div class="page-width{% if section.settings.full_width %}--full{% endif %}">
+        <div class="tabs__title-list-wrapper flex">
+          <div class="tabs__title-list tabs__title-list--{{ section.id }}">
+            <ul class="margin0 list-unstyled tabs__title-list__content--{{ section.id }}">
+              {%- for block in section.blocks -%}
+                {%- if available_tab_ids contains block.id -%}
+                  {%- assign suffix = section.id | append: '-' | append: block.id -%}
+                  <li>
+                    <label for="tab-item-input-{{ suffix }}" class="tabs__item-label font-heading-bold light por db h4" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
           </div>
         </div>
-      {%- endif -%}
-    </div>
-
-    <div class="tabs__content">
+      </div>
       <div class="fpt__content-list fpt__content-list--{{ section.id }} tabs__content-list tabs__content-list--{{ section.id }}{% if section.settings.full_width == false %} page-width{% endif %} element-small-margin-top por">
         {%- for block in section.blocks -%}
           {%- liquid
@@ -104,9 +90,7 @@
 
             if block.type == 'featured_collection' and block.settings.collection.all_products_count > block.settings.products_to_show
               assign products_to_display = block.settings.products_to_show
-              if block.settings.show_view_all
-                assign more_in_collection = true
-              endif
+              assign more_in_collection = true
             endif
           
             assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -160,34 +144,30 @@
                     {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
                     {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
                     <li id="Slide-{{ suffix }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}">
-                      {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image, full_on_mobile: full_on_mobile %}
+                      {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image %}
                     </li>
                   {%- endfor -%}
                 {%- endfor -%}
               </ul>
-              {%- if show_mobile_slider or show_desktop_slider or more_in_collection -%}
-                <div class="fpt__bottom-actions flex justify-center{% unless section.settings.full_width %} page-width{% endunless %}">
-                  {%- if more_in_collection -%}
-                    <a href="{{ block.settings.collection.url }}"
-                      class="{% if block.settings.view_all_style == 'link' %}link underlined-link text-small{% elsif block.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %} fpt__view-all-button fpt__view-all-button--{{ suffix }}"
-                      aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: block.settings.collection.title }}"
-                    >
-                      {%- unless block.settings.view_all_style == 'link' -%}
-                        <span>{{ 'sections.featured_collection.view_all' | t }}</span>
-                      {%- else -%}
-                        {{ 'sections.featured_collection.view_all' | t }}  
-                      {%- endunless -%}  
-                    </a>
-                  {%- endif -%}
-                  {%- if show_mobile_slider or show_desktop_slider -%}  
-                    <div class="slider-buttons slider-buttons--box flex slider-buttons--{{ section.id }} slider-buttons--{{ suffix }}{% unless section.settings.swipe_on_mobile %} small-hide medium-hide{% endunless %}{% unless section.settings.enable_desktop_slider %} large-up-hide{% endunless %}">
-                      <button type="button" id="Slider-{{ suffix }}-prev-button" class="slider-button flex flex-column justify-center align-center slider-button--prev no-js-hidden por tap-area-icon" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ suffix }}" disabled="disabled">{% render 'icon-caret-slider-prev' %}</button>
-                      <button type="button" id="Slider-{{ suffix }}-next-button" class="slider-button flex flex-column justify-center align-center slider-button--next no-js-hidden por tap-area-icon" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ suffix }}">{% render 'icon-caret-slider-next' %}</button>
-                    </div>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}  
+              {%- if show_mobile_slider or show_tablet_slider or show_desktop_slider -%}
+                {%- render 'slider-controls', suffix_id: suffix, total_items: products_to_display, wrapper_classes: 'small-margin-top slider-buttons--box' -%}
+              {%- endif -%}
             </slider-component>
+
+            {%- if block.settings.show_view_all and more_in_collection -%}
+              <div class="center collection__view-all w100 element-small-margin-top">
+                <a href="{{ block.settings.collection.url }}"
+                  class="{% if block.settings.view_all_style == 'link' %}link underlined-link text-small{% elsif block.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                  aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: block.settings.collection.title }}"
+                >
+                  {%- unless block.settings.view_all_style == 'link' -%}
+                    <span>{{ 'sections.featured_collection.view_all' | t }}</span>
+                  {%- else -%}
+                    {{ 'sections.featured_collection.view_all' | t }}  
+                  {%- endunless -%}  
+                </a>
+              </div>
+            {%- endif -%}  
           </div>
         {%- endfor-%}
       </div>
@@ -202,8 +182,34 @@
   }
 
   {%- if section.blocks.size > 0 -%}
+    .tabs__title-list--{{ section.id }} {
+      overflow: auto;
+    }
+    .tabs__title-list--{{ section.id }} li:first-child {
+      margin-left: 0.5rem;
+    }
+    .tabs__title-list--{{ section.id }} li:last-child {
+      margin-right: 0.5rem;
+    }
+    .tabs__title-list--{{ section.id }} .tabs__item-label {
+      padding-bottom: 2rem;
+    }
+    .tabs__title-list__content--{{ section.id }} {
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      column-gap: 2.5rem;
+    }
+    .tabs__tab-content--{{ section.id }} {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
     {{ active_tab_label_selector | split: ',' | compact | join: ',' }} {
       opacity: 1;
+      border-bottom: 0.1rem solid rgb(var(--color-foreground));
     }
     {{ focus_tab_label_selector | split: ',' | compact | join: ',' }} {
       outline: 0.1rem solid rgba(var(--color-foreground));
@@ -213,19 +219,6 @@
       visibility: visible;
       pointer-events: auto;
       position: static;
-      max-height: none;
-      overflow: inherit;
-      height: auto;
-    }
-    @media screen and (max-width: 1365px) {
-      .title__buttons--{{ section.id }} {
-        width: 100%;
-      }
-      .fpt__tab-title-list--{{ section.id }} {
-        overflow-x: auto;
-        width: 100%;
-        white-space: nowrap;
-      }
     }
   {%- endif -%}
 
@@ -235,8 +228,6 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
-  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 
 {% schema %}
@@ -475,7 +466,7 @@
           "type": "range",
           "id": "products_to_show",
           "min": 2,
-          "max": 20,
+          "max": 12,
           "step": 1,
           "default": 4,
           "label": "t:sections.featured-products-tabs.blocks.all.settings.products_to_show.label"
@@ -510,7 +501,7 @@
           "type": "range",
           "id": "products_to_show",
           "min": 2,
-          "max": 20,
+          "max": 12,
           "step": 1,
           "default": 4,
           "label": "t:sections.featured-products-tabs.blocks.all.settings.products_to_show.label"

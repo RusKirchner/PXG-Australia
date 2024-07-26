@@ -1,12 +1,5 @@
-{%-liquid
-  assign need_preload = section.settings.preload
-  if section.index == 1 and section.location != 'footer'
-    assign need_preload = true
-  endif
--%}
-{%- capture direction -%}{%- render 'direction' -%}{%- endcapture -%}
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag: preload: need_preload }}
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag: preload: need_preload }}
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag: preload: section.settings.preload }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag: preload: section.settings.preload }}
 {%- style -%}
   #shopify-section-{{ section.id }} {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -122,7 +115,7 @@
       data-speed="{{ section.settings.change_slides_speed }}"
     >
       {%- for block in section.blocks -%}
-        <div class="slideshow__slide slideshow__slide--{{ section.id }} grid__item grid--1-col slider__slide por flex gradient flex-column overflow-hidden{% if section.blocks.size == 1 %} active{% endif %}"
+        <div class="slideshow__slide slideshow__slide--{{ section.id }} grid__item grid--1-col slider__slide por flex gradient flex-column overflow-hidden"
           id="Slide-{{ section.id }}-{{ forloop.index }}"
           {{ block.shopify_attributes }}
           role="group"
@@ -165,16 +158,12 @@
                 assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
               -%}
 
-              {%- if block.settings.mobile_image == blank and forloop.first -%}
-                {%- if need_preload -%}
-                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
-                {%- else -%}
-                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
-                {%- endif -%}  
+              {%- if section.settings.preload and block.settings.mobile_image == blank and forloop.first -%}
+                {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
               {%- elsif block.settings.mobile_image -%}
-                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
+                {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
               {%- else -%}
-                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
+                {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
               {%- endif -%}  
               
               {%- if block.settings.mobile_image != blank -%}
@@ -183,8 +172,8 @@
                   if block.settings.mobile_image.width >= 375
                     assign widths = widths | append: '375,'
                   endif  
-                  if block.settings.mobile_image.width >= 500
-                    assign widths = widths | append: '500,'
+                  if block.settings.mobile_image.width >= 550
+                    assign widths = widths | append: '550,'
                   endif  
                   if block.settings.mobile_image.width >= 750
                     assign widths = widths | append: '750,'
@@ -195,12 +184,8 @@
                   assign widths = widths | append: block.settings.mobile_image.width
                   assign height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round
                 -%}
-                {%- if forloop.first -%}
-                  {%- if need_preload -%}
-                    {{ block.settings.mobile_image | image_url: width: 800 | image_tag: widths: widths, sizes: '100vw', width: block.settings.mobile_image.width, height: height, preload: true, class: 'medium-hide large-up-hide', fetchpriority: 'high' }}
-                  {%- else -%}
-                    {{ block.settings.mobile_image | image_url: width: 800 | image_tag: widths: widths, sizes: '100vw', width: block.settings.mobile_image.width, height: height, loading: 'lazy', class: 'medium-hide large-up-hide' }}  
-                  {%- endif -%}  
+                {%- if section.settings.preload and forloop.first -%}
+                  {{ block.settings.mobile_image | image_url: width: 800 | image_tag: widths: widths, sizes: '100vw', width: block.settings.mobile_image.width, height: height, preload: true, class: 'medium-hide large-up-hide', fetchpriority: 'high' }}
                 {%- else -%}
                   {{ block.settings.mobile_image | image_url: width: 800 | image_tag: widths: widths, sizes: '100vw', width: block.settings.mobile_image.width, height: height, loading: 'lazy', class: 'medium-hide large-up-hide' }}
                 {%- endif -%}
@@ -211,24 +196,24 @@
               {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg w100 h100' }}
             {%- endif -%}
           </div>
-          <div class="slideshow__text-wrapper slideshow__text-wrapper--{{ section.id }} banner__content banner__content--{{ block.settings.box_align }} page-width banner--desktop-transparent{% if block.settings.keep_ltr and direction == 'rtl' %} direction-ltr{% endif %}">
+          <div class="slideshow__text-wrapper slideshow__text-wrapper--{{ section.id }} banner__content banner__content--{{ block.settings.box_align }} page-width banner--desktop-transparent">
             <div class="slideshow__text banner__box flex flex-column justify-center por{% unless section.settings.show_text_below %} background-transparent{% endunless %} slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }} banner__box--{{ section.id }}-{{ block.id }}">
               {%- if block.settings.badge_label != blank -%}
                 <span class="banner__badge flex justify-center font-body-bold uppercase">{{ block.settings.badge_label }}</span>
               {%- endif -%}  
               {%- if block.settings.heading != blank -%}
-                <h2 class="banner__heading banner__heading--{{ section.id }}-{{ block.id }} banner__heading--large-size lh1 color-foreground font-heading-extra-bold{% if block.settings.gradient_heading_desktop != blank %} banner__heading--gradient-desktop{% endif %}{% if block.settings.gradient_heading_mobile != blank %} banner__heading--gradient-mobile{% endif %}" id="banner-heading-{{ section.id }}-{{ block.id }}">
+                <h2 class="banner__heading banner__heading--{{ section.id }}-{{ block.id }} banner__heading--large-size color-foreground font-heading-extra-bold{% if block.settings.gradient_heading_desktop != blank %} banner__heading--gradient-desktop{% endif %}{% if block.settings.gradient_heading_mobile != blank %} banner__heading--gradient-mobile{% endif %}">
                   <span>{{ block.settings.heading | escape }}</span>
                 </h2>
               {%- endif -%}
               {%- if block.settings.text != blank -%}
-                <div class="banner__text banner__text--{{ section.id }}-{{ block.id }} color-foreground rte{% if block.settings.hide_text_on_mobile %} small-hide{% endif %}" {{ block.shopify_attributes }} id="banner-text-{{ section.id }}-{{ block.id }}">
+                <div class="banner__text banner__text--{{ section.id }}-{{ block.id }} color-foreground rte{% if block.settings.hide_text_on_mobile %} small-hide{% endif %}" {{ block.shopify_attributes }}>
                   <span>{{ block.settings.text }}</span>
                 </div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="banner__buttons{% if block.settings.text != blank or block.settings.heading != blank %} element-small-margin-top{% endif %}"> 
-                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}{% else %} role="link" aria-disabled="true"{% endif %} class="button--slideshow button--{{ section.id }}-{{ block.id }}{% if block.settings.button_style != 'link' %} button button--{{ block.settings.button_style }} banner__button button--large button--bold{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button--{{ section.id }}-{{ block.id }}{% if block.settings.button_style != 'link' %} button button--{{ block.settings.button_style }} banner__button{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
                     <span>
                       {%- capture price -%}
                         {%- if block.settings.price != blank -%}
@@ -242,9 +227,6 @@
                   </a>
                 </div>
               {%- endif -%}
-              {%- if block.settings.link != blank -%}
-                <a href="{{ block.settings.link }}" class="banner__full-link w100 h100" aria-labelledby="banner-heading-{{ section.id }}-{{ block.id }} banner-text-{{ section.id }}-{{ block.id }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}></a>
-              {%- endif -%}  
             </div>
           </div>
         </div>
@@ -475,7 +457,7 @@
     {
       "type": "slide",
       "name": "t:sections.slideshow.blocks.slide.name",
-      "limit": 10,
+      "limit": 5,
       "settings": [
         {
           "type": "image_picker",
@@ -551,12 +533,6 @@
           "default": "primary"
         },
         {
-          "type": "checkbox",
-          "id": "button_open_new_tab",
-          "label": "t:sections.all.open_link_in_new_tab.label",
-          "default": false
-        },
-        {
           "type": "select",
           "id": "box_align",
           "options": [
@@ -602,16 +578,24 @@
           "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
         },
         {
-          "type": "text_alignment",
+          "type": "select",
           "id": "text_alignment",
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.options__3.label"
+            }
+          ],
           "default": "left"
-        },
-        {
-          "type": "checkbox",
-          "id": "keep_ltr",
-          "label": "t:sections.all.keep_ltr_content_direction.label",
-          "default": false
         },
         {
           "type": "select",
@@ -662,8 +646,22 @@
           "content": "t:sections.slideshow.settings.mobile.content"
         },
         {
-          "type": "text_alignment",
+          "type": "select",
           "id": "text_alignment_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__3.label"
+            }
+          ],
           "default": "center",
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         },

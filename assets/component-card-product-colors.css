@@ -11,13 +11,13 @@ card-product-colors {
 
 .card__product-color-list__button {
 	--outline-distance: -0.4rem;
-  border-radius: var(--card-product-color-radius);
+  border-radius: var(--variants-pills-color-radius);
   padding: 0;
   box-shadow: inset 0.3px 0.8px 0px rgba(var(--color-foreground), 0.2);
 }
 
 .card__product-color-list__button img {
-	border-radius: var(--card-product-color-radius);
+	border-radius: var(--variants-pills-color-radius);
 }
 
 .card__product-color-list__button:after {
@@ -26,9 +26,10 @@ card-product-colors {
   background: transparent;
   top: var(--outline-distance);
   bottom: var(--outline-distance);
-  inset-inline: var(--outline-distance);
+  left: var(--outline-distance);
+  right: var(--outline-distance);
   z-index: -1;
-  border-radius: var(--card-product-color-radius);
+  border-radius: var(--variants-pills-color-radius);
 }
 
 .card__product-color-list__button.selected:after {

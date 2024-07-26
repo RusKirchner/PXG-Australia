@@ -38,7 +38,7 @@
     </modal-opener>
   {%- endif -%}
 
-  <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link flex justify-center align-center por header__button-icon" id="cart-icon-bubble">
+  <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link flex justify-center align-center por header__button-icon" id="cart-icon-bubble" aria-label="{{ 'templates.cart.cart' | t | escape }}">
     {%- render 'cart-icon-bubble' -%}
   </a>
 </div>

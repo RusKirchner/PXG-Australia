@@ -14,8 +14,7 @@
       "alt_text": {
         "share_on_facebook": "Delite v Facebooku",
         "share_on_twitter": "Tvitnite v Twitterju",
-        "share_on_pinterest": "Pripnite v Pinterestu",
-        "share_by_email": "Share by email"
+        "share_on_pinterest": "Pripnite v Pinterestu"
       },
       "links": {
         "twitter": "Twitter",
@@ -26,8 +25,7 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok",
-        "linkedin": "Linkedin"
+        "tiktok": "TikTok"
       }
     },
     "continue_shopping": "Nadaljuj nakup",
@@ -35,21 +33,10 @@
       "label": "Oštevilčevanje strani",
       "page": "Stran {{ number }}",
       "next": "Naslednja stran",
-      "previous": "Prejšnja stran",
-      "load_more": "Load more",
-      "load_previous_items": "Load previous items"
+      "previous": "Prejšnja stran"
     },
     "search": {
-      "search": "Iskanje",
-      "clear": "Clear",
-      "view_all_results": "View all results",
-      "type": {
-        "products": "Products",
-        "articles": "Articles",
-        "collections": "Collections",
-        "pages": "Pages",
-        "suggestions": "Suggestions"
-      }
+      "search": "Iskanje"
     },
     "cart": {
       "view": "Prikaži mojo košarico ({{ count }})",
@@ -66,34 +53,6 @@
       "next_slide": "Podrsajte desno",
       "previous_slide": "Podrsajte levo",
       "name": "Drsnik"
-    },
-    "boolean": {
-      "true": "Yes",
-      "false": "No"
-    },
-    "shipping_calculator": {
-      "heading": "Shipping calculator",
-      "errors_heading": "Errors",
-      "carriers": "Available shipping carriers",
-      "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination.",
-      "delivery_date_one": "{{ count }} business day",
-      "delivery_date_many": "{{ count }} business days",
-      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
-    },
-    "countdown": {
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
-      "expired_msg": "The countdown timer has been expired."
-    },
-    "floating_bar": {
-      "recently_viewed": "Recently viewed",
-      "recently_viewed_empty": "There are no recently viewed products.",
-      "recently_viewed_open": "Open recently viewed box",
-      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -117,9 +76,7 @@
     "total_reviews": "skupno število pregledov",
     "star_reviews_info": "{{ rating_value }} od {{ rating_max }} zvezdic",
     "collapsible_content_title": "Vsebina, ki jo je mogoče strniti",
-    "complementary_products": "Dopolnilni izdelki",
-    "skip_to_product_grid": "Skip to product grid",
-    "navigation_toggle": "Navigation toggle in sticky header"
+    "complementary_products": "Dopolnilni izdelki"
   },
   "blogs": {
     "article": {
@@ -140,12 +97,7 @@
         "other": "Št. komentarjev: {{ count }}",
         "few": "Št. komentarjev: {{ count }}",
         "two": "Št. komentarjev: {{ count }}"
-      },
-      "author_html": "Posted by <strong>{{ author }}</strong>",
-      "previous": "Previous",
-      "next": "Next",
-      "tags_all": "All",
-      "continue": "Continue"
+      }
     }
   },
   "onboarding": {
@@ -156,7 +108,6 @@
     "product": {
       "add_to_cart": "Dodaj v košarico",
       "description": "Opis",
-      "pre_order": "Pre-order",
       "on_sale": "Znižanje",
       "product_variants": "Različice izdelka",
       "share": "Deli ta izdelek",
@@ -170,14 +121,7 @@
         "label": "Količina",
         "input_label": "Količina za izdelek {{ product }}",
         "increase": "Povečaj količino za izdelek {{ product }}",
-        "decrease": "Pomanjšaš količino za izdelek {{ product }}",
-        "minimum_of": "Najmanj od {{ quantity }}",
-        "maximum_of": "Največ od {{ quantity }}",
-        "multiples_of": "V korakih po {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> v košarici",
-        "note": "Prikaži pravila glede količine",
-        "min_of": "Najmanj {{ quantity }}",
-        "max_of": "Največ {{ quantity }}"
+        "decrease": "Pomanjšaš količino za izdelek {{ product }}"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
@@ -209,30 +153,7 @@
       "include_taxes": "Vključno z davkom.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Dostava</a> se obračuna ob zaključku nakupa.",
       "choose_options": "Izberite možnosti",
-      "choose_product_options": "Izberite možnosti za izdelek {{ product_name }}",
-      "value_unavailable": "{{ option_value }} – ni na voljo",
-      "variant_sold_out_or_unavailable": "Različica je razprodana ali ni na voljo",
-      "inventory_in_stock": "Na zalogi",
-      "inventory_in_stock_show_count": "Na zalogi: {{ quantity }}",
-      "inventory_low_stock": "Majhna zaloga",
-      "inventory_low_stock_show_count": "Majhna zaloga, preostalo še: {{ quantity }}",
-      "inventory_out_of_stock": "Ni na zalogi",
-      "inventory_out_of_stock_continue_selling": "Na zalogi",
-      "quick_view": "Quick view a product",
-      "quick_view_button": "Quick view",
-"view_product": "View product",
-      "number_of_reviews": {
-        "one": "{{ count }} review",
-        "other": "{{ count }} review"
-      },
-      "volume_pricing": {
-        "title": "Količinski popust",
-        "note": "Na voljo je količinski popust",
-        "minimum": "{{ quantity }} in več",
-        "price_at_each": "{{ price }}/kos",
-        "price_range": "{{ minimum }}–{{ maximum }}"
-      },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "choose_product_options": "Izberite možnosti za izdelek {{ product_name }}"
     },
     "modal": {
       "label": "Galerija predstavnostnih vsebin"
@@ -272,10 +193,7 @@
       "clear_filter": "Odstrani filter",
       "filter_selected_accessibility": "{{ type }} (št. izbranih filtrov: {{ count }})",
       "show_more": "Prikaži več",
-      "show_less": "Prikaži manj",
-      "show_filter": "Show filter",
-      "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "show_less": "Prikaži manj"
     }
   },
   "templates": {
@@ -296,13 +214,7 @@
         "other": "Št. najdenih rezultatov za »{{ terms }}«: {{ count }}",
         "few": "Št. najdenih rezultatov za »{{ terms }}«: {{ count }}",
         "two": "Št. najdenih rezultatov za »{{ terms }}«: {{ count }}"
-      },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "cart": "Košarica"
@@ -317,27 +229,11 @@
         "post_success": "Hvala za vaše sporočilo. Z vami bomo v stiku takoj, ko bo mogoče.",
         "error_heading": "Prilagodite naslednje:",
         "title": "Obrazec za stik"
-      },
-      "address": {
-        "heading": "Our address"
-      },
-      "opening_hour": {
-        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Strani ni mogoče najti",
       "subtext": "404"
-    },
-    "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
     }
   },
   "sections": {
@@ -349,11 +245,7 @@
         "other": "Št. elementov: {{ count }}",
         "few": "Št. elementov: {{ count }}",
         "two": "Št. elementov: {{ count }}"
-      },
-      "breadcrumbs": {
-        "home": "Home"
-      },
-      "go_to_link": "Go to {{ title }}"
+      }
     },
     "cart": {
       "title": "Vaša košarica",
@@ -381,13 +273,7 @@
       "login": {
         "title": "Ali imate račun?",
         "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite</a>."
-      },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      }
     },
     "footer": {
       "payment": "Načini plačila"
@@ -399,8 +285,7 @@
     },
     "featured_collection": {
       "view_all": "Prikaži vse",
-      "view_all_label": "Prikaži vse izdelke v zbirki {{ collection_name }}",
-      "slider": "Slider"
+      "view_all_label": "Prikaži vse izdelke v zbirki {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "Prikaži vse"
@@ -427,8 +312,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -441,10 +325,6 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
-    },
-    "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -458,8 +338,7 @@
       "title": "Račun",
       "details": "Podatki o računu",
       "view_addresses": "Prikaži naslove",
-      "return": "Nazaj na podatke o računu",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
+      "return": "Nazaj na podatke o računu"
     },
     "account_fallback": "Račun",
     "log_in": "Prijava",
@@ -561,8 +440,7 @@
       "password": "Geslo",
       "password_confirm": "Potrdite geslo",
       "submit": "Ponastavi geslo"
-    },
-    "back_to_login": "Back to the login page"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -577,21 +455,6 @@
       "expired": "Poteklo",
       "copy_code_success": "Koda je uspešno kopirana",
       "print_gift_card": "Natisni"
-    }
-  },
-  "recipient": {
-    "form": {
-      "checkbox": "I want to send this as a gift",
-      "email_label": "Recipient email",
-      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
-      "email": "Email",
-      "name_label": "Recipient email (optional)",
-      "name": "Name",
-      "message_label": "Message ( optional)",
-      "message": "Message",
-      "max_characters": "{{ max_chars }} characters max",
-      "send_on": "YYYY-MM-DD",
-      "send_on_label": "Send on (optional)"
     }
   }
 }

@@ -1,5 +1,5 @@
 <compare-add-button class="flex por">
-  <button type="button" class="compare-add-button product__sale-box__footer-button font-body-semi-bold flex justify-right align-center text-body unstyled-button por" data-product-id="{{ product.id | escape }}">
+  <button type="button" class="compare-add-button product__sale-box__footer-button font-body-semi-bold flex justify-right align-center text-body unstyled-button por" data-product-id="{{ product.id | escape }}" aria-label="{{ 'templates.compare.add_button' | t: product_title: product.title | escape }}">
     <span class="por flex align-center">
       {%- render 'icon-compare', icon_width: 16 -%}
       <span class="compare-added-check compare-added-check--main flex justify-center align-center">

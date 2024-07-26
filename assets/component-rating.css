@@ -24,7 +24,7 @@
   mix-blend-mode: color;
   position: absolute;
   top: 0;
-  inset-inline-end: 0;
+  right: 0;
   width: calc(var(--remain-stars) * var(--star-width) + var(--number-gap) * var(--star-gap));
 }
 

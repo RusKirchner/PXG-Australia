@@ -37,7 +37,7 @@
 }
 
 .pagination__item--next .icon {
-  margin-inline-start: -0.2rem;
+  margin-left: -0.2rem;
 }
 
 .pagination__item:hover .icon {
@@ -45,5 +45,5 @@
 }
 
 .pagination__item--prev .icon {
-  margin-inline-end: -0.2rem;
+  margin-right: -0.2rem;
 }
