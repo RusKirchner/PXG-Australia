@@ -29,6 +29,17 @@ strong {
     animation: none !important;
   }
 }
+@font-face {
+
+  font-family: 'Prohibition';
+
+  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff2?v=1697423696') format('woff2');  
+
+  font-style: normal;
+
+ 
+
+  }
 
 .underlined-link:hover {
   color: rgb(var(--color-link));
