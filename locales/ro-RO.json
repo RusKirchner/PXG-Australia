@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "Distribuiți pe Facebook",
         "share_on_twitter": "Dați un Tweet pe Twitter",
-        "share_on_pinterest": "Postați un Pin pe Pinterest"
+        "share_on_pinterest": "Postați un Pin pe Pinterest",
+        "share_by_email": "Trimite pe email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Continuați cumpărăturile",
@@ -33,10 +35,21 @@
       "label": "Paginare",
       "page": "Pagina {{ number }}",
       "next": "Pagina următoare",
-      "previous": "Pagina precedentă"
+      "previous": "Pagina precedentă",
+      "load_more": "Incarca mai mult",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "Căutați"
+      "search": "Căutați",
+      "clear": "Sterge",
+      "view_all_results": "Vezi toate rezultatele",
+      "type": {
+        "products": "Produse",
+        "articles": "Articole",
+        "collections": "Collectii",
+        "pages": "Pagini",
+        "suggestions": "Sugestii"
+      }
     },
     "cart": {
       "view": "Vizualizare coș ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "Glisare la dreapta",
       "previous_slide": "Glisare la stânga",
       "name": "Glisor"
+    },
+    "shipping_calculator": {
+      "heading": "Calculator transport",
+      "errors_heading": "Erori",
+      "carriers": "Transportatori disponibili",
+      "button": "Calculeaza",
+      "do_not_ship": "Nu livram la aceasta adresa",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Zile",
+      "hours": "Ore",
+      "minutes": "Minute",
+      "seconds": "Secunde",
+      "error_msg": "Sintaxa gresita. Te rugam sa introduci data cu sintaxa: yyyy-mm-dd say yyyy-mm-dd hh:ii. Exemplu: 2023-01-15 sau 2023-01-15 23:00.",
+      "expired_msg": "Timpul a expirat"
+    },
+    "floating_bar": {
+      "recently_viewed": "Vizualizate recent",
+      "recently_viewed_empty": "Nu sunt produse vizualizate recent",
+      "recently_viewed_open": "Deschide caseta cu vizualizări recente",
+      "back_to_top": "Mergi sus"
+    },
+    "boolean": {
+      "true": "Da",
+      "false": "Nu"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "total recenzii",
     "star_reviews_info": "{{ rating_value }} din {{ rating_max }} stele",
     "collapsible_content_title": "Conținut care poate fi restrâns",
-    "complementary_products": "Produse complementare"
+    "complementary_products": "Produse complementare",
+    "skip_to_product_grid": "Mergi la grila de produse",
+    "navigation_toggle": "Buton de navigatie în antet lipicios"
   },
   "blogs": {
     "article": {
@@ -96,7 +139,12 @@
         "one": "{{ count }} comentariu",
         "other": "{{ count }} comentarii",
         "few": "{{ count }} comentarii"
-      }
+      },
+      "author_html": "Create de <strong>{{ author }}</strong>",
+      "previous": "Anterior",
+      "next": "Urmator",
+      "tags_all": "Toate",
+      "continue": "Continua"
     }
   },
   "onboarding": {
@@ -152,7 +200,20 @@
       "include_taxes": "Taxe incluse.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Taxele de expediere</a> sunt calculate la finalizarea comenzii.",
       "choose_options": "Alege opțiunile",
-      "choose_product_options": "Alege opțiunile pentru {{ product_name }}"
+      "choose_product_options": "Alege opțiunile pentru {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Indisponibil",
+      "inventory_in_stock": "In stoc",
+      "inventory_in_stock_show_count": "{{ quantity }} in stoc",
+      "inventory_low_stock": "Stoc redus",
+      "inventory_low_stock_show_count": "Stoc redus: {{ quantity }} ramase",
+      "inventory_out_of_stock": "Lipsa stoc",
+      "inventory_out_of_stock_continue_selling": "Is stoc",
+      "quick_view": "Vizualizare rapida produs",
+      "number_of_reviews": {
+        "one": "{{ count }} recenzie",
+        "other": "{{ count }} recenzii"
+      },
+      "by_vendor_html": "<span>De</span> {{ vendor }}"
     },
     "modal": {
       "label": "Galerie media"
@@ -189,7 +250,10 @@
       "clear_filter": "Elimină filtrul",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtre selectate)",
       "show_more": "Afișează mai mult",
-      "show_less": "Afișează mai puțin"
+      "show_less": "Afișează mai puțin",
+      "show_filter": "Arata filtru",
+      "hide_filter": "Ascunde filtru",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -208,7 +272,13 @@
         "one": "S-a găsit {{ count }} rezultat pentru „{{ terms }}”",
         "other": "S-au găsit {{ count }} rezultate pentru „{{ terms }}”",
         "few": "S-au găsit {{ count }} rezultate pentru „{{ terms }}”"
-      }
+      },
+      "no_products": "Nu am gasit produse pentru \"{{ terms }}\". Verifica ortografia sau foloseste un cuvant sau o fraza diferita.",
+      "no_articles": "Nu am gasit articole pentru \"{{ terms }}\". Verifica ortografia sau foloseste un cuvant sau o fraza diferita.",
+      "no_pages": "Nu am gasit pagini pentru \"{{ terms }}\". Verifica ortografia sau foloseste un cuvant sau o fraza diferita.",
+      "no_collections": "Nu am gasit collectii pentru \"{{ terms }}\". Verifica ortografia sau foloseste un cuvant sau o fraza diferita.",
+      "article": "Articole",
+      "suggestions": "Sugestii"
     },
     "cart": {
       "cart": "Coș"
@@ -223,11 +293,27 @@
         "post_success": "Vă mulțumim că ne-ați contactat. Vom lua legătura cu dvs. cât mai curând posibil.",
         "error_heading": "Vă rugăm să ajustați următoarele:",
         "title": "Formular de contact"
+      },
+      "address": {
+        "heading": "Adresa noastra"
+      },
+      "opening_hour": {
+        "heading": "Orar de functionare"
       }
     },
     "404": {
       "title": "Pagina nu a fost găsită",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Compara produse",
+      "add_button": "Adauga {{  product_title }} la lista de comparatie",
+      "add_to_compare": "Adauga la comparatie",
+      "popup": "Popup cu produse comparate",
+      "empty": "Nu sunt produse la comparatie",
+      "warning": "Te rugam sa selectezi cel putin 2 produse pentru a le compara",
+      "success": "Adaugat la comparatie",
+      "remove": "Sterge"
     }
   },
   "sections": {
@@ -238,7 +324,11 @@
         "one": "{{ count }} articol",
         "other": "{{ count }} articole",
         "few": "{{ count }} articole"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Acasa"
+      },
+      "go_to_link": "Mergi la {{ title}}"
     },
     "cart": {
       "title": "Coșul dvs.",
@@ -266,7 +356,13 @@
       "login": {
         "title": "Ai un cont?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Conectează-te</a> pentru a finaliza comanda mai rapid."
-      }
+      },
+      "note_drawer": "Nota",
+      "apply": "Aplica",
+      "shipping": "Transport",
+      "view_cart": "Vezi cos",
+      "cart_success": "Produsul a fost adaugat in cos",
+      "cart_totals": "Total cos"
     },
     "footer": {
       "payment": "Metode de plată"
@@ -278,7 +374,8 @@
     },
     "featured_collection": {
       "view_all": "Afișați tot",
-      "view_all_label": "Afișați toate produsele din colecția {{ collection_name }}"
+      "view_all_label": "Afișați toate produsele din colecția {{ collection_name }}",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "Afișați tot"
@@ -305,7 +402,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -318,6 +416,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Imagini galerie",
+      "item_id_label": "Imagini galerie #{{ numar produs }}"
     }
   },
   "localization": {
@@ -331,7 +433,8 @@
       "title": "Cont",
       "details": "Detalii cont",
       "view_addresses": "Afișați adresele",
-      "return": "Înapoi la detaliile contului"
+      "return": "Înapoi la detaliile contului",
+      "welcome_html": "Bine te-am regasit "
     },
     "account_fallback": "Cont",
     "log_in": "Conectați-vă",
@@ -433,7 +536,8 @@
       "tracking_number": "Număr de urmărire",
       "subtotal": "Subtotal",
       "total_duties": "Taxe vamale"
-    }
+    },
+    "back_to_login": "Inapoi la pagina de autentificare"
   },
   "gift_cards": {
     "issued": {
@@ -448,6 +552,21 @@
       "expired": "Expirat",
       "copy_code_success": "Codul a fost copiat cu succes",
       "print_gift_card": "Imprimați"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Vreau sa trimit ca un cadou",
+      "email_label": "Emailul destinatarului",
+      "email_label_optional_for_no_js_behavior": "Emailul destinatarului ( optional )",
+      "email": "Email",
+      "name_label": "Nume destinatar ( optional )",
+      "name": "Nume",
+      "message_label": "Mesaj ( optional )",
+      "message": "Mesaj",
+      "max_characters": "{{ max_chars }} caractere maxime",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Trimite pe ( optional )"
     }
   }
 }

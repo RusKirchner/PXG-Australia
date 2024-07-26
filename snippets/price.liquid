@@ -36,18 +36,18 @@
   {%- if available == false %} price--sold-out {% endif -%}
   {%- if compare_at_price > price %} price--on-sale {% endif -%}
   {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif %}
-  {%- if show_badges %} price--show-badge{% endif %}{% unless show_in_card %} price--out-card{% endunless %}">
+  {%- if show_in_card %} price--in-card{% endif %}
+  {%- if show_badges and settings.sale_badge_label != 'none' %} price--show-badge{% endif %}{% unless show_in_card %} price--out-card{% endunless %}">
   <div class="price__container{% if compare_at_price > price and show_in_card %} break{% endif %}">
     {%- comment -%}
       Explanation of description list:
         - div.price__regular: Displayed when there are no variants on sale
         - div.price__sale: Displayed when a variant is a sale
     {%- endcomment -%}
-    <div class="price__regular mlmlmlm">
+    <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-      <span class="price-item price-item--regular lmlm">
-        Options starting from {{ money_price | replace: "From", "" }}
-
+      <span class="price-item price-item--regular">
+        {{ money_price }}
       </span>
     </div>
     <div class="price__sale{% if show_in_card %} flex-column{% endif %}">
@@ -62,12 +62,12 @@
             {% endif %}
           </s>
           
-          {%- if show_badges and show_in_card and target.price < target.compare_at_price -%}
+          {%- if show_badges and show_in_card and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
             <span class="price__badge price__badge--in-card lh1 color-foreground">
               {%- if settings.sale_badge_label == 'text' -%}
                 {{ 'products.product.on_sale' | t }}
               {%- elsif settings.sale_badge_label == 'percent' -%}
-                {{ target.price | minus: target.compare_at_price | times: 100 | divided_by: target.compare_at_price | floor }}%
+                {{ target.price | minus: target.compare_at_price | times: 100.00 | divided_by: target.compare_at_price | round }}%
               {%- else -%}
                 {%- if settings.currency_code_enabled -%}
                   -{{ target.compare_at_price | minus: target.price | money_with_currency }}	
@@ -101,12 +101,12 @@
     </small>
     {%- endunless -%}
   </div>
-  {%- if show_badges and show_in_card == false and target.price < target.compare_at_price -%}
+  {%- if show_badges and show_in_card == false and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
     <span class="price__badge lh1 color-foreground">
       {%- if settings.sale_badge_label == 'text' -%}
         {{ 'products.product.on_sale' | t }}
       {%- elsif settings.sale_badge_label == 'percent' -%}
-        {{ target.price | minus: target.compare_at_price | times: 100 | divided_by: target.compare_at_price | floor }}%
+        {{ target.price | minus: target.compare_at_price | times: 100.00 | divided_by: target.compare_at_price | round }}%
       {%- else -%}
         {%- if settings.currency_code_enabled -%}
           -{{ target.compare_at_price | minus: target.price | money_with_currency }}	

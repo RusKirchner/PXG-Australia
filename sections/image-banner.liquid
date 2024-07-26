@@ -1,233 +1,280 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{%- assign text_block = section.blocks | where: "type", "text" -%}
-{%- if text_block.size > 0 -%}
-  <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-  <noscript>
-    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
-  </noscript>
-{%- endif -%}
-<link rel="stylesheet" href="{{ 'component-countdown.css' | asset_url }}" media="print" onload="this.media='all'">
-<script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
-{%- style -%}
-  #shopify-section-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-  #Banner-{{ section.id }}::after {
-    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-    {%- unless section.settings.layout == 'full_bleed' -%}
-      border-radius: 1rem;
-    {%- endunless -%}  
-  }
-  .countdown--{{ section.id }} {
-    margin-bottom: 0;
-  }
-  .badge--{{ section.id }} {
-    width: fit-content;
-  }
-  {%- unless section.settings.layout == 'full_bleed' -%}
-    #Banner-{{ section.id }} {
-      --border-radius: 3rem;
+{%-liquid
+  assign hide_section = false
+  if section.settings.image == blank and section.settings.hide_when_empty_image and request.design_mode == false
+    assign hide_section = true
+  endif
+  assign need_preload = section.settings.preload
+  if section.index == 1 and section.location != 'footer'
+    assign need_preload = true
+  endif
+-%}
+{%- unless hide_section -%}
+  {{ 'section-image-banner.css' | asset_url | stylesheet_tag: preload: need_preload }}
+  {%- assign text_block = section.blocks | where: "type", "text" -%}
+  {%- if text_block.size > 0 -%}
+    <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>
+      {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+    </noscript>
+  {%- endif -%}
+  <link rel="stylesheet" href="{{ 'component-countdown.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
+  {%- style -%}
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  {%- endunless -%} 
-  @media screen and (max-width: 749px) {
-    .banner__box--{{ section.id }} {
-      --color-foreground: {{ section.settings.color_text_mobile.red }}, {{ section.settings.color_text_mobile.green }}, {{ section.settings.color_text_mobile.blue }};
-      {%- if section.settings.gradient_heading_mobile != blank -%}--gradient-heading: {{ section.settings.gradient_heading_mobile }};{%- endif -%}
-    }
-    .button-1--{{ section.id }}:not(.button--secondary) {
-      --color-link: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
-      --color-button-text: {{ section.settings.color_button_text_1_mobile.red }}, {{ section.settings.color_button_text_1_mobile.green }}, {{ section.settings.color_button_text_1_mobile.blue }};
-      --color-button: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
-    }
-    .button-1--{{ section.id }}.button--secondary {
-      --color-button-text-outline: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
-      --color-button-outline: {{ section.settings.color_button_text_1_mobile.red }}, {{ section.settings.color_button_text_1_mobile.green }}, {{ section.settings.color_button_text_1_mobile.blue }};
-    }
-    .button-2--{{ section.id }}:not(.button--secondary) {
-      --color-link: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
-      --color-button-text: {{ section.settings.color_button_text_2_mobile.red }}, {{ section.settings.color_button_text_2_mobile.green }}, {{ section.settings.color_button_text_2_mobile.blue }};
-      --color-button: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
-    }
-    .button-2--{{ section.id }}.button--secondary {
-      --color-button-text-outline: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
-      --color-button-outline: {{ section.settings.color_button_text_2_mobile.red }}, {{ section.settings.color_button_text_2_mobile.green }}, {{ section.settings.color_button_text_2_mobile.blue }};
-    }
-    .badge--{{ section.id }} {
-      --color-badge-foreground: {{ section.settings.colors_badge_foreground_mobile.red }}, {{ section.settings.colors_badge_foreground_mobile.green }}, {{ section.settings.colors_badge_foreground_mobile.blue }};
-      --color-badge-background: {{ section.settings.colors_badge_background_mobile.red }}, {{ section.settings.colors_badge_background_mobile.green }}, {{ section.settings.colors_badge_background_mobile.blue }};
-      {%- unless section.settings.mobile_content_alignment == 'center' -%}
-        margin-{%- if section.settings.mobile_content_alignment == 'left' -%}right{%- else -%}left{%- endif -%}: auto;
-      {%- else -%}
-        margin-left: auto;
-        margin-right: auto;  
+    #Banner-{{ section.id }}::after {
+      opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+      {%- unless section.settings.layout == 'full_bleed' -%}
+        border-radius: 1rem;
       {%- endunless -%}  
     }
     .countdown--{{ section.id }} {
-      --color-foreground: {{ section.settings.color_countdown_foreground_mobile.red }}, {{ section.settings.color_countdown_foreground_mobile.green }}, {{ section.settings.color_countdown_foreground_mobile.blue }};
-      --color-background: {{ section.settings.color_countdown_background_mobile.red }}, {{ section.settings.color_countdown_background_mobile.green }}, {{ section.settings.color_countdown_background_mobile.blue }};
+      margin-bottom: 0;
     }
-    {%- if section.settings.show_text_below_image -%}
-      .banner__box--{{ section.id }} {
-        --gradient-background: {%- if section.settings.gradient_background_container_mobile != blank %}{{ section.settings.gradient_background_container_mobile }}{% else %}{{ section.settings.background_container_mobile }}{% endif %};
+    .badge--{{ section.id }} {
+      width: fit-content;
+    }
+    {%- unless section.settings.layout == 'full_bleed' -%}
+      #Banner-{{ section.id }} {
+        --border-radius: 3rem;
       }
-    {%- endif -%}
-    {%- if section.settings.image_height_mobile == 'adapt-mobile' -%}
-      {%- if section.settings.image != blank or section.settings.image_mobile != blank -%}
-        {%- assign aspect_ratio_mobile = section.settings.image_mobile.aspect_ratio | default: section.settings.image.aspect_ratio -%}
-        #Banner-{{ section.id }}::before,
-        #Banner-{{ section.id }} .banner__media::before,
-        #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-          padding-bottom: {{ 1 | divided_by: aspect_ratio_mobile | times: 100 }}%;
+    {%- endunless -%} 
+    @media screen and (max-width: 749px) {
+      .banner__box--{{ section.id }} {
+        --color-foreground: {{ section.settings.color_text_mobile.red }}, {{ section.settings.color_text_mobile.green }}, {{ section.settings.color_text_mobile.blue }};
+        {%- if section.settings.gradient_heading_mobile != blank -%}--gradient-heading: {{ section.settings.gradient_heading_mobile }};{%- endif -%}
+      }
+      .button-1--{{ section.id }}:not(.button--secondary) {
+        --color-link: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
+        --color-button-text: {{ section.settings.color_button_text_1_mobile.red }}, {{ section.settings.color_button_text_1_mobile.green }}, {{ section.settings.color_button_text_1_mobile.blue }};
+        --color-button: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
+      }
+      .button-1--{{ section.id }}.button--secondary {
+        --color-button-text-outline: {{ section.settings.color_button_1_mobile.red }}, {{ section.settings.color_button_1_mobile.green }}, {{ section.settings.color_button_1_mobile.blue }};
+        --color-button-outline: {{ section.settings.color_button_text_1_mobile.red }}, {{ section.settings.color_button_text_1_mobile.green }}, {{ section.settings.color_button_text_1_mobile.blue }};
+      }
+      .button-2--{{ section.id }}:not(.button--secondary) {
+        --color-link: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
+        --color-button-text: {{ section.settings.color_button_text_2_mobile.red }}, {{ section.settings.color_button_text_2_mobile.green }}, {{ section.settings.color_button_text_2_mobile.blue }};
+        --color-button: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
+      }
+      .button-2--{{ section.id }}.button--secondary {
+        --color-button-text-outline: {{ section.settings.color_button_2_mobile.red }}, {{ section.settings.color_button_2_mobile.green }}, {{ section.settings.color_button_2_mobile.blue }};
+        --color-button-outline: {{ section.settings.color_button_text_2_mobile.red }}, {{ section.settings.color_button_text_2_mobile.green }}, {{ section.settings.color_button_text_2_mobile.blue }};
+      }
+      .badge--{{ section.id }} {
+        --color-badge-foreground: {{ section.settings.colors_badge_foreground_mobile.red }}, {{ section.settings.colors_badge_foreground_mobile.green }}, {{ section.settings.colors_badge_foreground_mobile.blue }};
+        --color-badge-background: {{ section.settings.colors_badge_background_mobile.red }}, {{ section.settings.colors_badge_background_mobile.green }}, {{ section.settings.colors_badge_background_mobile.blue }};
+        {%- unless section.settings.mobile_content_alignment == 'center' -%}
+          margin-{%- if section.settings.mobile_content_alignment == 'left' -%}inline-end{%- else -%}inline-start{%- endif -%}: auto;
+        {%- else -%}
+          margin-inline-start: auto;
+          margin-inline-end: auto;  
+        {%- endunless -%}  
+      }
+      .countdown--{{ section.id }} {
+        --color-foreground: {{ section.settings.color_countdown_foreground_mobile.red }}, {{ section.settings.color_countdown_foreground_mobile.green }}, {{ section.settings.color_countdown_foreground_mobile.blue }};
+        --color-background: {{ section.settings.color_countdown_background_mobile.red }}, {{ section.settings.color_countdown_background_mobile.green }}, {{ section.settings.color_countdown_background_mobile.blue }};
+      }
+      {%- if section.settings.show_text_below_image -%}
+        .banner__box--{{ section.id }} {
+          --gradient-background: {%- if section.settings.gradient_background_container_mobile != blank %}{{ section.settings.gradient_background_container_mobile }}{% else %}{{ section.settings.background_container_mobile }}{% endif %};
+        }
+      {%- endif -%}
+      {%- if section.settings.image_height_mobile == 'adapt-mobile' -%}
+        {%- if section.settings.image != blank or section.settings.image_mobile != blank -%}
+          {%- assign aspect_ratio_mobile = section.settings.image_mobile.aspect_ratio | default: section.settings.image.aspect_ratio -%}
+          #Banner-{{ section.id }}::before,
+          #Banner-{{ section.id }} .banner__media::before,
+          #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+            padding-bottom: {{ 1 | divided_by: aspect_ratio_mobile | times: 100 }}%;
+            content: '';
+            display: block;
+          }
+        {%- endif -%}
+      {%- endif -%}
+    }
+    
+    @media screen and (min-width: 750px) {
+      {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+      #Banner-{{ section.id }}::before,
+        #Banner-{{ section.id }} .banner__media::before {
+          padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
           content: '';
           display: block;
         }
-      {%- endif -%}
-    {%- endif -%}
-  }
-   
-  @media screen and (min-width: 750px) {
-    {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
-    #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before {
-        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    {%- endif -%}  
-    .banner__box--{{ section.id }} {
-      --color-foreground: {{ section.settings.color_text.red }}, {{ section.settings.color_text.green }}, {{ section.settings.color_text.blue }};
-      {%- if section.settings.gradient_heading_desktop != blank -%}--gradient-heading: {{ section.settings.gradient_heading_desktop }};{%- endif -%}
-    }
-    .button-1--{{ section.id }}:not(.button--secondary) {
-      --color-link: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
-      --color-button-text: {{ section.settings.color_button_text_1.red }}, {{ section.settings.color_button_text_1.green }}, {{ section.settings.color_button_text_1.blue }};
-      --color-button: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
-    }
-    .button-1--{{ section.id }}.button--secondary {
-      --color-button-text-outline: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
-      --color-button-outline: {{ section.settings.color_button_text_1.red }}, {{ section.settings.color_button_text_1.green }}, {{ section.settings.color_button_text_1.blue }};
-    }
-    .button-2--{{ section.id }}:not(.button--secondary) {
-      --color-link: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
-      --color-button-text: {{ section.settings.color_button_text_2.red }}, {{ section.settings.color_button_text_2.green }}, {{ section.settings.color_button_text_2.blue }};
-      --color-button: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
-    }
-    .button-2--{{ section.id }}.button--secondary {
-      --color-button-text-outline: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
-      --color-button-outline: {{ section.settings.color_button_text_2.red }}, {{ section.settings.color_button_text_2.green }}, {{ section.settings.color_button_text_2.blue }};
-    }
-    .badge--{{ section.id }} {
-      --color-badge-foreground: {{ section.settings.colors_badge_foreground.red }}, {{ section.settings.colors_badge_foreground.green }}, {{ section.settings.colors_badge_foreground.blue }};
-      --color-badge-background: {{ section.settings.colors_badge_background.red }}, {{ section.settings.colors_badge_background.green }}, {{ section.settings.colors_badge_background.blue }};
-      {%- unless section.settings.desktop_content_alignment == 'center' -%}
-        margin-{%- if section.settings.desktop_content_alignment == 'left' -%}right{%- else -%}left{%- endif -%}: auto;
-      {%- else -%}
-        margin-left: auto;
-        margin-right: auto;  
-      {%- endunless -%}
-    }
-    .countdown--{{ section.id }} {
-      justify-content: {{ section.settings.desktop_content_position | split: '-' | last }};
-      --color-foreground: {{ section.settings.color_countdown_foreground_mobile.red }}, {{ section.settings.color_countdown_foreground_mobile.green }}, {{ section.settings.color_countdown_foreground_mobile.blue }};
-      --color-background: {{ section.settings.color_countdown_background_mobile.red }}, {{ section.settings.color_countdown_background_mobile.green }}, {{ section.settings.color_countdown_background_mobile.blue }};
-    }
-    #shopify-section-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-{%- unless section.settings.layout == 'full_bleed' -%}
-  <div class="page-width{% if section.settings.layout == 'stretched_grid' %}--full{% endif %}">
-{%- endunless -%}    
-<div id="Banner-{{ section.id }}" class="banner por flex banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }} banner--{{ section.settings.image_height_mobile }}{% if section.settings.show_text_below_image %} banner--mobile-bottom{% endif %} banner--desktop-transparent">
-  {%- if section.settings.image != blank -%}
-    <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}{% unless section.settings.layout == 'full_bleed' %} banner__media--radius{% endunless %}">
-      {%-liquid
-        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-        assign sizes = "100vw"
-        if section.settings.image_mobile != blank
-          assign image_class = 'small-hide'
-        endif
-      -%}
-      {{ section.settings.image | image_url: width: 1500 | image_tag:
-        loading: 'lazy',
-        width: section.settings.image.width,
-        height: image_height,
-        class: image_class,
-        sizes: sizes,
-        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-      }}
-      {%- if section.settings.image_mobile != blank -%}
-        {%-liquid
-          assign image_height = section.settings.image_mobile.width | divided_by: section.settings.image_mobile.aspect_ratio
-          assign sizes = "100vw"
-          assign image_class = 'medium-hide large-up-hide'
-        -%}
-        {{ section.settings.image_mobile | image_url: width: 750 | image_tag:
-          loading: 'lazy',
-          width: section.settings.image_mobile.width,
-          height: image_height,
-          class: image_class,
-          sizes: sizes,
-          widths: '375, 550, 750, 1100'
-        }}
       {%- endif -%}  
-    </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
-  {%- else -%}
-    <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}{% unless section.settings.layout == 'full_bleed' %} banner__media--radius{% endunless %}">
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-    </div>
-  {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
-    <div class="banner__box por banner__box--{{ section.id }}{% unless section.settings.show_text_below_image %} background-transparent{% elsif section.settings.layout != 'full_bleed' %} banner__box--radius{% endunless %} center">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'heading' -%}
-            <h2 class="banner__heading banner__heading--{{ section.id }} color-foreground font-heading-extra-bold banner__heading--large-size{% if section.settings.gradient_heading_desktop != blank %} banner__heading--gradient-desktop{% endif %}{% if section.settings.gradient_heading_mobile != blank %} banner__heading--gradient-mobile{% endif %}" {{ block.shopify_attributes }}>
-              <span class="lh1">{{ block.settings.heading | escape }}</span>
-            </h2>
-          {%- when 'text' -%}
-            <div class="banner__text banner__text--{{ section.id }} {{ block.settings.text_style }} color-foreground rte" {{ block.shopify_attributes }}>
-              {{ block.settings.text }}
-            </div>
-          {%- when 'buttons' -%}
-            <div class="banner__buttons{% unless forloop.first %} element-small-margin-top{% endunless %}{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} align-center" {{ block.shopify_attributes }}>
-              {%- if block.settings.button_label_1 != blank -%}
-                <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button-1--{{ section.id }}{% if block.settings.button_style_1 != 'link' %} button button--{{ block.settings.button_style_1 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
-                  <span>{{ block.settings.button_label_1 | escape }}</span>
-                  {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
-                </a>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button button-2--{{ section.id }}{% if block.settings.button_style_2 != 'link' %} button button--{{ block.settings.button_style_2 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
-                  <span>{{ block.settings.button_label_2 | escape }}</span>
-                  {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
-                </a>
-              {%- endif -%}
-            </div>
-          {%- when 'countdown' -%}
-            {%- if block.settings.date != blank -%}
-              <count-down data-endtime="{{ block.settings.date }}" data-timezone="{{ 'now' | date: '%z' }}" data-expired-msg="{{ block.settings.expiration_message | escape }}" class="countdown flex color-foreground justify-{{ section.settings.mobile_content_alignment }} countdown--{{ section.id }}" {{ block.shopify_attributes }}>
-              </count-down>
-            {%- elsif request.design_mode -%} 
-              <div class="countdown flex color-foreground justify-{{ section.settings.mobile_content_alignment }} countdown--{{ section.id }}" {{ block.shopify_attributes }}>
-                {%- render 'countdown-tpl', use_design_mode: true -%}
+      .banner__box--{{ section.id }} {
+        --color-foreground: {{ section.settings.color_text.red }}, {{ section.settings.color_text.green }}, {{ section.settings.color_text.blue }};
+        {%- if section.settings.gradient_heading_desktop != blank -%}--gradient-heading: {{ section.settings.gradient_heading_desktop }};{%- endif -%}
+      }
+      .button-1--{{ section.id }}:not(.button--secondary) {
+        --color-link: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
+        --color-button-text: {{ section.settings.color_button_text_1.red }}, {{ section.settings.color_button_text_1.green }}, {{ section.settings.color_button_text_1.blue }};
+        --color-button: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
+      }
+      .button-1--{{ section.id }}.button--secondary {
+        --color-button-text-outline: {{ section.settings.color_button_1.red }}, {{ section.settings.color_button_1.green }}, {{ section.settings.color_button_1.blue }};
+        --color-button-outline: {{ section.settings.color_button_text_1.red }}, {{ section.settings.color_button_text_1.green }}, {{ section.settings.color_button_text_1.blue }};
+      }
+      .button-2--{{ section.id }}:not(.button--secondary) {
+        --color-link: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
+        --color-button-text: {{ section.settings.color_button_text_2.red }}, {{ section.settings.color_button_text_2.green }}, {{ section.settings.color_button_text_2.blue }};
+        --color-button: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
+      }
+      .button-2--{{ section.id }}.button--secondary {
+        --color-button-text-outline: {{ section.settings.color_button_2.red }}, {{ section.settings.color_button_2.green }}, {{ section.settings.color_button_2.blue }};
+        --color-button-outline: {{ section.settings.color_button_text_2.red }}, {{ section.settings.color_button_text_2.green }}, {{ section.settings.color_button_text_2.blue }};
+      }
+      .badge--{{ section.id }} {
+        --color-badge-foreground: {{ section.settings.colors_badge_foreground.red }}, {{ section.settings.colors_badge_foreground.green }}, {{ section.settings.colors_badge_foreground.blue }};
+        --color-badge-background: {{ section.settings.colors_badge_background.red }}, {{ section.settings.colors_badge_background.green }}, {{ section.settings.colors_badge_background.blue }};
+        {%- unless section.settings.desktop_content_alignment == 'center' -%}
+          margin-{%- if section.settings.desktop_content_alignment == 'left' -%}inline-end{%- else -%}inline-start{%- endif -%}: auto;
+        {%- else -%}
+          margin-inline-start: auto;
+          margin-inline-end: auto;  
+        {%- endunless -%}
+      }
+      .countdown--{{ section.id }} {
+        justify-content: {{ section.settings.desktop_content_position | split: '-' | last }};
+        --color-foreground: {{ section.settings.color_countdown_foreground_mobile.red }}, {{ section.settings.color_countdown_foreground_mobile.green }}, {{ section.settings.color_countdown_foreground_mobile.blue }};
+        --color-background: {{ section.settings.color_countdown_background_mobile.red }}, {{ section.settings.color_countdown_background_mobile.green }}, {{ section.settings.color_countdown_background_mobile.blue }};
+      }
+      #shopify-section-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  {%- unless section.settings.layout == 'full_bleed' -%}
+    <div class="page-width{% if section.settings.layout == 'stretched_grid' %}--full{% endif %}">
+  {%- endunless -%}    
+  {%- capture direction -%}{%- render 'direction' -%}{%- endcapture -%}
+  <div id="Banner-{{ section.id }}" class="banner por flex banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }} banner--{{ section.settings.image_height_mobile }}{% if section.settings.show_text_below_image %} banner--mobile-bottom{% endif %} banner--desktop-transparent">
+    {%- if section.settings.image != blank -%}
+      <parallax-element class="db banner__media{% unless section.settings.layout == 'full_bleed' %} banner__media--radius{% endunless %} overflow-hidden" data-speed="0.5" style="--speed: 0.5;"{% unless section.settings.enable_parallax_scrolling_effect and section.settings.image != blank %} data-turn-off="true"{% endunless %}>
+        <div class="parallax-ele w100 h100">  
+          <appear-animate-single class="parallax-inner w100 h100 db media media--background">  
+            {%-liquid
+              assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+              assign sizes = "100vw"
+              assign preload = false
+              if section.settings.image_mobile != blank
+                assign image_class = 'small-hide'
+              elsif need_preload
+                assign preload = true
+              endif
+            -%}
+            {%- unless preload -%}
+              {{ section.settings.image | image_url: width: 1500 | image_tag:
+                loading: 'lazy',
+                width: section.settings.image.width,
+                height: image_height,
+                class: image_class,
+                sizes: sizes,
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+            {%- else -%}
+              {{ section.settings.image | image_url: width: 1500 | image_tag:
+                preload: true,
+                fetchpriority: 'high',
+                width: section.settings.image.width,
+                height: image_height,
+                class: image_class,
+                sizes: sizes,
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+            {%- endunless -%}  
+            {%- if section.settings.image_mobile != blank -%}
+              {%-liquid
+                assign image_height = section.settings.image_mobile.width | divided_by: section.settings.image_mobile.aspect_ratio
+                assign sizes = "100vw"
+                assign image_class = 'medium-hide large-up-hide'
+              -%}
+              {%- unless need_preload -%}
+                {{ section.settings.image_mobile | image_url: width: 750 | image_tag:
+                  loading: 'lazy',
+                  width: section.settings.image_mobile.width,
+                  height: image_height,
+                  class: image_class,
+                  sizes: sizes,
+                  widths: '375, 550, 750, 1100'
+                }}
+              {%- else -%}
+                {{ section.settings.image_mobile | image_url: width: 750 | image_tag:
+                  preload: true,
+                  fetchpriority: 'high',
+                  width: section.settings.image_mobile.width,
+                  height: image_height,
+                  class: image_class,
+                  sizes: sizes,
+                  widths: '375, 550, 750, 1100'
+                }}
+              {%- endunless -%}  
+            {%- endif -%}  
+          </appear-animate-single>
+        </div>
+      </parallax-element>
+    {%- else -%}
+      <parallax-element class="banner__media{% unless section.settings.layout == 'full_bleed' %} banner__media--radius{% endunless %} overflow-hidden" data-speed="0.5" style="--speed: 0.5;"{% unless section.settings.enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
+        <div class="parallax-ele w100 h100">  
+          <div class="parallax-inner w100 h100 db media placeholder media--background">
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        </div>
+      </parallax-element>
+    {%- endif -%}
+    <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if section.settings.keep_ltr and direction == 'rtl' %} direction-ltr{% endif %}">
+      <div class="banner__box por banner__box--{{ section.id }}{% unless section.settings.show_text_below_image %} background-transparent{% elsif section.settings.layout != 'full_bleed' %} banner__box--radius{% endunless %} center">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="banner__heading banner__heading--{{ section.id }} color-foreground font-heading-extra-bold lh1 {% unless block.settings.size == 'h0' %}{{ block.settings.size }}{% else %}banner__heading--large-size{% endunless %}{% if section.settings.gradient_heading_desktop != blank %} banner__heading--gradient-desktop{% endif %}{% if section.settings.gradient_heading_mobile != blank %} banner__heading--gradient-mobile{% endif %}" {{ block.shopify_attributes }}>
+                <span class="lh1">{{ block.settings.heading | escape }}</span>
+              </h2>
+            {%- when 'text' or 'multiline_text' -%}
+              <div class="banner__text banner__text--{{ section.id }} {{ block.settings.text_style }} color-foreground rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
               </div>
-            {%- endif -%} 
-          {%- when 'badge' -%}
-            <span class="banner__badge flex justify-center font-body-bold uppercase badge--{{ section.id }}">{{ block.settings.title }}</span>
-        {%- endcase -%}
-      {%- endfor -%}
+            {%- when 'buttons' -%}
+              <div class="banner__buttons{% unless forloop.first %} element-small-margin-top{% endunless %}{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} align-center" {{ block.shopify_attributes }}>
+                {%- if block.settings.button_label_1 != blank -%}
+                  <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button-1--{{ section.id }}{% if block.settings.button_style_1 != 'link' %} button button--{{ block.settings.button_style_1 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                    <span>{{ block.settings.button_label_1 | escape }}</span>
+                    {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_label_2 != blank -%}
+                  <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button button-2--{{ section.id }}{% if block.settings.button_style_2 != 'link' %} button button--{{ block.settings.button_style_2 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                    <span>{{ block.settings.button_label_2 | escape }}</span>
+                    {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- when 'countdown' -%}
+              {%- if block.settings.date != blank -%}
+                <count-down data-endtime="{{ block.settings.date }}" data-timezone="{{ 'now' | date: '%z' }}" data-expired-msg="{{ block.settings.expiration_message | escape }}" class="countdown flex color-foreground justify-{{ section.settings.mobile_content_alignment }} countdown--{{ section.id }}" {{ block.shopify_attributes }}>
+                </count-down>
+              {%- elsif request.design_mode -%} 
+                <div class="countdown flex color-foreground justify-{{ section.settings.mobile_content_alignment }} countdown--{{ section.id }}" {{ block.shopify_attributes }}>
+                  {%- render 'countdown-tpl', use_design_mode: true -%}
+                </div>
+              {%- endif -%} 
+            {%- when 'badge' -%}
+              <span class="banner__badge flex justify-center font-body-bold uppercase badge--{{ section.id }}">{{ block.settings.title }}</span>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
-</div>
-{%- unless section.settings.layout == 'full_bleed' -%}
-</div>
+  {%- unless section.settings.layout == 'full_bleed' -%}
+  </div>
+  {%- endunless -%}
 {%- endunless -%}
-
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
@@ -369,46 +416,43 @@
       "label": "t:sections.image-banner.settings.desktop_content_position.label"
     },
     {
-      "type": "select",
+      "type": "text_alignment",
       "id": "desktop_content_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
-        }
-      ],
       "default": "center",
       "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "keep_ltr",
+      "label": "t:sections.all.keep_ltr_content_direction.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty_image",
+      "label": "t:sections.all.hide_when_empty_image.label",
+      "info": "t:sections.all.hide_when_empty_image.info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "preload",
+      "label": "t:sections.image-banner.settings.preload.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax_scrolling_effect",
+      "label": "t:sections.all.enable_parallax_scrolling_effect.label",
+      "default": false
     },
     {
       "type": "header",
       "content": "t:sections.image-banner.settings.header.content"
     },
     {
-      "type": "select",
+      "type": "text_alignment",
       "id": "mobile_content_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__3.label"
-        }
-      ],
       "default": "center",
       "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
     },
@@ -597,6 +641,30 @@
           "id": "heading",
           "default": "Image banner",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "t:sections.image-banner.blocks.heading.settings.size.label",
+          "options": [
+            {
+              "value": "h3",
+              "label": "t:sections.image-banner.blocks.heading.settings.size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.image-banner.blocks.heading.settings.size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.image-banner.blocks.heading.settings.size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.image-banner.blocks.heading.settings.size.options__4.label"
+            }
+          ],
+          "default": "h0"
         }
       ]
     },
@@ -609,6 +677,39 @@
           "type": "inline_richtext",
           "id": "text",
           "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "multiline_text",
+      "name": "t:sections.image-banner.blocks.multiline_text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
         },
         {

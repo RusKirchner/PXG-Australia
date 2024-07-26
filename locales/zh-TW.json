@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "分享至 Facebook",
         "share_on_twitter": "在 Twitter 上發佈 Twitter 貼文",
-        "share_on_pinterest": "在 Pinterest 上發佈 Pin 貼文"
+        "share_on_pinterest": "在 Pinterest 上發佈 Pin 貼文",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "繼續購物",
@@ -33,10 +35,21 @@
       "label": "分頁",
       "page": "第 {{ number }} 頁",
       "next": "下一頁",
-      "previous": "上一頁"
+      "previous": "上一頁",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "搜尋"
+      "search": "搜尋",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "檢視我的購物車 ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "投影片右側",
       "previous_slide": "投影片左側",
       "name": "投影播放器"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "評論總次數",
     "star_reviews_info": "{{ rating_value }} 顆星 (最高 {{ rating_max }} 顆星)",
     "collapsible_content_title": "可摺疊的內容",
-    "complementary_products": "配套商品"
+    "complementary_products": "配套商品",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -95,7 +138,12 @@
       "back_to_blog": "返回網誌",
       "share": "分享此文章",
       "success": "您已成功留言！感謝您！",
-      "success_moderated": "您已成功留言。由於我們的網誌有人管理，因此過一段時間後才會進行發佈。"
+      "success_moderated": "您已成功留言。由於我們的網誌有人管理，因此過一段時間後才會進行發佈。",
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -151,7 +199,20 @@
       "include_taxes": "內含稅金。",
       "shipping_policy_html": "結帳時計算<a href=\"{{ link }}\">運費</a>。",
       "choose_options": "選擇選項",
-      "choose_product_options": "選擇 {{ product_name }} 的選項"
+      "choose_product_options": "選擇 {{ product_name }} 的選項",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "quick_view": "Quick view a product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "媒體庫"
@@ -185,7 +246,10 @@
       "clear_filter": "移除篩選條件",
       "filter_selected_accessibility": "{{ type }} (已選取 {{ count }} 個篩選條件)",
       "show_more": "顯示更多內容",
-      "show_less": "顯示較少內容"
+      "show_less": "顯示較少內容",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -202,7 +266,13 @@
       "results_with_count_and_term": {
         "one": "找到「{{ terms }}」，共 {{ count }} 筆",
         "other": "找到「{{ terms }}」，共 {{ count }} 筆"
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "購物車"
@@ -217,11 +287,27 @@
         "post_success": "感謝您聯絡我們。我們會盡快回覆您。",
         "error_heading": "請調整以下內容：",
         "title": "聯絡表單"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "找不到頁面",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -231,7 +317,11 @@
       "cart_count": {
         "one": "{{ count }} 件商品",
         "other": "{{ count }} 件商品"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "您的購物車",
@@ -259,7 +349,13 @@
       "login": {
         "title": "是否有帳號？",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登入</a>以加速結帳。"
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "付款方式"
@@ -271,7 +367,8 @@
     },
     "featured_collection": {
       "view_all": "檢視全部",
-      "view_all_label": "檢視 {{ collection_name }} 商品系列的全部產品"
+      "view_all_label": "檢視 {{ collection_name }} 商品系列的全部產品",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "檢視全部"
@@ -298,7 +395,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -311,6 +409,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -324,7 +426,8 @@
       "title": "帳號",
       "details": "帳號詳細資訊",
       "view_addresses": "查看地址",
-      "return": "返回帳號詳細資訊"
+      "return": "返回帳號詳細資訊",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "帳號",
     "activate_account": {
@@ -426,7 +529,8 @@
       "tracking_number": "追蹤編號",
       "subtotal": "小計",
       "total_duties": "關稅"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -441,6 +545,21 @@
       "expired": "已到期",
       "copy_code_success": "代碼已成功複製",
       "print_gift_card": "列印"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

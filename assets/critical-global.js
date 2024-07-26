@@ -41,7 +41,7 @@ function trapFocus(container, elementToFocus = container) {
       event.target !== last &&
       event.target !== first
     )
-      return;
+    return;
 
     document.addEventListener('keydown', trapFocusHandlers.keydown);
   };
@@ -107,17 +107,19 @@ function focusVisiblePolyfill() {
   }, true);
 }
 
-function pauseAllMedia(wrapper = document) {
+function pauseAllMedia(wrapper = document, includeProductModel = true) {
   wrapper.querySelectorAll('.js-youtube').forEach((video) => {
     video.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
   });
   wrapper.querySelectorAll('.js-vimeo').forEach((video) => {
     video.contentWindow.postMessage('{"method":"pause"}', '*');
   });
-  wrapper.querySelectorAll('video').forEach((video) => video.pause());
-  wrapper.querySelectorAll('product-model').forEach((model) => {
-    if (model.modelViewerUI) model.modelViewerUI.pause();
-  });
+  wrapper.querySelectorAll('video:not(.video--background)').forEach((video) => video.pause());
+  if(includeProductModel) {
+    wrapper.querySelectorAll('product-model').forEach((model) => {
+      if (model.modelViewerUI) model.modelViewerUI.pause();
+    });
+  }
 }
 
 function updateProductMediaStatus(wrapper) {
@@ -467,7 +469,7 @@ class ModalDialog extends HTMLElement {
       removeTrapFocus(this.openedBy);
       window.pauseAllMedia();
       this.classList.remove('closing');
-    }, 1000);
+    }, 600);
   }
 }
 customElements.define('modal-dialog', ModalDialog);
@@ -546,12 +548,8 @@ class SliderComponent extends HTMLElement {
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     const slidersPerPageInFloat = (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset;
-    this.slidesPerPage = Math.floor(slidersPerPageInFloat);
-    this.itemGap = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetWidth;
-    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
-    if(this.classList.contains('slider-component-full-width') || (slidersPerPageInFloat - this.slidesPerPage > this.itemGap)) {
-      this.totalPages += 1;
-    }
+    this.slidesPerPage = Math.ceil(slidersPerPageInFloat);
+    this.totalPages = Math.ceil(this.sliderItemsToShow.length / this.slidesPerPage);
     
     if (this.sliderControlButtons.length) {
       this.sliderControlButtons.forEach((link, indexLink) => {
@@ -630,7 +628,11 @@ class SliderComponent extends HTMLElement {
 
   linkToSlide(event) {
     event.preventDefault();
-    const slideScrollPosition = this.slider.scrollLeft + this.sliderFirstItemNode.clientWidth * (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+    this.goToSlideByTarget(event.currentTarget);
+  }
+
+  goToSlideByTarget(target) {
+    const slideScrollPosition = this.slider.scrollLeft + this.sliderItemOffset * (this.sliderControlLinksArray.indexOf(target) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition
     });
@@ -654,6 +656,7 @@ class SliderComponent extends HTMLElement {
   }
 
   togglePlayButtonState() {
+    if(!this.sliderAutoplayButton) return;
     if (!this.autoplayButtonIsSetToPlay) {
       this.sliderAutoplayButton.classList.add(this.autoPlayPausedClass);
       this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.playSlideshow);
@@ -664,7 +667,7 @@ class SliderComponent extends HTMLElement {
   }
 
   autoRotateSlides() {
-    const slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slider__slide').clientWidth;
+    const slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
     this.slider.scrollTo({
       left: slideScrollPosition
     });
@@ -689,12 +692,12 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange(event) {
+    this.updateVariantStatuses();
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
-    this.updateVariantStatuses();
     
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -755,10 +758,14 @@ class VariantSelects extends HTMLElement {
 
   updateVariantStatuses() {
     const selectedInputs = [...this.querySelectorAll('input[type="radio"]:checked, option:checked')];
+    let selectedOptionValues = [];
+    selectedInputs.forEach(selectedValueTag => selectedOptionValues.push(selectedValueTag.value));
     const inputWrappers = [...this.querySelectorAll('.product-form__input')];
     inputWrappers.forEach((option, index) => {
       const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
-      const availableOptionInputsValue = this.variantData
+      let availableOptionInputsValue;
+      if(!this.dataset.hideUnavailableOptions) {
+        availableOptionInputsValue = this.getVariantData()
         .filter((variant) => {
           let result = true;
           selectedInputs.forEach((selectedValueTag, indexOption) => {
@@ -770,18 +777,69 @@ class VariantSelects extends HTMLElement {
           return result;
         })
         .map((variantOption) => variantOption[`option${index + 1}`]);
+      } else {
+        if(index > 0) {
+          availableOptionInputsValue = this.getVariantData()
+          .filter((variant) => {
+            let countCorrect = 0;
+            for (let i = 0; i < index; i++) {
+              if(selectedOptionValues[i] == variant.options[i]) {
+                countCorrect++;
+              }
+            }
+            return countCorrect == index;
+          })
+          .map((variantOption) => variantOption[`option${index + 1}`]);
+          if(!availableOptionInputsValue.includes(selectedOptionValues[index])) {
+            selectedOptionValues[index] = availableOptionInputsValue[0];
+            if(selectedInputs[index].tagName.toLocaleLowerCase() == 'input') {
+              selectedInputs[index].checked = false;
+              selectedInputs[index].closest('.product-form__input__radio-list').querySelectorAll('input[type="radio"]').forEach(input => {
+                if(input.value == availableOptionInputsValue[0]) {
+                  input.checked = true;
+                  return;
+                }
+              });
+            } else {
+              selectedInputs[index].removeAttribute('selected');
+              selectedInputs[index].parentElement.querySelectorAll('option').forEach(option => {
+                if(option.value == availableOptionInputsValue[0]) {
+                  option.selected = 'selected';
+                  return;
+                }
+              });
+            }
+          }
+        } else {
+          availableOptionInputsValue = this.getVariantData().map((variantOption) => variantOption[`option${index + 1}`]);
+        }
+      }
       this.setInputAvailability(optionInputs, availableOptionInputsValue);
     });
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach((input) => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.innerText = input.getAttribute('value');
-      } else {
-        input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
-      }
-    });
+    if(this.dataset.hideUnavailableOptions) {
+      listOfOptions.forEach((input) => {
+        if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+          if(this.dataset.hideUnavailableOptions && input.parentElement.classList.contains('dynamic-option')) {
+            input.classList.remove('hidden');
+          }
+        } else {
+          if(this.dataset.hideUnavailableOptions && input.parentElement.classList.contains('dynamic-option')) {
+            input.classList.add('hidden');
+          }
+        }
+      });
+    } else {
+      listOfOptions.forEach((input) => {
+        if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+          input.innerText = input.getAttribute('value');
+        } else {
+          input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
+        }
+      });
+    }
   }
 
   updatePickupAvailability() {
@@ -830,6 +888,16 @@ class VariantSelects extends HTMLElement {
             invDesc.innerHTML = inventorySource.innerHTML;
           })
         }
+
+        // Update sku
+
+        const skuDestination = document.querySelectorAll(`.sku-${this.dataset.section}`);
+        const skuSource = html.querySelector(`.sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        if (skuSource && skuDestination) {
+          skuDestination.forEach((skuDesc, index) => {
+            skuDesc.innerHTML = skuSource.innerHTML;
+          })
+        }
       });
   }
 
@@ -869,13 +937,13 @@ class VariantSelects extends HTMLElement {
     return this.variantData;
   }
 
-  getSoldoutVariants() {
-    if(this.soldoutVariants == undefined) {
-      this.soldoutVariants = this.getVariantData().filter(variant => {
-        return !variant.available;
+  getInstockVariants() {
+    if(this.instockVariants == undefined) {
+      this.instockVariants = this.getVariantData().filter(variant => {
+        return variant.available;
       });
     }
-    return this.soldoutVariants;
+    return this.instockVariants;
   }
 }
 
@@ -909,13 +977,27 @@ class VariantRadios extends VariantSelects {
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach((input) => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.classList.remove('disabled');
-      } else {
-        input.classList.add('disabled');
-      }
-    });
+    if(this.dataset.hideUnavailableOptions) {
+      listOfOptions.forEach((input) => {
+        if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+          if(this.dataset.hideUnavailableOptions && input.parentElement.classList.contains('dynamic-option')) {
+            input.parentElement.classList.remove('hidden');
+          }
+        } else {
+          if(this.dataset.hideUnavailableOptions && input.parentElement.classList.contains('dynamic-option')) {
+            input.parentElement.classList.add('hidden');
+          }
+        }
+      });
+    } else {
+      listOfOptions.forEach((input) => {
+        if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+          input.classList.remove('disabled');
+        } else {
+          input.classList.add('disabled');
+        }
+      });
+    }
   }
 
   updateOptionLabel(event) {
@@ -925,25 +1007,26 @@ class VariantRadios extends VariantSelects {
   }
 
   updateSoldoutValues() {
-    const soldoutVariants = this.getSoldoutVariants();
+    const instocktVariants = this.getInstockVariants();
     const currentSelectedValues = this.querySelectorAll('input[type="radio"]:checked');
-    if(soldoutVariants.length > 0) {
+    if(instocktVariants.length > 0) {
       this.querySelectorAll(this.optionSelector).forEach((option, index) => {
-        const soldoutVariantsForOption = soldoutVariants.filter(variant => {
+        const instocktVariantsForOption = instocktVariants.filter(variant => {
           let result = true;
           currentSelectedValues.forEach((selectedValueTag, indexOption) => {
-            if(indexOption != index && selectedValueTag.value != variant.options[indexOption]) {
+            if(indexOption < index && selectedValueTag.value != variant.options[indexOption]) {
               result = false;
               return result;
             }
           });
           return result;
         });
-        const soldoutValues = soldoutVariantsForOption.map(variant => variant.options[index]);
+        const instockValues = instocktVariantsForOption.map(variant => variant.options[index]);
         option.querySelectorAll(this.optionValuesSelector).forEach(valueTag => {
           valueTag.classList.remove(this.soldOutClass);
-          const value = valueTag.parentElement.querySelector(`#${valueTag.htmlFor}`).value;
-          if(soldoutValues.includes(value)) {
+          const inputValue = valueTag.parentElement.querySelector(`#${valueTag.htmlFor}`);
+          const value = inputValue.value;
+          if(!instockValues.includes(value) && (this.dataset.hideUnavailableOptions || !inputValue.classList.contains('disabled'))) {
             valueTag.classList.add(this.soldOutClass);
           }
         });
@@ -983,22 +1066,37 @@ class DeferredMedia extends HTMLElement {
     }
   }
 
-  loadContent(focus = true) {
+  loadContent(focus = true, play = false) {
     if (!this.deferredElement) {
-      const content = document.createElement('div');
-      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+      if(!this.hasAttribute('loaded')) {
+        const content = document.createElement('div');
+        content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
 
-      this.setAttribute('loaded', true);
-      this.deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
+        this.setAttribute('loaded', true);
+        this.deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
+      } else {
+        this.deferredElement = this.querySelector('video, model-viewer, iframe');
+      }
     }
     if(this.deferredElement) {
       if (focus) this.deferredElement.focus();
-      if (this.deferredElement.nodeName == 'VIDEO' && this.deferredElement.getAttribute('autoplay')) {
+      if (this.deferredElement.getAttribute('autoplay') || this.dataset.autoplay || play) {
         // force autoplay for safari
-        this.deferredElement.play();
-        this.isPlaying = true;
+        this.play();
       }
     }
+  }
+
+  play() {
+    if(this.isPlaying) return;
+    if(this.deferredElement.nodeName == 'VIDEO') {
+      this.deferredElement.play();
+    } else if(this.deferredElement.classList.contains('js-youtube')) {
+      this.deferredElement.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    } else if(this.deferredElement.classList.contains('js-vimeo')) {
+      this.deferredElement.contentWindow.postMessage('{"method":"play"}', '*');
+    }
+    this.isPlaying = true;
   }
 
   pause() {

@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Tu contraseña",
       "login_form_error": "Contraseña incorrecta",
       "login_form_submit": "Ingresar",
-      "admin_link_html": "¿Eres el propietario de la tienda? <a href=\"\/admin\" class=\"link underlined-link\">Inicia sesión aquí<\/a>",
+      "admin_link_html": "¿Eres el propietario de la tienda? <a href=\"/admin\" class=\"link underlined-link\">Inicia sesión aquí</a>",
       "powered_by_shopify_html": "Esta tienda contará con tecnología Shopify {{ shopify }}"
     },
     "social": {
@@ -26,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Seguir comprando",
@@ -35,7 +36,8 @@
       "page": "Página {{ number }}",
       "next": "Página siguiente",
       "previous": "Pagina anterior",
-      "load_more": "Carga más"
+      "load_more": "Carga más",
+      "load_previous_items": "Cargar elementos anteriores"
     },
     "search": {
       "search": "Búsqueda",
@@ -70,7 +72,10 @@
       "errors_heading": "errores",
       "carriers": "Transportistas disponibles",
       "button": "Calcular",
-      "do_not_ship": "No enviamos a este destino."
+      "do_not_ship": "No enviamos a este destino.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
     },
     "countdown": {
       "days": "Días",
@@ -85,6 +90,10 @@
       "recently_viewed_empty": "No hay productos vistos recientemente.",
       "recently_viewed_open": "Abrir el cuadro visto recientemente",
       "back_to_top": "Volver arriba"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
     }
   },
   "newsletter": {
@@ -131,7 +140,7 @@
       "share": "Compartir este artículo",
       "success": "Tu comentario se publicó correctamente. ¡Gracias!",
       "success_moderated": "Tu comentario se publicó correctamente. Lo publicaremos en breve, cuando se modere nuestro blog.",
-      "author_html": "Publicado por <strong>{{ author }}<\/strong>",
+      "author_html": "Publicado por <strong>{{ author }}</strong>",
       "previous": "Anterior",
       "next": "próximo",
       "tags_all": "Todo",
@@ -173,8 +182,8 @@
         "view_store_info": "Ver información de la tienda",
         "check_other_stores": "Verificar disponibilidad en otras tiendas",
         "pick_up_available": "Retiro disponible",
-        "pick_up_available_at_html": "Retiro disponible en <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Retiro disponible en <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <span class=\"color-foreground\">{{ location_name }}</span>",
         "unavailable": "No se pudo cargar la disponibilidad de retiro",
         "refresh": "Actualizar"
       },
@@ -190,7 +199,7 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "Impuesto incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago.",
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pago.",
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}",
       "quick_view": "Vista rápida de un producto",
@@ -204,7 +213,7 @@
         "one": "{{ count }} revisión",
         "other": "{{ count }} reseñas"
       },
-      "by_vendor_html": "<span>Por<\/span> {{ vendor }}"
+      "by_vendor_html": "<span>Por</span> {{ vendor }}"
     },
     "modal": {
       "label": "Galería multimedia"
@@ -243,7 +252,8 @@
       "show_more": "Mostrar más",
       "show_less": "Mostrar menos",
       "show_filter": "Mostrar filtro",
-      "hide_filter": "Ocultar filtro"
+      "hide_filter": "Ocultar filtro",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -331,9 +341,9 @@
       "empty": "Tu carrito esta vacío",
       "cart_error": "Hubo un error al actualizar tu carrito de compra. Inténtalo de nuevo.",
       "cart_quantity_error_html": "Solo puedes agregar {{ quantity }} de este artículo a tu carrito.",
-      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago",
+      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pago",
       "taxes_included_but_shipping_at_checkout": "Impuesto incluido y los gastos de envío se calculan en la pantalla de pago",
-      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago.",
+      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pago.",
       "taxes_and_shipping_at_checkout": "Los impuestos y gastos de envío se calculan en la pantalla de pago",
       "headings": {
         "product": "Producto",
@@ -345,7 +355,7 @@
       "update": "Actualizar",
       "login": {
         "title": "¿Tienes una cuenta?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicia sesión<\/a> para finalizar tus compras con mayor rapidez."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicia sesión</a> para finalizar tus compras con mayor rapidez."
       },
       "note_drawer": "Nota",
       "apply": "Aplicar",
@@ -373,7 +383,7 @@
     "collection_template": {
       "title": "Colección",
       "empty": "No se encontró ningún producto",
-      "use_fewer_filters_html": "Usa menos filtros o <a class=\"{{ class }}\" href=\"{{ link }}\">elimínalos todos<\/a>"
+      "use_fewer_filters_html": "Usa menos filtros o <a class=\"{{ class }}\" href=\"{{ link }}\">elimínalos todos</a>"
     },
     "video": {
       "load_video": "Cargar video: {{ description }}"
@@ -396,7 +406,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Vista previa de muestras de color",
-      "preview_description": "Esta vista previa solo está visible en la página del Editor de temas para ayudarlo a agregar\/editar\/eliminar códigos de color fácilmente. En el escaparate, esta vista previa no se mostrará, solo se ejecutarán los códigos de color."
+      "preview_description": "Esta vista previa solo está visible en la página del Editor de temas para ayudarlo a agregar/editar/eliminar códigos de color fácilmente. En el escaparate, esta vista previa no se mostrará, solo se ejecutarán los códigos de color.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Colección con icono",
@@ -412,10 +423,10 @@
     }
   },
   "localization": {
-    "country_label": "País\/región",
+    "country_label": "País/región",
     "language_label": "Idioma",
     "update_language": "Actualizar idioma",
-    "update_country": "Actualizar país\/región"
+    "update_country": "Actualizar país/región"
   },
   "customer": {
     "account": {
@@ -423,7 +434,7 @@
       "details": "Detalles de la cuenta",
       "view_addresses": "Ver direcciones",
       "return": "Regresar a detalles de la cuenta",
-      "welcome_html": "¡Bienvenido de nuevo, <strong>{{ first_name }}<\/strong> !"
+      "welcome_html": "¡Bienvenido de nuevo, <strong>{{ first_name }}</strong> !"
     },
     "account_fallback": "Cuenta",
     "activate_account": {
@@ -445,7 +456,7 @@
       "address1": "Dirección 1",
       "address2": "Dirección 2",
       "city": "Ciudad",
-      "country": "País\/región",
+      "country": "País/región",
       "province": "Provincia",
       "zip": "Código postal",
       "phone": "Teléfono",
@@ -455,7 +466,7 @@
       "cancel": "Cancelar",
       "edit": "Editar",
       "delete": "Eliminar",
-      "delete_confirm": "¿Está seguro\/a de que deseas eliminar esta dirección?"
+      "delete_confirm": "¿Está seguro/a de que deseas eliminar esta dirección?"
     },
     "log_in": "Iniciar sesión",
     "log_out": "Cerrar sesión",

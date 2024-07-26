@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "Dela på Facebook",
         "share_on_twitter": "Tweet på Twitter",
-        "share_on_pinterest": "Spara en pin på Pinterest"
+        "share_on_pinterest": "Spara en pin på Pinterest",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Fortsätt shoppa",
@@ -33,10 +35,21 @@
       "label": "Paginering",
       "page": "Sida {{ number }}",
       "next": "Nästa sida",
-      "previous": "Föregående sida"
+      "previous": "Föregående sida",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "Sök"
+      "search": "Sök",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "Visa min varukorg ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "Bild till höger",
       "previous_slide": "Bild till vänster",
       "name": "Bild"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "totalt antal recensioner",
     "star_reviews_info": "{{ rating_value }} av {{ rating_max }} stjärnor",
     "collapsible_content_title": "Innehåll som kan döljas",
-    "complementary_products": "Kompletterande produkter"
+    "complementary_products": "Kompletterande produkter",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -95,7 +138,12 @@
       "back_to_blog": "Tillbaka till blogg",
       "share": "Dela denna artikel",
       "success": "Din kommentar har lagts upp! Tack!",
-      "success_moderated": "Din kommentar har lagts upp. Vi kommer publicera den lite senare, eftersom att bloggen är modererad."
+      "success_moderated": "Din kommentar har lagts upp. Vi kommer publicera den lite senare, eftersom att bloggen är modererad.",
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -151,7 +199,20 @@
       "include_taxes": "Skatt ingår.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beräknas i kassan.",
       "choose_options": "Välj alternativ",
-      "choose_product_options": "Välj alternativ för {{ product_name }}"
+      "choose_product_options": "Välj alternativ för {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "quick_view": "Quick view a product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "Mediagalleri"
@@ -185,7 +246,10 @@
       "clear_filter": "Ta bort filter",
       "filter_selected_accessibility": "{{ type }} ({{ count }}) filter valda",
       "show_more": "Visa mer",
-      "show_less": "Visa mindre"
+      "show_less": "Visa mindre",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -202,7 +266,13 @@
       "results_with_count_and_term": {
         "one": "hittat {{ count }} resultat för \"{{ terms }}\"",
         "other": "hittat {{ count }} resultat för \"{{ terms }}\""
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "Varukorg"
@@ -217,11 +287,27 @@
         "post_success": "Tack för att du kontaktar oss. Vi återkommer till dig så snart som möjligt.",
         "error_heading": "Justera följande:",
         "title": "Kontaktformulär"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Sidan hittades inte",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -231,7 +317,11 @@
       "cart_count": {
         "one": "{{ count }} artikel",
         "other": "{{ count }} artiklar"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "Din varukorg",
@@ -259,7 +349,13 @@
       "login": {
         "title": "Har du ett konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logga in</a> för att gå till kassan snabbare."
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "Betalningsmetoder"
@@ -271,7 +367,8 @@
     },
     "featured_collection": {
       "view_all": "Visa alla",
-      "view_all_label": "Visa alla produkter i produktserien {{ collection_name }}"
+      "view_all_label": "Visa alla produkter i produktserien {{ collection_name }}",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "Visa alla"
@@ -298,7 +395,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -311,6 +409,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -324,7 +426,8 @@
       "title": "Konto",
       "details": "Kontouppgifter",
       "view_addresses": "Visa adresser",
-      "return": "Återgå till kontouppgifter"
+      "return": "Återgå till kontouppgifter",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "Konto",
     "activate_account": {
@@ -426,7 +529,8 @@
       "tracking_number": "Spårningsnummer",
       "subtotal": "Delsumma",
       "total_duties": "Tullavgifter"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -441,6 +545,21 @@
       "expired": "Har gått ut",
       "copy_code_success": "Koden kopierades",
       "print_gift_card": "Skriv ut"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

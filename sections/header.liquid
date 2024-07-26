@@ -1,14 +1,21 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {%- liquid
   assign has_localization = false
+  assign total_location = 0
   if section.settings.enable_country_selector and localization.available_countries.size > 1
     assign has_localization = true
+    assign total_location = total_location | plus: 1
   endif
   if section.settings.enable_language_selector and localization.available_languages.size > 1
     assign has_localization = true
+    assign total_location = total_location | plus: 1
   endif  
   assign menu_labels = section.blocks | where: 'type', 'menu_label'
-  render 'header-assets', has_localization: has_localization, menu_labels: menu_labels
+  assign has_transparent = false
+  if section.settings.enable_transparent_homepage and request.page_type == 'index'
+    assign has_transparent = true
+  endif
+  render 'header-assets', has_localization: has_localization, menu_labels: menu_labels, has_transparent: has_transparent, text_color_transparent: section.settings.text_color_transparent
   assign store_information_blocks = section.blocks | where: 'type', 'store_information'
   if shop.customer_accounts_enabled and section.settings.mobile_logo_position == 'center'
     assign has_left_account_icon = true
@@ -23,9 +30,9 @@
   endif
 -%}
 
-<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper por{% if section.settings.enable_sticky_header %} db{% endif %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.enable_sticky_header and section.settings.logo_position == 'top-left' %} toggle-nav{% endif %}">
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper por{% if section.settings.enable_sticky_header %} db{% endif %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.enable_sticky_header and section.settings.logo_position == 'top-left' %} toggle-nav{% endif %}"{% if section.settings.enable_sticky_header and section.settings.logo_position == 'top-left' %} toggle-nav{% endif %}"{% if has_transparent %} data-transparent="1"{% endif %} data-sticky-type="{{ section.settings.sticky_header }}">
   {%- if store_information_blocks.size > 0 or has_localization or section.settings.enable_social_links -%}
-    <div class="header-top color-{{ section.settings.top_color_scheme }} isolate">
+    <div class="header-top color-{{ section.settings.top_color_scheme }} isolate gradient">
       <div class="page-width">
         <div class="flex flex-wrap w100 justify-space-between align-center">
           {%- if store_information_blocks.size > 0 -%}
@@ -34,7 +41,7 @@
             </div>
           {%- endif -%}
           {%- if has_localization or section.settings.enable_social_links -%}
-            <div class="header__localization align-center isolate flex justify-space-between flex-grow-1">
+            <div class="header__localization align-center isolate flex {% if total_location == 2 %}justify-space-between{% else %}justify-right{% endif %} flex-grow-1">
               {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
                 <noscript>
                   {%- form 'localization', id: 'HeaderCountryFormNoScript', class: 'localization-form' -%}
@@ -191,8 +198,8 @@
                             <li>
                               {%- if link.links != blank or blocks_str contains compare_index -%}
                                 <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                                  <summary class="menu-drawer__menu-item list-menu__item link link--text header__menu-item--top h5{% if link.child_active or link.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %} w100">
-                                    {{ link.title | escape }}
+                                  <summary class="menu-drawer__menu-item list-menu__item link link--text header__menu-item--top h6{% if link.child_active or link.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %} w100">
+                                    {{ link.title }}
                                     {%- liquid
                                       render 'icon-caret'
                                       if badges_str contains compare_index
@@ -232,13 +239,13 @@
                                     <div class="menu-drawer__inner-submenu menu-drawer__background">
                                       <button class="menu-drawer__close-button link link--text" aria-expanded="true">
                                         {% render 'icon-arrow' %}
-                                        {{ link.title | escape }}
+                                        {{ link.title }}
                                       </button>
                                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                         {%- if link.url and section.settings.show_go_to_link -%}
                                           <li>
                                             <a href="{{ link.url }}" class="menu-drawer__menu-item link link--text list-menu__item{% if link.current %} menu-drawer__menu-item--active{% endif %} w100"{% if link.current %} aria-current="page"{% endif %}>
-                                              {{ 'sections.header.go_to_link' | t: title: link.title | escape }}
+                                              {{ 'sections.header.go_to_link' | t: title: link.title }}
                                             </a>
                                           </li>
                                         {%- endif -%}  
@@ -249,32 +256,32 @@
                                           <li>
                                             {%- if childlink.links == blank -%}
                                               <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item{% if childlink.child_active or childlink.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.last %} last{% endif %} w100"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                {{ childlink.title | escape }}
+                                                {{ childlink.title }}
                                               </a>
                                             {%- else -%}
                                               <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
                                                 <summary class="menu-drawer__menu-item link link--text list-menu__item{% if childlink.child_active or childlink.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.last %} last{% endif %} w100">
-                                                  {{ childlink.title | escape }}
+                                                  {{ childlink.title }}
                                                   {% render 'icon-caret' %}
                                                 </summary>
                                                 <div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
                                                   <div class="menu-drawer__inner-submenu menu-drawer__background">
                                                     <button class="menu-drawer__close-button link link--text" aria-expanded="true">
                                                       {% render 'icon-arrow' %}
-                                                      {{ childlink.title | escape }}
+                                                      {{ childlink.title }}
                                                     </button>
                                                     <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                                       {%- if childlink.url and section.settings.show_go_to_link -%}
                                                         <li>
                                                           <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item{% if childlink.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.last %} last{% endif %} w100"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                            {{ 'sections.header.go_to_link' | t: title: childlink.title | escape }}
+                                                            {{ 'sections.header.go_to_link' | t: title: childlink.title }}
                                                           </a>
                                                         </li>
                                                       {%- endif -%}
                                                       {%- for grandchildlink in childlink.links -%}
                                                         <li>
                                                           <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.last %} last{% endif %} w100"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                            {{ grandchildlink.title | escape }}
+                                                            {{ grandchildlink.title }}
                                                           </a>
                                                         </li>
                                                       {%- endfor -%}
@@ -293,7 +300,7 @@
                                   </div>
                                 </details>
                               {%- else -%}
-                                <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text header__menu-item--top h4{% if link.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %} w100"{% if link.current %} aria-current="page"{% endif %}>
+                                <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text header__menu-item--top h6{% if link.current %} menu-drawer__menu-item--active{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %} w100{% if badges_str contains compare_index %} por{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                                   {{ link.title | escape }}
                                   {%- liquid
                                     if badges_str contains compare_index
@@ -313,7 +320,7 @@
                         {%- if supported_region_blocks.size > 0 -%}
                           <details-accordion id="header-region-mobile">
                             <details>
-                              <summary class="header__customer-support-region__button header__customer-support-region__button--mobile flex align-center por no-control-menu">
+                              <summary class="header__customer-support-region__button header__customer-support-region__button--mobile flex align-center por no-control-menu link link--text">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-support-region light">
                                   <path d="M2 10L5 10C5.55228 10 6 10.4477 6 11V16C6 16.5523 5.55228 17 5 17H3C2.44772 17 2 16.5523 2 16V10Z" stroke="currentColor" stroke-width="2"/>
                                   <path d="M22 10L19 10C18.4477 10 18 10.4477 18 11V16C18 16.5523 18.4477 17 19 17H21C21.5523 17 22 16.5523 22 16V10Z" stroke="currentColor" stroke-width="2"/>
@@ -344,7 +351,7 @@
                             </details>
                           </details-accordion>
                         {%- else -%}
-                          <a class="header__customer-support-region__button flex link link--text align-center por no-control-menu">
+                          <a class="header__customer-support-region__button flex link link--text align-center por no-control-menu" href="tel:{{ section.settings.customer_support_region_global_hotline | escape }}">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-support-region light">
                               <path d="M2 10L5 10C5.55228 10 6 10.4477 6 11V16C6 16.5523 5.55228 17 5 17H3C2.44772 17 2 16.5523 2 16V10Z" stroke="currentColor" stroke-width="2"/>
                               <path d="M22 10L19 10C18.4477 10 18 10.4477 18 11V16C18 16.5523 18.4477 17 19 17H21C21.5523 17 22 16.5523 22 16V10Z" stroke="currentColor" stroke-width="2"/>
@@ -361,6 +368,25 @@
                         {%- endif -%}
                       </div>
                     {%- endif -%}
+
+                    {%- if menu_labels.size > 0 -%}
+                      <div class="menu-drawer__menu-labels flex justify-center align-center menu-drawer__block">
+                        <ul class="menu-drawer__menu-labels__list list-unstyled flex margin0">
+                          {%- for label in menu_labels -%}
+                            <li class="menu-drawer__menu-labels__item{% unless label.settings.link != blank %} flex align-center color-foreground menu-drawer__menu-labels__item-gap{% endunless %}">
+                              {%- if label.settings.link != blank -%}
+                                <a href="{{ label.settings.link }}" class="link align-center flex menu-drawer__menu-labels__item-gap">
+                              {%- endif -%}    
+                              {%- render 'icon-picker', icon: label.settings.icon, icon_width: 16, add_classes: 'light' -%}
+                              <span class="text-small">{{ label.settings.title }}</span>
+                              {%- if label.settings.link != blank -%}
+                                </a>
+                              {%- endif -%}  
+                            </li>
+                          {%- endfor -%}  
+                        </ul>
+                      </div>
+                    {%- endif -%}  
 
                     <div class="menu-drawer__utility-links menu-drawer__block menu-drawer__background">
                       {%- render 'social-media-icons', add_classes: 'list list-social--in-drawer', has_link_bkg: true -%}
@@ -406,6 +432,11 @@
                 assign logo_alt = section.settings.logo.alt | default: shop.name | escape
                 assign logo_height = logo_width | divided_by: section.settings.logo.aspect_ratio
                 assign logo_classes = 'header__heading-logo motion-reduce'
+                if section.settings.logo_in_transparent != blank
+                  if has_transparent or request.page_type == 'collection'
+                    assign logo_classes = logo_classes | append: ' hide-in-transparent'
+                  endif
+                endif
               -%}
               
               {{ section.settings.logo | image_url: width: 500 | image_tag:
@@ -415,6 +446,22 @@
                 width: logo_width,
                 alt: logo_alt
               }}
+              {%- if section.settings.logo_in_transparent != blank -%}
+                {%- if has_transparent or request.page_type == 'collection' -%}
+                  {%-liquid
+                    assign logo_alt = section.settings.logo_in_transparent.alt | default: shop.name | escape
+                    assign logo_height = logo_width | divided_by: section.settings.logo_in_transparent.aspect_ratio
+                    assign logo_classes = 'header__heading-logo show-in-transparent'
+                  -%}
+                  {{ section.settings.logo_in_transparent | image_url: width: 500 | image_tag:
+                    class: logo_classes,
+                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                    height: logo_height,
+                    width: logo_width,
+                    alt: logo_alt
+                  }}
+                {%- endif -%}  
+              {%- endif -%}  
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
@@ -438,7 +485,7 @@
                   {%- if link.links != blank or blocks_str contains compare_index -%}
                     <header-menu>
                       <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
-                        <summary class="header__menu-item header__menu-item--top list-menu__item link h5{% if link.url != blank and link.url != '#' and link.url != '' and link.current == false %} header__menu-item--link{% endif %}" data-href="{{ link.url }}">
+                        <summary class="header__menu-item header__menu-item--top list-menu__item link h6{% if link.url != blank and link.url != '#' and link.url != '' and link.current == false %} header__menu-item--link{% endif %}" data-href="{{ link.url }}">
                           <span class="{% if link.child_active or link.current %}header__active-menu-item underlined-link{% else %}link-effect-no-underline{% endif %}">{{ link.title | escape }}</span>
                           {%-liquid
                             render 'icon-caret', add_classes: 'light'
@@ -452,7 +499,7 @@
                       </details>
                     </header-menu>
                   {%- else -%}
-                    <a href="{{ link.url }}" class="header__menu-item header__menu-item--top header__menu-item list-menu__item link h5"{% if link.current %} aria-current="page"{% endif %}>
+                    <a href="{{ link.url }}" class="header__menu-item header__menu-item--top header__menu-item list-menu__item link h6{% if badges_str contains compare_index %} por{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                       <span class="{% if link.current %}header__active-menu-item underlined-link{% else %}link-effect-no-underline{% endif %}">{{ link.title | escape }}</span>
                       {%-liquid
                         if badges_str contains compare_index
@@ -472,9 +519,9 @@
           <div class="header__menu-labels align-self-center small-hide medium-hide">
             <ul class="list-unstyled flex margin0">
               {%- for label in menu_labels -%}
-                <li{% unless label.settings.link != blank %} class="header__menu-labels__item flex align-center"{% endunless %}>
+                <li{% unless label.settings.link != blank %} class="header__menu-labels__item flex align-center color-foreground"{% endunless %}>
                   {%- if label.settings.link != blank -%}
-                    <a href="{{ label.settings.link }}" class="full-unstyled-link flex header__menu-labels__item link align-center">
+                    <a href="{{ label.settings.link }}" class="flex header__menu-labels__item link align-center">
                   {%- endif -%}    
                   {%- render 'icon-picker', icon: label.settings.icon, icon_width: 16, add_classes: 'light' -%}
                   <span class="text-small">{{ label.settings.title }}</span>
@@ -537,68 +584,12 @@
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-{%- if settings.predictive_search_enabled -%}
-  <template id="predictive-search-placeholder-tpl">
-    <div class="predictive-search__header">
-      <div class="skeleton-box small-margin-bottom">
-        <span class="w100 db margin-top-1rem"></span>
-      </div>
-    </div>
-    <div class="predictive-search__products">
-      <ul class="list-unstyled predictive-search__item-list flex flex-column">
-        <li class="predictive-search__product predictive-search__item por">
-          <div class="skeleton-box">
-            <span class="media media--square w100 db"></span>
-          </div>
-          <div class="predictive-search__item__info">
-            <div class="skeleton-box small-margin-bottom">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-            <div class="skeleton-box">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-          </div>
-        </li>
-        <li class="predictive-search__product predictive-search__item por">
-          <div class="skeleton-box">
-            <span class="media media--square w100 db"></span>
-          </div>
-          <div class="predictive-search__item__info">
-            <div class="skeleton-box small-margin-bottom">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-            <div class="skeleton-box">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-          </div>
-        </li>
-        <li class="predictive-search__product predictive-search__item por">
-          <div class="skeleton-box">
-            <span class="media media--square w100 db"></span>
-          </div>
-          <div class="predictive-search__item__info">
-            <div class="skeleton-box small-margin-bottom">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-            <div class="skeleton-box">
-              <span class="w100 db margin-top-1rem"></span>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="small-margin-top predictive-search__notification">
-        <div class="skeleton-box small-margin-bottom">
-          <span class="w100 db margin-top-1rem margin-bottom-1rem"></span>
-        </div>
-      </div>
-    </div>
-  </template>
-{%- endif -%}  
+{%- render 'header-predictive-search-template' -%} 
 {% schema %}
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 30,
+  "max_blocks": 50,
   "settings": [
     {
       "type": "color_scheme",
@@ -684,6 +675,23 @@
       "info": "t:sections.header.settings.enable_sticky_header.info"
     },
     {
+      "type": "select",
+      "id": "sticky_header",
+      "label": "t:sections.header.settings.sticky_header.label",
+      "info": "t:sections.header.settings.sticky_header.info",
+      "options": [
+        {
+          "value": "on_scroll_up",
+          "label": "t:sections.header.settings.sticky_header.options__1.label"
+        },
+        {
+          "value": "always",
+          "label": "t:sections.header.settings.sticky_header.options__2.label"
+        }
+      ],
+      "default": "on_scroll_up"
+    },
+    {
       "type": "checkbox",
       "id": "enable_social_links",
       "default": true,
@@ -751,6 +759,28 @@
       "id": "customer_support_region_global_hotline",
       "label": "t:sections.header.settings.customer_support_region_global_hotline.label",
       "default": "Your hotline"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.transparent_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_homepage",
+      "label": "t:sections.header.settings.enable_transparent_homepage.label",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_in_transparent",
+      "label": "t:sections.header.settings.logo_in_transparent.label",
+      "info": "t:sections.header.settings.logo_in_transparent.info"
+    },
+    {
+      "type": "color",
+      "id": "text_color_transparent",
+      "label": "t:sections.header.settings.text_color_transparent.label",
+      "default": "#fff"
     }
   ],
   "blocks": [
@@ -842,23 +872,9 @@
           "default": "solid"
         },
         {
-          "type": "select",
+          "type": "text_alignment",
           "id": "text_align",
           "label": "t:settings_schema.global.settings.text_alignment.label",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
-            }
-          ],
           "default": "center"
         },
         {
@@ -996,6 +1012,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
         },
         {
+          "type": "url",
+          "id": "brand_link_1",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_header_2.content"
         },
@@ -1008,6 +1030,12 @@
           "type": "image_picker",
           "id": "brand_image_2",
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
+        },
+        {
+          "type": "url",
+          "id": "brand_link_2",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
         },
         {
           "type": "header",
@@ -1024,6 +1052,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
         },
         {
+          "type": "url",
+          "id": "brand_link_3",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_header_4.content"
         },
@@ -1036,6 +1070,12 @@
           "type": "image_picker",
           "id": "brand_image_4",
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
+        },
+        {
+          "type": "url",
+          "id": "brand_link_4",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
         },
         {
           "type": "header",
@@ -1052,6 +1092,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
         },
         {
+          "type": "url",
+          "id": "brand_link_5",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_header_6.content"
         },
@@ -1064,6 +1110,12 @@
           "type": "image_picker",
           "id": "brand_image_6",
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
+        },
+        {
+          "type": "url",
+          "id": "brand_link_6",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
         },
         {
           "type": "header",
@@ -1080,6 +1132,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
         },
         {
+          "type": "url",
+          "id": "brand_link_7",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_header_8.content"
         },
@@ -1092,6 +1150,12 @@
           "type": "image_picker",
           "id": "brand_image_8",
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
+        },
+        {
+          "type": "url",
+          "id": "brand_link_8",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
         },
         {
           "type": "header",
@@ -1108,6 +1172,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
         },
         {
+          "type": "url",
+          "id": "brand_link_9",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_header_10.content"
         },
@@ -1120,6 +1190,12 @@
           "type": "image_picker",
           "id": "brand_image_10",
           "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_image.label"
+        },
+        {
+          "type": "url",
+          "id": "brand_link_10",
+          "label": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_brand.settings.brand_link.info"
         }
       ]
     },
@@ -1191,6 +1267,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
         },
         {
+          "type": "url",
+          "id": "type_link_1",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_type.settings.type_header_2.content"
         },
@@ -1203,6 +1285,12 @@
           "type": "image_picker",
           "id": "type_image_2",
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
+        },
+        {
+          "type": "url",
+          "id": "type_link_2",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
         },
         {
           "type": "header",
@@ -1219,6 +1307,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
         },
         {
+          "type": "url",
+          "id": "type_link_3",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_type.settings.type_header_4.content"
         },
@@ -1231,6 +1325,12 @@
           "type": "image_picker",
           "id": "type_image_4",
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
+        },
+        {
+          "type": "url",
+          "id": "type_link_4",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
         },
         {
           "type": "header",
@@ -1247,6 +1347,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
         },
         {
+          "type": "url",
+          "id": "type_link_5",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_type.settings.type_header_6.content"
         },
@@ -1259,6 +1365,12 @@
           "type": "image_picker",
           "id": "type_image_6",
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
+        },
+        {
+          "type": "url",
+          "id": "type_link_6",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
         },
         {
           "type": "header",
@@ -1275,6 +1387,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
         },
         {
+          "type": "url",
+          "id": "type_link_7",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_type.settings.type_header_8.content"
         },
@@ -1287,6 +1405,12 @@
           "type": "image_picker",
           "id": "type_image_8",
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
+        },
+        {
+          "type": "url",
+          "id": "type_link_8",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
         },
         {
           "type": "header",
@@ -1303,6 +1427,12 @@
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
         },
         {
+          "type": "url",
+          "id": "type_link_9",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
+        },
+        {
           "type": "header",
           "content": "t:sections.header.blocks.mega_menu_product_type.settings.type_header_10.content"
         },
@@ -1315,6 +1445,12 @@
           "type": "image_picker",
           "id": "type_image_10",
           "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_image.label"
+        },
+        {
+          "type": "url",
+          "id": "type_link_10",
+          "label": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.label",
+          "info": "t:sections.header.blocks.mega_menu_product_type.settings.type_link.info"
         }
       ]
     },

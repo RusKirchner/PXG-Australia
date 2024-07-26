@@ -115,6 +115,7 @@ class ComparePopup extends HTMLElement
       const html = new DOMParser().parseFromString(response, 'text/html');
       if(!this.hasAssets) {
         this.assets.innerHTML = html.querySelector('.assets').innerHTML;
+        this.hasAssets = true;
       }
       this.results.innerHTML = html.querySelector('.results').innerHTML;
       BtCompareUtil.toogleEmptyWarningClass(this);
@@ -192,11 +193,11 @@ class CompareVariantRadios extends VariantRadios
   }
 
   onVariantChange(event) {
+    this.updateVariantStatuses();
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.removeErrorMessage();
-    this.updateVariantStatuses();
     this.updateSoldoutValues();
     
     if (!this.currentVariant) {

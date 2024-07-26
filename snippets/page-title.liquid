@@ -1,56 +1,58 @@
 {%-liquid
   case request.page_type
     when 'collection'
-      assign banner_image = settings.page_heading_collection_banner_image
-      if settings.page_heading_use_collection_image and collection.image
-        assign banner_image = collection.image
-      endif  
       assign image_height = settings.page_heading_collection_image_height
     when 'blog' or 'article'
-      assign banner_image = settings.page_heading_blog_banner_image
+      assign banner_image = section.settings.title_background_image | default: settings.page_heading_blog_banner_image
       assign image_height = settings.page_heading_blog_image_height
     else
       assign banner_image = settings.page_heading_other_banner_image
       assign image_height = settings.page_heading_other_image_height
   endcase
 -%}
-<div class="page-title por background-input color-{{ settings.page_heading_color_scheme }}{% if banner_image != blank %} page-title--with-image media{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %}">
+<{% if banner_image != blank %}parallax-element{% else %}div{% endif %} class="db page-title por background-input color-{{ settings.page_heading_color_scheme }} isolate{% if banner_image != blank %} page-title--with-image{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %} overflow-hidden{% if settings.enable_appear_effect and banner_image != blank %} {% endif %}" data-speed="0.5" style="--speed: 0.5;"{% unless enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
   {%- if banner_image != blank -%}
-    {%- capture sizes -%}
-      (min-width: {{ settings.page_width }}px) {{ settings.page_width | plus: 100 }}px, calc(100vw - 30px)
-    {%- endcapture -%}
-    {%- liquid
-      assign widths = ''
-      if collection.image.width >= 375
-        assign widths = widths | append: '375,'
-      endif
-      if collection.image.width >= 550
-        assign widths = widths | append: '550,'
-      endif
-      if collection.image.width >= 750
-        assign widths = widths | append: '750,'
-      endif
-      if collection.image.width >= 1100
-        assign widths = widths | append: '1100,'
-      endif
-      if collection.image.width >= 1500
-        assign widths = widths | append: '1500,'
-      endif  
-      if collection.image.width >= 1780
-        assign widths = widths | append: '1780,'
-      endif  
-      if collection.image.width >= 2000
-        assign widths = widths | append: '2000,'
-      endif  
-      if collection.image.width >= 3000
-        assign widths = widths | append: '3000,'
-      endif  
-      if collection.image.width >= 3840
-        assign widths = widths | append: '3840,'
-      endif
-      assign widths = widths | append: collection.image.width
-    -%}
-    {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: true, fetchpriority: 'high' }}
+    <appear-animate-single class="parallax-inner w100 h100 db media media--background">
+      {%- capture sizes -%}
+        (min-width: {{ settings.page_width }}px) {{ settings.page_width | plus: 100 }}px, calc(100vw - 30px)
+      {%- endcapture -%}
+      {%- liquid
+        assign widths = ''
+        if collection.image.width >= 375
+          assign widths = widths | append: '375,'
+        endif
+        if collection.image.width >= 550
+          assign widths = widths | append: '550,'
+        endif
+        if collection.image.width >= 750
+          assign widths = widths | append: '750,'
+        endif
+        if collection.image.width >= 1100
+          assign widths = widths | append: '1100,'
+        endif
+        if collection.image.width >= 1500
+          assign widths = widths | append: '1500,'
+        endif  
+        if collection.image.width >= 1780
+          assign widths = widths | append: '1780,'
+        endif  
+        if collection.image.width >= 2000
+          assign widths = widths | append: '2000,'
+        endif  
+        if collection.image.width >= 3000
+          assign widths = widths | append: '3000,'
+        endif  
+        if collection.image.width >= 3840
+          assign widths = widths | append: '3840,'
+        endif
+        assign widths = widths | append: collection.image.width
+      -%}
+      {%- if preload_background_image -%}
+        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: true, fetchpriority: 'high' }}
+      {%- else -%}
+        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: false }}  
+      {%- endif -%}
+    </appear-animate-single>
   {%- endif -%}
 
   <div class="page-title__text-wrapper">
@@ -69,17 +71,17 @@
       {%- if extra_html != blank -%}{{ extra_html }}{%- endif -%}
     </div>
   </div>
-</div>
+</{% if banner_image != blank %}parallax-element{% else %}div{% endif %}>
 {%- style -%}
 .page-title {
   --page-title-height: 5rem;
-  padding: var(--page-title-height) 0 calc(var(--page-title-height) + var(--extra-height, 0rem));
+  padding: {% unless has_transparent %}var(--page-title-height){% else %}calc(var(--page-title-height) + max(8rem, var(--header-height, 0px))){% endunless %} 0 calc(var(--page-title-height) + var(--extra-height, 0rem));
 }
 .page-title__title {
   font-weight: var(--font-heading-weight-bold);
 }
 {%- if banner_image != blank -%}
-  .page-title.media > .page-title__text-wrapper {
+  .page-title .page-title__text-wrapper {
     position: relative;
     z-index: 2;
   }
@@ -89,6 +91,7 @@
     --focal-point:{{ banner_image.presentation.focal_point }};
     {%- if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 -%}
       --color-overlay: {{ settings.page_heading_overlay_color.red }}, {{ settings.page_heading_overlay_color.green }}, {{ settings.page_heading_overlay_color.blue }};
+      --overlay-opacity: 0.3;
     {%- endif -%}  
   }
   {%- if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 -%}
@@ -101,5 +104,12 @@
       --page-title-height: {{ image_height | divided_by: 2 }}rem;
     }
   }
+  {%- if has_transparent -%}
+    @media(min-width: 990px) {
+      .page-title--with-image {
+        padding-top: calc(var(--page-title-height) + max(23rem, var(--header-height, 0px)))
+      }
+    }
+  {%- endif -%}
 {%- endif -%}
 {%- endstyle -%}

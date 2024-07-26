@@ -41,6 +41,8 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -50,6 +52,9 @@
     assign enable_compare = true
   else
     assign enable_compare = false
+  endif
+  if columns_mobile_int == 1
+    assign full_on_mobile = true
   endif
 %}
 
@@ -86,7 +91,8 @@
                     show_quick_view: section.settings.enable_quick_view,
                     section_id: section.id,
                     show_color_swatches: section.settings.show_color_swatches,
-                    color_swatches_style: section.settings.color_swatches_style
+                    color_swatches_style: section.settings.color_swatches_style,
+                    full_on_mobile: full_on_mobile
                   %}
                 </li>
               {%- endfor -%}
@@ -97,7 +103,7 @@
       {% if recommendations.performed and recommendations.products_count > 0 %}
         <div class="item-list">
           {% for recommendation in recommendations.products %}
-            <div class="item" data-product-id="{{ recommendation.id }}">
+            <div class="item h100" data-product-id="{{ recommendation.id }}">
               {% render 'card-product',
                 card_product: recommendation,
                 media_aspect_ratio: section.settings.image_ratio,
@@ -109,7 +115,8 @@
                 show_quick_view: section.settings.enable_quick_view,
                 section_id: section.id,
                 show_color_swatches: section.settings.show_color_swatches,
-                color_swatches_style: section.settings.color_swatches_style
+                color_swatches_style: section.settings.color_swatches_style,
+                full_on_mobile: full_on_mobile
               %}
             </div>
           {% endfor %}
@@ -135,7 +142,8 @@
                   show_quick_view: section.settings.enable_quick_view,
                   section_id: section.id,
                   show_color_swatches: section.settings.show_color_swatches,
-                  color_swatches_style: section.settings.color_swatches_style
+                  color_swatches_style: section.settings.color_swatches_style,
+                  full_on_mobile: full_on_mobile
                 %}
               </li>
             {%- else -%}
@@ -154,7 +162,8 @@
                     section_id: section.id,
                     show_color_swatches: section.settings.show_color_swatches,
                     color_swatches_style: section.settings.color_swatches_style,
-                    placeholder_image: placeholder_image
+                    placeholder_image: placeholder_image,
+                    full_on_mobile: full_on_mobile
                   -%}
                 </li>
               {%- endfor -%}

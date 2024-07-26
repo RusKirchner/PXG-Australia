@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if settings.predictive_search_enabled or settings.cart_type == "drawer" -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -10,7 +9,6 @@
 <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- if settings.cart_type == "drawer" and request.page_type != 'cart' -%}
   <link rel="stylesheet" href="{{ 'component-drawer.css' | asset_url }}"  media="print" onload="this.media='all'">
@@ -24,7 +22,11 @@
 {%- if has_localization -%}
   <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script> 
 {%- endif -%}
-
+{%-liquid
+  if has_transparent 
+   render 'header-assets-transparent', text_color_transparent: text_color_transparent
+  endif
+-%}
 <style>
   .header-top {
     --disclosure-direction: 0.5rem;
@@ -55,7 +57,7 @@
   }
 
   summary.list-menu__item {
-    padding-right: 2.7rem;
+    padding-inline-end: 2.7rem;
   }
 
   .list-menu__item:not(.header__menu-item--top) {
@@ -98,7 +100,7 @@
       {%- if section.settings.mobile_logo_position == 'center' -%}
         text-align: center;
       {%- else -%}
-        margin-left: 1rem;  
+        margin-inline-start: 1rem;  
       {%- endif -%}  
     }
   }
@@ -168,7 +170,7 @@
     {%- endif -%}
     {%- if section.settings.logo_position == 'middle-left-navigation-left' -%}
       .header__inline-menu {
-        margin-left: 2.8rem;
+        margin-inline-start: 2.8rem;
       }
     {%- endif -%}    
     {%- if section.settings.logo_position == 'top-left' and menu_labels.size > 0 -%}
@@ -184,7 +186,7 @@
     {%- endif -%}
     {%- if section.settings.logo_position == 'center-drawer' -%}
       .header__left-icons {
-        margin-left: -1rem;
+        margin-inline-start: -1rem;
       }
     {%- endif -%}     
   }

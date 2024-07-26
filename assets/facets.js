@@ -102,24 +102,50 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderFilters(html, event) {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
+    const facetDetailsElementsFromFetch = parsedHTML.querySelectorAll(
+      '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
+    );
+    const facetDetailsElementsFromDom = document.querySelectorAll(
+      '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
+    );
 
-    const facetDetailsElements =
-      parsedHTML.querySelectorAll('#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter');
-    const matchesIndex = (element) => {
+    // Remove facets that are no longer returned from the server
+    Array.from(facetDetailsElementsFromDom).forEach((currentElement) => {
+      if (!Array.from(facetDetailsElementsFromFetch).some(({ id }) => currentElement.id === id)) {
+        currentElement.parentElement.remove();
+      }
+    });
+
+    const matchesId = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
-      return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
-    }
-    const facetsToRender = Array.from(facetDetailsElements).filter(element => !matchesIndex(element));
-    const countsToRender = Array.from(facetDetailsElements).find(matchesIndex);
+      return jsFilter ? element.id === jsFilter.id : false;
+    };
+    const countsToRender = Array.from(facetDetailsElementsFromFetch).find(matchesId);
 
-    facetsToRender.forEach((element) => {
-      const realElement = document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`);
-      realElement.innerHTML = element.innerHTML;
+    facetDetailsElementsFromFetch.forEach((elementToRender, index) => {
+      if(event && event.target.closest('.js-filter') && event.target.closest('.js-filter').id === elementToRender.id) return;
+      const currentElement = document.getElementById(elementToRender.id);
+      if(currentElement) {
+        document.getElementById(elementToRender.id).innerHTML = elementToRender.innerHTML;
+      } else {
+        if (index > 0) {
+          const { className: previousElementClassName, id: previousElementId } = facetDetailsElementsFromFetch[index - 1];
+          // Same facet type (eg horizontal/vertical or drawer/mobile)
+          if (elementToRender.className === previousElementClassName) {
+            document.getElementById(previousElementId).parentElement.after(elementToRender.parentElement);
+            return;
+          }
+        }
+
+        if (elementToRender.parentElement) {
+          document.querySelector(`#${elementToRender.parentElement.parentElement.id} .js-filter`).parentElement.before(elementToRender.parentElement);
+        }
+      }
     });
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
-    
+
     if (countsToRender) FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));
   }
 
@@ -130,7 +156,7 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
-    })
+    });
 
     FacetFiltersForm.toggleActiveFacets(false);
   }
@@ -153,8 +179,15 @@ class FacetFiltersForm extends HTMLElement {
     const targetElementAccessibility = target.querySelector('.facets__summary');
     const sourceElementAccessibility = source.querySelector('.facets__summary');
     if (sourceElement && targetElement) {
-      target.querySelector('.facets__selected').outerHTML = source.querySelector('.facets__selected').outerHTML;
+      targetElement.outerHTML = sourceElement.outerHTML;
     }
+
+    const targetElementStr = target.querySelector('.facets__selected-str');
+    const sourceElementStr = source.querySelector('.facets__selected-str');
+    if (sourceElementStr && targetElementStr) {
+      targetElementStr.outerHTML = sourceElementStr.outerHTML;
+    }
+
     if (targetElementAccessibility && sourceElementAccessibility) {
       target.querySelector('.facets__summary').outerHTML = source.querySelector('.facets__summary').outerHTML;
     }
@@ -172,7 +205,7 @@ class FacetFiltersForm extends HTMLElement {
     ]
   }
 
-  createSearchParams(form) {
+  createSearchParams(form, ignoreSortBy = false) {
     const formData = new FormData(form);
     const gtePrice = form.querySelector('.field__input--price-gte');
     if(gtePrice && gtePrice.value == gtePrice.min) {
@@ -182,6 +215,10 @@ class FacetFiltersForm extends HTMLElement {
     const ltePrice = form.querySelector('.field__input--price-lte');
     if(ltePrice && (ltePrice.value * 1.00) == (ltePrice.max * 1.00)) {
       formData.delete(ltePrice.name);
+    }
+
+    if(ignoreSortBy) {
+      formData.delete('sort_by');
     }
     return new URLSearchParams(formData).toString();
   }
@@ -204,7 +241,16 @@ class FacetFiltersForm extends HTMLElement {
           if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetSortDrawerForm') {
             const noJsElements = document.querySelectorAll('.no-js-list');
             noJsElements.forEach((el) => el.remove());
-            forms.push(this.createSearchParams(form));
+            if(event.target.closest('form').id == 'FacetSortForm') {
+              forms.push(this.createSearchParams(form));
+            } else {
+              forms.push(this.createSearchParams(form, true));
+            }
+          } else if(event.target.closest('form').id == 'FacetSortForm') {
+            const sortMobile = form.querySelector('[name="sort_by"]');
+            if(sortMobile) {
+              sortMobile.value = event.target.value;
+            }
           }
         } else if (form.id === 'FacetFiltersFormMobile') {
           forms.push(this.createSearchParams(form));
@@ -280,11 +326,11 @@ class PriceRange extends HTMLElement {
     let rangeUsedBarWidth;
     if(rangeInput.classList.contains('range-slider__input--lower')) {
       rangeUsedBarWidth = (value * 100.00) / max;
-      rangeInput.previousElementSibling.style.setProperty('--range-used-bar-width', rangeUsedBarWidth + '%');
+      this.style.setProperty('--range-used-start-width', rangeUsedBarWidth + '%');
     } else {
       const min = Number(rangeInput.getAttribute('min'));
       rangeUsedBarWidth = ((max - value) * 100.00) / (max - min);
-      rangeInput.nextElementSibling.style.setProperty('--range-used-bar-width', rangeUsedBarWidth + '%');
+      this.style.setProperty('--range-used-end-width', rangeUsedBarWidth + '%');
     }
   }
 

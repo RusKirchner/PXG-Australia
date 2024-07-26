@@ -13,6 +13,10 @@
 	margin-top: 0.5rem;
 }
 
+.quick-add__information > .product__tax {
+	margin-top: 0;
+}
+
 .quick-add-drawer .product__slider-button {
 	position: static;
 	transform: none;

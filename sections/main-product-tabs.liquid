@@ -28,6 +28,10 @@
               if block.settings.page == blank
                 assign available_tab = false
               endif
+            when 'custom_liquid'
+              if block.settings.custom_liquid_code == blank
+                assign available_tab = false
+              endif  
             else
               if block.settings.namespace_key == blank
                 assign available_tab = false
@@ -76,10 +80,10 @@
               {%- case block.type -%}
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
-                    <div class="product__description rte quick-add-hidden">
-                      {{ product.description }}
-                    </div>
-                    {%- assign icons = section.blocks | where: "type", "description_icon" -%}
+                    {%-liquid
+                      render 'main-product-description', product: product, section: section, block: block, no_shopify_attributes: true
+                      assign icons = section.blocks | where: "type", "description_icon"
+                    -%}
                     {%- if icons.size > 0 -%}
                       <div class="element-small-margin-top">
                         <div class="grid grid--2-col">
@@ -97,10 +101,16 @@
                   {%- endif -%}
                 {%- when 'custom_text' -%}
                   {%- if block.settings.custom_text != blank -%}  
-                    <div class="rich-text__text rte" {{ block.shopify_attributes }}>
+                    <div class="rich-text__text rte">
                       {{ block.settings.custom_text }}
                     </div>
                   {%- endif -%}
+                {%- when 'custom_liquid' -%}
+                  {%-liquid
+                    if block.settings.custom_liquid_code != blank
+                      echo block.settings.custom_liquid_code
+                    endif
+                  -%}
                 {%- when 'page_content' -%}
                   {%- if block.settings.page != blank -%}
                     {{ block.settings.page.content }}  
@@ -130,10 +140,10 @@
       overflow: auto;
     }
     .tabs__title-list--{{ section.id }} li:first-child {
-      margin-left: 0.5rem;
+      margin-inline-start: 0.5rem;
     }
     .tabs__title-list--{{ section.id }} li:last-child {
-      margin-right: 0.5rem;
+      margin-inline-end: 0.5rem;
     }
     .tabs__title-list--{{ section.id }} .tabs__item-label {
       padding: 2rem 0;
@@ -162,6 +172,7 @@
     }
     {{ active_tab_content_selector | split: ',' | compact | join: ',' }} {
       display: block;
+      height: auto;
     }
   {%- endif -%}
 {%- endstyle -%}
@@ -229,6 +240,24 @@
           "id": "title",
           "default": "Description",
           "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
+        },
+        {
+          "type": "range",
+          "id": "truncate_description",
+          "label": "t:sections.main-product-tabs.blocks.description.settings.truncate_description.label",
+          "info": "t:sections.main-product-tabs.blocks.description.settings.truncate_description.info",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "read_more_button",
+          "label": "t:sections.main-product-tabs.blocks.description.settings.read_more_button.label",
+          "info": "t:sections.main-product-tabs.blocks.description.settings.read_more_button.info",
+          "default": "Read more"
         }
       ]
     },

@@ -141,6 +141,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
+    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
     this.header = this.header || document.querySelector('.section-header');
     this.headerContent = document.querySelector('.header');
     document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.headerContent.getBoundingClientRect().bottom)}px`);
@@ -152,7 +153,6 @@ class HeaderDrawer extends MenuDrawer {
 
     summaryElement.setAttribute('aria-expanded', true);
     trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
@@ -314,17 +314,3 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
-document.addEventListener("DOMContentLoaded", (event) => {
-$('a[href*="#"]').click(function(e) {
-      // Your code here, for example, scroll to the target
-      // For example, smooth scroll to the target element
-     e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-          $('html, body').animate({
-              scrollTop: target.offset().top
-          }, 1000);
-          return false;
-      }
-  });
-  });

@@ -115,6 +115,12 @@ class CartItems extends HTMLElement {
       lineItemError.classList.remove('hidden');
     }
 
+    const lineItemError2 = document.getElementById(`Line-item-error-2-${line}`);
+    if(lineItemError2) {
+      lineItemError2.querySelector('.cart-item__error-text').innerHTML = message;
+      lineItemError2.classList.remove('hidden');
+    }
+
     this.lineItemStatusElement.setAttribute('aria-hidden', true);
 
     const cartStatus = document.getElementById('cart-live-region-text') || document.getElementById('CartDrawer-LiveRegionText');

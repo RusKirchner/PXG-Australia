@@ -148,19 +148,21 @@
                               {%- endfor -%}
                             </ul>
 
-                            <div class="cart-item__error alert alert--error alert--small margin-top-1rem hidden" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert">
-                              <small class="cart-item__error-text"></small>
-                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
-                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-                              </svg>
+                            <div class="cart-item__error hidden small-hide medium-hide" id="Line-item-error-2-{{ item.index | plus: 1 }}" role="alert">
+                              <div class="alert alert--error alert--small margin-top-1rem">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                  <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                                  <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                                  <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                </svg>
+                                <small class="cart-item__error-text"></small>
+                              </div>
                             </div>
                           </td>
 
                           <td class="cart-item__quantity flex flex-wrap align-start">
-                            <div class="cart-item__quantity-wrapper w100 flex justify-right align-center cart-item__quantity-wrapper--table por">
+                            <div class="cart-item__quantity-wrapper w100 flex justify-space-between align-center cart-item__quantity-wrapper--table por">
                               <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                                 {{ 'products.product.quantity.label' | t }}
                               </label>
@@ -194,6 +196,19 @@
                                   </button>
                                 </div>
                               </quantity-input>
+                              <div class="por">
+                                <div class="loading-overlay hidden flex justify-right align-center large-up-hide">
+                                  <div class="loading-overlay__spinner">
+                                    {%- render 'icon-cart-loading' -%}
+                                  </div>
+                                </div>
+    
+                                <cart-remove-button data-index="{{ item.index | plus: 1 }}" class="large-up-hide">
+                                  <a href="{{ item.url_to_remove }}" class="link align-center justify-right por tap-area-icon" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                                    {% render 'icon-remove' %}
+                                  </a>
+                                </cart-remove-button>
+                              </div>
                             </div>
                           </td>
 
@@ -235,17 +250,6 @@
                                 </div>
                               {%- endif -%}
                             </div>
-                            <div class="loading-overlay hidden flex justify-right align-center large-up-hide">
-                              <div class="loading-overlay__spinner">
-                                {%- render 'icon-cart-loading' -%}
-                              </div>
-                            </div>
-
-                            <cart-remove-button data-index="{{ item.index | plus: 1 }}" class="large-up-hide">
-                              <a href="{{ item.url_to_remove }}" class="link align-center justify-right por tap-area-icon" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                                {% render 'icon-remove' %}
-                              </a>
-                            </cart-remove-button>
                           </td>
                           <td class="small-hide medium-hide">
                             <div class="por">
@@ -260,6 +264,17 @@
                                   {% render 'icon-remove' %}
                                 </a>
                               </cart-remove-button>
+                            </div>
+                          </td>
+                          <td class="cart-item__error hidden large-up-hide" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert">
+                            <div class="alert alert--error alert--small">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                              </svg>
+                              <small class="cart-item__error-text"></small>
                             </div>
                           </td>
                         </tr>
@@ -281,7 +296,7 @@
                 <summary class="summary-accordion summary-accordion--has-hover flex justify-space-between align-center por">
                   <div class="summary__title flex align-center flex-grow-1">
                     {%- render 'icon-pen', icon_width: 20 -%}
-                    <label for="Cart-note" class="h4 accordion__title margin0">
+                    <label for="Cart-note" class="h5 accordion__title margin0">
                       {{ 'sections.cart.note' | t }}
                     </label>
                   </div>
@@ -304,7 +319,7 @@
       </div>
       
       <div class="cart__footer cart-page__content__right por" id="main-cart-footer">
-        <h2 class="cart__footer__title w100 margin0 font-heading-bold">{{ 'sections.cart.cart_totals' | t }}</h2>
+        <h2 class="cart__footer__title w100 margin0 font-heading-bold h3">{{ 'sections.cart.cart_totals' | t }}</h2>
         <div class="cart__blocks w100">
           {% for block in section.blocks %}
             {%- case block.type -%}
@@ -316,7 +331,7 @@
                     <details id="Details-{{ block.id }}-{{ section.id }}">
                       <summary class="summary-accordion summary-accordion--has-hover flex justify-space-between align-center por">
                         <div class="summary__title flex align-center flex-grow-1">
-                          <h3 class="h4 accordion__title margin0">
+                          <h3 class="h5 accordion__title margin0">
                             {{ 'general.shipping_calculator.heading' | t }}
                           </h3>
                         </div>

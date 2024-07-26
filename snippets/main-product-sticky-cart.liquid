@@ -53,19 +53,31 @@
             assign current_variant = product.selected_or_first_available_variant
             assign first_selected_variant = current_variant | default: product.variants[0]
           -%}
-          <sticky-variant-selects id="sticky-variant-select-{{ section.id }}" class="no-js-hidden small-hide sticky-cart__variant-selects justify-right" data-section="{{ section.id }}" data-url="{{ product.url }}" data-primary-picker=".variant-picker-primary-{{ section.id }}" data-mobile-picker="variant-picker-mobile-{{ section.id }}">
+          <sticky-variant-selects id="sticky-variant-select-{{ section.id }}" class="no-js-hidden small-hide sticky-cart__variant-selects justify-right" data-section="{{ section.id }}" data-url="{{ product.url }}" data-primary-picker=".variant-picker-primary-{{ section.id }}" data-mobile-picker="variant-picker-mobile-{{ section.id }}"{% if settings.hide_unavailable_options %} data-hide-unavailable-options="true"{% endif %}>
             {%- for option in product.options_with_values -%}
               {%-liquid
                 assign available_variants = product.variants
-                for available_option in product.options
-                  if option.position != forloop.index
-                    assign filter_index = 'option' | append: forloop.index
-                    assign filter_value = first_selected_variant[filter_index]
-                    assign available_variants = available_variants | where: filter_index, filter_value
-                  endif
-                endfor
+                unless settings.hide_unavailable_options
+                  for available_option in product.options
+                    if option.position != forloop.index
+                      assign filter_index = 'option' | append: forloop.index
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endif
+                  endfor
+                else
+                  if option.position > 1
+                    assign end_compare_index = option.position | minus: 1
+                    for i in (1..end_compare_index)
+                      assign filter_index = 'option' | append: i
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endfor
+                  endif  
+                endunless 
                 assign indexOption = 'option' | append: option.position
                 assign available_option_values = available_variants | map: indexOption
+                assign is_first_option = forloop.first
               -%}
               <div class="product-form__input product-form__input--dropdown flex-grow-1">
                 <label class="form__label product-form__input__form-label visually-hidden" for="Option-{{ section.id }}-{{ forloop.index0 }}-sticky">
@@ -73,17 +85,21 @@
                 </label>
                 <div class="select">
                   <select id="Option-{{ section.id }}-{{ forloop.index0 }}-sticky"
-                    class="select__select"
+                    class="select__select{% if is_first_option %} last-option{% endif %}"
                     name="options[{{ option.name | escape }}]"
                     form="{{ product_form_id_sticky }}"
                   >
                     {%- for value in option.values -%}
-                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                        {% if available_option_values contains value -%}
-                          {{- value -}}
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}{% if settings.hide_unavailable_options and is_first_option == false %}{% unless available_option_values contains value %} class="hidden"{% endunless %}{% endif %}>
+                        {%- unless settings.hide_unavailable_options -%}
+                          {% if available_option_values contains value -%}
+                            {{- value -}}
+                          {%- else -%}
+                            {{- 'products.product.value_unavailable' | t: option_value: value -}}
+                          {%- endif %}
                         {%- else -%}
-                          {{- 'products.product.value_unavailable' | t: option_value: value -}}
-                        {%- endif %}
+                          {{- value -}}  
+                        {%- endunless -%}
                       </option>
                     {%- endfor -%}
                   </select>
@@ -104,7 +120,7 @@
               <button
                 type="submit"
                 name="add"
-                class="sticky-cart__submit product-form__submit button flex w100 button--primary"
+                class="sticky-cart__submit product-form__submit button flex w100 button--primary button--medium"
               {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
               aria-labelledby="card-submit-button-{{ section.id }}"
               >

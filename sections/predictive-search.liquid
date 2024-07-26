@@ -1,9 +1,10 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {%- if predictive_search.performed -%}
   {%- assign is_empty = true -%}
-  <h2 class="predictive-search__header h5 light margin0">
-    {{ 'templates.search.search_for' | t: terms: predictive_search.terms }}
-  </h2>
+  <a href="{{ routes.search_url }}?q={{ predictive_search.terms | url_encode }}&{{ "options[prefix]" | url_encode }}=last" tabindex="-1" role="option" aria-selected="false" class="predictive-search__header h5 margin0 link w100 flex justify-space-between align-center break">
+    <span>{{ 'templates.search.search_for' | t: terms: predictive_search.terms }}</span>
+    {%- render 'icon-picker', icon: 'arrow_right', add_classes: 'icon-revert-in-rtl' -%}
+  </a>
 
   <div class="predictive-search__results-list flex flex-column element-small-margin-top">
     {%- if predictive_search.resources.queries.size > 0 -%}
@@ -14,7 +15,7 @@
             <li class="predictive-search__list-item center" role="option" aria-selected="false">
               <a href="{{ query.url }}" class="predictive-search__item-query link link--text">
                 <div class="predictive-search__item-content predictive-search__item-content--centered">
-                  <p class="predictive-search__item-heading predictive-search__item-query-result h5" aria-label="{{ query.text }}">{{ query.styled_text }}</p>
+                  <p class="predictive-search__item-heading predictive-search__item-query-result h6" aria-label="{{ query.text }}">{{ query.styled_text }}</p>
                 </div>
               </a>
             </li>
@@ -39,11 +40,11 @@
                   </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
                 </div>
                 <div class="predictive-search__item__info">
-                  <p class="h4 predictive-search__item__title card__heading font-heading-bold">
+                  <p class="h6 predictive-search__item__title card__heading font-heading-bold">
                     {{ product.title }}
                   </p>
                   <div class="margin-top-1rem">
-                    {% render 'price', product: product, show_in_card: false, use_variant: false, use_custom_element: false %}
+                    {% render 'price', product: product, show_in_card: false, use_variant: false, use_custom_element: false, price_class: 'price--small' %}
                   </div>
                 </div>
               </a>
@@ -62,14 +63,18 @@
             <li>
               <a class="predictive-search__collection predictive-search__item por{% unless collection.featured_image != blank %} predictive-search__item--empty{% endunless %} full-unstyled-link" href="{{ collection.url }}">
                 {%- if collection.featured_image != blank -%}
-                  <div class="predictive-search__collection__media-wrapper" href="{{ collection.url }}">
+                  <div class="predictive-search__collection__media-wrapper" href="{{ collection.url }}" data-image-ratio="{{ collection.featured_image.aspect_ratio }}">
                     <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="media media--square">
-                      {{ collection.featured_image | image_url: width: 150 | image_tag: width: collection.featured_image.width, height: collection.featured_image.height, class: 'predictive-search__product__image motion-reduce', loading: 'lazy' }}
+                      {%- unless collection.featured_image.aspect_ratio > 1.5 -%}
+                        {{ collection.featured_image | image_url: width: 150 | image_tag: width: collection.featured_image.width, height: collection.featured_image.height, class: 'predictive-search__product__image motion-reduce', loading: 'lazy' }}
+                      {%- else -%}
+                        {{ collection.featured_image | image_url: width: 150, height: 150, crop: 'center' | image_tag: width: collection.featured_image.width, height: collection.featured_image.height, class: 'predictive-search__product__image motion-reduce', loading: 'lazy' }}  
+                      {%- endunless -%}  
                     </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
                   </div>  
                 {%- endif -%}
                 <div class="predictive-search__item__info">
-                  <p class="h4 predictive-search__item__title card__heading font-heading-bold">
+                  <p class="h6 predictive-search__item__title card__heading font-heading-bold">
                     {{ collection.title }}
                   </p>
                   <div class="margin-top-1rem">
@@ -101,7 +106,7 @@
                   </div> 
                 {%- endif -%}
                 <div class="predictive-search__item__info">
-                  <p class="h4 predictive-search__item__title card__heading font-heading-bold">
+                  <p class="h6 predictive-search__item__title card__heading font-heading-bold">
                     {{ article.title }}
                   </p>
                 </div>
@@ -119,7 +124,7 @@
         <ul class="list-unstyled flex flex-column">
           {%- for page in predictive_search.resources.pages -%}
             <li>
-              <a class="link link-effect-no-underline h4 font-heading-bold" href="{{ page.url }}">{{ page.title | highlight: predictive_search.terms }}</a>
+              <a class="link link-effect-no-underline h6 font-heading-bold" href="{{ page.url }}">{{ page.title | highlight: predictive_search.terms }}</a>
             </li>
           {%- endfor -%}  
         </ul>
@@ -128,17 +133,13 @@
   </div>
 
   {%- unless is_empty -%}
-    <div class="center predictive-search__search-url element-small-margin-top">
+    <div class="center predictive-search__search-url element-small-margin-top break">
       {%- if predictive_search.resources.products.size > 0 -%}
         <a href="{{ routes.search_url }}?q={{ predictive_search.terms | url_encode }}&{{ "options[prefix]" | url_encode }}=last" class="predictive-search__button">
           <span>{{ 'general.search.view_all_results' | t }}</span>
         </a>
       {%- endif -%}
     </div>
-  {%- else -%}
-    <div class="predictive-search__notification element-small-margin-top">
-      <p class="caption margin0 alert alert--warning">{{ 'templates.search.no_results' | t: terms: predictive_search.terms }}</p>
-    </div>  
   {%- endunless -%}
 {%- endif -%}
 {% schema %}

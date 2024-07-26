@@ -16,7 +16,7 @@
 }
 
 .compare-popup table th, .compare-popup table td {
-  text-align: left;
+  text-align: start;
   white-space: normal;
 }
 
@@ -47,7 +47,6 @@
 }
 
 .compare-popup .product-form__submit {
-  padding: 0;
   max-width: 7rem;
 }
 
@@ -65,13 +64,17 @@ compare-popup.empty .compare-modal__empty, compare-popup.warning .compare-modal_
   display: block;
 }
 
-.compare-modal__loading {
+div.compare-modal__loading {
   display: none;
   width: 5rem;
   position: absolute;
-  left: 50%;
+  inset-inline-start: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(var(--transform-direction) * 50%), -50%);
+}
+
+.compare-modal__loading {
+  display: none;
 }
 
 .compare-modal__content-info.loading .compare-modal__results, .compare-modal__content-info.loading .compare-modal__empty, compare-popup.empty .compare-modal__results {

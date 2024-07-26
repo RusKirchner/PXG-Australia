@@ -12,14 +12,17 @@
   margin-bottom: 0;
 }
 
-.rte table {
-  table-layout: fixed;
+.rte table,
+.rte table:not([class]) {
+  table-layout: inherit;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 @media screen and (min-width: 750px) {
   .rte table td {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding-inline: 1.2rem;
   }
 }
 
@@ -29,7 +32,7 @@
 }
 
 .rte ul, .rte ol {
-  padding-left: 2rem;
+  padding-inline-start: 2rem;
 }
 
 .rte li {
@@ -59,4 +62,18 @@
 
 .rte blockquote > * {
   margin: -0.5rem 0 -0.5rem 0;
+}
+
+.rte iframe {
+  max-width: 100%;
+}
+
+.rte iframe:not([height]) {
+  height: auto;
+}
+
+.rte :is(iframe[src*="youtube"], iframe[src*="youtu.be"], iframe[src*="vimeo"]) {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
 }

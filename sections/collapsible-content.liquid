@@ -13,11 +13,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 {%- capture sizes -%}min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="collapsible-content collapsible-row-layout isolate page-width{% if section.settings.section_width == 'stretched_grid' %}--full{% endif %}{% if section.settings.section_width == 'narrow' %} page-width--narrow{% endif %}">
-    <div class="collapsible-content__wrapper section-{{ section.id }}-padding">
+<div class="{% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient isolate{% else %}page-width{% if section.settings.section_width == 'stretched_grid' %}--full{% endif %}{% if section.settings.section_width == 'narrow' %} page-width--narrow{% endif %}{% endunless %}">
+  <div class="collapsible-content collapsible-row-layout section-{{ section.id }}-padding">
+    <div class="collapsible-content__wrapper {% if section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient isolate section__box{% else %}page-width{% if section.settings.section_width == 'stretched_grid' %}--full{% endif %}{% if section.settings.section_width == 'narrow' %} page-width--narrow{% endif %}{% endif %}">
       <div class="collapsible-content__header left">
         {%- if section.settings.title != blank -%}
           {%- render 'section-heading' -%}
@@ -46,21 +47,18 @@
             <details-accordion class="accordion db collapsible-content__item" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}"{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}>
                 <summary class="summary-accordion summary-accordion--has-hover flex justify-space-between align-center por">
-                 
+                  <div class="summary__title flex align-center flex-grow-1">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h2 class="h6 accordion__title font-heading-bold margin0">
+                      {{ block.settings.heading | default: block.settings.page.title }}
+                    </h2>
+                  </div>
                   <div class="summary-accordion__plus-minus-wrapper flex justify-center align-center">
                     <span class="summary-accordion__plus-minus por flex justify-center align-center">
                       <span class="summary-accordion__icon-line"></span>
                       <span class="summary-accordion__icon-line"></span>
                     </span>
                   </div>
-                  
-                  <div class="summary__title flex align-center flex-grow-1">
-                    {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h2 class="h4 accordion__title font-heading-bold margin0">
-                      {{ block.settings.heading | default: block.settings.page.title }}
-                    </h2>
-                  </div>
-
                 </summary>
                 <div class="accordion__content{% if block.settings.icon == 'none' %} accordion__content--no-icon{% endif %}{% if block.settings.content == blank and block.settings.page.content == blank %} accordion__content--empty{% endif %}" id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}" role="region" aria-labelledby="Summary-{{ block.id }}-{{ section.id }}">
                   <div class="rte">
@@ -133,6 +131,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
+      "default": false
     },
     {
       "type": "color_scheme",

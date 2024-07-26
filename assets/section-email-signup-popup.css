@@ -7,7 +7,7 @@
 }
 
 .email-signup-popup__content {
-  padding: 3rem 3rem 4rem
+  padding: 1.5rem;
 }
 
 div.email-signup-popup__grid {
@@ -25,14 +25,6 @@ div.email-signup-popup__grid {
 
 .email-signup-popup__newsletter-field-input {
   max-width: 35rem;
-}
-
-.email-signup-popup__checkbox-wrapper {
-  gap: 0.5rem;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 3rem;
-  right: 3rem;
 }
 
 .email-signup-popup:not(.email-signup-popup--has-image) .email-signup-popup__checkbox-wrapper {

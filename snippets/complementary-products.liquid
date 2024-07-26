@@ -66,10 +66,14 @@
                     </div>
                     <div class="complementary__item__info complementary__item__info--variant flex align-center">
                       {%- unless r_product.has_only_default_variant -%}
+                        <label class="form__label visually-hidden" for="Complementary-Option-{{ section_id }}-{{ forloop.index0 }}">
+                          {{ 'products.product.product_variants' | t }}
+                        </label>
                         <div class="select">
                           <select
                             class="select__select complementary__item__select complementary-variant-id"
                             name="items[][id]"
+                            id="Complementary-Option-{{ section_id }}-{{ forloop.index0 }}"
                           >
                             {%- for r_variant in r_product.variants -%}
                               <option value="{{ r_variant.id | escape }}"
@@ -90,11 +94,14 @@
                         <input type="hidden" name="items[][id]" value="{{ r_product.selected_or_first_available_variant.id }}" data-price="{{ r_product.selected_or_first_available_variant.price }}" data-compare-at-price="{{ r_product.selected_or_first_available_variant.compare_at_price }}" data-available="{{ r_product.selected_or_first_available_variant.available }}" class="complementary-variant-id">  
                       {%- endunless -%}  
                       {%- if r_product.available -%}
+                        <label class="form__label visually-hidden" for="Complementary-Quantity-{{ section_id }}-{{ r_product.id }}">
+                          {{ 'products.product.quantity.label' | t }}
+                        </label>
                         <quantity-input class="quantity flex align-center color-foreground por complementary__item__quantity">
                           <input class="quantity__input flex-grow-1 center background-input"
                               type="number"
                               name="quantity"
-                              id="Quantity-{{ block.id }}-{{ r_product.id }}"
+                              id="Complementary-Quantity-{{ section_id }}-{{ r_product.id }}"
                               min="0"
                               value="0"
                             >
@@ -155,14 +162,12 @@
                   </div>
                 {%- endif -%}
                 {%- if block.settings.button_enable -%}
-                  <button type="submit" class="button button--secondary" disabled>
+                  <button type="submit" class="button button--secondary button--medium" disabled>
                     <span>
                       {{ block.settings.button_label }}
                     </span>
                     <div class="loading-overlay__spinner hidden">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
+                      {%- render 'icon-cart-loading' -%}
                     </div>
                   </button>
                 {%- endif -%}
@@ -190,3 +195,4 @@
     <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}  
 </product-recommendations>
+<script src="{{ 'product-recommendation.js' | asset_url }}" defer="defer"></script>

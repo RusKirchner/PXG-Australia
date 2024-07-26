@@ -9,7 +9,7 @@
 }
 
 .template-search__article__footer-icon {
-  margin-right: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 @media(min-width: 750px) {

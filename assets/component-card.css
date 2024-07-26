@@ -43,12 +43,8 @@
   margin-bottom: 0.5rem;
 }
 
-.card__heading--letter-spacing {
-  letter-spacing: -0.18px;
-}
-
 .card .icon-wrap {
-  margin-left: 0.8rem;
+  margin-inline-start: 0.8rem;
   white-space: nowrap;
   transition: transform 100ms ease;
   overflow: hidden;
@@ -58,6 +54,7 @@
 
 .card-wrapper--product {
   border: 1px solid rgb(var(--color-foreground), var(--product-card-border-opacity));
+  border-radius: var(--product-card-border-radius);
 }
 
 .card--product {
@@ -65,29 +62,37 @@
   box-sizing: border-box;
 }
 
+.card--product .media {
+  border-radius: var(--product-card-border-radius-image);
+}
+
+.card__heading--product-small {
+  font-size: calc(var(--font-heading-scale) * 1.4rem);
+  letter-spacing: -0.056px;
+}
+
+.card__heading--product {
+  font-weight: var(--card-heading-product-weight);
+}
+
+.card__heading--product-large {
+  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  letter-spacing: -0.072px;
+}
+
 .card__quick-buttons {
   column-gap: 1rem;
+  min-height: 3.6rem;
 }
 
 .card-information .price__sale > .flex {
   justify-content: var(--product-card-text-alignment);
 }
 
-@media(hover: hover) and (min-width: 990px) {
-  .card__quick-buttons {
-    position: absolute;
-    top: calc(100% + 1rem);
-    left: var(--product-card-padding);
-    right: var(--product-card-padding);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 300ms ease, top 300ms ease;
-  }
-}
-
 @media(min-width: 990px) {
-  .card__heading--product {
-    font-size: 1.8rem;
+  .card__heading--product-small {
+    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    letter-spacing: -0.072px;
   }
 }
 
@@ -100,9 +105,9 @@
 .card__heading__collection-title {
   position: absolute;
   bottom: 1.5rem;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   padding: 0 1.5rem;
+  letter-spacing: -0.78px;
 }
 
 .card__heading--collection {
@@ -114,16 +119,34 @@
 }
 
 .card__heading--collection a:before {
-  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgb(var(--color-background), 0) 30%, rgb(var(--color-background), 0.6) 100%);
+  inset-inline: 0;
+  inset-block: 0;
+  background: linear-gradient(180deg, rgba(var(--color-background), 0.10) 41.16%, rgba(var(--color-background), 0.60) 100%);
   border-radius: 0.8rem;
 }
 
 .card__heading__collection-title-box {
   padding: 0.7rem 1rem;
+}
+
+@media (max-width: 749px) {
+  .card__heading--collection--small-on-mobile {
+    font-size: calc(1.4rem * var(--font-heading-scale));
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 989px) {
+  .card__heading--collection--small-on-tablet {
+    font-size: calc(1.5rem * var(--font-heading-scale));
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: 990px) {
+  .card__heading--collection--small-on-desktop {
+    font-size: calc(1.5rem * var(--font-heading-scale));
+    letter-spacing: 0px;
+  }
 }

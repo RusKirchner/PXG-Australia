@@ -106,9 +106,6 @@ class RecentlyViewed extends HTMLElement
 				} else {
 					this.section.classList.add('hidden');
 				}
-			})
-			.finally(() => {
-				BtCompareUtil.loadedContent = true;
 			});
 		}
 		this.updatedContent = true;

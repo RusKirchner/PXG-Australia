@@ -26,35 +26,55 @@
   word-break: break-word;
 }
 
+a.banner__full-link {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  --outline-focus-offset: -0.3rem;
+}
+
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
-    text-align: right;
+    text-align: end;
   }
 
   .banner--content-align-mobile-left .banner__box {
-    text-align: left;
+    text-align: start;
   }
 
   .banner--mobile-bottom .banner__media--radius, .banner--mobile-bottom .banner__media--radius:after {
-    border-radius: 1rem 1rem 0 0;
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
   }
 
   .banner__box--radius {
-    border-radius: 0 0 1rem 1rem;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+    border-end-end-radius: 1rem;
+    border-end-start-radius: 1rem;
   }
 
   .banner--mobile-bottom .banner__content.page-width {
     padding: 0;
   }
+
+  .banner--mobile-bottom .banner__full-link {
+    z-index: 3;
+  }
 }
 
 @media only screen and (min-width: 750px) {
   .banner--content-align-right .banner__box {
-    text-align: right;
+    text-align: end;
   }
 
   .banner--content-align-left .banner__box {
-    text-align: left;
+    text-align: start;
   }
 
   .banner--content-align-left.banner--desktop-transparent .banner__box,
@@ -158,7 +178,7 @@
 .banner__media {
   height: 100%;
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   width: 100%;
 }
@@ -324,15 +344,10 @@
   margin-bottom: 0;
 }
 
-.banner__heading--large-size {
-  --font-heading-weight-bold: 700;
-  line-height: 100%;
-}
-
 .banner__buttons {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.6rem;
   max-width: 45rem;
   word-break: break-word;
 }
@@ -344,11 +359,6 @@
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
     justify-content: flex-end;
-  }
-
-  .banner--content-align-mobile-center .banner__buttons--multiple > *:not(.link) {
-    flex-grow: 1;
-    min-width: 22rem;
   }
 
   .banner__heading--large-size {

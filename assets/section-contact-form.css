@@ -20,7 +20,24 @@
 }
 
 .contact__address-wrapper {
-  padding: 2.5rem 3rem;
+  padding: 3.4rem 2.4rem;
+  gap: 2.4rem;
+}
+
+.contact__address-list {
+  gap: 1rem;
+  border-radius: 6px;
+  padding: 3rem;
+  background: rgb(var(--color-background));
+  box-shadow: 0px 1px 2px 0px rgb(var(--color-foreground), 0.07);
+}
+
+.contact__address-item {
+  gap: 0.8rem;
+}
+
+.contact__address-list__line {
+  margin: 1.6rem 0;
 }
 
 .contact__button {
@@ -40,6 +57,14 @@
   gap: 1.5rem;
 }
 
+.contact__address-wrapper > * + .contact__address-wrapper__title {
+  padding-top: 1.6rem;
+}
+
+.contact__checkbox-large-label {
+  margin-top: -0.15rem;
+}
+
 @media screen and (min-width: 750px) {
   .contact .field {
     margin-bottom: 2rem;
@@ -49,10 +74,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
-  }
-
-  .contact__address-wrapper {
-    padding: 6rem 7rem;
   }
 }
 
@@ -71,17 +92,22 @@
   }
 
   .contact__address-wrapper {
-    padding: 2.5rem 3rem;
-    margin-top: 0;
+    border-radius: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1365px) {
+  .contact__form-with-address + .contact__address-wrapper {
+    width: calc(39.33% - var(--grid-horizontal-spacing) * 2 / 3);
   }
 }
 
 @media screen and (min-width: 1366px) {
   .contact__form-with-address {
-    padding-right: 10rem;
+    padding-inline-end: 10rem;
   }
 
   .contact__address-wrapper {
-    padding: 6rem 7rem;
+    padding: 4rem;
   }
 }

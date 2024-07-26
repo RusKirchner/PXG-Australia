@@ -236,7 +236,7 @@ and show (for example fade in) when PhotoSwipe is opened
 .pswp__icn {
   position: absolute;
   top: 14px;
-  left: 9px;
+  inset-inline-start: 9px;
   width: 32px;
   height: 32px;
   overflow: hidden;
@@ -265,7 +265,7 @@ div.pswp__img--placeholder,
 
 .pswp__top-bar {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	width: 100%;
 	height: 60px;
@@ -284,16 +284,14 @@ div.pswp__img--placeholder,
   will-change: opacity;
 }
 
-
 /*
 
   Close button
 
 */
 .pswp__button--close {
-  margin-right: 6px;
+  margin-inline-end: 6px;
 }
-
 
 /*
 
@@ -338,18 +336,23 @@ div.pswp__img--placeholder,
 }
 
 .pswp__button--arrow--prev {
-  right: auto;
-  left: 0px;
+  inset-inline-end: auto;
+  inset-inline-start: 0px;
+}
+
+.pswp__button--arrow--prev .pswp__icn {
+  transform: scale(calc(var(--transform-direction) * (-1)), 1);
 }
 
 .pswp__button--arrow--next {
-  right: 0px;
+  inset-inline-end: 0px;
 }
+
 .pswp__button--arrow--next .pswp__icn {
-  left: auto;
-  right: 14px;
+  inset-inline-start: auto;
+  inset-inline-end: 14px;
   /* flip horizontally */
-  transform: scale(-1, 1);
+  transform: scale(var(--transform-direction), 1);
 }
 
 /*
@@ -381,7 +384,7 @@ div.pswp__img--placeholder,
   overflow: hidden;
   width: 50px;
   height: 60px;
-  margin-right: auto;
+  margin-inline-end: auto;
 }
 
 .pswp__preloader .pswp__icn {
@@ -399,7 +402,6 @@ div.pswp__img--placeholder,
   100% { transform: rotate(360deg); }
 }
 
-
 /*
 
   "1 of 10" counter
@@ -407,7 +409,8 @@ div.pswp__img--placeholder,
 */
 .pswp__counter {
   height: 30px;
-  margin: 15px 0 0 20px;
+  margin-block: 15px ;
+  margin-inline: 20px 0;
   font-size: 14px;
   line-height: 30px;
   color: var(--pswp-icon-color);

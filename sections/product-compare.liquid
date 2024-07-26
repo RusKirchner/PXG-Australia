@@ -33,37 +33,20 @@
                   <div class="compare-popup__media-wrapper">
                     <a href="{{ product_url }}" class="media media--{{ block.settings.image_ratio }}" id="featured-image-{{ section_id }}" aria-labelledby="product-compare-title-{{ section.id }}-{{ c_product.id }}">
                       {%- liquid
-                        assign srcset = ''
+                        assign product_image_url = c_product.featured_media | image_url: width: 50
+                        assign srcset = product_image_url | append: ' 50w'
                         if c_product.featured_media.width >= 165
                           assign product_image_url = c_product.featured_media | image_url: width: 165
-                          assign srcset = srcset | append: product_image_url | append: ' 165w,'
+                          assign srcset = srcset | append: ', ' | append: product_image_url | append: ' 165w'
                         endif
                         if c_product.featured_media.width >= 360
                           assign product_image_url = c_product.featured_media | image_url: width: 360
-                          assign srcset = srcset | append: product_image_url | append: ' 360w,'
+                          assign srcset = srcset | append: ', ' | append: product_image_url | append: ' 360w'
                         endif
                         if c_product.featured_media.width >= 430
                           assign product_image_url = c_product.featured_media | image_url: width: 450
-                          assign srcset = srcset | append: product_image_url | append: ' 450w,'
+                          assign srcset = srcset | append: ', ' | append: product_image_url | append: ' 450w'
                         endif
-                        if c_product.featured_media.width >= 533
-                          assign product_image_url = c_product.featured_media | image_url: width: 533
-                          assign srcset = srcset | append: product_image_url | append: ' 533w,'
-                        endif
-                        if c_product.featured_media.width >= 720
-                          assign product_image_url = c_product.featured_media | image_url: width: 720
-                          assign srcset = srcset | append: product_image_url | append: ' 720w,'
-                        endif
-                        if c_product.featured_media.width >= 940
-                          assign product_image_url = c_product.featured_media | image_url: width: 940
-                          assign srcset = srcset | append: product_image_url | append: ' 940w,'
-                        endif
-                        if c_product.featured_media.width >= 1066
-                          assign product_image_url = c_product.featured_media | image_url: width: 1066
-                          assign srcset = srcset | append: product_image_url | append: ' 1066w,'
-                        endif
-                        assign product_image_url = c_product.featured_media | image_url
-                        assign srcset = srcset | append: product_image_url | append: ' ' | append: c_product.featured_media.width | append: 'w'
                       -%}
                       {{ c_product.featured_media | image_url: width: 300 | image_tag: sizes: sizes, srcset: srcset, width: c_product.featured_media.width, height: c_product.featured_media.height, class: 'motion-reduce', loading: 'lazy' }}
                     </a>

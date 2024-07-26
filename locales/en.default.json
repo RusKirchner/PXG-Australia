@@ -36,7 +36,8 @@
       "page": "Page {{ number }}",
       "next": "Next page",
       "previous": "Previous page",
-      "load_more": "Load more"
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
       "search": "Search",
@@ -71,7 +72,10 @@
       "errors_heading": "Errors",
       "carriers": "Available shipping carriers",
       "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination."
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
     },
     "countdown": {
       "days": "Days",
@@ -86,6 +90,10 @@
       "recently_viewed_empty": "There are no recently viewed products.",
       "recently_viewed_open": "Open recently viewed box",
       "back_to_top": "Back to top"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
     }
   },
   "newsletter": {
@@ -240,7 +248,8 @@
       "to": "To",
       "clear_filter": "Remove filter",
       "show_filter": "Show filter",
-      "hide_filter": "Hide filter"
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -394,7 +403,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
       "accept": "Accept",

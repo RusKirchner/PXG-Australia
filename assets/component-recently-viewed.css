@@ -31,5 +31,5 @@
 }
 
 .recently-viewed.open .recently-viewed__content {
-  transform: translateX(-5rem);
+  transform: translateX(calc(var(--transform-direction) * 5rem));
 }

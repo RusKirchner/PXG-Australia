@@ -117,11 +117,11 @@ class StickyVariantSelects extends VariantSelects
   }
 
   onVariantChange(event) {
+    this.updateVariantStatuses();
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.removeErrorMessage();
-    this.updateVariantStatuses();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -139,7 +139,7 @@ class StickyVariantSelects extends VariantSelects
   }
 
   updatePrimaryPicker(options) {
-    if(this.primaryPicker.tagName == 'variant-selects') {
+    if(this.primaryPicker.tagName.toLowerCase() == 'variant-selects') {
       this.primaryPicker.querySelectorAll('select').forEach((select, index) => {
         select.value = options[index];
       });
@@ -153,7 +153,7 @@ class StickyVariantSelects extends VariantSelects
 
   updateMobilePicker() {
     if(this.currentVariant) {
-      this.mobilePicker.querySelector(`a[data-value="${this.currentVariant.id}"]`).dispatchEvent(new Event('click'));
+      this.mobilePicker.targetItemClick(this.mobilePicker.querySelector(`a[data-value="${this.currentVariant.id}"]`));
     }
   }
 
@@ -231,15 +231,21 @@ class StickyVariantsMobile extends HTMLElement {
   onItemClick(event) {
     event.preventDefault();
     if(event.target.ariaCurrent != 'true') {
+      this.targetItemClick(event.target);
+      this.afterItemClick(event);
+    }
+    this.hidePanel();
+  }
+
+  targetItemClick(target) {
+    if(target.ariaCurrent != 'true') {
       const currentItem = this.querySelector('a[aria-current="true"]');
       if(currentItem) {
         currentItem.removeAttribute('aria-current');
       }
-      event.target.ariaCurrent = true;
-      this.elements.button.querySelector('span').textContent = event.target.textContent;
-      this.afterItemClick(event);
+      target.ariaCurrent = true;
+      this.elements.button.querySelector('span').textContent = target.textContent;
     }
-    this.hidePanel();
   }
 
   afterItemClick(event) {

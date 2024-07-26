@@ -1,5 +1,10 @@
 {%- if section.blocks.size > 0 -%}
-{%- assign slider_button_classes = 'slider-button--transparent slider-button--' | append: section.id -%}
+{%-liquid
+  assign slider_button_classes = 'slider-button--transparent slider-button--' | append: section.id
+  if section.blocks.size == 1
+    assign slider_button_classes = slider_button_classes | append: ' hidden'
+  endif  
+-%}
 <div class="color-{{ section.settings.color_scheme }} gradient announcement-bar-wrap announcement-bar-wrap--{{ section.id }}">
   <slider-component class="por slider-{{ section.id }} slider-component-desktop">
     <button type="button" class="slider-button flex flex-column justify-center align-center slider-button--prev no-js-hidden tap-area-icon slider-button--float {{ slider_button_classes }}" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" disabled="disabled">{% render 'icon-caret-slider-prev' %}</button>
@@ -12,12 +17,12 @@
                 {%- if block.settings.link != blank -%}
                   <a href="{{ block.settings.link }}" class="announcement-bar__link announcement-bar__link--{{ section.id }} link link--text focus-inset animate-arrow">
                 {%- endif -%}
-                    <p class="announcement-bar__message announcement-bar__message--{{ section.id }} h5 margin0">
-                      {{ block.settings.text | escape }}
-                      {%- if block.settings.link != blank -%}
-                        {% render 'icon-arrow' %}
-                      {%- endif -%}
-                    </p>
+                  <p class="announcement-bar__message announcement-bar__message--{{ section.id }} margin0 text-small">
+                    {{ block.settings.text | escape }}
+                    {%- if block.settings.link != blank -%}
+                      {% render 'icon-arrow', icon_width: 16, custom_classes: 'icon-revert-in-rtl' %}
+                    {%- endif -%}
+                  </p>
                 {%- if block.settings.link != blank -%}
                   </a>
                 {%- endif -%}
@@ -43,8 +48,8 @@
     column-gap: 0;
   }
   .slider--desktop.grid--announcement-{{ section.id }} .slider__slide:first-child {
-    scroll-margin-left: 0;
-    margin-left: 0;
+    scroll-margin-inline-start: 0;
+    margin-inline-start: 0;
   }
   .announcement-bar__link--{{ section.id }} {
     display: block;
@@ -54,7 +59,7 @@
   .announcement-bar__link--{{ section.id }} .icon-arrow {
     display: inline-block;
     pointer-events: none;
-    margin-left: 0.8rem;
+    margin-inline-start: 0.8rem;
     vertical-align: middle;
     margin-bottom: 0.2rem;
   }

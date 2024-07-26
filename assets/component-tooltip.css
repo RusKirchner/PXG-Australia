@@ -23,26 +23,26 @@
 .bt-tooltip__inner--top {
   top: -3.8rem;
   bottom: auto;
-  right: auto;
-  left: 50%;
-  transform:translateX(-50%);
+  inset-inline-end: auto;
+  inset-inline-start: 50%;
+  transform:translateX(calc(var(--transform-direction) * 50%));
 }
 .bt-tooltip__inner--top:after {
-  right: auto;
-  left: 50%;
+  inset-inline-end: auto;
+  inset-inline-start: 50%;
   bottom: -0.3rem;
-  margin-left: -0.3rem;
+  margin-inline-start: -0.3rem;
 }
 .bt-tooltip__inner--left {
   top: 50%;
   bottom: auto;
-  left: -1rem;
-  right: auto;
-  transform:translate(-100%, -50%);
+  inset-inline-start: -1rem;
+  inset-inline-end: auto;
+  transform:translate(calc(var(--transform-direction) * 100%), -50%);
 }
 .bt-tooltip__inner--left:after {
-  right: -0.3rem;
-  left: auto;
+  inset-inline-end: -0.3rem;
+  inset-inline-start: auto;
   bottom: -0.3rem;
   margin-top: -0.3rem;
   top: 50%;
@@ -50,13 +50,13 @@
 .bt-tooltip__inner--right {
   top: 50%;
   bottom: auto;
-  right: -1rem;
-  left: auto;
-  transform:translate(100%, -50%);
+  inset-inline-end: -1rem;
+  inset-inline-start: auto;
+  transform:translate(calc(var(--transform-direction) * 100% * (-1)), -50%);
 }
 .bt-tooltip__inner--right:after {
-  left: -0.3rem;
-  right: auto;
+  inset-inline-start: -0.3rem;
+  inset-inline-end: auto;
   bottom: -0.3rem;
   margin-top: -0.3rem;
   top: 50%;

@@ -17,7 +17,7 @@
 
 {%- if article and article != empty -%}
   {%- assign has_image = false -%}
-  <div class="card-wrapper w100 h100 por card-radius overflow-hidden">
+  <div class="card-wrapper w100 h100 por article-card-radius overflow-hidden">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card card--article{% if show_image and article.image %} color-{{ section.settings.blog_card_color_scheme }}{% endif %}
       {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
@@ -26,7 +26,7 @@
       {%- if show_image and article.image -%}
         {%- assign has_image = true -%}
         <a href="{{ article.url }}" class="article-card__image-wrapper card__media full-unstyled-link db full-link w100" aria-label="{{ article.title | escape }}">
-          <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="article-card__image media media--transparent media--hover-effect w100 ratio card-radius"{% if media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+          <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="article-card__image media media--transparent media--hover-effect w100 ratio article-card-radius"{% if media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
             {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
             <img
               srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
@@ -49,7 +49,7 @@
         </a>
       {%- endif -%}
       <div class="card__content-article">
-        <h3 class="font-heading-bold margin0">
+        <h3 class="font-heading-extra-bold margin0 h4">
           {%- if has_image -%}
             {{ article.title | truncate: 50 | escape }}
           {%- else -%}  
@@ -60,23 +60,23 @@
         </h3>
       
         {%- if show_date or show_author or article.comments_count > 0 and blog.comments_enabled? -%}
-          <hr class="margin-top-1rem margin-bottom-1rem">
+          <hr class="article-card__line margin-top-1rem margin-bottom-1rem">
       
           <div class="article-card__footer caption-large w100 flex align-center">
             {%- if show_date -%}
-              <div class="flex align-center">
+              <div class="flex align-center article-card__footer__item">
                 {%- render 'icon-picker', icon: 'calendar', add_classes: 'article-card__footer__icon' -%}
                 <span>{{ article.published_at | time_tag: format: 'date' }}</span>
               </div>  
             {%- endif -%}
             {%- if show_author -%}
-              <div class="flex align-center">
+              <div class="flex align-center article-card__footer__item">
                 {%- render 'icon-picker', icon: 'user', add_classes: 'article-card__footer__icon' -%}
                 <span>{{ article.author }}</span>
               </div>
             {%- endif -%}
             {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-              <div class="flex align-center">
+              <div class="flex align-center article-card__footer__item">
                 {%- render 'icon-picker', icon: 'chat', add_classes: 'article-card__footer__icon' -%}
                 <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
               </div>

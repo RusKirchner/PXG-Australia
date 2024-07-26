@@ -13,6 +13,7 @@ if (!customElements.get('sticky-header')) {
       this.predictiveSearch = this.querySelector('predictive-search');
       this.onScrollHandler = this.onScroll.bind(this);
       this.isToggleNav = this.classList.contains('toggle-nav');
+      this.setupWindowResizeEvent();
       this.calculateThreshold();
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
@@ -30,8 +31,6 @@ if (!customElements.get('sticky-header')) {
       this.onScroll();
 
       window.addEventListener('scroll', this.onScrollHandler, false);
-
-      this.setupWindowResizeEvent();
     }
 
     disconnectedCallback() {
@@ -42,9 +41,24 @@ if (!customElements.get('sticky-header')) {
       }
     }
 
+    calculateHeaderHeight() {
+      this.headerHeight = 0;
+      this.fullHeaderHeight = 0;
+      this.querySelectorAll(':scope > *').forEach(element => {
+        this.fullHeaderHeight += element.clientHeight;
+        if(element.classList.contains('header')) {
+          this.headerHeight = element.clientHeight;
+          this.fullHeaderHeight += parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-top'));
+        }
+      });
+    }
+
     calculateThreshold() {
-      this.headerBoundTop = this.header.getBoundingClientRect().bottom + (window.pageYOffset || document.documentElement.scrollTop);
+      this.headerBoundTop = this.header.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) + this.fullHeaderHeight;
       this.threshold = this.headerBoundTop + 100;
+      if(this.dataset.stickyType == 'always') {
+        this.threshold += 100;
+      }
     }
 
     onScroll() {
@@ -53,21 +67,15 @@ if (!customElements.get('sticky-header')) {
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
       if(scrollTop > this.currentScrollTop & scrollTop > this.headerBoundTop) {
         // Scrolling down and passed the header: hide the sticky header but keep position fixed.
-        if (this.preventHide) return;
-        requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBoundTop) {
-        // Scrolling up and passed the header: show the sticky header.
-        if (!this.preventReveal && scrollTop > this.threshold) {
-          requestAnimationFrame(this.reveal.bind(this));
+        if(this.dataset.stickyType == 'always') {
+          this.openStickyHeader(scrollTop);
         } else {
-          window.clearTimeout(this.isScrolling);
-
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
-
+          if (this.preventHide || this.dataset.stickyType == 'always') return;
           requestAnimationFrame(this.hide.bind(this));
         }
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBoundTop) {
+        // Scrolling up and passed the header: show the sticky header.
+        this.openStickyHeader(scrollTop);
       } else if (scrollTop <= this.headerBoundTop) {
         // Scroll above the header: reset the sticky header.
         requestAnimationFrame(this.reset.bind(this));
@@ -76,14 +84,27 @@ if (!customElements.get('sticky-header')) {
       this.currentScrollTop = scrollTop;
     }
 
-    setupWindowResizeEvent() {
-      const headerHeight = this.header.querySelector('header').clientHeight;
-      const stickyHeaderHeight = headerHeight + this.getHeaderTopHeight();
-      document.body.style.setProperty('--header-height', `${headerHeight}px`);
-      if(window.innerWidth >= 990) {
-        document.body.style.setProperty('--sticky-header-height-desktop', `${stickyHeaderHeight}px`);
+    openStickyHeader(scrollTop) {
+      if (!this.preventReveal && scrollTop > this.threshold) {
+        requestAnimationFrame(this.reveal.bind(this));
       } else {
-        document.body.style.setProperty('--sticky-header-height-mobile', `${stickyHeaderHeight}px`);
+        window.clearTimeout(this.isScrolling);
+
+        this.isScrolling = setTimeout(() => {
+          this.preventReveal = false;
+        }, 66);
+
+        requestAnimationFrame(this.hide.bind(this));
+      }
+    }
+
+    setupWindowResizeEvent() {
+      this.calculateHeaderHeight();
+      document.body.style.setProperty('--header-height', `${this.headerHeight}px`);
+      if(window.innerWidth >= 990) {
+        document.body.style.setProperty('--sticky-header-height-desktop', `${this.fullHeaderHeight}px`);
+      } else {
+        document.body.style.setProperty('--sticky-header-height-mobile', `${this.fullHeaderHeight}px`);
       }
       this.debouncedOnWindowResize = debounce((event) => {
         this.onWindowResize(event);
@@ -165,6 +186,10 @@ if (!customElements.get('sticky-header')) {
       if(this.searchModal) {
         this.searchModal.close(false);
       }
+    }
+
+    setPreventHide(value) {
+      this.preventHide = value;
     }
   });
 }

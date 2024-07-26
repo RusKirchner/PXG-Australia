@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Dein Passwort",
       "login_form_error": "Falsches Passwort!",
       "login_form_submit": "Eingeben",
-      "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"\/admin\" class=\"link underlined-link\">Hier einloggen<\/a>",
+      "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"/admin\" class=\"link underlined-link\">Hier einloggen</a>",
       "powered_by_shopify_html": "Dieser Shop wird unterstützt von {{ shopify }}"
     },
     "social": {
@@ -26,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Weiter shoppen",
@@ -35,7 +36,8 @@
       "page": "Seite {{ number }}",
       "next": "Nächste Seite",
       "previous": "Vorherige Seite",
-      "load_more": "Mehr laden"
+      "load_more": "Mehr laden",
+      "load_previous_items": "Vorherige Elemente laden"
     },
     "search": {
       "search": "Suchen",
@@ -70,7 +72,10 @@
       "errors_heading": "Fehler",
       "carriers": "Verfügbare Versandunternehmen",
       "button": "Berechnung",
-      "do_not_ship": "Wir versenden nicht an dieses Ziel."
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
     },
     "countdown": {
       "days": "Tage",
@@ -85,6 +90,10 @@
       "recently_viewed_empty": "Es sind keine kürzlich angesehenen Produkte vorhanden.",
       "recently_viewed_open": "Zuletzt angezeigtes Feld öffnen",
       "back_to_top": "Zurück nach oben"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
     }
   },
   "newsletter": {
@@ -130,7 +139,7 @@
       "share": "Diesen Artikel teilen",
       "success": "Dein Kommentar wurde erfolgreich gepostet! Vielen Dank!",
       "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen.",
-      "author_html": "Gepostet von <strong>{{ author }}<\/strong>",
+      "author_html": "Gepostet von <strong>{{ author }}</strong>",
       "previous": "Vorherige",
       "next": "Nächste",
       "tags_all": "Alle",
@@ -172,8 +181,8 @@
         "view_store_info": "Shop-Informationen anzeigen",
         "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
         "pick_up_available": "Abholung verfügbar",
-        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> verfügbar",
-        "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> derzeit nicht verfügbar",
+        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> verfügbar",
+        "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> derzeit nicht verfügbar",
         "unavailable": "Verfügbarkeit für Abholungen konnte nicht geladen werden",
         "refresh": "Aktualisieren"
       },
@@ -189,7 +198,7 @@
       },
       "view_full_details": "Vollständige Details anzeigen",
       "include_taxes": "inkl. MwSt.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet",
       "choose_options": "Optionen auswählen",
       "choose_product_options": "Optionen für {{ product_name }} auswählen",
       "quick_view": "Schnellansicht eines Produkts",
@@ -203,7 +212,7 @@
         "one": "{{ count }} Rezension",
         "other": "{{ count }} Bewertungen"
       },
-      "by_vendor_html": "<span>Von<\/span> {{ vendor }}"
+      "by_vendor_html": "<span>Von</span> {{ vendor }}"
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -239,7 +248,8 @@
       "show_more": "Mehr anzeigen",
       "show_less": "Weniger anzeigen",
       "show_filter": "Filter anzeigen",
-      "hide_filter": "Filter ausblenden"
+      "hide_filter": "Filter ausblenden",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -324,9 +334,9 @@
       "empty": "Dein Warenkorb ist leer",
       "cart_error": "Beim Aktualisieren deines Warenkorbs ist ein Fehler aufgetreten. Bitte versuche es erneut.",
       "cart_quantity_error_html": "Du kannst deinem Warenkorb nur {{ quantity }} Stück dieses Artikels hinzufügen.",
-      "taxes_and_shipping_policy_at_checkout_html": "Steuern und <a href=\"{{ link }}\">Versand<\/a> werden beim Checkout berechnet",
+      "taxes_and_shipping_policy_at_checkout_html": "Steuern und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet",
       "taxes_included_but_shipping_at_checkout": "Inklusive Steuern, Versand wird beim Checkout berechnet",
-      "taxes_included_and_shipping_policy_html": "Inklusive Steuern. <a href=\"{{ link }}\">Versand <\/a> wird beim Checkout berechnet",
+      "taxes_included_and_shipping_policy_html": "Inklusive Steuern. <a href=\"{{ link }}\">Versand </a> wird beim Checkout berechnet",
       "taxes_and_shipping_at_checkout": "Steuern und Versand werden beim Checkout berechnet",
       "headings": {
         "product": "Produkt",
@@ -338,7 +348,7 @@
       "update": "Aktualisieren",
       "login": {
         "title": "Hast du ein Konto?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein<\/a>, damit es beim Checkout schneller geht."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein</a>, damit es beim Checkout schneller geht."
       },
       "note_drawer": "Notiz",
       "apply": "Sich bewerben",
@@ -366,7 +376,7 @@
     "collection_template": {
       "title": "Kategorie",
       "empty": "Keine Produkte gefunden",
-      "use_fewer_filters_html": "Verwende weniger Filter oder <a class=\"{{ class }}\" href=\"{{ link }}\">entferne alle<\/a>"
+      "use_fewer_filters_html": "Verwende weniger Filter oder <a class=\"{{ class }}\" href=\"{{ link }}\">entferne alle</a>"
     },
     "video": {
       "load_video": "Video laden: {{ description }}"
@@ -389,7 +399,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Vorschau der Farbfelder",
-      "preview_description": "Diese Vorschau ist nur auf der Design-Editor-Seite sichtbar, damit Sie Farbcodes einfach hinzufügen\/bearbeiten\/entfernen können. Auf der Storefront wird diese Vorschau nicht angezeigt, es werden nur Farbcodes ausgeführt."
+      "preview_description": "Diese Vorschau ist nur auf der Design-Editor-Seite sichtbar, damit Sie Farbcodes einfach hinzufügen/bearbeiten/entfernen können. Auf der Storefront wird diese Vorschau nicht angezeigt, es werden nur Farbcodes ausgeführt.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Sammlung mit Symbol",
@@ -405,10 +416,10 @@
     }
   },
   "localization": {
-    "country_label": "Land\/Region",
+    "country_label": "Land/Region",
     "language_label": "Sprache",
     "update_language": "Sprache aktualisieren",
-    "update_country": "Land\/Region aktualisieren"
+    "update_country": "Land/Region aktualisieren"
   },
   "customer": {
     "account": {
@@ -416,7 +427,7 @@
       "details": "Kontodetails",
       "view_addresses": "Adressen anzeigen",
       "return": "Zurück zu Kontodetails",
-      "welcome_html": "Willkommen zurück, <strong>{{ first_name }}<\/strong> !"
+      "welcome_html": "Willkommen zurück, <strong>{{ first_name }}</strong> !"
     },
     "account_fallback": "Konto",
     "activate_account": {
@@ -438,8 +449,8 @@
       "address1": "Adresse 1",
       "address2": "Adresse 2",
       "city": "Ort",
-      "country": "Land\/Region",
-      "province": "Bundesland\/Provinz",
+      "country": "Land/Region",
+      "province": "Bundesland/Provinz",
       "zip": "PLZ",
       "phone": "Telefonnummer",
       "set_default": "Als Standard-Adresse festlegen",

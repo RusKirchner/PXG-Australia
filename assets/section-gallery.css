@@ -3,11 +3,8 @@
 	--vertical-padding: 2rem;
   position: absolute;
 	top: 0;
-	left: 0;
-  /* CUSTOM CODE */
-    	padding-top: var(--vertical-padding);
-        padding-bottom: var(--vertical-padding);
-	/* padding: var(--vertical-padding) var(--horizontal-padding); */
+	inset-inline-start: 0;
+	padding: var(--vertical-padding) var(--horizontal-padding);
 	background-color: rgb(var(--color-background), var(--color-background-opacity));
 	box-sizing: border-box;
 	transition: background-color 300ms ease;
@@ -26,40 +23,43 @@
 	--color-background-opacity: 0;
 }
 
-.gallery__pin-button {
+a.gallery__pin-button {
 	position: absolute;
 	bottom: var(--horizontal-padding);
 }
 
 .gallery__pin-button--left {
-	left: var(--horizontal-padding);
+	inset-inline-start: var(--horizontal-padding);
 }
 
 .gallery__pin-button--right {
-	right: var(--horizontal-padding);
+	inset-inline-end: var(--horizontal-padding);
 }
 
 .gallery__pin-button--center {
-	left: 50%;
-	transform: translateX(-50%);
+	inset-inline-start: 50%;
+	transform: translateX(calc(var(--transform-direction) * 50%));
 }
 
 .gallery__item__line {
 	width: 3.5rem;
 	height: 0.2rem;
 	background-color: rgb(var(--color-foreground));
+	margin-block: 2rem;
 }
 
 .gallery__item__line--left {
-	margin: 2rem auto 2rem 0;
+	margin-inline-start: 0;
+	margin-inline-end: auto;
 }
 
 .gallery__item__line--center {
-	margin: 2rem auto;
+	margin-inline: auto;
 }
 
 .gallery__item__line--right {
-	margin: 2rem 0 2rem auto;
+	margin-inline-start: auto;
+	margin-inline-end: 0;
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {

@@ -1,11 +1,11 @@
 sticky-cart {
   transition: transform 300ms ease;
   z-index: 3;
-  right: 1.5rem;
+  inset-inline-end: var(--right-position);
 }
 
 sticky-cart.open {
-  transform: translateY(calc(-100% - 1.5rem));
+  transform: translateY(0);
 }
 
 .sticky-cart__inner {
@@ -54,7 +54,7 @@ button.sticky-cart__submit {
     grid-template-columns: auto 1fr auto;
   }
   .disclosure__list-wrapper--sticky-variant-mobile {
-    left: calc(50% - 10rem);
+    inset-inline-start: calc(50% - 10rem);
     width: 20rem;
   }
   sticky-cart details-disclosure > details {
@@ -69,7 +69,7 @@ button.sticky-cart__submit {
 .stick-cart__variant-select-mobile__button {
   margin-bottom: 0;
   white-space: normal;
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 button.stick-cart__variant-select-mobile__button .icon {
@@ -83,13 +83,13 @@ button.stick-cart__variant-select-mobile__button .icon {
 
 @media screen and (min-width: 750px) {
   sticky-cart {
-    right: 5rem;
+    --right-position: 5rem;
   }
 }
 
 @media screen and (min-width: 990px) {
   sticky-cart {
-    right: max(
+    --right-position: max(
         5rem,
         calc((100vw - var(--page-width) + 10rem) / 2)
       );

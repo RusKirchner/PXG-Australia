@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "Zdielať na Facebooku",
         "share_on_twitter": "Tweetovať na Twitteri",
-        "share_on_pinterest": "Pripnúť na Pintereste"
+        "share_on_pinterest": "Pripnúť na Pintereste",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Pokračovať v nákupe",
@@ -33,10 +35,21 @@
       "label": "Stránkovanie",
       "page": "Stránka {{ number }}",
       "next": "Nasledujúca stránka",
-      "previous": "Predchádzajúca stránka"
+      "previous": "Predchádzajúca stránka",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "Vyhľadať"
+      "search": "Vyhľadať",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "Zobraziť môj košík ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "Posunúť doprava",
       "previous_slide": "Posunúť doľava",
       "name": "Jazdec"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "celkový počet recenzií",
     "star_reviews_info": "Počet hviezdičiek: {{ rating_value }}/{{ rating_max }}",
     "collapsible_content_title": "Obsah s možnosťou zbalenia",
-    "complementary_products": "Doplnkové produkty"
+    "complementary_products": "Doplnkové produkty",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -97,7 +140,12 @@
         "other": "Počet komentárov: {{ count }}",
         "few": "Počet komentárov: {{ count }}",
         "many": "Počet komentárov: {{ count }}"
-      }
+      },
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -153,7 +201,20 @@
       "include_taxes": "Vrátane dane.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Doprava</a> sa vypočíta pri platbe.",
       "choose_options": "Vybrať možnosti",
-      "choose_product_options": "Vyberte možnosti pre: {{ product_name }}"
+      "choose_product_options": "Vyberte možnosti pre: {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "quick_view": "Quick view a product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "Galéria médií"
@@ -193,7 +254,10 @@
       "clear_filter": "Odstrániť filter",
       "filter_selected_accessibility": "{{ type }} (vybrané filtre: {{ count }})",
       "show_more": "Zobraziť viac",
-      "show_less": "Zobraziť menej"
+      "show_less": "Zobraziť menej",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -214,7 +278,13 @@
         "other": "Pre výraz „{{ terms }}“ sa našiel tento počet výsledkov: {{ count }}",
         "few": "Pre výraz „{{ terms }}“ sa našiel tento počet výsledkov: {{ count }}",
         "many": "Pre výraz „{{ terms }}“ sa našiel tento počet výsledkov: {{ count }}"
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "Košík"
@@ -229,11 +299,27 @@
         "post_success": "Ďakujeme, že ste nás kontaktovali. Budeme sa vám venovať čo najskôr.",
         "error_heading": "Upravte tieto údaje:",
         "title": "Kontaktný formulár"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Stránka sa nenašla",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -245,7 +331,11 @@
         "other": "Počet položiek: {{ count }}",
         "few": "Počet položiek: {{ count }}",
         "many": "Počet položiek: {{ count }}"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "Váš košík",
@@ -273,7 +363,13 @@
       "login": {
         "title": "Máte konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prihláste sa</a> a prejdite pokladňou rýchlejšie."
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "Spôsoby platby"
@@ -285,7 +381,8 @@
     },
     "featured_collection": {
       "view_all": "Zobraziť všetko",
-      "view_all_label": "Pozrite si všetky produkty z kolekcie {{ collection_name }}"
+      "view_all_label": "Pozrite si všetky produkty z kolekcie {{ collection_name }}",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "Zobraziť všetko"
@@ -312,7 +409,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -325,6 +423,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -338,7 +440,8 @@
       "title": "Konto",
       "details": "Podrobnosti o konte",
       "view_addresses": "Zobraziť adresy",
-      "return": "Späť na podrobnosti o konte"
+      "return": "Späť na podrobnosti o konte",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "Konto",
     "log_in": "Prihlásiť sa",
@@ -440,7 +543,8 @@
       "tracking_number": "Sledovacie číslo",
       "subtotal": "Medzisúčet",
       "total_duties": "Clá"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -455,6 +559,21 @@
       "expired": "Platnosť uplynula",
       "copy_code_success": "Kód sa úspešne skopíroval",
       "print_gift_card": "Tlačiť"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

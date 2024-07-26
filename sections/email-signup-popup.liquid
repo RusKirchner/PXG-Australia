@@ -26,23 +26,40 @@
             {%- if section.settings.image != blank -%}
               <div class="email-signup-popup__media media h100">
                 {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | divided_by: 3 | times: 2 | at_least: 1100 }}px, (min-width: 750px) calc(100vw * 0.67), 100vw{%- endcapture -%}
+                {%-liquid
+                  assign image_class = ''
+                  if section.settings.image_mobile != blank
+                    assign image_class = "small-hide"
+                  endif
+                -%}
                 {{ section.settings.image | image_url: width: 1500 | image_tag:
                   loading: 'lazy',
                   sizes: sizes,
-                  widths: '165, 360, 535, 700, 875, 1070, 1500'
+                  widths: '165, 360, 535, 700, 875, 1070, 1500',
+                  class: image_class
                 }}
+                {%- if section.settings.image_mobile != blank -%}
+                  {{ section.settings.image_mobile | image_url: width: 1500 | image_tag:
+                    loading: 'lazy',
+                    sizes: '100vw',
+                    widths: '165, 360, 535, 700, 875',
+                    class: 'medium-hide large-up-hide'
+                  }}
+                {%- endif -%}
               </div>
             {%- endif -%}  
             <div class="email-signup-popup__content-wrapper email-signup-popup__content-wrapper--{{ section.settings.content_position }} por">
-              <div class="email-signup-popup__content w100">
-                {%- if section.settings.heading != blank -%}
-                  <h2 class="email-signup-popup__content__heading h1 font-heading-extra-bold">{{ section.settings.heading }}</h2>
-                {%- endif -%}
-                {%- if section.settings.description != blank -%}
-                  <div class="email-signup-popup__text rte small-margin-top">
-                    {{ section.settings.description }}
-                  </div>
-                {%- endif -%}
+              <div class="email-signup-popup__content w100 h100 flex flex-column justify-space-between">
+                <div>
+                  {%- if section.settings.heading != blank -%}
+                    <h2 class="email-signup-popup__content__heading font-heading-extra-bold">{{ section.settings.heading }}</h2>
+                  {%- endif -%}
+                  {%- if section.settings.description != blank -%}
+                    <div class="email-signup-popup__text rte small-margin-top">
+                      {{ section.settings.description }}
+                    </div>
+                  {%- endif -%}
+                </div>
                 {%- form 'customer', id: 'ContactPopup', class: 'email-signup-popup__newsletter element-small-margin-top' -%}
                   <input type="hidden" name="contact[tags]" value="newsletter">
                   {%- if form.posted_successfully? -%}
@@ -78,7 +95,7 @@
                       </label>
                     </div>
                     <button type="submit" class="button newsletter__button email-signup-popup__submit-button" name="commit" id="ContactPopupSubscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                      {%- render 'icon-arrow' -%}
+                      {%- render 'icon-arrow', custom_classes: 'icon-revert-in-rtl' -%}
                     </button>
                   </div>
                 {%- endform -%}
@@ -102,7 +119,6 @@
     {%- if template.suffix == 'ajax' or request.design_mode -%}
     <div class="section-styles">  
       {{ 'component-rte.css' | asset_url | stylesheet_tag }}
-      {{ 'component-popup.css' | asset_url | stylesheet_tag }}
       {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
       {{ 'section-email-signup-popup.css' | asset_url | stylesheet_tag }}
       {{ 'component-virtual-checkbox.css' | asset_url | stylesheet_tag }}
@@ -126,6 +142,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.email-signup-popup.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.email-signup-popup.settings.image_mobile.label"
     },
     {
       "type": "text",

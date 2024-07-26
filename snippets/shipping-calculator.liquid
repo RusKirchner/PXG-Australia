@@ -1,4 +1,4 @@
-<shipping-calculator class="shipping-calculator{% if add_classes %} {{ add_classes }}{% endif %}">
+<shipping-calculator class="shipping-calculator{% if add_classes %} {{ add_classes }}{% endif %}" data-delivery-date-one="{{ 'general.shipping_calculator.delivery_date_one' | t: count: '[count]' | escape }}" data-delivery-date-many="{{ 'general.shipping_calculator.delivery_date_many' | t: count: '[count]' | escape }}" data-delivery-date-range="{{ 'general.shipping_calculator.delivery_date_range' | t: minimum: '[minimum]', maximum: '[maximum]' | escape }}">
   <div>
     <label for="AddressCountryCalculator" class="field__label text-small font-body-bold uppercase">
       {{ 'customer.addresses.country' | t }}
@@ -12,7 +12,11 @@
         autocomplete="country"
         class="select__select"
       >
-        {{ all_country_option_tags }}
+        {%- if settings.shipping_calculator_country_list == 'all' -%}
+          {{ all_country_option_tags }}
+        {%- else -%}
+          {{ country_option_tags }}
+        {%- endif -%}
       </select>
       {% render 'icon-caret' %}
     </div>

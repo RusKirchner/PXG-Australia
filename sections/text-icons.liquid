@@ -14,23 +14,21 @@
     height: fit-content;
     {%- if section.settings.text_position == 'bottom' -%}
       {%- if section.settings.column_alignment == 'left' -%}
-        margin-right: auto;
+        margin-inline-end: auto;
       {%- elsif section.settings.column_alignment == 'right' -%}
-        margin-left: auto;
+        margin-inline-start: auto;
       {%- else -%}
-        margin-left: auto;
-        margin-right: auto;  
-      {%- endif -%} 
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      {%- endif -%}
     {%- endif -%}
   }
   {%- if section.settings.border_opacity > 0 or section.settings.blur_background -%}
     .text-icons__card__icon-wrapper--{{ section.id }}:before {
       content: "";
       position: absolute;
-      top: calc(var(--border-width) * (-1));
-      bottom: calc(var(--border-width) * (-1));
-      left: calc(var(--border-width) * (-1));
-      right: calc(var(--border-width) * (-1));
+      inset-block: calc(var(--border-width) * (-1));
+      inset-inline: calc(var(--border-width) * (-1));
     {%- if section.settings.border_opacity > 0 -%}
         border: var(--border-width) solid rgb(var(--color-{%- unless section.settings.highlight_border -%}foreground{%- else -%}highlight{%- endunless -%}), {{ section.settings.border_opacity | divided_by: 100.00 }});
     {%- endif -%}
@@ -39,17 +37,17 @@
           background-color: rgb(var(--color-foreground), 0.04);
         {%- else -%}
       background-color: rgb(var(--color-highlight), 0.04);
-        {%- endunless -%}  
-    {%- endif -%}  
+        {%- endunless -%}
+    {%- endif -%}
       border-radius: {%- if section.settings.border_shape == 'circle' -%}50%{%- else -%}0.5rem{%- endif -%};
     }
   {%- endif -%}
 
   .text-icons__card__icon-wrapper--{{ section.id }} .text-icons__card__icon {
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(var(--transform-direction) * 50%), -50%);
     width: calc(100% - var(--border-spacing));
     height: auto;
     min-width: 2rem;
@@ -60,7 +58,7 @@
       gap: calc(1.5rem + var(--border-width));
       {%- if section.settings.text_position == 'left' -%}
         flex-direction: row-reverse;
-      {%- endif -%}  
+      {%- endif -%}
     }
     .text-icons__card__info--{{ section.id }} {
       width: calc(100% - 1.5rem - var(--icon-width) - var(--border-width));
@@ -68,9 +66,9 @@
   {%- else -%}
     .text-icons__card__info--{{ section.id }} {
       margin-top: calc(1.5rem + var(--border-width));
-    }  
-  {%- endif -%} 
-  
+    }
+  {%- endif -%}
+
   {%- if section.settings.text_position == 'bottom' and section.settings.enable_heading_in_box -%}
     .card__heading--{{ section.id }} {
       padding: 1rem 1.6rem;
@@ -78,13 +76,13 @@
       font-weight: var(--font-heading-weight-medium);
       width: fit-content;
       {%- if section.settings.column_alignment != 'left' -%}
-        margin-left: auto;
+        margin-inline-start: auto;
       {%- endif -%}
       {%- if section.settings.column_alignment != 'right' -%}
-        margin-right: auto;
-      {%- endif -%}  
+        margin-inline-end: auto;
+      {%- endif -%}
     }
-  {%- endif -%}  
+  {%- endif -%}
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -94,6 +92,8 @@
       --border-spacing: {%- if section.settings.border_opacity > 0 or section.settings.blur_background -%}{{ section.settings.border_spacing }}{%- else -%}0{%- endif -%}px;
     }
   }
+
+  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -108,67 +108,119 @@
   endif
 -%}
 
-<div class="text-icons color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding isolate">
-    {%- render 'section-heading', show_desktop_slider: false, show_tablet_slider: false, show_mobile_slider: show_mobile_slider -%}
-    <slider-component class="slider-mobile-gutter por{% if show_mobile_slider %} slider-component-mobile{% endif %}"{% if section.settings.title != blank and show_mobile_slider %} data-outside-prev-button-id="Slider-{{ section.id }}-prev-button" data-outside-next-button-id="Slider-{{ section.id }}-next-button"{% endif %}>
-      <ul class="text-icons__list grid grid--{% if section.settings.text_position == 'bottom' %}{{ section.settings.columns_mobile }}{% else %}1{% endif %}-col grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
+<div class="text-icons{% unless section.settings.enable_section_box_layout %} color-{{ section.settings.color_scheme }} isolate gradient{% endunless %}">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- if section.settings.enable_section_box_layout -%}<div class="color-{{ section.settings.color_scheme }} isolate gradient section__box">{%- endif -%}
+      {%- render 'section-heading',
+        show_desktop_slider: false,
+        show_tablet_slider: false,
+        show_mobile_slider: show_mobile_slider
+      -%}
+      <slider-component
+        class="slider-mobile-gutter por{% if show_mobile_slider %} slider-component-mobile{% endif %}"
+        {% if section.settings.title != blank and show_mobile_slider %}
+          data-outside-prev-button-id="Slider-{{ section.id }}-prev-button"
+          data-outside-next-button-id="Slider-{{ section.id }}-next-button"
+        {% endif %}
       >
-        {%- for block in section.blocks -%}
-          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="text-icons__item grid__item{% if section.settings.auto_fit %} flex-grow-1{% endif %}{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} {{ section.settings.column_alignment }}" {{ block.shopify_attributes }}>            
-            <div class="text-icons__card text-icons__card--{{ section.id }}{% if block.settings.link %} por{% endif %}{% if section.settings.text_position != 'bottom' %} flex{% endif %}">
-							<div class="text-icons__card__icon-wrapper text-icons__card__icon-wrapper--{{ section.id }} flex{% if section.settings.highlight_icon %} highlight{% endif %} por">
-								<div class="w100 {% if block.settings.custom_icon != blank %}media{% else %}por{% if section.settings.border_opacity > 0 or section.settings.blur_background %} overflow-hidden{% endif %}{% endif %} media--{{ section.settings.border_shape }} media--transparent">
-								{%- if block.settings.custom_icon != blank -%}  
+        <ul
+          class="text-icons__list grid grid--{% if section.settings.text_position == 'bottom' %}{{ section.settings.columns_mobile }}{% else %}1{% endif %}-col grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile{% endif %}"
+          id="Slider-{{ section.id }}"
+          role="list"
+        >
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign wrapper_tag = 'div'
+              if block.settings.title == blank and block.settings.subheading == blank and block.settings.link != blank
+                assign wrapper_tag = 'a'
+              endif
+            -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="text-icons__item grid__item{% if section.settings.auto_fit %} flex-grow-1{% endif %}{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} {{ section.settings.column_alignment }}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="text-icons__card text-icons__card--{{ section.id }}{% if block.settings.link %} por{% endif %}{% if section.settings.text_position != 'bottom' %} flex{% endif %}">
+                <{{ wrapper_tag }} class="text-icons__card__icon-wrapper text-icons__card__icon-wrapper--{{ section.id }} flex{% if section.settings.highlight_icon %} highlight{% endif %} por"
+                  {% if wrapper_tag == 'a' %}
+                    href="{{ block.settings.link }}"
+                  {% endif %}>
+                  <div class="w100 {% if block.settings.custom_icon != blank %}media{% else %}por{% if section.settings.border_opacity > 0 or section.settings.blur_background %} overflow-hidden{% endif %}{% endif %} media--{{ section.settings.border_shape }} media--transparent">
+                    {%- if block.settings.custom_icon != blank -%}
                       {%- capture sizes -%}(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px){%- endcapture -%}
-											{{ block.settings.custom_icon | image_url: width: 1420 | image_tag:
-												loading: 'lazy',
-												sizes: sizes,
-												widths: '275, 550, 710, 1420',
-												class: 'text-icons__card__icon zoom'
-											}}
-                {%- else -%}
-                    {%- render 'icon-picker', icon: block.settings.icon, add_classes: 'text-icons__card__icon w100 zoom' -%}  
-								{%- endif -%}
-                </div>
-							</div>
-              <div class="text-icons__card__info text-icons__card__info--{{ section.id }}">
-                {%- if block.settings.title != blank -%}
-                  <h{{ heading_icon_tag }} class="card__heading h4 card__heading--{{ section.id }} {% unless section.settings.text_position == 'bottom' and section.settings.enable_heading_in_box %}font-heading-bold card__heading--letter-spacing{% else %}text-icons__card__heading-box flex justify-center align-center{% endunless %}">
-                    {%- if block.settings.link -%}
-                      <a href="{{ block.settings.link }}" id="CardLink-{{ section.id }}-{{ block.id }}" class="full-unstyled-link" aria-labelledby="CardLink-{{ section.id }}-{{ block.id }}">
-                        {{ block.settings.title | escape }}
-                      </a>
+                      {{
+                        block.settings.custom_icon
+                        | image_url: width: 1420
+                        | image_tag:
+                          loading: 'lazy',
+                          sizes: sizes,
+                          widths: '275, 550, 710, 1420',
+                          class: 'text-icons__card__icon zoom'
+                      }}
                     {%- else -%}
-                      {{ block.settings.title | escape }}
-                    {%- endif -%}  
-                  </h{{ heading_icon_tag }}>
-                  {%- if block.settings.subheading != blank -%}
-                    <p class="subtitle margin0 margin-top-1rem subtitle--small">{{ block.settings.subheading }}</p>
-                  {%- endif -%}
-                {%- elsif block.settings.subheading != blank -%}
-                  <h{{ heading_icon_tag }} class="subtitle card__heading">
-                    {%- if block.settings.link -%}
-                      <a href="{{ block.settings.link }}" id="CardLink-{{ section.id }}-{{ block.id }}" class="full-unstyled-link" aria-labelledby="CardLink-{{ section.id }}-{{ block.id }}">
-                        {{ block.settings.subheading | escape }}
-                      </a>
-                    {%- else -%}
-                      {{ block.settings.subheading | escape }}
+                      {%- render 'icon-picker',
+                        icon: block.settings.icon,
+                        add_classes: 'text-icons__card__icon w100 zoom'
+                      -%}
                     {%- endif -%}
-                  </h{{ heading_icon_tag }}>
-                {%- endif -%}
+                  </div>
+                </{{ wrapper_tag }}>
+                <div class="text-icons__card__info text-icons__card__info--{{ section.id }}">
+                  {%- if block.settings.title != blank -%}
+                    <h{{ heading_icon_tag }} class="card__heading h5 card__heading--{{ section.id }} {% unless section.settings.text_position == 'bottom' and section.settings.enable_heading_in_box %}font-heading-bold{% else %}text-icons__card__heading-box flex justify-center align-center{% endunless %}">
+                      {%- if block.settings.link -%}
+                        <a
+                          href="{{ block.settings.link }}"
+                          id="CardLink-{{ section.id }}-{{ block.id }}"
+                          class="full-unstyled-link"
+                          aria-labelledby="CardLink-{{ section.id }}-{{ block.id }}"
+                          {% if block.settings.open_link_in_new_tab %}
+                            target="_blank"
+                          {% endif %}
+                        >
+                          {{ block.settings.title | escape }}
+                        </a>
+                      {%- else -%}
+                        {{ block.settings.title | escape }}
+                      {%- endif -%}
+                    </h{{ heading_icon_tag }}>
+                    {%- if block.settings.subheading != blank -%}
+                      <p class="subtitle margin0 margin-top-1rem subtitle--small">{{ block.settings.subheading }}</p>
+                    {%- endif -%}
+                  {%- elsif block.settings.subheading != blank -%}
+                    <h{{ heading_icon_tag }} class="subtitle card__heading">
+                      {%- if block.settings.link -%}
+                        <a
+                          href="{{ block.settings.link }}"
+                          id="CardLink-{{ section.id }}-{{ block.id }}"
+                          class="full-unstyled-link"
+                          aria-labelledby="CardLink-{{ section.id }}-{{ block.id }}"
+                          {% if block.settings.open_link_in_new_tab %}
+                            target="_blank"
+                          {% endif %}
+                        >
+                          {{ block.settings.subheading | escape }}
+                        </a>
+                      {%- else -%}
+                        {{ block.settings.subheading | escape }}
+                      {%- endif -%}
+                    </h{{ heading_icon_tag }}>
+                  {%- endif -%}
+                </div>
               </div>
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
+            </li>
+          {%- endfor -%}
+        </ul>
 
-      {%- if show_mobile_slider and section.settings.title == blank -%}
-        {%- render 'slider-controls', wrapper_classes: 'medium-hide large-up-hide slider-buttons--box element-small-margin-top', suffix_id: section.id, total_items: section.blocks.size -%}
-      {%- endif -%}
-    </slider-component>
+        {%- if show_mobile_slider and section.settings.title == blank -%}
+          {%- render 'slider-controls',
+            wrapper_classes: 'medium-hide large-up-hide slider-buttons--box element-small-margin-top',
+            suffix_id: section.id,
+            total_items: section.blocks.size
+          -%}
+        {%- endif -%}
+      </slider-component>
+    {%- if section.settings.enable_section_box_layout -%}</div>{%- endif -%}
   </div>
 </div>
 
@@ -177,6 +229,7 @@
   "name": "t:sections.text-icons.name",
   "class": "section",
   "tag": "section",
+  "max_blocks": 50,
   "settings": [
     {
       "type": "text",
@@ -272,22 +325,8 @@
       "default": false
     },
     {
-      "type": "select",
+      "type": "text_alignment",
       "id": "column_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.text-icons.settings.column_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.text-icons.settings.column_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.text-icons.settings.column_alignment.options__3.label"
-        }
-      ],
       "default": "center",
       "label": "t:sections.text-icons.settings.column_alignment.label"
     },
@@ -295,6 +334,12 @@
       "type": "checkbox",
       "id": "highlight_icon",
       "label": "t:sections.text-icons.settings.highlight_icon.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
       "default": false
     },
     {
@@ -381,6 +426,10 @@
         {
           "value": "2",
           "label": "t:sections.text-icons.settings.columns_mobile.options__2.label"
+        },
+        {
+          "value": "3",
+          "label": "t:sections.text-icons.settings.columns_mobile.options__3.label"
         }
       ],
       "default": "1",
@@ -1419,6 +1468,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.text-icons.blocks.text-icon.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_link_in_new_tab",
+          "label": "t:sections.text-icons.blocks.text-icon.settings.open_link_in_new_tab.label",
+          "default": false
         }
       ]
     }

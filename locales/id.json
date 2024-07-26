@@ -14,7 +14,8 @@
       "alt_text": {
         "share_on_facebook": "Bagikan di Facebook",
         "share_on_twitter": "Tweet di Twitter",
-        "share_on_pinterest": "Pin di Pinterest"
+        "share_on_pinterest": "Pin di Pinterest",
+        "share_by_email": "Share by email"
       },
       "links": {
         "twitter": "Twitter",
@@ -25,7 +26,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
     },
     "continue_shopping": "Lanjutkan belanja",
@@ -33,10 +35,21 @@
       "label": "Pembagian Halaman",
       "page": "Halaman {{ number }}",
       "next": "Halaman berikutnya",
-      "previous": "Halaman sebelumnya"
+      "previous": "Halaman sebelumnya",
+      "load_more": "Load more",
+      "load_previous_items": "Load previous items"
     },
     "search": {
-      "search": "Cari"
+      "search": "Cari",
+      "clear": "Clear",
+      "view_all_results": "View all results",
+      "type": {
+        "products": "Products",
+        "articles": "Articles",
+        "collections": "Collections",
+        "pages": "Pages",
+        "suggestions": "Suggestions"
+      }
     },
     "cart": {
       "view": "Lihat keranjang saya ({{ count }})",
@@ -53,6 +66,34 @@
       "next_slide": "Geser kanan",
       "previous_slide": "Geser kiri",
       "name": "Slider"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    },
+    "shipping_calculator": {
+      "heading": "Shipping calculator",
+      "errors_heading": "Errors",
+      "carriers": "Available shipping carriers",
+      "button": "Calculate",
+      "do_not_ship": "We do not ship to this destination.",
+      "delivery_date_one": "{{ count }} business day",
+      "delivery_date_many": "{{ count }} business days",
+      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
+      "expired_msg": "The countdown timer has been expired."
+    },
+    "floating_bar": {
+      "recently_viewed": "Recently viewed",
+      "recently_viewed_empty": "There are no recently viewed products.",
+      "recently_viewed_open": "Open recently viewed box",
+      "back_to_top": "Back to top"
     }
   },
   "newsletter": {
@@ -76,7 +117,9 @@
     "total_reviews": "ulasan keseluruhan",
     "star_reviews_info": "{{ rating_value }} dari {{ rating_max }} bintang",
     "collapsible_content_title": "Konten yang dapat ditutup",
-    "complementary_products": "Produk pelengkap"
+    "complementary_products": "Produk pelengkap",
+    "skip_to_product_grid": "Skip to product grid",
+    "navigation_toggle": "Navigation toggle in sticky header"
   },
   "blogs": {
     "article": {
@@ -95,7 +138,12 @@
       "back_to_blog": "Kembali ke blog",
       "share": "Bagikan artikel ini",
       "success": "Komentar Anda berhasil diposting! Terima kasih!",
-      "success_moderated": "Komentar Anda berhasil diposting. Kami akan memublikasikannya sebentar lagi, blog kami sedang dimoderasi."
+      "success_moderated": "Komentar Anda berhasil diposting. Kami akan memublikasikannya sebentar lagi, blog kami sedang dimoderasi.",
+      "author_html": "Posted by <strong>{{ author }}</strong>",
+      "previous": "Previous",
+      "next": "Next",
+      "tags_all": "All",
+      "continue": "Continue"
     }
   },
   "onboarding": {
@@ -151,7 +199,20 @@
       "include_taxes": "Termasuk pajak.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Biaya pengiriman</a> dihitung saat checkout.",
       "choose_options": "Pilih opsi",
-      "choose_product_options": "Pilih opsi untuk {{ product_name }}"
+      "choose_product_options": "Pilih opsi untuk {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "quick_view": "Quick view a product",
+      "number_of_reviews": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} review"
+      },
+      "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
     "modal": {
       "label": "Galeri media"
@@ -185,7 +246,10 @@
       "clear_filter": "Hapus filter",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filter dipilih)",
       "show_more": "Selengkapnya",
-      "show_less": "Sembunyikan lainnya"
+      "show_less": "Sembunyikan lainnya",
+      "show_filter": "Show filter",
+      "hide_filter": "Hide filter",
+      "categories_block_label": "Categories"
     }
   },
   "templates": {
@@ -202,7 +266,13 @@
       "results_with_count_and_term": {
         "one": "{{ count }} hasil ditemukan untuk “{{ terms }}”",
         "other": "{{ count }} hasil ditemukan untuk “{{ terms }}”"
-      }
+      },
+      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "article": "Articles",
+      "suggestions": "Suggestions"
     },
     "cart": {
       "cart": "Keranjang"
@@ -217,11 +287,27 @@
         "post_success": "Terima kasih sudah menghubungi kami. Kami akan segera menghubungi Anda.",
         "error_heading": "Mohon sesuaikan:",
         "title": "Formulir kontak"
+      },
+      "address": {
+        "heading": "Our address"
+      },
+      "opening_hour": {
+        "heading": "Opening hour"
       }
     },
     "404": {
       "title": "Halaman tidak ditemukan",
       "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Product compare",
+      "add_button": "Add {{ product_title }} to the comparison list",
+      "add_to_compare": "Add to compare",
+      "popup": "Product compare popup",
+      "empty": "There are no products in comparison list.",
+      "warning": "Please select at least 2 products to compare.",
+      "success": "Added to the comparison list.",
+      "remove": "Remove"
     }
   },
   "sections": {
@@ -231,7 +317,11 @@
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} item"
-      }
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Go to {{ title }}"
     },
     "cart": {
       "title": "Keranjang Anda",
@@ -259,7 +349,13 @@
       "login": {
         "title": "Sudah punya akun?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Login</a> untuk checkout lebih cepat."
-      }
+      },
+      "note_drawer": "Note",
+      "apply": "Apply",
+      "shipping": "Shipping",
+      "view_cart": "View cart",
+      "cart_success": "The product has been added to the cart.",
+      "cart_totals": "Cart totals"
     },
     "footer": {
       "payment": "Metode pembayaran"
@@ -271,7 +367,8 @@
     },
     "featured_collection": {
       "view_all": "Lihat semua",
-      "view_all_label": "Lihat semua produk dalam koleksi {{ collection_name }}"
+      "view_all_label": "Lihat semua produk dalam koleksi {{ collection_name }}",
+      "slider": "Slider"
     },
     "collection_list": {
       "view_all": "Lihat semua"
@@ -298,7 +395,8 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run."
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "group_item": "Group #{{ index }}"
     },
     "collection_banner": {
       "load_collection_icon": "Collection with icon",
@@ -311,6 +409,10 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
+    },
+    "gallery": {
+      "list": "Gallery items",
+      "item_id_label": "Gallery item #{{ item_number }}"
     }
   },
   "localization": {
@@ -324,7 +426,8 @@
       "title": "Akun",
       "details": "Detail akun",
       "view_addresses": "Lihat alamat",
-      "return": "Kembali ke detail Akun"
+      "return": "Kembali ke detail Akun",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "Akun",
     "activate_account": {
@@ -426,7 +529,8 @@
       "tracking_number": "Nomor pelacakan",
       "subtotal": "Subtotal",
       "total_duties": "Bea cukai"
-    }
+    },
+    "back_to_login": "Back to the login page"
   },
   "gift_cards": {
     "issued": {
@@ -441,6 +545,21 @@
       "expired": "Kedaluwarsa",
       "copy_code_success": "Kode berhasil disalin",
       "print_gift_card": "Cetak"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient email (optional)",
+      "name": "Name",
+      "message_label": "Message ( optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

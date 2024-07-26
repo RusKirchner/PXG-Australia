@@ -80,7 +80,7 @@ if (!customElements.get('recipient-form')) {
       }
 
       onCartChange(event) {
-        if(event.detail.productVariantId.toString() === this.currentProductVariantId) {
+        if(event.detail.productVariantId && event.detail.productVariantId.toString() === this.currentProductVariantId) {
           this.resetRecipientForm();
         }
       }

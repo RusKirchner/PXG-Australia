@@ -152,8 +152,11 @@ function reloadSlideshow(event) {
   const blockSelectedIsLookbookItem = event.target.classList.contains('lookbook__hotspot');
   if (!blockSelectedIsLookbookItem) return;
 
-  event.target.classList.add('ignore-close');
-  event.target.open();
+  if(!event.target.classList.contains('lookbook__hotspot--with-slider')) {
+    event.target.open();
+  } else {
+    event.target.closest('lookbook-slider').openProductTarget(event.target.querySelector('button'));
+  }
 }
 
 /**
@@ -166,8 +169,9 @@ function reloadSlideshow(event) {
   const blockSelectedIsLookbookItem = event.target.classList.contains('lookbook__hotspot');
   if (!blockSelectedIsLookbookItem) return;
 
-  event.target.classList.remove('ignore-close');
-  event.target.closeWithClosingClass();
+  if(!event.target.classList.contains('lookbook__hotspot--with-slider')) {
+    event.target.closeWithClosingClass();
+  }
 }
 
 /**

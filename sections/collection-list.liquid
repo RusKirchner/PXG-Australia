@@ -15,6 +15,21 @@
   if section.settings.enable_desktop_slider and section.blocks.size > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
+
+  assign section_additional_buttons = false
+
+  assign small_title_mobile = false
+  assign small_title_tablet = false
+  assign small_title_desktop = false
+  if columns_mobile_int > 1
+    assign small_title_mobile = true
+  endif
+  if columns_tablet_int > 2
+    assign small_title_tablet = true
+  endif
+  if section.settings.columns_desktop > 4
+    assign small_title_desktop = true
+  endif
 -%}
 
 {%- style -%}
@@ -29,27 +44,32 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding {% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient{% else %}isolate page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
+  {%- if section.settings.enable_section_box_layout -%}
+    <div class="section__box{% if section.settings.enable_section_box_layout %} color-{{ section.settings.color_scheme }} gradient{% endif %}">
+  {%- endif -%}
+    {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
+      {%- capture section_additional_buttons -%}
+        <a href="{{ routes.collections_url }}" class="button button--secondary button__section-heading button--semi-bold button--medium" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">
+          {%- render 'icon-view-all', add_classes: 'light' -%}
+          <span>{{ 'sections.collection_list.view_all' | t }}</span>
+        </a>
+      {%- endcapture -%}
+    {%- endif -%}
     {%- if section.settings.title != blank -%}
-      <div class="collection-list-wrapper isolate page-width{% if section.settings.full_width %}--full{% endif %}">
-        {%- render 'section-heading', show_desktop_slider: show_desktop_slider, show_tablet_slider: show_tablet_slider, show_mobile_slider: show_mobile_slider -%}
+      <div class="collection-list-wrapper isolate{% unless section.settings.enable_section_box_layout %} page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
+        {%- render 'section-heading', show_desktop_slider: show_desktop_slider, show_tablet_slider: show_tablet_slider, show_mobile_slider: show_mobile_slider, section_additional_buttons: section_additional_buttons -%}
       </div>
     {%- endif -%}
-    <slider-component class="por slider-mobile-gutter page-width{% if section.settings.full_width %}--full{% if show_desktop_slider or show_tablet_slider or show_mobile_slider %} slider-component-full-width{% endif %}{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}"
+    <slider-component class="por slider-mobile-gutter{% unless section.settings.enable_section_box_layout %} page-width{% if section.settings.full_width %}--full{% if show_desktop_slider or show_tablet_slider or show_mobile_slider %} slider-component-full-width{% endif %}{% endif %}{% endunless %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}"
       {% if show_mobile_slider or show_tablet_slider or show_desktop_slider %}{% if section.settings.title != blank %}data-outside-prev-button-id="Slider-{{ section.id }}-prev-button" data-outside-next-button-id="Slider-{{ section.id }}-next-button"{% endif %}{% endif %}>
       <ul class="collection-list contains-card contains-card--collection grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider{% if section.settings.full_width %} grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_tablet_slider %} slider--tablet{% endif %}{% if show_mobile_slider %} slider--mobile{% if section.settings.full_width %} grid--peek{% endif %}{% endif %}{% endif %} collection-list--{{ section.blocks.size }}-items"
         id="Slider-{{ section.id }}"
         role="list"
       >
-        {%- liquid
-          assign columns = section.blocks.size
-          if columns > 3
-            assign columns = 3
-          endif
-        -%}
         {%- for block in section.blocks -%}
           {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
           {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
@@ -57,11 +77,16 @@
             {%- render 'card-collection',
               card_collection: block.settings.collection ,
               media_aspect_ratio: section.settings.image_ratio,
-              columns: columns,
+              columns: columns_tablet_int,
+              columns_mobile: columns_mobile_int,
               custom_image: block.settings.custom_image,
               custom_title: block.settings.custom_title,
               show_products_count: section.settings.show_products_count,
-              placeholder_image: placeholder_image 
+              placeholder_image: placeholder_image,
+              show_title: section.settings.collection_card_show_title,
+              small_title_mobile: small_title_mobile,
+              small_title_tablet: small_title_tablet,
+              small_title_desktop: small_title_desktop 
             -%}
           </li>
         {%- endfor -%}
@@ -72,13 +97,9 @@
         {%- endif -%}  
       {%- endif -%}
     </slider-component>
-
-    {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
-      <div class="center element-small-margin-top{% if show_desktop_slider %} large-up-hide{% endif %}">
-        <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">{{ 'sections.collection_list.view_all' | t }}</a>
-      </div>
-    {%- endif -%}
-  </div>
+  {%- if section.settings.enable_section_box_layout -%}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -147,7 +168,7 @@
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
-      "max": 5,
+      "max": 6,
       "step": 1,
       "default": 4,
       "label": "t:sections.collection-list.settings.columns_desktop.label"
@@ -156,6 +177,12 @@
       "type": "checkbox",
       "id": "full_width",
       "label": "t:sections.collection-list.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
       "default": false
     },
     {
@@ -175,6 +202,12 @@
       "id": "show_view_all",
       "default": false,
       "label": "t:sections.collection-list.settings.show_view_all.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_card_show_title",
+      "label": "t:sections.all.collection_card_show_title.label",
+      "default": true
     },
     {
       "type": "checkbox",
