@@ -1441,11 +1441,11 @@ back-to-top .icon {
 
 
 /* Adobe Typekit RK Image */
-:root {
+/* :root {
 --font-body-family: "Inter", sans-serif; 
 --font-heading-family:"prohibition",sans-serif;   
 }
-
+ */
 
 .table-responsive {
     display: block;
