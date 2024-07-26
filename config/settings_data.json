@@ -109,6 +109,7 @@
           "recommended_collection_list": [
 
           ],
+          "collection_card_show_title": true,
           "product_recommendations_enable": false,
           "product_recommendations_heading": "Recommendations",
           "product_recommendations_limit": 5,
@@ -673,6 +674,7 @@
           "description": "<h3>We will only send you exclusive offers for verified #PXGTroops!<\/h3><h5><br\/>This is the official PXG website for Australia and New Zealand, operated by official PXG partner, Champion Sports.<\/h5>",
           "email_placeholder": "Enter your email here",
           "notification_text": "Don't show this popup again.",
+          "tick_notification_by_default": false,
           "content_position": "right",
           "delay_time": 5,
           "disable_account_holder": true,
@@ -705,7 +707,7 @@
       },
       "316487575649303945": {
         "type": "shopify:\/\/apps\/easify-options\/blocks\/app-embed-block\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
@@ -1014,7 +1016,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "h2 {font-family: \"Prohibition\", sans-serif;}"
+
     ]
   }
 }
