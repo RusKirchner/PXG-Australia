@@ -285,7 +285,51 @@
               {%- when 'share' -%}
                 {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
                 {%- render 'main-product-share', share_url: share_url, title: product.title, block: block, featured_media: featured_media -%}
-              {%- when 'sale_box' -%}
+              
+                {%- when 'price' -%}
+                {% if product.tags contains 'putters' %}
+                <div>
+                  <div id="price-top-{{ section.id }}" {{ block.shopify_attributes }}>
+                    {%- unless product.price_varies and only_use_variant_price == false -%}
+                      <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
+                        {%-liquid
+                          unless product.quantity_price_breaks_configured?
+                            render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false  
+                          else
+                            render 'main-product-price-per-item', product: product, section: section, price_classes: 'price price--large'  
+                          endunless
+                        -%}
+                      </div>
+                    {%- else -%}
+                      {%- render 'price-varies', target: product -%} 
+                    {%- endunless -%}
+                  </div>
+                  {%- render 'main-product-volume-pricing-note', product: product, section_id: section.id, on_background_input: section.settings.use_background_input -%}
+                  {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                    <div class="product__tax caption rte margin-top-1rem">
+                      {%- if cart.taxes_included -%}
+                        {{ 'products.product.include_taxes' | t }}
+                      {%- endif -%}
+                      {%- if shop.shipping_policy.body != blank -%}
+                        {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if product != blank -%}
+                    <div {{ block.shopify_attributes }} class="margin-top-1rem">
+                      {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                      {%- form 'product', product, id: product_form_installment_id, class: 'installment text-small' -%}
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        {{ form | payment_terms }}
+                      {%- endform -%}
+                    </div>
+                  {%- endif -%}  
+                </div>
+              {% endif %}
+
+
+                
+                {%- when 'sale_box' -%}
                 <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}  {% if product.tags contains 'putters' %}putters-style{% endif %}" {{ block.shopify_attributes }}>
                   {% if product.tags contains 'putters' %}
                    {% else %}
@@ -402,6 +446,11 @@
                                 {%- render 'icon-cart-loading' -%}
                               </div>
                             </button>
+
+
+                              
+
+                            
                             {%- if show_dynamic_checkout -%}
                               {{ form | payment_button }}
                             {%- endif -%}
