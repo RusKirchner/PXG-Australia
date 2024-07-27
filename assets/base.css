@@ -1679,6 +1679,7 @@ div#infiniteoptions-container>div {
     width: calc(33.333% - 20px);
     border-right: 1px solid #000;
     padding-right: 20px;
+    padding-top: 10px;
 }
 div#infiniteoptions-container>div.shaft {
     height: calc(100% - 170px);
@@ -1725,6 +1726,13 @@ div#shopify-block-infinite_options_app_block_Fbabnq {
     font-weight: normal;
     letter-spacing: 4px;
     text-transform: uppercase;
+}
+div#infiniteoptions-container>div label {
+    font-family: 'Proxima-Nova-Semibold';
+    mibold;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 1px;
 }
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
