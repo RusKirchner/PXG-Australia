@@ -117,7 +117,7 @@
   <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-{% if tag contains 'putters' %}
+{% if product.tags contains 'putters' %}
   {% else %}
 {%- if customer.b2b? -%}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
