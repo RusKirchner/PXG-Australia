@@ -1774,6 +1774,9 @@ div#infiniteoptions-container>div label {
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em #000;
 }
+.dexterity input[type="radio"]:checked::before {
+  transform: scale(1);
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
