@@ -1798,6 +1798,22 @@ div#infiniteoptions-container>div .spb-select select {
 div#infiniteoptions-container>div .spb-select select:focus {
     border: 2px solid #000 !important;
 }
+.putters-style {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 33.333%;
+    margin-left: auto;
+}
+
+.putters-style .product-form__buttons {
+    flex-direction: column;
+    display: flex;
+}
+.configur-product-features span {
+    font-size: 16px;
+    font-family: 'Proxima-Nova';
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
