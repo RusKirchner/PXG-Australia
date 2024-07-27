@@ -1676,6 +1676,25 @@ div#infiniteoptions-container>div.shaft {
 div#infiniteoptions-container>div.grip {
     border: 0;
 }
+.configur-product-main {
+    display: flex;
+    margin: 0 !important;
+    column-gap: 20px;
+}
+
+div#shopify-block-infinite_options_app_block_Fbabnq {
+    margin: 0;
+}
+
+.configur-product {
+    width: calc(33.333% - 20px);
+    border-right: 1px solid #000;
+    padding-right: 20px;
+}
+
+.configur-product.column-3 {
+    border: 0;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
