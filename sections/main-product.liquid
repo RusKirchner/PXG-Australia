@@ -217,10 +217,26 @@
                 <!-- configur product start -->
                 
                 <div class="configur-product-main">
+                  <!-- Configur Product Head -->
                   {%- if product.metafields.custom.configure_head_image and product.metafields.custom.configure_head_heading != blank -%}
-                    <div class="configur-product column-1">
-                      {{ product.metafields.custom.configure_head_heading | metafield_tag }}
+                    <div class="configur-product column-1">     
                       {{ product.metafields.custom.configure_head_image | metafield_tag }}
+                      <h3>{{ product.metafields.custom.configure_head_heading | metafield_tag }}</h3>
+                    </div>
+                  {% endif %}
+
+                  <!-- Configur Product Shaft -->
+                  {%- if product.metafields.custom.shaft_image and product.metafields.custom.custom.shaft_heading != blank -%}
+                    <div class="configur-product column-2">     
+                      {{ product.metafields.custom.shaft_image | metafield_tag }}
+                      <h3>{{ product.metafields.custom.shaft_heading | metafield_tag }}</h3>
+                    </div>
+                  {% endif %}
+                  <!-- Configur Product Grip -->
+                  {%- if product.metafields.custom.grip_image and product.metafields.custom.grip_heading != blank -%}
+                    <div class="configur-product column-3">     
+                      {{ product.metafields.custom.grip_image | metafield_tag }}
+                      <h3>{{ product.metafields.custom.grip_heading | metafield_tag }}</h3>
                     </div>
                   {% endif %}
                 </div>
