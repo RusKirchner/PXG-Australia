@@ -213,6 +213,17 @@
                 </div>
               {%- when 'description' -%}
                 {%- render 'main-product-description', product: product, section: section, block: block -%}
+
+                <!-- configur product start -->
+                
+                <div class="configur-product-main">
+                  {%- if product.metafieldscustom.configure_head_image != blank -%}
+                    <div class="configur-product column-1">
+                      {{ product.metafieldscustom.configure_head_image | metafield_tag }}
+                    </div>
+                  {% endif %}
+                </div>
+                <!-- configur product End -->
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
