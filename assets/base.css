@@ -1734,6 +1734,36 @@ div#infiniteoptions-container>div label {
     color: #000;
     letter-spacing: 1px;
 }
+.dexterity>span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dexterity>span label {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+}
+
+.dexterity>span label input {
+    margin: 0 8px 0 0 !important;
+}
+
+.dexterity>span label::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0840/6754/9491/files/radio-before.svg?v=1722058926");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dexterity>span label input:checked~.dexterity>span label::before {
+    background-image: url("https://cdn.shopify.com/s/files/1/0840/6754/9491/files/radio-after.svg?v=1722059252");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
