@@ -118,15 +118,10 @@
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-  
-  
-  {%- if customer.b2b? -%}
-    {% if product.tags contains 'putters' %}
-      
-      {% else %}
-      {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
-  {%- endif -%}
+{%- if customer.b2b? -%}
+  {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -134,6 +129,8 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
   <div class="{% if section.settings.use_background_input %} background-input product-section__padding{% endif %}">
+     {% if product.tags contains 'putters' %}
+       {% else %}
     {%-liquid
       if settings.enable_breadcrumns
         if collection
@@ -143,6 +140,7 @@
         endif  
       endif
     -%}
+       {% endif %}
     <div class="{{ section.settings.section_width }}">
       <div class="product product--{{ section.settings.media_size }} product--media-{{ section.settings.media_position }} {% unless is_vertical %}product--{{ section.settings.gallery_layout }}{% else %}product--thumbnail_slider{% endunless %} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--gapless {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} w100">
         <div class="grid__item product__media-wrapper{% if section.settings.enable_sticky_info and section.settings.gallery_layout != 'stacked' and section.settings.gallery_layout != 'columns' %} product__sticky{% endif %}">
