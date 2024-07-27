@@ -117,13 +117,16 @@
   <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-{% if product.tags contains 'putters' %}
+
   
-  {% else %}
+  
   {%- if customer.b2b? -%}
-    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+    {% if product.tags contains 'putters' %}
+      
+      {% else %}
+      {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
   {%- endif -%}
-{%- endif -%}
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
