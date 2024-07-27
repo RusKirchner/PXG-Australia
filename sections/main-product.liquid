@@ -364,7 +364,10 @@
                             {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
                           {%- endif -%}
                           <div class="product-form__buttons product-form__buttons--input product-form__quantity-wrapper{% if has_qty_rules or has_vol_pricing %} product-form__wholesale{% endif %}{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}" id="Quantity-Form-{{ section.id }}">
+                            {% if product.tags contains 'putters' %}
+                             {% else %}
                             {%- render 'main-product-quantity-selector', product: product, block: block, cart_qty: cart_qty -%}
+                            {% endif %}
                             <button
                               type="submit"
                               name="add"
