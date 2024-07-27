@@ -149,7 +149,8 @@
           {%- render 'product-media-gallery', section: section, product: product, featured_media: featured_media, variant_images: variant_images, media_count: media_count, media_width: media_width, is_vertical: is_vertical, threshold_media_desktop: threshold_media_desktop -%}
         </div>
            {% endif %}
-        <div class="product__info-wrapper product__info-wrapper-media-{{ section.settings.media_position }} grid__item por">
+        <div class="product__info-wrapper product__info-wrapper-media-{{ section.settings.media_position }} grid__item por"
+          style=" {% if product.tags contains 'putters' %} width: 100%; max-width:100%; {% endif %}">
           <div
             id="ProductInfo-{{ section.id }}"
             class="product__info-container{% if section.settings.enable_sticky_info %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} product__sticky{% endif %}{% endif %}"
