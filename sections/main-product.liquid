@@ -217,9 +217,9 @@
                 <!-- configur product start -->
                 
                 <div class="configur-product-main">
-                  {%- if product.metafieldscustom.configure_head_image != blank -%}
+                  {%- if product.metafields.custom.configure_head_image != blank -%}
                     <div class="configur-product column-1">
-                      {{ product.metafieldscustom.configure_head_image | metafield_tag }}
+                      {{ product.metafields.custom.configure_head_image | metafield_tag }}
                     </div>
                   {% endif %}
                 </div>
