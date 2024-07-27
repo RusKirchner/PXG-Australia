@@ -1657,6 +1657,8 @@ ul.main_redirectTabs li a.active {
     width: var(--_first-column-width);
       background: #000;
 }
+
+/* Configure Product Section */
 div#infiniteoptions-container {
     display: flex;
     flex-direction: column;
