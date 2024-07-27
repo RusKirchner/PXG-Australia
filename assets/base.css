@@ -1814,6 +1814,11 @@ div#infiniteoptions-container>div .spb-select select:focus {
     font-size: 16px;
     font-family: 'Proxima-Nova';
 }
+div#infiniteoptions-container>div .spb-tooltip {color: #000;font-weight: bold;}
+
+div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
+    padding: 10px;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
