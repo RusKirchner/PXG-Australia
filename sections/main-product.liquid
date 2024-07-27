@@ -368,6 +368,17 @@
                              {% else %}
                             {%- render 'main-product-quantity-selector', product: product, block: block, cart_qty: cart_qty -%}
                             {% endif %}
+
+                            {%- if product.metafields.custom.features_list != blank -%}
+                              <div class="configur-product-features"> 
+                                <div class="configur-img">
+                                {{ product.metafields.custom.features_list | metafield_tag }}
+                                </div>
+                              </div>
+                            {% endif %}
+
+
+                            
                             <button
                               type="submit"
                               name="add"
