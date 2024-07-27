@@ -1818,6 +1818,7 @@ div#infiniteoptions-container>div .spb-tooltip {color: #000;font-weight: bold;}
 
 div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
     padding: 10px;
+    font-weight: normal;
 }
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
