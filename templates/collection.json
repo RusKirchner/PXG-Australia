@@ -157,6 +157,7 @@
       "blocks": {
         "b956e729-3f73-41ea-8f6f-4162743c81b7": {
           "type": "category_filter_icon",
+          "disabled": true,
           "settings": {
             "trigger": "putters",
             "icon": "computers",
@@ -197,15 +198,15 @@
         "pagination_style": "infinite",
         "preload_first_image": true,
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "include_collection_in_url": true,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_compare": false,
-        "enable_quick_view": false,
+        "enable_quick_view": true,
         "show_color_swatches": true,
-        "color_swatches_style": "variant",
+        "color_swatches_style": "custom",
         "enable_filtering": true,
         "filter_type": "vertical",
         "filter_include_group_name": true,
