@@ -1823,6 +1823,9 @@ div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
     padding: 10px;
     font-weight: normal;
 }
+.putters-style .product-form__buttons {
+    padding: 0 10px;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
