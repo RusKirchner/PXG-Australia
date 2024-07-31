@@ -1,3 +1,3 @@
-{% if template == 'product.putter-apache.json' %}
+{% if template contains 'collection' %}
     {{ 'config-putters-option.css' | asset_url | stylesheet_tag }}
 {% endif %}
