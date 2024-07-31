@@ -76,7 +76,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
@@ -240,7 +240,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -405,7 +405,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -495,7 +495,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "#eaeaea",
@@ -571,7 +571,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -901,6 +901,11 @@
             "text": "This order includes our new Battle Ready II Headcover patterned with gray & white Darkness 26 skulls & Battle Ready II embroidery. It features a durable matte black pebble exterior that is lightweight and water resistant, and a soft microfiber interior. The internal QuickStick™ Cart Magnet attaches to the golf cart when not in use.",
             "text_style": "body"
           }
+        },
+        "infinite_options_app_block_RYcmDN": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -912,7 +917,8 @@
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "d38e5f77-a5ad-4198-a0ea-9722f01268f6"
+        "d38e5f77-a5ad-4198-a0ea-9722f01268f6",
+        "infinite_options_app_block_RYcmDN"
       ],
       "custom_css": [
 
