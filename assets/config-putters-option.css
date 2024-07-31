@@ -1,0 +1,24 @@
+div#shopify-block-infinite_options_app_block_Fbabnq {
+    margin: 0;
+    height: 570px;
+    overflow: hidden;
+}
+div#infiniteoptions-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 570px;
+    column-gap: 20px;
+}
+div#infiniteoptions-container>div.club-lie {
+    height: 300px;
+}
+div#infiniteoptions-container>div.shaft {
+    height: calc(100% - 90px);
+}
+.putters-style {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
