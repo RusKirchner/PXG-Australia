@@ -90,6 +90,11 @@
                             {%- endif -%}
 
                             <a href="{{ item.url }}" class="cart-item__name h6 link link--text font-heading-bold">{{ item.product.title | escape }}</a>
+                            {% if item.product.title == 'BATTLE READY II APACHE (Copy)' %}
+          You are ${{ 10000 | minus: cart.total_price | money_without_currency }} away from free delivery.
+{% else %}
+          You are eligible for a free delivery.
+{% endif %}
 
                             {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                               <dl>
