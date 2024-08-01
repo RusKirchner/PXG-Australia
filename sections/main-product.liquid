@@ -293,7 +293,6 @@
                 
                 {%- when 'sale_box' -%}
                 <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}  {% if product.tags contains 'putters' %}putters-style{% endif %}" {{ block.shopify_attributes }}>
-                                      {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id, picker_type: block.settings.picker_type, enable_color_swatches: block.settings.enable_color_swatches, color_swatches_style: block.settings.color_swatches_style -%}
 
                   {% if product.tags contains 'putters' %}
                     
