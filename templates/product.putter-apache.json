@@ -839,7 +839,7 @@
           "settings": {
             "show_free_shipping_bar": false,
             "enable_compare": false,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "enable_color_swatches": true,
             "color_swatches_style": "custom",
             "size_chart_enable": false,
