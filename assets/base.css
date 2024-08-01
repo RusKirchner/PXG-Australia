@@ -1826,6 +1826,9 @@ div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
 .putters-style .product-form__buttons {
     padding: 0 10px;
 }
+.product__info-wrapper variant-radios.no-js-hidden, .product__info-wrapper variant-radios.no-js-hidden {
+    display: block!important;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
