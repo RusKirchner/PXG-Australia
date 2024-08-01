@@ -139,8 +139,14 @@
                                         item.property.last == 'PXG M16 Putter Shaft - Straight - Black (+$89)' and
                                         item.product.title == 'BATTLE READY II APACHE (Copy)' 
                                       %}
-                                        jasdjabkdjbd,ja
-                                        {% else %}
+                                        
+                                        <style>
+                                          td.cart-item__quantity {
+                                            opacity: 0;
+                                          }
+                                        </style>
+                                          
+                                      {% endif %}
 
                           <td class="cart-item__quantity" role="cell" headers="CartDrawer-ColumnQuantity">
                             <div class="cart-item__quantity-wrapper w100 flex justify-space-between align-center por">
@@ -194,8 +200,6 @@
                             </div>
                           </td>
 
-                                          
-                                      {% endif %}
                           <td class="cart-drawer__item-total cart-item__totals flex justify-space-between align-center flex-wrap" role="cell" headers="CartDrawer-ColumnTotal">
                             <div class="cart-item__price-wrapper">
                               {%- if item.original_line_price != item.final_line_price -%}
