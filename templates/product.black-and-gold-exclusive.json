@@ -121,8 +121,7 @@
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "custom_css": [
-        ".background-input {}",
-        "h1 {}"
+        "h3 {letter-spacing: 0;}"
       ],
       "settings": {
         "section_width": "page-width--full",
