@@ -108,7 +108,11 @@
                                   {%- if property.last != blank and property_first_char != '_' -%}
                                     <div class="product-option light">
                                       {% if property.first == 'Shaft' and property.last == 'PXG M16 Putter Shaft - Straight - Black (+$89)' %}
-                                        You are eligible for a free delivery.
+                                        <style>
+                                          td.cart-item__quantity {
+                                            opacity: 0;
+                                          }
+                                        </style>
                                       {% endif %}
                                       <dt>{{ property.first }}: </dt>
                                       <dd>
