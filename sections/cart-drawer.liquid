@@ -107,13 +107,7 @@
                                   {%- assign property_first_char = property.first | slice: 0 -%}
                                   {%- if property.last != blank and property_first_char != '_' -%}
                                     <div class="product-option light">
-                                      {% if property.first == 'Shaft' and property.last == 'PXG M16 Putter Shaft - Straight - Black (+$89)' %}
-                                        <style>
-                                          td.cart-item__quantity {
-                                            opacity: 0;
-                                          }
-                                        </style>
-                                      {% endif %}
+                                      
                                       <dt>{{ property.first }}: </dt>
                                       <dd>
                                         {%- if property.last contains '/uploads/' -%}
