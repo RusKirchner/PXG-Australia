@@ -107,12 +107,17 @@
                                   {%- assign property_first_char = property.first | slice: 0 -%}
                                   {%- if property.last != blank and property_first_char != '_' -%}
                                     <div class="product-option light">
-                                      {% if property.first == 'Shaft' and property.last == 'PXG M16 Putter Shaft - Straight - Black (+$89)' %}
+                                      {% if property.first == 'Shaft' and 
+                                        property.last == 'PXG M16 Putter Shaft - Straight - Black (+$89)' and
+                                        item.product.title == 'BATTLE READY II APACHE (Copy)' 
+                                      %}
+                                        {% if item.product.title == 'Custom Configuration' %}
                                         <style>
                                           td.cart-item__quantity {
                                             opacity: 0;
                                           }
                                         </style>
+                                          {% endif %}
                                       {% endif %}
                                       <dt>{{ property.first }}: </dt>
                                       <dd>
