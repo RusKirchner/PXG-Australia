@@ -1,1 +1,586 @@
-{"type":"header","name":"Header Group","sections":{"announcement_bar_4wNDaa":{"type":"announcement-bar","blocks":{"announcement_Jg6E9J":{"type":"announcement","settings":{"text":"This site is operated by PXG’s official partner in Australia and New Zealand, Champion Sports ::  1B Myer Ct. Beverley SA 5009 ::  sales@championsports.com.au","link":"shopify:\/\/policies\/contact-information"}}},"block_order":["announcement_Jg6E9J"],"settings":{"auto_rotate":true,"change_slides_speed":9,"color_scheme":"background-1"}},"header":{"type":"header","blocks":{"7b2bd184-cb1b-47bf-8695-3f2bc023c78d":{"type":"store_information","settings":{"icon":"map","title":"Find Stockist","link":"https:\/\/pxg.com.au\/apps\/store-locator"}},"4d96261f-4044-44ee-89be-5ec2742ba187":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0311 P","image":"shopify:\/\/shop_images\/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png","image_ratio":"square","caption":"","heading_text":"0311 P Gen6","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0311-p-gen6","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_DV8Fab":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0311 XP","image":"shopify:\/\/shop_images\/0311xpgen6_900.png","image_ratio":"square","caption":"","heading_text":"0311 XP Gen6","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0311-xp-gen6","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"a5ea8e8a-d822-43ca-82dc-1342578efdda":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0317 ST","image":"shopify:\/\/shop_images\/PXG_0317ST_7iron_V3_Angle5-2000x2000-064a3d6.png","image_ratio":"square","caption":"","heading_text":"0317 ST","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0317-st","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"8663e306-8501-41a8-8c29-ead0b01f8f4b":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0317 CB","image":"shopify:\/\/shop_images\/0317_CB_Players_Iron_Beauty_Shot_Straight.png","image_ratio":"square","caption":"","heading_text":"0317 CB","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0317-cb","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"6b602273-4e7f-4b5d-935b-323328a00159":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0317 T","image":"shopify:\/\/shop_images\/0317-T-7-Iron-Beauty-2.png","image_ratio":"square","caption":"","heading_text":"0317 T","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0317-t","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_LnKk8x":{"type":"mega_menu_promotion","settings":{"trigger":"Irons","title":"0317 Driving Iron","image":"shopify:\/\/shop_images\/0317xdrivingiron_square_6032a93d-049c-434e-b690-155884369a0b.png","image_ratio":"square","caption":"","heading_text":"0317X Driving Iron","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0317-x-driving-iron-steel","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_YwgeKB":{"type":"mega_menu_promotion","settings":{"trigger":"Drivers","title":"0311 Black Ops","image":"shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Driver_1.png","image_ratio":"square","caption":"","heading_text":"0311 Black Ops","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/black-ops-0311-driver","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"d27aeefe-d0f5-4e65-955c-1005b7d69439":{"type":"mega_menu_promotion","settings":{"trigger":"Drivers","title":"0311 Black Ops Tour","image":"shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Tour_1.png","image_ratio":"square","caption":"","heading_text":"0311 Black Ops Tour","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/black-ops-0311-tour-1-driver","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_VpCyFM":{"type":"mega_menu_promotion","settings":{"trigger":"FAIRWAYS","title":"0311 Black Ops Fairways","image":"shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Fairway_1.png","image_ratio":"square","caption":"","heading_text":"BLACK OPS FAIRWAY","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/black-ops-fairway","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_7jAhPp":{"type":"mega_menu_promotion","settings":{"trigger":"FAIRWAYS","title":"0311 Black Ops Fairways","image":"shopify:\/\/shop_images\/black.jpg","image_ratio":"square","caption":"","heading_text":"","subheading":"","button_label":"","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/black-ops-fairway","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_MWn8iV":{"type":"mega_menu_promotion","settings":{"trigger":"HYBRIDS","title":"0311 Black Ops Hybrids","image":"shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Hybrid_1.png","image_ratio":"square","caption":"","heading_text":"BLACK OPS HYBRIDS","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/collections\/hybrids","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_T7gJqt":{"type":"mega_menu_promotion","settings":{"trigger":"HYBRIDS","title":"0311 Black Ops Hybrids","image":"shopify:\/\/shop_images\/black.jpg","image_ratio":"square","caption":"","heading_text":"","subheading":"","button_label":"","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/black-ops-fairway","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_AHVFQA":{"type":"mega_menu_promotion","settings":{"trigger":"WEDGES","title":"WEDGES","image":"shopify:\/\/shop_images\/Sugar-Daddy-II-C-Grind-Hosel-Cavity-21-3267a_0121-672x1500-ea404be_8ac4c898-0b05-48b7-8d67-376c11175778.png","image_ratio":"adapt","caption":"","heading_text":"Sugar Daddy Wedges","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/sugar-daddy-ii-milled-wedge","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_46wpqe":{"type":"mega_menu_promotion","settings":{"trigger":"WEDGES","title":"WEDGES","image":"shopify:\/\/shop_images\/2022-0311-Forged-Wedge-Hosel-Cavity-22-3280_0293-667x1500-ea404be.png","image_ratio":"adapt","caption":"","heading_text":"Forged Wedges","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/0311-3x-forged-wedge","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_LGPdV4":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"APACHE","image":"shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Apache-BR2-Beauty-w-POV-v2_adbd787d-a501-4a0e-99bb-14123c5ac6f2.png","image_ratio":"square","caption":"","heading_text":"APACHE","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-apache","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_zkcb6n":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"BAT ATTACK","image":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV_1_b0193b84-5c67-4304-a9ea-4a537ef8af95.png","image_ratio":"square","caption":"","heading_text":"BAT ATTACK","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-bat-attack","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_QJq3HR":{"type":"mega_menu_promotion","disabled":true,"settings":{"trigger":"PUTTERS","title":"HERCULES","image":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Hercules-BR2-Beauty-w-POV-V3_48bc1033-88d2-4e0f-b434-06133b6a737c.png","image_ratio":"square","caption":"","heading_text":"HERCULES","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-hercules","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_kEaeND":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"BLACKJACK","image":"shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Blackjack-BR2-POV-V2_1_d88fb5bd-4842-49cf-ab22-79030c90488c.png","image_ratio":"square","caption":"","heading_text":"BLACKJACK","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-blackjack","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_iyeKNC":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"ONE AND ONE","image":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-One-and-Done-BR2-Beauty-w-POV_5a53abb6-2882-4379-a24e-46dab7d5dc84.png","image_ratio":"square","caption":"","heading_text":"ONE AND ONE","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-one-and-done","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_GF4cwC":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"CLOSER","image":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Closer-BR2-Beauty-w-POV.png","image_ratio":"square","caption":"","heading_text":"CLOSER","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"mega_menu_promotion_EhniBp":{"type":"mega_menu_promotion","settings":{"trigger":"PUTTERS","title":"Brandon","image":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Brandon-BR2-Beauty-w-POV.webp","image_ratio":"square","caption":"","heading_text":"BRANDON","subheading":"","button_label":"Learn More","button_style":"solid","text_align":"center","text_position":"1","link":"shopify:\/\/products\/battle-ready-ii-brandon","position":"first","overlay_text_enable":false,"overlay_opacity":0,"color_scheme":"inverse"}},"5252ef1e-142a-4211-a789-f6ff8a260759":{"type":"customer_supported_region","disabled":true,"settings":{"title":"AU\/NZ Support","hotline":"+61 8 8268 5841","address":"1b Myer Ct, Beverley SA 5009","email":"sales@championsports.com.au"}},"9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f":{"type":"mega_menu_product_type","disabled":true,"settings":{"trigger":"PUTTERS","title":"Putters","position":"first","item_label":"Models","image_ratio":"square","type_1":"APACHE","type_image_1":"shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Apache-BR2-Beauty-w-POV-v2_adbd787d-a501-4a0e-99bb-14123c5ac6f2.png","type_2":"BAT ATTACK","type_image_2":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV.png","type_3":"ONE AND DONE","type_image_3":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-One-and-Done-BR2-Beauty-w-POV_5a53abb6-2882-4379-a24e-46dab7d5dc84.png","type_4":"HERCULES","type_image_4":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Hercules-BR2-Beauty-w-POV-V3_48bc1033-88d2-4e0f-b434-06133b6a737c.png","type_5":"CLOSER","type_image_5":"shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Closer-BR2-Beauty-w-POV.png","type_6":"","type_7":"","type_8":"","type_9":"","type_10":""}}},"block_order":["7b2bd184-cb1b-47bf-8695-3f2bc023c78d","4d96261f-4044-44ee-89be-5ec2742ba187","mega_menu_promotion_DV8Fab","a5ea8e8a-d822-43ca-82dc-1342578efdda","8663e306-8501-41a8-8c29-ead0b01f8f4b","6b602273-4e7f-4b5d-935b-323328a00159","mega_menu_promotion_LnKk8x","mega_menu_promotion_YwgeKB","d27aeefe-d0f5-4e65-955c-1005b7d69439","mega_menu_promotion_VpCyFM","mega_menu_promotion_7jAhPp","mega_menu_promotion_MWn8iV","mega_menu_promotion_T7gJqt","mega_menu_promotion_AHVFQA","mega_menu_promotion_46wpqe","mega_menu_promotion_LGPdV4","mega_menu_promotion_zkcb6n","mega_menu_promotion_QJq3HR","mega_menu_promotion_kEaeND","mega_menu_promotion_iyeKNC","mega_menu_promotion_GF4cwC","mega_menu_promotion_EhniBp","5252ef1e-142a-4211-a789-f6ff8a260759","9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"],"settings":{"color_scheme":"background-1","top_color_scheme":"inverse","logo":"shopify:\/\/shop_images\/PXG_Logo_Secondary_WHITE.svg","logo_width":110,"logo_position":"middle-left-navigation-left","menu":"main-menu","show_go_to_link":true,"show_line_separator":true,"enable_sticky_header":true,"enable_social_links":true,"mobile_logo_position":"center","enable_country_selector":true,"enable_language_selector":true,"customer_support_region_caption":"","customer_support_region_global_hotline":""}}},"order":["announcement_bar_4wNDaa","header"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement_bar_4wNDaa": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_Jg6E9J": {
+          "type": "announcement",
+          "settings": {
+            "text": "This site is operated by PXG’s official partner in Australia and New Zealand, Champion Sports ::  1B Myer Ct. Beverley SA 5009 ::  info@pxg.com.au",
+            "link": "shopify:\/\/policies\/contact-information"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Jg6E9J"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 9,
+        "color_scheme": "background-1"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
+          "type": "store_information",
+          "settings": {
+            "icon": "map",
+            "title": "Find Stockist",
+            "link": "https:\/\/pxg.com.au\/apps\/store-locator"
+          }
+        },
+        "4d96261f-4044-44ee-89be-5ec2742ba187": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0311 P",
+            "image": "shopify:\/\/shop_images\/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0311 P Gen6",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0311-p-gen6",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_DV8Fab": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0311 XP",
+            "image": "shopify:\/\/shop_images\/0311xpgen6_900.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0311 XP Gen6",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0311-xp-gen6",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "a5ea8e8a-d822-43ca-82dc-1342578efdda": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0317 ST",
+            "image": "shopify:\/\/shop_images\/PXG_0317ST_7iron_V3_Angle5-2000x2000-064a3d6.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0317 ST",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0317-st",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "8663e306-8501-41a8-8c29-ead0b01f8f4b": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0317 CB",
+            "image": "shopify:\/\/shop_images\/0317_CB_Players_Iron_Beauty_Shot_Straight.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0317 CB",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0317-cb",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "6b602273-4e7f-4b5d-935b-323328a00159": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0317 T",
+            "image": "shopify:\/\/shop_images\/0317-T-7-Iron-Beauty-2.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0317 T",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0317-t",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_LnKk8x": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0317 Driving Iron",
+            "image": "shopify:\/\/shop_images\/0317xdrivingiron_square_6032a93d-049c-434e-b690-155884369a0b.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0317X Driving Iron",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0317-x-driving-iron-steel",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_YwgeKB": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Drivers",
+            "title": "0311 Black Ops",
+            "image": "shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Driver_1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0311 Black Ops",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-0311-driver",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "d27aeefe-d0f5-4e65-955c-1005b7d69439": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Drivers",
+            "title": "0311 Black Ops Tour",
+            "image": "shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Tour_1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0311 Black Ops Tour",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-0311-tour-1-driver",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_VpCyFM": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "FAIRWAYS",
+            "title": "0311 Black Ops Fairways",
+            "image": "shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Fairway_1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BLACK OPS FAIRWAY",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-fairway",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_7jAhPp": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "FAIRWAYS",
+            "title": "0311 Black Ops Fairways",
+            "image": "shopify:\/\/shop_images\/black.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "",
+            "subheading": "",
+            "button_label": "",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-fairway",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_MWn8iV": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "HYBRIDS",
+            "title": "0311 Black Ops Hybrids",
+            "image": "shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Hybrid_1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BLACK OPS HYBRIDS",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/collections\/hybrids",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_T7gJqt": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "HYBRIDS",
+            "title": "0311 Black Ops Hybrids",
+            "image": "shopify:\/\/shop_images\/black.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "",
+            "subheading": "",
+            "button_label": "",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-fairway",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_AHVFQA": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "WEDGES",
+            "title": "WEDGES",
+            "image": "shopify:\/\/shop_images\/Sugar-Daddy-II-C-Grind-Hosel-Cavity-21-3267a_0121-672x1500-ea404be_8ac4c898-0b05-48b7-8d67-376c11175778.png",
+            "image_ratio": "adapt",
+            "caption": "",
+            "heading_text": "Sugar Daddy Wedges",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/sugar-daddy-ii-milled-wedge",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_46wpqe": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "WEDGES",
+            "title": "WEDGES",
+            "image": "shopify:\/\/shop_images\/2022-0311-Forged-Wedge-Hosel-Cavity-22-3280_0293-667x1500-ea404be.png",
+            "image_ratio": "adapt",
+            "caption": "",
+            "heading_text": "Forged Wedges",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/0311-3x-forged-wedge",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_LGPdV4": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "APACHE",
+            "image": "shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Apache-BR2-Beauty-w-POV-v2_adbd787d-a501-4a0e-99bb-14123c5ac6f2.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "APACHE",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-apache",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_zkcb6n": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "BAT ATTACK",
+            "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV_1_b0193b84-5c67-4304-a9ea-4a537ef8af95.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BAT ATTACK",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-bat-attack",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_QJq3HR": {
+          "type": "mega_menu_promotion",
+          "disabled": true,
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "HERCULES",
+            "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Hercules-BR2-Beauty-w-POV-V3_48bc1033-88d2-4e0f-b434-06133b6a737c.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "HERCULES",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-hercules",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_kEaeND": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "BLACKJACK",
+            "image": "shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Blackjack-BR2-POV-V2_1_d88fb5bd-4842-49cf-ab22-79030c90488c.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BLACKJACK",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-blackjack",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_iyeKNC": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "ONE AND ONE",
+            "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-One-and-Done-BR2-Beauty-w-POV_5a53abb6-2882-4379-a24e-46dab7d5dc84.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "ONE AND ONE",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-one-and-done",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_GF4cwC": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "CLOSER",
+            "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Closer-BR2-Beauty-w-POV.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "CLOSER",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_EhniBp": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "Brandon",
+            "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Brandon-BR2-Beauty-w-POV.webp",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BRANDON",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/battle-ready-ii-brandon",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "5252ef1e-142a-4211-a789-f6ff8a260759": {
+          "type": "customer_supported_region",
+          "disabled": true,
+          "settings": {
+            "title": "AU\/NZ Support",
+            "hotline": "+61 8 8268 5841",
+            "address": "1b Myer Ct, Beverley SA 5009",
+            "email": "sales@championsports.com.au"
+          }
+        },
+        "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f": {
+          "type": "mega_menu_product_type",
+          "disabled": true,
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "Putters",
+            "position": "first",
+            "item_label": "Models",
+            "image_ratio": "square",
+            "type_1": "APACHE",
+            "type_image_1": "shopify:\/\/shop_images\/ECOM-1817-CDP-Battle-Ready-II-900x900-Apache-BR2-Beauty-w-POV-v2_adbd787d-a501-4a0e-99bb-14123c5ac6f2.png",
+            "type_link_1": "",
+            "type_2": "BAT ATTACK",
+            "type_image_2": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV.png",
+            "type_link_2": "",
+            "type_3": "ONE AND DONE",
+            "type_image_3": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-One-and-Done-BR2-Beauty-w-POV_5a53abb6-2882-4379-a24e-46dab7d5dc84.png",
+            "type_link_3": "",
+            "type_4": "HERCULES",
+            "type_image_4": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Hercules-BR2-Beauty-w-POV-V3_48bc1033-88d2-4e0f-b434-06133b6a737c.png",
+            "type_link_4": "",
+            "type_5": "CLOSER",
+            "type_image_5": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-Closer-BR2-Beauty-w-POV.png",
+            "type_link_5": "",
+            "type_6": "",
+            "type_link_6": "",
+            "type_7": "",
+            "type_link_7": "",
+            "type_8": "",
+            "type_link_8": "",
+            "type_9": "",
+            "type_link_9": "",
+            "type_10": "",
+            "type_link_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
+        "4d96261f-4044-44ee-89be-5ec2742ba187",
+        "mega_menu_promotion_DV8Fab",
+        "a5ea8e8a-d822-43ca-82dc-1342578efdda",
+        "8663e306-8501-41a8-8c29-ead0b01f8f4b",
+        "6b602273-4e7f-4b5d-935b-323328a00159",
+        "mega_menu_promotion_LnKk8x",
+        "mega_menu_promotion_YwgeKB",
+        "d27aeefe-d0f5-4e65-955c-1005b7d69439",
+        "mega_menu_promotion_VpCyFM",
+        "mega_menu_promotion_7jAhPp",
+        "mega_menu_promotion_MWn8iV",
+        "mega_menu_promotion_T7gJqt",
+        "mega_menu_promotion_AHVFQA",
+        "mega_menu_promotion_46wpqe",
+        "mega_menu_promotion_LGPdV4",
+        "mega_menu_promotion_zkcb6n",
+        "mega_menu_promotion_QJq3HR",
+        "mega_menu_promotion_kEaeND",
+        "mega_menu_promotion_iyeKNC",
+        "mega_menu_promotion_GF4cwC",
+        "mega_menu_promotion_EhniBp",
+        "5252ef1e-142a-4211-a789-f6ff8a260759",
+        "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "top_color_scheme": "inverse",
+        "logo": "shopify:\/\/shop_images\/PXG_Logo_Secondary_WHITE.svg",
+        "logo_width": 110,
+        "logo_position": "middle-left-navigation-left",
+        "menu": "main-menu",
+        "show_go_to_link": true,
+        "show_line_separator": true,
+        "enable_sticky_header": true,
+        "sticky_header": "on_scroll_up",
+        "enable_social_links": true,
+        "mobile_logo_position": "center",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "customer_support_region_caption": "",
+        "customer_support_region_global_hotline": "",
+        "enable_transparent_homepage": false,
+        "text_color_transparent": "#fff"
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_4wNDaa",
+    "header"
+  ]
+}
