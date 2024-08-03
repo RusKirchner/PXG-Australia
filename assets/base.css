@@ -1834,3 +1834,7 @@ div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
       padding: 8px 54px;
    }
 }
+
+.email-signup-popup__content h3 {
+    letter-spacing: normal;
+}
