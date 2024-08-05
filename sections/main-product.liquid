@@ -618,26 +618,29 @@
 
 <script>
   jQuery(document).ready(function() {
-    jQuery('#Hosel-0-2').on('change', function() {
-      var selectedOption = jQuery(this).val();
-      var imageUrl = '';
-
-      switch(selectedOption) {
-        case 'Double Bend - Right Hand':
-          imageUrl = "{{ product.metafields.custom.head_image_one | img_url: 'large'  }}";
-          break;
-        case 'Heel Shafted - Right Hand':
-          imageUrl = "{{ product.metafields.custom.head_image_two | img_url: 'large'  }}";
-          break;
-        case 'Plumber\'s Neck - Right Hand':
-          imageUrl = "{{ product.metafields.custom.head_image_three | img_url: 'large'  }}";
-          break;
-        default:
-          imageUrl = 'default-image.jpg';
-      }
-
-      jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
-    });
+    setTimeout(function() {
+              jQuery('#Hosel-0-2').on('change', function() {
+              var selectedOption = jQuery(this).val();
+              var imageUrl = '';
+        
+              switch(selectedOption) {
+                case 'Double Bend - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_one | img_url: 'large'  }}";
+                  break;
+                case 'Heel Shafted - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_two | img_url: 'large'  }}";
+                  break;
+                case 'Plumber\'s Neck - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_three | img_url: 'large'  }}";
+                  break;
+                default:
+                  imageUrl = 'default-image.jpg';
+              }
+        
+              jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
+            });
+    }, 3000);
+    
   });
 </script>
 
