@@ -431,6 +431,31 @@
     </div>
   </div>
 </div>
+
+                {% for item in cart.items %}
+  <div class="cart-item">
+    <div class="cart-item__details">
+      <h2>{{ item.product.title }}</h2>
+      {% if item.properties.custom_price %}
+        <span class="cart-item__price">${{ item.properties.custom_price }}</span>
+      {% else %}
+        <span class="cart-item__price">{{ item.price | money }}</span>
+      {% endif %}
+    </div>
+    <div class="cart-item__quantity">{{ item.quantity }}</div>
+    <div class="cart-item__total">
+      {% if item.properties.custom_price %}
+        ${{ item.properties.custom_price | times: item.quantity | divided_by: 100.0 | money }}
+      {% else %}
+        {{ item.line_price | money }}
+      {% endif %}
+    </div>
+    <!-- Other cart item details -->
+  </div>
+{% endfor %}
+
+
+                
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     function isIE() {
