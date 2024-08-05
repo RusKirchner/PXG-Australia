@@ -624,7 +624,7 @@
 
       switch(selectedOption) {
         case 'Double Bend - Right Hand':
-          imageUrl = 'path-to-double-bend-right-hand.jpg';
+          imageUrl = {{ product.metafields.custom.head_image_three | metafield_tag }};
           break;
         case 'Heel Shafted - Right Hand':
           imageUrl = 'path-to-heel-shafted-right-hand.jpg';
