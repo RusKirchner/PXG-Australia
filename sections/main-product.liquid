@@ -222,7 +222,7 @@
                 <div class="configur-product-main">
                   <!-- Configur Product Head -->
                   {%- if product.metafields.custom.shaft_image_one and product.metafields.custom.configure_head_heading != blank -%}
-                    <div class="configur-product column-1">
+                    <div class="configur-product column-1 head">
                       <div class="configur-img">
                       {{ product.metafields.custom.shaft_image_one | metafield_tag }}
                       </div>
@@ -232,7 +232,7 @@
 
                   <!-- Configur Product Shaft -->
                   {%- if product.metafields.custom.shaft_image and product.metafields.custom.shaft_heading != blank -%}
-                    <div class="configur-product column-2"> 
+                    <div class="configur-product column-2 shaft"> 
                       <div class="configur-img">
                       {{ product.metafields.custom.shaft_image | metafield_tag }}
                       </div>
@@ -242,7 +242,7 @@
                   
                   <!-- Configur Product Grip -->
                   {%- if product.metafields.custom.grip_image and product.metafields.custom.grip_heading != blank -%}
-                    <div class="configur-product column-3">
+                    <div class="configur-product column-3 grip">
                       <div class="configur-img">
                       {{ product.metafields.custom.grip_image | metafield_tag }}
                       </div>
