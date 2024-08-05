@@ -618,7 +618,9 @@
 
 <script>
   jQuery(document).ready(function() {
+    
     setTimeout(function() {
+      console.log("3000 mmlmml");
               jQuery('#Hosel-0-2').on('change', function() {
               var selectedOption = jQuery(this).val();
               var imageUrl = '';
@@ -639,7 +641,7 @@
         
               jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
             });
-    }, 3000);
+    }, 5000);
     
   });
 </script>
