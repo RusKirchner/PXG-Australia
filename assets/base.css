@@ -1829,6 +1829,9 @@ div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
 .product__info-wrapper variant-radios.no-js-hidden, .product__info-wrapper variant-radios.no-js-hidden {
     display: block!important;
 }
+.popup-modal__content {
+    height: calc(60vh - var(--popup-distance)* 2);
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
