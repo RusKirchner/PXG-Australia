@@ -616,60 +616,19 @@
 </product-info>
 
                               
-<select id="custom-price-selector">
-  <option value="100">Option 1 - $100.00</option>
-  <option value="150">Option 2 - $150.00</option>
-  <option value="200">Option 3 - $200.00</option>
-</select>
-
-<span id="product-price">{{ product.price | money }}</span>
-
-<form action="/cart/add" method="post" id="add-to-cart-form">
-  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-  <input type="hidden" name="properties[custom_price]" id="custom_price_field" value="">
+<form action="/cart/add" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  <label for="price_increase">Enter price increase amount:</label>
+  <input type="text" name="properties[price_increase]" id="price_increase" />
   <button type="submit">Add to Cart</button>
 </form>
+
 
 
                               
                               
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                               
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var customPriceSelector = document.getElementById('custom-price-selector');
-    var priceElement = document.getElementById('product-price');
-    var customPriceField = document.getElementById('custom_price_field');
-    var addToCartForm = document.getElementById('add-to-cart-form');
-    
-    var originalPrice = {{ product.price | money_without_currency }}; // Get original price
-
-    function updatePrice(newCustomPrice) {
-      var totalPrice = parseFloat(originalPrice) + parseFloat(newCustomPrice);
-      if (priceElement) {
-        priceElement.textContent = `$${totalPrice.toFixed(2)}`;
-      }
-      customPriceField.value = totalPrice.toFixed(2);
-    }
-
-    if (customPriceSelector) {
-      customPriceSelector.addEventListener('change', function() {
-        var selectedPrice = customPriceSelector.value;
-        updatePrice(selectedPrice);
-      });
-
-      // Initialize price display
-      updatePrice(customPriceSelector.value);
-    }
-
-    addToCartForm.addEventListener('submit', function(event) {
-      var selectedPrice = customPriceSelector.value;
-      updatePrice(selectedPrice);
-    });
-  });
-</script>
-
-
 <script>
   jQuery(document).ready(function() {
     
