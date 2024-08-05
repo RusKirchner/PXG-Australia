@@ -617,9 +617,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    $('#Hosel-0-2').on('change', function() {
-      var selectedOption = $(this).val();
+  jQuery(document).ready(function() {
+    jQuery('#Hosel-0-2').on('change', function() {
+      var selectedOption = jQuery(this).val();
       var imageUrl = '';
 
       switch(selectedOption) {
@@ -636,7 +636,7 @@
           imageUrl = 'default-image.jpg';
       }
 
-      $('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
+      jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
     });
   });
 </script>
