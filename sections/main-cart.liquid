@@ -62,9 +62,9 @@
                     </thead>
                     <tbody>
                       {%- for item in cart.items -%}
-                        <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                        <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-mczr="{% if item.properties._mczr_designId %}item-{{ item.properties._mczr_designId }}{% else %}item-not-mczr{% endif %}">
                           <td class="cart-item__media">
-                            {% if item.image %}
+                            {% if item.image or item.properties._mczr_designId %}
                               {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                               <a href="{{ item.url }}" class="cart-item__link cart-item__image-container media media--{{ section.settings.image_ratio }} global-media-settings{% if section.settings.image_ratio == 'adapt' %} ratio{% endif %}" aria-hidden="true" tabindex="-1"{% if section.settings.image_ratio == 'adapt' %} style="--ratio-percent: {{ 1 | divided_by: item.image.aspect_ratio | times: 100 }}%"{% endif %}>
                                 <img src="{{ item.image | image_url: width: 300 }}"
@@ -72,8 +72,7 @@
                                   alt="{{ item.image.alt | escape }}"
                                   loading="lazy"
                                   width="100"
-                                  height="{{ 100 | divided_by: item.image.aspect_ratio | ceil }}"
-                                >
+                                  height="{{ 100 | divided_by: item.image.aspect_ratio | ceil }}" data-mczr="{% if item.properties._mczr_designId %}item_image-{{ item.properties._mczr_designId }}{% else %}item_image-not-mczr{% endif %}">
                               </a>  
                             {% endif %}
                           </td>
@@ -83,7 +82,7 @@
                               <p class="caption light cart-item__vendor">{{ item.product.vendor }}</p>
                             {%- endif -%}
 
-                            <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold">{{ item.product.title | escape }}</a>
+                            <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold" data-mczr="{% if item.properties._mczr_designId %}item_product_title-{{ item.properties._mczr_designId }}{% else %}item_product_title-not-mczr{% endif %}">{{ item.product.title | escape }}</a>
 
                             {%- if item.original_price != item.final_price -%}
                               <div class="cart-item__discounted-prices small-hide medium-hide">
@@ -543,3 +542,4 @@
   ]
 }
 {% endschema %}
+{% render "cart-script.mczr" %}
