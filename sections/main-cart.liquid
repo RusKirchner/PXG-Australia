@@ -432,38 +432,6 @@
   </div>
 </div>
 
-{% assign cartSubtotal = 0 %}
-
-{% for item in cart.items %}
-  <div class="cart-item">
-    <div class="cart-item__details">
-      <h2>{{ item.product.title }}</h2>
-      {% assign custom_price = item.properties.custom_price %}
-      <span class="cart-item__price">
-        {% if custom_price %}
-          {% assign item_price = custom_price %}
-          ${{ custom_price }}
-        {% else %}
-          {% assign item_price = item.price %}
-          {{ item.price | money }}
-        {% endif %}
-      </span>
-    </div>
-    <div class="cart-item__quantity">{{ item.quantity }}</div>
-    <div class="cart-item__total">
-      {% if custom_price %}
-        ${{ custom_price | times: item.quantity | divided_by: 100.0 | money }}
-      {% else %}
-        {{ item.line_price | money }}
-      {% endif %}
-    </div>
-  </div>
-  {% assign cartSubtotal = cartSubtotal | plus: item_price | times: item.quantity %}
-{% endfor %}
-
-<div class="cart-subtotal">
-  Subtotal: ${{ cartSubtotal | divided_by: 100.0 | money }}
-</div>
                 
                 
                 
