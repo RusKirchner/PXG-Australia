@@ -1830,7 +1830,14 @@ div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
     display: block!important;
 }
 .popup-modal__content {
-    height: calc(60vh - var(--popup-distance)* 2);
+    height: calc(70vh - var(--popup-distance)* 2);
+}
+form#ContactPopup {
+    margin-top: 0;
+}
+
+.email-signup-popup__text.rte.small-margin-top h5 {
+    margin-bottom: 0;
 }
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
