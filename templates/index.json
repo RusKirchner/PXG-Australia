@@ -1,1 +1,601 @@
-{"sections":{"slideshow_rzKgaz":{"type":"slideshow","blocks":{"slide_DXGezN":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/PXGM-background-Black-Ops.jpg","mobile_image":"shopify:\/\/shop_images\/PXGM-background-Black-Ops-WEB.jpg","badge_label":"","heading":"Landing in Australia Soon!","text":"","hide_text_on_mobile":false,"button_label":"Learn More","price":"","link":"shopify:\/\/products\/black-ops-0311-tour-1-driver","button_style":"primary","box_align":"bottom-center","text_alignment":"center","keep_ltr":false,"desktop_image_width":"full","desktop_image_position":"left","image_overlay_opacity":0,"text_alignment_mobile":"center","colors_text":"#ffffff","gradient_heading_desktop":"","colors_background":"#000000","colors_badge_foreground":"#ffffff","colors_badge_background":"#da2127","colors_button_text":"#ffffff","colors_button":"#ff0008","colors_text_mobile":"#000000","gradient_heading_mobile":"","colors_background_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","colors_button_text_mobile":"#ffffff","colors_button_mobile":"#000000"}},"slide_ARPXQW":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/PXGM-11691-Homepage-2-01-desktop.jpg","badge_label":"","heading":"Landing in Australia Soon!","text":"","hide_text_on_mobile":false,"button_label":"Learn More","price":"","link":"shopify:\/\/products\/black-ops-0311-tour-1-driver","button_style":"primary","box_align":"bottom-center","text_alignment":"center","keep_ltr":false,"desktop_image_width":"full","desktop_image_position":"left","image_overlay_opacity":0,"text_alignment_mobile":"center","colors_text":"#ffffff","gradient_heading_desktop":"","colors_background":"#000000","colors_badge_foreground":"#ffffff","colors_badge_background":"#da2127","colors_button_text":"#ffffff","colors_button":"#ff0008","colors_text_mobile":"#000000","gradient_heading_mobile":"","colors_background_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","colors_button_text_mobile":"#ffffff","colors_button_mobile":"#000000"}},"slide_nfGrUj":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg","mobile_image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg","badge_label":"0311 P Gen6","heading":"Double Chrome","text":"","hide_text_on_mobile":false,"button_label":"Learn More","price":"","link":"shopify:\/\/products\/0311-p-gen6","button_style":"primary","box_align":"middle-center","text_alignment":"left","keep_ltr":false,"desktop_image_width":"full","desktop_image_position":"left","image_overlay_opacity":60,"text_alignment_mobile":"center","colors_text":"#ffffff","gradient_heading_desktop":"","colors_background":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#da2127","colors_button_text":"#ffffff","colors_button":"#000000","colors_text_mobile":"#000000","gradient_heading_mobile":"","colors_background_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#da2127","colors_button_text_mobile":"#ffffff","colors_button_mobile":"#000000"}}},"block_order":["slide_DXGezN","slide_ARPXQW","slide_nfGrUj"],"custom_css":["h2 {letter-spacing: 0.2rem;}"],"settings":{"layout":"full_bleed","slide_height":"adapt_image","slide_height_mobile":"adapt_image_mobile","auto_rotate":false,"change_slides_speed":5,"enable_pagination_desktop":false,"enable_navigation_desktop":false,"preload":true,"show_text_below":true,"enable_pagination_mobile":false,"enable_navigation_mobile":false,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}},"image_banner_EYTDCx":{"type":"image-banner","blocks":{"heading_zfUxMz":{"type":"heading","settings":{"heading":"JAKE KNAPP WINS!","size":"h0"}},"text_UPrepy":{"type":"text","settings":{"text":"<strong>CONGRAULATIONS TO JAKE KNAPP!<\/strong>","text_style":"caption-with-letter-spacing"}},"buttons_pLmafG":{"type":"buttons","settings":{"button_label_1":"SEE WITB","button_link_1":"shopify:\/\/blogs\/news\/jake-knapp-witb","button_style_1":"primary","button_label_2":"","button_link_2":"","button_style_2":"primary"}}},"block_order":["heading_zfUxMz","text_UPrepy","buttons_pLmafG"],"custom_css":["h2 {letter-spacing: 0.05em;}"],"settings":{"layout":"full_bleed","image":"shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag.jpg","image_mobile":"shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag_70838876-f761-49b3-950d-2e2c54f96c3d.jpg","image_overlay_opacity":0,"image_height":"adapt","image_height_mobile":"adapt-mobile","desktop_content_position":"middle-left","desktop_content_alignment":"left","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#171717","gradient_heading_desktop":"","color_button_text_1":"#ffffff","color_button_1":"#da2127","color_button_text_2":"#000000","color_button_2":"#da2127","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09":{"type":"image-banner","blocks":{"template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-heading-1":{"type":"heading","settings":{"heading":"2022-23 PGA TOUR ROOKIE OF THE YEAR","size":"h0"}},"template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1":{"type":"text","settings":{"text":"<strong>Congratulations to Eric Cole!<\/strong>","text_style":"caption-with-letter-spacing"}},"template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-buttons-1":{"type":"buttons","settings":{"button_label_1":"SEE WITB","button_link_1":"shopify:\/\/blogs\/news\/eric-cole-witb","button_style_1":"primary","button_label_2":"","button_link_2":"","button_style_2":"primary"}}},"block_order":["template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-heading-1","template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1","template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-buttons-1"],"custom_css":["h2 {letter-spacing: 0.05em;}"],"settings":{"layout":"full_bleed","image":"shopify:\/\/shop_images\/PXGM-11479-desktop-2600x6002.jpg","image_mobile":"shopify:\/\/shop_images\/Eric-Cole-500x500_1.jpg","image_overlay_opacity":0,"image_height":"adapt","image_height_mobile":"adapt-mobile","desktop_content_position":"middle-right","desktop_content_alignment":"right","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#ffffff","color_button_1":"#da2127","color_button_text_2":"#000000","color_button_2":"#da2127","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"1aded6ef-5727-4347-bf56-9fc610343e55":{"type":"collection-list","blocks":{"template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0":{"type":"featured_collection","settings":{"collection":"drivers","custom_title":""}},"template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1":{"type":"featured_collection","settings":{"collection":"fairways","custom_title":""}},"template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2":{"type":"featured_collection","settings":{"collection":"hybrids","custom_title":""}},"template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3":{"type":"featured_collection","settings":{"collection":"irons","custom_title":""}},"28a02765-bb4a-48a3-bac1-6b0b47c0f9af":{"type":"featured_collection","settings":{"collection":"wedges","custom_title":""}},"aca7a90e-8fc2-44b8-8a6b-c28df57b3987":{"type":"featured_collection","settings":{"collection":"putters","custom_title":""}},"115c3560-a1ac-4da6-b128-b6a63acf1e22":{"type":"featured_collection","disabled":true,"settings":{"collection":"golf-balls","custom_title":""}},"e5d38eb0-7dd6-4089-a12b-99704254313d":{"type":"featured_collection","disabled":true,"settings":{"collection":"headwear","custom_title":""}},"31cc4b3d-ab28-48e2-96e0-0455cf3b2a36":{"type":"featured_collection","disabled":true,"settings":{"collection":"golf-bags","custom_title":""}}},"block_order":["template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0","template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1","template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2","template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3","28a02765-bb4a-48a3-bac1-6b0b47c0f9af","aca7a90e-8fc2-44b8-8a6b-c28df57b3987","115c3560-a1ac-4da6-b128-b6a63acf1e22","e5d38eb0-7dd6-4089-a12b-99704254313d","31cc4b3d-ab28-48e2-96e0-0455cf3b2a36"],"custom_css":[".card__heading__collection-title {display: none;}",".card__heading--collection a:before {display: none;}"],"settings":{"title":"GOLF CLUBS","subtitle":"","heading_size":"h1","image_ratio":"square","columns_desktop":3,"full_width":false,"enable_section_box_layout":false,"enable_desktop_slider":false,"color_scheme":"background-1","show_view_all":false,"collection_card_show_title":true,"show_products_count":false,"columns_tablet":"2","columns_mobile":"2","swipe_on_mobile":false,"padding_top":40,"padding_bottom":40}},"53e1a533-81ae-46cc-97dd-782a995beae4":{"type":"image-with-text","blocks":{"35415a0d-36d8-49ef-bb7d-e50b362591b8":{"type":"heading","disabled":true,"settings":{"heading":"Image with text","heading_size":"h1","enable_bold_heading":true}},"da20392b-5e38-4e39-8f10-ab19f28c9854":{"type":"text","settings":{"text":"<h2>CELINE CONQUERS THE COMPETITION<\/h2><p>PXG LPGA Tour Professional Celine Boutier rose to the top of the leaderboard for a fourth time this season to add another impressive win to her resume. Following a head-to-head nine-hole playoff, tying the record for second-longest playoff in LPGA Tour history, Celine ultimately conquered the competition to hoist the trophy at the 2023 Maybank Championship. Congratulations Celine!<\/p>","text_style":"subtitle"}},"2975d598-3d16-4116-84b5-78c3997003df":{"type":"button","disabled":true,"settings":{"button_label":"PLAY VIDEO","button_link":"","button_style":"solid"}}},"block_order":["35415a0d-36d8-49ef-bb7d-e50b362591b8","da20392b-5e38-4e39-8f10-ab19f28c9854","2975d598-3d16-4116-84b5-78c3997003df"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/homepage-1024x600.jpg","height":"adapt","desktop_image_width":"large","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#161616","gradient_background_container":"","background_section":"#000000","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"89d7b601-ae47-4d55-89bf-26b79f43060a":{"type":"custom-liquid","settings":{"custom_liquid":"<div class=\"page-width align-center\" style=\"text-align:center\"><p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>\n\n<h1>PXG GEN6 IRONS <span style=\"color:#f1bb5f;\">RANKED #1<\/span> IN ACCURACY!<\/h1>\n\n<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>","color_scheme":"background-1","padding_top":40,"padding_bottom":52}},"d473dbe2-d4cb-4299-aa09-d3578d047e5c":{"type":"video","custom_css":["h2 {font-family: \"Prohibition\", sans-serif;}"],"settings":{"title":"Video","subtitle":"","heading_size":"h1","cover_image":"shopify:\/\/shop_images\/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg","video_url":"https:\/\/vimeo.com\/862172917","description":"","autoplay":false,"enable_controls":true,"enable_video_looping":true,"full_width":false,"hide_when_empty_video":false,"enable_section_box_layout":false,"color_scheme":"","padding_top":36,"padding_bottom":36}},"3c381571-e172-4fa5-beb8-79027d436231":{"type":"collection-list","blocks":{"template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-1":{"type":"featured_collection","settings":{"collection":"golf-bags","custom_title":""}},"template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-2":{"type":"featured_collection","settings":{"collection":"headwear","custom_title":""}},"template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-3":{"type":"featured_collection","settings":{"collection":"gloves","custom_title":""}},"template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-4":{"type":"featured_collection","settings":{"collection":"weight-kits","custom_title":""}}},"block_order":["template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-1","template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-2","template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-3","template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-4"],"custom_css":[".card__heading__collection-title {display: none;}",".card__heading--collection a:before {display: none;}"],"settings":{"title":"ACCESSORIES","subtitle":"","heading_size":"h1","image_ratio":"square","columns_desktop":4,"full_width":false,"enable_section_box_layout":false,"enable_desktop_slider":false,"color_scheme":"","show_view_all":false,"collection_card_show_title":true,"show_products_count":false,"columns_tablet":"2","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"6816d4fe-29d0-4a8d-802e-43061cbf5a80":{"type":"featured-blog","settings":{"title":"PXG BLOG","heading_size":"h1","blog":"news","post_limit":4,"image_height":"large","show_view_all":true,"columns_desktop":3,"enable_section_box_layout":false,"color_scheme":"background-1","blog_card_text_alignment":"center","blog_card_color_scheme":"scheme-a4c001d4-8f94-4d1f-83d5-d1e9e04c0d66","show_image":true,"show_date":false,"show_author":false,"padding_top":40,"padding_bottom":40}}},"order":["slideshow_rzKgaz","image_banner_EYTDCx","f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09","1aded6ef-5727-4347-bf56-9fc610343e55","53e1a533-81ae-46cc-97dd-782a995beae4","89d7b601-ae47-4d55-89bf-26b79f43060a","d473dbe2-d4cb-4299-aa09-d3578d047e5c","3c381571-e172-4fa5-beb8-79027d436231","6816d4fe-29d0-4a8d-802e-43061cbf5a80"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "slideshow_rzKgaz": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_DXGezN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-background-Black-Ops.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/PXGM-background-Black-Ops-WEB.jpg",
+            "badge_label": "",
+            "heading": "PXG has landed in Australia!",
+            "text": "",
+            "hide_text_on_mobile": false,
+            "button_label": "Learn More",
+            "price": "",
+            "link": "shopify:\/\/products\/black-ops-0311-tour-1-driver",
+            "button_style": "primary",
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#000000",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#da2127",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#ff0008",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_ARPXQW": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11691-Homepage-2-01-desktop.jpg",
+            "badge_label": "",
+            "heading": "Landing in Australia Soon!",
+            "text": "",
+            "hide_text_on_mobile": false,
+            "button_label": "Learn More",
+            "price": "",
+            "link": "shopify:\/\/products\/black-ops-0311-tour-1-driver",
+            "button_style": "primary",
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#000000",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#da2127",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#ff0008",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_nfGrUj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "badge_label": "0311 P Gen6",
+            "heading": "Double Chrome",
+            "text": "",
+            "hide_text_on_mobile": false,
+            "button_label": "Learn More",
+            "price": "",
+            "link": "shopify:\/\/products\/0311-p-gen6",
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 60,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#da2127",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#da2127",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "slide_DXGezN",
+        "slide_ARPXQW",
+        "slide_nfGrUj"
+      ],
+      "custom_css": [
+        "h2 {letter-spacing: 0.2rem;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slide_height_mobile": "adapt_image_mobile",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_pagination_desktop": false,
+        "enable_navigation_desktop": false,
+        "preload": true,
+        "show_text_below": true,
+        "enable_pagination_mobile": false,
+        "enable_navigation_mobile": false,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_EYTDCx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_zfUxMz": {
+          "type": "heading",
+          "settings": {
+            "heading": "JAKE KNAPP WINS!",
+            "size": "h0"
+          }
+        },
+        "text_UPrepy": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>CONGRAULATIONS TO JAKE KNAPP!<\/strong>",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "buttons_pLmafG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SEE WITB",
+            "button_link_1": "shopify:\/\/blogs\/news\/jake-knapp-witb",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zfUxMz",
+        "text_UPrepy",
+        "buttons_pLmafG"
+      ],
+      "custom_css": [
+        "h2 {letter-spacing: 0.05em;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag_70838876-f761-49b3-950d-2e2c54f96c3d.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "adapt-mobile",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#171717",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#ffffff",
+        "color_button_1": "#da2127",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#da2127",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "2022-23 PGA TOUR ROOKIE OF THE YEAR",
+            "size": "h0"
+          }
+        },
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Congratulations to Eric Cole!<\/strong>",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SEE WITB",
+            "button_link_1": "shopify:\/\/blogs\/news\/eric-cole-witb",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-heading-1",
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1",
+        "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-buttons-1"
+      ],
+      "custom_css": [
+        "h2 {letter-spacing: 0.05em;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/PXGM-11479-desktop-2600x6002.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Eric-Cole-500x500_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "adapt-mobile",
+        "desktop_content_position": "middle-right",
+        "desktop_content_alignment": "right",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#ffffff",
+        "color_button_1": "#da2127",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#da2127",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1aded6ef-5727-4347-bf56-9fc610343e55": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "drivers",
+            "custom_title": ""
+          }
+        },
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fairways",
+            "custom_title": ""
+          }
+        },
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hybrids",
+            "custom_title": ""
+          }
+        },
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "irons",
+            "custom_title": ""
+          }
+        },
+        "28a02765-bb4a-48a3-bac1-6b0b47c0f9af": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wedges",
+            "custom_title": ""
+          }
+        },
+        "aca7a90e-8fc2-44b8-8a6b-c28df57b3987": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "putters",
+            "custom_title": ""
+          }
+        },
+        "115c3560-a1ac-4da6-b128-b6a63acf1e22": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "golf-balls",
+            "custom_title": ""
+          }
+        },
+        "e5d38eb0-7dd6-4089-a12b-99704254313d": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "headwear",
+            "custom_title": ""
+          }
+        },
+        "31cc4b3d-ab28-48e2-96e0-0455cf3b2a36": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "golf-bags",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0",
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1",
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2",
+        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3",
+        "28a02765-bb4a-48a3-bac1-6b0b47c0f9af",
+        "aca7a90e-8fc2-44b8-8a6b-c28df57b3987",
+        "115c3560-a1ac-4da6-b128-b6a63acf1e22",
+        "e5d38eb0-7dd6-4089-a12b-99704254313d",
+        "31cc4b3d-ab28-48e2-96e0-0455cf3b2a36"
+      ],
+      "custom_css": [
+        ".card__heading__collection-title {display: none;}",
+        ".card__heading--collection a:before {display: none;}"
+      ],
+      "settings": {
+        "title": "GOLF CLUBS",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "53e1a533-81ae-46cc-97dd-782a995beae4": {
+      "type": "image-with-text",
+      "blocks": {
+        "35415a0d-36d8-49ef-bb7d-e50b362591b8": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "da20392b-5e38-4e39-8f10-ab19f28c9854": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>CELINE CONQUERS THE COMPETITION<\/h2><p>PXG LPGA Tour Professional Celine Boutier rose to the top of the leaderboard for a fourth time this season to add another impressive win to her resume. Following a head-to-head nine-hole playoff, tying the record for second-longest playoff in LPGA Tour history, Celine ultimately conquered the competition to hoist the trophy at the 2023 Maybank Championship. Congratulations Celine!<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "2975d598-3d16-4116-84b5-78c3997003df": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "PLAY VIDEO",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "35415a0d-36d8-49ef-bb7d-e50b362591b8",
+        "da20392b-5e38-4e39-8f10-ab19f28c9854",
+        "2975d598-3d16-4116-84b5-78c3997003df"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/homepage-1024x600.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#161616",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "89d7b601-ae47-4d55-89bf-26b79f43060a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width align-center\" style=\"text-align:center\"><p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>\n\n<h1>PXG GEN6 IRONS <span style=\"color:#f1bb5f;\">RANKED #1<\/span> IN ACCURACY!<\/h1>\n\n<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "d473dbe2-d4cb-4299-aa09-d3578d047e5c": {
+      "type": "video",
+      "custom_css": [
+        "h2 {font-family: \"Prohibition\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Video",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
+        "video_url": "https:\/\/vimeo.com\/862172917",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3c381571-e172-4fa5-beb8-79027d436231": {
+      "type": "collection-list",
+      "blocks": {
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "golf-bags",
+            "custom_title": ""
+          }
+        },
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headwear",
+            "custom_title": ""
+          }
+        },
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gloves",
+            "custom_title": ""
+          }
+        },
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "weight-kits",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-1",
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-2",
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-3",
+        "template--21416307294515__3c381571-e172-4fa5-beb8-79027d436231-featured_collection-4"
+      ],
+      "custom_css": [
+        ".card__heading__collection-title {display: none;}",
+        ".card__heading--collection a:before {display: none;}"
+      ],
+      "settings": {
+        "title": "ACCESSORIES",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "PXG BLOG",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 4,
+        "image_height": "large",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "blog_card_text_alignment": "center",
+        "blog_card_color_scheme": "scheme-a4c001d4-8f94-4d1f-83d5-d1e9e04c0d66",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "slideshow_rzKgaz",
+    "image_banner_EYTDCx",
+    "f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09",
+    "1aded6ef-5727-4347-bf56-9fc610343e55",
+    "53e1a533-81ae-46cc-97dd-782a995beae4",
+    "89d7b601-ae47-4d55-89bf-26b79f43060a",
+    "d473dbe2-d4cb-4299-aa09-d3578d047e5c",
+    "3c381571-e172-4fa5-beb8-79027d436231",
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80"
+  ]
+}
