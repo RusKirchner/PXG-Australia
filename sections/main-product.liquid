@@ -681,7 +681,7 @@
                   {% assign clean_text = clean_text | replace: '  ', ' ' %} <!-- replace multiple spaces with a single space -->
                   {% assign clean_text = clean_text | strip %} 
 
-                  newText = "{{clean_text }}";
+                  newText = `{{ clean_text | escape }}`;
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
