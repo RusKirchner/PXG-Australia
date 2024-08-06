@@ -675,6 +675,28 @@
         
               jQuery('.configur-product.column-2.shaft .configur-img img').attr('src', imageUrl);
             });
+
+      
+            jQuery('#Grip-0-7').on('change', function() {
+              var selectedOption = jQuery(this).val();
+              var imageUrl = '';
+        
+              switch(selectedOption) {
+                case 'PXG Pistol I Putter Grip - Black':
+                  imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
+                  break;
+                case 'PXG Pistol II Putter Grip - Black':
+                  imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
+                  break;
+                case 'PXG M16 Putter Shaft - Straight (+$89)':
+                  imageUrl = "{{ product.metafields.custom.shaft_image_three | img_url: 'large'  }}";
+                  break;
+                default:
+                  imageUrl = 'default-image.jpg';
+              }
+        
+              jQuery('.configur-product.column-2.shaft .configur-img img').attr('src', imageUrl);
+            });
       
     }, 6000);
     
