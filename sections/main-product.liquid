@@ -241,10 +241,10 @@
                   {% endif %}
                   
                   <!-- Configur Product Grip -->
-                  {%- if product.metafields.custom.grip_image and product.metafields.custom.grip_heading != blank -%}
+                  {%- if product.metafields.custom.grip_image_one and product.metafields.custom.grip_heading != blank -%}
                     <div class="configur-product column-3 grip">
                       <div class="configur-img">
-                      {{ product.metafields.custom.grip_image | metafield_tag }}
+                      {{ product.metafields.custom.grip_image_one | metafield_tag }}
                       </div>
                       <h3>{{ product.metafields.custom.grip_heading | metafield_tag }}</h3>
                     </div>
