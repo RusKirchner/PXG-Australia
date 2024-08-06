@@ -674,11 +674,11 @@
               switch(selectedOption) {
                 case 'PXG Pistol I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
-                  newText = `{{ product.metafields.custom.grip_list_one | escape }}`;
+                  newText = `{{ product.metafields.custom.grip_list_one  }}`;
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
-                  newText =  `{{ product.metafields.custom.grip_list_two | escape }}`; 
+                  newText =  `{{ product.metafields.custom.grip_list_two  }}`; 
                   break;
                 case 'PXG Pistol III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_three | img_url: 'large'  }}";
@@ -718,11 +718,11 @@
                   break;
                 case 'SuperStroke Pistol 1.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_twelve | img_url: 'large'  }}";
-                  newText = `{{ product.metafields.custom.grip_list_twelve  | escape }}`; 
+                  newText = `{{ product.metafields.custom.grip_list_twelve }}`; 
                   break;
                 case 'SuperStroke Slim 3.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_thirteen | img_url: 'large'  }}";
-                  newText = `{{ product.metafields.custom.grip_list_thirteen  | escape }}`; 
+                  newText = `{{ product.metafields.custom.grip_list_thirteen   }}`; 
                   break;
                 default:
                   imageUrl = 'default-image.jpg';
