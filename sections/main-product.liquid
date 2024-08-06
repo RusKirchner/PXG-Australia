@@ -733,7 +733,7 @@
                   break;
                 case 'SuperStroke Slim 3.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_thirteen | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_thirteen  }}";
+                  newText = "{{ product.metafields.custom.grip_list_thirteen | metafield_text }}";
                   break;
                 default:
                   imageUrl = 'default-image.jpg';
