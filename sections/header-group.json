@@ -557,6 +557,9 @@
         "5252ef1e-142a-4211-a789-f6ff8a260759",
         "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"
       ],
+      "custom_css": [
+        ".link-effect-no-underline {font-family: 'Prohibition', sans-serif; letter-spacing: .1rem; \/* Set the letter spacing *\/ text-decoration: none; \/* Optional: remove underline if applied *\/}"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "top_color_scheme": "inverse",
@@ -575,7 +578,7 @@
         "customer_support_region_caption": "",
         "customer_support_region_global_hotline": "",
         "enable_transparent_homepage": false,
-        "text_color_transparent": "#fff"
+        "text_color_transparent": "#ffffff"
       }
     }
   },
