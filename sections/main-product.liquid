@@ -674,7 +674,7 @@
               switch(selectedOption) {
                 case 'PXG Pistol I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_one  | escape | replace: '<br>', '' }}";
+                  newText = "{{ product.metafields.custom.grip_list_one | replace: '<br>', '' }}";
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
