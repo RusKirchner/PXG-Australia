@@ -558,7 +558,8 @@
         "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"
       ],
       "custom_css": [
-        ".link-effect-no-underline {font-family: 'Prohibition', sans-serif; letter-spacing: .1rem; \/* Set the letter spacing *\/ text-decoration: none; \/* Optional: remove underline if applied *\/}"
+        ".header__inline-menu nav {text-transform: uppercase; font-family: proximanova-bold, sans-serif; letter-spacing: 2px; }",
+        ".h4.card__heading.font-heading-bold,.h4.card__heading.font-heading-bold a {font-family: \"Proxima\", sans-serif; text-transform: uppercase;}"
       ],
       "settings": {
         "color_scheme": "background-1",
