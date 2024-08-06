@@ -678,51 +678,51 @@
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_two  | escape | replace: '<br>', '' }}";
+                  newText =  `{{ product.metafields.custom.grip_list_two | escape }}`; 
                   break;
                 case 'PXG Pistol III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_three | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_three  | escape }}";
+                  newText = `{{ product.metafields.custom.grip_list_three | escape }}`; 
                   break;
                 case 'PXG Sink Fit Skinny':
                   imageUrl = "{{ product.metafields.custom.grip_image_four | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_four  | escape }}";
+                  newText = `{{ product.metafields.custom.grip_list_four  | escape }}`; 
                   break;
                 case 'PXG Straight I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_five | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_five  | escape }}";
+                  newText = `{{ product.metafields.custom.grip_list_five  | escape }}`; 
                   break;
                 case 'PXG Straight II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_six | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_six  | escape  }}";
+                  newText = `{{ product.metafields.custom.grip_list_six  | escape }}`; 
                   break;
                 case 'PXG Straight III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_seven | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_seven  }}";
+                  newText = `{{ product.metafields.custom.grip_list_seven  | escape }}`; 
                   break;
                 case 'SuperStroke Fatso 5.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_eight | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_eight  }}";
+                  newText = `{{ product.metafields.custom.grip_list_eight  | escape }}`; 
                   break;
                 case 'SuperStroke Flatso 1.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_nine | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_nine  }}";
+                  newText = `{{ product.metafields.custom.grip_list_nine  | escape }}`; 
                   break;
                 case 'SuperStroke Flatso 2.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_ten | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_ten  }}";
+                  newText = `{{ product.metafields.custom.grip_list_ten  | escape }}`; 
                   break;
                 case 'SuperStroke Mid Slim 2.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_eleven | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_eleven  }}";
+                  newText = `{{ product.metafields.custom.grip_list_eleven  | escape }}`; 
                   break;
                 case 'SuperStroke Pistol 1.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_twelve | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_twelve  }}";
+                  newText = `{{ product.metafields.custom.grip_list_twelve  | escape }}`; 
                   break;
                 case 'SuperStroke Slim 3.0 - Black (+$25)':
                   imageUrl = "{{ product.metafields.custom.grip_image_thirteen | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_thirteen  }}";
+                  newText = `{{ product.metafields.custom.grip_list_thirteen  | escape }}`; 
                   break;
                 default:
                   imageUrl = 'default-image.jpg';
