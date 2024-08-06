@@ -727,6 +727,50 @@
                 default:
                   imageUrl = 'default-image.jpg';
               }
+
+              switch(selectedOption_text) {
+                case 'PXG Pistol I Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_one | strip | escape  }}";
+                  break;
+                case 'PXG Pistol II Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_two | strip | escape }}";
+                  break;
+                case 'PXG Pistol III Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_three | strip | escape }}";
+                  break;
+                case 'PXG Sink Fit Skinny':
+                  newText = "{{ product.metafields.custom.grip_list_four | strip | escape }}";
+                  break;
+                case 'PXG Straight I Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_five | strip | escape }}";
+                  break;
+                case 'PXG Straight II Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_six | strip | escape  }}";
+                  break;
+                case 'PXG Straight III Putter Grip - Black':
+                  newText = "{{ product.metafields.custom.grip_list_seven  }}";
+                  break;
+                case 'SuperStroke Fatso 5.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_eight  }}";
+                  break;
+                case 'SuperStroke Flatso 1.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_nine  }}";
+                  break;
+                case 'SuperStroke Flatso 2.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_ten  }}";
+                  break;
+                case 'SuperStroke Mid Slim 2.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_eleven  }}";
+                  break;
+                case 'SuperStroke Pistol 1.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_twelve  }}";
+                  break;
+                case 'SuperStroke Slim 3.0 - Black (+$25)':
+                  newText = "{{ product.metafields.custom.grip_list_thirteen  }}";
+                  break;
+                default:
+                  newText = 'default-image';
+              }
         
               jQuery('.configur-product.column-3.grip .configur-img img').attr('src', imageUrl);
               jQuery('.configur-product-features .configur-features-list span').text("kjkhjhjkhk");
