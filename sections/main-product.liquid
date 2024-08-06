@@ -674,27 +674,27 @@
               switch(selectedOption) {
                 case 'PXG Pistol I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_one | escape  }}";
+                  newText = "{{ product.metafields.custom.grip_list_one | strip | escape  }}";
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_two | escape }}";
+                  newText = "{{ product.metafields.custom.grip_list_two | strip | escape }}";
                   break;
                 case 'PXG Pistol III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_three | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_three | escape }}";
+                  newText = "{{ product.metafields.custom.grip_list_three | strip | escape }}";
                   break;
                 case 'PXG Sink Fit Skinny':
                   imageUrl = "{{ product.metafields.custom.grip_image_four | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_four | escape }}";
+                  newText = "{{ product.metafields.custom.grip_list_four | strip | escape }}";
                   break;
                 case 'PXG Straight I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_five | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_five | escape }}";
+                  newText = "{{ product.metafields.custom.grip_list_five | strip | escape }}";
                   break;
                 case 'PXG Straight II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_six | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_six  }}";
+                  newText = "{{ product.metafields.custom.grip_list_six | strip | escape  }}";
                   break;
                 case 'PXG Straight III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_seven | img_url: 'large'  }}";
