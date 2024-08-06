@@ -378,10 +378,10 @@
                             {%- render 'main-product-quantity-selector', product: product, block: block, cart_qty: cart_qty -%}
                             {% endif %}
 
-                            {%- if product.metafields.custom.features_list != blank -%}
+                            {%- if product.metafields.custom.grip_list_one != blank -%}
                               <div class="configur-product-features"> 
                                 <div class="configur-features-list">
-                                {{ product.metafields.custom.features_list | metafield_tag }}
+                                {{ product.metafields.custom.grip_list_one | metafield_tag }}
                                 </div>
                               </div>
                             {% endif %}
