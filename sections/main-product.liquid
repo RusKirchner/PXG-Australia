@@ -674,7 +674,14 @@
               switch(selectedOption) {
                 case 'PXG Pistol I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_one | replace: '<br>', '' }}";
+                  
+                  {% assign raw_text = product.metafields.custom.grip_list_one %}
+                  {% assign clean_text = raw_text | strip_html | replace: '<br>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
+                  {% assign clean_text = clean_text | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&apos;', "'" %}
+                  {% assign clean_text = clean_text | replace: '  ', ' ' %} <!-- replace multiple spaces with a single space -->
+                  {% assign clean_text = clean_text | strip %} 
+
+                  newText = "{{clean_text }}";
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
