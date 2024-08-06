@@ -616,12 +616,7 @@
 </product-info>
 
                               
-<form action="/cart/add" method="post" enctype="multipart/form-data">
-  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-  <label for="price_increase">Enter price increase amount:</label>
-  <input type="text" name="properties[price_increase]" id="price_increase" />
-  <button type="submit">Add to Cart</button>
-</form>
+
 
 
 {{ product.metafields.custom.grip_list_one | escape  }}
