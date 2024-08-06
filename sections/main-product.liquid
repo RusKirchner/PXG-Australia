@@ -685,23 +685,23 @@
               switch(selectedOption) {
                 case 'PXG Pistol I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_one | img_url: 'large'  }}";
-                  newText = " product.metafields.custom.grip_list_on";
+                  newText = "{{ product.metafields.custom.grip_list_one | escape  }}";
                   break;
                 case 'PXG Pistol II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_two | img_url: 'large'  }}";
-                  newText = " product.metafields.custom.grip_list_two  ";
+                  newText = "{{ product.metafields.custom.grip_list_two | escape }}";
                   break;
                 case 'PXG Pistol III Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_three | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_three  }}";
+                  newText = "{{ product.metafields.custom.grip_list_three | escape }}";
                   break;
                 case 'PXG Sink Fit Skinny':
                   imageUrl = "{{ product.metafields.custom.grip_image_four | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_four }}";
+                  newText = "{{ product.metafields.custom.grip_list_four | escape }}";
                   break;
                 case 'PXG Straight I Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_five | img_url: 'large'  }}";
-                  newText = "{{ product.metafields.custom.grip_list_five }}";
+                  newText = "{{ product.metafields.custom.grip_list_five | escape }}";
                   break;
                 case 'PXG Straight II Putter Grip - Black':
                   imageUrl = "{{ product.metafields.custom.grip_image_six | img_url: 'large'  }}";
