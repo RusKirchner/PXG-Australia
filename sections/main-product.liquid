@@ -711,7 +711,27 @@
     
     setTimeout(function() {
       console.log("3000 mmlmml");
-              jQuery('#Hosel-0-2').on('change', function() {
+              jQuery('#Hosel_Right-0-2').on('change', function() {
+              var selectedOption = jQuery(this).val();
+              var imageUrl = '';
+        
+              switch(selectedOption) {
+                case 'Double Bend - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_one | img_url: 'large'  }}";
+                  break;
+                case 'Heel Shafted - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_two | img_url: 'large'  }}";
+                  break;
+                case 'Plumber\'s Neck - Right Hand':
+                  imageUrl = "{{ product.metafields.custom.head_image_three | img_url: 'large'  }}";
+                  break;
+                default:
+                  imageUrl = 'default-image.jpg';
+              }
+        
+              jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
+            });
+            jQuery('#Hosel_left-0-3').on('change', function() {
               var selectedOption = jQuery(this).val();
               var imageUrl = '';
         
