@@ -752,7 +752,30 @@
               jQuery('.configur-product.column-1.head .configur-img img').attr('src', imageUrl);
             });
 
-            jQuery('#Shaft-0-6').on('change', function() {
+            jQuery('#Shaft-0-8').on('change', function() {
+              var selectedOption = jQuery(this).val();
+              var imageUrl = '';
+        
+              switch(selectedOption) {
+                case 'Straight Putter Shaft - Chrome':
+                  imageUrl = "{{ product.metafields.custom.shaft_image_one | img_url: 'large'  }}";
+                  break;
+                case 'PXG M16 Putter Shaft - Straight - Black (+$89)':
+                  imageUrl = "{{ product.metafields.custom.shaft_image_two | img_url: 'large'  }}";
+                  break;
+                case 'PXG M16 Putter Shaft - Straight (+$89)':
+                  imageUrl = "{{ product.metafields.custom.shaft_image_three | img_url: 'large'  }}";
+                  break;
+                case 'PXG M16 Putter Shaft - Double Bend - Black (+$170)':
+                  imageUrl = "{{ product.metafields.custom.shaft_bend_one | img_url: 'large'  }}";
+                  break;
+                default:
+                  imageUrl = 'default-image.jpg';
+              }
+        
+              jQuery('.configur-product.column-2.shaft .configur-img img').attr('src', imageUrl);
+            });
+            jQuery('#Shaft_straight-0-7').on('change', function() {
               var selectedOption = jQuery(this).val();
               var imageUrl = '';
         
