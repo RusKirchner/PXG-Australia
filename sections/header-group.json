@@ -559,7 +559,7 @@
       ],
       "custom_css": [
         ".header__inline-menu nav {text-transform: uppercase; font-family: proximanova-bold, sans-serif; letter-spacing: 2px;}",
-        ".h4.card__heading.font-heading-bold,.h4.card__heading.font-heading-bold a {font-family: proximanova, sans-serif;text-transform: uppercase;font-size: 1rem;}"
+        ".h4.card__heading.font-heading-bold,.h4.card__heading.font-heading-bold a {font-family: proximanova, sans-serif; text-transform: uppercase; font-size: 1.75rem;}"
       ],
       "settings": {
         "color_scheme": "background-1",
