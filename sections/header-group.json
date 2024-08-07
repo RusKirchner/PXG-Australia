@@ -558,7 +558,7 @@
         "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"
       ],
       "custom_css": [
-        ".header__inline-menu nav {text-transform: uppercase; font-family: proximanova-bold, sans-serif; letter-spacing: 2px;}",
+        ".header__inline-menu nav {text-transform: uppercase; font-family: proximanova-bold, sans-serif; letter-spacing: ; }",
         ".h4.card__heading.font-heading-bold,.h4.card__heading.font-heading-bold a {font-family: proximanova, sans-serif; text-transform: uppercase; font-size: 1.75rem;}"
       ],
       "settings": {
