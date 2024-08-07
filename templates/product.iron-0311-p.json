@@ -306,7 +306,6 @@
         "text_overlay_image_dUrkb7",
         "text_overlay_image_KRwm7r"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -729,7 +728,6 @@
     },
     "342fa470-7277-4291-be0f-d2979708f671": {
       "type": "page",
-      "disabled": true,
       "custom_css": [
 
       ],
