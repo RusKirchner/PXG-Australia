@@ -1,1 +1,941 @@
-{"sections":{"ebd3b98a-128b-4a65-a5aa-b5f4b63063e7":{"type":"image-with-text","blocks":{"5357b0e9-4554-489d-a671-0e2098b77dc4":{"type":"caption","settings":{"caption":"NEW","text_style":"subtitle","text_size":"large"}},"5dbe9482-7892-4aa2-b851-dc73d943be4b":{"type":"heading","disabled":true,"settings":{"heading":"PRECISION WEIGHTING","heading_size":"h1","enable_bold_heading":false}},"cb459e26-5c60-4789-8b38-289beb93ff9d":{"type":"text","settings":{"text":"<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“THEY’RE OUTSTANDING AT SMOOTHING OUT SLIGHTLY FAT STRIKES.”<\/strong><\/p><p>—@PluggedInGolf<br\/><\/p><p><strong>“THE SOFTEST FEELING, LONGEST, MOST FORGIVING THEY’VE EVER MADE.”<\/strong><\/p><p>—Today's Golfer<br\/><\/p><p><strong>“IT’S LONG, ACCURATE, AND DELIVERS BUTTERY SOFT FEEL.”<\/strong><\/p><p>—Golf Monthly<\/p>","text_style":"subtitle"}},"6fef0858-c672-4c8a-86ae-e95fb45500a1":{"type":"button","disabled":true,"settings":{"button_label":"Buy Now","button_link":"#MainProduct-template--21504003047731__main","button_style":"solid"}},"0ea6b4b7-686a-4763-960a-fecb082fd37f":{"type":"highlight_text","disabled":true,"settings":{"text":"Add a highlight text","text_size":"h2"}}},"block_order":["5357b0e9-4554-489d-a671-0e2098b77dc4","5dbe9482-7892-4aa2-b851-dc73d943be4b","cb459e26-5c60-4789-8b38-289beb93ff9d","6fef0858-c672-4c8a-86ae-e95fb45500a1","0ea6b4b7-686a-4763-960a-fecb082fd37f"],"custom_css":[".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":0,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#ffffff","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"rgba(0,0,0,0)","background_container":"rgba(0,0,0,0)","gradient_background_container":"","background_section":"#000000","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1f2428"}},"b861113b-71fc-41c9-bf1f-80084a7d6f04":{"type":"image-with-text","blocks":{"1c8c05ca-c7d8-4489-a553-62bdaf63a430":{"type":"caption","disabled":true,"settings":{"caption":"Caption","text_style":"image-with-text__badge","text_size":"small"}},"template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1":{"type":"heading","disabled":true,"settings":{"heading":"PRECISION WEIGHTING","heading_size":"h1","enable_bold_heading":false}},"template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1":{"type":"text","settings":{"text":"<h2>BEYOND FORGIVING FOR GAME-CHANGING ACCURACY<\/h2><p>With a thinner face leading to improved performance on mishit shots and increased ball speed, PXG 0311 P GEN6 Irons are the longest and most forgiving irons PXG has ever made. Backed by industry-leading engineering and complete with a patented core material, breakthrough head design, and Precision Weighting Technology, these offset irons were made to deliver an incredibly soft feel while providing extreme distance performance with excellent forgiveness. Available in Chrome, Xtreme Dark finish and two new finishes: Double Chrome and Double Black. <\/p><p> <\/p><ul><li>·Maximum Distance<\/li><li>·Fast Ball Speeds<\/li><li>·Extreme Forgiveness<\/li><li>·Tight Dispersion<\/li><li>·Confidence-Inspiring Design<\/li><li>·Incredibly Soft Feel<\/li><li>·Remarkably Rewarding Sound<\/li><\/ul>","text_style":"subtitle"}},"template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":"","button_style":"solid"}}},"block_order":["1c8c05ca-c7d8-4489-a553-62bdaf63a430","template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1","template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1","template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1"],"custom_css":[],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/GEN6-7-Iron-P-All-Chrome-Back-Tech-Weight-2416x3000-80ac8b7.png","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":40,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#ffffff","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#7a7a7a","background_container":"rgba(0,0,0,0)","gradient_background_container":"","background_section":"#000000","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1f2428"}},"5f037c15-7714-4621-afad-1e999cc27872":{"type":"rich-text","blocks":{"template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1":{"type":"heading","settings":{"heading":"<h1>TECHNOLOGY THAT PERFORMS<\/h1>","heading_size":"h0"}}},"block_order":["template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"inverse","full_width":true,"padding_top":40,"padding_bottom":40}},"gallery_iENJ7C":{"type":"gallery","blocks":{"text_overlay_image_rhpMAy":{"type":"text-overlay-image","settings":{"link":"","keep_ltr":false,"text":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Our collection","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"center","heading_color":"#fff","caption_color":"#fff","button_foreground":"#000","button_background":"#fff","overlay_color":"#000","overlay_opacity":50}},"text_overlay_image_L8GPz6":{"type":"text-overlay-image","settings":{"link":"","keep_ltr":false,"text":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Our collection","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"center","heading_color":"#fff","caption_color":"#fff","button_foreground":"#000","button_background":"#fff","overlay_color":"#000","overlay_opacity":50}},"text_overlay_image_dUrkb7":{"type":"text-overlay-image","settings":{"link":"","keep_ltr":false,"text":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Our collection","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"center","heading_color":"#fff","caption_color":"#fff","button_foreground":"#000","button_background":"#fff","overlay_color":"#000","overlay_opacity":50}},"text_overlay_image_KRwm7r":{"type":"text-overlay-image","settings":{"link":"","keep_ltr":false,"text":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Our collection","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"center","heading_color":"#fff","caption_color":"#fff","button_foreground":"#000","button_background":"#fff","overlay_color":"#000","overlay_opacity":50}}},"block_order":["text_overlay_image_rhpMAy","text_overlay_image_L8GPz6","text_overlay_image_dUrkb7","text_overlay_image_KRwm7r"],"settings":{"title":"","heading_size":"h1","flexible_columns_layout":"carousel","columns_desktop":4,"columns_tablet":"4","full_width":true,"auto_fit":false,"disable_item_space":false,"enable_section_box_layout":true,"color_scheme":"","image_ratio":"square","columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"9fea5ba7-31d4-4140-849f-3a727ceb4e8f":{"type":"video","settings":{"title":"","subtitle":"","heading_size":"h1","cover_image":"shopify:\/\/shop_images\/0317-CB-Video-Banner.jpg","video_hosted":"shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4","video_url":"","description":"","autoplay":false,"enable_controls":true,"enable_video_looping":true,"full_width":true,"hide_when_empty_video":false,"enable_section_box_layout":false,"color_scheme":"","padding_top":0,"padding_bottom":0}},"c3be0370-a9ec-41d9-b488-a18fb6d2f93b":{"type":"image-with-text","blocks":{"22ef709f-5b26-4a0c-ab30-c7711106c219":{"type":"caption","disabled":true,"settings":{"caption":"Caption","text_style":"image-with-text__badge","text_size":"small"}},"9b2cc081-9522-4e0a-a9f8-9ddf8110a87f":{"type":"heading","disabled":true,"settings":{"heading":"PRECISION WEIGHTING","heading_size":"h1","enable_bold_heading":false}},"3cf4db0b-b14f-44c3-99fe-02fda89e0c69":{"type":"text","settings":{"text":"<h2>OPTIMAL PERFORMANCE<\/h2><p>Backed by industry-leading engineering and a relentless pursuit of performance, PXG 0311 P GEN6 Irons provide an ideal balance between workability and forgiveness. These irons feature PXG’s patented XCOR2 material, moderate offset, and breakthrough head design with a clean aesthetic. GEN6 Irons advance our original flagship forward and offer an exceptional blend of distance, workability, and forgiveness.<\/p>","text_style":"subtitle"}},"3520fd1d-c884-44df-a166-56f243dd1cc1":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":"","button_style":"solid"}}},"block_order":["22ef709f-5b26-4a0c-ab30-c7711106c219","9b2cc081-9522-4e0a-a9f8-9ddf8110a87f","3cf4db0b-b14f-44c3-99fe-02fda89e0c69","3520fd1d-c884-44df-a166-56f243dd1cc1"],"custom_css":[".image-with-text img {object-fit: contain;}"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/20231025_PXG2158-3000x2000-2567b33.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":40,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#ffffff","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#7a7a7a","background_container":"rgba(0,0,0,0)","gradient_background_container":"","background_section":"#000000","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1f2428"}},"image_with_text_H8wzdC":{"type":"image-with-text","blocks":{"caption_bGwcLq":{"type":"caption","disabled":true,"settings":{"caption":"Caption","text_style":"image-with-text__badge","text_size":"small"}},"heading_8PAJjG":{"type":"heading","disabled":true,"settings":{"heading":"PRECISION WEIGHTING","heading_size":"h1","enable_bold_heading":false}},"text_hhDMhc":{"type":"text","settings":{"text":"<h2>PRECISION WEIGHTING<\/h2><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG.<\/p>","text_style":"subtitle"}},"button_hDTTKY":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":"","button_style":"solid"}}},"block_order":["caption_bGwcLq","heading_8PAJjG","text_hhDMhc","button_hDTTKY"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/20231025_PXG2424-3000x2000-2567b33.jpg","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":40,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#ffffff","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#7a7a7a","background_container":"rgba(0,0,0,0)","gradient_background_container":"","background_section":"#000000","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1f2428"}},"f110dd87-a437-4a56-b3f6-e00c21a66308":{"type":"custom-liquid","disabled":true,"custom_css":["table {border-collapse: collapse; border-spacing: 0; font-weight: 400; width: 100%; color: #000000;}",".table-dark {color: white; background-color: #343a40;}",".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"],"settings":{"custom_liquid":"<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n<\/th>\n<th scope=\"col\">\nStock<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nHang Angle\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend<\/th>\n<td>375g<\/td>\n<td>345g<\/td>\n<td>415g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Face Balanced<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted<\/th>\n<td>385g<\/td>\n<td>355g<\/td>\n<td>425g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Significant Toe Hang<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck<\/th>\n<td>395g<\/td>\n<td>365g<\/td>\n<td>435g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Mid Toe Hang<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock<\/th>\n<td>420g<\/td>\n<td>390g<\/td>\n<td>460g<\/td>\n<td>7°<\/td>\n<td>73°<\/td>\n<td>Face Balanced<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>","color_scheme":"inverse","padding_top":40,"padding_bottom":52}},"52bf00c5-c1a5-4bcd-9b87-204e690ab1d5":{"type":"main-product-tabs","blocks":{"1638dd10-8e33-4e82-b01c-2eb71d6362ba":{"type":"description","settings":{"title":"Overview","truncate_description":0,"read_more_button":"Read more"}},"8274ef04-23c0-4245-a55b-07501c2bd206":{"type":"page_content","settings":{"title":"Technology","page":""}},"cbb96b5f-f683-42e5-b865-6ac18e11645e":{"type":"page_content","settings":{"title":"Specifications","page":""}},"d1f92fa0-6127-4702-970a-21fac62e87be":{"type":"page_content","settings":{"title":"Compare","page":"0311-p-xp-comparison"}},"e757ac3b-88df-4889-8f3c-2be7f621a947":{"type":"page_content","disabled":true,"settings":{"title":"Configure Your PXG's","page":""}}},"block_order":["1638dd10-8e33-4e82-b01c-2eb71d6362ba","8274ef04-23c0-4245-a55b-07501c2bd206","cbb96b5f-f683-42e5-b865-6ac18e11645e","d1f92fa0-6127-4702-970a-21fac62e87be","e757ac3b-88df-4889-8f3c-2be7f621a947"],"disabled":true,"settings":{"grid_layout":"grid","color_scheme":"background-1","padding_top":0,"padding_bottom":40}},"6c728f20-a922-40f0-bee5-f86687bddb68":{"type":"gallery","blocks":{"template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1":{"type":"text-overlay-image","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-5IG-2160x2160-2160x2160-742d66f.jpg","link":"","keep_ltr":false,"text":"","text_style":"subtitle","text_size":"small","heading":"","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"start","heading_color":"#ffffff","caption_color":"#ffffff","button_foreground":"#000000","button_background":"#ffffff","overlay_color":"#000000","overlay_opacity":50}},"text_overlay_image_zhQmFD":{"type":"text-overlay-image","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg","link":"","keep_ltr":false,"text":"","text_style":"subtitle","text_size":"small","heading":"","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"start","heading_color":"#ffffff","caption_color":"#ffffff","button_foreground":"#000000","button_background":"#ffffff","overlay_color":"#000000","overlay_opacity":50}},"text_overlay_image_6FzKA3":{"type":"text-overlay-image","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-1IG-2160x2160-2160x2160-742d66f.jpg","link":"","keep_ltr":false,"text":"","text_style":"subtitle","text_size":"small","heading":"","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"start","heading_color":"#ffffff","caption_color":"#ffffff","button_foreground":"#000000","button_background":"#ffffff","overlay_color":"#000000","overlay_opacity":50}},"text_overlay_image_zK8RNQ":{"type":"text-overlay-image","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-3IG-2160x2160-2160x2160-742d66f.jpg","link":"","keep_ltr":false,"text":"","text_style":"subtitle","text_size":"small","heading":"","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"start","heading_color":"#ffffff","caption_color":"#ffffff","button_foreground":"#000000","button_background":"#ffffff","overlay_color":"#000000","overlay_opacity":50}},"text_overlay_image_qrrHBT":{"type":"text-overlay-image","settings":{"image":"shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-13IG-2160x2160-2160x2160-742d66f.jpg","link":"","keep_ltr":false,"text":"","text_style":"subtitle","text_size":"small","heading":"","heading_size":"h2","heading_uppercase":false,"button_label":"","button_style":"primary","button_size":"normal","button_pin_bottom":false,"horizontal_alignment":"center","vertical_alignment":"start","heading_color":"#ffffff","caption_color":"#ffffff","button_foreground":"#000000","button_background":"#ffffff","overlay_color":"#000000","overlay_opacity":50}}},"block_order":["template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1","text_overlay_image_zhQmFD","text_overlay_image_6FzKA3","text_overlay_image_zK8RNQ","text_overlay_image_qrrHBT"],"settings":{"title":"","heading_size":"h1","flexible_columns_layout":"carousel","columns_desktop":2,"columns_tablet":"3","full_width":true,"auto_fit":false,"disable_item_space":false,"enable_section_box_layout":false,"color_scheme":"background-2","image_ratio":"adapt","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"342fa470-7277-4291-be0f-d2979708f671":{"type":"page","disabled":true,"custom_css":[],"settings":{"page":"pxg-0311-p-gen6-iron-specs","heading_size":"h2","color_scheme":"","padding_top":36,"padding_bottom":36}},"custom_liquid_pMkhKJ":{"type":"custom-liquid","settings":{"custom_liquid":"<div class=\"center\">\n<h2>\nPXG 0311 P GEN6 IRON SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>20.5°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>23°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>26°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>30°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>34°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.100\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>39°<\/td>\n<td>36<\/td>\n<td>63.5°<\/td>\n<td>.075\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>44°<\/td>\n<td>35.75<\/td>\n<td>64°<\/td>\n<td>.050\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>49°<\/td>\n<td>35.5<\/td>\n<td>64°<\/td>\n<td>.040\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>","color_scheme":"","padding_top":40,"padding_bottom":52}},"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"show_vendor_link":false,"title_size":"h2"}},"2525f94e-add4-418e-b362-bd2bb35545fa":{"type":"rating","disabled":true,"settings":{"show_if_no_reviews":true}},"price":{"type":"price","settings":{"variant_price":false}},"1ceb2c7c-cd15-4386-86ae-4a7e76a707b9":{"type":"description","settings":{"truncate_description":0,"read_more_button":"Read more"}},"e592d434-8377-4309-b179-f98d4b3742a2":{"type":"sale_box","disabled":true,"settings":{"show_free_shipping_bar":false,"enable_compare":false,"picker_type":"button","enable_color_swatches":true,"color_swatches_style":"custom","size_chart_enable":false,"size_chart_option":"size","size_chart_link_label":"Size chart","size_chart_page":"","quantity_selector_enable":true,"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"cpb_custom_product_builder_customproductbuilder_dawn_MRxXPj":{"type":"shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67","settings":{"personalize_it":false,"personalizeit-button-text":"Personalize & Add To Cart","builder-version":"","builder-server":""}},"share":{"type":"share","disabled":true,"settings":{"share_label":"Share","enable_floating_layout":false,"share_on_facebook":true,"share_on_twitter":true,"share_on_pinterest":true,"share_on_email":true,"share_link":true}},"a1934adc-1886-4a20-bdd7-5f9778c59ebe":{"type":"information_group","disabled":true,"settings":{"brand_enable":false,"brand_label":"Brand","stock_enable":true,"stock_label":"Availability","inventory_threshold":10,"show_inventory_quantity":true,"sku_enable":true,"sku_label":"SKU","tags_enable":false,"tags_label":"Tags","collections_enable":true,"collections_label":"Collections"}},"5f0a8bbb-065e-48f8-bd53-5715da3b80b7":{"type":"complementary","disabled":true,"settings":{"block_heading":"Complementary products","make_collapsible_row":true,"icon":"appliances","product_list_limit":3,"total_enable":true,"total_label":"Total:","button_enable":true,"button_label":"Add items to cart","image_ratio":"square"}},"d38e5f77-a5ad-4198-a0ea-9722f01268f6":{"type":"text","disabled":true,"settings":{"icon":"none","text":"","text_style":"body"}}},"block_order":["title","2525f94e-add4-418e-b362-bd2bb35545fa","price","1ceb2c7c-cd15-4386-86ae-4a7e76a707b9","e592d434-8377-4309-b179-f98d4b3742a2","cpb_custom_product_builder_customproductbuilder_dawn_MRxXPj","share","a1934adc-1886-4a20-bdd7-5f9778c59ebe","5f0a8bbb-065e-48f8-bd53-5715da3b80b7","d38e5f77-a5ad-4198-a0ea-9722f01268f6"],"settings":{"section_width":"page-width","use_background_input":true,"enable_sticky_info":true,"enable_sticky_cart":false,"show_next_prev_products":false,"enable_shopify_reviews_app_css":false,"auto_scroll_up_mobile":false,"default_image":"product_featured_image","media_position":"left","gallery_layout":"thumbnail","thumbnail_position":"left","media_size":"small","image_ratio":"adapt","image_fit":false,"disable_images_lightbox":false,"mobile_thumbnails":"hide","hide_variants":false,"enable_video_looping":false,"padding_top":40,"padding_bottom":0}},"product-recommendations":{"type":"product-recommendations","custom_css":[".card__inner {background: #ffffff;}",".card__content {text-align: center;}",".card-information {text-align: center;}"],"settings":{"title":"Products","subtitle":"Recommended","heading_size":"h0","products_to_show":10,"columns_desktop":4,"full_width":false,"enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"enable_compare":false,"enable_quick_view":false,"show_color_swatches":true,"color_swatches_style":"custom","columns_tablet":"3","columns_mobile":"1","swipe_on_mobile":true,"padding_top":72,"padding_bottom":40}}},"order":["ebd3b98a-128b-4a65-a5aa-b5f4b63063e7","b861113b-71fc-41c9-bf1f-80084a7d6f04","5f037c15-7714-4621-afad-1e999cc27872","gallery_iENJ7C","9fea5ba7-31d4-4140-849f-3a727ceb4e8f","c3be0370-a9ec-41d9-b488-a18fb6d2f93b","image_with_text_H8wzdC","f110dd87-a437-4a56-b3f6-e00c21a66308","52bf00c5-c1a5-4bcd-9b87-204e690ab1d5","6c728f20-a922-40f0-bee5-f86687bddb68","342fa470-7277-4291-be0f-d2979708f671","custom_liquid_pMkhKJ","main","product-recommendations"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7": {
+      "type": "image-with-text",
+      "blocks": {
+        "5357b0e9-4554-489d-a671-0e2098b77dc4": {
+          "type": "caption",
+          "settings": {
+            "caption": "NEW",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "5dbe9482-7892-4aa2-b851-dc73d943be4b": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "cb459e26-5c60-4789-8b38-289beb93ff9d": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“THEY’RE OUTSTANDING AT SMOOTHING OUT SLIGHTLY FAT STRIKES.”<\/strong><\/p><p>—@PluggedInGolf<br\/><\/p><p><strong>“THE SOFTEST FEELING, LONGEST, MOST FORGIVING THEY’VE EVER MADE.”<\/strong><\/p><p>—Today's Golfer<br\/><\/p><p><strong>“IT’S LONG, ACCURATE, AND DELIVERS BUTTERY SOFT FEEL.”<\/strong><\/p><p>—Golf Monthly<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "6fef0858-c672-4c8a-86ae-e95fb45500a1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "#MainProduct-template--21504003047731__main",
+            "button_style": "solid"
+          }
+        },
+        "0ea6b4b7-686a-4763-960a-fecb082fd37f": {
+          "type": "highlight_text",
+          "disabled": true,
+          "settings": {
+            "text": "Add a highlight text",
+            "text_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "5357b0e9-4554-489d-a671-0e2098b77dc4",
+        "5dbe9482-7892-4aa2-b851-dc73d943be4b",
+        "cb459e26-5c60-4789-8b38-289beb93ff9d",
+        "6fef0858-c672-4c8a-86ae-e95fb45500a1",
+        "0ea6b4b7-686a-4763-960a-fecb082fd37f"
+      ],
+      "custom_css": [
+        ".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1f2428"
+      }
+    },
+    "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
+      "type": "image-with-text",
+      "blocks": {
+        "1c8c05ca-c7d8-4489-a553-62bdaf63a430": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Caption",
+            "text_style": "image-with-text__badge",
+            "text_size": "small"
+          }
+        },
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>BEYOND FORGIVING FOR GAME-CHANGING ACCURACY<\/h2><p>With a thinner face leading to improved performance on mishit shots and increased ball speed, PXG 0311 P GEN6 Irons are the longest and most forgiving irons PXG has ever made. Backed by industry-leading engineering and complete with a patented core material, breakthrough head design, and Precision Weighting Technology, these offset irons were made to deliver an incredibly soft feel while providing extreme distance performance with excellent forgiveness. Available in Chrome, Xtreme Dark finish and two new finishes: Double Chrome and Double Black. <\/p><p> <\/p><ul><li>·Maximum Distance<\/li><li>·Fast Ball Speeds<\/li><li>·Extreme Forgiveness<\/li><li>·Tight Dispersion<\/li><li>·Confidence-Inspiring Design<\/li><li>·Incredibly Soft Feel<\/li><li>·Remarkably Rewarding Sound<\/li><\/ul>",
+            "text_style": "subtitle"
+          }
+        },
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "1c8c05ca-c7d8-4489-a553-62bdaf63a430",
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1",
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1",
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/GEN6-7-Iron-P-All-Chrome-Back-Tech-Weight-2416x3000-80ac8b7.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#7a7a7a",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1f2428"
+      }
+    },
+    "5f037c15-7714-4621-afad-1e999cc27872": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gallery_iENJ7C": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_rhpMAy": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_L8GPz6": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_dUrkb7": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_KRwm7r": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_rhpMAy",
+        "text_overlay_image_L8GPz6",
+        "text_overlay_image_dUrkb7",
+        "text_overlay_image_KRwm7r"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 4,
+        "columns_tablet": "4",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": true,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/0317-CB-Video-Banner.jpg",
+        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
+        "video_url": "",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c3be0370-a9ec-41d9-b488-a18fb6d2f93b": {
+      "type": "image-with-text",
+      "blocks": {
+        "22ef709f-5b26-4a0c-ab30-c7711106c219": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Caption",
+            "text_style": "image-with-text__badge",
+            "text_size": "small"
+          }
+        },
+        "9b2cc081-9522-4e0a-a9f8-9ddf8110a87f": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "3cf4db0b-b14f-44c3-99fe-02fda89e0c69": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>OPTIMAL PERFORMANCE<\/h2><p>Backed by industry-leading engineering and a relentless pursuit of performance, PXG 0311 P GEN6 Irons provide an ideal balance between workability and forgiveness. These irons feature PXG’s patented XCOR2 material, moderate offset, and breakthrough head design with a clean aesthetic. GEN6 Irons advance our original flagship forward and offer an exceptional blend of distance, workability, and forgiveness.<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "3520fd1d-c884-44df-a166-56f243dd1cc1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "22ef709f-5b26-4a0c-ab30-c7711106c219",
+        "9b2cc081-9522-4e0a-a9f8-9ddf8110a87f",
+        "3cf4db0b-b14f-44c3-99fe-02fda89e0c69",
+        "3520fd1d-c884-44df-a166-56f243dd1cc1"
+      ],
+      "custom_css": [
+        ".image-with-text img {object-fit: contain;}"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/20231025_PXG2158-3000x2000-2567b33.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#7a7a7a",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1f2428"
+      }
+    },
+    "image_with_text_H8wzdC": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_bGwcLq": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Caption",
+            "text_style": "image-with-text__badge",
+            "text_size": "small"
+          }
+        },
+        "heading_8PAJjG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_hhDMhc": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>PRECISION WEIGHTING<\/h2><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG.<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_hDTTKY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_bGwcLq",
+        "heading_8PAJjG",
+        "text_hhDMhc",
+        "button_hDTTKY"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/20231025_PXG2424-3000x2000-2567b33.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#7a7a7a",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1f2428"
+      }
+    },
+    "f110dd87-a437-4a56-b3f6-e00c21a66308": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "table {border-collapse: collapse; border-spacing: 0; font-weight: 400; width: 100%; color: #000000;}",
+        ".table-dark {color: white; background-color: #343a40;}",
+        ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n<\/th>\n<th scope=\"col\">\nStock<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nHang Angle\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend<\/th>\n<td>375g<\/td>\n<td>345g<\/td>\n<td>415g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Face Balanced<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted<\/th>\n<td>385g<\/td>\n<td>355g<\/td>\n<td>425g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Significant Toe Hang<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck<\/th>\n<td>395g<\/td>\n<td>365g<\/td>\n<td>435g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Mid Toe Hang<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock<\/th>\n<td>420g<\/td>\n<td>390g<\/td>\n<td>460g<\/td>\n<td>7°<\/td>\n<td>73°<\/td>\n<td>Face Balanced<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
+      "type": "main-product-tabs",
+      "blocks": {
+        "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
+          "type": "description",
+          "settings": {
+            "title": "Overview",
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
+        "8274ef04-23c0-4245-a55b-07501c2bd206": {
+          "type": "page_content",
+          "settings": {
+            "title": "Technology",
+            "page": ""
+          }
+        },
+        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
+          "type": "page_content",
+          "settings": {
+            "title": "Specifications",
+            "page": ""
+          }
+        },
+        "d1f92fa0-6127-4702-970a-21fac62e87be": {
+          "type": "page_content",
+          "settings": {
+            "title": "Compare",
+            "page": "0311-p-xp-comparison"
+          }
+        },
+        "e757ac3b-88df-4889-8f3c-2be7f621a947": {
+          "type": "page_content",
+          "disabled": true,
+          "settings": {
+            "title": "Configure Your PXG's",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
+        "8274ef04-23c0-4245-a55b-07501c2bd206",
+        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
+        "d1f92fa0-6127-4702-970a-21fac62e87be",
+        "e757ac3b-88df-4889-8f3c-2be7f621a947"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "6c728f20-a922-40f0-bee5-f86687bddb68": {
+      "type": "gallery",
+      "blocks": {
+        "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-5IG-2160x2160-2160x2160-742d66f.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "start",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_zhQmFD": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "start",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_6FzKA3": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-1IG-2160x2160-2160x2160-742d66f.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "start",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_zK8RNQ": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-3IG-2160x2160-2160x2160-742d66f.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "start",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_qrrHBT": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-13IG-2160x2160-2160x2160-742d66f.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "start",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1",
+        "text_overlay_image_zhQmFD",
+        "text_overlay_image_6FzKA3",
+        "text_overlay_image_zK8RNQ",
+        "text_overlay_image_qrrHBT"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "342fa470-7277-4291-be0f-d2979708f671": {
+      "type": "page",
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "page": "pxg-0311-p-gen6-iron-specs",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_pMkhKJ": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN6 IRON SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>20.5°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>23°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>26°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>30°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>34°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.100\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>39°<\/td>\n<td>36<\/td>\n<td>63.5°<\/td>\n<td>.075\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>44°<\/td>\n<td>35.75<\/td>\n<td>64°<\/td>\n<td>.050\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>49°<\/td>\n<td>35.5<\/td>\n<td>64°<\/td>\n<td>.040\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": false,
+            "title_size": "h2"
+          }
+        },
+        "2525f94e-add4-418e-b362-bd2bb35545fa": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_if_no_reviews": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "variant_price": false
+          }
+        },
+        "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
+        "e592d434-8377-4309-b179-f98d4b3742a2": {
+          "type": "sale_box",
+          "disabled": true,
+          "settings": {
+            "show_free_shipping_bar": false,
+            "enable_compare": false,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "custom",
+            "size_chart_enable": false,
+            "size_chart_option": "size",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        },
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
+          "type": "information_group",
+          "disabled": true,
+          "settings": {
+            "brand_enable": false,
+            "brand_label": "Brand",
+            "stock_enable": true,
+            "stock_label": "Availability",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true,
+            "sku_enable": true,
+            "sku_label": "SKU",
+            "tags_enable": false,
+            "tags_label": "Tags",
+            "collections_enable": true,
+            "collections_label": "Collections"
+          }
+        },
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Complementary products",
+            "make_collapsible_row": true,
+            "icon": "appliances",
+            "product_list_limit": 3,
+            "total_enable": true,
+            "total_label": "Total:",
+            "button_enable": true,
+            "button_label": "Add items to cart",
+            "image_ratio": "square"
+          }
+        },
+        "d38e5f77-a5ad-4198-a0ea-9722f01268f6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "price",
+        "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
+        "e592d434-8377-4309-b179-f98d4b3742a2",
+        "share",
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
+        "d38e5f77-a5ad-4198-a0ea-9722f01268f6"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "use_background_input": true,
+        "enable_sticky_info": true,
+        "enable_sticky_cart": false,
+        "show_next_prev_products": false,
+        "enable_shopify_reviews_app_css": false,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "left",
+        "media_size": "small",
+        "image_ratio": "adapt",
+        "image_fit": false,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [
+        ".card__inner {background: #ffffff;}",
+        ".card__content {text-align: center;}",
+        ".card-information {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Products",
+        "subtitle": "Recommended",
+        "heading_size": "h0",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7",
+    "b861113b-71fc-41c9-bf1f-80084a7d6f04",
+    "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_iENJ7C",
+    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
+    "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
+    "image_with_text_H8wzdC",
+    "f110dd87-a437-4a56-b3f6-e00c21a66308",
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
+    "6c728f20-a922-40f0-bee5-f86687bddb68",
+    "342fa470-7277-4291-be0f-d2979708f671",
+    "custom_liquid_pMkhKJ",
+    "main",
+    "product-recommendations"
+  ]
+}
