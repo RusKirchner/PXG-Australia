@@ -23,6 +23,7 @@
       "block_order": [
         "template--21416306966835__32d9ddf9-a78b-4522-b17f-0d2296f75aa4-heading-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "full",
@@ -39,6 +40,7 @@
       "blocks": {
         "e83d1f32-c65d-42e6-9d33-6b71803d16dc": {
           "type": "collection_icon",
+          "disabled": true,
           "settings": {
             "collection": "",
             "icon": "computers"
@@ -46,6 +48,7 @@
         },
         "4fbcac9e-c27d-4d4e-9549-35730111dffe": {
           "type": "collection_icon",
+          "disabled": true,
           "settings": {
             "collection": "",
             "icon": "cellphone"
@@ -53,6 +56,7 @@
         },
         "46b183e0-1c4a-4c4b-9f1a-a99484771399": {
           "type": "collection_icon",
+          "disabled": true,
           "settings": {
             "collection": "",
             "icon": "book_open"
@@ -64,14 +68,14 @@
         "4fbcac9e-c27d-4d4e-9549-35730111dffe",
         "46b183e0-1c4a-4c4b-9f1a-a99484771399"
       ],
-      "disabled": true,
       "settings": {
         "collection_tree_data": "",
+        "title_background_image": "shopify:\/\/shop_images\/ECOM-2854-L2-Irons_1.jpg",
         "preload_background_image": false,
-        "enable_parallax_scrolling_effect": true,
+        "enable_parallax_scrolling_effect": false,
         "show_number_of_products": true,
         "collection_icon_color_scheme": "background-1",
-        "enable_transparent_header": false,
+        "enable_transparent_header": true,
         "text_color_transparent": "#ffffff"
       }
     },

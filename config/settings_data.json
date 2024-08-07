@@ -22,7 +22,8 @@
     "spacing_grid_vertical": 28,
     "page_heading_alignment": "center",
     "page_heading_size": "h0",
-    "page_heading_overlay_color": "#171717",
+    "page_heading_overlay_color": "#000000",
+    "page_heading_use_collection_image": false,
     "page_heading_collection_image_height": "15",
     "page_heading_blog_banner_image": "shopify:\/\/shop_images\/Course-Background-4875x3111-c05126f.jpg",
     "page_heading_blog_image_height": "25",
@@ -107,6 +108,7 @@
           "recommended_collection_list": [
 
           ],
+          "collection_card_show_title": true,
           "product_recommendations_enable": false,
           "product_recommendations_heading": "Recommendations",
           "product_recommendations_limit": 5,
