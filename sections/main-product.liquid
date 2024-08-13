@@ -142,7 +142,10 @@
     -%}
        {% endif %}
     <div class="{{ section.settings.section_width }}">
-      <div class="product product--{{ section.settings.media_size }} product--media-{{ section.settings.media_position }} {% unless is_vertical %}product--{{ section.settings.gallery_layout }}{% else %}product--thumbnail_slider{% endunless %} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--gapless {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} w100">
+      {% if product.typre == 'cpb_product' %}
+        {% render 'customproductbuilder-initializer', product: product %}
+      {% endif %}
+      <div class="product product--{{ section.settings.media_size }} product--media-{{ section.settings.media_position }} {% unless is_vertical %}product--{{ section.settings.gallery_layout }}{% else %}product--thumbnail_slider{% endunless %} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--gapless {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} w100 cpb-basic-product">
          {% if product.tags contains 'putters' %}
            {% else %}
         <div class="grid__item product__media-wrapper{% if section.settings.enable_sticky_info and section.settings.gallery_layout != 'stacked' and section.settings.gallery_layout != 'columns' %} product__sticky{% endif %}">
