@@ -1,0 +1,103 @@
+{% comment %} == BEGIN CUSTOM PRODUCT BUILDER GENERATED CODE. DO NOT EDIT OR REMOVE. == {% endcomment %}
+    {% assign productId = product.id | append: '' %}
+  <script src="//cdn.shopify.com/s/assets/external/app.js" defer></script>
+
+  <div
+    id="product-builder"
+    style="height:0px !important;min-height:0px;opacity:0;pointer-events:none;"
+    data-engine="shopify"
+    data-shop-name="store-for-temur.myshopify.com"
+    data-product-id="9183290622111"
+    data-styles-path="https://cdn.shopify.com/extensions/938757bb-b8d9-4a83-8c66-f66587aa8d7c/2.2.0/assets/customproductbuilder.css"
+    data-config-path=""
+    data-cpb-user-id=""
+    data-customer-id=""
+    product-handle="demo-t-shirt-automatic-recoloring-out-of-stock-test-product">
+  </div>
+        
+  <script>
+    let cpbjs = 'https://cdn.thecustomproductbuilder.com/dist/latest/custom-product-builder.js';
+    let customizer = 'https://cdn.thecustomproductbuilder.com/dist/latest/customizer-theme-main.js';
+    const DEV_HOSTS = [
+      'localhost',
+      '192.168.0.102',
+      'ngrok.io',
+      'loclx.io',
+      'loca.lt',
+      'ngrok-free.app'
+    ]
+    const C_IS_DEV_SERVER = !cpbjs.includes('thecustomproductbuilder') || !!DEV_HOSTS.find(h => cpbjs.includes(h));
+
+    if (C_IS_DEV_SERVER || cpbjs.includes('master.thecustomproductbuilder')) {
+      cpbjs = cpbjs.replace('/latest/', '/');
+      customizer = customizer.replace('/latest/', '/');
+    }
+
+    const addScript = (src) => {
+      const script = document.createElement('script');
+      script.src = src;
+      //script.async = false;
+      const builder = document.querySelector('#product-builder');
+      builder.parentNode.insertBefore(script, builder);
+    }
+
+    addScript(cpbjs);
+    addScript(customizer);
+  </script>
+
+  <script src="https://cdn.shopify.com/extensions/938757bb-b8d9-4a83-8c66-f66587aa8d7c/2.2.0/assets/customproductbuilder.js" defer></script>
+
+  
+
+    <script>
+      const startApp = () => {
+        const personalizeItButton = '<button class="button personalize-it--js button--full-width button--secondary btn btn--full btn--secondary">Personalize & Add To Cart</button>'
+        //let personalizeItBtn = '<button class="product-form__submit button button--full-width button--secondary btn btn--full btn--secondary"> Personalize & Add To Cart</button>';
+        /*personalizeItBtn.innerHTML = '<button class="product-form__submit button button--full-width button--secondary">Personalize 
+        </button>'*/
+        let formButtons = document.querySelector('.cpb-payment-buttons') || document.querySelector('.product-form__buttons');
+        formButtons.innerHTML = personalizeItButton;
+        formButtons.style.display = 'initial';
+
+        const builder = document.querySelector('#product-builder');
+        const productWrapper = document.querySelector('.cpb-basic-product') || document.querySelector('.product.grid');
+        function showCPB() {
+          builder.removeAttribute('style');
+          productWrapper.style.display = 'none';
+        }
+        if(location.href.indexOf('configid=') + 1) {
+          showCPB();
+        }
+        document.addEventListener('click',function(e){
+          if(e.target.classList.contains('personalize-it--js')) {
+            e.preventDefault(); 
+            showCPB(); 
+          }
+        });
+      }
+      if(document.readyState !== 'loading') {
+        startApp();
+      } else {
+        document.addEventListener('DOMContentLoaded', (event) => {
+          startApp();
+        });
+      }
+    </script>
+    <style>
+      .product-form__buttons {
+        display: none;
+      }
+    </style>
+  
+  <style>
+    variant-radios {
+      display: none !important;
+    }
+    .variant-wrapper {
+      display: none !important;
+    }
+  </style>
+
+{% comment %} == END CUSTOM PRODUCT BUILDER GENERATED CODE. DO NOT EDIT OR REMOVE. == {% endcomment %}
+
+    
