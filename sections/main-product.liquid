@@ -145,7 +145,6 @@
       {% if product.type == 'cpb_product' %}
         {% render 'customproductbuilder-initializer', product: product %}
       {% endif %}
-      {% render 'customproductbuilder-initializer', product: product %}
       <div class="product product--{{ section.settings.media_size }} product--media-{{ section.settings.media_position }} {% unless is_vertical %}product--{{ section.settings.gallery_layout }}{% else %}product--thumbnail_slider{% endunless %} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--gapless {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} w100 cpb-basic-product">
          {% if product.tags contains 'putters' %}
            {% else %}
