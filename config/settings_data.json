@@ -688,25 +688,6 @@
     "content_for_index": [
 
     ],
-    "blocks": {
-      "5563440753204486960": {
-        "type": "shopify:\/\/apps\/bta-appointment-booking-app\/blocks\/widgets\/447b4be3-b8e8-4347-959f-d9a05d4b2d5d",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "12654720250257946533": {
-        "type": "shopify:\/\/apps\/bta-appointment-booking-app\/blocks\/app-embed\/447b4be3-b8e8-4347-959f-d9a05d4b2d5d",
-        "disabled": false,
-        "settings": {
-          "widget_type_1": "none",
-          "widget_position_1": "bottom_right",
-          "widget_type_2": "none",
-          "widget_position_2": "bottom_left",
-          "rich_snippets": "disabled"
-        }
-      }
-    },
     "color_schemes": {
       "background-1": {
         "settings": {

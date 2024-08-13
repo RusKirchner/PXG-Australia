@@ -11,6 +11,20 @@
   "sections": {
     "169699214611e587ad": {
       "type": "apps",
+      "blocks": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_TBTB4L": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": false,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
+        }
+      },
+      "block_order": [
+        "cpb_custom_product_builder_customproductbuilder_dawn_TBTB4L"
+      ],
       "custom_css": [
         ".cpb-root {background: white; color: black;}"
       ],
@@ -24,23 +38,28 @@
         "title": {
           "type": "title",
           "settings": {
-            "show_vendor_link": false
+            "show_vendor_link": false,
+            "title_size": "h2"
           }
         },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "disabled": true,
           "settings": {
+            "show_if_no_reviews": true
           }
         },
         "price": {
           "type": "price",
           "settings": {
+            "variant_price": false
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
           "type": "description",
           "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "infinite_options_app_block_BUpnDX": {
@@ -132,13 +151,15 @@
         "enable_sticky_info": true,
         "enable_sticky_cart": false,
         "show_next_prev_products": false,
-        "enable_shopify_reviews_app_css": false,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
         "media_position": "left",
         "gallery_layout": "thumbnail_slider_vertical",
         "thumbnail_position": "left",
         "media_size": "small",
         "image_ratio": "adapt",
         "image_fit": false,
+        "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -179,6 +200,7 @@
         "desktop_content_position": "center",
         "desktop_content_width": "large",
         "content_alignment": "center",
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 40,
@@ -191,7 +213,9 @@
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
           "type": "description",
           "settings": {
-            "title": "Overview"
+            "title": "Overview",
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "8274ef04-23c0-4245-a55b-07501c2bd206": {
@@ -237,6 +261,7 @@
       "disabled": true,
       "settings": {
         "grid_layout": "grid",
+        "enable_accordion_layout": false,
         "color_scheme": "inverse",
         "padding_top": 0,
         "padding_bottom": 40
@@ -257,6 +282,8 @@
         "enable_controls": true,
         "enable_video_looping": true,
         "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -280,6 +307,7 @@
         "desktop_content_position": "center",
         "desktop_content_width": "full",
         "content_alignment": "center",
+        "enable_section_box_layout": false,
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
@@ -440,7 +468,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -462,6 +491,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 40,
@@ -471,12 +502,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "rgba(0,0,0,0)",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -522,6 +555,7 @@
         "title": "Heading",
         "subtitle": "Subheading",
         "heading_size": "h2",
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "table_color_scheme": "",
         "padding_top": 80,
@@ -551,6 +585,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-In-Bag-View_1.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -576,6 +611,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -601,6 +637,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -626,6 +663,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -663,6 +701,7 @@
         "full_width": true,
         "auto_fit": false,
         "disable_item_space": false,
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "image_ratio": "adapt",
         "columns_mobile": "2",
@@ -697,6 +736,7 @@
         "desktop_content_position": "center",
         "desktop_content_width": "full",
         "content_alignment": "center",
+        "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
@@ -714,16 +754,23 @@
         "before_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
         "after_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
         "image_height": 100,
+        "image_fit": "cover",
         "before_text": "Chrome",
         "after_text": "Black Label",
         "before_text_position": "top",
         "after_text_position": "top",
         "text_size": "h3",
+        "enable_section_box_layout": false,
+        "show_content_first_in_desktop": true,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
         "color_scheme": "",
         "drag_cursor_foreground": "#000000",
         "drag_cursor_background": "#ffffff",
         "before_text_color": "#ffffff",
         "after_text_color": "#ffffff",
+        "accessibility_info": "Before and after images",
         "padding_top": 36,
         "padding_bottom": 28
       }
