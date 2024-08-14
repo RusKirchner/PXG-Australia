@@ -165,6 +165,13 @@
             "custom_icon": "shopify:\/\/shop_images\/gen6driverchallengeyards.webp"
           }
         },
+        "54ca538a-6880-4ba5-96a8-07839008ca90": {
+          "type": "category_filter_icon",
+          "settings": {
+            "trigger": "Others",
+            "icon": "newspaper"
+          }
+        },
         "35ce6bc3-b36c-404c-9cd4-aa917dfe7802": {
           "type": "category_filter_icon",
           "settings": {
@@ -178,20 +185,13 @@
             "trigger": "Cameras, camcorders",
             "icon": "camera"
           }
-        },
-        "54ca538a-6880-4ba5-96a8-07839008ca90": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "Others",
-            "icon": "newspaper"
-          }
         }
       },
       "block_order": [
         "b956e729-3f73-41ea-8f6f-4162743c81b7",
+        "54ca538a-6880-4ba5-96a8-07839008ca90",
         "35ce6bc3-b36c-404c-9cd4-aa917dfe7802",
-        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc",
-        "54ca538a-6880-4ba5-96a8-07839008ca90"
+        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc"
       ],
       "settings": {
         "products_per_page": 24,
@@ -203,7 +203,7 @@
         "show_vendor": false,
         "show_rating": false,
         "include_collection_in_url": true,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_compare": false,
         "enable_quick_view": false,
         "show_color_swatches": true,
