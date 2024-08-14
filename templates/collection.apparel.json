@@ -1,0 +1,237 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "32d9ddf9-a78b-4522-b17f-0d2296f75aa4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21416306966835__32d9ddf9-a78b-4522-b17f-0d2296f75aa4-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ collection.title }}<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21416306966835__32d9ddf9-a78b-4522-b17f-0d2296f75aa4-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "full",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "e83d1f32-c65d-42e6-9d33-6b71803d16dc": {
+          "type": "collection_icon",
+          "settings": {
+            "collection": "",
+            "icon": "computers"
+          }
+        },
+        "4fbcac9e-c27d-4d4e-9549-35730111dffe": {
+          "type": "collection_icon",
+          "settings": {
+            "collection": "",
+            "icon": "cellphone"
+          }
+        },
+        "46b183e0-1c4a-4c4b-9f1a-a99484771399": {
+          "type": "collection_icon",
+          "settings": {
+            "collection": "",
+            "icon": "book_open"
+          }
+        }
+      },
+      "block_order": [
+        "e83d1f32-c65d-42e6-9d33-6b71803d16dc",
+        "4fbcac9e-c27d-4d4e-9549-35730111dffe",
+        "46b183e0-1c4a-4c4b-9f1a-a99484771399"
+      ],
+      "disabled": true,
+      "settings": {
+        "collection_tree_data": "",
+        "preload_background_image": false,
+        "enable_parallax_scrolling_effect": true,
+        "show_number_of_products": true,
+        "collection_icon_color_scheme": "background-1",
+        "enable_transparent_header": false,
+        "text_color_transparent": "#ffffff"
+      }
+    },
+    "image_banner_xKmt7g": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_YaQVmx": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "size": "h0"
+          }
+        },
+        "text_JEUQbU": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_x3Gmrd": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YaQVmx",
+        "text_JEUQbU",
+        "buttons_x3Gmrd"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/BP-Signature-Polo-Black-Product-Detail-Carousel-small-3.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_height_mobile": "small-mobile",
+        "desktop_content_position": "top-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "b956e729-3f73-41ea-8f6f-4162743c81b7": {
+          "type": "category_filter_icon",
+          "disabled": true,
+          "settings": {
+            "trigger": "putters",
+            "icon": "computers",
+            "custom_icon": "shopify:\/\/shop_images\/gen6driverchallengeyards.webp"
+          }
+        },
+        "35ce6bc3-b36c-404c-9cd4-aa917dfe7802": {
+          "type": "category_filter_icon",
+          "settings": {
+            "trigger": "Cellphones & accessories",
+            "icon": "cellphone"
+          }
+        },
+        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc": {
+          "type": "category_filter_icon",
+          "settings": {
+            "trigger": "Cameras, camcorders",
+            "icon": "camera"
+          }
+        },
+        "54ca538a-6880-4ba5-96a8-07839008ca90": {
+          "type": "category_filter_icon",
+          "settings": {
+            "trigger": "Others",
+            "icon": "newspaper"
+          }
+        }
+      },
+      "block_order": [
+        "b956e729-3f73-41ea-8f6f-4162743c81b7",
+        "35ce6bc3-b36c-404c-9cd4-aa917dfe7802",
+        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc",
+        "54ca538a-6880-4ba5-96a8-07839008ca90"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "pagination_style": "infinite",
+        "preload_first_image": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "include_collection_in_url": true,
+        "enable_quick_add": false,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "filter_include_group_name": true,
+        "enable_sorting": true,
+        "categories_filter": "",
+        "categories_filter_type": "dropdown",
+        "filter_collapse": "expand",
+        "show_collection_description": true,
+        "description_position": "above",
+        "description_style": "body",
+        "description_alignment": "left",
+        "truncate_description": 0,
+        "read_more_button": "Read more",
+        "columns_tablet": "3",
+        "columns_mobile": "2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "32d9ddf9-a78b-4522-b17f-0d2296f75aa4",
+    "banner",
+    "image_banner_xKmt7g",
+    "product-grid"
+  ]
+}
