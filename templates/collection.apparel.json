@@ -193,6 +193,9 @@
         "35ce6bc3-b36c-404c-9cd4-aa917dfe7802",
         "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc"
       ],
+      "custom_css": [
+        "p:contains(Options Starting from),span:contains(Options Starting from),div:contains(Options Starting from) {display: none;}"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
