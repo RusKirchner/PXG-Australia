@@ -1421,5 +1421,5 @@ div#infiniteoptions-container>div.grip {
     border: 0;
 }
 .email-signup-popup__content .email-signup-popup__text h3 {
-    letter-spacing: 0 !important;
+    letter-spacing: normal;
 }
