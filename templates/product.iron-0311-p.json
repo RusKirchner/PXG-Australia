@@ -975,15 +975,6 @@
             "text": "",
             "text_style": "body"
           }
-        },
-        "cpb_custom_product_builder_customproductbuilder_dawn_j4gh3D": {
-          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
-          "settings": {
-            "personalize_it": false,
-            "personalizeit-button-text": "Personalize & Add To Cart",
-            "builder-version": "",
-            "builder-server": ""
-          }
         }
       },
       "block_order": [
@@ -995,8 +986,7 @@
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "d38e5f77-a5ad-4198-a0ea-9722f01268f6",
-        "cpb_custom_product_builder_customproductbuilder_dawn_j4gh3D"
+        "d38e5f77-a5ad-4198-a0ea-9722f01268f6"
       ],
       "settings": {
         "section_width": "page-width",
@@ -1051,6 +1041,26 @@
         "padding_top": 72,
         "padding_bottom": 40
       }
+    },
+    "172409019191b14adf": {
+      "type": "apps",
+      "blocks": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_9fH49Q": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": false,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
+        }
+      },
+      "block_order": [
+        "cpb_custom_product_builder_customproductbuilder_dawn_9fH49Q"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -1069,6 +1079,7 @@
     "model_comparison_Xt8frn",
     "172408921971c44c79",
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "172409019191b14adf"
   ]
 }
