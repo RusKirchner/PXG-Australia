@@ -85,7 +85,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
@@ -164,7 +164,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -445,7 +445,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -521,7 +521,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
@@ -853,6 +853,26 @@
         "padding_bottom": 52
       }
     },
+    "172408921971c44c79": {
+      "type": "apps",
+      "blocks": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": true,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
+        }
+      },
+      "block_order": [
+        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -955,6 +975,15 @@
             "text": "",
             "text_style": "body"
           }
+        },
+        "cpb_custom_product_builder_customproductbuilder_dawn_j4gh3D": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": true,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
         }
       },
       "block_order": [
@@ -966,7 +995,8 @@
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "d38e5f77-a5ad-4198-a0ea-9722f01268f6"
+        "d38e5f77-a5ad-4198-a0ea-9722f01268f6",
+        "cpb_custom_product_builder_customproductbuilder_dawn_j4gh3D"
       ],
       "settings": {
         "section_width": "page-width",
@@ -1021,32 +1051,6 @@
         "padding_top": 72,
         "padding_bottom": 40
       }
-    },
-    "172408921971c44c79": {
-      "type": "apps",
-      "blocks": {
-        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8": {
-          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
-          "settings": {
-            "personalize_it": true,
-            "personalizeit-button-text": "Personalize & Add To Cart",
-            "builder-version": "",
-            "builder-server": ""
-          }
-        }
-      },
-      "block_order": [
-        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "17218187189ff84ab7": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -1063,9 +1067,8 @@
     "342fa470-7277-4291-be0f-d2979708f671",
     "custom_liquid_pMkhKJ",
     "model_comparison_Xt8frn",
-    "main",
-    "product-recommendations",
     "172408921971c44c79",
-    "17218187189ff84ab7"
+    "main",
+    "product-recommendations"
   ]
 }
