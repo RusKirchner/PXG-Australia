@@ -979,7 +979,7 @@
         "cpb_custom_product_builder_customproductbuilder_dawn_j4gh3D": {
           "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
-            "personalize_it": true,
+            "personalize_it": false,
             "personalizeit-button-text": "Personalize & Add To Cart",
             "builder-version": "",
             "builder-server": ""
