@@ -981,8 +981,8 @@
           "settings": {
             "personalize_it": false,
             "personalizeit-button-text": "Personalize & Add To Cart",
-            "builder-version": "",
-            "builder-server": ""
+            "builder-version": "{{ product.title }}",
+            "builder-server": "{{ product.title }}"
           }
         }
       },
