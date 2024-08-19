@@ -42,7 +42,8 @@
           "settings": {
             "button_label": "Buy Now",
             "button_link": "#MainProduct-template--21504003047731__main",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         },
         "0ea6b4b7-686a-4763-960a-fecb082fd37f": {
@@ -73,6 +74,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 0,
         "padding_bottom": 40,
@@ -82,12 +85,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -125,7 +130,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -147,6 +153,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 40,
@@ -156,12 +164,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -183,6 +193,7 @@
         "desktop_content_position": "center",
         "desktop_content_width": "large",
         "content_alignment": "center",
+        "enable_section_box_layout": false,
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
@@ -359,6 +370,8 @@
         "enable_controls": true,
         "enable_video_looping": true,
         "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -398,7 +411,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -420,6 +434,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 40,
@@ -429,12 +445,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -472,7 +490,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -491,6 +510,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 40,
@@ -500,12 +521,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -530,7 +553,9 @@
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
           "type": "description",
           "settings": {
-            "title": "Overview"
+            "title": "Overview",
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "8274ef04-23c0-4245-a55b-07501c2bd206": {
@@ -573,6 +598,7 @@
       "disabled": true,
       "settings": {
         "grid_layout": "grid",
+        "enable_accordion_layout": false,
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 40
@@ -586,6 +612,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-5IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -611,6 +638,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -636,6 +664,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-1IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -661,6 +690,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-3IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -686,6 +716,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-13IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
+            "keep_ltr": false,
             "text": "",
             "text_style": "subtitle",
             "text_size": "small",
@@ -723,6 +754,7 @@
         "full_width": true,
         "auto_fit": false,
         "disable_item_space": false,
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "image_ratio": "adapt",
         "columns_mobile": "1",
@@ -827,23 +859,28 @@
         "title": {
           "type": "title",
           "settings": {
-            "show_vendor_link": false
+            "show_vendor_link": false,
+            "title_size": "h2"
           }
         },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "disabled": true,
           "settings": {
+            "show_if_no_reviews": true
           }
         },
         "price": {
           "type": "price",
           "settings": {
+            "variant_price": false
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
           "type": "description",
           "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
@@ -937,13 +974,15 @@
         "enable_sticky_info": true,
         "enable_sticky_cart": false,
         "show_next_prev_products": false,
-        "enable_shopify_reviews_app_css": false,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
         "media_position": "left",
         "gallery_layout": "thumbnail",
         "thumbnail_position": "left",
         "media_size": "small",
         "image_ratio": "adapt",
         "image_fit": false,
+        "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",
         "hide_variants": false,
         "enable_video_looping": false,
@@ -986,20 +1025,18 @@
     "17218187189ff84ab7": {
       "type": "apps",
       "blocks": {
-        "infinite_options_app_block_dWPATU": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+        "cpb_custom_product_builder_customproductbuilder_dawn_affebj": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
-          }
-        },
-        "infinite_options_app_block_XKNi8M": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {
+            "personalize_it": false,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
           }
         }
       },
       "block_order": [
-        "infinite_options_app_block_dWPATU",
-        "infinite_options_app_block_XKNi8M"
+        "cpb_custom_product_builder_customproductbuilder_dawn_affebj"
       ],
       "settings": {
         "include_margins": true
