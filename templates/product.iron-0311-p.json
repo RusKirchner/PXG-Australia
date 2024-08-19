@@ -1022,10 +1022,10 @@
         "padding_bottom": 40
       }
     },
-    "17218187189ff84ab7": {
+    "172408921971c44c79": {
       "type": "apps",
       "blocks": {
-        "cpb_custom_product_builder_customproductbuilder_dawn_affebj": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8": {
           "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
             "personalize_it": true,
@@ -1036,8 +1036,14 @@
         }
       },
       "block_order": [
-        "cpb_custom_product_builder_customproductbuilder_dawn_affebj"
+        "cpb_custom_product_builder_customproductbuilder_dawn_Mfrqz8"
       ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17218187189ff84ab7": {
+      "type": "apps",
       "settings": {
         "include_margins": true
       }
@@ -1059,6 +1065,7 @@
     "model_comparison_Xt8frn",
     "main",
     "product-recommendations",
+    "172408921971c44c79",
     "17218187189ff84ab7"
   ]
 }
