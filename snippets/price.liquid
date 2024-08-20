@@ -48,7 +48,7 @@
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
 
       
-      {% assign specific_collection_handle = 'Apparel' %}
+      {% assign specific_collection_handle = '/apparel' %}
         {% if product.collections contains specific_collection_handle %}
           <span class="price-item price-item--regular">
              {{ 'Your Custom Price Text' | t }} {{ money_price | replace: "From", "" }}
