@@ -58,7 +58,13 @@
             </span>
         {% endif %}
 
-      
+{% assign product_collections = product.collections | map: 'handle' %}
+
+{% if product_collections contains 'apparel' %}
+  <span class="custom-price">Special Collection Price: {{ money_price }}</span>
+{% else %}
+  <span class="regular-price">{{ money_price }}</span>
+{% endif %}
         
       
     </div>
