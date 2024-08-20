@@ -58,6 +58,15 @@
             </span>
         {% endif %}
 
+{% assign product_collections = product.collections | map: 'handle' %}
+
+{% if product_collections contains 'apparel' %}
+  <span class="price-item price-item--regular">{{ money_price }}</span>
+{% else %}
+  <span class="price-item price-item--regular">
+              Options Starting from {{ money_price | replace: "From", "" }}
+            </span>
+{% endif %}
         
       
     </div>
