@@ -48,15 +48,17 @@
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
 
       
-        
+        {% if product.collections contains '/apparel' %}
+          <span class="price-item price-item--regular">
+              ddasdsad{{ money_price | replace: "From", "" }}
+          </span>
+        {% else %}
+          <span class="price-item price-item--regular">
+              Options Starting from {{ money_price | replace: "From", "" }}
+            </span>
+        {% endif %}
 
-      {% if product_collections contains 'apparel' %}
-  <span class="custom-price">Special Collection Price: {{ money_price }}</span>
-  <span>In Collection: {{ product_collections }}</span>
-{% else %}
-  <span class="regular-price">{{ money_price }}</span>
-  <span>Not in Collection</span>
-{% endif %}
+      
         
       
     </div>
