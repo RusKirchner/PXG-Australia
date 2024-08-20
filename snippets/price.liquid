@@ -48,7 +48,7 @@
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
 
       
-        {% if product.collections contains 'apparel' %}
+        {% if product.collections == 'apparel' %}
           <span class="price-item price-item--regular">
              {{ 'Your Custom Price Text' | t }} {{ money_price | replace: "From", "" }}
           </span>
