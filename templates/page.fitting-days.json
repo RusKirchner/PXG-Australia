@@ -45,7 +45,7 @@
       ],
       "settings": {
         "custom_liquid": "<script type=\"text\/javascript\" src=\"https:\/\/storelocator.w3apps.co\/widget\/bundle.js\"><\/script>\n<w3-store-locator default-distance=\"25\" distances=\"5,25,100,250,-1\" search-limit=\"100\"><\/w3-store-locator>",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "padding_top": 0,
         "padding_bottom": 52
       }
