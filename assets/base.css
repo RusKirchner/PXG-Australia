@@ -1466,3 +1466,69 @@ table.table.table-striped.text-center {
 .bg-secondary td.h3.text-white {
     font-size: 18px;
 }
+ul.redirectTabs {
+    margin: 0;
+    list-style: none;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    background: #fff;
+}
+
+ul.redirectTabs li a {
+    color: #000;
+    display: block;
+    background: #d3cece;
+    padding: 8px 0;
+    border: 1px solid transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+ul.redirectTabs li a.active {
+    background: #fff;
+    border-color: #000;
+    border-bottom-color: transparent;
+    pointer-events: none;
+    cursor: text;
+    text-decoration: none !important;
+}
+
+ul.main_redirectTabs {
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 32px;
+    text-align: center;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+ul.main_redirectTabs a {
+    color: #000;
+}
+
+ul.main_redirectTabs a {
+    display: block;
+    line-height: 1.2;
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Prohibition';
+    letter-spacing: normal;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+ul.main_redirectTabs a.active,ul.main_redirectTabs a:hover {
+    color: #9D0303;
+}
+
+.experience-component.experience-commerce_simple-contentBlock {
+    background: #ffff;
+}
