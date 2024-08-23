@@ -1466,6 +1466,8 @@ table.table.table-striped.text-center {
 
 .bg-secondary td.h3.text-white {
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 ul.redirectTabs {
     margin: 0;
