@@ -1548,3 +1548,17 @@ ul.main_redirectTabs a.active,ul.main_redirectTabs a:hover {
     padding-top: 16px;
     background: #fff;
 }
+td.font-weight-bold {
+    font-weight: bold;
+}
+
+.position-relative {
+    position: relative;
+    width: 100%;
+    max-width: 140px;
+    margin: 0 auto;
+}
+
+.star {
+    position: absolute;
+}
