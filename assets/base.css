@@ -1500,12 +1500,12 @@ ul.redirectTabs li a.active {
 }
 
 ul.main_redirectTabs {
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
     background: #fff;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-top: 32px;
+    padding-top: 32px !important;
     text-align: center;
     width: 100%;
     max-width: 950px;
