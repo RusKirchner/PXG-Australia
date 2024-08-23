@@ -1449,7 +1449,7 @@ table.table.table-striped.text-center {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background: #c6c1c1;
+    background: #d3cece;
 }
 .pd-custom-html h2.text-center {
     margin: 30px 0 20px;
