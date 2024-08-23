@@ -1449,7 +1449,7 @@ table.table.table-striped.text-center {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background: #d3cece;
+    background: #f2f2f2;
 }
 .pd-custom-html h2.text-center {
     margin: 30px 0 20px;
@@ -1469,7 +1469,7 @@ table.table.table-striped.text-center {
 ul.redirectTabs {
     margin: 0;
     list-style: none;
-    padding: 1px;
+    padding: 1px !important;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     text-align: center;
@@ -1479,7 +1479,7 @@ ul.redirectTabs {
 ul.redirectTabs li a {
     color: #000;
     display: block;
-    background: #d3cece;
+    background: #f2f2f2;
     padding: 8px 0;
     border: 1px solid transparent;
     font-weight: bold;
