@@ -1576,9 +1576,14 @@ td.font-weight-bold {
     flex-wrap: wrap;
   }
 
-  ul.main_redirectTabs li.current {flex: 100%;width: 100%;}
+  ul.main_redirectTabs li.current {
+    flex: 100%;
+    width: 100%;
+    order: 1;
+  }
 
   ul.main_redirectTabs li {
     flex: 1;
+    order: 2;
   }
 }
