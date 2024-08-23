@@ -1532,3 +1532,18 @@ ul.main_redirectTabs a.active,ul.main_redirectTabs a:hover {
 .experience-component.experience-commerce_simple-contentBlock {
     background: #ffff;
 }
+.pd-custom-html h2.text-center {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 5px;
+    font-weight: normal !important;
+    margin-bottom: .5rem;
+    padding: 4px 0;
+    color: #000;
+}
+
+.experience-component.experience-commerce_assets-customHTML.pt-3 {
+    padding-top: 16px;
+    background: #fff;
+}
