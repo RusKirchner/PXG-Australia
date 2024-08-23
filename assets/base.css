@@ -1564,3 +1564,6 @@ td.font-weight-bold {
 .star {
     position: absolute;
 }
+.experience-component.experience-commerce_assets-customHTML.pt-4 .table-responsive {
+    padding-bottom: 0;
+}
