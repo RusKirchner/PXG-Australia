@@ -15,6 +15,7 @@
     "heading_scale": 100,
     "type_body_font": "inter_n4",
     "body_scale": 100,
+    "buttons_font": "headings",
     "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 40,
@@ -109,6 +110,7 @@
           "recommended_collection_list": [
 
           ],
+          "collection_card_show_title": true,
           "product_recommendations_enable": false,
           "product_recommendations_heading": "Recommendations",
           "product_recommendations_limit": 5,
@@ -673,6 +675,7 @@
           "description": "<h3>We will only send you exclusive offers for verified #PXGTroops!<\/h3><h5><br\/>This is the official PXG website for Australia and New Zealand, operated by official PXG partner, Champion Sports.<\/h5>",
           "email_placeholder": "Enter your email here",
           "notification_text": "Don't show this popup again.",
+          "tick_notification_by_default": false,
           "content_position": "right",
           "delay_time": 5,
           "disable_account_holder": true,
@@ -989,7 +992,13 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "h2 {font-family: \"Prohibition\", sans-serif;}"
+      "h1 {font-family: \"Prohibition\" !important; letter-spacing: 0.42rem; line-height: ;}",
+      "h2 {font-family: \"Prohibition\" !important; letter-spacing: 0.2rem; line-height: ;}",
+      "h3 {font-family: \"Prohibition\" !important; letter-spacing: 0.9rem; line-height: ;}",
+      "h4 {font-family: \"proxima_novabold\";}",
+      "h5 {font-family: \"proxima_novabold\", sans-serif;}",
+      "p {font-family: \"Proxima-Nova\", sans-serif;}",
+      ".body {font-family: \"Proxima-Nova\" !important; letter-spacing: 0.082rem; line-height: 1.54;}"
     ]
   }
 }
