@@ -9,10 +9,21 @@
 */
 {
   "sections": {
-    "169699214611e587ad": {
+    "17235394831618ceaf": {
       "type": "apps",
-      "custom_css": [
-        ".cpb-root {background: white; color: black;}"
+      "blocks": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_kiPg6m": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": true,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
+        }
+      },
+      "block_order": [
+        "cpb_custom_product_builder_customproductbuilder_dawn_kiPg6m"
       ],
       "settings": {
         "include_margins": true
@@ -32,16 +43,20 @@
           "type": "rating",
           "disabled": true,
           "settings": {
+            "show_if_no_reviews": true
           }
         },
         "price": {
           "type": "price",
           "settings": {
+            "variant_price": false
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
           "type": "description",
           "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
@@ -82,8 +97,8 @@
             "stock_enable": true,
             "stock_label": "Availability",
             "inventory_threshold": 10,
-            "show_inventory_quantity": true,
-            "sku_enable": true,
+            "show_inventory_quantity": false,
+            "sku_enable": false,
             "sku_label": "SKU",
             "tags_enable": false,
             "tags_label": "Tags",
@@ -128,6 +143,7 @@
         "enable_sticky_cart": false,
         "show_next_prev_products": false,
         "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
         "media_position": "left",
         "gallery_layout": "thumbnail_slider_vertical",
         "thumbnail_position": "left",
@@ -188,7 +204,9 @@
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
           "type": "description",
           "settings": {
-            "title": "Overview"
+            "title": "Overview",
+            "truncate_description": 0,
+            "read_more_button": "Read more"
           }
         },
         "8274ef04-23c0-4245-a55b-07501c2bd206": {
@@ -234,6 +252,7 @@
       "disabled": true,
       "settings": {
         "grid_layout": "grid",
+        "enable_accordion_layout": false,
         "color_scheme": "inverse",
         "padding_top": 0,
         "padding_bottom": 40
@@ -286,6 +305,136 @@
         "padding_bottom": 40
       }
     },
+    "46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b": {
+      "type": "gallery-below",
+      "blocks": {
+        "template--21416307523891__46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b-text-overlay-image-1": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GEN6-Thin-Face-v2.png",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN6 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050\" (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary XCOR2 Technology, GEN6 Irons deliver the company’s highest C.O.R. performance ever, helping increase distance and forgiveness while also enhancing sound and feel.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "VARIABLE ULTRA-THIN FACE",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#171717",
+            "caption_color": "#171717",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "0367204a-e610-4363-810b-ba8652ef68e0": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GEN6-Thin-Face-v2.png",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN6 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050\" (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary XCOR2 Technology, GEN6 Irons deliver the company’s highest C.O.R. performance ever, helping increase distance and forgiveness while also enhancing sound and feel.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "VARIABLE ULTRA-THIN FACE",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#171717",
+            "caption_color": "#171717",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "b13dcd31-6964-466a-9629-11be2b553faf": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GEN6-Thin-Face-v2.png",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN6 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050\" (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary XCOR2 Technology, GEN6 Irons deliver the company’s highest C.O.R. performance ever, helping increase distance and forgiveness while also enhancing sound and feel.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "VARIABLE ULTRA-THIN FACE",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#171717",
+            "caption_color": "#171717",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--21416307523891__46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b-text-overlay-image-4": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "template--21416307523891__46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b-text-overlay-image-1",
+        "0367204a-e610-4363-810b-ba8652ef68e0",
+        "b13dcd31-6964-466a-9629-11be2b553faf",
+        "template--21416307523891__46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b-text-overlay-image-4"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".media img {background: #eaeaea; padding-bottom: 2%;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
       "type": "image-with-text",
       "blocks": {
@@ -310,7 +459,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -343,12 +493,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#7a7a7a",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "rgba(0,0,0,0)",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
     },
@@ -600,11 +752,16 @@
         "after_text_position": "top",
         "text_size": "h3",
         "enable_section_box_layout": false,
+        "show_content_first_in_desktop": true,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
         "color_scheme": "",
         "drag_cursor_foreground": "#000000",
         "drag_cursor_background": "#ffffff",
         "before_text_color": "#ffffff",
         "after_text_color": "#ffffff",
+        "accessibility_info": "Before and after images",
         "padding_top": 36,
         "padding_bottom": 28
       }
@@ -657,12 +814,13 @@
     }
   },
   "order": [
-    "169699214611e587ad",
+    "17235394831618ceaf",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "77bbc053-b9f9-4e59-811b-31ef30c2709c",
+    "46e4dc77-1a2c-4ee2-b8b5-2eab834d6a7b",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "d22c8fe6-3741-44fa-8560-0ad1f405b19f",
