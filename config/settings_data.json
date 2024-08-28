@@ -58,15 +58,6 @@
     "recently_viewed_enable_quick_add": true,
     "recently_viewed_enable_quick_view": true,
     "recently_viewed_columns_mobile": "1",
-    "ctm_type_header_font": "prohibition",
-    "ctm_type_header_font_weight": "400",
-    "ctm_type_body_font": "proxima-nova",
-    "checkout_logo_image": "shopify:\/\/shop_images\/PXG_Logo.png",
-    "checkout_logo_position": "center",
-    "checkout_logo_size": "medium",
-    "checkout_body_background_color": "#ffffff",
-    "checkout_accent_color": "#171717",
-    "checkout_button_color": "#171717",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -526,17 +517,20 @@
           "81681345-92da-40d5-b495-55347c040808": {
             "type": "title",
             "settings": {
-              "show_vendor_link": true
+              "show_vendor_link": true,
+              "title_size": "h2"
             }
           },
           "b584dc9b-0ad8-4a39-9dd0-0b9f6094d975": {
             "type": "rating",
             "settings": {
+              "show_if_no_reviews": true
             }
           },
           "2961e62f-c3f6-4c1a-a2f3-16550bf5d57f": {
             "type": "price",
             "settings": {
+              "variant_price": false
             }
           },
           "c23b6d41-96d0-4988-8c67-db14307e7b03": {
@@ -568,10 +562,12 @@
           "use_background_input": true,
           "enable_sticky_info": true,
           "gallery_layout": "thumbnail_slider_vertical",
+          "default_image": "product_featured_image",
           "media_position": "left",
           "thumbnail_position": "left",
           "image_ratio": "adapt",
           "image_fit": true,
+          "disable_images_lightbox": false,
           "hide_variants": false,
           "enable_video_looping": false
         }
@@ -675,7 +671,6 @@
           "description": "<h3>We will only send you exclusive offers for verified #PXGTroops!<\/h3><h5><br\/>This is the official PXG website for Australia and New Zealand, operated by official PXG partner, Champion Sports.<\/h5>",
           "email_placeholder": "Enter your email here",
           "notification_text": "Don't show this popup again.",
-          "tick_notification_by_default": false,
           "content_position": "right",
           "delay_time": 5,
           "disable_account_holder": true,
@@ -688,6 +683,15 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "7456567658179156570": {
+        "type": "shopify:\/\/apps\/adroll-advertising-marketing\/blocks\/adroll-pixel\/c60853ed-1adb-4359-83ae-4ed43ed0b559",
+        "disabled": false,
+        "settings": {
+          "enable_email_capture": true
+        }
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
@@ -988,6 +992,100 @@
           }
         }
       }
+    },
+    "Athletique": {
+      "color_scheme_body": "background-1",
+      "auto_generate_font_weight": true,
+      "type_header_font": "itc_caslon_no_224_n4",
+      "heading_scale": 100,
+      "type_body_font": "avenir_next_n4",
+      "body_scale": 100,
+      "page_width": 1440,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 28,
+      "spacing_grid_vertical": 28,
+      "page_heading_overlay_color": "#000000",
+      "enable_breadcrumns": true,
+      "color_swatches_shape": "circle",
+      "card_heading_font_weight": "medium",
+      "card_text_alignment": "center",
+      "card_show_border": false,
+      "card_border_radius": 12,
+      "collection_card_color_scheme": "inverse",
+      "sale_badge_label": "amount",
+      "sale_badge_text_color": "#DA2127",
+      "custom_badge_metafield_1": "badges.new",
+      "predictive_search_enabled": true,
+      "currency_code_enabled": false,
+      "recently_viewed_enable": true,
+      "recently_viewed_image_ratio": "adapt",
+      "recently_viewed_show_secondary_image": true,
+      "recently_viewed_show_rating": true,
+      "recently_viewed_enable_quick_add": true,
+      "recently_viewed_enable_quick_view": true,
+      "recently_viewed_columns_mobile": "1",
+      "color_schemes": {
+        "background-1": {
+          "settings": {
+            "text": "#121212",
+            "sale_off_price": "#ef4444",
+            "compare_at_price": "#94a3b8",
+            "background": "#ffffff",
+            "gradient_background": "",
+            "background_input": "#f8fafc",
+            "solid_button_label_primary": "#ffffff",
+            "solid_button_background_primary": "#be185d",
+            "review_stars": "#fbbf24",
+            "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+            "text_message_success": "#166534",
+            "background_message_success": "#effdf4",
+            "text_message_warning": "#a06207",
+            "background_message_warning": "#fefce8",
+            "text_message_error": "#981c1b",
+            "background_message_error": "#fef2f2"
+          }
+        },
+        "background-2": {
+          "settings": {
+            "text": "#0a0a0a",
+            "sale_off_price": "#ef4444",
+            "compare_at_price": "#94a3b8",
+            "background": "#fafafa",
+            "gradient_background": "",
+            "background_input": "#fccbdd",
+            "solid_button_label_primary": "#ffffff",
+            "solid_button_background_primary": "#be185d",
+            "review_stars": "#fbbf24",
+            "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+            "text_message_success": "#166534",
+            "background_message_success": "#effdf4",
+            "text_message_warning": "#a06207",
+            "background_message_warning": "#fefce8",
+            "text_message_error": "#981c1b",
+            "background_message_error": "#fef2f2"
+          }
+        },
+        "inverse": {
+          "settings": {
+            "text": "#ffffff",
+            "sale_off_price": "#f2e3e3",
+            "compare_at_price": "#94a3b8",
+            "background": "#000000",
+            "gradient_background": "linear-gradient(90deg, rgba(172, 0, 77, 1), rgba(10, 10, 10, 1) 100%)",
+            "background_input": "#3d3c3c",
+            "solid_button_label_primary": "#ac004d",
+            "solid_button_background_primary": "#ffffff",
+            "review_stars": "#fbbf24",
+            "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+            "text_message_success": "#166534",
+            "background_message_success": "#effdf4",
+            "text_message_warning": "#a06207",
+            "background_message_warning": "#fefce8",
+            "text_message_error": "#981c1b",
+            "background_message_error": "#fef2f2"
+          }
+        }
+      }
     }
   },
   "platform_customizations": {
@@ -995,8 +1093,8 @@
       "h1 {font-family: \"Prohibition\" !important; letter-spacing: 0.42rem; line-height: ;}",
       "h2 {font-family: \"Prohibition\" !important; letter-spacing: 0.2rem; line-height: ;}",
       "h3 {font-family: \"Prohibition\" !important; letter-spacing: 0.9rem; line-height: ;}",
-      "h4 {font-family: \"proxima_novabold\";}",
-      "h5 {font-family: \"proxima_novabold\", sans-serif;}",
+      "h4 {font-family: \"Proxima-Nova\",}",
+      "h5 {font-family: \"Proxima-Nova\", sans-serif;}",
       "p {font-family: \"Proxima-Nova\", sans-serif;}",
       ".body {font-family: \"Proxima-Nova\" !important; letter-spacing: 0.082rem; line-height: 1.54;}"
     ]
