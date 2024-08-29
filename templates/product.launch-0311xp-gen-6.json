@@ -702,7 +702,6 @@
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
-          "disabled": true,
           "settings": {
             "show_free_shipping_bar": false,
             "enable_compare": false,
