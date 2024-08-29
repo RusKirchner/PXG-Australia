@@ -32,7 +32,7 @@
         "cb459e26-5c60-4789-8b38-289beb93ff9d": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“THEY’RE OUTSTANDING AT SMOOTHING OUT SLIGHTLY FAT STRIKES.”<\/strong><\/p><p>—@PluggedInGolf<br\/><\/p><p><strong>“THE SOFTEST FEELING, LONGEST, MOST FORGIVING THEY’VE EVER MADE.”<\/strong><\/p><p>—Today's Golfer<br\/><\/p><p><strong>“IT’S LONG, ACCURATE, AND DELIVERS BUTTERY SOFT FEEL.”<\/strong><\/p><p>—Golf Monthly<\/p>",
+            "text": "<h1>{{ product.title }}<\/h1><p>Everything we know about game improvment, incredible feel & high performance take to the limit<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -65,8 +65,8 @@
         ".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"
       ],
       "settings": {
-        "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/0311xpgen6_900.png",
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-900x900-Marquee.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
