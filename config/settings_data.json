@@ -524,17 +524,20 @@
           "81681345-92da-40d5-b495-55347c040808": {
             "type": "title",
             "settings": {
-              "show_vendor_link": true
+              "show_vendor_link": true,
+              "title_size": "h2"
             }
           },
           "b584dc9b-0ad8-4a39-9dd0-0b9f6094d975": {
             "type": "rating",
             "settings": {
+              "show_if_no_reviews": true
             }
           },
           "2961e62f-c3f6-4c1a-a2f3-16550bf5d57f": {
             "type": "price",
             "settings": {
+              "variant_price": false
             }
           },
           "c23b6d41-96d0-4988-8c67-db14307e7b03": {
@@ -566,10 +569,12 @@
           "use_background_input": true,
           "enable_sticky_info": true,
           "gallery_layout": "thumbnail_slider_vertical",
+          "default_image": "product_featured_image",
           "media_position": "left",
           "thumbnail_position": "left",
           "image_ratio": "adapt",
           "image_fit": true,
+          "disable_images_lightbox": false,
           "hide_variants": false,
           "enable_video_looping": false
         }
@@ -702,15 +707,15 @@
         "settings": {
         }
       },
-      "316487575649303945": {
-        "type": "shopify:\/\/apps\/easify-options\/blocks\/app-embed-block\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
+      "3886181796285292942": {
+        "type": "shopify:\/\/apps\/cowlendar-booking\/blocks\/app-embed\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
         "disabled": false,
         "settings": {
         }
       },
-      "3886181796285292942": {
-        "type": "shopify:\/\/apps\/cowlendar-booking\/blocks\/app-embed\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
-        "disabled": false,
+      "316487575649303945": {
+        "type": "shopify:\/\/apps\/easify-options\/blocks\/app-embed-block\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
+        "disabled": true,
         "settings": {
         }
       }
