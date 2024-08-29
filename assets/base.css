@@ -12,11 +12,26 @@
 
 @font-face {
     font-family: 'proxima_novabold';
-    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff2?v=1697424275') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff?v=1697424276') format('woff');
+    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff2') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff2') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/proxima_nova_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima-Nova-Semibold';
+    src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/ProximaNova-Medium.woff2') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/ProximaNova-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 strong {
   /* font-weight: var(--font-body-weight-bold); */
@@ -29,6 +44,15 @@ strong {
     animation: none !important;
   }
 }
+@font-face {
+  font-family: 'Prohibition';
+  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff2') format('woff2');  
+  src: url('https://cdn.shopify.com/s/files/1/0840/6754/9491/files/prohibition-regular-webfont.woff') format('woff');  
+  font-style: normal;
+  font-weight: normal;
+ 
+
+  }
 
 .underlined-link:hover {
   color: rgb(var(--color-link));
@@ -1422,11 +1446,11 @@ back-to-top .icon {
 
 
 /* Adobe Typekit RK Image */
-:root {
---font-body-family:"proxima-nova",sans-serif; 
+/* :root {
+--font-body-family: "Inter", sans-serif; 
 --font-heading-family:"prohibition",sans-serif;   
 }
-
+ */
 
 .table-responsive {
     display: block;
@@ -1640,8 +1664,187 @@ ul.main_redirectTabs li a.active {
     width: var(--_first-column-width);
       background: #000;
 }
+
+/* Configure Product Section */
+div#infiniteoptions-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 530px;
+    column-gap: 20px;
+}
+div#infiniteoptions-container>div {
+    height: 90px;
+    width: calc(33.333% - 20px);
+    border-right: 1px solid #000;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+div#infiniteoptions-container>div.shaft {
+    height: calc(100% - 170px);
+}
+div#infiniteoptions-container>div.grip {
+    border: 0;
+}
+.configur-product-main {
+    display: flex;
+    margin: 0 !important;
+    column-gap: 20px;
+}
+
+div#shopify-block-infinite_options_app_block_Fbabnq {
+    margin: 0;
+}
+
+.configur-product {
+    width: calc(33.333% - 20px);
+    border-right: 1px solid #000;
+    padding-right: 20px;
+}
+
+.configur-product.column-3 {
+    border: 0;
+}
+.configur-img {
+    background: radial-gradient(circle, black 0%, #4a4d52 0%, black 100%);
+    max-height: 163px;
+    overflow: hidden;
+}
+
+.configur-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.configur-product h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: dosis,sans-serif !important;
+    font-weight: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+div#infiniteoptions-container>div label {
+    font-family: 'Proxima-Nova-Semibold';
+    mibold;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 1px;
+}
+.dexterity>span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dexterity>span label {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+}
+
+.dexterity>span label input {
+    margin: 0 8px 0 0 !important;
+}
+
+.dexterity input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #000;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.dexterity input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #000;
+}
+.dexterity input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+div#infiniteoptions-container>div .spb-select select {
+    font-family: 'Proxima-Nova', sans-serif;
+    color: #000 !important;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    border-radius: 0;
+    height:  40px !important;
+    overflow: hidden !important;
+    -webkit-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: .375rem 1.75rem .375rem .75rem;
+}
+
+div#infiniteoptions-container>div .spb-select select:focus {
+    border: 2px solid #000 !important;
+}
+.putters-style {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 33.333%;
+    margin-left: auto;
+}
+
+.putters-style .product-form__buttons {
+    flex-direction: column;
+    display: flex;
+}
+.configur-product-features span {
+    font-size: 16px;
+    font-family: 'Proxima-Nova';
+}
+div#infiniteoptions-container>div .spb-tooltip {
+  color: #000;
+  font-weight: bold;
+}
+
+div#infiniteoptions-container>div .spb-tooltip span.spb-tooltiptext {
+    padding: 10px;
+    font-weight: normal;
+}
+.putters-style .product-form__buttons {
+    padding: 0 10px;
+}
+.product__info-wrapper variant-radios.no-js-hidden, .product__info-wrapper variant-radios.no-js-hidden {
+    display: block!important;
+}
+.popup-modal__content {
+    height: calc(70vh - var(--popup-distance)* 2);
+}
+form#ContactPopup {
+    margin-top: 0;
+}
+
+.email-signup-popup__text.rte.small-margin-top h5 {
+    margin-bottom: 0;
+}
 @media screen and (min-width: 749px){
      .type-style2 .model-indicator span {
       padding: 8px 54px;
    }
+}
+
+.email-signup-popup__content h3 {
+    letter-spacing: normal;
 }
