@@ -59,9 +59,9 @@
                 assign loop = '&loop=1&playlist=' | append: section.settings.video_url.id
               endif
             -%}  
-            {%- if section.settings.video_url.type == 'youtube' -%}
+            {%- if section.settings.video1_url.type == 'youtube' -%}
               <iframe
-                src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                src="https://www.youtube.com/embed/{{ section.settings.video1_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
                 class="js-youtube global-settings-popup"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
@@ -69,7 +69,7 @@
               ></iframe>
             {%- else -%}
             <iframe
-              src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}?autoplay=1{{ loop }}"
+              src="https://player.vimeo.com/video/{{ section.settings.video1_url.id }}?autoplay=1{{ loop }}"
               class="js-vimeo global-settings-popup"
               allow="autoplay; encrypted-media"
               allowfullscreen
