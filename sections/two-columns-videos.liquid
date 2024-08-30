@@ -58,7 +58,7 @@
   {%- endstyle -%}
 
   <div class="section-{{ section.id }}-padding {% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient{% else %}page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
-    <div class="video-section isolate{% unless section.settings.enable_section_box_layout %}{% unless section.settings.full_width %} page-width{% endunless %}{% else %} section__box color-{{ section.settings.color_scheme }} gradient{% endunless %}">
+    <div class="two-columns video-section isolate{% unless section.settings.enable_section_box_layout %}{% unless section.settings.full_width %} page-width{% endunless %}{% else %} section__box color-{{ section.settings.color_scheme }} gradient{% endunless %}">
       {%- unless section.settings.enable_section_box_layout -%}
         <div{% if section.settings.full_width %} class="page-width"{% endif %}>
           <h2 class="h1">{{ section.settings.title }}</h2>
