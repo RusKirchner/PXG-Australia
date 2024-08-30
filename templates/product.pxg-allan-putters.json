@@ -824,7 +824,7 @@
     "two_columns_videos_HrYXDa": {
       "type": "two-columns-videos",
       "settings": {
-        "video1_url": "https:\/\/www.youtube.com\/watch?v=5XeFPAaUO7k",
+        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
         "video1_self_hosted_url": "",
         "video1_text": "Description for video 1.",
         "video2_url": "https:\/\/player.vimeo.com\/video\/999600357",
