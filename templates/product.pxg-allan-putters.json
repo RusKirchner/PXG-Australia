@@ -824,12 +824,31 @@
     "two_columns_videos_HrYXDa": {
       "type": "two-columns-videos",
       "settings": {
-        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
+        "video1_url": "https:\/\/www.youtube.com\/watch?v=5XeFPAaUO7k",
         "video1_self_hosted_url": "",
         "video1_text": "Description for video 1.",
         "video2_url": "https:\/\/player.vimeo.com\/video\/999600357",
         "video2_self_hosted_url": "",
         "video2_text": "Description for video 2."
+      }
+    },
+    "video_MCUE7z": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/player.vimeo.com\/video\/999600357?controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -850,6 +869,7 @@
     "product-recommendations",
     "342fa470-7277-4291-be0f-d2979708f671",
     "video_with_text_wAKNEi",
-    "two_columns_videos_HrYXDa"
+    "two_columns_videos_HrYXDa",
+    "video_MCUE7z"
   ]
 }
