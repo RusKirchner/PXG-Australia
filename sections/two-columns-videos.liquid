@@ -49,11 +49,11 @@
     <div class="video-item">
       {% if section.settings.video1_url contains 'youtube' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       {% elsif section.settings.video1_url contains 'vimeo' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
       {% elsif section.settings.video1_self_hosted_url != blank %}
         <div class="video-wrapper">
@@ -68,11 +68,11 @@
     <div class="video-item">
       {% if section.settings.video2_url contains 'youtube' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       {% elsif section.settings.video2_url contains 'vimeo' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
       {% elsif section.settings.video2_self_hosted_url != blank %}
         <div class="video-wrapper">
