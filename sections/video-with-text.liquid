@@ -135,8 +135,8 @@
 
 <{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %} class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient{% if section.settings.background_image_section != blank and section.settings.overlay_color != blank and section.settings.overlay_color.alpha > 0 %} background-overlay{% endif %}"{% if section.settings.background_image_section != blank %} data-background-image="{{ section.settings.background_image_section | image_url }}"{% endif %}>
   <div class="{% if section.settings.grid_layout contains 'grid' %}page-width{% if section.settings.grid_layout == 'stretched_grid' %}--full{% endif %}{% endif %}">
-    <div class="image-with-text__grid grid{% unless section.settings.content_layout == 'separate' %} grid--gapless{% endunless %} grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-  <div class="video-text-left video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+    <div class="video-text-cols image-with-text__grid grid{% unless section.settings.content_layout == 'separate' %} grid--gapless{% endunless %} grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+  <div class="video-text-right video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div{% if section.settings.full_width %} class="page-width"{% endif %}>
       {%- render 'section-heading' -%}
     </div>
@@ -277,7 +277,7 @@
 
 {% schema %}
 {
-  "name": "video-with-text",
+  "name": "video-with-text-right",
   "class": "section",
   "settings": [
     {
@@ -822,7 +822,7 @@
   ],
   "presets": [
     {
-      "name": "Video with Text",
+      "name": "Video with Text Right",
       "blocks": [
         {
           "type": "heading"
