@@ -49,11 +49,23 @@
     <div class="video-item">
       {% if section.settings.video1_url contains 'youtube' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe
+              src="https://player.vimeo.com/video/{{ section.settings.video1_url }}?autoplay=1{{ loop }}"
+              class="js-vimeo global-settings-popup"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+              title="{{ section.settings.description | escape }}"
+            ></iframe>
         </div>
       {% elsif section.settings.video1_url contains 'vimeo' %}
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+          <iframe
+                src="https://www.youtube.com/embed/{{ section.settings.video1_url }}?enablejsapi=1&autoplay=1{{ loop }}"
+                class="js-youtube global-settings-popup"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="{{ section.settings.description | escape }}"
+              ></iframe>
         </div>
       {% elsif section.settings.video1_self_hosted_url != blank %}
         <div class="video-wrapper">
