@@ -790,9 +790,10 @@
       "settings": {
         "grid_layout": "grid",
         "cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/999600357?controls=0&loop=1&app_id=122963&texttrack=false",
+        "video_hosted": "shopify:\/\/files\/videos\/vimeo-999600357-hls-akfire_interconnect_quic-2104.mp4",
+        "video_url": "https:\/\/player.vimeo.com\/video\/999600357",
         "description": "",
-        "autoplay": false,
+        "autoplay": true,
         "enable_controls": true,
         "enable_video_looping": true,
         "full_width": false,
