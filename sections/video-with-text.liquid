@@ -228,7 +228,6 @@
       </template>
     </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
   </div>
-    </div>
       <div class="image-with-text__text-item grid__item{% if section.settings.desktop_image_width == 'small' %} flex-grow-1{% endif %}" style="--color-background:{{ section.settings.background_container.red }}, {{ section.settings.background_container.green }}, {{ section.settings.background_container.blue }};--gradient-background:{{ section.settings.gradient_background_container | default: section.settings.background_container }};">
         <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--radius image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient">
           {%- for block in section.blocks -%}
@@ -272,7 +271,7 @@
           {%- endfor -%}
         </div>
       </div>
-    
+    </div>
   </div>  
 </{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %}>
 
