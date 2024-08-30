@@ -159,6 +159,7 @@
               {%- endif -%}  
             </template>
           </{% if section.settings.video1_hosted != nil or section.settings.video1_url != nil %}deferred-media{% else %}div{% endif %}>
+          <h3 class="video-title">{{ section.settings.video1_description }}</h3>
           <p class="video-text">{{ section.settings.video1_text }}</p>
         </div>
 
@@ -253,6 +254,7 @@
               {%- endif -%}  
             </template>
           </{% if section.settings.video2_hosted != nil or section.settings.video2_url != nil %}deferred-media{% else %}div{% endif %}>
+          <h3 class="video-title">{{ section.settings.video2_description }}</h3>
           <p class="video-text">{{ section.settings.video2_text }}</p>
         </div>
       </div>
@@ -322,13 +324,13 @@
     {
       "type": "text",
       "id": "video1_description",
-      "label": "Video 1 - Description",
+      "label": "Video 1 - Title",
       "info": "A short description of the video"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "video1_text",
-      "label": "Video 1 - Text Below Video",
+      "label": "Video 1 - Description",
       "info": "Text to display under the video"
     },
     {
@@ -374,13 +376,13 @@
     {
       "type": "text",
       "id": "video2_description",
-      "label": "Video 2 - Description",
+      "label": "Video 2 - Title",
       "info": "A short description of the video"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "video2_text",
-      "label": "Video 2 - Text Below Video",
+      "label": "Video 2 - Description",
       "info": "Text to display under the video"
     },
     {
