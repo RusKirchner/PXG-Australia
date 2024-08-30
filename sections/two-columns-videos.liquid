@@ -61,7 +61,7 @@
     <div class="video-section isolate{% unless section.settings.enable_section_box_layout %}{% unless section.settings.full_width %} page-width{% endunless %}{% else %} section__box color-{{ section.settings.color_scheme }} gradient{% endunless %}">
       {%- unless section.settings.enable_section_box_layout -%}
         <div{% if section.settings.full_width %} class="page-width"{% endif %}>
-          {%- render 'section-heading' -%}
+          <h2 class="h1">{{ section.settings.title }}</h2>
           <p>{{ section.settings.subtitle }}</p>
         </div>
       {%- else -%}
