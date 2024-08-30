@@ -44,64 +44,82 @@
   }
 {% endschema %}
 
-<section class="two-videos-section">
+<section class="section two-videos-section">
   <div class="two-videos-container">
     <div class="video-item">
       {% if section.settings.video1_url contains 'youtube' %}
-        <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+        </div>
       {% elsif section.settings.video1_url contains 'vimeo' %}
-        <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="{{ section.settings.video1_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+        </div>
       {% elsif section.settings.video1_self_hosted_url != blank %}
-        <video controls>
-          <source src="{{ section.settings.video1_self_hosted_url }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="{{ section.settings.video1_self_hosted_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       {% endif %}
-      <p>{{ section.settings.video1_text }}</p>
+      <p class="video-text">{{ section.settings.video1_text }}</p>
     </div>
     <div class="video-item">
       {% if section.settings.video2_url contains 'youtube' %}
-        <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+        </div>
       {% elsif section.settings.video2_url contains 'vimeo' %}
-        <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'vimeo.com', 'player.vimeo.com/video' }}" frameborder="0" allowfullscreen></iframe>
+        </div>
       {% elsif section.settings.video2_self_hosted_url != blank %}
-        <video controls>
-          <source src="{{ section.settings.video2_self_hosted_url }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="{{ section.settings.video2_self_hosted_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       {% endif %}
-      <p>{{ section.settings.video2_text }}</p>
+      <p class="video-text">{{ section.settings.video2_text }}</p>
     </div>
   </div>
 </section>
 
 <style>
 .two-videos-section {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 40px 0;
 }
 
 .two-videos-container {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
 }
 
 .video-item {
-  flex: 1;
-  max-width: 45%;
+  flex: 1 1 45%;
   text-align: center;
 }
 
-.video-item iframe,
-.video-item video {
-  width: 100%;
-  height: auto;
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
 }
 
-.video-item p {
-  margin-top: 10px;
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-text {
+  margin-top: 15px;
 }
 </style>
