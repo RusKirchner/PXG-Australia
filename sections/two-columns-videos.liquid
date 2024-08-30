@@ -1,142 +1,454 @@
-{% schema %}
-  {
-    "name": "Two Videos with Text",
-    "settings": [
-      {
-        "type": "url",
-        "id": "video1_url",
-        
-        "label": "Video 1 URL (YouTube/Vimeo or leave blank for self-hosted)",
-      },
-      {
-        "type": "url",
-        "id": "video1_self_hosted_url",
-        "label": "Video 1 Self-Hosted URL",
-      },
-      {
-        "type": "textarea",
-        "id": "video1_text",
-        "label": "Video 1 Text",
-        "default": "Description for video 1."
-      },
-      {
-        "type": "url",
-        "id": "video2_url",
-        "label": "Video 2 URL (YouTube/Vimeo or leave blank for self-hosted)",
-      },
-      {
-        "type": "url",
-        "id": "video2_self_hosted_url",
-        "label": "Video 2 Self-Hosted URL",
-      },
-      {
-        "type": "textarea",
-        "id": "video2_text",
-        "label": "Video 2 Text",
-        "default": "Description for video 2."
-      }
-    ],
-    "presets": [
-      {
-        "name": "Two Videos with Text",
-        "category": "Custom"
-      }
-    ]
-  }
-{% endschema %}
-{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign hide_section = false
+  if section.settings.video1_hosted == nil and section.settings.video1_url == nil and section.settings.video2_hosted == nil and section.settings.video2_url == nil and section.settings.hide_when_empty_video and request.design_mode == false
+    assign hide_section = true
+  endif
+-%}
+{%- unless hide_section -%}
+  {{ 'video-section.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-<section class="section two-videos-section">
-  <div class="two-videos-container">
-    <div class="video-item">
-      <template>
-          {%- if section.settings.video_hosted != nil -%}
-            {{ section.settings.video_hosted | video_tag: autoplay: true, loop: section.settings.enable_video_looping, muted: true, controls: section.settings.enable_controls }}
-          {%- elsif section.settings.video_url != nil -%}
-            {%- liquid
-              assign loop = ''
-              if section.settings.enable_video_looping
-                assign loop = '&loop=1&playlist=' | append: section.settings.video_url.id
-              endif
-            -%}  
-            {%- if section.settings.video1_url.type == 'youtube' -%}
-              <iframe
-                src="https://www.youtube.com/embed/{{ section.settings.video1_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
-                class="js-youtube global-settings-popup"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-                title="{{ section.settings.description | escape }}"
-              ></iframe>
-            {%- endif -%}
-            {%- if section.settings.video1_url.type == 'vimeo' -%}
-            <iframe
-              src="https://player.vimeo.com/video/{{ section.settings.video1_url.id }}?autoplay=1{{ loop }}"
-              class="js-vimeo global-settings-popup"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="{{ section.settings.description | escape }}"
-            ></iframe>
-            {%- endif -%}
-          {%- endif -%}  
-        </template>
-      </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
-      <p class="video-text">{{ section.settings.video1_text }}</p>
-    </div>
-    <div class="video-item">
-      {% if section.settings.video2_url contains 'youtube' %}
-        <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+    .two-column-video {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .video-item {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+
+    .video-wrapper,
+    .image-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .video-wrapper iframe,
+    .video-wrapper video,
+    .image-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-text {
+      margin-top: 15px;
+    }
+
+    {%- render 'section-heading-styles' -%}
+  {%- endstyle -%}
+
+  <div class="section-{{ section.id }}-padding {% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient{% else %}page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
+    <div class="video-section isolate{% unless section.settings.enable_section_box_layout %}{% unless section.settings.full_width %} page-width{% endunless %}{% else %} section__box color-{{ section.settings.color_scheme }} gradient{% endunless %}">
+      {%- unless section.settings.enable_section_box_layout -%}
+        <div{% if section.settings.full_width %} class="page-width"{% endif %}>
+          {%- render 'section-heading' -%}
         </div>
-      {% elsif section.settings.video2_url contains 'vimeo' %}
-        <div class="video-wrapper">
-          <iframe width="100%" height="315" src="{{ section.settings.video2_url | replace: 'vimeo.com/', 'player.vimeo.com/video/' }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      {%- else -%}
+        {%- render 'section-heading' -%}  
+      {%- endunless -%}
+
+      <div class="two-column-video">
+        <!-- Video 1 -->
+        <div class="video-item">
+          {%- liquid
+            assign cover_image1 = section.settings.video1_cover_image
+            if cover_image1 == blank and section.settings.video1_hosted != nil
+              assign cover_image1 = section.settings.video1_hosted.preview_image
+            endif
+          -%}
+
+          <noscript>
+            <div class="video-section__media card-radius"
+              {% if cover_image1 != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image1.aspect_ratio | times: 100 }}%;"{% endif %}
+            >
+              {%- if section.settings.video1_hosted == null and section.settings.video1_url != null -%}
+                <a href="{{ section.settings.video1_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image1 == blank %} video-section__placeholder{% endif %}">
+                  {%- if cover_image1 != blank -%}
+                    {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+                    {%- assign alt = 'sections.video.load_video' | t: description: section.settings.video1_description | escape -%}
+                    {{ cover_image1 | image_url: width: 3840 | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                      alt: alt
+                    }}
+                  {%- else -%}
+                    {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </a>
+              {%- else -%}
+                {{
+                  section.settings.video1_hosted
+                  | video_tag: image_size: '1100x', loop: section.settings.enable_video1_looping, controls: true, muted: false
+                }}  
+              {%- endif -%}
+            </div>
+          </noscript>
+
+          <{% if section.settings.video1_hosted != nil or section.settings.video1_url != nil %}deferred-media{% else %}div{% endif %} class="video-section__media deferred-media no-js-hidden gradient global-media-settings card--shadow card-radius{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video1_hosted.id | default: section.settings.video1_url.id }}"{% if section.settings.video1_autoplay %} data-autoplay="true"{% endif %}{% unless section.settings.enable_video1_controls %} data-no-controls="true"{% endunless %}
+          >
+            <button
+              id="Deferred-Poster-Modal-{{ section.settings.video1_hosted.id | default: section.settings.video1_url.id }}"
+              class="video-section__poster media deferred-media__poster media--landscape global-settings-popup"
+              type="button"
+              aria-label="{{ 'sections.video.load_video' | t: description: section.settings.video1_description | escape }}"
+            >
+              {%- if cover_image1 != blank -%}
+                {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+                {%- assign alt = 'sections.video.load_video' | t: description: section.settings.video1_description | escape -%}
+                {{ cover_image1 | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                  alt: alt
+                }}
+              {%- else -%}
+                {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+              <span class="deferred-media__poster-button motion-reduce">
+                {%- render 'icon-play' -%}
+              </span>
+            </button>
+            <template>
+              {%- if section.settings.video1_hosted != nil -%}
+                {{ section.settings.video1_hosted | video_tag: autoplay: true, loop: section.settings.enable_video1_looping, muted: true, controls: section.settings.enable_video1_controls }}
+              {%- elsif section.settings.video1_url != nil -%}
+                {%- liquid
+                  assign loop = ''
+                  if section.settings.enable_video1_looping
+                    assign loop = '&loop=1&playlist=' | append: section.settings.video1_url.id
+                  endif
+                -%}  
+                {%- if section.settings.video1_url.type == 'youtube' -%}
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ section.settings.video1_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                    class="js-youtube global-settings-popup"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ section.settings.video1_description | escape }}"
+                  ></iframe>
+                {%- else -%}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video1_url.id }}?autoplay=1{{ loop }}"
+                  class="js-vimeo global-settings-popup"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  title="{{ section.settings.video1_description | escape }}"
+                ></iframe>
+                {%- endif -%}
+              {%- endif -%}  
+            </template>
+          </{% if section.settings.video1_hosted != nil or section.settings.video1_url != nil %}deferred-media{% else %}div{% endif %}>
+          <p class="video-text">{{ section.settings.video1_text }}</p>
         </div>
-      {% elsif section.settings.video2_self_hosted_url != blank %}
-        <div class="video-wrapper">
-          <video controls>
-            <source src="{{ section.settings.video2_self_hosted_url }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+          {%- liquid
+            assign cover_image2 = section.settings.video2_cover_image
+            if cover_image2 == blank and section.settings.video2_hosted != nil
+              assign cover_image2 = section.settings.video2_hosted.preview_image
+            endif
+          -%}
+
+          <noscript>
+            <div class="video-section__media card-radius"
+              {% if cover_image2 != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image2.aspect_ratio | times: 100 }}%;"{% endif %}
+            >
+              {%- if section.settings.video2_hosted == null and section.settings.video2_url != null -%}
+                <a href="{{ section.settings.video2_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image2 == blank %} video-section__placeholder{% endif %}">
+                  {%- if cover_image2 != blank -%}
+                    {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+                    {%- assign alt = 'sections.video.load_video' | t: description: section.settings.video2_description | escape -%}
+                    {{ cover_image2 | image_url: width: 3840 | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                      alt: alt
+                    }}
+                  {%- else -%}
+                    {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </a>
+              {%- else -%}
+                {{
+                  section.settings.video2_hosted
+                  | video_tag: image_size: '1100x', loop: section.settings.enable_video2_looping, controls: true, muted: false
+                }}  
+              {%- endif -%}
+            </div>
+          </noscript>
+
+          <{% if section.settings.video2_hosted != nil or section.settings.video2_url != nil %}deferred-media{% else %}div{% endif %} class="video-section__media deferred-media no-js-hidden gradient global-media-settings card--shadow card-radius{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video2_hosted.id | default: section.settings.video2_url.id }}"{% if section.settings.video2_autoplay %} data-autoplay="true"{% endif %}{% unless section.settings.enable_video2_controls %} data-no-controls="true"{% endunless %}
+          >
+            <button
+              id="Deferred-Poster-Modal-{{ section.settings.video2_hosted.id | default: section.settings.video2_url.id }}"
+              class="video-section__poster media deferred-media__poster media--landscape global-settings-popup"
+              type="button"
+              aria-label="{{ 'sections.video.load_video' | t: description: section.settings.video2_description | escape }}"
+            >
+              {%- if cover_image2 != blank -%}
+                {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+                {%- assign alt = 'sections.video.load_video' | t: description: section.settings.video2_description | escape -%}
+                {{ cover_image2 | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                  alt: alt
+                }}
+              {%- else -%}
+                {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+              <span class="deferred-media__poster-button motion-reduce">
+                {%- render 'icon-play' -%}
+              </span>
+            </button>
+            <template>
+              {%- if section.settings.video2_hosted != nil -%}
+                {{ section.settings.video2_hosted | video_tag: autoplay: true, loop: section.settings.enable_video2_looping, muted: true, controls: section.settings.enable_video2_controls }}
+              {%- elsif section.settings.video2_url != nil -%}
+                {%- liquid
+                  assign loop = ''
+                  if section.settings.enable_video2_looping
+                    assign loop = '&loop=1&playlist=' | append: section.settings.video2_url.id
+                  endif
+                -%}  
+                {%- if section.settings.video2_url.type == 'youtube' -%}
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ section.settings.video2_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                    class="js-youtube global-settings-popup"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ section.settings.video2_description | escape }}"
+                  ></iframe>
+                {%- else -%}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video2_url.id }}?autoplay=1{{ loop }}"
+                  class="js-vimeo global-settings-popup"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  title="{{ section.settings.video2_description | escape }}"
+                ></iframe>
+                {%- endif -%}
+              {%- endif -%}  
+            </template>
+          </{% if section.settings.video2_hosted != nil or section.settings.video2_url != nil %}deferred-media{% else %}div{% endif %}>
+          <p class="video-text">{{ section.settings.video2_text }}</p>
         </div>
-      {% endif %}
-      <p class="video-text">{{ section.settings.video2_text }}</p>
+      </div>
     </div>
   </div>
-</section>
+{%- endunless -%}
 
-<style>
-.two-videos-section {
-  padding: 40px 0;
+{% schema %}
+{
+  "name": "t:sections.video.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Video",
+      "label": "t:sections.video.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.video.settings.subtitle.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "video1_cover_image",
+      "label": "Video 1 - Cover Image"
+    },
+    {
+      "type": "video",
+      "id": "video1_hosted",
+      "label": "Video 1 - Hosted Video",
+      "info": "Upload or select a hosted video"
+    },
+    {
+      "type": "video_url",
+      "id": "video1_url",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "label": "Video 1 - Video URL",
+      "placeholder": "Use a YouTube or Vimeo URL",
+      "info": "Paste the URL for the video"
+    },
+    {
+      "type": "text",
+      "id": "video1_description",
+      "label": "Video 1 - Description",
+      "info": "A short description of the video"
+    },
+    {
+      "type": "textarea",
+      "id": "video1_text",
+      "label": "Video 1 - Text Below Video",
+      "info": "Text to display under the video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video1_autoplay",
+      "label": "Video 1 - Autoplay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video1_controls",
+      "label": "Video 1 - Enable Controls",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video1_looping",
+      "label": "Video 1 - Enable Looping",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "video2_cover_image",
+      "label": "Video 2 - Cover Image"
+    },
+    {
+      "type": "video",
+      "id": "video2_hosted",
+      "label": "Video 2 - Hosted Video",
+      "info": "Upload or select a hosted video"
+    },
+    {
+      "type": "video_url",
+      "id": "video2_url",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "label": "Video 2 - Video URL",
+      "placeholder": "Use a YouTube or Vimeo URL",
+      "info": "Paste the URL for the video"
+    },
+    {
+      "type": "text",
+      "id": "video2_description",
+      "label": "Video 2 - Description",
+      "info": "A short description of the video"
+    },
+    {
+      "type": "textarea",
+      "id": "video2_text",
+      "label": "Video 2 - Text Below Video",
+      "info": "Text to display under the video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video2_autoplay",
+      "label": "Video 2 - Autoplay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video2_controls",
+      "label": "Video 2 - Enable Controls",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video2_looping",
+      "label": "Video 2 - Enable Looping",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty_video",
+      "label": "Hide Section When No Videos",
+      "info": "Hide the entire section if no videos are set",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "Enable Box Layout",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Section Color Scheme"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Videos"
+    }
+  ]
 }
-
-.two-videos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-}
-
-.video-item {
-  flex: 1 1 45%;
-  text-align: center;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.video-wrapper iframe,
-.video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-text {
-  margin-top: 15px;
-}
-</style>
+{% endschema %}
