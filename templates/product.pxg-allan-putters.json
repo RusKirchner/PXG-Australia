@@ -81,6 +81,33 @@
         "overlay_color": "#1e40af"
       }
     },
+    "two_columns_videos_HrYXDa": {
+      "type": "two-columns-videos",
+      "settings": {
+        "title": "RESIST THE TWIST",
+        "heading_size": "h1",
+        "subtitle": "Discover PXG’s innovative new Zero Torque Balance Technology that powers the Allan Putter, resisting the twist and helping you sink more putts.",
+        "video1_cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
+        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
+        "video1_description": "INTRODUCING THE PXG ALLAN PUTTER",
+        "video1_text": "<p>A quick overview of our innovative new putter technology and design.<\/p>",
+        "video1_autoplay": false,
+        "enable_video1_controls": true,
+        "enable_video1_looping": true,
+        "video2_cover_image": "shopify:\/\/shop_images\/1917934857-73b36b6884875adc047e5880f36d7602babc21a2eed3960eaa72d78ae6a5a7c2-d.jpg",
+        "video2_url": "https:\/\/player.vimeo.com\/video\/1000959467",
+        "video2_description": "DEEP DIVE THE PXG ALLAN PUTTER",
+        "video2_text": "<p>Learn about the physics behind the design and discover how each feature enhances putting consistency.<\/p>",
+        "video2_autoplay": false,
+        "enable_video2_controls": true,
+        "enable_video2_looping": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -754,103 +781,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "video_with_text_wAKNEi": {
-      "type": "video-with-text",
-      "blocks": {
-        "heading_HKVntk": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_VRHCEj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_L9Mg9p": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "heading_HKVntk",
-        "text_VRHCEj",
-        "button_L9Mg9p"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/vimeo-999600357-hls-akfire_interconnect_quic-2104.mp4",
-        "video_url": "https:\/\/player.vimeo.com\/video\/999600357",
-        "description": "",
-        "autoplay": true,
-        "enable_controls": true,
-        "enable_video_looping": true,
-        "full_width": false,
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "overlay_color": "#1e40af"
-      }
-    },
-    "two_columns_videos_HrYXDa": {
-      "type": "two-columns-videos",
-      "settings": {
-        "title": "RESIST THE TWIST",
-        "heading_size": "h1",
-        "subtitle": "Discover PXG’s innovative new Zero Torque Balance Technology that powers the Allan Putter, resisting the twist and helping you sink more putts.",
-        "video1_cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
-        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
-        "video1_description": "INTRODUCING THE PXG ALLAN PUTTER",
-        "video1_text": "<p>A quick overview of our innovative new putter technology and design.<\/p>",
-        "video1_autoplay": false,
-        "enable_video1_controls": true,
-        "enable_video1_looping": true,
-        "video2_cover_image": "shopify:\/\/shop_images\/1917934857-73b36b6884875adc047e5880f36d7602babc21a2eed3960eaa72d78ae6a5a7c2-d.jpg",
-        "video2_url": "https:\/\/player.vimeo.com\/video\/1000959467",
-        "video2_description": "DEEP DIVE THE PXG ALLAN PUTTER",
-        "video2_text": "<p>Learn about the physics behind the design and discover how each feature enhances putting consistency.<\/p>",
-        "video2_autoplay": false,
-        "enable_video2_controls": true,
-        "enable_video2_looping": true,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_with_text_64n3Fk",
+    "two_columns_videos_HrYXDa",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
@@ -864,8 +799,6 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671",
-    "video_with_text_wAKNEi",
-    "two_columns_videos_HrYXDa"
+    "342fa470-7277-4291-be0f-d2979708f671"
   ]
 }
