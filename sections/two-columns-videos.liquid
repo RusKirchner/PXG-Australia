@@ -67,7 +67,8 @@
                 allowfullscreen
                 title="{{ section.settings.description | escape }}"
               ></iframe>
-            {%- else -%}
+            {%- endif -%}
+            {%- if section.settings.video1_url.type == 'vimeo' -%}
             <iframe
               src="https://player.vimeo.com/video/{{ section.settings.video1_url.id }}?autoplay=1{{ loop }}"
               class="js-vimeo global-settings-popup"
