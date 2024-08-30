@@ -824,12 +824,28 @@
     "two_columns_videos_HrYXDa": {
       "type": "two-columns-videos",
       "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video1_cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
         "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
-        "video1_self_hosted_url": "",
+        "video1_description": "",
         "video1_text": "Description for video 1.",
-        "video2_url": "https:\/\/player.vimeo.com\/video\/999600357",
-        "video2_self_hosted_url": "",
-        "video2_text": "Description for video 2."
+        "video1_autoplay": false,
+        "enable_video1_controls": true,
+        "enable_video1_looping": true,
+        "video2_cover_image": "shopify:\/\/shop_images\/1917934857-73b36b6884875adc047e5880f36d7602babc21a2eed3960eaa72d78ae6a5a7c2-d.jpg",
+        "video2_url": "https:\/\/player.vimeo.com\/video\/1000959467",
+        "video2_description": "",
+        "video2_text": "Description for video 2.",
+        "video2_autoplay": false,
+        "enable_video2_controls": true,
+        "enable_video2_looping": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "video_MCUE7z": {
