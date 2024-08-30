@@ -104,8 +104,28 @@
         "hide_when_empty_video": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "video_with_heading_text_UbxfK9": {
+      "type": "video-with-heading-text",
+      "settings": {
+        "title": "PERFECTLY BALLANCED DESIGN",
+        "subtitle": "The PXG Allan Putter's Zero Torque Balance Technology ensures the face remains square to the path throughout the entire stroke.By positioning the center of gravity (CG) just below the shaft axis, no torque is generated, keeping the putter stable, balanced, and on target.",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/1917595935-5aefff6f8233c17fc29f9566f5fcdc005186b2af019008cdc52de3ecda545d54-d.jpg",
+        "video_url": "https:\/\/player.vimeo.com\/video\/1000550395?muted=1",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "169699214611e587ad": {
@@ -781,31 +801,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "video_with_heading_text_UbxfK9": {
-      "type": "video-with-heading-text",
-      "settings": {
-        "title": "PERFECTLY BALLANCED DESIGN",
-        "subtitle": "The PXG Allan Putter's Zero Torque Balance Technology ensures the face remains square to the path throughout the entire stroke.By positioning the center of gravity (CG) just below the shaft axis, no torque is generated, keeping the putter stable, balanced, and on target.",
-        "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/1917595935-5aefff6f8233c17fc29f9566f5fcdc005186b2af019008cdc52de3ecda545d54-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/1000550395?muted=1",
-        "description": "",
-        "autoplay": true,
-        "enable_controls": true,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "inverse",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_with_text_64n3Fk",
     "two_columns_videos_HrYXDa",
+    "video_with_heading_text_UbxfK9",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
@@ -819,7 +820,6 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671",
-    "video_with_heading_text_UbxfK9"
+    "342fa470-7277-4291-be0f-d2979708f671"
   ]
 }
