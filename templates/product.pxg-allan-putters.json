@@ -68,17 +68,17 @@
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
-        "color_highlight_text": "#DA2127",
+        "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
-        "color_countdown": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
         "background_container": "#000000",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "169699214611e587ad": {
@@ -806,19 +806,30 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
+      }
+    },
+    "two_columns_videos_HrYXDa": {
+      "type": "two-columns-videos",
+      "settings": {
+        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357?controls=0&loop=1&app_id=122963&texttrack=false",
+        "video1_self_hosted_url": "",
+        "video1_text": "Description for video 1.",
+        "video2_url": "https:\/\/player.vimeo.com\/video\/999600357?controls=0&loop=1&app_id=122963&texttrack=false",
+        "video2_self_hosted_url": "",
+        "video2_text": "Description for video 2."
       }
     }
   },
@@ -838,6 +849,7 @@
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
     "342fa470-7277-4291-be0f-d2979708f671",
-    "video_with_text_wAKNEi"
+    "video_with_text_wAKNEi",
+    "two_columns_videos_HrYXDa"
   ]
 }
