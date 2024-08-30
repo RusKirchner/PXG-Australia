@@ -1,6 +1,103 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Two Videos with Text",
+    "settings": [
+      {
+        "type": "url",
+        "id": "video1_url",
+        "label": "Video 1 URL",
+      },
+      {
+        "type": "image_picker",
+        "id": "video1_placeholder",
+        "label": "Video 1 Placeholder",
+      },
+      {
+        "type": "textarea",
+        "id": "video1_text",
+        "label": "Video 1 Text",
+        "default": "Description for video 1."
+      },
+      {
+        "type": "url",
+        "id": "video2_url",
+        "label": "Video 2 URL",
+      },
+      {
+        "type": "image_picker",
+        "id": "video2_placeholder",
+        "label": "Video 2 Placeholder",
+      },
+      {
+        "type": "textarea",
+        "id": "video2_text",
+        "label": "Video 2 Text",
+        "default": "Description for video 2."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Two Videos with Text",
+        "category": "Custom"
+      }
+    ]
   }
 {% endschema %}
+
+<section class="two-videos-section">
+  <div class="two-videos-container">
+    <div class="video-item">
+      {% if section.settings.video1_url != blank %}
+        <video controls>
+          <source src="{{ section.settings.video1_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% elsif section.settings.video1_placeholder != blank %}
+        <img src="{{ section.settings.video1_placeholder | img_url: 'master' }}" alt="Video 1 Placeholder">
+      {% endif %}
+      <p>{{ section.settings.video1_text }}</p>
+    </div>
+    <div class="video-item">
+      {% if section.settings.video2_url != blank %}
+        <video controls>
+          <source src="{{ section.settings.video2_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% elsif section.settings.video2_placeholder != blank %}
+        <img src="{{ section.settings.video2_placeholder | img_url: 'master' }}" alt="Video 2 Placeholder">
+      {% endif %}
+      <p>{{ section.settings.video2_text }}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.two-videos-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two-videos-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+}
+
+.video-item video,
+.video-item img {
+  width: 100%;
+  height: auto;
+}
+
+.video-item p {
+  margin-top: 10px;
+}
+</style>
