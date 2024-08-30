@@ -159,7 +159,7 @@
               {%- endif -%}  
             </template>
           </{% if section.settings.video1_hosted != nil or section.settings.video1_url != nil %}deferred-media{% else %}div{% endif %}>
-          <h3 class="video-title">{{ section.settings.video1_description }}</h3>
+          <p class="video-title"><strong>{{ section.settings.video1_description }}</strong></p>
           <p class="video-text">{{ section.settings.video1_text }}</p>
         </div>
 
@@ -254,7 +254,7 @@
               {%- endif -%}  
             </template>
           </{% if section.settings.video2_hosted != nil or section.settings.video2_url != nil %}deferred-media{% else %}div{% endif %}>
-          <h3 class="video-title">{{ section.settings.video2_description }}</h3>
+          <p class="video-title"><strong>{{ section.settings.video2_description }}</strong></p>
           <p class="video-text">{{ section.settings.video2_text }}</p>
         </div>
       </div>
