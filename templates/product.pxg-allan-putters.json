@@ -51,6 +51,9 @@
         "text_iGYX7p",
         "button_WfKCmq"
       ],
+      "custom_css": [
+        ".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"
+      ],
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/1500x1500-Marquee-Test_1.png",
