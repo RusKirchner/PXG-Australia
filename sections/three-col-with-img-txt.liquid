@@ -1,43 +1,14 @@
-<!-- putter-technology.liquid -->
+<!-- technology-benefits-blocks.liquid -->
 
 {% schema %}
 {
-  "name": "Putter Technology",
+  "name": "Technology Benefits",
   "settings": [
     {
       "type": "text",
       "id": "section_heading",
       "label": "Section Heading",
       "default": "PUTTER TECHNOLOGY THAT PERFORMS"
-    },
-    {
-      "type": "text",
-      "id": "technology_heading",
-      "label": "Technology Heading",
-      "default": "TECHNOLOGY"
-    },
-    {
-      "type": "textarea",
-      "id": "technology_text",
-      "label": "Technology Text",
-      "default": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft."
-    },
-    {
-      "type": "image_picker",
-      "id": "technology_image",
-      "label": "Technology Image"
-    },
-    {
-      "type": "text",
-      "id": "player_benefits_heading",
-      "label": "Player Benefits Heading",
-      "default": "PLAYER BENEFITS"
-    },
-    {
-      "type": "textarea",
-      "id": "benefits_text",
-      "label": "Player Benefits Text",
-      "default": "STABILITY: Reduces twisting and enhances stability.\nPOSITIONING: Forward press helps position hands naturally."
     },
     {
       "type": "color",
@@ -58,9 +29,34 @@
       "default": "#000000"
     }
   ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Block Heading",
+          "default": "TECHNOLOGY"
+        },
+        {
+          "type": "textarea",
+          "id": "block_text",
+          "label": "Block Text",
+          "default": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point."
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Block Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Putter Technology",
+      "name": "Technology Benefits Blocks",
       "category": "Custom Sections"
     }
   ]
@@ -69,24 +65,38 @@
 
 <div style="background-color: {{ section.settings.background_color }}; padding: 40px 0;">
   <div class="container">
-    <h2 style="text-align: center; color: {{ section.settings.heading_color }}; margin-bottom: 20px;">
+    <h2 style="text-align: center; color: {{ section.settings.heading_color }}; margin-bottom: 40px;">
       {{ section.settings.section_heading }}
     </h2>
-    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-      <!-- Technology Section -->
-      <div style="flex: 1; text-align: center; padding-right: 20px;">
-        <h3 style="color: {{ section.settings.heading_color }};">{{ section.settings.technology_heading }}</h3>
-        <div style="margin: 20px 0;">
-          <img src="{{ section.settings.technology_image | image_url }}" alt="Technology Image" style="max-width: 100%; margin: 0 auto;">
-        </div>
-        <p style="color: {{ section.settings.text_color }}; white-space: pre-wrap;">{{ section.settings.technology_text }}</p>
+    <div style="display: flex; justify-content: space-between;">
+      {% for block in section.blocks %}
+      <div style="flex: 1; text-align: center; margin: 0 10px;">
+        {% if block.settings.block_image %}
+        <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" style="max-width: 100px; margin-bottom: 20px;">
+        {% endif %}
+        <h3 style="color: {{ section.settings.heading_color }};">{{ block.settings.block_heading }}</h3>
+        <p style="color: {{ section.settings.text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
       </div>
-      
-      <!-- Player Benefits Section -->
-      <div style="flex: 1; text-align: left; padding-left: 20px;">
-        <h3 style="color: {{ section.settings.heading_color }};">{{ section.settings.player_benefits_heading }}</h3>
-        <p style="color: {{ section.settings.text_color }}; white-space: pre-wrap;">{{ section.settings.benefits_text }}</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+<style>
+  @media (max-width: 768px) {
+    .container {
+      display: block;
+    }
+    .container div {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+{% endstylesheet %}
+
+{% javascript %}
+<script>
+  // Add any necessary JavaScript here (optional)
+</script>
+{% endjavascript %}
