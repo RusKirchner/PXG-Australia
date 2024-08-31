@@ -272,7 +272,7 @@
         "heading_m66xa6": {
           "type": "heading",
           "settings": {
-            "heading": "S-HOSEL",
+            "heading": "PICK UP POCKET",
             "heading_size": "h1",
             "enable_bold_heading": false
           }
@@ -280,7 +280,7 @@
         "text_D7kKnE": {
           "type": "text",
           "settings": {
-            "text": "<p>The S-hosel situates the shaft axis just above the CG, creating a toe-up balance point and minimizing torque. The proximity of the shaft axis to the CG creates stability and prevents twisting.<\/p>",
+            "text": "<p>The innovative sole design features a Pick Up Pocket that enables golfers to quickly and easily pick-up their golf ball.<\/p>",
             "text_style": "body"
           }
         },
@@ -300,7 +300,7 @@
         "button_3dRfTk"
       ],
       "custom_css": [
-        "h2.h1{font-weight: normal;}"
+        "h2.h1 {font-weight: normal;}"
       ],
       "settings": {
         "grid_layout": "grid",
