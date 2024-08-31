@@ -1469,6 +1469,9 @@ div#infiniteoptions-container>div.grip {
       }
   .blocks-container {
     gap: 0;
-}
+  }
+  .top-header {
+    display: none;
+  }
 }
 
