@@ -227,8 +227,9 @@
     
             {%- endif -%}
         {%- endif -%}  
-        <button id="playPauseBtnVimeo1" class="play-pause-btn">Play</button>
+        
       </template>
+      <button id="playPauseBtnVimeo1" class="play-pause-btn">Play</button>
     </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
   </div>
       <div class="image-with-text__text-item grid__item{% if section.settings.desktop_image_width == 'small' %} flex-grow-1{% endif %}" style="--color-background:{{ section.settings.background_container.red }}, {{ section.settings.background_container.green }}, {{ section.settings.background_container.blue }};--gradient-background:{{ section.settings.gradient_background_container | default: section.settings.background_container }};">
