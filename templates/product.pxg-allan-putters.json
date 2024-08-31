@@ -363,7 +363,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><strong>POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
+            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><br\/><\/p><p><strong>﻿POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -394,8 +394,70 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction.<\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
+            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction. <\/p><p><br\/><\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
             "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_9qmiLL": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-SCOR.webp",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_iMzeyg": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>LIGHTWEIGHT S-COR™ POLYMER<\/strong><\/p><p>Comprises 37% of the Allan’s volume, bonds to the face and shifts weight to the edges to enhance MOI.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_HtcqRK": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>SOUND AND FEEL:<\/strong> Dampens sound and vibration for a smoother feel. <\/p><p>﻿<\/p><p><strong>PERFORMANCE: <\/strong>Helps with balance and forgiveness.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_6T3cLw": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Thin-Face.webp",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_AeaBTP": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>THINNEST FACE IN PUTTERS<\/strong><\/p><p>At just 0.055 inches thick, the ultra-thin face is supported by the S COR™ polymer, which bonds to the face and dampens sound and vibration.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_taBC8i": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>SOUND AND FEEL:<\/strong> Creates the soft sounds of an insert with the responsive feel of a solid milled putter.<\/p>",
+            "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
           }
@@ -407,7 +469,13 @@
         "block_kTdePh",
         "block_Yc6EyY",
         "block_TPiFVn",
-        "block_LpEWpe"
+        "block_LpEWpe",
+        "block_9qmiLL",
+        "block_iMzeyg",
+        "block_HtcqRK",
+        "block_6T3cLw",
+        "block_AeaBTP",
+        "block_taBC8i"
       ],
       "settings": {
         "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
