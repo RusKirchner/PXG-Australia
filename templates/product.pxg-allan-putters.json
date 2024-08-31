@@ -231,7 +231,7 @@
         "button_GzD48k"
       ],
       "custom_css": [
-        "h2.h1{font-weight: normal;}"
+        "h2.h1 {font-weight: normal;}"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -258,6 +258,72 @@
         "color_caption": "#ffffff",
         "color_countdown": "#ffffff",
         "color_button_text": "#ffffff",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1e40af"
+      }
+    },
+    "video_with_text_8H4mHV": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_m66xa6": {
+          "type": "heading",
+          "settings": {
+            "heading": "S-HOSEL",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_D7kKnE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The S-hosel situates the shaft axis just above the CG, creating a toe-up balance point and minimizing torque. The proximity of the shaft axis to the CG creates stability and prevents twisting.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_3dRfTk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_m66xa6",
+        "text_D7kKnE",
+        "button_3dRfTk"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "cover_image": "shopify:\/\/shop_images\/1917248978-9efb3db44f21c346854c8f67b72fd0da7af8e7027568d4dd0bb71c84d62a6e35-d.jpg",
+        "video_url": "https:\/\/player.vimeo.com\/video\/1000933071?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "rgba(0,0,0,0)",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
@@ -947,6 +1013,7 @@
     "video_with_heading_text_UbxfK9",
     "video_with_text_t4nHcW",
     "video_with_text_left_XYDzQr",
+    "video_with_text_8H4mHV",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
