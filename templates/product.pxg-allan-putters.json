@@ -1037,7 +1037,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><strong>﻿POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
+            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><\/p><p><strong>﻿POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -1068,7 +1068,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction. <\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
+            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction.<\/p><p> <\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
