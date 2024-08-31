@@ -11,6 +11,18 @@
       "default": "PUTTER TECHNOLOGY THAT PERFORMS"
     },
     {
+      "type": "text",
+      "id": "header-heading-1",
+      "label": "Top Heading 1",
+      "default": "PUTTER TECHNOLOGY THAT PERFORMS"
+    },
+    {
+      "type": "text",
+      "id": "header-heading-2",
+      "label": "Top Heading 2",
+      "default": "PUTTER TECHNOLOGY THAT PERFORMS"
+    },
+    {
       "type": "color",
       "id": "background_color",
       "label": "Section Background Color",
@@ -21,6 +33,12 @@
       "id": "heading_color",
       "label": "Section Heading Color",
       "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color_header",
+      "label": "Header Background Color",
+      "default": "#f0f0f0"
     },
     {
       "type": "color",
@@ -87,6 +105,12 @@
     <h2 style="text-align: center; color: {{ section.settings.heading_color }}; margin-bottom: 40px;">
       {{ section.settings.section_heading }}
     </h2>
+    <div class="top-header" style="background-color: {{ section.settings.background_color_header }}">
+      <h4 style="text-align: center; color: {{ section.settings.text_color }};">
+      {{ section.settings.header-heading-1 }}</h4>
+      <h4 style="text-align: center; color: {{ section.settings.text_color }};">
+      {{ section.settings.header-heading-2 }}</h4>
+    </div>
     <div class="blocks-container">
       {% for block in section.blocks %}
         {% if block.type == 'block' %}
