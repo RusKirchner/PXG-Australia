@@ -1026,9 +1026,9 @@
         "block_rWtEUL": {
           "type": "block",
           "settings": {
-            "block_heading": "TECHNOLOGY",
-            "block_text": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point.",
-            "block_background_color": "#000000",
+            "block_heading": "",
+            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
+            "block_background_color": "#ffffff",
             "block_heading_color": "#f9f9f9",
             "block_text_color": "#ffffff"
           }
@@ -1036,8 +1036,8 @@
         "block_kTdePh": {
           "type": "block",
           "settings": {
-            "block_heading": "TECHNOLOGY",
-            "block_text": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point.",
+            "block_heading": "",
+            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
