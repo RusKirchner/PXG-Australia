@@ -1085,9 +1085,12 @@
       ],
       "settings": {
         "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
+        "header-heading-1": "TECHNOLOGY",
+        "header-heading-2": "PLAYER BENEFITS",
         "background_color": "#ffffff",
         "heading_color": "#000000",
-        "text_color": "#ff0000"
+        "background_color_header": "#eaeaea",
+        "text_color": "#000000"
       }
     }
   },
