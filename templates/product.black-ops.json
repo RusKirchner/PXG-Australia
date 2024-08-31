@@ -32,7 +32,7 @@
         "cb459e26-5c60-4789-8b38-289beb93ff9d": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><p>Everything we know about game improvment, incredible feel & high performance take to the limit<\/p>",
+            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“IF YOU ARE SOMEONE PURELY LOOKING TO MAKE THE GAME AS EASY AS POSSIBLE BY USING ONE OF THE MOST FORGIVING IRONS ON THE MARKET, THEN YOU ARE CERTAINLY LOOKING IN THE RIGHT PLACE.”<\/strong><\/p><p>—Golf Monthly <br\/><\/p><p><strong>“IF YOU'RE SOMEONE WHO WANTS CONFIDENCE WITH THEIR BALL STRIKING, YOU'LL FIND IT HERE.”<\/strong><\/p><p>—Bunkered<br\/><\/p><p><strong>“BEYOND JUST BEING LONG AND FORGIVING, THE BLACK OPS IRONS HAVE BEEN DESIGNED WITH A SUPREME FOCUS ON PROVIDING GOLFERS WITH A MUCH SOFTER FEEL..”<\/strong><\/p><p>—GOLF.com<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -92,6 +92,71 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
+      }
+    },
+    "video_with_text_left_DqJGTK": {
+      "type": "video-with-text-left",
+      "blocks": {
+        "heading_GUr4Ky": {
+          "type": "heading",
+          "settings": {
+            "heading": "A BREAKTHROUGH IN GAME IMPROVEMENT",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_ngVeNK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing new PXG Black Ops Irons – our first Game Improvement Irons. Featuring XCOR2 Technology, innovative dual cavity design, and a high strength, ultra-thin Maraging steel club face, Black Ops Irons deliver superior forgiveness, explosive distance, extreme ball speed, and a feel that may be even better than forged.<\/p><p><br\/><\/p><p>Easy to hit Black Ops Irons maximize performance, confidence, and fun.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_3fXKH4": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GUr4Ky",
+        "text_ngVeNK",
+        "button_3fXKH4"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "video_url": "https:\/\/player.vimeo.com\/video\/990786714?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
       }
     },
     "66b2b35f-8b26-4217-89e5-5a1d7643d852": {
@@ -212,6 +277,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1",
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -857,6 +923,7 @@
   },
   "order": [
     "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7",
+    "video_with_text_left_DqJGTK",
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "5f037c15-7714-4621-afad-1e999cc27872",
