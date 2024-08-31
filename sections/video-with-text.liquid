@@ -1,107 +1,214 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- assign text_block = section.blocks | where: "type", "text" -%}
+{%- if text_block.size > 0 -%}
+  <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>
+    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{%- endif -%}
+<link rel="stylesheet" href="{{ 'component-countdown.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.background_image_section != blank -%}
+  <script src="{{ 'lazy-background.js' | asset_url }}" defer="defer"></script>
+  <noscript>
+    <style>
+      .section-{{ section.id }}-padding.gradient {
+        background-image: url({{ section.settings.background_image_section | image_url }});
+        background-size: cover;
+        background-position: var(--focal-point, center);
+        background-repeat: no-repeat;
+      }
+    </style>
+  </noscript>
+{%- endif -%}
+
 {%-liquid
-  assign hide_section = false
-  if section.settings.video_hosted == nil and section.settings.video_url == nil and section.settings.hide_when_empty_video and request.design_mode == false
-    assign hide_section = true
+  assign radius_type = 'full'
+  if section.settings.second_image == blank and section.settings.content_layout == 'no-overlap'
+    assign has_background_container = false
+    if section.settings.gradient_background_container != blank
+      assign has_background_container = true
+    elsif section.settings.background_container and section.settings.background_container.alpha > 0
+      assign has_background_container = true
+    endif
+    assign has_diff_background = has_background_container
+    if has_background_container and section.settings.background_image_section == blank
+      unless section.settings.gradient_background_section != blank
+        if section.settings.background_section and section.settings.background_section == section.settings.background_container and section.settings.background_section.alpha == section.settings.background_container.alpha
+          assign has_diff_background = false
+        endif
+      endunless
+    endif
+    if has_diff_background
+      assign radius_type = 'half'
+    endif
   endif
 -%}
-{%- unless hide_section -%}
-  {{ 'video-section.css' | asset_url | stylesheet_tag }}
-  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-  {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
-
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-    }
-
-    {%- render 'section-heading-styles' -%}
-  {%- endstyle -%}
-
-  <div class="section-{{ section.id }}-padding {% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient{% else %}page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
-    <div class="video-section isolate{% unless section.settings.enable_section_box_layout %}{% unless section.settings.full_width %} page-width{% endunless %}{% else %} section__box color-{{ section.settings.color_scheme }} gradient{% endunless %}">
-      {%- unless section.settings.enable_section_box_layout -%}
-        <div{% if section.settings.full_width %} class="page-width"{% endif %}>
-          {%- render 'section-heading' -%}
-        </div>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --color-background: {{ section.settings.background_section.red }}, {{ section.settings.background_section.green }}, {{ section.settings.background_section.blue }};
+    --gradient-background: {{ section.settings.gradient_background_section | default: section.settings.background_section }};
+    {%- if section.settings.gradient_heading != blank -%}--gradient-heading: {{ section.settings.gradient_heading }};{%- endif -%}
+    {%- if section.settings.grid_layout == 'full_bleed' -%}
+      --border-radius: 0;
+    {%- endif -%}
+    {%- if section.settings.background_image_section != blank -%}
+      --focal-point:{{ section.settings.background_image_section.presentation.focal_point }};
+      {%- if section.settings.overlay_color != blank and section.settings.overlay_color.alpha > 0 -%}
+        --color-overlay: {{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }};
+      {%- endif -%}
+    {%- endif -%} 
+    {%- if section.settings.content_layout == 'no-overlap' -%}
+      {%- unless section.settings.grid_layout == 'full_bleed' -%}
+        {%- if radius_type == 'full' -%}
+          --border-radius-content: 1.6rem;
+          --border-radius-media: 1.6rem;
+        {%- else -%}
+          --border-radius-content: 0 0 1.6rem 1.6rem;
+          --border-radius-media: 1.6rem 1.6rem 0 0;
+        {%- endif -%}
       {%- else -%}
-        {%- render 'section-heading' -%}  
-      {%- endunless -%}  
-      
-      {%- liquid
-        assign cover_image = section.settings.cover_image
-        if cover_image == blank and section.settings.video_hosted != nil
-          assign cover_image = section.settings.video_hosted.preview_image
-        endif
-      -%}
-      <noscript>
-        <div class="video-section__media card-radius"
-          {% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-        >
-          {%- if section.settings.video_hosted == null and section.settings.video_url != null -%}
-            <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image == blank %} video-section__placeholder{% endif %}">
-              {%- if cover_image != blank -%}
-                {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
-                {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
-                {{ cover_image | image_url: width: 3840 | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                  alt: alt
-                }}
-              {%- else -%}
-                {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-              {%- endif -%}
-            </a>
-          {%- else -%}
-            {{
-              section.settings.video_hosted
-              | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
-            }}  
-          {%- endif -%}  
-        </div>
-      </noscript>
-      <{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %} class="video-section__media deferred-media no-js-hidden gradient global-media-settings card--shadow card-radius{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video_hosted.id | default: section.settings.video_url.id }}"{% if section.settings.autoplay %} data-autoplay="true"{% endif %}{% unless section.settings.enable_controls %} data-no-controls="true"{% endunless %}
-      >
-        <button
-          id="Deferred-Poster-Modal-{{ section.settings.video_hosted.id | default: section.settings.video_url.id }}"
-          class="video-section__poster media deferred-media__poster media--landscape global-settings-popup"
-          type="button"
-          aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
-        >
-          {%- if cover_image != blank -%}
-            {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
-            {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
-            {{ cover_image | image_url: width: 3840 | image_tag:
-              loading: 'lazy',
-              sizes: sizes,
-              widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-              alt: alt
-            }}
-          {%- else -%}
-            {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+        --border-radius-content: 0;
+        --border-radius-media: 0;   
+      {%- endunless -%} 
+    {%- elsif section.settings.content_layout == 'overlap' -%}
+      --border-radius-content: 1.6rem;
+      {%- unless section.settings.grid_layout == 'full_bleed' -%}
+        --border-radius-media: 1.6rem;
+      {%- else -%}
+        --border-radius-media: 0;  
+      {%- endunless -%}      
+    {%- else -%}
+      {%- unless section.settings.grid_layout == 'full_bleed' -%}
+        --border-radius-content: 1.6rem;
+        --border-radius-media: 1.6rem;
+      {%- else -%}
+        --border-radius-content: 0;
+        --border-radius-media: 0;  
+      {%- endunless -%}      
+    {%- endif -%}  
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      {%- if section.settings.content_layout == 'no-overlap' -%}
+        {%- unless section.settings.grid_layout == 'full_bleed' -%}
+          {%- if radius_type != 'full' -%}
+            {%- if section.settings.layout == 'text_first' -%}
+              --border-radius-content: 1.6rem 0 0 1.6rem;
+              --border-radius-media: 0 1.6rem 1.6rem 0;
+            {%- else -%}
+              --border-radius-content: 0 1.6rem 1.6rem 0;
+              --border-radius-media: 1.6rem 0 0 1.6rem;  
+            {%- endif -%}  
           {%- endif -%}
-          <span class="deferred-media__poster-button motion-reduce">
-            {%- render 'icon-play' -%}
-          </span>
-        </button>
-        <template>
-          {%- if section.settings.video_hosted != nil -%}
-            {{ section.settings.video_hosted | video_tag: autoplay: true, loop: section.settings.enable_video_looping, muted: true, controls: section.settings.enable_controls }}
-          {%- elsif section.settings.video_url != nil -%}
-            {%- liquid
-              assign loop = ''
-              if section.settings.enable_video_looping
-                assign loop = '&loop=1&playlist=' | append: section.settings.video_url.id
-              endif
-            -%}  
-            {%- if section.settings.video_url.type == 'youtube' -%}
+        {%- else -%}
+          {%- if radius_type == 'full' -%}  
+            {%- if section.settings.layout == 'text_first' -%}
+              --border-radius-media: 1.6rem 0 0 1.6rem;
+            {%- else -%}
+              --border-radius-media: 0 1.6rem 1.6rem 0;  
+            {%- endif -%}  
+          {%- endif -%}
+        {%- endunless -%}
+      {%- else -%}
+        {%- if section.settings.grid_layout == 'full_bleed' -%}
+          {%- if section.settings.layout == 'text_first' -%}
+            --border-radius-content: 0 1.6rem 1.6rem 0;
+            --border-radius-media: 1.6rem 0 0 1.6rem;
+          {%- else -%}
+            --border-radius-content: 1.6rem 0 0 1.6rem;
+            --border-radius-media: 0 1.6rem 1.6rem 0;  
+          {%- endif -%}  
+        {%- endif -%} 
+      {%- endif -%}   
+    }
+  }
+{%- endstyle -%}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+<{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %} class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient{% if section.settings.background_image_section != blank and section.settings.overlay_color != blank and section.settings.overlay_color.alpha > 0 %} background-overlay{% endif %}"{% if section.settings.background_image_section != blank %} data-background-image="{{ section.settings.background_image_section | image_url }}"{% endif %}>
+  <div class="{% if section.settings.grid_layout contains 'grid' %}page-width{% if section.settings.grid_layout == 'stretched_grid' %}--full{% endif %}{% endif %}">
+    <div class="video-text-cols image-with-text__grid grid{% unless section.settings.content_layout == 'separate' %} grid--gapless{% endunless %} grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+  <div class="video-text-right video-section isolate section-{{ section.id }}-padding">
+    <div{% if section.settings.full_width %} class="page-width"{% endif %}>
+      {%- render 'section-heading' -%}
+    </div>
+    {%- liquid
+      assign cover_image = section.settings.cover_image
+      if cover_image == blank and section.settings.video_hosted != nil
+        assign cover_image = section.settings.video_hosted.preview_image
+      endif
+    -%}
+    <noscript>
+      <div class="video-section__media card-radius"
+        {% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+      >
+        {%- if section.settings.video_hosted == null and section.settings.video_url != null -%}
+          <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image == blank %} video-section__placeholder{% endif %}">
+            {%- if cover_image != blank -%}
+              {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+              {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
+              {{ cover_image | image_url: width: 3840 | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                alt: alt
+              }}
+            {%- else -%}
+              {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {%- endif -%}
+          </a>
+        {%- else -%}
+          {{
+            section.settings.video_hosted
+            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
+          }}  
+        {%- endif -%}  
+      </div>
+    </noscript>
+    <{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %} class="video-section__media deferred-media no-js-hidden gradient global-media-settings card--shadow card-radius{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video_hosted.id | default: section.settings.video_url.id }}"{% if section.settings.autoplay %} data-autoplay="true"{% endif %}{% unless section.settings.enable_controls %} data-no-controls="true"{% endunless %}
+    >
+      <button
+        id="Deferred-Poster-Modal-{{ section.settings.video_hosted.id | default: section.settings.video_url.id }}"
+        class="video-section__poster media deferred-media__poster media--landscape global-settings-popup"
+        type="button"
+        aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+      >
+        {%- if cover_image != blank -%}
+          {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+          {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
+          {{ cover_image | image_url: width: 3840 | image_tag:
+            loading: 'lazy',
+            sizes: sizes,
+            widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+            alt: alt
+          }}
+        {%- else -%}
+          {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+        {%- endif -%}
+        <span class="deferred-media__poster-button motion-reduce">
+          {%- render 'icon-play' -%}
+        </span>
+      </button>
+      <template>
+        {%- if section.settings.video_hosted != nil -%}
+          {{ section.settings.video_hosted | video_tag: autoplay: true, loop: section.settings.enable_video_looping, muted: true, controls: section.settings.enable_controls }}
+        {%- elsif section.settings.video_url != nil -%}
+          {%- liquid
+            assign loop = ''
+            if section.settings.enable_video_looping
+              assign loop = '&loop=1&playlist=' | append: section.settings.video_url.id
+            endif
+          -%}  
+          
+          {%- if section.settings.video_url.type == 'youtube' -%}
               <iframe
                 src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
                 class="js-youtube global-settings-popup"
@@ -118,11 +225,11 @@
               title="{{ section.settings.description | escape }}"
             ></iframe>
             {%- endif -%}
-          {%- endif -%}  
-        </template>
-      </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
-    </div>
-          <div class="image-with-text__text-item grid__item{% if section.settings.desktop_image_width == 'small' %} flex-grow-1{% endif %}" style="--color-background:{{ section.settings.background_container.red }}, {{ section.settings.background_container.green }}, {{ section.settings.background_container.blue }};--gradient-background:{{ section.settings.gradient_background_container | default: section.settings.background_container }};">
+        {%- endif -%}  
+      </template>
+    </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
+  </div>
+      <div class="image-with-text__text-item grid__item{% if section.settings.desktop_image_width == 'small' %} flex-grow-1{% endif %}" style="--color-background:{{ section.settings.background_container.red }}, {{ section.settings.background_container.green }}, {{ section.settings.background_container.blue }};--gradient-background:{{ section.settings.gradient_background_container | default: section.settings.background_container }};">
         <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--radius image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient">
           {%- for block in section.blocks -%}
             {% case block.type %}
@@ -165,45 +272,34 @@
           {%- endfor -%}
         </div>
       </div>
+    </div>
+  </div>  
+</{% if section.settings.background_image_section != blank %}lazy-background{% else %}div{% endif %}>
 
-  </div>
-{%- endunless -%}
 {% schema %}
 {
   "name": "t:sections.video.name",
-  "tag": "section",
   "class": "section",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "default": "Video",
-      "label": "t:sections.video.settings.title.label"
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "t:sections.video.settings.subtitle.label"
-    },
-    {
       "type": "select",
-      "id": "heading_size",
+      "id": "grid_layout",
       "options": [
         {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
+          "value": "full_bleed",
+          "label": "t:sections.all.grid_layout.options_1.label"
         },
         {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
+          "value": "stretched_grid",
+          "label": "t:sections.all.grid_layout.options_2.label"
         },
         {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
+          "value": "grid",
+          "label": "t:sections.all.grid_layout.options_3.label"
         }
       ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "default": "grid",
+      "label": "t:sections.all.grid_layout.label"
     },
     {
       "type": "image_picker",
@@ -259,23 +355,146 @@
       "default": false
     },
     {
-      "type": "checkbox",
-      "id": "hide_when_empty_video",
-      "label": "t:sections.video.settings.hide_when_empty_video.label",
-      "info": "t:sections.video.settings.hide_when_empty_video.info",
-      "default": false
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.height.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.height.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.height.label"
     },
     {
-      "type": "checkbox",
-      "id": "enable_section_box_layout",
-      "label": "t:sections.all.enable_section_box_layout.label",
-      "default": false
+      "type": "select",
+      "id": "desktop_image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-with-text.settings.desktop_image_width.label",
+      "info": "t:sections.image-with-text.settings.desktop_image_width.info"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "middle",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "bottom",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "top",
+      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "content_layout",
+      "options": [
+        {
+          "value": "no-overlap",
+          "label": "t:sections.image-with-text.settings.content_layout.options__1.label"
+        },
+        {
+          "value": "overlap",
+          "label": "t:sections.image-with-text.settings.content_layout.options__2.label"
+        },
+        {
+          "value": "separate",
+          "label": "t:sections.image-with-text.settings.content_layout.options__3.label"
+        }
+      ],
+      "default": "no-overlap",
+      "label": "t:sections.image-with-text.settings.content_layout.label"
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
     },
     {
       "type": "header",
@@ -300,6 +519,92 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:settings_schema.colors.name"
+    },
+    {
+      "type": "color",
+      "id": "color_heading",
+      "default": "#000",
+      "label": "t:sections.image-with-text.blocks.heading.name"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_heading",
+      "label": "t:sections.image-with-text.settings.gradient_heading.label"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "default": "#000",
+      "label": "t:sections.image-with-text.blocks.text.name"
+    },
+    {
+      "type": "color",
+      "id": "color_highlight_text",
+      "default": "#DA2127",
+      "label": "t:sections.image-with-text.blocks.highlight_text.name"
+    },
+    {
+      "type": "color",
+      "id": "color_caption",
+      "default": "#000",
+      "label": "t:sections.image-with-text.blocks.caption.name"
+    },
+    {
+      "type": "color",
+      "id": "color_countdown",
+      "default": "#000",
+      "label": "t:sections.image-with-text.blocks.countdown.name"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "default": "#fff",
+      "label": "t:sections.image-with-text.settings.color_button_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button",
+      "default": "#000",
+      "label": "t:sections.image-with-text.settings.color_button.label",
+      "info": "t:sections.image-with-text.settings.color_button.info"
+    },
+    {
+      "type": "color",
+      "id": "background_container",
+      "default": "#fff",
+      "label": "t:sections.image-with-text.settings.background_container.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background_container",
+      "label": "t:sections.image-with-text.settings.gradient_background_container.label"
+    },
+    {
+      "type": "color",
+      "id": "background_section",
+      "default": "#fff",
+      "label": "t:sections.image-with-text.settings.background_section.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background_section",
+      "label": "t:sections.image-with-text.settings.gradient_background_section.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_section",
+      "label": "t:sections.all.background_image_section.label"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:sections.image-with-text.settings.overlay_color.label",
+      "info": "t:sections.image-with-text.settings.overlay_color.info",
+      "default": "#1E40AF"
     }
   ],
   "blocks": [
@@ -534,3 +839,34 @@
   ]
 }
 {% endschema %}
+
+<style>
+  .image-with-text__text--caption {
+  background: red;
+  color: #fff;
+  position: relative;
+  height: 40px;
+  margin-right: 40px;
+  padding: 12px 0 12px 10px;
+}
+.image-with-text__text--caption::after {
+  content: " ";
+  background: red;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 35px;
+  right: -34px;
+  -webkit-clip-path: polygon(0 0, 35px 0, 2px 100%, 0 100%);
+  clip-path: polygon(0 0, 35px 0, 2px 100%, 0 100%);
+}
+  .video-text-cols .video-section {
+        width: 100%;
+    }
+  @media (min-width: 750px){
+    .video-text-cols .video-section {
+        width: calc(50% - var(--grid-horizontal-spacing) / 2);
+    }
+  }
+</style>
+
