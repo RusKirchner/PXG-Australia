@@ -127,6 +127,9 @@
         "text_ngVeNK",
         "button_3fXKH4"
       ],
+      "custom_css": [
+        ".video-text-cols.image-with-text__grid.grid.grid--gapless.grid--1-col.grid--2-col-tablet {align-items: center;}"
+      ],
       "settings": {
         "grid_layout": "grid",
         "video_url": "https:\/\/player.vimeo.com\/video\/990786714?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
