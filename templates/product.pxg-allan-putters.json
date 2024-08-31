@@ -299,6 +299,9 @@
         "text_D7kKnE",
         "button_3dRfTk"
       ],
+      "custom_css": [
+        "h2.h1{font-weight: normal;}"
+      ],
       "settings": {
         "grid_layout": "grid",
         "cover_image": "shopify:\/\/shop_images\/1917248978-9efb3db44f21c346854c8f67b72fd0da7af8e7027568d4dd0bb71c84d62a6e35-d.jpg",
