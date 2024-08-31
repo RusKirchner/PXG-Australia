@@ -166,8 +166,8 @@
         "cover_image": "shopify:\/\/shop_images\/1917249035-eb2e761f8bfaf31524665753e7003ca887e85acd504e47a9c5122d78790ac5fd-d.jpg",
         "video_url": "https:\/\/player.vimeo.com\/video\/1000962580?muted=1&autoplay=1&autopause=0&controls=0&loop=1",
         "description": "",
-        "autoplay": false,
-        "enable_controls": false,
+        "autoplay": true,
+        "enable_controls": true,
         "enable_video_looping": true,
         "full_width": true,
         "height": "adapt",
@@ -182,16 +182,16 @@
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
         "color_countdown": "#ffffff",
-        "color_button_text": "#fff",
+        "color_button_text": "#ffffff",
         "color_button": "#ffffff",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "169699214611e587ad": {
