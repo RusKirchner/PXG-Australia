@@ -169,7 +169,7 @@
         "autoplay": true,
         "enable_controls": true,
         "enable_video_looping": true,
-        "full_width": true,
+        "full_width": false,
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
