@@ -1023,16 +1023,6 @@
             "block_text_color": "#000000"
           }
         },
-        "block_ajGcE4": {
-          "type": "block",
-          "settings": {
-            "block_heading": "TECHNOLOGY",
-            "block_text": "<p>S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point.<\/p>",
-            "block_background_color": "#ffffff",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        },
         "block_rWtEUL": {
           "type": "block",
           "settings": {
@@ -1052,13 +1042,46 @@
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
           }
+        },
+        "block_Yc6EyY": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Hollow.webp",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_TPiFVn": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>303 SS HOLLOW BODY CONSTRUCTION<\/strong><\/p><p>Made with 303 stainless steel and features a lightweight aluminum alignment aid and sole.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_LpEWpe": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction. <\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
         }
       },
       "block_order": [
         "block_DbEMgc",
-        "block_ajGcE4",
         "block_rWtEUL",
-        "block_kTdePh"
+        "block_kTdePh",
+        "block_Yc6EyY",
+        "block_TPiFVn",
+        "block_LpEWpe"
       ],
       "settings": {
         "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
