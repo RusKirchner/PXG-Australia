@@ -335,6 +335,90 @@
         "overlay_color": "#1e40af"
       }
     },
+    "three_col_with_img_txt_ArXX8x": {
+      "type": "three-col-with-img-txt",
+      "blocks": {
+        "block_DbEMgc": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-S-Hosel.webp",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_rWtEUL": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#f9f9f9",
+            "block_text_color": "#ffffff"
+          }
+        },
+        "block_kTdePh": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><strong>POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_Yc6EyY": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Hollow.webp",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_TPiFVn": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>303 SS HOLLOW BODY CONSTRUCTION<\/strong><\/p><p>Made with 303 stainless steel and features a lightweight aluminum alignment aid and sole.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_LpEWpe": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction.<\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "block_DbEMgc",
+        "block_rWtEUL",
+        "block_kTdePh",
+        "block_Yc6EyY",
+        "block_TPiFVn",
+        "block_LpEWpe"
+      ],
+      "settings": {
+        "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
+        "header-heading-1": "TECHNOLOGY",
+        "header-heading-2": "PLAYER BENEFITS",
+        "background_color": "#ffffff",
+        "heading_color": "#000000",
+        "background_color_header": "#eaeaea",
+        "text_color": "#000000"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -1008,90 +1092,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "three_col_with_img_txt_ArXX8x": {
-      "type": "three-col-with-img-txt",
-      "blocks": {
-        "block_DbEMgc": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-S-Hosel.webp",
-            "block_background_color": "#ffffff",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        },
-        "block_rWtEUL": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
-            "block_background_color": "#ffffff",
-            "block_heading_color": "#f9f9f9",
-            "block_text_color": "#ffffff"
-          }
-        },
-        "block_kTdePh": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><strong>POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
-            "block_background_color": "#ffffff",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        },
-        "block_Yc6EyY": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Hollow.webp",
-            "block_background_color": "#f8f8f8",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        },
-        "block_TPiFVn": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "<p><strong>303 SS HOLLOW BODY CONSTRUCTION<\/strong><\/p><p>Made with 303 stainless steel and features a lightweight aluminum alignment aid and sole.<\/p>",
-            "block_background_color": "#f8f8f8",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        },
-        "block_LpEWpe": {
-          "type": "block",
-          "settings": {
-            "block_heading": "",
-            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction.<\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
-            "block_background_color": "#f8f8f8",
-            "block_heading_color": "#000000",
-            "block_text_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "block_DbEMgc",
-        "block_rWtEUL",
-        "block_kTdePh",
-        "block_Yc6EyY",
-        "block_TPiFVn",
-        "block_LpEWpe"
-      ],
-      "settings": {
-        "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
-        "header-heading-1": "TECHNOLOGY",
-        "header-heading-2": "PLAYER BENEFITS",
-        "background_color": "#ffffff",
-        "heading_color": "#000000",
-        "background_color_header": "#eaeaea",
-        "text_color": "#000000"
-      }
     }
   },
   "order": [
@@ -1101,6 +1101,7 @@
     "video_with_text_t4nHcW",
     "video_with_text_left_XYDzQr",
     "video_with_text_8H4mHV",
+    "three_col_with_img_txt_ArXX8x",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
@@ -1114,7 +1115,6 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671",
-    "three_col_with_img_txt_ArXX8x"
+    "342fa470-7277-4291-be0f-d2979708f671"
   ]
 }
