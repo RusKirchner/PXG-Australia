@@ -461,6 +461,99 @@
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
           }
+        },
+        "block_zWj6TH": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Weighting.webp",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_zKLwjB": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>PRECISION WEIGHTING TECHNOLOGY<\/strong><\/p><p>Mass is redistributed to the perimeter, boosting Moment of Inertia (MOI).<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_3EWnHr": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>FORGIVENESS:<\/strong> Further fine-tuning during a fitting will ensure optimal launch conditions based on your stroke and preferences.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_wf66hx": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Face-Pattern.webp",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_yQ8ypG": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>REFINED PYRAMID FACE PATTERN<\/strong><\/p><p>The third iteration of our pyramid face structure boasts a more aggressive milling that improves ball roll characteristics regardless of impact location.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_NHjwdp": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>CONSISTENCY:<\/strong> Delivers a consistent sound and improved ball roll at impact.<\/p>",
+            "block_background_color": "#f8f8f8",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_qVhttn": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Pick-Up-Pocket.webp",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_fQ6K8C": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>PICK UP POCKET<\/strong><\/p><p>Specially designed feature on the putter sole that allows golfers to easily retrieve their ball without bending down.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_BpMTLD": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "<p><strong>CONVENIENCE:<\/strong>Reduces back strain by offering an ergonomic solution to collecting the ball.<\/p>",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
         }
       },
       "block_order": [
@@ -475,7 +568,16 @@
         "block_HtcqRK",
         "block_6T3cLw",
         "block_AeaBTP",
-        "block_taBC8i"
+        "block_taBC8i",
+        "block_zWj6TH",
+        "block_zKLwjB",
+        "block_3EWnHr",
+        "block_wf66hx",
+        "block_yQ8ypG",
+        "block_NHjwdp",
+        "block_qVhttn",
+        "block_fQ6K8C",
+        "block_BpMTLD"
       ],
       "settings": {
         "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
