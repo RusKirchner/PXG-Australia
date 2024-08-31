@@ -75,13 +75,13 @@
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#000000",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
+        "overlay_color": "#1f2428"
       }
     },
     "two_columns_videos_HrYXDa": {
