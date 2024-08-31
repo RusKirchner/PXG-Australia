@@ -70,6 +70,42 @@
           "default": "#000000"
         }
       ]
+    },
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_heading",
+          "label": "Text Block Heading",
+          "default": "Additional Information"
+        },
+        {
+          "type": "textarea",
+          "id": "text_content",
+          "label": "Text Block Content",
+          "default": "Details about additional technology benefits."
+        },
+        {
+          "type": "color",
+          "id": "text_block_background_color",
+          "label": "Text Block Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_block_heading_color",
+          "label": "Text Block Heading Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "text_block_content_color",
+          "label": "Text Block Content Color",
+          "default": "#000000"
+        }
+      ]
     }
   ],
   "presets": [
@@ -81,6 +117,7 @@
 }
 {% endschema %}
 
+
 <div style="background-color: {{ section.settings.background_color }}; padding: 40px 0;">
   <div class="container">
     <h2 style="text-align: center; color: {{ section.settings.heading_color }}; margin-bottom: 40px;">
@@ -88,17 +125,24 @@
     </h2>
     <div class="blocks-container">
       {% for block in section.blocks %}
-      <div class="block-item" style="background-color: {{ block.settings.block_background_color }};">
-        {% if block.settings.block_image %}
-        <div class="block-image-wrapper">
-          <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" class="block-image">
-        </div>
+        {% if block.type == 'block' %}
+          <div class="block-item" style="background-color: {{ block.settings.block_background_color }};">
+            {% if block.settings.block_image %}
+              <div class="block-image-wrapper">
+                <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" class="block-image">
+              </div>
+            {% endif %}
+            <div class="block-content">
+              <h3 style="color: {{ block.settings.block_heading_color }};">{{ block.settings.block_heading }}</h3>
+              <p style="color: {{ block.settings.block_text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
+            </div>
+          </div>
+        {% elsif block.type == 'text_block' %}
+          <div class="text-block-item" style="background-color: {{ block.settings.text_block_background_color }};">
+            <h3 style="color: {{ block.settings.text_block_heading_color }};">{{ block.settings.text_heading }}</h3>
+            <p style="color: {{ block.settings.text_block_content_color }}; white-space: pre-wrap;">{{ block.settings.text_content }}</p>
+          </div>
         {% endif %}
-        <div class="block-content">
-          <h3 style="color: {{ block.settings.block_heading_color }};">{{ block.settings.block_heading }}</h3>
-          <p style="color: {{ block.settings.block_text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
-        </div>
-      </div>
       {% endfor %}
     </div>
   </div>
@@ -130,23 +174,29 @@
   .block-content {
     text-align: left; /* Adjust alignment if needed */
   }
-
+  .text-block-item {
+    flex: 1 1 calc(50% - 20px); /* Adjust for spacing */
+    margin: 10px;
+    padding: 20px;
+    background-color: inherit;
+    border: 1px solid #e1e1e1; /* Optional: for better visual separation */
+  }
   @media (max-width: 768px) {
     .block-item {
       flex: 1 1 calc(50% - 20px); /* 2 blocks per row on tablets */
     }
+    .text-block-item {
+      flex: 1 1 100%; /* Full width on tablets */
+    }
   }
-  
   @media (max-width: 480px) {
     .block-item {
       flex: 1 1 100%; /* 1 block per row on mobile */
+    }
+    .text-block-item {
+      flex: 1 1 100%; /* Full width on mobile */
     }
   }
 </style>
 {% endstylesheet %}
 
-{% javascript %}
-<script>
-  // Add any necessary JavaScript here (optional)
-</script>
-{% endjavascript %}
