@@ -102,12 +102,31 @@
 
 {% stylesheet %}
 <style>
+  .blocks-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .block-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 blocks per row with margin */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .block-image {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
   @media (max-width: 768px) {
-    .container {
-      display: block;
+    .block-item {
+      flex: 1 1 calc(50% - 20px); /* 2 blocks per row on tablets */
     }
-    .container div {
-      margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    .block-item {
+      flex: 1 1 100%; /* 1 block per row on mobile */
     }
   }
 </style>
