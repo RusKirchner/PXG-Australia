@@ -1424,6 +1424,21 @@ div#infiniteoptions-container>div.grip {
     letter-spacing: normal;
 }
 
-
-/* PXG XTREME PREMIUM GOLF BALLS */
+.cstm-table h2 {
+    margin: 0;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.cstm-table .sticky-first-column table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.cstm-table .sticky-first-column table th, .cstm-table .sticky-first-column table td {
+    padding: 5px 10px;
+    min-width: 75px;
+}
+.cstm-table .sticky-first-column table tr:nth-child(2n+1) {
+    background: #3b3939;
+}
 
