@@ -13,19 +13,19 @@
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background Color",
+      "label": "Section Background Color",
       "default": "#f0f0f0"
     },
     {
       "type": "color",
       "id": "heading_color",
-      "label": "Heading Color",
+      "label": "Section Heading Color",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "Text Color",
+      "label": "Section Text Color",
       "default": "#000000"
     }
   ],
@@ -50,6 +50,24 @@
           "type": "image_picker",
           "id": "block_image",
           "label": "Block Image"
+        },
+        {
+          "type": "color",
+          "id": "block_background_color",
+          "label": "Block Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "block_heading_color",
+          "label": "Block Heading Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "block_text_color",
+          "label": "Block Text Color",
+          "default": "#000000"
         }
       ]
     }
@@ -70,12 +88,12 @@
     </h2>
     <div style="display: flex; justify-content: space-between;">
       {% for block in section.blocks %}
-      <div style="flex: 1; text-align: center; margin: 0 10px;">
+      <div style="flex: 1; text-align: center; margin: 0 10px; padding: 20px; background-color: {{ block.settings.block_background_color }};">
         {% if block.settings.block_image %}
         <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" style="max-width: 100px; margin-bottom: 20px;">
         {% endif %}
-        <h3 style="color: {{ section.settings.heading_color }};">{{ block.settings.block_heading }}</h3>
-        <p style="color: {{ section.settings.text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
+        <h3 style="color: {{ block.settings.block_heading_color }};">{{ block.settings.block_heading }}</h3>
+        <p style="color: {{ block.settings.block_text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
       </div>
       {% endfor %}
     </div>

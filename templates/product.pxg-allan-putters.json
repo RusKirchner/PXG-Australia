@@ -1008,6 +1008,44 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "three_col_with_img_txt_ArXX8x": {
+      "type": "three-col-with-img-txt",
+      "blocks": {
+        "block_DbEMgc": {
+          "type": "block",
+          "settings": {
+            "block_heading": "",
+            "block_text": "",
+            "block_image": "shopify:\/\/shop_images\/Allan-Icons-S-Hosel.webp"
+          }
+        },
+        "block_rWtEUL": {
+          "type": "block",
+          "settings": {
+            "block_heading": "TECHNOLOGY",
+            "block_text": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point."
+          }
+        },
+        "block_kTdePh": {
+          "type": "block",
+          "settings": {
+            "block_heading": "TECHNOLOGY",
+            "block_text": "S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point."
+          }
+        }
+      },
+      "block_order": [
+        "block_DbEMgc",
+        "block_rWtEUL",
+        "block_kTdePh"
+      ],
+      "settings": {
+        "section_heading": "PUTTER TECHNOLOGY THAT PERFORMS",
+        "background_color": "#ffffff",
+        "heading_color": "#000000",
+        "text_color": "#000000"
+      }
     }
   },
   "order": [
@@ -1030,6 +1068,7 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671"
+    "342fa470-7277-4291-be0f-d2979708f671",
+    "three_col_with_img_txt_ArXX8x"
   ]
 }
