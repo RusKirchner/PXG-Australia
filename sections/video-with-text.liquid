@@ -224,9 +224,10 @@
               allowfullscreen
               title="{{ section.settings.description | escape }}"
             ></iframe>
-    <button id="playPauseBtnVimeo1" class="play-pause-btn">Play</button>
+    
             {%- endif -%}
         {%- endif -%}  
+        <button id="playPauseBtnVimeo1" class="play-pause-btn">Play</button>
       </template>
     </{% if section.settings.video_hosted != nil or section.settings.video_url != nil %}deferred-media{% else %}div{% endif %}>
   </div>
