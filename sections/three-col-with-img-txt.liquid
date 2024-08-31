@@ -86,14 +86,18 @@
     <h2 style="text-align: center; color: {{ section.settings.heading_color }}; margin-bottom: 40px;">
       {{ section.settings.section_heading }}
     </h2>
-    <div style="display: flex; justify-content: space-between;">
+    <div class="blocks-container">
       {% for block in section.blocks %}
-      <div style="flex: 1; text-align: center; margin: 0 10px; padding: 20px; background-color: {{ block.settings.block_background_color }};">
+      <div class="block-item" style="background-color: {{ block.settings.block_background_color }};">
         {% if block.settings.block_image %}
-        <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" style="max-width: 100px; margin-bottom: 20px;">
+        <div class="block-image-wrapper">
+          <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_heading }}" class="block-image">
+        </div>
         {% endif %}
-        <h3 style="color: {{ block.settings.block_heading_color }};">{{ block.settings.block_heading }}</h3>
-        <p style="color: {{ block.settings.block_text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
+        <div class="block-content">
+          <h3 style="color: {{ block.settings.block_heading_color }};">{{ block.settings.block_heading }}</h3>
+          <p style="color: {{ block.settings.block_text_color }}; white-space: pre-wrap;">{{ block.settings.block_text }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -112,12 +116,21 @@
     margin: 10px;
     padding: 20px;
     text-align: center;
+    background-color: inherit;
+    border: 1px solid #e1e1e1; /* Optional: for better visual separation */
+  }
+  .block-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   .block-image {
     max-width: 100px;
-    margin-bottom: 20px;
   }
-  
+  .block-content {
+    text-align: left; /* Adjust alignment if needed */
+  }
+
   @media (max-width: 768px) {
     .block-item {
       flex: 1 1 calc(50% - 20px); /* 2 blocks per row on tablets */
