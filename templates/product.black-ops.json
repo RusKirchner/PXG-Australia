@@ -467,6 +467,9 @@
         "text_overlay_image_U4jcmX",
         "text_overlay_image_kGQ6EQ"
       ],
+      "custom_css": [
+        ".media img {background: #eaeaea;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
