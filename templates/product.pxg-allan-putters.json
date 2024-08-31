@@ -161,6 +161,9 @@
         "text_Pr6PYK",
         "button_3fG7dM"
       ],
+      "custom_css": [
+        "h2.h1 {font-weight: normal;}"
+      ],
       "settings": {
         "grid_layout": "grid",
         "cover_image": "shopify:\/\/shop_images\/1917249035-eb2e761f8bfaf31524665753e7003ca887e85acd504e47a9c5122d78790ac5fd-d.jpg",
@@ -182,7 +185,7 @@
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
-        "color_highlight_text": "#DA2127",
+        "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#ffffff",
         "color_button_text": "rgba(0,0,0,0)",
@@ -191,7 +194,7 @@
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "video_with_text_left_XYDzQr": {
@@ -214,6 +217,7 @@
         },
         "button_GzD48k": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -225,6 +229,9 @@
         "heading_h9fjQn",
         "text_ATtGU9",
         "button_GzD48k"
+      ],
+      "custom_css": [
+        "h2.h1{font-weight: normal;}"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -247,16 +254,16 @@
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
-        "color_highlight_text": "#DA2127",
+        "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#ffffff",
-        "color_button_text": "#fff",
+        "color_button_text": "#ffffff",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "169699214611e587ad": {
