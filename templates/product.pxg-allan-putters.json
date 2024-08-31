@@ -178,7 +178,7 @@
         "content_layout": "no-overlap",
         "mobile_content_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 0,
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
@@ -186,6 +186,71 @@
         "color_caption": "#ffffff",
         "color_countdown": "#ffffff",
         "color_button_text": "rgba(0,0,0,0)",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "video_with_text_left_XYDzQr": {
+      "type": "video-with-text-left",
+      "blocks": {
+        "heading_h9fjQn": {
+          "type": "heading",
+          "settings": {
+            "heading": "QUALITY FROM THE INSIDE OUT",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_ATtGU9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Allan Putter’s multi-material hollow body construction, injected S-COR polymer, Precision Weighting Technology, Refined Pyramid Face Pattern, and ultra-thin face combine to deliver the remarkable sound, feel, and consistency you expect from PXG.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_GzD48k": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_h9fjQn",
+        "text_ATtGU9",
+        "button_GzD48k"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "cover_image": "shopify:\/\/shop_images\/1917249491-743b4bb945f05d2a126a6babd8a018b9b2eaad42d32c64c3ea7f19bac35d181c-d.jpg",
+        "video_url": "https:\/\/player.vimeo.com\/video\/1000969031?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "#fff",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
@@ -874,6 +939,7 @@
     "two_columns_videos_HrYXDa",
     "video_with_heading_text_UbxfK9",
     "video_with_text_t4nHcW",
+    "video_with_text_left_XYDzQr",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
