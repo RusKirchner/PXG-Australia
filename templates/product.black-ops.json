@@ -314,6 +314,27 @@
         "overlay_color": "#1f2428"
       }
     },
+    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/0317-CB-Video-Banner.jpg",
+        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
+        "video_url": "",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "5f037c15-7714-4621-afad-1e999cc27872": {
       "type": "rich-text",
       "blocks": {
@@ -339,25 +360,128 @@
         "padding_bottom": 40
       }
     },
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
-      "type": "video",
+    "gallery_below_RkXVmF": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_dK6NPF": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-Launch-eComm-images-720x475-Dual-Cavity-Design_2.png",
+            "link": "",
+            "text": "The Dual Cavity Design is engineered to remove mass from the center of the club and redistribute that weight to the perimeter - significantly boosting MOI. The Weight Savings Insert on the outer cavity removes mass from the center of the club allowing the CG to be placed lower and farther back for maximum forgiveness. The inner cavity is filled with PXG’s industry leading XCOR2 Technology. This lightweight polymer helps reduce the mass from the core of the clubhead to dramatically increase MOI and forgiveness on both heel-toe, and on high-low mishits. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "DUAL CAVITY DESIGN",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_dKkcax": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_U4jcmX": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_kGQ6EQ": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_dK6NPF",
+        "text_overlay_image_dKkcax",
+        "text_overlay_image_U4jcmX",
+        "text_overlay_image_kGQ6EQ"
+      ],
       "settings": {
         "title": "",
-        "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/0317-CB-Video-Banner.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
-        "video_url": "",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": true,
-        "enable_video_looping": true,
-        "full_width": true,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2": {
@@ -929,8 +1053,9 @@
     "video_with_text_left_DqJGTK",
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
-    "5f037c15-7714-4621-afad-1e999cc27872",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
+    "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_RkXVmF",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
     "image_with_text_H8wzdC",
