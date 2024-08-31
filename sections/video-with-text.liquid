@@ -218,7 +218,7 @@
               ></iframe>
             {%- else -%}
             <iframe
-              src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}?enablejsapi=1&autoplay=1{{ loop }}"
+              src="{{ section.settings.video_url }}"
               class="js-vimeo global-settings-popup"
               allow="autoplay; encrypted-media"
               allowfullscreen
