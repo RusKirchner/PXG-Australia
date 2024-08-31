@@ -162,15 +162,36 @@
         "button_3fG7dM"
       ],
       "settings": {
+        "grid_layout": "grid",
         "cover_image": "shopify:\/\/shop_images\/1917249035-eb2e761f8bfaf31524665753e7003ca887e85acd504e47a9c5122d78790ac5fd-d.jpg",
         "video_url": "https:\/\/player.vimeo.com\/video\/1000962580?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
         "description": "",
         "autoplay": true,
         "enable_controls": true,
         "enable_video_looping": true,
-        "full_width": true,
+        "full_width": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "rgba(0,0,0,0)",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
       }
     },
     "169699214611e587ad": {
