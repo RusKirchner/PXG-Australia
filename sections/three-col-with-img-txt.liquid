@@ -1,6 +1,79 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Three Columns",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Column Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "This is a sample text for the column."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Columns",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
+
+<div class="three-columns-section">
+  <div class="grid grid--3-col">
+    {% for block in section.blocks %}
+      <div class="grid__item">
+        {% if block.settings.image %}
+          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.title }}">
+        {% endif %}
+        {% if block.settings.title %}
+          <h3>{{ block.settings.title }}</h3>
+        {% endif %}
+        {% if block.settings.text %}
+          <p>{{ block.settings.text }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.three-columns-section .grid {
+  display: flex;
+  justify-content: space-between;
+}
+.three-columns-section .grid__item {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+}
+.three-columns-section .grid__item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.three-columns-section .grid__item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.three-columns-section .grid__item p {
+  font-size: 14px;
+}
+</style>
