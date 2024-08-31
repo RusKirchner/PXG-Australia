@@ -1018,7 +1018,17 @@
             "block_heading": "",
             "block_text": "",
             "block_image": "shopify:\/\/shop_images\/Allan-Icons-S-Hosel.webp",
-            "block_background_color": "#080808",
+            "block_background_color": "#ffffff",
+            "block_heading_color": "#000000",
+            "block_text_color": "#000000"
+          }
+        },
+        "block_ajGcE4": {
+          "type": "block",
+          "settings": {
+            "block_heading": "TECHNOLOGY",
+            "block_text": "<p>S-HOSEL\nShaft axis is positioned just above the CG, creating a toe-up balance point.<\/p>",
+            "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
           }
@@ -1037,7 +1047,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
+            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><strong>﻿POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -1046,6 +1056,7 @@
       },
       "block_order": [
         "block_DbEMgc",
+        "block_ajGcE4",
         "block_rWtEUL",
         "block_kTdePh"
       ],
