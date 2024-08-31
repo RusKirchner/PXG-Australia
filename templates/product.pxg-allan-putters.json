@@ -167,7 +167,7 @@
         "video_url": "https:\/\/player.vimeo.com\/video\/1000962580",
         "description": "",
         "autoplay": true,
-        "enable_controls": false,
+        "enable_controls": true,
         "enable_video_looping": true,
         "full_width": true,
         "height": "adapt",
