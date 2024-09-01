@@ -1449,6 +1449,47 @@ div#infiniteoptions-container>div.grip {
     margin: 20px auto 0;
     text-align: center;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: 400;
+    width: 100%;
+}
+.table-dark {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+.table-dark.table-alternating-rows tr:first-of-type, .table-dark.table-alternating-rows tr:nth-child(odd) {
+    background-color: #47474c;
+}
+.table-dark.table-alternating-rows tr:first-of-type th, .table-dark.table-alternating-rows tr:nth-child(odd) th {
+    background-color: inherit;
+}
+.sticky-first-column .table-head:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #ff003b;
+}
+.table-dark th, .table-dark td {
+    font-weight: 400;
+    border: 0;
+    padding: 9px;
+}
+.sticky-first-column {
+    --_first-column-width: 230px;
+    --_min-column-width: 230px;
+    overflow-x: auto;
+}
+.sticky-first-column .table-head {
+    position: sticky;
+    left: 0;
+    width: var(--_first-column-width);
+      background: #000;
+}
 @media (max-width: 750px){
   .two-column-video {
         flex-direction: column;
