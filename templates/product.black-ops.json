@@ -335,15 +335,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_izaXEn": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN7 Iron Specs\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>20.5°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>23°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>26°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>30°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>34°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.100\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>39°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.075\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>44°<\/td>\n<td>35.75\"<\/td>\n<td>64°<\/td>\n<td>.050\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>49°<\/td>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>.040\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<\/tbody><\/table><\/div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "5f037c15-7714-4621-afad-1e999cc27872": {
       "type": "rich-text",
       "blocks": {
@@ -499,6 +490,255 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_izaXEn": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN7 Iron Specs\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>20.5°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>23°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>26°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>30°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>34°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.100\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>39°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.075\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>44°<\/td>\n<td>35.75\"<\/td>\n<td>64°<\/td>\n<td>.050\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>49°<\/td>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>.040\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<\/tbody><\/table><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_ryVna3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Nnh4Pn": {
+          "type": "heading",
+          "settings": {
+            "heading": "VISIT ONE OF OUR 200+ LOCATIONSFOR THE ULTIMATE FITTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_mhpyNk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Book a golf club fitting at a PXG location near you, and experience PXG’s game-changing golf club technology including NEW GEN7 Irons, Black Ops Irons and Sugar Daddy III Wedges. Better golf is just a swing away.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_enqRmr": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nnh4Pn",
+        "text_mhpyNk",
+        "button_enqRmr"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/ECOM-1170-Promo-Fitting.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "gallery_Ap9AGM": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_Kjy7fB": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-1000x668-Lifestyle-04.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_VBPDe7": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-1000x668-Lifestyle-02.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_TGKKmA": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-1000x668-Lifestyle-03.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_w7aKJ8": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-1000x668-Lifestyle-01.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_Kjy7fB",
+        "text_overlay_image_VBPDe7",
+        "text_overlay_image_TGKKmA",
+        "text_overlay_image_w7aKJ8"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_j8DeTb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KTTdRD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_qTYpJp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. If you need us, give Sales & Support a call at<a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG<\/a>to get on the books.<\/p>"
+          }
+        },
+        "button_bWxpjw": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KTTdRD",
+        "text_qTYpJp",
+        "button_bWxpjw"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2": {
       "type": "rich-text",
       "blocks": {
@@ -569,6 +809,7 @@
         "3cf4db0b-b14f-44c3-99fe-02fda89e0c69",
         "3520fd1d-c884-44df-a166-56f243dd1cc1"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text img {object-fit: contain;}"
       ],
@@ -577,7 +818,7 @@
         "image": "shopify:\/\/shop_images\/0311-XP-GEN6-Iron-All-Chrome-Beauty-Shot-Angle.png-4000x3361-c38c18a.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -646,6 +887,7 @@
         "text_hhDMhc",
         "button_hDTTKY"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/MRCH-7-New-XP-Irons-CDP-All-Chrome-720x475-Precision-Weighting-Chrome_1.png",
@@ -1069,9 +1311,12 @@
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
-    "custom_liquid_izaXEn",
     "5f037c15-7714-4621-afad-1e999cc27872",
     "gallery_below_RkXVmF",
+    "custom_liquid_izaXEn",
+    "image_with_text_ryVna3",
+    "gallery_Ap9AGM",
+    "rich_text_j8DeTb",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
     "image_with_text_H8wzdC",
