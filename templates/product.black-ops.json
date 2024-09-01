@@ -1126,33 +1126,27 @@
         "title": {
           "type": "title",
           "settings": {
-            "show_vendor_link": false,
-            "title_size": "h2"
+            "show_vendor_link": false
           }
         },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "disabled": true,
           "settings": {
-            "show_if_no_reviews": true
           }
         },
         "price": {
           "type": "price",
           "settings": {
-            "variant_price": false
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
           "type": "description",
           "settings": {
-            "truncate_description": 0,
-            "read_more_button": "Read more"
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
-          "disabled": true,
           "settings": {
             "show_free_shipping_bar": false,
             "enable_compare": false,
@@ -1242,15 +1236,12 @@
         "enable_sticky_cart": false,
         "show_next_prev_products": false,
         "enable_shopify_reviews_app_css": false,
-        "auto_scroll_up_mobile": false,
-        "default_image": "product_featured_image",
         "media_position": "left",
         "gallery_layout": "thumbnail",
         "thumbnail_position": "left",
         "media_size": "small",
         "image_ratio": "adapt",
         "image_fit": false,
-        "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",
         "hide_variants": false,
         "enable_video_looping": false,
