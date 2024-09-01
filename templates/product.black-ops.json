@@ -335,6 +335,15 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_izaXEn": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0317 Milled Blade Specs\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset (inches)\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">3 (CB)<\/th>\n<td>21°<\/td>\n<td>39.5\"<\/td>\n<td>60.5°<\/td>\n<td>.135\"<\/td>\n<td>4°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4 (CB)<\/th>\n<td>24°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.120\"<\/td>\n<td>5°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>27°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.105\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>30°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.090\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>33°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.075\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>37°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.060\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>42°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.045\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>46°<\/td>\n<td>35.75\"<\/td>\n<td>64°<\/td>\n<td>.030\"<\/td>\n<td>14°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>50°<\/td>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>.020\"<\/td>\n<td>14°<\/td>\n<\/tr>\n<\/tbody><\/table><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "5f037c15-7714-4621-afad-1e999cc27872": {
       "type": "rich-text",
       "blocks": {
@@ -1052,15 +1061,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "custom_liquid_izaXEn": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0317 Milled Blade Specs\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset (inches)\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">3 (CB)<\/th>\n<td>21°<\/td>\n<td>39.5\"<\/td>\n<td>60.5°<\/td>\n<td>.135\"<\/td>\n<td>4°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4 (CB)<\/th>\n<td>24°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.120\"<\/td>\n<td>5°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>27°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.105\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>30°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.090\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>33°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.075\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>37°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.060\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>42°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.045\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>46°<\/td>\n<td>35.75\"<\/td>\n<td>64°<\/td>\n<td>.030\"<\/td>\n<td>14°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>50°<\/td>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>.020\"<\/td>\n<td>14°<\/td>\n<\/tr>\n<\/tbody><\/table><\/div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -1069,6 +1069,7 @@
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
+    "custom_liquid_izaXEn",
     "5f037c15-7714-4621-afad-1e999cc27872",
     "gallery_below_RkXVmF",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
@@ -1079,7 +1080,6 @@
     "6c728f20-a922-40f0-bee5-f86687bddb68",
     "main",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671",
-    "custom_liquid_izaXEn"
+    "342fa470-7277-4291-be0f-d2979708f671"
   ]
 }
