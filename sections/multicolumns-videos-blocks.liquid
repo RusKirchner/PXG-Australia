@@ -43,6 +43,26 @@
           "label": "Text"
         },
         {
+          "type": "select",
+          "id": "video_type",
+          "label": "Video Type",
+          "options": [
+            {
+              "value": "youtube",
+              "label": "YouTube"
+            },
+            {
+              "value": "vimeo",
+              "label": "Vimeo"
+            },
+            {
+              "value": "self_hosted",
+              "label": "Self-Hosted"
+            }
+          ],
+          "default": "youtube"
+        },
+        {
           "type": "url",
           "id": "video_url",
           "label": "Video URL"
@@ -76,7 +96,16 @@
       <div class="video-block">
         <h3>{{ block.settings.title }}</h3>
         <div class="video-wrapper">
-          <iframe src="{{ block.settings.video_url }}" frameborder="0" allowfullscreen></iframe>
+          {% if block.settings.video_type == 'youtube' %}
+            <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url | split: 'v=' | last }}" frameborder="0" allowfullscreen></iframe>
+          {% elsif block.settings.video_type == 'vimeo' %}
+            <iframe src="https://player.vimeo.com/video/{{ block.settings.video_url | split: '/' | last }}" frameborder="0" allowfullscreen></iframe>
+          {% elsif block.settings.video_type == 'self_hosted' %}
+            <video controls>
+              <source src="{{ block.settings.video_url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          {% endif %}
         </div>
         <p>{{ block.settings.description }}</p>
         {% if block.settings.button_text %}
@@ -125,7 +154,8 @@
   overflow: hidden;
 }
 
-.multi-column-video-blocks .video-wrapper iframe {
+.multi-column-video-blocks .video-wrapper iframe,
+.multi-column-video-blocks .video-wrapper video {
   position: absolute;
   top: 0;
   left: 0;
