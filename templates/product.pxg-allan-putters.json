@@ -595,7 +595,7 @@
     "custom_liquid_bfWzXt": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"cstm-table page-width grid-component-container\" bis_skin_checked=\"1\">\n<div class=\"text-center text-lg-center pt-5 pb-5\" bis_skin_checked=\"1\">\n<h2 class=\"header-output default prohibition display-5 theme-override-color_black\">\nALLAN PUTTER SPECS\n<\/h2>\n<\/div>\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-1 align-left border-no \" bis_skin_checked=\"1\">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:24;\" class=\"grid\" bis_skin_checked=\"1\"><div class=\"item\" bis_skin_checked=\"1\">\n<div id=\"cta3421f5831cb86abfef8ebc6fcc\" class=\"grid-item-container  mobile-hero\" style=\"--_background:#F9F9F9; --_mobileColumnSpan: 24;align-self: normal;\" bis_skin_checked=\"1\">\n<div class=\"experience-region experience-components\" bis_skin_checked=\"1\"><div class=\"experience-component experience-commerce_assets-table\" bis_skin_checked=\"1\">\n<div class=\"component-table bg-medium\" id=\"27237baae591bfcab627182e87\" style=\"--_background:#F9F9F9\" bis_skin_checked=\"1\">\n<div class=\"container px-lg-6\" bis_skin_checked=\"1\">\n<div class=\"sticky-first-column\" bis_skin_checked=\"1\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\n<b>STOCK WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MIN HEAD WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MAX HEAD WEIGHT <\/b>\n<\/th>\n<th scope=\"col\">\n<b> LOFT*<\/b>\n<\/th>\n<th scope=\"col\">\n<b> LIE <\/b>\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">375g<\/th>\n<td>360g<\/td>\n<td>395g<\/td>\n<td>5°<\/td>\n<td>70°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><div class=\"experience-component experience-commerce_layouts-grid\" bis_skin_checked=\"1\">\n<div class=\" bg-light\" bis_skin_checked=\"1\">\n<div class=\" container grid-component-container\" bis_skin_checked=\"1\">\n<div class=\"pd-layout-grid bars-none width-Inset default-cols-1 align-left border-no \" bis_skin_checked=\"1\">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:24;\" class=\"grid\" bis_skin_checked=\"1\"><div class=\"item\" bis_skin_checked=\"1\">\n<div class=\"pl-0 pr-0 pt-3 pb-5 ml-auto mr-auto mt-0 mb-0 text-left text-lg-center color_black\" bis_skin_checked=\"1\">\n<p style=\"width: 100%; max-width: 900px;\"><em>*The S-hosel naturally positions the hands in a forward press relative to the face, counterbalancing the onset hosel and enabling the putter to perform like a standard 3° loft setup.<\/em><\/p>\n<\/div><\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div class=\"cstm-table page-width grid-component-container\" bis_skin_checked=\"1\">\n<div class=\"text-center text-lg-center pt-5 pb-5\" bis_skin_checked=\"1\">\n<h2 class=\"header-output default prohibition display-5 theme-override-color_black\">\nALLAN PUTTER SPECS\n<\/h2>\n<\/div>\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-1 align-left border-no \" bis_skin_checked=\"1\">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:24;\" class=\"grid\" bis_skin_checked=\"1\"><div class=\"item\" bis_skin_checked=\"1\">\n<div id=\"cta3421f5831cb86abfef8ebc6fcc\" class=\"grid-item-container  mobile-hero\" style=\"--_background:#F9F9F9; --_mobileColumnSpan: 24;align-self: normal;\" bis_skin_checked=\"1\">\n<div class=\"experience-region experience-components\" bis_skin_checked=\"1\"><div class=\"experience-component experience-commerce_assets-table\" bis_skin_checked=\"1\">\n<div class=\"component-table bg-medium\" id=\"27237baae591bfcab627182e87\" style=\"--_background:#F9F9F9\" bis_skin_checked=\"1\">\n<div class=\"container px-lg-6\" bis_skin_checked=\"1\">\n<div class=\"sticky-first-column\" bis_skin_checked=\"1\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\n<b>STOCK WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MIN HEAD WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MAX HEAD WEIGHT <\/b>\n<\/th>\n<th scope=\"col\">\n<b> LOFT*<\/b>\n<\/th>\n<th scope=\"col\">\n<b> LIE <\/b>\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">375g<\/th>\n<td>360g<\/td>\n<td>395g<\/td>\n<td>5°<\/td>\n<td>70°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><div class=\"experience-component experience-commerce_layouts-grid\" bis_skin_checked=\"1\">\n<div class=\" bg-light\" bis_skin_checked=\"1\">\n<div class=\" container grid-component-container\" bis_skin_checked=\"1\">\n<div class=\"pd-layout-grid bars-none width-Inset default-cols-1 align-left border-no \" bis_skin_checked=\"1\">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:24;\" class=\"grid\" bis_skin_checked=\"1\"><div class=\"item\" bis_skin_checked=\"1\">\n<div class=\"pl-0 pr-0 pt-3 pb-5 ml-auto mr-auto mt-0 mb-0 text-left text-lg-center color_black\" bis_skin_checked=\"1\">\n<p style=\"width: 100%; max-width: 900px;\"><em>*The S-hosel naturally positions the hands in a forward press relative to the face, counterbalancing the onset hosel and enabling the putter to perform like a standard 3° loft setup.<\/em><\/p>\n<\/div><\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -622,11 +622,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -648,11 +648,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -674,11 +674,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         }
