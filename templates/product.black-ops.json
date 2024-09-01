@@ -682,7 +682,7 @@
         "flexible_columns_layout": "carousel",
         "columns_desktop": 2,
         "columns_tablet": "3",
-        "full_width": false,
+        "full_width": true,
         "auto_fit": false,
         "disable_item_space": false,
         "enable_section_box_layout": false,
