@@ -9,6 +9,82 @@
 */
 {
   "sections": {
+    "image_with_text_LWLdcy": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_Vjqiae": {
+          "type": "caption",
+          "settings": {
+            "caption": "New",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "heading_tzihU3": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_yyVNG4": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p>The new PXG Allan Putter puts the laws of physics to work for you with Zero Torque Balance Technology that keeps your putter face square and on target, and is amazingly effective for players of all abilities and all stroke types. Packaged in an eye-catching design with incredible balance and alignment characteristics, and our back-saving new Pick-Up Pocket, PXG’s new Allan Putter performs so well, it feels like magic.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_3XwUR9": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_Vjqiae",
+        "heading_tzihU3",
+        "text_yyVNG4",
+        "button_3XwUR9"
+      ],
+      "custom_css": [
+        ".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/ECOM-3017-SDIII-900x900-Marquee-BP.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#fdfdfd",
+        "color_countdown": "#ffffff",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -685,6 +761,7 @@
     }
   },
   "order": [
+    "image_with_text_LWLdcy",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
