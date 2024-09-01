@@ -1,0 +1,135 @@
+{% schema %}
+{
+  "name": "Multi-Column Video Blocks",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Background 3"
+        },
+        {
+          "value": "background-4",
+          "label": "Background 4"
+        }
+      ],
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_block",
+      "name": "Video Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi-Column Video Blocks",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="multi-column-video-blocks {{ section.settings.color_scheme }}">
+  <div class="grid">
+    {% for block in section.blocks %}
+    <div class="grid__item medium-up--one-third">
+      <div class="video-block">
+        <h3>{{ block.settings.title }}</h3>
+        <div class="video-wrapper">
+          <iframe src="{{ block.settings.video_url }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>{{ block.settings.description }}</p>
+        {% if block.settings.button_text %}
+        <a href="{{ block.settings.button_url }}" class="btn">{{ block.settings.button_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.multi-column-video-blocks.background-1 {
+  background-color: #f8f8f8; /* Example color for Background 1 */
+  color: #333;
+}
+
+.multi-column-video-blocks.background-2 {
+  background-color: #ffffff; /* Example color for Background 2 */
+  color: #333;
+}
+
+.multi-column-video-blocks.background-3 {
+  background-color: #000000; /* Example color for Background 3 */
+  color: #ffffff;
+}
+
+.multi-column-video-blocks.background-4 {
+  background-color: #333333; /* Example color for Background 4 */
+  color: #ffffff;
+}
+
+.multi-column-video-blocks .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.multi-column-video-blocks .grid__item {
+  padding: 15px;
+}
+
+.multi-column-video-blocks .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.multi-column-video-blocks .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
