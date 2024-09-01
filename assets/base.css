@@ -1517,5 +1517,9 @@ table {
   .table-dark th, .table-dark td {
     min-width: 120px;
   }
+  .cc-normal-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
