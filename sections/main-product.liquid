@@ -260,6 +260,9 @@
                           {%- endif -%}
                           <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}">
                             {%- render 'main-product-quantity-selector', product: product, block: block -%}
+                            {% if product.tags contains 'retail only' %}
+                              <a href="/apps/store-locator" target="_blank" class="button"><span>Find Stockist</span></a>
+                            {% else %}
                             <button
                               type="submit"
                               name="add"
@@ -281,6 +284,7 @@
                             {%- if show_dynamic_checkout -%}
                               {{ form | payment_button }}
                             {%- endif -%}
+                            {% endif %}
                           </div>
                         {%- endform -%}
                       </product-form> 
