@@ -836,6 +836,7 @@
         },
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
           "type": "information_group",
+          "disabled": true,
           "settings": {
             "brand_enable": false,
             "brand_label": "Brand",
