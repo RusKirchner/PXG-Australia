@@ -179,6 +179,73 @@
         "padding_bottom": 0
       }
     },
+    "multicolumns_videos_blocks_b73Ggw": {
+      "type": "multicolumns-videos-blocks",
+      "blocks": {
+        "video_block_qy9GfJ": {
+          "type": "video_block",
+          "settings": {
+            "block_background_color": "rgba(0,0,0,0)",
+            "title": "BP-Grind 360°",
+            "title_color": "#ffffff",
+            "description": "Designed for lush turf and soft sand conditions or golfers with a steeper attack angle, the BP-Grind features a high toe design with full face grooves and a wider sole with slight taper from heel to toe, delivering additional bounce and maximum forgiveness.",
+            "description_color": "#ffffff",
+            "video_type": "vimeo",
+            "video_url": "https:\/\/player.vimeo.com\/video\/995541190?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+            "button_text": "",
+            "button_url": "#",
+            "button_background_color": "#da2127",
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#fdfcfc",
+            "button_text_color_hover": "#da2127"
+          }
+        },
+        "video_block_XGQeJ4": {
+          "type": "video_block",
+          "settings": {
+            "block_background_color": "rgba(0,0,0,0)",
+            "title": "S-GRIND 360°",
+            "title_color": "#ffffff",
+            "description": "Designed for versatility across all playing conditions, the S-Grind features a classic head shape and grooves with a traditional sole tapering in width from heel to toe, delivering moderate bounce for versatility in square or open playing positions.",
+            "description_color": "#ffffff",
+            "video_type": "vimeo",
+            "video_url": "https:\/\/player.vimeo.com\/video\/995541172?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+            "button_text": "",
+            "button_url": "#",
+            "button_background_color": "#da2127",
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#da2127"
+          }
+        },
+        "video_block_cpjhpp": {
+          "type": "video_block",
+          "settings": {
+            "block_background_color": "rgba(0,0,0,0)",
+            "title": "C-GRIND 360°",
+            "title_color": "#ffffff",
+            "description": "Designed to perform in firm turf conditions, the C-Grind features a classic head shape and grooves with a narrow sole and aggressive taper from heel to toe, delivering lower bounce and greater versatility. Ideal for skilled golfers hitting creative shots around the green.",
+            "description_color": "#ffffff",
+            "video_type": "vimeo",
+            "video_url": "https:\/\/player.vimeo.com\/video\/995541154?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+            "button_text": "",
+            "button_url": "#",
+            "button_background_color": "#da2127",
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#da2127"
+          }
+        }
+      },
+      "block_order": [
+        "video_block_qy9GfJ",
+        "video_block_XGQeJ4",
+        "video_block_cpjhpp"
+      ],
+      "settings": {
+        "section_background_color": "#000000"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -852,79 +919,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumns_videos_blocks_b73Ggw": {
-      "type": "multicolumns-videos-blocks",
-      "blocks": {
-        "video_block_qy9GfJ": {
-          "type": "video_block",
-          "settings": {
-            "block_background_color": "rgba(0,0,0,0)",
-            "title": "BP-Grind 360°",
-            "title_color": "#ffffff",
-            "description": "Designed for lush turf and soft sand conditions or golfers with a steeper attack angle, the BP-Grind features a high toe design with full face grooves and a wider sole with slight taper from heel to toe, delivering additional bounce and maximum forgiveness.",
-            "description_color": "#ffffff",
-            "video_type": "vimeo",
-            "video_url": "https:\/\/player.vimeo.com\/video\/995541190?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
-            "button_text": "",
-            "button_url": "#",
-            "button_background_color": "#da2127",
-            "button_background_color_hover": "#fff",
-            "button_text_color": "#fdfcfc",
-            "button_text_color_hover": "#da2127"
-          }
-        },
-        "video_block_XGQeJ4": {
-          "type": "video_block",
-          "settings": {
-            "block_background_color": "rgba(0,0,0,0)",
-            "title": "S-GRIND 360°",
-            "title_color": "#ffffff",
-            "description": "Designed for versatility across all playing conditions, the S-Grind features a classic head shape and grooves with a traditional sole tapering in width from heel to toe, delivering moderate bounce for versatility in square or open playing positions.",
-            "description_color": "#ffffff",
-            "video_type": "vimeo",
-            "video_url": "https:\/\/player.vimeo.com\/video\/995541172?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
-            "button_text": "",
-            "button_url": "#",
-            "button_background_color": "#da2127",
-            "button_background_color_hover": "#fff",
-            "button_text_color": "#ffffff",
-            "button_text_color_hover": "#da2127"
-          }
-        },
-        "video_block_cpjhpp": {
-          "type": "video_block",
-          "settings": {
-            "block_background_color": "rgba(0,0,0,0)",
-            "title": "C-GRIND 360°",
-            "title_color": "#ffffff",
-            "description": "Designed to perform in firm turf conditions, the C-Grind features a classic head shape and grooves with a narrow sole and aggressive taper from heel to toe, delivering lower bounce and greater versatility. Ideal for skilled golfers hitting creative shots around the green.",
-            "description_color": "#ffffff",
-            "video_type": "vimeo",
-            "video_url": "https:\/\/player.vimeo.com\/video\/995541154?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
-            "button_text": "",
-            "button_url": "#",
-            "button_background_color": "#da2127",
-            "button_background_color_hover": "#fff",
-            "button_text_color": "#ffffff",
-            "button_text_color_hover": "#da2127"
-          }
-        }
-      },
-      "block_order": [
-        "video_block_qy9GfJ",
-        "video_block_XGQeJ4",
-        "video_block_cpjhpp"
-      ],
-      "settings": {
-        "section_background_color": "#000000"
-      }
     }
   },
   "order": [
     "image_with_text_LWLdcy",
     "image_with_text_MM3R3x",
     "video_GL8Uxn",
+    "multicolumns_videos_blocks_b73Ggw",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
@@ -938,7 +939,6 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671",
-    "multicolumns_videos_blocks_b73Ggw"
+    "342fa470-7277-4291-be0f-d2979708f671"
   ]
 }
