@@ -90,6 +90,7 @@
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
+        "background_image_section": "shopify:\/\/shop_images\/BOI-2100x700_1.jpg",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
       }
