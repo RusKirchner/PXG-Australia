@@ -85,8 +85,20 @@
         },
         {
           "type": "color",
+          "id": "button_background_color_hover",
+          "label": "Button Background Color Hover",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
           "id": "button_text_color",
           "label": "Button Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color_hover",
+          "label": "Button Text Color Hover",
           "default": "#ffffff"
         }
       ]
@@ -138,6 +150,49 @@
 </div>
 
 <style>
+  .multi-column-video-blocks .video-block h3 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.video-block-btn {
+    width: 100%;
+    font-size: calc(var(--font-button-scale)* 1.4rem);
+    line-height: calc(1 + 0.2 / var(--font-button-scale));
+    font-family: 'proxima_novabold' !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
+    gap: 1rem;
+    border: 1px solid;
+    position: relative;
+    border-radius: 4px;
+}
+
+.video-block-btn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  --background-color: {{ block.settings.button_background_color_hover }};
+    transition: top .5s cubic-bezier(.03,.93,.97,1);
+    border-radius: 3px;
+}
+
+.video-block-btn:hover::before {
+    top: 0;
+}
+.video-block-btn:hover {
+   --color: {{ block.settings.button_background_color }};
+  }
 .multi-column-video-blocks .grid {
   display: flex;
   flex-wrap: wrap;
