@@ -62,7 +62,7 @@
         "0ea6b4b7-686a-4763-960a-fecb082fd37f"
       ],
       "custom_css": [
-        ".image-with-text {background: radial-gradient(500px at left, #263038, #070707) !important;}"
+
       ],
       "settings": {
         "grid_layout": "full_bleed",
