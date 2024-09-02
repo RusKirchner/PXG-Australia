@@ -1159,13 +1159,13 @@
             "show_free_shipping_bar": false,
             "enable_compare": false,
             "picker_type": "button",
-            "enable_color_swatches": true,
+            "enable_color_swatches": false,
             "color_swatches_style": "custom",
             "size_chart_enable": false,
             "size_chart_option": "size",
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
-            "quantity_selector_enable": true,
+            "quantity_selector_enable": false,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
