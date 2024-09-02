@@ -248,6 +248,143 @@
         "padding_bottom": 20
       }
     },
+    "image_with_text_dkwCBN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pExVde": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_qJRwqk": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>BP GRIND<\/strong><\/p><p><strong>﻿HIGH-TOE DESIGN WITH FULL FACE GROOVES<\/strong> <\/p><p><br\/><\/p><p>The expertly crafted BP-12 grind, available on the 54\/56\/58\/60* offerings, features a High Toe Design with Full Face Grooves which are exclusive to the BP-12. The High Toe Design works to position the CG in-line with open face shots, delivering greater impact consistency and fine-tuned forgiveness.  <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_gLCJLj": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pExVde",
+        "text_qJRwqk",
+        "button_gLCJLj"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/ECOM-3017-SDIII-600x600-SOLE-DESIGN-BP.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#fdfdfd",
+        "color_countdown": "#ffffff",
+        "color_button_text": "#fff",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_yJCjwQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_c3DLHb": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_pF3BCD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>C-07 & S-10 GRIND<\/strong><\/p><p><strong>﻿CLASSIC SHAPE WITH TRADITIONAL GROOVES<\/strong> <\/p><p><br\/><\/p><p>The beautifully modern C-07 & S-10 grinds, available in 50\/52\/54\/56\/58\/60* offerings, features a classic head shape with precision milled grooves in a traditional groove pattern. A traditional shape and look, with all the tech only the PXG Sugar Daddy III wedges can deliver. <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_37rVeP": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c3DLHb",
+        "text_pF3BCD",
+        "button_37rVeP"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/ECOM-3017-SDIII-600x600-SOLE-DESIGN-C_S-Grind.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "#fff",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "custom_liquid_WY3bW8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 SUGAR DADDY III WEDGE SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nLoft\n<\/th>\n<th scope=\"col\">\nLength (inches)\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nSole Design\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">50°<\/th>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>S10<\/td>\n<td>0.050\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">52°<\/th>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>S10<\/td>\n<td>0.045\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">54°<\/th>\n<td>35.25\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12<\/td>\n<td>0.040\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">56°<\/th>\n<td>35.25\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12<\/td>\n<td>0.035\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">58°<\/th>\n<td>35\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12 \/ C07<\/td>\n<td>0.030\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">60°<\/th>\n<td>35\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12 \/ C07<\/td>\n<td>0.025\"<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -928,6 +1065,9 @@
     "image_with_text_MM3R3x",
     "video_GL8Uxn",
     "multicolumns_videos_blocks_b73Ggw",
+    "image_with_text_dkwCBN",
+    "image_with_text_yJCjwQ",
+    "custom_liquid_WY3bW8",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
