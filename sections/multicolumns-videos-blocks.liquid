@@ -3,10 +3,10 @@
   "name": "Multi-Column Video Blocks",
   "settings": [
     {
-      "type": "color_scheme",
-      "id": "section_color_scheme",
-      "label": "Section Color Scheme",
-      "default": "background-1"
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
     }
   ],
   "blocks": [
@@ -15,10 +15,10 @@
       "name": "Video Block",
       "settings": [
         {
-          "type": "color_scheme",
-          "id": "block_color_scheme",
-          "label": "Block Color Scheme",
-          "default": "background-2"
+          "type": "color",
+          "id": "block_background_color",
+          "label": "Block Background Color",
+          "default": "#f8f8f8"
         },
         {
           "type": "text",
@@ -26,21 +26,21 @@
           "label": "Title"
         },
         {
-          "type": "color_scheme",
-          "id": "title_color_scheme",
-          "label": "Title Color Scheme",
-          "default": "background-3"
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
         },
         {
           "type": "textarea",
           "id": "description",
-          "label": "Text"
+          "label": "Description"
         },
         {
-          "type": "color_scheme",
-          "id": "description_color_scheme",
-          "label": "Text Color Scheme",
-          "default": "background-4"
+          "type": "color",
+          "id": "description_color",
+          "label": "Description Color",
+          "default": "#333333"
         },
         {
           "type": "select",
@@ -78,10 +78,16 @@
           "label": "Button URL"
         },
         {
-          "type": "color_scheme",
-          "id": "button_color_scheme",
-          "label": "Button Color Scheme",
-          "default": "background-1"
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#ffffff"
         }
       ]
     }
@@ -95,12 +101,12 @@
 }
 {% endschema %}
 
-<div class="multi-column-video-blocks {{ section.settings.section_color_scheme }}">
+<div class="multi-column-video-blocks" style="background-color: {{ section.settings.section_background_color }};">
   <div class="grid">
     {% for block in section.blocks %}
-    <div class="grid__item medium-up--one-third {{ block.settings.block_color_scheme }}">
+    <div class="grid__item medium-up--one-third" style="background-color: {{ block.settings.block_background_color }};">
       <div class="video-block">
-        <h3 class="{{ block.settings.title_color_scheme }}">{{ block.settings.title }}</h3>
+        <h3 style="color: {{ block.settings.title_color }};">{{ block.settings.title }}</h3>
         <div class="video-wrapper">
           {% if block.settings.video_type == 'youtube' %}
             <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url | split: 'v=' | last }}" frameborder="0" allowfullscreen></iframe>
@@ -113,9 +119,9 @@
             </video>
           {% endif %}
         </div>
-        <p class="{{ block.settings.description_color_scheme }}">{{ block.settings.description }}</p>
+        <p style="color: {{ block.settings.description_color }};">{{ block.settings.description }}</p>
         {% if block.settings.button_text %}
-        <a href="{{ block.settings.button_url }}" class="btn {{ block.settings.button_color_scheme }}">{{ block.settings.button_text }}</a>
+        <a href="{{ block.settings.button_url }}" class="btn" style="background-color: {{ block.settings.button_background_color }}; color: {{ block.settings.button_text_color }};">{{ block.settings.button_text }}</a>
         {% endif %}
       </div>
     </div>
@@ -124,10 +130,6 @@
 </div>
 
 <style>
-.multi-column-video-blocks {
-  padding: 20px;
-}
-
 .multi-column-video-blocks .grid {
   display: flex;
   flex-wrap: wrap;
@@ -156,6 +158,6 @@
 .multi-column-video-blocks h3,
 .multi-column-video-blocks p,
 .multi-column-video-blocks .btn {
-  color: inherit; /* Inherit the color from the assigned color scheme */
+  color: inherit; /* Inherit the color if not explicitly set */
 }
 </style>
