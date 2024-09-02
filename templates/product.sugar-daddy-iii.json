@@ -869,7 +869,9 @@
             "button_text": "Build My BP-Grind Wedges",
             "button_url": "#",
             "button_background_color": "#da2127",
-            "button_text_color": "#fdfcfc"
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#fdfcfc",
+            "button_text_color_hover": "#ffffff"
           }
         },
         "video_block_XGQeJ4": {
@@ -885,7 +887,9 @@
             "button_text": "Build My S-Grind Wedges",
             "button_url": "#",
             "button_background_color": "#da2127",
-            "button_text_color": "#ffffff"
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#ffffff"
           }
         },
         "video_block_cpjhpp": {
@@ -901,7 +905,9 @@
             "button_text": "Build My C-Grind Wedges",
             "button_url": "#",
             "button_background_color": "#da2127",
-            "button_text_color": "#ffffff"
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#da2127"
           }
         }
       },
