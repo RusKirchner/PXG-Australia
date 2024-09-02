@@ -32,7 +32,7 @@
         "text_yyVNG4": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p>The new PXG Allan Putter puts the laws of physics to work for you with Zero Torque Balance Technology that keeps your putter face square and on target, and is amazingly effective for players of all abilities and all stroke types. Packaged in an eye-catching design with incredible balance and alignment characteristics, and our back-saving new Pick-Up Pocket, PXG’s new Allan Putter performs so well, it feels like magic.<\/p>",
+            "text": "<h1>{{ product.title }}<\/h1><p><\/p>",
             "text_style": "body"
           }
         },
