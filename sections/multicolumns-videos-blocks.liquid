@@ -160,6 +160,7 @@
       background-color: {{ block.settings.button_background_color }};
       color: {{ block.settings.button_text_color }};
       transition: background-color 0.3s ease, color 0.3s ease;
+      border: 1px solid {{ block.settings.button_background_color }};
     }
 
     #block-{{ block.id }} .video-block-btn:hover {
@@ -184,7 +185,7 @@
     -webkit-appearance: none;
     appearance: none;
     gap: 1rem;
-    border: 1px solid {{ settings.button_background_color }};
+    z-index: 99;
     position: relative;
     border-radius: 4px;
 }
@@ -196,9 +197,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-  --background-color: {{ settings.button_background_color_hover }};
     transition: top .5s cubic-bezier(.03,.93,.97,1);
     border-radius: 3px;
+    z-index: -1;
 }
 
 .video-block-btn:hover::before {
