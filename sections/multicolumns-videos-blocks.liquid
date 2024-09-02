@@ -163,8 +163,10 @@
     }
 
     #block-{{ block.id }} .video-block-btn:hover {
-      background-color: {{ block.settings.button_background_color_hover }};
       color: {{ block.settings.button_text_color_hover }};
+    }
+    #block-{{ block.id }} .video-block-btn:hover::before {
+      background-color: {{ block.settings.button_background_color_hover }};
     }
   {% endfor %}
 
