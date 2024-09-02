@@ -814,6 +814,26 @@
           "text_message_error": "#981c1b",
           "background_message_error": "#fef2f2"
         }
+      },
+      "scheme-facb2c8c-560e-4814-a0f2-b98c40be1706": {
+        "settings": {
+          "text": "#ed4747",
+          "sale_off_price": "#da2127",
+          "compare_at_price": "#9e9e9e",
+          "background": "#000000",
+          "gradient_background": "",
+          "background_input": "#171717",
+          "solid_button_label_primary": "#ffffff",
+          "solid_button_background_primary": "#da2127",
+          "review_stars": "#929292",
+          "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(163, 163, 163, 1) 0.05%, rgba(230, 230, 230, 1) 99.95%)",
+          "text_message_success": "#166534",
+          "background_message_success": "#effdf4",
+          "text_message_warning": "#a06207",
+          "background_message_warning": "#fefce8",
+          "text_message_error": "#981c1b",
+          "background_message_error": "#fef2f2"
+        }
       }
     }
   },
