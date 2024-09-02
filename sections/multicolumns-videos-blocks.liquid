@@ -102,7 +102,8 @@
 {% endschema %}
 
 <div class="multi-column-video-blocks" style="background-color: {{ section.settings.section_background_color }};">
-  <div class="grid grid--3-col-desktop grid--2-col-tablet grid--2-col">
+  <div class="page-width">
+    <div class="grid grid--3-col-desktop grid--2-col-tablet grid--2-col">
     {% for block in section.blocks %}
     <div class="grid__item" style="background-color: {{ block.settings.block_background_color }};">
       <div class="video-block">
@@ -132,6 +133,7 @@
       </div>
     </div>
     {% endfor %}
+  </div>
   </div>
 </div>
 
