@@ -381,7 +381,7 @@
       "settings": {
         "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 SUGAR DADDY III WEDGE SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nLoft\n<\/th>\n<th scope=\"col\">\nLength (inches)\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nSole Design\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">50°<\/th>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>S10<\/td>\n<td>0.050\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">52°<\/th>\n<td>35.5\"<\/td>\n<td>64°<\/td>\n<td>S10<\/td>\n<td>0.045\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">54°<\/th>\n<td>35.25\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12<\/td>\n<td>0.040\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">56°<\/th>\n<td>35.25\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12<\/td>\n<td>0.035\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">58°<\/th>\n<td>35\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12 \/ C07<\/td>\n<td>0.030\"<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">60°<\/th>\n<td>35\"<\/td>\n<td>64°<\/td>\n<td>S10 \/ BP12 \/ C07<\/td>\n<td>0.025\"<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 4,
         "padding_bottom": 52
       }
     },
