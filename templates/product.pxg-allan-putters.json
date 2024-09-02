@@ -707,51 +707,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_6ALMp7": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_8aYQFx": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2>",
-            "heading_size": "h1"
-          }
-        },
-        "text_U3aYkD": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. If you need us, give Sales & Support a call at<a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG<\/a>to get on the books.<\/p>"
-          }
-        },
-        "button_WrwJbT": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8aYQFx",
-        "text_U3aYkD",
-        "button_WrwJbT"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -1438,7 +1393,6 @@
     "three_col_with_img_txt_ArXX8x",
     "custom_liquid_bfWzXt",
     "gallery_cbBkmC",
-    "rich_text_6ALMp7",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
