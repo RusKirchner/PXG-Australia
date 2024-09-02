@@ -859,46 +859,49 @@
         "video_block_qy9GfJ": {
           "type": "video_block",
           "settings": {
-            "block_color_scheme": "background-2",
+            "block_background_color": "rgba(0,0,0,0)",
             "title": "BP-Grind 360°",
-            "title_color_scheme": "scheme-facb2c8c-560e-4814-a0f2-b98c40be1706",
-            "description": "",
-            "description_color_scheme": "background-4",
+            "title_color": "#ff0e0e",
+            "description": "asdasdasdasdadsad",
+            "description_color": "#8f3c3c",
             "video_type": "youtube",
             "video_url": "",
             "button_text": "",
             "button_url": "",
-            "button_color_scheme": "background-1"
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff"
           }
         },
         "video_block_XGQeJ4": {
           "type": "video_block",
           "settings": {
-            "block_color_scheme": "background-2",
+            "block_background_color": "#f8f8f8",
             "title": "",
-            "title_color_scheme": "background-3",
+            "title_color": "#000000",
             "description": "",
-            "description_color_scheme": "background-4",
+            "description_color": "#333333",
             "video_type": "youtube",
             "video_url": "",
             "button_text": "",
             "button_url": "",
-            "button_color_scheme": "background-1"
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff"
           }
         },
         "video_block_cpjhpp": {
           "type": "video_block",
           "settings": {
-            "block_color_scheme": "background-2",
+            "block_background_color": "#f8f8f8",
             "title": "",
-            "title_color_scheme": "background-3",
+            "title_color": "#000000",
             "description": "",
-            "description_color_scheme": "background-4",
+            "description_color": "#333333",
             "video_type": "youtube",
             "video_url": "",
             "button_text": "",
             "button_url": "",
-            "button_color_scheme": "background-1"
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff"
           }
         }
       },
@@ -908,7 +911,7 @@
         "video_block_cpjhpp"
       ],
       "settings": {
-        "section_color_scheme": ""
+        "section_background_color": "#000000"
       }
     }
   },
