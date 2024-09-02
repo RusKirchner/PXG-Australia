@@ -85,6 +85,79 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_with_text_MM3R3x": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_RTiJcg": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "New",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "heading_fCbmMX": {
+          "type": "heading",
+          "settings": {
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_aDXzxN": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>INTRODUCING NEW PXG SUGAR DADDY III WEDGES<\/h2><p>Artfully engineered for versatility, customization, and insane accuracy across all playing conditions. PXG 0311 Sugar Daddy III Wedges are 3X forged, 100% CNC milled, and feature three innovative sole designs to allow players to find their perfect fit while experiencing the quality and precision only PXG can deliver.  <\/p><p> <\/p><p>Available right and left-handed in both Chrome and Xtreme Dark finish. <\/p><p><strong>Features<\/strong><\/p><ul><li>Three sole options for optimal performance<\/li><li>Full face grooves on BP-Grind offerings<\/li><li>Traditional and high toe design options available<\/li><li>Precision weighting technology<\/li><li>3x Forged and 100% CNC Milled<\/li><\/ul><p><\/p><p><strong>Benefits<\/strong><\/p><ul><li>Versatility<\/li><li>Outstanding <\/li><li>ControlCustomization<\/li><li>Innovative Adjustability<\/li><li>Unmatched Precision<\/li><\/ul><p><\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_yGgrYj": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_RTiJcg",
+        "heading_fCbmMX",
+        "text_aDXzxN",
+        "button_yGgrYj"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/ECOM-3017-SDIII-600x600-Hero.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -762,6 +835,7 @@
   },
   "order": [
     "image_with_text_LWLdcy",
+    "image_with_text_MM3R3x",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
