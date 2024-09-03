@@ -14,14 +14,23 @@
       "blocks": {
         "events_calendar_by_inlightlabs_events_calendar_8Q7iDQ": {
           "type": "shopify:\/\/apps\/events-calendar-by-inlightlabs\/blocks\/events_calendar\/a530ea14-68f3-4f19-9c8c-f160cac39310",
+          "disabled": true,
           "settings": {
             "selected_calendar": "proj_tgw3HCvimkMrBHxuiGsT8",
             "element_type": "calendar"
           }
+        },
+        "cowlendar_booking_app_section_BrNJMK": {
+          "type": "shopify:\/\/apps\/cowlendar-booking\/blocks\/app-section\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
+          "settings": {
+            "section_title": "Up Coming Fitting Days",
+            "section_type": "services-list"
+          }
         }
       },
       "block_order": [
-        "events_calendar_by_inlightlabs_events_calendar_8Q7iDQ"
+        "events_calendar_by_inlightlabs_events_calendar_8Q7iDQ",
+        "cowlendar_booking_app_section_BrNJMK"
       ],
       "settings": {
         "include_margins": true
@@ -40,6 +49,7 @@
     },
     "custom_liquid_BP6iqq": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
 
       ],
