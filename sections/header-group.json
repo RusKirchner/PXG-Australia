@@ -442,6 +442,26 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_RT6R8N": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "BATTLE READY II",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "BATTLE READY II",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/pages\/battle-ready-ii",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_iyeKNC": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -594,6 +614,7 @@
         "mega_menu_promotion_zkcb6n",
         "mega_menu_promotion_QJq3HR",
         "mega_menu_promotion_kEaeND",
+        "mega_menu_promotion_RT6R8N",
         "mega_menu_promotion_iyeKNC",
         "mega_menu_promotion_GF4cwC",
         "mega_menu_promotion_EhniBp",
