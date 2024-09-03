@@ -66,7 +66,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/PXGM-12965-Black-Ops-Irons-900x900-Marquee.webp",
+        "image": "shopify:\/\/shop_images\/Black-Ops-7-Iron-Chrome-Beauty-Shot-Straight-1200x1200-d7052e1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -91,7 +91,7 @@
         "background_section": "#000000",
         "gradient_background_section": "",
         "background_image_section": "shopify:\/\/shop_images\/BOI-2100x700_1.jpg",
-        "enable_parallax_scrolling_effect": true,
+        "enable_parallax_scrolling_effect": false,
         "overlay_color": "#1f2428"
       }
     },
