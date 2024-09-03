@@ -505,6 +505,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_QBiAx9": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "PUTTERS",
+            "title": "PXG ALLAN PUTTER",
+            "image": "shopify:\/\/shop_images\/1500x1500-Marquee-Test_1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "PXG ALLAN PUTTER",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/pxg-allan-putter",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
         "5252ef1e-142a-4211-a789-f6ff8a260759": {
           "type": "customer_supported_region",
           "disabled": true,
@@ -576,6 +597,7 @@
         "mega_menu_promotion_iyeKNC",
         "mega_menu_promotion_GF4cwC",
         "mega_menu_promotion_EhniBp",
+        "mega_menu_promotion_QBiAx9",
         "5252ef1e-142a-4211-a789-f6ff8a260759",
         "9bf78d9d-b1d6-4dd0-babd-7b7c55595e6f"
       ],
