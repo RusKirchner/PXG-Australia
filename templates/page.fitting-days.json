@@ -32,6 +32,10 @@
         "events_calendar_by_inlightlabs_events_calendar_8Q7iDQ",
         "cowlendar_booking_app_section_BrNJMK"
       ],
+      "custom_css": [
+        "h1 {letter-spacing: normal; font-weight: normal;}",
+        "h3 {letter-spacing: normal;}"
+      ],
       "settings": {
         "include_margins": true
       }
