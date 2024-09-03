@@ -168,6 +168,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_U3FFNw": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "PXG Black Ops Irons",
+            "image": "shopify:\/\/shop_images\/Black-Ops-7-Iron-Chrome-Beauty-Shot-Straight-1200x1200-d7052e1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "PXG Black Ops Irons",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify:\/\/products\/black-ops-irons",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_YwgeKB": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -539,6 +560,7 @@
         "8663e306-8501-41a8-8c29-ead0b01f8f4b",
         "6b602273-4e7f-4b5d-935b-323328a00159",
         "mega_menu_promotion_LnKk8x",
+        "mega_menu_promotion_U3FFNw",
         "mega_menu_promotion_YwgeKB",
         "d27aeefe-d0f5-4e65-955c-1005b7d69439",
         "mega_menu_promotion_VpCyFM",
