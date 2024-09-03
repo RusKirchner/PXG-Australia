@@ -447,6 +447,7 @@
           "settings": {
             "trigger": "PUTTERS",
             "title": "BATTLE READY II",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-03_at_5.03.11_PM.png",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "BATTLE READY II",
@@ -458,7 +459,7 @@
             "link": "shopify:\/\/pages\/battle-ready-ii",
             "position": "first",
             "overlay_text_enable": false,
-            "overlay_opacity": 50,
+            "overlay_opacity": 0,
             "color_scheme": "inverse"
           }
         },
