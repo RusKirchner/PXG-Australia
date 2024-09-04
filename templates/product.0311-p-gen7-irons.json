@@ -433,6 +433,80 @@
         "padding_bottom": 52
       }
     },
+    "multicolumn_xKM9tJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wKKNKJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0311_P.png",
+            "icon": "check",
+            "title": "",
+            "text": "<h4>AVAILABLE IRONS<\/h4><p>4, 5, 6, 7, 8, 9, W, G<\/p><h4>CLUB PROFILE<\/h4><p>Midsize head with moderate amount of offset designed for low to mid handicap players<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_xFbP6W": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0311_xp.png",
+            "icon": "check",
+            "title": "",
+            "text": "<h4>AVAILABLE IRONS<\/h4><p>4, 5, 6, 7, 8, 9, W, G, S, L<\/p><h4>CLUB PROFILE<\/h4><p>Larger size head with additional offset designed for mid to high handicap players<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#390e0e",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wKKNKJ",
+        "column_xFbP6W"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -1115,6 +1189,7 @@
     "rich_text_epBMRV",
     "gallery_below_wLVC6G",
     "custom_liquid_JYG9Et",
+    "multicolumn_xKM9tJ",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
