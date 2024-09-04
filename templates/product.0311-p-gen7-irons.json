@@ -83,6 +83,71 @@
         "overlay_color": "#1f2428"
       }
     },
+    "video_with_text_left_NqxWDW": {
+      "type": "video-with-text-left",
+      "blocks": {
+        "heading_CyDL3D": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE BEST OF EVERYTHING",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_9rjnRp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>10 years in the making, new PXG 0311 P GEN7 Irons are the greatest leap forward in irons technology and performance in PXG history. Our GEN7 P (Players) model provides a soft, responsive feel, and the ideal balance of workability and forgiveness for low to mid-handicap players. GEN7 P Irons offer moderate offset in a mid-size head design, max out C.O.R. to the USGA limit, and feature our patented new QuantumCOR technology, new Titanium Bezel Technology, and the thinnest face in golf.<\/p><p><br\/><\/p><p>Experience groundbreaking new levels of feel, forgiveness, speed, and distance with new PXG 0311 P GEN7 Irons.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_BFxG6K": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CyDL3D",
+        "text_9rjnRp",
+        "button_BFxG6K"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "video_url": "https:\/\/player.vimeo.com\/video\/990785479?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#fff9f9",
+        "color_countdown": "#ffffff",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -760,6 +825,7 @@
   },
   "order": [
     "image_with_text_PP77iG",
+    "video_with_text_left_NqxWDW",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
