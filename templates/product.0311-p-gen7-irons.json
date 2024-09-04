@@ -168,6 +168,158 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_epBMRV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LXtXYx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LXtXYx"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gallery_below_wLVC6G": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_ghVdQa": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-13044-GEN7-P-Irons-CDPs-720x475-Proprietary-Core-Material.webp",
+            "link": "",
+            "text": "10 years in the making, PXG's extremely lightweight new proprietary core material - QuantumCOR - helps reduce the mass of the core which enables more weight to be positioned low and to the perimeter of the backside of the clubhead, dramatically increasing MOI. Combined with PXG’s variable ultrathin face technology, this enhances the COR to the USGA limit for extreme face deflection and incredible ball speed. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "NEW QuantumCOR Technology",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_KBdg3p": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-13044-GEN7-P-Irons-CDPs-720x475-Variable-Ultra-Thin-Face.webp",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN7 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050” (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary core material, GEN7 Irons deliver a C.O.R. performance that pushes the USGA limit, helping increase distance and forgiveness while also enhancing sound and feel. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Variable Ultra-Thin Maraging Steel Face",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_tz3gmK": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-13044-GEN7-P-Irons-CDPs-720x475-Power-Channel-Technology.webp",
+            "link": "",
+            "text": "Power Channel Technology is the proprietary U-shaped corridor built into the internal surface of the club face to increase deflection and bend in the top sector. The channel creates face movement and transfers energy to simultaneously increase launch angle, trajectory, and ball speed. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "POWER CHANNEL TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_Benjdn": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PXGM-13044-GEN7-P-Irons-CDPs-720x475-Titanium-Insert.webp",
+            "link": "",
+            "text": "A lightweight titanium insert, used to provide housing for the Precision Weighting Technology, removes mass from the center of the club in order to redistribute weight to the perimeter to boost MOI. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "TITANIUM BEZEL TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_ghVdQa",
+        "text_overlay_image_KBdg3p",
+        "text_overlay_image_tz3gmK",
+        "text_overlay_image_Benjdn"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -847,6 +999,8 @@
     "image_with_text_PP77iG",
     "video_with_text_left_NqxWDW",
     "video_Kw7mKr",
+    "rich_text_epBMRV",
+    "gallery_below_wLVC6G",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
