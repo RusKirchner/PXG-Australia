@@ -1490,6 +1490,9 @@ table {
     width: var(--_first-column-width);
       background: #000;
 }
+h3.predictive-search__heading.caption {
+    letter-spacing: normal;
+}
 @media (max-width: 750px){
   .two-column-video {
         flex-direction: column;
