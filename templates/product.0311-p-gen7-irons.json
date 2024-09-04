@@ -9,6 +9,80 @@
 */
 {
   "sections": {
+    "image_with_text_PP77iG": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_AVQ74t": {
+          "type": "caption",
+          "settings": {
+            "caption": "New",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "heading_UYW9iX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_9PnjTy": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“I SHOT MY LOWEST SCORE OF THE YEAR MY FIRST TIME OUT IN A COMPETITIVE ROUND WITH THE PXG 0311 P GEN7 IRONS, AND DROPPED MY HANDICAP BY TWO OVER THE FOLLOWING COUPLE OF WEEKS.”<\/strong><\/p><p>—@PluggedInGolf<br\/><\/p><p><strong>“DISPERSION IS TIGHTER. FRANKLY, I THINK THAT MATTERS MORE THAN THE DISTANCE GAINS..”<\/strong><\/p><p>—MyGolfSpy <br\/><\/p><p><strong>\"GEN7 P IRONS HIT THE TRIFECTA WITH MORE DISTANCE, TIGHTER DISPERSION, AND GREATER FORGIVENESS AND REALLY LEAVE YOU WANTING FOR NOTHING.\"<\/strong><\/p><p><strong>—<\/strong>Pete Pappas<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_9QaQ44": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_AVQ74t",
+        "heading_UYW9iX",
+        "text_9PnjTy",
+        "button_9QaQ44"
+      ],
+      "settings": {
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/GEN7-900x900-P-Chrome_539a19bc-5129-4cd5-b3bf-8fde55df0d7f.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "rgba(0,0,0,0)",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "background_image_section": "shopify:\/\/shop_images\/GEN7-2100x700.jpg",
+        "enable_parallax_scrolling_effect": false,
+        "overlay_color": "#1f2428"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -685,6 +759,7 @@
     }
   },
   "order": [
+    "image_with_text_PP77iG",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
