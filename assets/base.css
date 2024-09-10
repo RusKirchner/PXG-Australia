@@ -1537,3 +1537,7 @@ h3.predictive-search__heading.caption {
 #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-category-options-container.multiple .option .cpb-option .cpb-option-type-multiple-inner {
 padding: 2px 5px !important;
 }
+#product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-img img, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-img span.cpb-option-type-color-bg, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-color img, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-color span.cpb-option-type-color-bg, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-percentage img, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-percentage span.cpb-option-type-color-bg {
+    height: auto !important;
+    width: 120px !important;
+}
