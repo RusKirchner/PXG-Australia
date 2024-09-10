@@ -1541,3 +1541,9 @@ padding: 2px 5px !important;
     height: auto !important;
     width: 120px !important;
 }
+#product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-img, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-color, #product-builder .cpb-theme-provider.aloha .cpb-layout:not(.cpb-is-admin) .cpb-option.cpb-option-type-percentage {
+    
+    width: 120px !important;
+    height: auto !important;
+    
+}
