@@ -31,7 +31,7 @@
         "cpb_custom_product_builder_customproductbuilder_dawn_dK369J": {
           "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
-            "personalize_it": true,
+            "personalize_it": false,
             "personalizeit-button-text": "Start Your Custom Build",
             "builder-version": "",
             "builder-server": ""
