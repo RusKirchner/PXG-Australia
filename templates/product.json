@@ -21,13 +21,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "show_vendor_link": false,
-            "title_size": "h2"
-          }
-        },
         "cpb_custom_product_builder_customproductbuilder_dawn_dK369J": {
           "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
@@ -35,6 +28,13 @@
             "personalizeit-button-text": "Start Your Custom Build",
             "builder-version": "",
             "builder-server": ""
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": false,
+            "title_size": "h2"
           }
         },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
@@ -121,8 +121,8 @@
         }
       },
       "block_order": [
-        "title",
         "cpb_custom_product_builder_customproductbuilder_dawn_dK369J",
+        "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
