@@ -11,20 +11,6 @@
   "sections": {
     "169699214611e587ad": {
       "type": "apps",
-      "blocks": {
-        "cpb_custom_product_builder_customproductbuilder_dawn_ByajGN": {
-          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
-          "settings": {
-            "personalize_it": false,
-            "personalizeit-button-text": "Personalize & Add To Cart",
-            "builder-version": "",
-            "builder-server": ""
-          }
-        }
-      },
-      "block_order": [
-        "cpb_custom_product_builder_customproductbuilder_dawn_ByajGN"
-      ],
       "custom_css": [
         ".cpb-root {background: white; color: black;}"
       ],
@@ -35,6 +21,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "cpb_custom_product_builder_customproductbuilder_dawn_AE73nR": {
+          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "settings": {
+            "personalize_it": false,
+            "personalizeit-button-text": "Personalize & Add To Cart",
+            "builder-version": "",
+            "builder-server": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -126,6 +121,7 @@
         }
       },
       "block_order": [
+        "cpb_custom_product_builder_customproductbuilder_dawn_AE73nR",
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
