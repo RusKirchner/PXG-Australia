@@ -1,0 +1,263 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "image_with_text_Xb8JJw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LHFbVU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_jLU4Fr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XyYpyN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LHFbVU",
+        "text_jLU4Fr",
+        "button_XyYpyN"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": false,
+            "title_size": "h2"
+          }
+        },
+        "2525f94e-add4-418e-b362-bd2bb35545fa": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_if_no_reviews": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "variant_price": false
+          }
+        },
+        "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
+        "e592d434-8377-4309-b179-f98d4b3742a2": {
+          "type": "sale_box",
+          "settings": {
+            "show_free_shipping_bar": false,
+            "enable_compare": false,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "custom",
+            "size_chart_enable": false,
+            "size_chart_option": "size",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
+            "quantity_selector_enable": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        },
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
+          "type": "information_group",
+          "settings": {
+            "brand_enable": false,
+            "brand_label": "Brand",
+            "stock_enable": true,
+            "stock_label": "Availability",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true,
+            "sku_enable": true,
+            "sku_label": "SKU",
+            "tags_enable": false,
+            "tags_label": "Tags",
+            "collections_enable": true,
+            "collections_label": "Collections"
+          }
+        },
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Complementary products",
+            "make_collapsible_row": true,
+            "icon": "appliances",
+            "product_list_limit": 3,
+            "total_enable": true,
+            "total_label": "Total:",
+            "button_enable": true,
+            "button_label": "Add items to cart",
+            "image_ratio": "square"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "price",
+        "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
+        "e592d434-8377-4309-b179-f98d4b3742a2",
+        "share",
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "use_background_input": true,
+        "enable_sticky_info": true,
+        "enable_sticky_cart": false,
+        "show_next_prev_products": false,
+        "enable_shopify_reviews_app_css": false,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider_vertical",
+        "thumbnail_position": "left",
+        "media_size": "small",
+        "image_ratio": "adapt",
+        "image_fit": false,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "169699214611e587ad": {
+      "type": "apps",
+      "blocks": {
+        "cowlendar_booking_app_section_8BUjmV": {
+          "type": "shopify:\/\/apps\/cowlendar-booking\/blocks\/app-section\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
+          "settings": {
+            "section_title": "Book Now",
+            "section_type": "services-list"
+          }
+        }
+      },
+      "block_order": [
+        "cowlendar_booking_app_section_8BUjmV"
+      ],
+      "custom_css": [
+        ".cpb-root {background: white; color: black;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [
+        ".card__inner {background: #ffffff;}",
+        ".card__content {text-align: center;}",
+        ".card-information {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Products",
+        "subtitle": "Recommended",
+        "heading_size": "h0",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "image_with_text_Xb8JJw",
+    "main",
+    "169699214611e587ad",
+    "product-recommendations"
+  ]
+}
