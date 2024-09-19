@@ -15,7 +15,7 @@
         "heading_zmz8rx": {
           "type": "heading",
           "settings": {
-            "heading": "PXG Custom Club Fittings",
+            "heading": "{{ product.title }}",
             "size": "h0"
           }
         },
@@ -76,6 +76,7 @@
       "blocks": {
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "show_vendor_link": false,
             "title_size": "h2"
