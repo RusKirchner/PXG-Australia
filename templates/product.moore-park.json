@@ -9,6 +9,68 @@
 */
 {
   "sections": {
+    "image_banner_N3PtAJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_zmz8rx": {
+          "type": "heading",
+          "settings": {
+            "heading": "PXG Custom Club Fittings",
+            "size": "h0"
+          }
+        },
+        "text_cCiGLG": {
+          "type": "text",
+          "settings": {
+            "text": "The Fastest Way to Lower Your ScoreBook a golf club fitting at a PXG location near you, and experience PXG’s game-changing golf club technology, our premium shaft matrix, and the best club fitters in the business. Better golf is just a swing away.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zmz8rx",
+        "text_cCiGLG"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/rqgc.jpg",
+        "image_overlay_opacity": 70,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -193,6 +255,7 @@
     }
   },
   "order": [
+    "image_banner_N3PtAJ",
     "main",
     "169699214611e587ad",
     "product-recommendations"
