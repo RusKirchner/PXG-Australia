@@ -682,6 +682,108 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_jMqE83": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/1923565051-980044bddc757ffa16796225f72561deaf5ca84aee5d94459f577f1c7f3b3d9b-d.jpg",
+        "video_hosted": "shopify://files/videos/New PXG Xtreme Tour and Tour X Golf Balls_720p.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_WqXGkD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yEAarG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>FIND YOUR FIT</h1>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yEAarG"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "video_with_text_left_LmQ9xW": {
+      "type": "video-with-text-left",
+      "blocks": {
+        "heading_NrNyCE": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHICH BALL SHOULD YOU PLAY?",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_4yxCDn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PXG Xtreme Tour & Tour X Golf Balls bring performance to the limit with incredible distance, feel, and stopping power on every shot from every condition. Featuring a thinner more durable urethane cover and an expanded core for the ultimate in tour-level quality and performance for every player. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NrNyCE",
+        "text_4yxCDn"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "cover_image": "shopify://shop_images/1923850669-c3fcd8a89dc16877b45242e7d84a1aebf6b5681fbfdb8a30562856e458caebd6-d.jpg",
+        "video_url": "https://player.vimeo.com/video/1006797150?controls=0&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
+      }
     }
   },
   "order": [
@@ -698,6 +800,9 @@
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "product-recommendations",
-    "342fa470-7277-4291-be0f-d2979708f671"
+    "342fa470-7277-4291-be0f-d2979708f671",
+    "video_jMqE83",
+    "rich_text_WqXGkD",
+    "video_with_text_left_LmQ9xW"
   ]
 }
