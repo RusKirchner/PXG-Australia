@@ -637,38 +637,6 @@
         "padding_bottom": 28
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "custom_css": [
-        ".card__inner {background: #ffffff;}",
-        ".card__content {text-align: center;}",
-        ".card-information {text-align: center;}"
-      ],
-      "settings": {
-        "title": "Products",
-        "subtitle": "Recommended",
-        "heading_size": "h0",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "inverse",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": false,
-        "enable_compare": false,
-        "enable_quick_view": false,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 40
-      }
-    },
     "342fa470-7277-4291-be0f-d2979708f671": {
       "type": "page",
       "disabled": true,
@@ -792,6 +760,38 @@
         "alt_text": "Performance comparison of golf balls",
         "image_width": 100,
         "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [
+        ".card__inner {background: #ffffff;}",
+        ".card__content {text-align: center;}",
+        ".card-information {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Products",
+        "subtitle": "Recommended",
+        "heading_size": "h0",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
         "padding_bottom": 40
       }
     },
@@ -968,12 +968,12 @@
     "6c728f20-a922-40f0-bee5-f86687bddb68",
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
-    "product-recommendations",
     "342fa470-7277-4291-be0f-d2979708f671",
     "video_AyHAa9",
     "rich_text_wyB6AE",
     "video_with_text_left_gFFQwX",
     "single_image_Udq6gG",
-    "gallery_iyXntN"
+    "gallery_iyXntN",
+    "product-recommendations"
   ]
 }
