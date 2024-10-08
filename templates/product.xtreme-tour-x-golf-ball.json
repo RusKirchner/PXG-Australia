@@ -784,6 +784,14 @@
         "gradient_background_section": "",
         "overlay_color": "#1e40af"
       }
+    },
+    "single_image_Udq6gG": {
+      "type": "single-image",
+      "settings": {
+        "custom_image": "shopify://shop_images/ECOM-2991-Golf-Ball-Charts_EN-Chart-2.png",
+        "alt_text": "Performance comparison of golf balls",
+        "image_width": 100
+      }
     }
   },
   "order": [
@@ -803,6 +811,7 @@
     "342fa470-7277-4291-be0f-d2979708f671",
     "video_AyHAa9",
     "rich_text_wyB6AE",
-    "video_with_text_left_gFFQwX"
+    "video_with_text_left_gFFQwX",
+    "single_image_Udq6gG"
   ]
 }
