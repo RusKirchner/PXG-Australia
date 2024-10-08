@@ -637,38 +637,6 @@
         "padding_bottom": 28
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "custom_css": [
-        ".card__inner {background: #ffffff;}",
-        ".card__content {text-align: center;}",
-        ".card-information {text-align: center;}"
-      ],
-      "settings": {
-        "title": "Products",
-        "subtitle": "Recommended",
-        "heading_size": "h0",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "inverse",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": false,
-        "enable_compare": false,
-        "enable_quick_view": false,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 40
-      }
-    },
     "342fa470-7277-4291-be0f-d2979708f671": {
       "type": "page",
       "disabled": true,
@@ -784,6 +752,234 @@
         "gradient_background_section": "",
         "overlay_color": "#1E40AF"
       }
+    },
+    "single_image_mUhMMt": {
+      "type": "single-image",
+      "settings": {
+        "custom_image": "shopify://shop_images/ECOM-2991-Golf-Ball-Charts_EN-Chart-2.png",
+        "alt_text": "Default alt text",
+        "image_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_dq7U7H": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_jzTacz": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-Tour-box-Lifestyle.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_3nkYcW": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-TourX-1.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_Bfx7Bg": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-TourX-2.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_UAxm9w": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-TourX-3.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_VFWJEp": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-TourX-4.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_p4L4wC": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2991-Golf-Ball-1000x668-Tour-Yellow-box-Lifestyle.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_jzTacz",
+        "text_overlay_image_3nkYcW",
+        "text_overlay_image_Bfx7Bg",
+        "text_overlay_image_UAxm9w",
+        "text_overlay_image_VFWJEp",
+        "text_overlay_image_p4L4wC"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [
+        ".card__inner {background: #ffffff;}",
+        ".card__content {text-align: center;}",
+        ".card-information {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Products",
+        "subtitle": "Recommended",
+        "heading_size": "h0",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -799,10 +995,12 @@
     "6c728f20-a922-40f0-bee5-f86687bddb68",
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
-    "product-recommendations",
     "342fa470-7277-4291-be0f-d2979708f671",
     "video_jMqE83",
     "rich_text_WqXGkD",
-    "video_with_text_left_LmQ9xW"
+    "video_with_text_left_LmQ9xW",
+    "single_image_mUhMMt",
+    "gallery_dq7U7H",
+    "product-recommendations"
   ]
 }
