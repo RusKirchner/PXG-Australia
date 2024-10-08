@@ -1,0 +1,53 @@
+{% schema %}
+{
+  "name": "Single Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt text",
+      "default": "Default alt text"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Image Width (in %)",
+      "default": 100,
+      "min": 10,
+      "max": 100,
+      "unit": "%"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Image",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="custom-image-section">
+  <div class="custom-image-container" style="max-width: {{ section.settings.image_width }}%;">
+    <div class="page-width">
+    <img src="{{ section.settings.custom_image | image_url }}" alt="{{ section.settings.alt_text }}">
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-image-container {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .custom-image-container img {
+    width: 100%;
+    height: auto;
+  }
+</style>
