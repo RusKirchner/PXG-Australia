@@ -275,13 +275,39 @@
             "overlay_color": "#000",
             "overlay_opacity": 0
           }
+        },
+        "text_overlay_image_qrNUTK": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Internal-Tungsten-Weighting.webp",
+            "link": "",
+            "text": "GEN7 Irons feature internal 20-gram toe mass tungsten weighting that balance the Center of Gravity (CG) location in the center of the face while boosting Moment of Inertia (MOI) to increase forgiveness. v",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "INTERNAL TUNGSTEN WEIGHTING",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "text_overlay_image_WFETG3",
         "text_overlay_image_mqgwMG",
         "text_overlay_image_G67FTT",
-        "text_overlay_image_XBbqMC"
+        "text_overlay_image_XBbqMC",
+        "text_overlay_image_qrNUTK"
       ],
       "settings": {
         "title": "",
