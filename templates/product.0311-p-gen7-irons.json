@@ -32,7 +32,7 @@
         "text_9PnjTy": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}</h1><h1> </h1><p></p>",
+            "text": "<h1>{{ product.title }}</h1><h1> </h1><p><strong>“I SHOT MY LOWEST SCORE OF THE YEAR MY FIRST TIME OUT IN A COMPETITIVE ROUND WITH THE PXG 0311 P GEN7 IRONS, AND DROPPED MY HANDICAP BY TWO OVER THE FOLLOWING COUPLE OF WEEKS.”</strong></p><p>—@PluggedInGolf<br/></p><p><strong>“DISPERSION IS TIGHTER. FRANKLY, I THINK THAT MATTERS MORE THAN THE DISTANCE GAINS..”</strong></p><p>—MyGolfSpy <br/></p><p><strong>\"GEN7 P IRONS HIT THE TRIFECTA WITH MORE DISTANCE, TIGHTER DISPERSION, AND GREATER FORGIVENESS AND REALLY LEAVE YOU WANTING FOR NOTHING.\"</strong></p><p><strong>—</strong>Pete Pappas</p>",
             "text_style": "body"
           }
         },
