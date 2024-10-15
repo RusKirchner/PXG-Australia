@@ -593,13 +593,40 @@
             "overlay_color": "#000",
             "overlay_opacity": 50
           }
+        },
+        "text_overlay_image_Jhy9WU": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN7-1000x668-Lifestyle-03_87763075-03b0-4f16-a817-a727c2d3519d.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "text_overlay_image_JiX978",
         "text_overlay_image_BJPpXY",
         "text_overlay_image_mackad",
-        "text_overlay_image_NnrA4A"
+        "text_overlay_image_NnrA4A",
+        "text_overlay_image_Jhy9WU"
       ],
       "settings": {
         "title": "",
