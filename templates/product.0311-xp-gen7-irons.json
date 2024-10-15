@@ -300,6 +300,31 @@
             "overlay_color": "#000",
             "overlay_opacity": 0
           }
+        },
+        "text_overlay_image_M3EWLh": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Precision-Weighting-Technology_1.webp",
+            "link": "",
+            "text": "One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "PRECISION WEIGHTING TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
@@ -307,7 +332,8 @@
         "text_overlay_image_mqgwMG",
         "text_overlay_image_G67FTT",
         "text_overlay_image_XBbqMC",
-        "text_overlay_image_qrNUTK"
+        "text_overlay_image_qrNUTK",
+        "text_overlay_image_M3EWLh"
       ],
       "settings": {
         "title": "",
