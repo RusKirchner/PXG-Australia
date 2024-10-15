@@ -325,6 +325,31 @@
             "overlay_color": "#000",
             "overlay_opacity": 0
           }
+        },
+        "text_overlay_image_fFhPac": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/TechCar-GEN5-Irons-5X-FORGED-_1_2e1a7d75-49f0-40db-9d82-a9b99d4346b4.webp",
+            "link": "",
+            "text": "Each iron is five-times forged from 8620 soft carbon steel, creating a tight grain structure that increases its strength, prolonging the life of the grooves and enhancing the overall feel and appearance. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "5X FORGED",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
         }
       },
       "block_order": [
@@ -333,7 +358,8 @@
         "text_overlay_image_G67FTT",
         "text_overlay_image_XBbqMC",
         "text_overlay_image_qrNUTK",
-        "text_overlay_image_M3EWLh"
+        "text_overlay_image_M3EWLh",
+        "text_overlay_image_fFhPac"
       ],
       "settings": {
         "title": "",
