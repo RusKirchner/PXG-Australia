@@ -348,7 +348,32 @@
             "button_foreground": "#000",
             "button_background": "#fff",
             "overlay_color": "#000",
-            "overlay_opacity": 50
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_V6fGX9": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13044-GEN7-P-Irons-CDPs-720x475-Milled-Back-Surface_1_ffffbb35-6999-49ba-9caf-7eeae8dff8a3.webp",
+            "link": "",
+            "text": "Milling the back surface of each iron is a high-precision process that reduces the wall thickness more than forging alone could achieve, to create a high-performance body design and an enhanced aesthetic. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "MILLED BACK SURFACE",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
           }
         }
       },
@@ -359,7 +384,8 @@
         "text_overlay_image_XBbqMC",
         "text_overlay_image_qrNUTK",
         "text_overlay_image_M3EWLh",
-        "text_overlay_image_fFhPac"
+        "text_overlay_image_fFhPac",
+        "text_overlay_image_V6fGX9"
       ],
       "settings": {
         "title": "",
