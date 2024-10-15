@@ -73,6 +73,233 @@
         "overlay_color": "rgba(0,0,0,0)"
       }
     },
+    "video_with_text_left_kXt9n6": {
+      "type": "video-with-text-left",
+      "blocks": {
+        "heading_VbrktG": {
+          "type": "heading",
+          "settings": {
+            "heading": "XTREME PERFORMANCE WHERE YOU NEED IT MOST",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_pta6Nf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>10 years in the making, new PXG 0311 XP GEN7 Irons are the greatest leap forward in irons technology and performance in PXG history. Our GEN7 XP (Xtreme Performance) model delivers an incredibly soft feel, extreme distance and extreme forgiveness for mid to high-handicap players. GEN7 XP Irons offer a slightly larger head size with a bit more offset, max out C.O.R. to the USGA limit, and feature our patented new QuantumCOR technology, new Titanium Bezel Technology, and the thinnest face in golf.</p><p><br/></p><p>Experience groundbreaking new levels of feel, forgiveness, speed, and distance with new PXG 0311 XP GEN7 Irons.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VbrktG",
+        "text_pta6Nf"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "video_url": "https://player.vimeo.com/video/990785672?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": true,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#000000",
+        "color_button": "#000",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "video_F7RfTM": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_hosted": "shopify://files/videos/GEN7 Irons Sizzle_720p.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_gBdnMT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_caQkyd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand</p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_caQkyd"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gallery_below_ebhHqY": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_WFETG3": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Proprietary-Core-Material.webp",
+            "link": "",
+            "text": "10 years in the making, PXG's extremely lightweight new proprietary core material - QuantumCOR - helps reduce the mass of the core which enables more weight to be positioned low and to the perimeter of the backside of the clubhead, dramatically increasing MOI. Combined with PXG’s variable ultrathin face technology, this enhances the COR to the USGA limit for extreme face deflection and incredible ball speed. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "NEW QuantumCOR Technology",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_mqgwMG": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Variable-Ultra-Thin-Face.webp",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN7 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050” (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary core material, GEN7 Irons deliver a C.O.R. performance that pushes the USGA limit, helping increase distance and forgiveness while also enhancing sound and feel. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Variable Ultra-Thin Maraging Steel Face",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_G67FTT": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Power-Channel-Technology.webp",
+            "link": "",
+            "text": "Power Channel Technology is the proprietary U-shaped corridor built into the internal surface of the club face to increase deflection and bend in the top sector. The channel creates face movement and transfers energy to simultaneously increase launch angle, trajectory, and ball speed. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "POWER CHANNEL TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_XBbqMC": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-13045-GEN7-XP-Irons-720x475-Titanium-Insert.webp",
+            "link": "",
+            "text": "A lightweight titanium insert, used to provide housing for the Precision Weighting Technology, removes mass from the center of the club in order to redistribute weight to the perimeter to boost MOI. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "titanium bezel technology",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_WFETG3",
+        "text_overlay_image_mqgwMG",
+        "text_overlay_image_G67FTT",
+        "text_overlay_image_XBbqMC"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -750,6 +977,10 @@
   },
   "order": [
     "image_with_text_hBwVMq",
+    "video_with_text_left_kXt9n6",
+    "video_F7RfTM",
+    "rich_text_gBdnMT",
+    "gallery_below_ebhHqY",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
