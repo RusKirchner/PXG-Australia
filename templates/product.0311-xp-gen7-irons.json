@@ -413,6 +413,212 @@
         "padding_bottom": 52
       }
     },
+    "multicolumn_g9EcdJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_c6tmED": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/0311_P.png",
+            "icon": "check",
+            "title": "",
+            "text": "<h4>AVAILABLE IRONS</h4><p>4, 5, 6, 7, 8, 9, W, G</p><h4>CLUB PROFILE</h4><p>Midsize head with moderate amount of offset designed for low to mid handicap players</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_pUdFan": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/0311_xp.png",
+            "icon": "check",
+            "title": "",
+            "text": "<h4>AVAILABLE IRONS</h4><p>4, 5, 6, 7, 8, 9, W, G, S, L</p><h4>CLUB PROFILE</h4><p>Larger size head with additional offset designed for mid to high handicap players</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_c6tmED",
+        "column_pUdFan"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_Tdp8DR": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_JiX978": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN7-1000x668-Lifestyle-05_b1d18175-55da-456b-b997-401f172bdf76.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_BJPpXY": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN7-1000x668-Lifestyle-01_621f399c-d8fb-4fbb-970c-c6e3888d1409.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_mackad": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN7-1000x668-Lifestyle-02_9d3820e4-2580-4cc1-ac72-dbea120128e4.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_NnrA4A": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN7-1000x668-Lifestyle-04_3d166083-bc14-43a5-9b30-3873c8c4e770.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_JiX978",
+        "text_overlay_image_BJPpXY",
+        "text_overlay_image_mackad",
+        "text_overlay_image_NnrA4A"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -1095,6 +1301,8 @@
     "rich_text_gBdnMT",
     "gallery_below_ebhHqY",
     "custom_liquid_XK4yDV",
+    "multicolumn_g9EcdJ",
+    "gallery_Tdp8DR",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
