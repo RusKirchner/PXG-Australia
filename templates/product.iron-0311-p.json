@@ -177,7 +177,7 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>TECHNOLOGY THAT PERFORMS</h1>",
+            "heading": "<h1>TECHNOLOGY THAT PERFORMSs</h1>",
             "heading_size": "h0"
           }
         }
@@ -194,6 +194,159 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "gallery_below_ReB7db": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_kkGExn": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN6-Thin-Face-v2.webp",
+            "link": "",
+            "text": "Since their inception, PXG irons have maintained the thinnest face in golf, and with GEN6 the face is now even thinner. Made from high-strength HT1770 maraging steel, the variable ultra-thin face measures a mere 0.050\" (~1.27mm) thick — 15% thinner than previous models. Combined with PXG’s proprietary XCOR2 Technology, GEN6 Irons deliver the company’s highest C.O.R. performance ever, helping increase distance and forgiveness while also enhancing sound and feel.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "VARIABLE ULTRA-THIN FACE",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_CE4Jcy": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/GEN6-Xcor2-v2.webp",
+            "link": "",
+            "text": "XCOR2 is PXG’s revolutionary polymer core material, the result of years of research and development. Extremely lightweight, XCOR2 helps reduce the mass of the core which enables more weight to be positioned low and to the perimeter of the backside of the clubhead, dramatically increasing MOI. Combined with PXG’s variable ultra-thin face technology, XCOR2 enhances the C.O.R. for extreme face deflection and out-of-sight ball speed.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "XCOR2 TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_3rKYef": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/MRCH-9-New-P-Irons-CDP-All-Chrome-720x475-Power-Channel-Chrome.webp",
+            "link": "",
+            "text": "Power Channel Technology is the proprietary U-shaped corridor built into the internal surface of the face to increase deflection and bend in the top sector. The channel creates face movement and transfers energy to simultaneously increases launch angle, trajectory, and ball speed.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "POWER CHANNEL TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_UAJJaK": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/TechCar-GEN5-Irons-5X-FORGED-_1.png",
+            "link": "",
+            "text": "Each iron is forged five-times from 8620 soft carbon steel, creating a tight grain structure that increases its strength, prolonging the life of the grooves and enhancing the overall feel and appearance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "5X Forged",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_UEmD8m": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/MRCH-9-New-P-Irons-CDP-All-Chrome-720x475-Milled-Back-Surface-Chrome.webp",
+            "link": "",
+            "text": "Milling the back surface of each iron is a high-precision process that reduces the wall thickness more than forging alone could achieve, to create a high-performance body design and an enhanced aesthetic.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Milled Back Surface",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_kkGExn",
+        "text_overlay_image_CE4Jcy",
+        "text_overlay_image_3rKYef",
+        "text_overlay_image_UAJJaK",
+        "text_overlay_image_UEmD8m"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "gallery_iENJ7C": {
@@ -935,6 +1088,7 @@
     "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_ReB7db",
     "gallery_iENJ7C",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
