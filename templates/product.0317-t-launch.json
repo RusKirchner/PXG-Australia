@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_btdKpC": {
@@ -48,7 +48,7 @@
       "disabled": true,
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/GEN6-Bling-Clubs-v3_1.jpg",
+        "image": "shopify://shop_images/GEN6-Bling-Clubs-v3_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "medium-mobile",
@@ -109,7 +109,7 @@
         "cb459e26-5c60-4789-8b38-289beb93ff9d": {
           "type": "text",
           "settings": {
-            "text": "<h1>0311 P Gen6<br\/>Double Chrome  <br\/>and<br\/>Double Black<\/h1>",
+            "text": "<h1>0311 P Gen6<br/>Double Chrome  <br/>and<br/>Double Black</h1>",
             "text_style": "body"
           }
         },
@@ -134,7 +134,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/GEN6-Bling-Clubs-v3.jpg",
+        "image": "shopify://shop_images/GEN6-Bling-Clubs-v3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -260,7 +260,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><p><br\/><strong>\"PXG 0317 T IRONS DELIVER BETTER FEEL, MORE CONTROL AND IMPROVED FORGIVENESS.\"<\/strong><\/p><p>– Golfweek<\/p><p><\/p><p><br\/><\/p><p><strong>\"THE PXG 0317 T IRONS REPRESENT PXG'S COMMITMENT TO PUSHING BOUNDARIES IN THE GOLF INDUSTRY.\"<\/strong><\/p><p>– Golf Fairway Jockey<\/p><p><br\/><\/p><p><\/p><p><strong>\"THIS IRON IS QUITE SIMPLY LIKE NOTHING ELSE THAT EXISTS RIGHT NOW AND FOR ME IT'S GONNA TICK EVERY SINGLE BOX\"<\/strong><\/p><p>– The Average Golfer<\/p>",
+            "text": "<h1>{{ product.title }}</h1><p><br/><strong>\"PXG 0317 T IRONS DELIVER BETTER FEEL, MORE CONTROL AND IMPROVED FORGIVENESS.\"</strong></p><p>– Golfweek</p><p></p><p><br/></p><p><strong>\"THE PXG 0317 T IRONS REPRESENT PXG'S COMMITMENT TO PUSHING BOUNDARIES IN THE GOLF INDUSTRY.\"</strong></p><p>– Golf Fairway Jockey</p><p><br/></p><p></p><p><strong>\"THIS IRON IS QUITE SIMPLY LIKE NOTHING ELSE THAT EXISTS RIGHT NOW AND FOR ME IT'S GONNA TICK EVERY SINGLE BOX\"</strong></p><p>– The Average Golfer</p>",
             "text_style": "subtitle"
           }
         },
@@ -285,7 +285,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/0317t.png",
+        "image": "shopify://shop_images/0317t.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -337,7 +337,7 @@
         "text_qnG3GV": {
           "type": "text",
           "settings": {
-            "text": "<h2>XTREME SHOT MAKING<\/h2><p>Small workable club head design increases the player’s control over the clubface.<\/p><p><\/p><h2>HIGH SPIN PERFORMANCE<\/h2><p>Proprietary S COR™ material increases stability and limits face movement during impact which produces higher spin rate performance.<\/p><p><\/p><h2>SUPERIOR DISTANCE CONTROL<\/h2><p>Thick face solid body construction delivers very consistent distance c<\/p><p><\/p><h2>EXCELLENT SOUND AND FEEL<\/h2><p>3X Forged 8620 soft carbon steel<\/p>",
+            "text": "<h2>XTREME SHOT MAKING</h2><p>Small workable club head design increases the player’s control over the clubface.</p><p></p><h2>HIGH SPIN PERFORMANCE</h2><p>Proprietary S COR™ material increases stability and limits face movement during impact which produces higher spin rate performance.</p><p></p><h2>SUPERIOR DISTANCE CONTROL</h2><p>Thick face solid body construction delivers very consistent distance c</p><p></p><h2>EXCELLENT SOUND AND FEEL</h2><p>3X Forged 8620 soft carbon steel</p>",
             "text_style": "body"
           }
         },
@@ -359,7 +359,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/2023-08-17_PXGM-10406-0317T_7-Iron-Chrome_0257.jpg",
+        "image": "shopify://shop_images/2023-08-17_PXGM-10406-0317T_7-Iron-Chrome_0257.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -393,7 +393,7 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>",
+            "heading": "<h1>TECHNOLOGY THAT PERFORMS</h1>",
             "heading_size": "h0"
           }
         }
@@ -412,14 +412,141 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_PfQpEU": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_c6BnJW": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2199-PDP-0317T-720x475-Tungsten-Toe-Weight.webp",
+            "link": "",
+            "text": "A 15-gram internal tungsten weight helps to position the CG in the center of the clubface, boost the MOl and improve off-center hit performance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Tungsten Toe Weighting ",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_gTDdBX": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2199-PDP-0317T-720x475-Side-Cut-Away.webp",
+            "link": "",
+            "text": "Stability Core material increases spin performance for improved consistency and distance control.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "S COR™ Polymer Fill ",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_PYxDKF": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2199-PDP-0317T-720x475-Hollow-Body-Face.webp",
+            "link": "",
+            "text": "Ultra-thin HT1770 Maraging grade stainless steel face material More optimal design to increase perimeter weighting, boost MOI and improve forgiveness.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Hollow Bodied Thin Face Design",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_BLBWhN": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-2969-0317T-720x475-Weight.webp",
+            "link": "",
+            "text": "One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Precision Weighting",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_c6BnJW",
+        "text_overlay_image_gTDdBX",
+        "text_overlay_image_PYxDKF",
+        "text_overlay_image_BLBWhN"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
       "type": "video",
       "settings": {
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/0317T_VIDEO.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/862172917",
+        "cover_image": "shopify://shop_images/0317T_VIDEO.jpg",
+        "video_url": "https://player.vimeo.com/video/862172917",
         "description": "",
         "autoplay": false,
         "enable_controls": true,
@@ -438,7 +565,7 @@
         "65a40fa9-2b89-480a-9530-226b3b110309": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>HOSEL OPTIONS<\/h1>",
+            "heading": "<h1>HOSEL OPTIONS</h1>",
             "heading_size": "h0"
           }
         }
@@ -482,7 +609,7 @@
         "3cf4db0b-b14f-44c3-99fe-02fda89e0c69": {
           "type": "text",
           "settings": {
-            "text": "<h1>BLENDED SET CAPABILITY<\/h1><p>0317 CB and 0317 ST have the same loft, offset, and bounce specs allowing players to easily transition from one model style to another at any club number in the set.<\/p><p><br\/><\/p><p>The 0317 CB's feature a larger, tour-inspired cavity back design for greater forgiveness often preferred in the harder-to-hit long irons. While the 0317 ST's feature a more compact design that delivers a penetrating trajectory with high spin, exceptional consistency, and maximum control often preferred for shorter irons.<\/p><p><br\/><\/p><p><em>*The 3 & 4 iron feature a cavity back design in both models.<\/em><\/p>",
+            "text": "<h1>BLENDED SET CAPABILITY</h1><p>0317 CB and 0317 ST have the same loft, offset, and bounce specs allowing players to easily transition from one model style to another at any club number in the set.</p><p><br/></p><p>The 0317 CB's feature a larger, tour-inspired cavity back design for greater forgiveness often preferred in the harder-to-hit long irons. While the 0317 ST's feature a more compact design that delivers a penetrating trajectory with high spin, exceptional consistency, and maximum control often preferred for shorter irons.</p><p><br/></p><p><em>*The 3 & 4 iron feature a cavity back design in both models.</em></p>",
             "text_style": "body"
           }
         },
@@ -508,7 +635,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/ECOM-1605-0317-CB-Tech-Image-Needs-800x500-Blended-2-comp.jpg",
+        "image": "shopify://shop_images/ECOM-1605-0317-CB-Tech-Image-Needs-800x500-Blended-2-comp.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -545,7 +672,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h2 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>18°<\/td>\n<td>39.375\"<\/td>\n<td>60.5°<\/td>\n<td>.250\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>20°<\/td>\n<td>38.75\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>23°<\/td>\n<td>38.125\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>27°<\/td>\n<td>37.5\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>31°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>36°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.105\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>41°<\/td>\n<td>36.25\"<\/td>\n<td>63.5°<\/td>\n<td>.080\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>47°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.070\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S<\/th>\n<td>54°<\/td>\n<td>35.75\"<\/td>\n<td>63.5°<\/td>\n<td>.040\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L<\/th>\n<td>60°<\/td>\n<td>35.5\"<\/td>\n<td>63.5°<\/td>\n<td>.030\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h2 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n</h2>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n</th>\n<th scope=\"col\">\nLofts\n</th>\n<th scope=\"col\">\nStandard Length (inches)\n</th>\n<th scope=\"col\">\nStandard Lie\n</th>\n<th scope=\"col\">\nOffset\n</th>\n<th scope=\"col\">\nBounce\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4</th>\n<td>18°</td>\n<td>39.375\"</td>\n<td>60.5°</td>\n<td>.250\"</td>\n<td>6°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5</th>\n<td>20°</td>\n<td>38.75\"</td>\n<td>61°</td>\n<td>.220\"</td>\n<td>7°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6</th>\n<td>23°</td>\n<td>38.125\"</td>\n<td>61.5°</td>\n<td>.190\"</td>\n<td>8°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7</th>\n<td>27°</td>\n<td>37.5\"</td>\n<td>62°</td>\n<td>.160\"</td>\n<td>9°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8</th>\n<td>31°</td>\n<td>37\"</td>\n<td>62.5°</td>\n<td>.130\"</td>\n<td>10°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9</th>\n<td>36°</td>\n<td>36.5\"</td>\n<td>63°</td>\n<td>.105\"</td>\n<td>11°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W</th>\n<td>41°</td>\n<td>36.25\"</td>\n<td>63.5°</td>\n<td>.080\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G</th>\n<td>47°</td>\n<td>36\"</td>\n<td>63.5°</td>\n<td>.070\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S</th>\n<td>54°</td>\n<td>35.75\"</td>\n<td>63.5°</td>\n<td>.040\"</td>\n<td>13°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L</th>\n<td>60°</td>\n<td>35.5\"</td>\n<td>63.5°</td>\n<td>.030\"</td>\n<td>13°</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>",
         "color_scheme": "inverse",
         "padding_top": 40,
         "padding_bottom": 52
@@ -560,7 +687,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n<\/th>\n<th scope=\"col\">\nStock<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nHang Angle\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend<\/th>\n<td>375g<\/td>\n<td>345g<\/td>\n<td>415g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Face Balanced<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted<\/th>\n<td>385g<\/td>\n<td>355g<\/td>\n<td>425g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Significant Toe Hang<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck<\/th>\n<td>395g<\/td>\n<td>365g<\/td>\n<td>435g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Mid Toe Hang<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock<\/th>\n<td>420g<\/td>\n<td>390g<\/td>\n<td>460g<\/td>\n<td>7°<\/td>\n<td>73°<\/td>\n<td>Face Balanced<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n</h2>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n</th>\n<th scope=\"col\">\nStock<br>Head Weight\n</th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n</th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n</th>\n<th scope=\"col\">\nLoft\n</th>\n<th scope=\"col\">\nLie\n</th>\n<th scope=\"col\">\nHang Angle\n</th>\n<th scope=\"col\">\nOffset\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend</th>\n<td>375g</td>\n<td>345g</td>\n<td>415g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Face Balanced</td>\n<td>Half Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted</th>\n<td>385g</td>\n<td>355g</td>\n<td>425g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Significant Toe Hang</td>\n<td>Half Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck</th>\n<td>395g</td>\n<td>365g</td>\n<td>435g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Mid Toe Hang</td>\n<td>Full Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock</th>\n<td>420g</td>\n<td>390g</td>\n<td>460g</td>\n<td>7°</td>\n<td>73°</td>\n<td>Face Balanced</td>\n<td>Full Shaft</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>",
         "color_scheme": "inverse",
         "padding_top": 40,
         "padding_bottom": 52
@@ -590,7 +717,7 @@
         "7e717db0-a077-4766-a879-4c77497a9e0c": {
           "type": "text",
           "settings": {
-            "text": "<h2>AVAILABLE WITH M16<\/h2><p>The PXG M16 Putter Shaft is 26% stiffer than a traditional steel putter shaft. The increased shaft stiffness delivers improved accuracy, stability, and consistency by reducing the amount of face rotation at impact.<\/p><p>In robot testing, The M16 Putter Shaft delivers 37% more accuracy than a traditional steel shaft.<\/p>",
+            "text": "<h2>AVAILABLE WITH M16</h2><p>The PXG M16 Putter Shaft is 26% stiffer than a traditional steel putter shaft. The increased shaft stiffness delivers improved accuracy, stability, and consistency by reducing the amount of face rotation at impact.</p><p>In robot testing, The M16 Putter Shaft delivers 37% more accuracy than a traditional steel shaft.</p>",
             "text_style": "body"
           }
         },
@@ -613,7 +740,7 @@
       "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/M16-Carousel-Images-Matrix.png",
+        "image": "shopify://shop_images/M16-Carousel-Images-Matrix.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -665,7 +792,7 @@
         "26764e7e-8df0-496a-8897-b8836d939123": {
           "type": "text",
           "settings": {
-            "text": "<h2>NEW PERFORMANCE PUTTER GRIPS<\/h2><p>PXG's new performance putter grips were designed to meet a variety of grip preferences and stroke styles to give golfers the edge they need on the green. Whether you're a traditionalist, claw grip fanatic, or armlock aficionado - PXG's seven grip profiles offer versatility and comfort for improved control, stability and performance in all conditions.<\/p>",
+            "text": "<h2>NEW PERFORMANCE PUTTER GRIPS</h2><p>PXG's new performance putter grips were designed to meet a variety of grip preferences and stroke styles to give golfers the edge they need on the green. Whether you're a traditionalist, claw grip fanatic, or armlock aficionado - PXG's seven grip profiles offer versatility and comfort for improved control, stability and performance in all conditions.</p>",
             "text_style": "body"
           }
         },
@@ -688,7 +815,7 @@
       "disabled": true,
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/PXGM-10304-Putter-Grips-670x400.jpg",
+        "image": "shopify://shop_images/PXGM-10304-Putter-Grips-670x400.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -781,7 +908,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-In-Bag-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-In-Bag-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -807,7 +934,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-2": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -833,7 +960,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -859,7 +986,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-4": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -914,7 +1041,7 @@
         "template--21504003047731__47be7851-cab6-4ff2-a004-69ee2ae8f5bc-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt.<\/p>"
+            "text": "<h2>WE GOT YOUR STICKS. PERIOD.</h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt.</p>"
           }
         }
       },
@@ -1067,6 +1194,7 @@
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "image_with_text_byCVXN",
     "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_PfQpEU",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
