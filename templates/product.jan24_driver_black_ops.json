@@ -887,7 +887,7 @@
     "custom_liquid_t7HfAk": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<div class=\"center\">\n<h2>\nBLACK OPS DRIVER SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Model\n  </th>\n  <th scope=\"col\">\n  Lofts\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Length\n  </th>\n  <th scope=\"col\">\n  Head Mass\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS</th>\n  <td>8°, 9°, 10.5°, 12° <br> LH 9°, 10.5°, 12°</td>\n  <td>60°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS TOUR-1</th>\n  <td>8°, 9°, 10.5° <br> LH 9°</td>\n  <td>58.5°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  </tbody></table></div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
