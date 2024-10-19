@@ -419,6 +419,159 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_NKkPaJ": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_kbcfgr": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-01-AMF-Face.png",
+            "link": "",
+            "text": "This proprietary design and high strength Titanium Alloy optimize the driver’s performance by ensuring consistent and efficient energy transfer across various impact points on the clubface. The result is increased ball speed and improved distance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "AMF TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_Wt6xEJ": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-Sole.png",
+            "link": "",
+            "text": "Lightweight composite crown and sole inserts are manufactured from a high-grade carbon fiber composite pre-preg material using a sophisticated compression molding process. The use of this lightweight yet strong component, allows our engineers to optimize weight distribution within the clubhead to increase moment of inertia (MOI) and push the CG lower and further back, leading to improved distance performance and forgiveness.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "CARBON FIBER CROWN AND SOLE",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_DPQ4PV": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-Weighting.png",
+            "link": "",
+            "text": "The default Black Ops Driver presents two light (2.5g) and one heavy (12.5g) sole weights that are interchangeable to support preferred spin and bias settings. Weights are available in 2.5, 5, 7.5, 10, 12.5, 15, 17.5, and 20-gram options, so overall head weight and shot bias can be easily fine-tuned for each individual player. Adjustable weighting can also be used to increase the combined MOI to over 10K grams – cm^2. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "PRECISION WEIGHTING TECHNOLOGY",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_GWJrDe": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-04-Bulge-and-Roll.png",
+            "link": "",
+            "text": "This design technique optimizes the performance of the driver by strategically adjusting the horizontal and vertical curvatures across the face. The design supports enhanced forgiveness and improves overall performance by optimizing the club's reaction to off-center hits. Robotic Face Polishing Process allows us to design non-uniform Bulge and Roll face radii and manufacture it consistently​.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "NON-UNIFORM BULGE AND ROLL DESIGN",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_9bWkay": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-Sound-and-Feel.png",
+            "link": "",
+            "text": "Natural frequency optimization involves fine-tuning the inherent vibration patterns or resonances within the clubhead's structure to enhance performance. This optimization aims to improve the driver's feel, sound, and performance upon impact with the golf ball.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "NATURAL FREQUENCY OPTIMIZATION",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_kbcfgr",
+        "text_overlay_image_Wt6xEJ",
+        "text_overlay_image_DPQ4PV",
+        "text_overlay_image_GWJrDe",
+        "text_overlay_image_9bWkay"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
       "type": "image-with-text",
       "blocks": {
@@ -731,6 +884,15 @@
         "padding_bottom": 52
       }
     },
+    "custom_liquid_t7HfAk": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_YJ3icm": {
       "type": "multicolumn",
       "blocks": {
@@ -993,11 +1155,13 @@
     "5d312b79-90c2-4b13-884f-3e12635705dd",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "77bbc053-b9f9-4e59-811b-31ef30c2709c",
+    "gallery_below_NKkPaJ",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "6c728f20-a922-40f0-bee5-f86687bddb68",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
+    "custom_liquid_t7HfAk",
     "multicolumn_YJ3icm",
     "342fa470-7277-4291-be0f-d2979708f671",
     "main",
