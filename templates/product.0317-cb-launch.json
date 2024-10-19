@@ -412,6 +412,159 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_UAwij9": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_LBntq3": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-6906-0317-Tech-Renderings-MILLED-FACE-AND-BACK_07807ac6-3eb8-4e2b-8d5a-3596a427ea7f.webp",
+            "link": "",
+            "text": "Milling the face and back surfaces is a high-precision process, unobtainable through forging alone, that ensures every line, curve, and angle are produced to exacting specifications to create a high-performance body design and enhancing aesthetics.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Milled Face & Back",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_eCJX7g": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1605-0317-CB-Tech-Image-Needs-720x475-Weight_92b7d010-1ced-425a-9f61-631022922458.png",
+            "link": "",
+            "text": "One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Precision Weighting",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_fyVaEh": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/TechCar-GEN5-Irons-5X-FORGED-_1.png",
+            "link": "",
+            "text": "Each iron is three-times forged from 8620 soft carbon steel, creating a tight grain structure that increases its strength, prolonging the life of the grooves and enhancing the overall feel and appearance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "3X Forged Feel",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_jAPhXm": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/0317_ST_Robotic_Polishing_v2_4054766b-17ef-42d4-88d6-8c7780da2f63.webp",
+            "link": "",
+            "text": "Robotic polishing creates an extremely precise manufacturing process that ensures consistent sole and face perimeter geometry with every club. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Robotic Precision",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_tWrQAt": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1605-0317-CB-Tech-Image-Needs-720x475-Dark_f29f9396-e41b-4bcc-9d9f-04eb0bd77f68.png",
+            "link": "",
+            "text": "PXG’s stunning Xtreme Dark irons are created using an advanced process called Diamond-like Carbon (DLC) coating. DLC significantly extends the reasonable lifetime of the finish. Unlike the typical black PVD used by other equipment manufacturers, DLC is a three-layer process that produces extraordinary wear resistance without influencing club performance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Xtreme Dark Finish",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_LBntq3",
+        "text_overlay_image_eCJX7g",
+        "text_overlay_image_fyVaEh",
+        "text_overlay_image_jAPhXm",
+        "text_overlay_image_tWrQAt"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
       "type": "video",
       "settings": {
@@ -1085,6 +1238,7 @@
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "image_with_text_byCVXN",
     "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_UAwij9",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
