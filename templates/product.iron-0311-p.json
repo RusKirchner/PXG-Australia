@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7": {
@@ -32,7 +32,7 @@
         "cb459e26-5c60-4789-8b38-289beb93ff9d": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p><strong>“THEY’RE OUTSTANDING AT SMOOTHING OUT SLIGHTLY FAT STRIKES.”<\/strong><\/p><p>—@PluggedInGolf<br\/><\/p><p><strong>“THE SOFTEST FEELING, LONGEST, MOST FORGIVING THEY’VE EVER MADE.”<\/strong><\/p><p>—Today's Golfer<br\/><\/p><p><strong>“IT’S LONG, ACCURATE, AND DELIVERS BUTTERY SOFT FEEL.”<\/strong><\/p><p>—Golf Monthly<\/p>",
+            "text": "<h1>{{ product.title }}</h1><h1> </h1><p><strong>“THEY’RE OUTSTANDING AT SMOOTHING OUT SLIGHTLY FAT STRIKES.”</strong></p><p>—@PluggedInGolf<br/></p><p><strong>“THE SOFTEST FEELING, LONGEST, MOST FORGIVING THEY’VE EVER MADE.”</strong></p><p>—Today's Golfer<br/></p><p><strong>“IT’S LONG, ACCURATE, AND DELIVERS BUTTERY SOFT FEEL.”</strong></p><p>—Golf Monthly</p>",
             "text_style": "subtitle"
           }
         },
@@ -66,7 +66,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png",
+        "image": "shopify://shop_images/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -118,7 +118,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h2>BEYOND FORGIVING FOR GAME-CHANGING ACCURACY<\/h2><p>With a thinner face leading to improved performance on mishit shots and increased ball speed, PXG 0311 P GEN6 Irons are the longest and most forgiving irons PXG has ever made. Backed by industry-leading engineering and complete with a patented core material, breakthrough head design, and Precision Weighting Technology, these offset irons were made to deliver an incredibly soft feel while providing extreme distance performance with excellent forgiveness. Available in Chrome, Xtreme Dark finish and two new finishes: Double Chrome and Double Black. <\/p><p> <\/p><ul><li>·Maximum Distance<\/li><li>·Fast Ball Speeds<\/li><li>·Extreme Forgiveness<\/li><li>·Tight Dispersion<\/li><li>·Confidence-Inspiring Design<\/li><li>·Incredibly Soft Feel<\/li><li>·Remarkably Rewarding Sound<\/li><\/ul>",
+            "text": "<h2>BEYOND FORGIVING FOR GAME-CHANGING ACCURACY</h2><p>With a thinner face leading to improved performance on mishit shots and increased ball speed, PXG 0311 P GEN6 Irons are the longest and most forgiving irons PXG has ever made. Backed by industry-leading engineering and complete with a patented core material, breakthrough head design, and Precision Weighting Technology, these offset irons were made to deliver an incredibly soft feel while providing extreme distance performance with excellent forgiveness. Available in Chrome, Xtreme Dark finish and two new finishes: Double Chrome and Double Black. </p><p> </p><ul><li>·Maximum Distance</li><li>·Fast Ball Speeds</li><li>·Extreme Forgiveness</li><li>·Tight Dispersion</li><li>·Confidence-Inspiring Design</li><li>·Incredibly Soft Feel</li><li>·Remarkably Rewarding Sound</li></ul>",
             "text_style": "subtitle"
           }
         },
@@ -143,7 +143,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/GEN6-7-Iron-P-All-Chrome-Back-Tech-Weight-2416x3000-80ac8b7.png",
+        "image": "shopify://shop_images/GEN6-7-Iron-P-All-Chrome-Back-Tech-Weight-2416x3000-80ac8b7.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -177,7 +177,7 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>",
+            "heading": "<h1>TECHNOLOGY THAT PERFORMS</h1>",
             "heading_size": "h0"
           }
         }
@@ -331,8 +331,8 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/0317-CB-Video-Banner.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
+        "cover_image": "shopify://shop_images/0317-CB-Video-Banner.jpg",
+        "video_hosted": "shopify://files/videos/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -370,7 +370,7 @@
         "3cf4db0b-b14f-44c3-99fe-02fda89e0c69": {
           "type": "text",
           "settings": {
-            "text": "<h2>OPTIMAL PERFORMANCE<\/h2><p>Backed by industry-leading engineering and a relentless pursuit of performance, PXG 0311 P GEN6 Irons provide an ideal balance between workability and forgiveness. These irons feature PXG’s patented XCOR2 material, moderate offset, and breakthrough head design with a clean aesthetic. GEN6 Irons advance our original flagship forward and offer an exceptional blend of distance, workability, and forgiveness.<\/p>",
+            "text": "<h2>OPTIMAL PERFORMANCE</h2><p>Backed by industry-leading engineering and a relentless pursuit of performance, PXG 0311 P GEN6 Irons provide an ideal balance between workability and forgiveness. These irons feature PXG’s patented XCOR2 material, moderate offset, and breakthrough head design with a clean aesthetic. GEN6 Irons advance our original flagship forward and offer an exceptional blend of distance, workability, and forgiveness.</p>",
             "text_style": "subtitle"
           }
         },
@@ -395,7 +395,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/20231025_PXG2158-3000x2000-2567b33.jpg",
+        "image": "shopify://shop_images/20231025_PXG2158-3000x2000-2567b33.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -447,7 +447,7 @@
         "text_hhDMhc": {
           "type": "text",
           "settings": {
-            "text": "<h2>PRECISION WEIGHTING<\/h2><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG.<\/p>",
+            "text": "<h2>PRECISION WEIGHTING</h2><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is intended to be adjusted only by PXG.</p>",
             "text_style": "subtitle"
           }
         },
@@ -469,7 +469,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/20231025_PXG2424-3000x2000-2567b33.jpg",
+        "image": "shopify://shop_images/20231025_PXG2424-3000x2000-2567b33.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -506,7 +506,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n<\/th>\n<th scope=\"col\">\nStock<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nHang Angle\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend<\/th>\n<td>375g<\/td>\n<td>345g<\/td>\n<td>415g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Face Balanced<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted<\/th>\n<td>385g<\/td>\n<td>355g<\/td>\n<td>425g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Significant Toe Hang<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck<\/th>\n<td>395g<\/td>\n<td>365g<\/td>\n<td>435g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Mid Toe Hang<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock<\/th>\n<td>420g<\/td>\n<td>390g<\/td>\n<td>460g<\/td>\n<td>7°<\/td>\n<td>73°<\/td>\n<td>Face Balanced<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Apache Specs\n</h2>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n</th>\n<th scope=\"col\">\nStock<br>Head Weight\n</th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n</th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n</th>\n<th scope=\"col\">\nLoft\n</th>\n<th scope=\"col\">\nLie\n</th>\n<th scope=\"col\">\nHang Angle\n</th>\n<th scope=\"col\">\nOffset\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend</th>\n<td>375g</td>\n<td>345g</td>\n<td>415g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Face Balanced</td>\n<td>Half Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted</th>\n<td>385g</td>\n<td>355g</td>\n<td>425g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Significant Toe Hang</td>\n<td>Half Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck</th>\n<td>395g</td>\n<td>365g</td>\n<td>435g</td>\n<td>3°</td>\n<td>70°</td>\n<td>Mid Toe Hang</td>\n<td>Full Shaft</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock</th>\n<td>420g</td>\n<td>390g</td>\n<td>460g</td>\n<td>7°</td>\n<td>73°</td>\n<td>Face Balanced</td>\n<td>Full Shaft</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>",
         "color_scheme": "inverse",
         "padding_top": 40,
         "padding_bottom": 52
@@ -568,13 +568,22 @@
         "padding_bottom": 40
       }
     },
+    "custom_liquid_B67ejX": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN6 Iron Specs\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Club\n  </th>\n  <th scope=\"col\">\n  Lofts\n  </th>\n  <th scope=\"col\">\n  Standard Length (inches)\n  </th>\n  <th scope=\"col\">\n  Standard Lie\n  </th>\n  <th scope=\"col\">\n  Offset\n  </th>\n  <th scope=\"col\">\n  Bounce\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">4</th>\n  <td>20.5°</td>\n  <td>38.875\"</td>\n  <td>61°</td>\n  <td>.220\"</td>\n  <td>6°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">5</th>\n  <td>23°</td>\n  <td>38.25\"</td>\n  <td>61.5°</td>\n  <td>.190\"</td>\n  <td>7°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">6</th>\n  <td>26°</td>\n  <td>37.625\"</td>\n  <td>62°</td>\n  <td>.160\"</td>\n  <td>8°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">7</th>\n  <td>30°</td>\n  <td>37\"</td>\n  <td>62.5°</td>\n  <td>.130\"</td>\n  <td>9°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">8</th>\n  <td>34°</td>\n  <td>36.5\"</td>\n  <td>63°</td>\n  <td>.100\"</td>\n  <td>10°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">9</th>\n  <td>39°</td>\n  <td>36\"</td>\n  <td>63.5°</td>\n  <td>.075\"</td>\n  <td>11°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">W</th>\n  <td>44°</td>\n  <td>35.75\"</td>\n  <td>64°</td>\n  <td>.050\"</td>\n  <td>12°</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">G</th>\n  <td>49°</td>\n  <td>35.5\"</td>\n  <td>64°</td>\n  <td>.040\"</td>\n  <td>12°</td>\n  </tr>\n  </tbody></table></div>",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 40
+      }
+    },
     "6c728f20-a922-40f0-bee5-f86687bddb68": {
       "type": "gallery",
       "blocks": {
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-5IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-5IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -600,7 +609,7 @@
         "text_overlay_image_zhQmFD": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -626,7 +635,7 @@
         "text_overlay_image_6FzKA3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-1IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-1IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -652,7 +661,7 @@
         "text_overlay_image_zK8RNQ": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-3IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-3IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -678,7 +687,7 @@
         "text_overlay_image_qrrHBT": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-13IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-13IG-2160x2160-2160x2160-742d66f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -745,7 +754,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN6 IRON SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>20.5°<\/td>\n<td>38.875\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>23°<\/td>\n<td>38.25\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>26°<\/td>\n<td>37.625\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>30°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>34°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.100\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>39°<\/td>\n<td>36<\/td>\n<td>63.5°<\/td>\n<td>.075\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>44°<\/td>\n<td>35.75<\/td>\n<td>64°<\/td>\n<td>.050\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>49°<\/td>\n<td>35.5<\/td>\n<td>64°<\/td>\n<td>.040\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>",
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 P GEN6 IRON SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n</th>\n<th scope=\"col\">\nLofts\n</th>\n<th scope=\"col\">\nStandard Length (inches)\n</th>\n<th scope=\"col\">\nStandard Lie\n</th>\n<th scope=\"col\">\nOffset\n</th>\n<th scope=\"col\">\nBounce\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4</th>\n<td>20.5°</td>\n<td>38.875\"</td>\n<td>61°</td>\n<td>.220\"</td>\n<td>6°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5</th>\n<td>23°</td>\n<td>38.25\"</td>\n<td>61.5°</td>\n<td>.190\"</td>\n<td>7°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6</th>\n<td>26°</td>\n<td>37.625\"</td>\n<td>62°</td>\n<td>.160\"</td>\n<td>8°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7</th>\n<td>30°</td>\n<td>37\"</td>\n<td>62.5°</td>\n<td>.130\"</td>\n<td>9°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8</th>\n<td>34°</td>\n<td>36.5\"</td>\n<td>63°</td>\n<td>.100\"</td>\n<td>10°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9</th>\n<td>39°</td>\n<td>36</td>\n<td>63.5°</td>\n<td>.075\"</td>\n<td>11°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W</th>\n<td>44°</td>\n<td>35.75</td>\n<td>64°</td>\n<td>.050\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G</th>\n<td>49°</td>\n<td>35.5</td>\n<td>64°</td>\n<td>.040\"</td>\n<td>12°</td>\n</tr>\n</tbody></table>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -932,6 +941,7 @@
     "image_with_text_H8wzdC",
     "f110dd87-a437-4a56-b3f6-e00c21a66308",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
+    "custom_liquid_B67ejX",
     "6c728f20-a922-40f0-bee5-f86687bddb68",
     "342fa470-7277-4291-be0f-d2979708f671",
     "custom_liquid_pMkhKJ",
