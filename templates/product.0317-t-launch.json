@@ -514,13 +514,117 @@
             "overlay_color": "#000",
             "overlay_opacity": 0
           }
+        },
+        "text_overlay_image_ePAR6e": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-6906-0317-Tech-Renderings-MILLED-FACE-AND-BACK_07807ac6-3eb8-4e2b-8d5a-3596a427ea7f.webp",
+            "link": "",
+            "text": "Milling the face and back surfaces is a high-precision process, unobtainable through forging alone, that ensures every line, curve, and angle are produced to exacting specifications to create a high-performance body design and enhancing aesthetics. It ensures the flattest face spec possible and precise control on the thickness of the club head.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Precision Milled Face & Back",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_TVfhTU": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/TechCar-GEN5-Irons-5X-FORGED-_1.png",
+            "link": "",
+            "text": "Each iron is three-times forged from 8620 soft carbon steel, creating a tight grain structure that increases its strength, prolonging the life of the grooves and enhancing the overall feel, sound, and appearance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "3X Forged Feel",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_TnHmwF": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/0317_ST_Robotic_Polishing_v2_4054766b-17ef-42d4-88d6-8c7780da2f63.webp",
+            "link": "",
+            "text": "Robotic polishing creates an extremely precise manufacturing process that ensures consistent sole and face perimeter geometry with every club. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Robotic Precision",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_CU6njq": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1605-0317-CB-Tech-Image-Needs-720x475-Dark_f29f9396-e41b-4bcc-9d9f-04eb0bd77f68.png",
+            "link": "",
+            "text": "PXG’s stunning Xtreme Dark irons are created using an advanced process called Diamond-like Carbon (DLC) coating. DLC significantly extends the reasonable lifetime of the finish. Unlike the typical black PVD used by other equipment manufacturers, DLC is a three-layer process that produces extraordinary wear resistance without influencing club performance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Xtreme Dark Finish",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "text_overlay_image_c6BnJW",
         "text_overlay_image_gTDdBX",
         "text_overlay_image_PYxDKF",
-        "text_overlay_image_BLBWhN"
+        "text_overlay_image_BLBWhN",
+        "text_overlay_image_ePAR6e",
+        "text_overlay_image_TVfhTU",
+        "text_overlay_image_TnHmwF",
+        "text_overlay_image_CU6njq"
       ],
       "settings": {
         "title": "",
