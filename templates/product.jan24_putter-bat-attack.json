@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ebd3b98a-128b-4a65-a5aa-b5f4b63063e7": {
@@ -32,7 +32,7 @@
         "cb459e26-5c60-4789-8b38-289beb93ff9d": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><p><\/p>",
+            "text": "<h1>{{ product.title }}</h1><p></p>",
             "text_style": "body"
           }
         },
@@ -57,7 +57,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV_1.png",
+        "image": "shopify://shop_images/ECOM-1820-Marquee-Images-CDPs-BR-II-900x900-BatAttack-BR2-Beauty-w-POV_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -192,7 +192,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>PRECISION-INJECTED<\/h1><p>PXG’s Battle Ready II Putters feature a thin-walled hollow body construction, injection molded core, and the thinnest face in putters. The result is a high moment of inertia (MOI) design, coupled with a remarkable sound and feel on every stroke.<\/p><p><br\/><\/p><p>The Bat Attack presents long contrasting weighted heel-toe wings designed for easy alignment to the target. This modified mallet offers the MOI and center of gravity benefits of a mallet style putter in a visually smaller package to inspire confidence on the green.<\/p>",
+            "text": "<h1>PRECISION-INJECTED</h1><p>PXG’s Battle Ready II Putters feature a thin-walled hollow body construction, injection molded core, and the thinnest face in putters. The result is a high moment of inertia (MOI) design, coupled with a remarkable sound and feel on every stroke.</p><p><br/></p><p>The Bat Attack presents long contrasting weighted heel-toe wings designed for easy alignment to the target. This modified mallet offers the MOI and center of gravity benefits of a mallet style putter in a visually smaller package to inspire confidence on the green.</p>",
             "text_style": "body"
           }
         },
@@ -217,7 +217,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/SCOR-Face.jpg",
+        "image": "shopify://shop_images/SCOR-Face.jpg",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
@@ -252,13 +252,13 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>"
+            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND</p>"
           }
         },
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>GAME CHANGING TECHNOLOGY<\/h1>",
+            "heading": "<h1>GAME CHANGING TECHNOLOGY</h1>",
             "heading_size": "h0"
           }
         },
@@ -266,7 +266,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>"
+            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)</p>"
           }
         }
       },
@@ -295,8 +295,8 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/BR20514-Edit_e55815ed-4a0e-4d5a-a948-a45de15b751e.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/837753528",
+        "cover_image": "shopify://shop_images/BR20514-Edit_e55815ed-4a0e-4d5a-a948-a45de15b751e.jpg",
+        "video_url": "https://player.vimeo.com/video/837753528",
         "description": "",
         "autoplay": false,
         "enable_controls": true,
@@ -315,7 +315,7 @@
         "65a40fa9-2b89-480a-9530-226b3b110309": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>HOSEL OPTIONS<\/h1>",
+            "heading": "<h1>HOSEL OPTIONS</h1>",
             "heading_size": "h0"
           }
         }
@@ -358,7 +358,7 @@
         "3cf4db0b-b14f-44c3-99fe-02fda89e0c69": {
           "type": "text",
           "settings": {
-            "text": "<h2>THE BATTLE READY II COLLECTION<\/h2><p>Beautiful tour-proven designs with game-changing technology. Learn about the entire collection of Battle Ready II putters.<\/p>",
+            "text": "<h2>THE BATTLE READY II COLLECTION</h2><p>Beautiful tour-proven designs with game-changing technology. Learn about the entire collection of Battle Ready II putters.</p>",
             "text_style": "body"
           }
         },
@@ -380,7 +380,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Heads.jpg",
+        "image": "shopify://shop_images/Heads.jpg",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "image_first",
@@ -411,14 +411,12 @@
     "f110dd87-a437-4a56-b3f6-e00c21a66308": {
       "type": "custom-liquid",
       "custom_css": [
-        "table {border-collapse: collapse; border-spacing: 0; font-weight: 400; width: 100%; color: #000000;}",
-        ".table-dark {color: white; background-color: #343a40;}",
-        ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
+
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specifications\" class=\"page-width grid-item-container pb-6 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: center;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3\">\n<div class=\"component-table bg-medium pt-3\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-left text-lg-center pt-5 pb-3\">\n<h2 class=\"header-output h2 standard  theme-override-color_black\">\nBattle Ready II Bat Attack Specs\n<\/h2>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-medium text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nHosel Type\n<\/th>\n<th scope=\"col\">\nStock<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMinimum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nMaximum<br>Head Weight\n<\/th>\n<th scope=\"col\">\nLoft\n<\/th>\n<th scope=\"col\">\nLie\n<\/th>\n<th scope=\"col\">\nHang Angle\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Double Bend<\/th>\n<td>375g<\/td>\n<td>345g<\/td>\n<td>415g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Face Balanced<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Heel Shafted<\/th>\n<td>385g<\/td>\n<td>355g<\/td>\n<td>425g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Significant Toe Hang<\/td>\n<td>Half Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Plumber's Neck<\/th>\n<td>395g<\/td>\n<td>365g<\/td>\n<td>435g<\/td>\n<td>3°<\/td>\n<td>70°<\/td>\n<td>Mid Toe Hang<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">Armlock<\/th>\n<td>420g<\/td>\n<td>390g<\/td>\n<td>460g<\/td>\n<td>7°<\/td>\n<td>73°<\/td>\n<td>Face Balanced<\/td>\n<td>Full Shaft<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>",
-        "color_scheme": "inverse",
-        "padding_top": 40,
+        "custom_liquid": "<div class=\"center\">\n<h2>\nBattle Ready II Bat Attack Specs\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Hosel Type\n  </th>\n  <th scope=\"col\">\n  Stock<br>Head Weight\n  </th>\n  <th scope=\"col\">\n  Minimum<br>Head Weight\n  </th>\n  <th scope=\"col\">\n  Maximum<br>Head Weight\n  </th>\n  <th scope=\"col\">\n  Loft\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Hang Angle\n  </th>\n  <th scope=\"col\">\n  Offset\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">Center Shafted</th>\n  <td>360g</td>\n  <td>345g</td>\n  <td>380g</td>\n  <td>3°</td>\n  <td>70°</td>\n  <td>Face Balanced</td>\n  <td>None</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">Double Bend</th>\n  <td>360g</td>\n  <td>345g</td>\n  <td>380g</td>\n  <td>3°</td>\n  <td>70°</td>\n  <td>Face Balanced</td>\n  <td>Half Shaft</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">Heel Shafted</th>\n  <td>370g</td>\n  <td>355g</td>\n  <td>390g</td>\n  <td>3°</td>\n  <td>70°</td>\n  <td>Significant Toe Hang</td>\n  <td>Half Shaft</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">Plumber's Neck</th>\n  <td>380g</td>\n  <td>365g</td>\n  <td>400g</td>\n  <td>3°</td>\n  <td>70°</td>\n  <td>Mid Toe Hang</td>\n  <td>Full Shaft</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">Armlock</th>\n  <td>405g</td>\n  <td>390g</td>\n  <td>425g</td>\n  <td>7°</td>\n  <td>73°</td>\n  <td>Face Balanced</td>\n  <td>Full Shaft</td>\n  </tr>\n  </tbody></table></div>",
+        "color_scheme": "background-1",
+        "padding_top": 4,
         "padding_bottom": 52
       }
     },
@@ -446,7 +444,7 @@
         "7e717db0-a077-4766-a879-4c77497a9e0c": {
           "type": "text",
           "settings": {
-            "text": "<h2>AVAILABLE WITH M16<\/h2><p>The PXG M16 Putter Shaft is 26% stiffer than a traditional steel putter shaft. The increased shaft stiffness delivers improved accuracy, stability, and consistency by reducing the amount of face rotation at impact.<\/p><p>In robot testing, The M16 Putter Shaft delivers 37% more accuracy than a traditional steel shaft.<\/p>",
+            "text": "<h2>AVAILABLE WITH M16</h2><p>The PXG M16 Putter Shaft is 26% stiffer than a traditional steel putter shaft. The increased shaft stiffness delivers improved accuracy, stability, and consistency by reducing the amount of face rotation at impact.</p><p>In robot testing, The M16 Putter Shaft delivers 37% more accuracy than a traditional steel shaft.</p>",
             "text_style": "body"
           }
         },
@@ -468,7 +466,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/M16-Carousel-Images-Matrix.png",
+        "image": "shopify://shop_images/M16-Carousel-Images-Matrix.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -520,7 +518,7 @@
         "26764e7e-8df0-496a-8897-b8836d939123": {
           "type": "text",
           "settings": {
-            "text": "<h2>NEW PERFORMANCE PUTTER GRIPS<\/h2><p>PXG's new performance putter grips were designed to meet a variety of grip preferences and stroke styles to give golfers the edge they need on the green. Whether you're a traditionalist, claw grip fanatic, or armlock aficionado - PXG's seven grip profiles offer versatility and comfort for improved control, stability and performance in all conditions.<\/p>",
+            "text": "<h2>NEW PERFORMANCE PUTTER GRIPS</h2><p>PXG's new performance putter grips were designed to meet a variety of grip preferences and stroke styles to give golfers the edge they need on the green. Whether you're a traditionalist, claw grip fanatic, or armlock aficionado - PXG's seven grip profiles offer versatility and comfort for improved control, stability and performance in all conditions.</p>",
             "text_style": "body"
           }
         },
@@ -542,7 +540,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/PXGM-10304-Putter-Grips-670x400.jpg",
+        "image": "shopify://shop_images/PXGM-10304-Putter-Grips-670x400.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -635,7 +633,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-In-Bag-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-In-Bag-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -661,7 +659,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-2": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -687,7 +685,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -713,7 +711,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-4": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -768,7 +766,7 @@
         "template--21504003047731__47be7851-cab6-4ff2-a004-69ee2ae8f5bc-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <\/p>"
+            "text": "<h2>WE GOT YOUR STICKS. PERIOD.</h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. </p>"
           }
         }
       },
