@@ -714,15 +714,6 @@
         "padding_bottom": 80
       }
     },
-    "custom_liquid_W9dFFx": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nBLACK OPS DRIVER SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Model\n  </th>\n  <th scope=\"col\">\n  Lofts\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Length\n  </th>\n  <th scope=\"col\">\n  Head Mass\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS</th>\n  <td>8°, 9°, 10.5°, 12° <br> LH 9°, 10.5°, 12°</td>\n  <td>60°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS TOUR-1</th>\n  <td>8°, 9°, 10.5° <br> LH 9°</td>\n  <td>58.5°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  </tbody></table></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "6c728f20-a922-40f0-bee5-f86687bddb68": {
       "type": "gallery",
       "blocks": {
@@ -853,6 +844,15 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_W9dFFx": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nBLACK OPS DRIVER SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Model\n  </th>\n  <th scope=\"col\">\n  Lofts\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Length\n  </th>\n  <th scope=\"col\">\n  Head Mass\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS</th>\n  <td>8°, 9°, 10.5°, 12° <br> LH 9°, 10.5°, 12°</td>\n  <td>60°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">0311 BLACK OPS TOUR-1</th>\n  <td>8°, 9°, 10.5° <br> LH 9°</td>\n  <td>58.5°</td>\n  <td>45.5\"</td>\n  <td>203g</td>\n  </tr>\n  </tbody></table></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed": {
@@ -1182,8 +1182,8 @@
     "gallery_below_rV3Pda",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
-    "custom_liquid_W9dFFx",
     "6c728f20-a922-40f0-bee5-f86687bddb68",
+    "custom_liquid_W9dFFx",
     "5835dacd-a5f2-48f3-8f89-ed610332d2ed",
     "b7fc0672-7b25-4049-85cc-dcfee1f85064",
     "multicolumn_YJ3icm",
