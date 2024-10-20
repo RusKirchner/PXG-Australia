@@ -671,7 +671,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 12,
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
