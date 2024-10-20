@@ -289,6 +289,130 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_ckmBfF": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_RwcjER": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1832-Technology-Feature-Image-720x475-Bat-Attack-BR2-Hollow-Body.png",
+            "link": "",
+            "text": "Traditional solid body putters have unwanted mass near the center of gravity, which limits MOI. The hollow body construction in Battle Ready II repositions mass to the extreme perimeter of the putter to improve consistency on mis-hits.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Improved MOI with HOLLOW BODY CONSTRUCTION",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_dUXxwi": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_CgYJ7J": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_ghWRpj": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_RwcjER",
+        "text_overlay_image_dUXxwi",
+        "text_overlay_image_CgYJ7J",
+        "text_overlay_image_ghWRpj"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "grid",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
       "type": "video",
       "settings": {
@@ -964,6 +1088,7 @@
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_ckmBfF",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
