@@ -289,6 +289,159 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_hDPMQx": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_tiey4q": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1832-Technology-Feature-Image-720x475-One-and-Done-BR2-Hollow-Body.webp",
+            "link": "",
+            "text": "Traditional solid body putters have unwanted mass near the center of gravity, which limits MOI. The hollow body construction in Battle Ready II repositions mass to the extreme perimeter of the putter to improve consistency on mis-hits.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Improved MOI with HOLLOW BODY CONSTRUCTION",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_UJnKiA": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1832-Technology-Feature-Image-720x475-One-and-Done-BR2-Angle-Xray.webp",
+            "link": "",
+            "text": "PXG Battle Ready II Putters feature S COR, a lightweight polymer injected into the body of each putter. S COR bonds seamlessly with the ultra-thin face, enhancing MOI while simultaneously reducing vibrations to provide a superior sound and feel.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "S Cor™ Technology",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_i3fyKF": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1817-CDP-Battle-Ready-II-720x475-Thinnest-Face-in-Putters-V2_39b60f5c-d71c-4a40-b453-9e7a6cfbc9ec.webp",
+            "link": "",
+            "text": "PXG’s hollow body putter design, inspired by the company’s celebrated flagship irons, enabled PXG engineers to develop an ultra-thin putter face. The highly responsive face is just 0.055” thick, which enables the center of gravity to be positioned farther back in the clubhead and increases the moment of inertia (MOI).",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "The Thinnest Face In Putters",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_VXRWKy": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1817-CDP-Battle-Ready-II-720x475-Pyramid-Face-Pattern_b0649073-13d3-4f96-ab62-5b517c7e0955.png",
+            "link": "",
+            "text": "The third iteration of our pyramid face structure boasts a more aggressive milling that improves ball roll characteristics. This new face pattern offers the soft sound of an insert putter, while maintaining the responsive feel of a solid milled putter.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "REFINED FACE PATTERN",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_4Fdkek": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1832-Technology-Feature-Image-720x475-One-and-Done-BR2-Weighting.webp",
+            "link": "",
+            "text": "The balance of your Battle Ready II Putter can be fine-tuned by changing the location and mass of the weights. Further fine-tuning with our selection of hosels will ensure optimal launch conditions based on your stroke and preferences.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "PRECISION WEIGHTING",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_tiey4q",
+        "text_overlay_image_UJnKiA",
+        "text_overlay_image_i3fyKF",
+        "text_overlay_image_VXRWKy",
+        "text_overlay_image_4Fdkek"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
       "type": "video",
       "settings": {
@@ -964,6 +1117,7 @@
     "66b2b35f-8b26-4217-89e5-5a1d7643d852",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "5f037c15-7714-4621-afad-1e999cc27872",
+    "gallery_below_hDPMQx",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
