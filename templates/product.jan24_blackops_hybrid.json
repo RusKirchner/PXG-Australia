@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "169699214611e587ad": {
@@ -32,7 +32,7 @@
         "template--21556079886643__d77bae78-ca34-4203-971f-8b01b071f8e5-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>“I have often wondered why golfers are content to give up distance to achieve forgiveness,” said PXG founder and CEO Bob Parsons. “We’ve spent much of our R&D efforts focused on that challenge, and I am proud to say … we’ve cracked that nut. Black Ops Woods are straight like an arrow, more forgiving than a priest on Sunday, and absolutely stunning to boot!”<\/p>",
+            "text": "<p>“I have often wondered why golfers are content to give up distance to achieve forgiveness,” said PXG founder and CEO Bob Parsons. “We’ve spent much of our R&D efforts focused on that challenge, and I am proud to say … we’ve cracked that nut. Black Ops Woods are straight like an arrow, more forgiving than a priest on Sunday, and absolutely stunning to boot!”</p>",
             "text_style": "body"
           }
         },
@@ -56,7 +56,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Black-Ops-Marquees-600x600-Hybrid_1_3bad8047-11e4-43f9-976a-8d1acde960cf.png",
+        "image": "shopify://shop_images/Black-Ops-Marquees-600x600-Hybrid_1_3bad8047-11e4-43f9-976a-8d1acde960cf.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -90,7 +90,7 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>GEN6 DRIVERS SCORE A 93% WIN RATE AGAINST COMPETITORS<\/h1><p><em>We put our GEN6 Drivers to the test against other popular brands and...we CRUSHED it. If you want to hit more fairways and lower your scores, GEN6 is the driver for you. And we have the numbers to prove it.<\/em><\/p>",
+            "heading": "<h1>GEN6 DRIVERS SCORE A 93% WIN RATE AGAINST COMPETITORS</h1><p><em>We put our GEN6 Drivers to the test against other popular brands and...we CRUSHED it. If you want to hit more fairways and lower your scores, GEN6 is the driver for you. And we have the numbers to prove it.</em></p>",
             "heading_size": "hxl"
           }
         }
@@ -119,15 +119,15 @@
         "template--21556079886643__a9f0dbf1-7211-406b-8b6c-5dddda839559-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gen6driverchallengeyards.webp",
+            "image": "shopify://shop_images/gen6driverchallengeyards.webp",
             "icon": "check",
             "title": "",
-            "text": "<h2>MORE DISTANCE<\/h2><h3>WINNING GEN6 DRIVERS OUTDROVE COMPETITORS BY AN AVERAGE OF 9.9 YARDS<\/h3>",
+            "text": "<h2>MORE DISTANCE</h2><h3>WINNING GEN6 DRIVERS OUTDROVE COMPETITORS BY AN AVERAGE OF 9.9 YARDS</h3>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "card_color_text": "#ffffff",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -136,15 +136,15 @@
         "b3b6a1d7-fab6-44d0-a58a-10aeb81d3c25": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Driver-Challenge.png",
+            "image": "shopify://shop_images/GEN6-Driver-Challenge.png",
             "icon": "check",
             "title": "",
-            "text": "<h3><a href=\"https:\/\/www.pxg.com\/en-us\/landing\/gen6-driver-challenge.html\" target=\"_self\">LEARN MORE ABOUT THE GEN6 DRIVER CHALLENGE<\/a><\/h3>",
+            "text": "<h3><a href=\"https://www.pxg.com/en-us/landing/gen6-driver-challenge.html\" target=\"_self\">LEARN MORE ABOUT THE GEN6 DRIVER CHALLENGE</a></h3>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "card_color_text": "#ffffff",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -153,15 +153,15 @@
         "6eb6fefe-242c-426e-b7e9-a8dab2810b4b": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gen6driverchallengepercent.png",
+            "image": "shopify://shop_images/gen6driverchallengepercent.png",
             "icon": "check",
             "title": "",
-            "text": "<h2>TIGHTER DISPERSION<\/h2><h3>WINNING GEN6 DRIVERS DISPERSION WAS TIGHTER BY AN AVERAGE OF 35%<\/h3>",
+            "text": "<h2>TIGHTER DISPERSION</h2><h3>WINNING GEN6 DRIVERS DISPERSION WAS TIGHTER BY AN AVERAGE OF 35%</h3>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "card_color_text": "#ffffff",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -220,7 +220,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 GEN6 Driver Specs\n<\/h1>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>18°<\/td>\n<td>39.375\"<\/td>\n<td>60.5°<\/td>\n<td>.250\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>20°<\/td>\n<td>38.75\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>23°<\/td>\n<td>38.125\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>27°<\/td>\n<td>37.5\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>31°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>36°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.105\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>41°<\/td>\n<td>36.25\"<\/td>\n<td>63.5°<\/td>\n<td>.080\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>47°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.070\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S<\/th>\n<td>54°<\/td>\n<td>35.75\"<\/td>\n<td>63.5°<\/td>\n<td>.040\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L<\/th>\n<td>60°<\/td>\n<td>35.5\"<\/td>\n<td>63.5°<\/td>\n<td>.030\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 GEN6 Driver Specs\n</h1>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n</th>\n<th scope=\"col\">\nLofts\n</th>\n<th scope=\"col\">\nStandard Length (inches)\n</th>\n<th scope=\"col\">\nStandard Lie\n</th>\n<th scope=\"col\">\nOffset\n</th>\n<th scope=\"col\">\nBounce\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4</th>\n<td>18°</td>\n<td>39.375\"</td>\n<td>60.5°</td>\n<td>.250\"</td>\n<td>6°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5</th>\n<td>20°</td>\n<td>38.75\"</td>\n<td>61°</td>\n<td>.220\"</td>\n<td>7°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6</th>\n<td>23°</td>\n<td>38.125\"</td>\n<td>61.5°</td>\n<td>.190\"</td>\n<td>8°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7</th>\n<td>27°</td>\n<td>37.5\"</td>\n<td>62°</td>\n<td>.160\"</td>\n<td>9°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8</th>\n<td>31°</td>\n<td>37\"</td>\n<td>62.5°</td>\n<td>.130\"</td>\n<td>10°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9</th>\n<td>36°</td>\n<td>36.5\"</td>\n<td>63°</td>\n<td>.105\"</td>\n<td>11°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W</th>\n<td>41°</td>\n<td>36.25\"</td>\n<td>63.5°</td>\n<td>.080\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G</th>\n<td>47°</td>\n<td>36\"</td>\n<td>63.5°</td>\n<td>.070\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S</th>\n<td>54°</td>\n<td>35.75\"</td>\n<td>63.5°</td>\n<td>.040\"</td>\n<td>13°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L</th>\n<td>60°</td>\n<td>35.5\"</td>\n<td>63.5°</td>\n<td>.030\"</td>\n<td>13°</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -241,7 +241,7 @@
         "400f67d4-4fa1-479a-bf12-3b66f2828119": {
           "type": "text",
           "settings": {
-            "text": "<h2>EFFORTLESS PERFORMANCE, ULTIMATE CONTROL.<\/h2><p>Presented in a clean, aerodynamic aesthetic, PXG 0311 Black Ops Hybrids are an easy to hit option for golfers at any skill level. Featuring PXG’s most advanced technology engineered to work in concert with your swing, Black Ops Hybrids deliver an optimal blend of forgiveness, accuracy, and distance. <\/p><ul><li>High MOI<\/li><li>Incredible Forgiveness<\/li><li>Maximum Distance<\/li><li>Mid-spin Performance<\/li><li>Extremely Fast Ball Speeds<\/li><li>Tight Dispersion<\/li><li>Outstanding Sound and Feel<\/li><\/ul>",
+            "text": "<h2>EFFORTLESS PERFORMANCE, ULTIMATE CONTROL.</h2><p>Presented in a clean, aerodynamic aesthetic, PXG 0311 Black Ops Hybrids are an easy to hit option for golfers at any skill level. Featuring PXG’s most advanced technology engineered to work in concert with your swing, Black Ops Hybrids deliver an optimal blend of forgiveness, accuracy, and distance. </p><ul><li>High MOI</li><li>Incredible Forgiveness</li><li>Maximum Distance</li><li>Mid-spin Performance</li><li>Extremely Fast Ball Speeds</li><li>Tight Dispersion</li><li>Outstanding Sound and Feel</li></ul>",
             "text_style": "body"
           }
         },
@@ -262,7 +262,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/hybrids.jpg",
+        "image": "shopify://shop_images/hybrids.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -296,8 +296,8 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/Black-Ops-Fairway-and-Hybrid---Photography-on-Glass.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/PXGM-11287_BlackOps_Sizzle_121123_v2_16x9_US.mp4",
+        "cover_image": "shopify://shop_images/Black-Ops-Fairway-and-Hybrid---Photography-on-Glass.jpg",
+        "video_hosted": "shopify://files/videos/PXGM-11287_BlackOps_Sizzle_121123_v2_16x9_US.mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -317,7 +317,7 @@
         "ab506e52-9f05-463c-83b9-8049351402a8": {
           "type": "text",
           "settings": {
-            "text": "<h2>INTRODUCING NEW BLACK OPS BREAKTHROUGH TECHNOLOGY<\/h2>"
+            "text": "<h2>INTRODUCING NEW BLACK OPS BREAKTHROUGH TECHNOLOGY</h2>"
           }
         }
       },
@@ -398,15 +398,16 @@
     "77bbc053-b9f9-4e59-811b-31ef30c2709c": {
       "type": "rich-text",
       "blocks": {
-        "template--21409675477299__77bbc053-b9f9-4e59-811b-31ef30c2709c-text-1": {
-          "type": "text",
+        "heading_MNPdUM": {
+          "type": "heading",
           "settings": {
-            "text": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>"
+            "heading": "<p>TECHNOLOGY THAT PERFORMS</p>",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "template--21409675477299__77bbc053-b9f9-4e59-811b-31ef30c2709c-text-1"
+        "heading_MNPdUM"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -417,6 +418,159 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "gallery_below_LbmqR6": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_t4cVUC": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-Face-Shape.webp",
+            "link": "",
+            "text": "PXG 0311 Black Ops Hybrids present a high-strength steel face design that is 10.5% thinner than previous generations and optimized for extremely fast ball speed performance. The square face shifts the perimeter skirt more vertical, increasing the surface area to significantly boost forgiveness.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "HIGH-SPEED SQUARE FACE",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_YdTU7M": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-Crown.webp",
+            "link": "",
+            "text": "The PXG 0311 Black Ops Hybrid crown is made from high-grade carbon fiber. This lightweight material saves mass in the crown, allowing it to be redistributed low and to the perimeter of the clubhead for optimal CG and a higher MOI.  ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "HIGH-STRENGTH CARBON FIBER CROWN",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_Wibrqc": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-Sound-and-Feel.webp",
+            "link": "",
+            "text": "Through rigorous modal analysis testing, PXG designed an innovative supported weight structure that delivers unbelievable sound and feel. The Precision Weighting Technology is shifted to the extreme perimeter of the clubhead, anchoring the weight ports to the outer wall. That positioning creates a stiff, stable structure and a sophisticated internal geometry that generates high frequency vibrations. Using modal analysis to study vibration, PXG determined the ideal frequency range that produces a more optimal feel and sound at impact.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "SUPPORTED WEIGHT STRUCTURE",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_pi66YU": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-04-Bulge-and-Roll.png",
+            "link": "",
+            "text": "Robotic polishing is a high-precision process that ensures the face thickness and the face curvature (the bulge and roll radii) are manufactured to design specs that maximize performance and impart corrective spin for ideal ball flight on off-center shots.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "ROBOTIC POLISHING",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_AGYnmr": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-Head.webp",
+            "link": "",
+            "text": "Made from a high-strength AM355 steel, the clubhead body features a squared face design and a flat sole geometry that positions mass low and to the perimeter, delivering increased forgiveness. The innovative shape also helps position the center-of-gravity lower for high launch and optimal spin.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "HEAD DESIGN",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_t4cVUC",
+        "text_overlay_image_YdTU7M",
+        "text_overlay_image_Wibrqc",
+        "text_overlay_image_pi66YU",
+        "text_overlay_image_AGYnmr"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "image_with_text_hpx8be": {
@@ -434,7 +588,7 @@
         "text_MqADDg": {
           "type": "text",
           "settings": {
-            "text": "<h2>PRECISION WEIGHTING<\/h2><p>The PXG 0311 Black Ops Hybrids present two light (2.5g) and one heavy (12.5g) sole weights that are interchangeable to support preferred spin and bias settings.<\/p><p><br\/><\/p><p>Weights are available in 2.5, 5, 7.5, 10, 12.5, 15, 17.5, and 20-gram options and can also be used to adjust the overall head mass.<\/p><p><span style=\"text-decoration:underline\"><strong>WEIGHT IN TOE<\/strong><\/span><\/p><p>• Fade Bias<\/p><p>• Pulls CG Toe Side<\/p><p>• Anti-Hook Performance<br\/><\/p><p><span style=\"text-decoration:underline\"><strong>WEIGHT IN HEEL<\/strong><\/span> <\/p><p>• Draw Bias<\/p><p>• Pulls CG Heel Side<\/p><p>• Easier to Square the Face <br\/><\/p><p><span style=\"text-decoration:underline\"><strong>WEIGHT BACK <\/strong><\/span><\/p><p>• High MOI<\/p><p>• Added Forgiveness<\/p><p>• High Trajectory Launch Conditions <\/p>",
+            "text": "<h2>PRECISION WEIGHTING</h2><p>The PXG 0311 Black Ops Hybrids present two light (2.5g) and one heavy (12.5g) sole weights that are interchangeable to support preferred spin and bias settings.</p><p><br/></p><p>Weights are available in 2.5, 5, 7.5, 10, 12.5, 15, 17.5, and 20-gram options and can also be used to adjust the overall head mass.</p><p><span style=\"text-decoration:underline\"><strong>WEIGHT IN TOE</strong></span></p><p>• Fade Bias</p><p>• Pulls CG Toe Side</p><p>• Anti-Hook Performance<br/></p><p><span style=\"text-decoration:underline\"><strong>WEIGHT IN HEEL</strong></span> </p><p>• Draw Bias</p><p>• Pulls CG Heel Side</p><p>• Easier to Square the Face <br/></p><p><span style=\"text-decoration:underline\"><strong>WEIGHT BACK </strong></span></p><p>• High MOI</p><p>• Added Forgiveness</p><p>• High Trajectory Launch Conditions </p>",
             "text_style": "body"
           }
         },
@@ -455,7 +609,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/PXGM-11390-Black-Ops-Hybrid-720x475-Weighting_1.png",
+        "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-720x475-Weighting_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -498,7 +652,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>PRECISION WEIGHTING<\/h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.<\/p>",
+            "text": "<h1>PRECISION WEIGHTING</h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.</p>",
             "text_style": "body"
           }
         },
@@ -522,7 +676,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
+        "image": "shopify://shop_images/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -605,7 +759,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-04_1.png",
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-04_1.png",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -631,7 +785,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-2": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-02_1.png",
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-02_1.png",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -657,7 +811,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-03_1.png",
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-03_1.png",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -683,7 +837,7 @@
         "text_overlay_image_8iBPFn": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-01_1.png",
+            "image": "shopify://shop_images/PXGM-11390-Black-Ops-Hybrid-1200x800-Image-01_1.png",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -739,8 +893,8 @@
         "title": "Chrome or Black",
         "subtitle": "your choice",
         "heading_size": "h1",
-        "before_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
-        "after_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
+        "before_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
+        "after_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
         "image_height": 100,
         "image_fit": "cover",
         "before_text": "Chrome",
@@ -769,14 +923,14 @@
         "168a096b-d502-417f-b0ca-426a2a9cae2d": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2>",
+            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.</h2>",
             "heading_size": "h0"
           }
         },
         "f4bb9d7f-8f59-40e2-972c-abd2af401648": {
           "type": "text",
           "settings": {
-            "text": "<h2><\/h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br\/><\/p>"
+            "text": "<h2></h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br/></p>"
           }
         }
       },
@@ -802,15 +956,15 @@
         "column_pfqcUN": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blackopstour-chart.jpg",
+            "image": "shopify://shop_images/blackopstour-chart.jpg",
             "icon": "check",
             "title": "",
-            "text": "<h4>LOFTS<\/h4><p>8°, 9°, 10.5°<\/p><p>(LH 9°)<\/p><h4>CLUB PROFILE<\/h4><ul><li>Designed for advanced players<\/li><li>Ultra-low spin<\/li><li>Lower ball flight<\/li><li>Very Forgiving<\/li><li>3 weight ports<\/li><li>Compact, tour-inspired design with a deep face and a more curved crown structure<\/li><\/ul>",
+            "text": "<h4>LOFTS</h4><p>8°, 9°, 10.5°</p><p>(LH 9°)</p><h4>CLUB PROFILE</h4><ul><li>Designed for advanced players</li><li>Ultra-low spin</li><li>Lower ball flight</li><li>Very Forgiving</li><li>3 weight ports</li><li>Compact, tour-inspired design with a deep face and a more curved crown structure</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
@@ -819,15 +973,15 @@
         "column_zV6g7W": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blackops-chart.jpg",
+            "image": "shopify://shop_images/blackops-chart.jpg",
             "icon": "check",
             "title": "",
-            "text": "<h4>LOFTS<\/h4><p>8°, 9°, 10.5°, 12°<\/p><p>(LH 9°, 10.5°, 12°)<\/p><h4>CLUB PROFILE<\/h4><ul><li>Versatile design, optimized for players of all abilities<\/li><li>Low spin<\/li><li>High launch<\/li><li>Extremely Forgiving<\/li><li>3 weight ports, adjustable up to 10K MOI<\/li><li>Larger head shape optimized to deliver maximum miss-hit performance all over the face<\/li><\/ul>",
+            "text": "<h4>LOFTS</h4><p>8°, 9°, 10.5°, 12°</p><p>(LH 9°, 10.5°, 12°)</p><h4>CLUB PROFILE</h4><ul><li>Versatile design, optimized for players of all abilities</li><li>Low spin</li><li>High launch</li><li>Extremely Forgiving</li><li>3 weight ports, adjustable up to 10K MOI</li><li>Larger head shape optimized to deliver maximum miss-hit performance all over the face</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
@@ -1059,6 +1213,7 @@
     "5d312b79-90c2-4b13-884f-3e12635705dd",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "77bbc053-b9f9-4e59-811b-31ef30c2709c",
+    "gallery_below_LbmqR6",
     "image_with_text_hpx8be",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
