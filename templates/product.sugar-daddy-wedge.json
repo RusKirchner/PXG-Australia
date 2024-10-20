@@ -467,6 +467,15 @@
         "padding_bottom": 40
       }
     },
+    "custom_liquid_kUhram": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 SUGAR DADDY II WEDGE SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Loft\n  </th>\n  <th scope=\"col\">\n  Length (inches)\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Bounce\n  </th>\n  <th scope=\"col\">\n  Offset\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">50°</th>\n  <td>35.5\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.050\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">52°</th>\n  <td>35.5\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.045\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">54°</th>\n  <td>35.25\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.040\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">56°</th>\n  <td>35.25\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.035\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">58°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.030\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">60°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.025\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">62°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.020\"</td>\n  </tr>\n  </tbody></table></div>",
+        "color_scheme": "",
+        "padding_top": 4,
+        "padding_bottom": 32
+      }
+    },
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b": {
       "type": "image-with-text",
       "blocks": {
@@ -542,15 +551,6 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1f2428"
-      }
-    },
-    "custom_liquid_kUhram": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nPXG 0311 SUGAR DADDY II WEDGE SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n  <tbody><tr>\n  <th scope=\"col\" class=\"table-head\">\n  Loft\n  </th>\n  <th scope=\"col\">\n  Length (inches)\n  </th>\n  <th scope=\"col\">\n  Lie\n  </th>\n  <th scope=\"col\">\n  Bounce\n  </th>\n  <th scope=\"col\">\n  Offset\n  </th>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">50°</th>\n  <td>35.5\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.050\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">52°</th>\n  <td>35.5\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.045\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">54°</th>\n  <td>35.25\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.040\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">56°</th>\n  <td>35.25\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.035\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">58°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.030\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">60°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.025\"</td>\n  </tr>\n  <tr>\n  <th class=\"table-head\" scope=\"row\">62°</th>\n  <td>35\"</td>\n  <td>64°</td>\n  <td>10° C-grind / 13° BP-grind</td>\n  <td>0.020\"</td>\n  </tr>\n  </tbody></table></div>",
-        "color_scheme": "",
-        "padding_top": 4,
-        "padding_bottom": 52
       }
     },
     "image_with_text_H8wzdC": {
@@ -1218,8 +1218,8 @@
     "gallery_below_6Pj47N",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
-    "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
     "custom_liquid_kUhram",
+    "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
     "image_with_text_H8wzdC",
     "d22c8fe6-3741-44fa-8560-0ad1f405b19f",
     "f110dd87-a437-4a56-b3f6-e00c21a66308",
