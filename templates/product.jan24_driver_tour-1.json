@@ -522,10 +522,35 @@
             "overlay_opacity": 0
           }
         },
+        "text_overlay_image_Yn3wED": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-11388-Black-Ops-Tour-1-Driver-720x475-Head.webp",
+            "link": "",
+            "text": "This proprietary design helps to optimize the driver's performance by ensuring consistent and efficient energy transfer across various impact points on the clubface. The result is increased ball speed and improved distance.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "OPTIMIZED VARIABLE FACE THICKNESS",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#020202",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
         "text_overlay_image_APgLtB": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/PXGM-11387-Black-Ops-Driver-720x475-Sound-and-Feel.png",
+            "image": "shopify://shop_images/PXGM-11388-Black-Ops-Tour-1-Driver-720x475-Sound-and-Feel.png",
             "link": "",
             "text": "Natural frequency optimization involves fine-tuning the inherent vibration patterns or resonances within the clubhead's structure to enhance performance. This optimization aims to improve the driver's feel, sound, and performance upon impact with the golf ball.",
             "text_style": "subtitle",
@@ -553,6 +578,7 @@
         "text_overlay_image_qtbyxy",
         "text_overlay_image_3UKtUT",
         "text_overlay_image_BdTr4K",
+        "text_overlay_image_Yn3wED",
         "text_overlay_image_APgLtB"
       ],
       "settings": {
