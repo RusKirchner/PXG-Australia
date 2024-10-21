@@ -487,6 +487,133 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_rDXCi3": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_jarAcW": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1833-Hosel-Section-Images-720x475-Closer-Double-Bend.png",
+            "link": "",
+            "text": "The face balanced design of the Double Bend hosel minimizes resistance to twisting and makes it easier to rotate the putter face. Optimal for players who tend to push the ball.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Double Bend",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_KKPNFa": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1833-Hosel-Section-Images-720x475-Closer-Heel-Shafted.webp",
+            "link": "",
+            "text": "The Heel Shafted hosel orients the shaft axis far into the heel side of the putter to create significant toe hang, which increases the force required to rotate the putter face. Optimal for players who tend to over rotate the putter, or pull the ball.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Heel Shafted",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_etCkpq": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1833-Hosel-Section-Images-720x475-Closer-Plumbers-Neck.png",
+            "link": "",
+            "text": "The Plumber’s Neck hosel orients the shaft axis in a heel location creating a mid-toe hang angle, which helps players square up the face. This hosel can be effectively used by both straight and arced stroke types.  ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Plumber's Neck",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_69d8MV": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ECOM-1833-Hosel-Section-Images-720x475-Closer-Armlock.png",
+            "link": "",
+            "text": "Optimal for players who desire greater control and stability or who struggle with short putts, the Armlock hosel orients the shaft axis through the CG to create a face balance hang angle.",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Armlock",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_jarAcW",
+        "text_overlay_image_KKPNFa",
+        "text_overlay_image_etCkpq",
+        "text_overlay_image_69d8MV"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b": {
       "type": "image-with-text",
       "blocks": {
@@ -1122,6 +1249,7 @@
     "gallery_below_p8TfBz",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "858c6f9c-b6ad-4e4b-8a39-2b51dbbf13f2",
+    "gallery_below_rDXCi3",
     "c3be0370-a9ec-41d9-b488-a18fb6d2f93b",
     "f110dd87-a437-4a56-b3f6-e00c21a66308",
     "aa41ae9c-60a2-48f0-95f8-034fdbc68912",
