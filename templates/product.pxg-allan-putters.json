@@ -785,7 +785,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "variant_price": false
+            "variant_price": true
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
