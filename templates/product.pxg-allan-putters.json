@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_with_text_64n3Fk": {
@@ -32,7 +32,7 @@
         "text_iGYX7p": {
           "type": "text",
           "settings": {
-            "text": "<h1>{{ product.title }}<\/h1><h1> <\/h1><p>The new PXG Allan Putter puts the laws of physics to work for you with Zero Torque Balance Technology that keeps your putter face square and on target, and is amazingly effective for players of all abilities and all stroke types. Packaged in an eye-catching design with incredible balance and alignment characteristics, and our back-saving new Pick-Up Pocket, PXG’s new Allan Putter performs so well, it feels like magic.<\/p>",
+            "text": "<h1>{{ product.title }}</h1><h1> </h1><p>The new PXG Allan Putter puts the laws of physics to work for you with Zero Torque Balance Technology that keeps your putter face square and on target, and is amazingly effective for players of all abilities and all stroke types. Packaged in an eye-catching design with incredible balance and alignment characteristics, and our back-saving new Pick-Up Pocket, PXG’s new Allan Putter performs so well, it feels like magic.</p>",
             "text_style": "body"
           }
         },
@@ -57,7 +57,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/1500x1500-Marquee-Test_1.png",
+        "image": "shopify://shop_images/1500x1500-Marquee-Test_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -91,17 +91,17 @@
         "title": "RESIST THE TWIST",
         "heading_size": "h1",
         "subtitle": "Discover PXG’s innovative new Zero Torque Balance Technology that powers the Allan Putter, resisting the twist and helping you sink more putts.",
-        "video1_cover_image": "shopify:\/\/shop_images\/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
-        "video1_url": "https:\/\/player.vimeo.com\/video\/999600357",
+        "video1_cover_image": "shopify://shop_images/1915770063-c44dd50b44092f038cea12f8f01a94ce6882cfce5eba19f81ce3ce004c0959e8-d.jpg",
+        "video1_url": "https://player.vimeo.com/video/999600357",
         "video1_description": "INTRODUCING THE PXG ALLAN PUTTER",
-        "video1_text": "<p>A quick overview of our innovative new putter technology and design.<\/p>",
+        "video1_text": "<p>A quick overview of our innovative new putter technology and design.</p>",
         "video1_autoplay": false,
         "enable_video1_controls": true,
         "enable_video1_looping": true,
-        "video2_cover_image": "shopify:\/\/shop_images\/1917934857-73b36b6884875adc047e5880f36d7602babc21a2eed3960eaa72d78ae6a5a7c2-d.jpg",
-        "video2_url": "https:\/\/player.vimeo.com\/video\/1000959467",
+        "video2_cover_image": "shopify://shop_images/1917934857-73b36b6884875adc047e5880f36d7602babc21a2eed3960eaa72d78ae6a5a7c2-d.jpg",
+        "video2_url": "https://player.vimeo.com/video/1000959467",
         "video2_description": "DEEP DIVE THE PXG ALLAN PUTTER",
-        "video2_text": "<p>Learn about the physics behind the design and discover how each feature enhances putting consistency.<\/p>",
+        "video2_text": "<p>Learn about the physics behind the design and discover how each feature enhances putting consistency.</p>",
         "video2_autoplay": false,
         "enable_video2_controls": true,
         "enable_video2_looping": true,
@@ -118,8 +118,8 @@
         "title": "PERFECTLY BALLANCED DESIGN",
         "subtitle": "The PXG Allan Putter's Zero Torque Balance Technology ensures the face remains square to the path throughout the entire stroke.By positioning the center of gravity (CG) just below the shaft axis, no torque is generated, keeping the putter stable, balanced, and on target.",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/1917595935-5aefff6f8233c17fc29f9566f5fcdc005186b2af019008cdc52de3ecda545d54-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/1000550395?muted=1",
+        "cover_image": "shopify://shop_images/1917595935-5aefff6f8233c17fc29f9566f5fcdc005186b2af019008cdc52de3ecda545d54-d.jpg",
+        "video_url": "https://player.vimeo.com/video/1000550395?muted=1",
         "description": "",
         "autoplay": true,
         "enable_controls": true,
@@ -146,7 +146,7 @@
         "text_Pr6PYK": {
           "type": "text",
           "settings": {
-            "text": "<p>The S-hosel situates the shaft axis just above the CG, creating a toe-up balance point and minimizing torque. The proximity of the shaft axis to the CG creates stability and prevents twisting.<\/p>",
+            "text": "<p>The S-hosel situates the shaft axis just above the CG, creating a toe-up balance point and minimizing torque. The proximity of the shaft axis to the CG creates stability and prevents twisting.</p>",
             "text_style": "body"
           }
         },
@@ -170,8 +170,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "cover_image": "shopify:\/\/shop_images\/1917249035-eb2e761f8bfaf31524665753e7003ca887e85acd504e47a9c5122d78790ac5fd-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/1000962580?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "cover_image": "shopify://shop_images/1917249035-eb2e761f8bfaf31524665753e7003ca887e85acd504e47a9c5122d78790ac5fd-d.jpg",
+        "video_url": "https://player.vimeo.com/video/1000962580?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
         "description": "",
         "autoplay": true,
         "enable_controls": true,
@@ -215,7 +215,7 @@
         "text_ATtGU9": {
           "type": "text",
           "settings": {
-            "text": "<p>The Allan Putter’s multi-material hollow body construction, injected S-COR polymer, Precision Weighting Technology, Refined Pyramid Face Pattern, and ultra-thin face combine to deliver the remarkable sound, feel, and consistency you expect from PXG.<\/p>",
+            "text": "<p>The Allan Putter’s multi-material hollow body construction, injected S-COR polymer, Precision Weighting Technology, Refined Pyramid Face Pattern, and ultra-thin face combine to deliver the remarkable sound, feel, and consistency you expect from PXG.</p>",
             "text_style": "body"
           }
         },
@@ -239,8 +239,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "cover_image": "shopify:\/\/shop_images\/1917249491-743b4bb945f05d2a126a6babd8a018b9b2eaad42d32c64c3ea7f19bac35d181c-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/1000969031?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "cover_image": "shopify://shop_images/1917249491-743b4bb945f05d2a126a6babd8a018b9b2eaad42d32c64c3ea7f19bac35d181c-d.jpg",
+        "video_url": "https://player.vimeo.com/video/1000969031?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
         "description": "",
         "autoplay": true,
         "enable_controls": false,
@@ -284,7 +284,7 @@
         "text_D7kKnE": {
           "type": "text",
           "settings": {
-            "text": "<p>The innovative sole design features a Pick Up Pocket that enables golfers to quickly and easily pick-up their golf ball.<\/p>",
+            "text": "<p>The innovative sole design features a Pick Up Pocket that enables golfers to quickly and easily pick-up their golf ball.</p>",
             "text_style": "body"
           }
         },
@@ -308,8 +308,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "cover_image": "shopify:\/\/shop_images\/1917248978-9efb3db44f21c346854c8f67b72fd0da7af8e7027568d4dd0bb71c84d62a6e35-d.jpg",
-        "video_url": "https:\/\/player.vimeo.com\/video\/1000933071?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
+        "cover_image": "shopify://shop_images/1917248978-9efb3db44f21c346854c8f67b72fd0da7af8e7027568d4dd0bb71c84d62a6e35-d.jpg",
+        "video_url": "https://player.vimeo.com/video/1000933071?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&texttrack=false",
         "description": "",
         "autoplay": true,
         "enable_controls": true,
@@ -347,7 +347,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-S-Hosel.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-S-Hosel.webp",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -357,7 +357,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>S-HOSEL<\/strong><\/p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.<\/p>",
+            "block_text": "<p><strong>S-HOSEL</strong></p><p>Shaft axis is positioned just above the CG, creating a toe-up balance point. Features a 5° loft with 2° forward press, playing at 3° of standard loft.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#f9f9f9",
             "block_text_color": "#ffffff"
@@ -367,7 +367,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>STABILITY:<\/strong> Reduces twisting and enhances stability. <\/p><p><br\/><\/p><p><strong>﻿POSITIONING:<\/strong> Forward press helps position hands naturally.<\/p>",
+            "block_text": "<p><strong>STABILITY:</strong> Reduces twisting and enhances stability. </p><p><br/></p><p><strong>﻿POSITIONING:</strong> Forward press helps position hands naturally.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -378,7 +378,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Hollow.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-Hollow.webp",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -388,7 +388,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>303 SS HOLLOW BODY CONSTRUCTION<\/strong><\/p><p>Made with 303 stainless steel and features a lightweight aluminum alignment aid and sole.<\/p>",
+            "block_text": "<p><strong>303 SS HOLLOW BODY CONSTRUCTION</strong></p><p>Made with 303 stainless steel and features a lightweight aluminum alignment aid and sole.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -398,7 +398,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>QUALITY:<\/strong> Durable construction. <\/p><p><br\/><\/p><p><strong>ALIGNMENT:<\/strong> Visual aids for optimal set up.<\/p>",
+            "block_text": "<p><strong>QUALITY:</strong> Durable construction. </p><p><br/></p><p><strong>ALIGNMENT:</strong> Visual aids for optimal set up.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -409,7 +409,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-SCOR.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-SCOR.webp",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -419,7 +419,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>LIGHTWEIGHT S-COR™ POLYMER<\/strong><\/p><p>Comprises 37% of the Allan’s volume, bonds to the face and shifts weight to the edges to enhance MOI.<\/p>",
+            "block_text": "<p><strong>LIGHTWEIGHT S-COR™ POLYMER</strong></p><p>Comprises 37% of the Allan’s volume, bonds to the face and shifts weight to the edges to enhance MOI.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -429,7 +429,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>SOUND AND FEEL:<\/strong> Dampens sound and vibration for a smoother feel. <\/p><p>﻿<\/p><p><strong>PERFORMANCE: <\/strong>Helps with balance and forgiveness.<\/p>",
+            "block_text": "<p><strong>SOUND AND FEEL:</strong> Dampens sound and vibration for a smoother feel. </p><p>﻿</p><p><strong>PERFORMANCE: </strong>Helps with balance and forgiveness.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -440,7 +440,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Thin-Face.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-Thin-Face.webp",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -450,7 +450,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>THINNEST FACE IN PUTTERS<\/strong><\/p><p>At just 0.055 inches thick, the ultra-thin face is supported by the S COR™ polymer, which bonds to the face and dampens sound and vibration.<\/p>",
+            "block_text": "<p><strong>THINNEST FACE IN PUTTERS</strong></p><p>At just 0.055 inches thick, the ultra-thin face is supported by the S COR™ polymer, which bonds to the face and dampens sound and vibration.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -460,7 +460,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>SOUND AND FEEL:<\/strong> Creates the soft sounds of an insert with the responsive feel of a solid milled putter.<\/p>",
+            "block_text": "<p><strong>SOUND AND FEEL:</strong> Creates the soft sounds of an insert with the responsive feel of a solid milled putter.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -471,7 +471,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Weighting.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-Weighting.webp",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -481,7 +481,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>PRECISION WEIGHTING TECHNOLOGY<\/strong><\/p><p>Mass is redistributed to the perimeter, boosting Moment of Inertia (MOI).<\/p>",
+            "block_text": "<p><strong>PRECISION WEIGHTING TECHNOLOGY</strong></p><p>Mass is redistributed to the perimeter, boosting Moment of Inertia (MOI).</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -491,7 +491,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>FORGIVENESS:<\/strong> Further fine-tuning during a fitting will ensure optimal launch conditions based on your stroke and preferences.<\/p>",
+            "block_text": "<p><strong>FORGIVENESS:</strong> Further fine-tuning during a fitting will ensure optimal launch conditions based on your stroke and preferences.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -502,7 +502,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Face-Pattern.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-Face-Pattern.webp",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -512,7 +512,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>REFINED PYRAMID FACE PATTERN<\/strong><\/p><p>The third iteration of our pyramid face structure boasts a more aggressive milling that improves ball roll characteristics regardless of impact location.<\/p>",
+            "block_text": "<p><strong>REFINED PYRAMID FACE PATTERN</strong></p><p>The third iteration of our pyramid face structure boasts a more aggressive milling that improves ball roll characteristics regardless of impact location.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -522,7 +522,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>CONSISTENCY:<\/strong> Delivers a consistent sound and improved ball roll at impact.<\/p>",
+            "block_text": "<p><strong>CONSISTENCY:</strong> Delivers a consistent sound and improved ball roll at impact.</p>",
             "block_background_color": "#f8f8f8",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -533,7 +533,7 @@
           "settings": {
             "block_heading": "",
             "block_text": "",
-            "block_image": "shopify:\/\/shop_images\/Allan-Icons-Pick-Up-Pocket.webp",
+            "block_image": "shopify://shop_images/Allan-Icons-Pick-Up-Pocket.webp",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -543,7 +543,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>PICK UP POCKET<\/strong><\/p><p>Specially designed feature on the putter sole that allows golfers to easily retrieve their ball without bending down.<\/p>",
+            "block_text": "<p><strong>PICK UP POCKET</strong></p><p>Specially designed feature on the putter sole that allows golfers to easily retrieve their ball without bending down.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -553,7 +553,7 @@
           "type": "block",
           "settings": {
             "block_heading": "",
-            "block_text": "<p><strong>CONVENIENCE:<\/strong>Reduces back strain by offering an ergonomic solution to collecting the ball.<\/p>",
+            "block_text": "<p><strong>CONVENIENCE:</strong>Reduces back strain by offering an ergonomic solution to collecting the ball.</p>",
             "block_background_color": "#ffffff",
             "block_heading_color": "#000000",
             "block_text_color": "#000000"
@@ -596,7 +596,7 @@
     "custom_liquid_bfWzXt": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"center\">\n<h2>\nALLAN PUTTER SPECS\n<\/h2>\n<\/div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\n<b>STOCK WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MIN HEAD WEIGHT<\/b>\n<\/th>\n<th scope=\"col\">\n<b> MAX HEAD WEIGHT <\/b>\n<\/th>\n<th scope=\"col\">\n<b> LOFT*<\/b>\n<\/th>\n<th scope=\"col\">\n<b> LIE <\/b>\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">375g<\/th>\n<td>360g<\/td>\n<td>395g<\/td>\n<td>5°<\/td>\n<td>70°<\/td>\n<\/tr>\n<\/tbody><\/table><\/div>",
+        "custom_liquid": "<div class=\"center\">\n<h2>\nALLAN PUTTER SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\n<b>STOCK WEIGHT</b>\n</th>\n<th scope=\"col\">\n<b> MIN HEAD WEIGHT</b>\n</th>\n<th scope=\"col\">\n<b> MAX HEAD WEIGHT </b>\n</th>\n<th scope=\"col\">\n<b> LOFT*</b>\n</th>\n<th scope=\"col\">\n<b> LIE </b>\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">375g</th>\n<td>360g</td>\n<td>395g</td>\n<td>5°</td>\n<td>70°</td>\n</tr>\n</tbody></table></div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -608,7 +608,7 @@
         "text_overlay_image_VBBEVt": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ECOM-2993-Allen-Putter-1000x668-Lifestyle-02.jpg",
+            "image": "shopify://shop_images/ECOM-2993-Allen-Putter-1000x668-Lifestyle-02.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -634,7 +634,7 @@
         "text_overlay_image_aVq6GY": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ECOM-2993-Allen-Putter-1000x668-Lifestyle-03.jpg",
+            "image": "shopify://shop_images/ECOM-2993-Allen-Putter-1000x668-Lifestyle-03.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -660,7 +660,7 @@
         "text_overlay_image_r9AL77": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ECOM-2993-Allen-Putter-1000x668-Lifestyle-01.jpg",
+            "image": "shopify://shop_images/ECOM-2993-Allen-Putter-1000x668-Lifestyle-01.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -711,7 +711,7 @@
       "type": "apps",
       "blocks": {
         "cpb_custom_product_builder_customproductbuilder_dawn_drq6DB": {
-          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "type": "shopify://apps/cpb-custom-product-builder/blocks/customproductbuilder-dawn/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
             "personalize_it": false,
             "personalizeit-button-text": "Personalize & Add To Cart",
@@ -745,6 +745,14 @@
           "disabled": true,
           "settings": {
             "show_if_no_reviews": true
+          }
+        },
+        "text_brpXTg": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "PRE-ORDER - Shipping ETA <strong>DEC 1, 2024</strong>",
+            "text_style": "subtitle"
           }
         },
         "price": {
@@ -827,6 +835,7 @@
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "text_brpXTg",
         "price",
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
         "e592d434-8377-4309-b179-f98d4b3742a2",
@@ -867,20 +876,20 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>"
+            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND</p>"
           }
         },
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<p>PXG GEN6 IRONS RANKED #1 in Accuracy!<\/p>",
+            "heading": "<p>PXG GEN6 IRONS RANKED #1 in Accuracy!</p>",
             "heading_size": "hxl"
           }
         },
         "c4963b44-827c-4625-b7e6-66abdd941e9e": {
           "type": "text",
           "settings": {
-            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>"
+            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)</p>"
           }
         }
       },
@@ -967,8 +976,8 @@
         "title": "SAY HELLO TO NEW PXG GEN6 IRONS",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
+        "cover_image": "shopify://shop_images/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
+        "video_hosted": "shopify://files/videos/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -988,7 +997,7 @@
         "template--21409675477299__77bbc053-b9f9-4e59-811b-31ef30c2709c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>"
+            "text": "<h1>TECHNOLOGY THAT PERFORMS</h1>"
           }
         }
       },
@@ -1022,7 +1031,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>PRECISION WEIGHTING<\/h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.<\/p>",
+            "text": "<h1>PRECISION WEIGHTING</h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.</p>",
             "text_style": "body"
           }
         },
@@ -1046,7 +1055,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
+        "image": "shopify://shop_images/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -1132,7 +1141,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n<\/h1>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>18°<\/td>\n<td>39.375\"<\/td>\n<td>60.5°<\/td>\n<td>.250\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>20°<\/td>\n<td>38.75\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>23°<\/td>\n<td>38.125\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>27°<\/td>\n<td>37.5\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>31°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>36°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.105\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>41°<\/td>\n<td>36.25\"<\/td>\n<td>63.5°<\/td>\n<td>.080\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>47°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.070\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S<\/th>\n<td>54°<\/td>\n<td>35.75\"<\/td>\n<td>63.5°<\/td>\n<td>.040\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L<\/th>\n<td>60°<\/td>\n<td>35.5\"<\/td>\n<td>63.5°<\/td>\n<td>.030\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n</h1>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n</th>\n<th scope=\"col\">\nLofts\n</th>\n<th scope=\"col\">\nStandard Length (inches)\n</th>\n<th scope=\"col\">\nStandard Lie\n</th>\n<th scope=\"col\">\nOffset\n</th>\n<th scope=\"col\">\nBounce\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4</th>\n<td>18°</td>\n<td>39.375\"</td>\n<td>60.5°</td>\n<td>.250\"</td>\n<td>6°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5</th>\n<td>20°</td>\n<td>38.75\"</td>\n<td>61°</td>\n<td>.220\"</td>\n<td>7°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6</th>\n<td>23°</td>\n<td>38.125\"</td>\n<td>61.5°</td>\n<td>.190\"</td>\n<td>8°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7</th>\n<td>27°</td>\n<td>37.5\"</td>\n<td>62°</td>\n<td>.160\"</td>\n<td>9°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8</th>\n<td>31°</td>\n<td>37\"</td>\n<td>62.5°</td>\n<td>.130\"</td>\n<td>10°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9</th>\n<td>36°</td>\n<td>36.5\"</td>\n<td>63°</td>\n<td>.105\"</td>\n<td>11°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W</th>\n<td>41°</td>\n<td>36.25\"</td>\n<td>63.5°</td>\n<td>.080\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G</th>\n<td>47°</td>\n<td>36\"</td>\n<td>63.5°</td>\n<td>.070\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S</th>\n<td>54°</td>\n<td>35.75\"</td>\n<td>63.5°</td>\n<td>.040\"</td>\n<td>13°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L</th>\n<td>60°</td>\n<td>35.5\"</td>\n<td>63.5°</td>\n<td>.030\"</td>\n<td>13°</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -1144,7 +1153,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-In-Bag-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-In-Bag-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -1170,7 +1179,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-2": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -1196,7 +1205,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -1222,7 +1231,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-4": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -1277,14 +1286,14 @@
         "168a096b-d502-417f-b0ca-426a2a9cae2d": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2>",
+            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.</h2>",
             "heading_size": "h0"
           }
         },
         "f4bb9d7f-8f59-40e2-972c-abd2af401648": {
           "type": "text",
           "settings": {
-            "text": "<h2><\/h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br\/><br\/>If you need us, give Sales & Support a call at <a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG<\/a> to get on the books.<\/p>"
+            "text": "<h2></h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br/><br/>If you need us, give Sales & Support a call at <a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG</a> to get on the books.</p>"
           }
         }
       },
@@ -1312,8 +1321,8 @@
         "title": "Chrome or Black",
         "subtitle": "your choice",
         "heading_size": "h1",
-        "before_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
-        "after_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
+        "before_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
+        "after_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
         "image_height": 100,
         "image_fit": "cover",
         "before_text": "Chrome",
