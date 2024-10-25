@@ -662,6 +662,56 @@
         "padding_bottom": 36
       }
     },
+    "multicolumns_videos_blocks_N6Utje": {
+      "type": "multicolumns-videos-blocks",
+      "blocks": {
+        "video_block_nUP49t": {
+          "type": "video_block",
+          "settings": {
+            "block_background_color": "#f8f8f8",
+            "title": "",
+            "title_color": "#000000",
+            "description": "",
+            "description_color": "#333333",
+            "video_type": "youtube",
+            "video_url": "",
+            "button_text": "",
+            "button_url": "",
+            "button_background_color": "#000000",
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#000"
+          }
+        },
+        "video_block_kbzwLT": {
+          "type": "video_block",
+          "settings": {
+            "block_background_color": "#f8f8f8",
+            "title": "",
+            "title_color": "#000000",
+            "description": "",
+            "description_color": "#333333",
+            "video_type": "youtube",
+            "video_url": "",
+            "button_text": "",
+            "button_url": "",
+            "button_background_color": "#000000",
+            "button_background_color_hover": "#fff",
+            "button_text_color": "#ffffff",
+            "button_text_color_hover": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "video_block_nUP49t",
+        "video_block_kbzwLT"
+      ],
+      "settings": {
+        "section_background_color": "#ffffff",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "3c381571-e172-4fa5-beb8-79027d436231": {
       "type": "collection-list",
       "blocks": {
@@ -744,6 +794,25 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "video_98RpMc": {
+      "type": "video",
+      "settings": {
+        "title": "iNTRO TO pxg",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_url": "https://www.youtube.com/watch?v=ou8CEuGiII8",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -756,7 +825,9 @@
     "89d7b601-ae47-4d55-89bf-26b79f43060a",
     "d473dbe2-d4cb-4299-aa09-d3578d047e5c",
     "featured_product_7A9LaC",
+    "multicolumns_videos_blocks_N6Utje",
     "3c381571-e172-4fa5-beb8-79027d436231",
-    "6816d4fe-29d0-4a8d-802e-43061cbf5a80"
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
+    "video_98RpMc"
   ]
 }
