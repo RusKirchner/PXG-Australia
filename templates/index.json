@@ -341,6 +341,40 @@
         "padding_bottom": 0
       }
     },
+    "featured_collection_BGfU33": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "pxg gOLF bALLS",
+        "subtitle": "",
+        "collection": "golf-balls",
+        "heading_size": "h0",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "enable_desktop_slider": true,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify://shop_images/Group_02-v2.png",
+        "image_position_desktop": "left",
+        "image_height": "56",
+        "image_height_mobile": "34",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1aded6ef-5727-4347-bf56-9fc610343e55": {
       "type": "collection-list",
       "blocks": {
@@ -630,6 +664,7 @@
     "slideshow_rzKgaz",
     "image_banner_EYTDCx",
     "f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09",
+    "featured_collection_BGfU33",
     "1aded6ef-5727-4347-bf56-9fc610343e55",
     "53e1a533-81ae-46cc-97dd-782a995beae4",
     "89d7b601-ae47-4d55-89bf-26b79f43060a",
