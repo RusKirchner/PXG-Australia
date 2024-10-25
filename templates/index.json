@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_rzKgaz": {
@@ -15,15 +15,50 @@
         "slide_DXGezN": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-background-Black-Ops.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/PXGM-background-Black-Ops-WEB.jpg",
+            "image": "shopify://shop_images/MDP_20240708_0663.jpg",
+            "badge_label": "PRE-ORDER AVAILABLE",
+            "heading": "MAKE MORE PUTTS WITH ALLAN",
+            "text": "",
+            "hide_text_on_mobile": false,
+            "button_label": "BUY NOW",
+            "price": "899.95",
+            "link": "shopify://products/pxg-allan-putter",
+            "button_style": "primary",
+            "box_align": "top-center",
+            "text_alignment": "center",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#000000",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#da2127",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#ff0008",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_dQrGEe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/PXGM-background-Black-Ops.jpg",
+            "mobile_image": "shopify://shop_images/PXGM-background-Black-Ops-WEB.jpg",
             "badge_label": "",
             "heading": "PXG has landed in Australia!",
             "text": "",
             "hide_text_on_mobile": false,
             "button_label": "Learn More",
             "price": "",
-            "link": "shopify:\/\/products\/black-ops-0311-tour-1-driver",
+            "link": "shopify://products/black-ops-0311-tour-1-driver",
             "button_style": "primary",
             "box_align": "bottom-center",
             "text_alignment": "center",
@@ -52,14 +87,14 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11691-Homepage-2-01-desktop.jpg",
+            "image": "shopify://shop_images/PXGM-11691-Homepage-2-01-desktop.jpg",
             "badge_label": "",
             "heading": "Landing in Australia Soon!",
             "text": "",
             "hide_text_on_mobile": false,
             "button_label": "Learn More",
             "price": "",
-            "link": "shopify:\/\/products\/black-ops-0311-tour-1-driver",
+            "link": "shopify://products/black-ops-0311-tour-1-driver",
             "button_style": "primary",
             "box_align": "bottom-center",
             "text_alignment": "center",
@@ -86,16 +121,17 @@
         },
         "slide_nfGrUj": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
+            "mobile_image": "shopify://shop_images/PXGM-11018-Social-GEN6-Finishes-On-Course-Social-Sizing-8IG-2160x2160-2160x2160-742d66f.jpg",
             "badge_label": "0311 P Gen6",
             "heading": "Double Chrome",
             "text": "",
             "hide_text_on_mobile": false,
             "button_label": "Learn More",
             "price": "",
-            "link": "shopify:\/\/products\/0311-p-gen6",
+            "link": "shopify://products/0311-p-gen6",
             "button_style": "primary",
             "box_align": "middle-center",
             "text_alignment": "left",
@@ -123,6 +159,7 @@
       },
       "block_order": [
         "slide_DXGezN",
+        "slide_dQrGEe",
         "slide_ARPXQW",
         "slide_nfGrUj"
       ],
@@ -159,7 +196,7 @@
         "text_UPrepy": {
           "type": "text",
           "settings": {
-            "text": "<strong>CONGRAULATIONS TO JAKE KNAPP!<\/strong>",
+            "text": "<strong>CONGRAULATIONS TO JAKE KNAPP!</strong>",
             "text_style": "caption-with-letter-spacing"
           }
         },
@@ -167,7 +204,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SEE WITB",
-            "button_link_1": "shopify:\/\/blogs\/news\/jake-knapp-witb",
+            "button_link_1": "shopify://blogs/news/jake-knapp-witb",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -180,13 +217,14 @@
         "text_UPrepy",
         "buttons_pLmafG"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {letter-spacing: 0.05em;}"
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Jake-Knapp-Desktop-2600x600notag_70838876-f761-49b3-950d-2e2c54f96c3d.jpg",
+        "image": "shopify://shop_images/Jake-Knapp-Desktop-2600x600notag.jpg",
+        "image_mobile": "shopify://shop_images/Jake-Knapp-Desktop-2600x600notag_70838876-f761-49b3-950d-2e2c54f96c3d.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt-mobile",
@@ -237,7 +275,7 @@
         "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1": {
           "type": "text",
           "settings": {
-            "text": "<strong>Congratulations to Eric Cole!<\/strong>",
+            "text": "<strong>Congratulations to Eric Cole!</strong>",
             "text_style": "caption-with-letter-spacing"
           }
         },
@@ -245,7 +283,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SEE WITB",
-            "button_link_1": "shopify:\/\/blogs\/news\/eric-cole-witb",
+            "button_link_1": "shopify://blogs/news/eric-cole-witb",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -258,13 +296,14 @@
         "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-text-1",
         "template--21409675575603__f0ddff8d-0a09-4aee-9c9f-0b2fd285ae09-buttons-1"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {letter-spacing: 0.05em;}"
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/PXGM-11479-desktop-2600x6002.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Eric-Cole-500x500_1.jpg",
+        "image": "shopify://shop_images/PXGM-11479-desktop-2600x6002.jpg",
+        "image_mobile": "shopify://shop_images/Eric-Cole-500x500_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt-mobile",
@@ -422,7 +461,7 @@
         "da20392b-5e38-4e39-8f10-ab19f28c9854": {
           "type": "text",
           "settings": {
-            "text": "<h2>CELINE CONQUERS THE COMPETITION<\/h2><p>PXG LPGA Tour Professional Celine Boutier rose to the top of the leaderboard for a fourth time this season to add another impressive win to her resume. Following a head-to-head nine-hole playoff, tying the record for second-longest playoff in LPGA Tour history, Celine ultimately conquered the competition to hoist the trophy at the 2023 Maybank Championship. Congratulations Celine!<\/p>",
+            "text": "<h2>CELINE CONQUERS THE COMPETITION</h2><p>PXG LPGA Tour Professional Celine Boutier rose to the top of the leaderboard for a fourth time this season to add another impressive win to her resume. Following a head-to-head nine-hole playoff, tying the record for second-longest playoff in LPGA Tour history, Celine ultimately conquered the competition to hoist the trophy at the 2023 Maybank Championship. Congratulations Celine!</p>",
             "text_style": "subtitle"
           }
         },
@@ -443,7 +482,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/homepage-1024x600.jpg",
+        "image": "shopify://shop_images/homepage-1024x600.jpg",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
@@ -474,7 +513,7 @@
     "89d7b601-ae47-4d55-89bf-26b79f43060a": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width align-center\" style=\"text-align:center\"><p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>\n\n<h1>PXG GEN6 IRONS <span style=\"color:#f1bb5f;\">RANKED #1<\/span> IN ACCURACY!<\/h1>\n\n<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>",
+        "custom_liquid": "<div class=\"page-width align-center\" style=\"text-align:center\"><p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND</p>\n\n<h1>PXG GEN6 IRONS <span style=\"color:#f1bb5f;\">RANKED #1</span> IN ACCURACY!</h1>\n\n<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)</p>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
@@ -489,8 +528,8 @@
         "title": "Video",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
-        "video_url": "https:\/\/vimeo.com\/862172917",
+        "cover_image": "shopify://shop_images/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
+        "video_url": "https://vimeo.com/862172917",
         "description": "",
         "autoplay": false,
         "enable_controls": true,
