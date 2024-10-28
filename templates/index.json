@@ -20,7 +20,7 @@
             "heading": "MAKE MORE PUTTS WITH ALLAN",
             "text": "",
             "hide_text_on_mobile": false,
-            "button_label": "BUY NOW",
+            "button_label": "SHIPPING DEC 1 - PRE-ORDER",
             "price": "899.95",
             "link": "shopify://products/pxg-allan-putter",
             "button_style": "primary",
@@ -49,6 +49,7 @@
         },
         "slide_dQrGEe": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/PXGM-background-Black-Ops.jpg",
             "mobile_image": "shopify://shop_images/PXGM-background-Black-Ops-WEB.jpg",
