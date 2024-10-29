@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_scheme_body": "inverse",
@@ -25,7 +25,7 @@
     "page_heading_overlay_color": "#000000",
     "page_heading_use_collection_image": false,
     "page_heading_collection_image_height": "15",
-    "page_heading_blog_banner_image": "shopify:\/\/shop_images\/Course-Background-4875x3111-c05126f.jpg",
+    "page_heading_blog_banner_image": "shopify://shop_images/Course-Background-4875x3111-c05126f.jpg",
     "page_heading_blog_image_height": "25",
     "page_heading_other_image_height": "15",
     "enable_breadcrumns": true,
@@ -42,12 +42,12 @@
     "custom_badge_metafield_1": "badges.new",
     "custom_badge_text_color_1": "#16a34a",
     "custom_badge_background_1": "#f0fdf4",
-    "social_facebook_link": "https:\/\/www.facebook.com\/PXGAustralia",
-    "social_instagram_link": "https:\/\/instagram.com\/pxg_au",
+    "social_facebook_link": "https://www.facebook.com/PXGAustralia",
+    "social_instagram_link": "https://instagram.com/pxg_au",
     "social_youtube_link": "",
     "predictive_search_enabled": true,
     "enable_appear_effect": false,
-    "favicon": "shopify:\/\/shop_images\/PXG_Logo512.jpg",
+    "favicon": "shopify://shop_images/PXG_Logo512.jpg",
     "currency_code_enabled": false,
     "free_shipping_enable": false,
     "back_to_top_button_enable": true,
@@ -59,7 +59,7 @@
     "recently_viewed_enable_quick_view": true,
     "recently_viewed_columns_mobile": "1",
     "enable_product_compare": false,
-    "checkout_logo_image": "shopify:\/\/shop_images\/PXG_Logo.png",
+    "checkout_logo_image": "shopify://shop_images/PXG_Logo.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "medium",
     "checkout_body_background_color": "#ffffff",
@@ -514,7 +514,7 @@
         "settings": {
           "enable": false,
           "heading": "G'day! You've landed at the PXG site for Australia and New Zealand.",
-          "content": "<p>PXG's offical partner, Champion Sports runs this website and is the distributor for PXG products in Australia and New Zealand.<\/p>",
+          "content": "<p>PXG's offical partner, Champion Sports runs this website and is the distributor for PXG products in Australia and New Zealand.</p>",
           "color_scheme": "accent-1"
         }
       },
@@ -678,7 +678,7 @@
         "settings": {
           "enable": true,
           "heading": "Signup for our newsletter",
-          "description": "<h3>We will only send you exclusive offers for verified #PXGTroops!<\/h3><h5><br\/>This is the official PXG website for Australia and New Zealand, operated by official PXG partner, Champion Sports.<\/h5>",
+          "description": "<h3>We will only send you exclusive offers for verified #PXGTroops!</h3><h5><br/>This is the official PXG website for Australia and New Zealand, operated by official PXG partner, Champion Sports.</h5>",
           "email_placeholder": "Enter your email here",
           "notification_text": "Don't show this popup again.",
           "content_position": "right",
@@ -695,20 +695,26 @@
     ],
     "blocks": {
       "7456567658179156570": {
-        "type": "shopify:\/\/apps\/adroll-advertising-marketing\/blocks\/adroll-pixel\/c60853ed-1adb-4359-83ae-4ed43ed0b559",
+        "type": "shopify://apps/adroll-advertising-marketing/blocks/adroll-pixel/c60853ed-1adb-4359-83ae-4ed43ed0b559",
         "disabled": false,
         "settings": {
           "enable_email_capture": true
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "3886181796285292942": {
-        "type": "shopify:\/\/apps\/cowlendar-booking\/blocks\/app-embed\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
+        "type": "shopify://apps/cowlendar-booking/blocks/app-embed/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16156609502398088594": {
+        "type": "shopify://apps/omega-facebook-pixel/blocks/app-embed-block/ecdcc423-3dbd-480c-85e8-fdb9789cf058",
         "disabled": false,
         "settings": {
         }
@@ -866,7 +872,7 @@
       "custom_badge_text_color_1": "#16a34a",
       "custom_badge_background_1": "#f0fdf4",
       "predictive_search_enabled": true,
-      "favicon": "shopify:\/\/shop_images\/favicon.png",
+      "favicon": "shopify://shop_images/favicon.png",
       "currency_code_enabled": false,
       "back_to_top_button_enable": true,
       "recently_viewed_enable": true,
