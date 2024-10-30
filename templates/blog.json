@@ -1,1 +1,37 @@
-{"sections":{"main":{"type":"main-blog","settings":{"posts_per_page":24,"show_tags":true,"layout":"grid","show_image":true,"image_height":"medium","show_date":false,"show_author":false,"show_comment":false,"share_enable":false,"share_on_facebook":false,"share_on_twitter":false,"share_on_pinterest":false,"share_on_email":false,"share_link":false,"padding_top":40,"padding_bottom":40}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "posts_per_page": 24,
+        "show_tags": false,
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "show_comment": false,
+        "share_enable": false,
+        "share_on_facebook": false,
+        "share_on_twitter": false,
+        "share_on_pinterest": false,
+        "share_on_email": false,
+        "share_link": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
