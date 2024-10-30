@@ -147,6 +147,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_rYVHUg": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Irons",
+            "title": "0311 P Gen7",
+            "image": "shopify://shop_images/PXGM-9004-0311-GEN6-Irons-One-Sheet-Redesign-v5-1.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "0311 P Gen7",
+            "subheading": "",
+            "button_label": "Learn More",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "1",
+            "link": "shopify://products/gen7-0311-p-irons",
+            "position": "first",
+            "overlay_text_enable": false,
+            "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_DV8Fab": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -622,6 +643,7 @@
         "a5ea8e8a-d822-43ca-82dc-1342578efdda",
         "8663e306-8501-41a8-8c29-ead0b01f8f4b",
         "4d96261f-4044-44ee-89be-5ec2742ba187",
+        "mega_menu_promotion_rYVHUg",
         "mega_menu_promotion_DV8Fab",
         "mega_menu_promotion_LnKk8x",
         "mega_menu_promotion_YwgeKB",
