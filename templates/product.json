@@ -1,19 +1,19 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
         "cpb_custom_product_builder_customproductbuilder_dawn_mHt6d7": {
-          "type": "shopify:\/\/apps\/cpb-custom-product-builder\/blocks\/customproductbuilder-dawn\/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "type": "shopify://apps/cpb-custom-product-builder/blocks/customproductbuilder-dawn/b7770087-aa6d-4fd6-8268-128702bb3d67",
           "settings": {
             "personalize_it": true,
             "personalizeit-button-text": "Personalize & Add To Cart",
@@ -53,6 +53,32 @@
           "type": "price",
           "settings": {
             "variant_price": false
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_qGRiNB": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
           }
         },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
@@ -129,6 +155,7 @@
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
+        "afterpay_on_site_messaging_payments_messaging_qGRiNB",
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
@@ -168,20 +195,20 @@
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND<\/p>"
+            "text": "<p>GOLF.COM* ROBOT TESTED EVERY 2023 IRON AND</p>"
           }
         },
         "template--21409675477299__5f037c15-7714-4621-afad-1e999cc27872-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<p>PXG GEN6 IRONS RANKED #1 in Accuracy!<\/p>",
+            "heading": "<p>PXG GEN6 IRONS RANKED #1 in Accuracy!</p>",
             "heading_size": "hxl"
           }
         },
         "c4963b44-827c-4625-b7e6-66abdd941e9e": {
           "type": "text",
           "settings": {
-            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)<\/p>"
+            "text": "<p>(THAT MEANS MORE FORGIVENESS AND BETTER PERFORMANCE)</p>"
           }
         }
       },
@@ -268,8 +295,8 @@
         "title": "SAY HELLO TO NEW PXG GEN6 IRONS",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
+        "cover_image": "shopify://shop_images/PXGM-10517-0317-T-Homepage-Tile-1024x600.jpg",
+        "video_hosted": "shopify://files/videos/pxg_gen6_irons_tech_snapshot___pxg_gen6_golf_clubs (720p).mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -289,7 +316,7 @@
         "template--21409675477299__77bbc053-b9f9-4e59-811b-31ef30c2709c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>TECHNOLOGY THAT PERFORMS<\/h1>"
+            "text": "<h1>TECHNOLOGY THAT PERFORMS</h1>"
           }
         }
       },
@@ -323,7 +350,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h1>PRECISION WEIGHTING<\/h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.<\/p>",
+            "text": "<h1>PRECISION WEIGHTING</h1><p>One large weight is located near the CG on the back of the clubhead. This large center weight can be used to achieve optimal swing weight. Unique to PXG, customers can experience the benefits of these adjustments during an in-person fitting. Weighting is not intended to be adjusted after purchase.</p>",
             "text_style": "body"
           }
         },
@@ -347,7 +374,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
+        "image": "shopify://shop_images/ECOM-1398-GEN6-Irons-Tech-Slider-Back-Weight.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -433,7 +460,7 @@
         ".table-dark.table-alternating-rows tr:first-of-type,.table-dark.table-alternating-rows tr:nth-child(odd) {background-color: #47474c;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n<\/h1>\n<\/div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n<\/th>\n<th scope=\"col\">\nLofts\n<\/th>\n<th scope=\"col\">\nStandard Length (inches)\n<\/th>\n<th scope=\"col\">\nStandard Lie\n<\/th>\n<th scope=\"col\">\nOffset\n<\/th>\n<th scope=\"col\">\nBounce\n<\/th>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4<\/th>\n<td>18°<\/td>\n<td>39.375\"<\/td>\n<td>60.5°<\/td>\n<td>.250\"<\/td>\n<td>6°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5<\/th>\n<td>20°<\/td>\n<td>38.75\"<\/td>\n<td>61°<\/td>\n<td>.220\"<\/td>\n<td>7°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6<\/th>\n<td>23°<\/td>\n<td>38.125\"<\/td>\n<td>61.5°<\/td>\n<td>.190\"<\/td>\n<td>8°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7<\/th>\n<td>27°<\/td>\n<td>37.5\"<\/td>\n<td>62°<\/td>\n<td>.160\"<\/td>\n<td>9°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8<\/th>\n<td>31°<\/td>\n<td>37\"<\/td>\n<td>62.5°<\/td>\n<td>.130\"<\/td>\n<td>10°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9<\/th>\n<td>36°<\/td>\n<td>36.5\"<\/td>\n<td>63°<\/td>\n<td>.105\"<\/td>\n<td>11°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W<\/th>\n<td>41°<\/td>\n<td>36.25\"<\/td>\n<td>63.5°<\/td>\n<td>.080\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G<\/th>\n<td>47°<\/td>\n<td>36\"<\/td>\n<td>63.5°<\/td>\n<td>.070\"<\/td>\n<td>12°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S<\/th>\n<td>54°<\/td>\n<td>35.75\"<\/td>\n<td>63.5°<\/td>\n<td>.040\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L<\/th>\n<td>60°<\/td>\n<td>35.5\"<\/td>\n<td>63.5°<\/td>\n<td>.030\"<\/td>\n<td>13°<\/td>\n<\/tr>\n<\/tbody><\/table>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div><\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div id=\"specs\" class=\"page-width experience-component experience-commerce_layouts-grid\" style=\"text-align:center\">\n<div class=\" bg-dark\">\n<div class=\" container grid-component-container\">\n<div class=\"pd-layout-grid bars-none width-Normal default-cols-3 align-left border-no \">\n<div style=\"--_desktopGap:30px;--_mobileGap:14px;--_defaultDesktopColumnSpan:8;\" class=\"grid\"><div class=\"item\">\n<div id=\"ctacdebd7141b6d417685419b86fe\" class=\"grid-item-container pb-5 mobile-hero\" style=\" --_desktopColumnSpan: 24;--_mobileColumnSpan: 24;align-self: normal;\">\n<div class=\"experience-region experience-components\"><div id=\"specifications\" class=\"experience-component experience-commerce_assets-table pt-3 pb-2\">\n<div class=\"component-table bg-dark pt-3 pb-2\" id=\"specifications\" style=\"\">\n<div class=\"\">\n<div class=\"text-center text-lg-center pt-3 pb-5 pt-lg-5\">\n<h1 class=\"header-output h1 prohibition  theme-override-color_white\">\nPXG 0311 XP GEN6 Iron Specs\n</h1>\n</div>\n<div class=\"sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n<th scope=\"col\" class=\"table-head\">\nClub\n</th>\n<th scope=\"col\">\nLofts\n</th>\n<th scope=\"col\">\nStandard Length (inches)\n</th>\n<th scope=\"col\">\nStandard Lie\n</th>\n<th scope=\"col\">\nOffset\n</th>\n<th scope=\"col\">\nBounce\n</th>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">4</th>\n<td>18°</td>\n<td>39.375\"</td>\n<td>60.5°</td>\n<td>.250\"</td>\n<td>6°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">5</th>\n<td>20°</td>\n<td>38.75\"</td>\n<td>61°</td>\n<td>.220\"</td>\n<td>7°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">6</th>\n<td>23°</td>\n<td>38.125\"</td>\n<td>61.5°</td>\n<td>.190\"</td>\n<td>8°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">7</th>\n<td>27°</td>\n<td>37.5\"</td>\n<td>62°</td>\n<td>.160\"</td>\n<td>9°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">8</th>\n<td>31°</td>\n<td>37\"</td>\n<td>62.5°</td>\n<td>.130\"</td>\n<td>10°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">9</th>\n<td>36°</td>\n<td>36.5\"</td>\n<td>63°</td>\n<td>.105\"</td>\n<td>11°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">W</th>\n<td>41°</td>\n<td>36.25\"</td>\n<td>63.5°</td>\n<td>.080\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">G</th>\n<td>47°</td>\n<td>36\"</td>\n<td>63.5°</td>\n<td>.070\"</td>\n<td>12°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">S</th>\n<td>54°</td>\n<td>35.75\"</td>\n<td>63.5°</td>\n<td>.040\"</td>\n<td>13°</td>\n</tr>\n<tr>\n<th class=\"table-head\" scope=\"row\">L</th>\n<td>60°</td>\n<td>35.5\"</td>\n<td>63.5°</td>\n<td>.030\"</td>\n<td>13°</td>\n</tr>\n</tbody></table>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -445,7 +472,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-1": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-In-Bag-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-In-Bag-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -471,7 +498,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-2": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Upside-Down-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -497,7 +524,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-3": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Chrom-Sole-View_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -523,7 +550,7 @@
         "template--21409675477299__6c728f20-a922-40f0-bee5-f86687bddb68-text-overlay-image-4": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
+            "image": "shopify://shop_images/GEN6-Iron-Photography-Xtreme-Dark-Sole_1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -578,14 +605,14 @@
         "168a096b-d502-417f-b0ca-426a2a9cae2d": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.<\/h2>",
+            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.</h2>",
             "heading_size": "h0"
           }
         },
         "f4bb9d7f-8f59-40e2-972c-abd2af401648": {
           "type": "text",
           "settings": {
-            "text": "<h2><\/h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br\/><br\/>If you need us, give Sales & Support a call at <a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG<\/a> to get on the books.<\/p>"
+            "text": "<h2></h2><p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt. <br/><br/>If you need us, give Sales & Support a call at <a href=\"tel:18447529794\" title=\"1.844.PLAY.PXG\">1.844.PLAY.PXG</a> to get on the books.</p>"
           }
         }
       },
@@ -613,8 +640,8 @@
         "title": "Chrome or Black",
         "subtitle": "your choice",
         "heading_size": "h1",
-        "before_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
-        "after_image": "shopify:\/\/shop_images\/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
+        "before_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-P_1_a3556167-f18c-451a-a1c1-bcfa3e6e2a71.png",
+        "after_image": "shopify://shop_images/ECOM-1397-Marquee-900x900-0311-GEN6-Irons-Black-Label_1.png",
         "image_height": 100,
         "image_fit": "cover",
         "before_text": "Chrome",
