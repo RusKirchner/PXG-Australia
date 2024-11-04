@@ -57,6 +57,7 @@
         },
         "afterpay_on_site_messaging_payments_messaging_qGRiNB": {
           "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "disabled": true,
           "settings": {
             "text_align": "inherit",
             "margin_top": 16,
