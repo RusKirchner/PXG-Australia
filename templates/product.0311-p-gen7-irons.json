@@ -712,6 +712,32 @@
             "variant_price": false
           }
         },
+        "afterpay_on_site_messaging_payments_messaging_tqrkK6": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9": {
           "type": "description",
           "settings": {
@@ -786,6 +812,7 @@
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
+        "afterpay_on_site_messaging_payments_messaging_tqrkK6",
         "1ceb2c7c-cd15-4386-86ae-4a7e76a707b9",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
@@ -1329,9 +1356,7 @@
     "342fa470-7277-4291-be0f-d2979708f671": {
       "type": "page",
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "page": "pxg-0311-p-gen6-iron-specs",
         "heading_size": "h1",
