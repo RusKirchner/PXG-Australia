@@ -501,6 +501,90 @@
         "padding_bottom": 40
       }
     },
+    "featured_product_fGCwFK": {
+      "type": "featured-product",
+      "blocks": {
+        "title_bwWDxa": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": true,
+            "title_size": "h2"
+          }
+        },
+        "price_UQJKVN": {
+          "type": "price",
+          "settings": {
+            "variant_price": false
+          }
+        },
+        "sale_box_99ArbR": {
+          "type": "sale_box",
+          "settings": {
+            "show_free_shipping_bar": true,
+            "enable_compare": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "variant",
+            "size_chart_enable": true,
+            "size_chart_option": "size",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": true
+          }
+        },
+        "description_XQicbx": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
+        "share_jzbzRd": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        }
+      },
+      "block_order": [
+        "title_bwWDxa",
+        "price_UQJKVN",
+        "sale_box_99ArbR",
+        "description_XQicbx",
+        "share_jzbzRd"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "black-and-gold-limited-edition-driver-and-irons",
+        "section_width": "page-width--full",
+        "use_background_input": true,
+        "auto_scroll_up_mobile": false,
+        "hide_when_empty_content": true,
+        "view_details_button_text": "View product details",
+        "color_scheme": "inverse",
+        "enable_sticky_info": false,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_size": "medium",
+        "image_ratio": "adapt",
+        "image_fit": true,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "53e1a533-81ae-46cc-97dd-782a995beae4": {
       "type": "image-with-text",
       "blocks": {
@@ -765,6 +849,75 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "lookbook_N9LNNa": {
+      "type": "lookbook",
+      "blocks": {
+        "hotspot_7JgTQN": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 30,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 30,
+            "vertical_axis_mobile": 30
+          }
+        },
+        "hotspot_eXYfnh": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 60,
+            "vertical_axis": 60,
+            "horizontal_axis_mobile": 60,
+            "vertical_axis_mobile": 60
+          }
+        },
+        "hotspot_XW3U47": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 80,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 80,
+            "vertical_axis_mobile": 30
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_7JgTQN",
+        "hotspot_eXYfnh",
+        "hotspot_XW3U47"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "ORDER BEFORE DEC 5 FOR CHRISTMAS",
+        "title": "LIMITED EDITION",
+        "image": "shopify://shop_images/GoldandBlackGEN6IR_DR_01.jpg",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "hotspot_size": "3",
+        "hotspot_size_desktop": "4",
+        "content_layout": "popup",
+        "full_width": true,
+        "color_scheme": "",
+        "product_image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "enable_quick_view": false,
+        "quick_view_button_text": "View",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -774,11 +927,13 @@
     "video_98RpMc",
     "featured_collection_BGfU33",
     "1aded6ef-5727-4347-bf56-9fc610343e55",
+    "featured_product_fGCwFK",
     "53e1a533-81ae-46cc-97dd-782a995beae4",
     "89d7b601-ae47-4d55-89bf-26b79f43060a",
     "d473dbe2-d4cb-4299-aa09-d3578d047e5c",
     "featured_product_7A9LaC",
     "3c381571-e172-4fa5-beb8-79027d436231",
-    "6816d4fe-29d0-4a8d-802e-43061cbf5a80"
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
+    "lookbook_N9LNNa"
   ]
 }
