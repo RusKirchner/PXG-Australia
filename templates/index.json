@@ -585,6 +585,27 @@
         "padding_bottom": 36
       }
     },
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "PXG BLOG",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 4,
+        "image_height": "large",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "blog_card_text_alignment": "center",
+        "blog_card_color_scheme": "scheme-a4c001d4-8f94-4d1f-83d5-d1e9e04c0d66",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "53e1a533-81ae-46cc-97dd-782a995beae4": {
       "type": "image-with-text",
       "blocks": {
@@ -829,27 +850,6 @@
         "padding_bottom": 36
       }
     },
-    "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
-      "type": "featured-blog",
-      "settings": {
-        "title": "PXG BLOG",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 4,
-        "image_height": "large",
-        "show_view_all": true,
-        "columns_desktop": 3,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "blog_card_text_alignment": "center",
-        "blog_card_color_scheme": "scheme-a4c001d4-8f94-4d1f-83d5-d1e9e04c0d66",
-        "show_image": true,
-        "show_date": false,
-        "show_author": false,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "lookbook_N9LNNa": {
       "type": "lookbook",
       "blocks": {
@@ -858,8 +858,8 @@
           "settings": {
             "product": "",
             "color_scheme": "",
-            "colors_background": "#000",
-            "colors_text": "#fff",
+            "colors_background": "#000000",
+            "colors_text": "#ffffff",
             "horizontal_axis": 30,
             "vertical_axis": 30,
             "horizontal_axis_mobile": 30,
@@ -871,8 +871,8 @@
           "settings": {
             "product": "",
             "color_scheme": "",
-            "colors_background": "#000",
-            "colors_text": "#fff",
+            "colors_background": "#000000",
+            "colors_text": "#ffffff",
             "horizontal_axis": 60,
             "vertical_axis": 60,
             "horizontal_axis_mobile": 60,
@@ -884,8 +884,8 @@
           "settings": {
             "product": "",
             "color_scheme": "",
-            "colors_background": "#000",
-            "colors_text": "#fff",
+            "colors_background": "#000000",
+            "colors_text": "#ffffff",
             "horizontal_axis": 80,
             "vertical_axis": 30,
             "horizontal_axis_mobile": 80,
@@ -928,12 +928,12 @@
     "featured_collection_BGfU33",
     "1aded6ef-5727-4347-bf56-9fc610343e55",
     "featured_product_fGCwFK",
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "53e1a533-81ae-46cc-97dd-782a995beae4",
     "89d7b601-ae47-4d55-89bf-26b79f43060a",
     "d473dbe2-d4cb-4299-aa09-d3578d047e5c",
     "featured_product_7A9LaC",
     "3c381571-e172-4fa5-beb8-79027d436231",
-    "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "lookbook_N9LNNa"
   ]
 }
