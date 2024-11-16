@@ -640,12 +640,77 @@
         "da20392b-5e38-4e39-8f10-ab19f28c9854",
         "2975d598-3d16-4116-84b5-78c3997003df"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/homepage-1024x600.jpg",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#161616",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_weycxR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QMYpJG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_bgTgmX": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Welcome back to the winner’s circle Nico!</h2><p>Congratulations to Nico Echavarria on earning his second PGA TOUR victory at the ZOZO Championship in Japan!</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_Ejib9c": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "PLAY VIDEO",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QMYpJG",
+        "text_bgTgmX",
+        "button_Ejib9c"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Nico-Win-Web-Block-2_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -930,6 +995,7 @@
     "featured_product_fGCwFK",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "53e1a533-81ae-46cc-97dd-782a995beae4",
+    "image_with_text_weycxR",
     "89d7b601-ae47-4d55-89bf-26b79f43060a",
     "d473dbe2-d4cb-4299-aa09-d3578d047e5c",
     "featured_product_7A9LaC",
