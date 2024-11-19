@@ -261,6 +261,166 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_Y4dt9a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nDESERT CLUB SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\" class=\"table-head\">\n\t\t\t\t\t\t\t\t\t<b>CLUB</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> LOFT</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> LENGTH </b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> LIE</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> OFFSET </b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> BOUNCE </b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> SWING WEIGHT </b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th class=\"table-head\" scope=\"row\">DC</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>44°</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>36.5\"</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>63°</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>.050\"</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>10°</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>D0</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t</tbody></table></div>",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_xPEKhr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_j6YgVK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the PXG Desert Club?",
+            "icon": "none",
+            "row_content": "<p>The PXG Desert Club is a versatile club designed to be your go-to option when playing in tough conditions that might damage your main clubs. It's perfect for desert courses or any rough terrain where you want to protect your premium set.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HJAM4g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does the PXG Desert Club differ from my regular clubs?",
+            "icon": "none",
+            "row_content": "<p>The Desert Club is crafted with durability in mind, featuring a rugged, raw steel aesthetic that’s built to take on harsh conditions. It allows you to preserve your main clubs for pristine playing conditions while still delivering performance on challenging terrain.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nit8CP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What kind of materials is the PXG Desert Club made from?",
+            "icon": "none",
+            "row_content": "<p>The PXG Desert Club is constructed from Raw 17-4 Hardened Stainless Steel that is highly durable and more resistant to scratches, dents, and other wear and tear than soft steel. It’s designed to withstand the toughest elements without sacrificing performance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DREHX7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the PXG Desert Club customizable?",
+            "icon": "none",
+            "row_content": "<p>Yes! Like all PXG clubs, the Desert Club can be custom-fit to match your preferences for shaft length, loft, grip, and other key specs to ensure optimal performance on difficult courses.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_c4PVQ6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who should use the PXG Desert Club?",
+            "icon": "none",
+            "row_content": "<p>This club is ideal for golfers who frequently play in desert, rocky, or rough terrain and want a reliable club they can use without worrying about damaging their main set. It’s also a great choice for those who want to maintain performance in tough conditions while keeping their premium clubs in pristine condition.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JtfQKK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the PXG Desert Club on regular courses?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! While it's designed for rougher terrain, the Desert Club performs just as well on regular courses. However, it shines in challenging conditions, where its durability and rugged design are most beneficial.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_q6NpGQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the PXG Desert Club part of a set?",
+            "icon": "none",
+            "row_content": "<p>Currently, the PXG Desert Club is sold as a standalone product. It’s meant to complement your existing set of clubs by providing a specialized option for tough conditions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wRAnke": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I maintain or clean the PXG Desert Club?",
+            "icon": "none",
+            "row_content": "<p>Maintenance for the Desert Club is simple. Rinse off dirt and debris after use, and occasionally wipe it down with a damp cloth. The club is designed to endure heavy use, so it requires minimal upkeep.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dEgykz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the PXG Desert Club be used in tournaments?",
+            "icon": "none",
+            "row_content": "<p>Yes, the PXG Desert Club conforms to the rules of golf, making it tournament-legal. However, it's best to check specific tournament regulations if you're unsure.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bUVwqm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I purchase the PXG Desert Club?",
+            "icon": "none",
+            "row_content": "<p>The PXG Desert Club is available for purchase at PXG retail stores, on the PXG website, or through certified PXG club fitters.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_m8BMCE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What kind of performance can I expect from the PXG Desert Club?",
+            "icon": "none",
+            "row_content": "<p>You can expect high-level performance with the Desert Club, including solid distance, control, and playability. Its design prioritizes durability without sacrificing key elements of performance, so you’ll still enjoy a great golfing experience.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QC34qc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the PXG Desert Club come with a warranty?",
+            "icon": "none",
+            "row_content": "<p>Yes, like all PXG clubs, the Desert Club comes with PXG's standard warranty covering manufacturing defects. Please visit the PXG website for full warranty details.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qk4GLk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I test the PXG Desert Club before purchasing?",
+            "icon": "none",
+            "row_content": "<p>PXG offers fitting sessions and demo days where you can try out the Desert Club before making a purchase. Check with your local PXG retailer or fitter for availability.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_j6YgVK",
+        "collapsible_row_HJAM4g",
+        "collapsible_row_nit8CP",
+        "collapsible_row_DREHX7",
+        "collapsible_row_c4PVQ6",
+        "collapsible_row_JtfQKK",
+        "collapsible_row_q6NpGQ",
+        "collapsible_row_wRAnke",
+        "collapsible_row_dEgykz",
+        "collapsible_row_bUVwqm",
+        "collapsible_row_m8BMCE",
+        "collapsible_row_QC34qc",
+        "collapsible_row_Qk4GLk"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "title": "PXG DESERT CLUB FAQs",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -967,6 +1127,8 @@
     "video_zJxNTt",
     "rich_text_FFyP6U",
     "gallery_below_6eezCB",
+    "custom_liquid_Y4dt9a",
+    "collapsible_content_xPEKhr",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
