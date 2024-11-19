@@ -49,14 +49,14 @@
         "color_heading": "#ffffff",
         "gradient_heading": "",
         "color_text": "#ffffff",
-        "color_highlight_text": "#DA2127",
+        "color_highlight_text": "#da2127",
         "color_caption": "#ffffff",
         "color_countdown": "#ffffff",
         "color_button_text": "rgba(0,0,0,0)",
         "color_button": "rgba(0,0,0,0)",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "background_image_section": "shopify://shop_images/GEN7-2100x700.jpg",
         "enable_parallax_scrolling_effect": false,
@@ -130,9 +130,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -155,9 +155,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -180,9 +180,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -205,9 +205,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -230,9 +230,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         }
@@ -302,6 +302,7 @@
         },
         "collapsible_row_DREHX7": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Is the PXG Desert Club customizable?",
             "icon": "none",
@@ -356,6 +357,7 @@
         },
         "collapsible_row_bUVwqm": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Where can I purchase the PXG Desert Club?",
             "icon": "none",
@@ -374,6 +376,7 @@
         },
         "collapsible_row_QC34qc": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Does the PXG Desert Club come with a warranty?",
             "icon": "none",
@@ -383,6 +386,7 @@
         },
         "collapsible_row_Qk4GLk": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Can I test the PXG Desert Club before purchasing?",
             "icon": "none",
@@ -405,6 +409,9 @@
         "collapsible_row_m8BMCE",
         "collapsible_row_QC34qc",
         "collapsible_row_Qk4GLk"
+      ],
+      "custom_css": [
+        "h2 {letter-spacing: 0.05em; /* Adjust the value as needed */}"
       ],
       "settings": {
         "section_width": "narrow",
@@ -442,11 +449,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -468,11 +475,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -494,11 +501,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         }
