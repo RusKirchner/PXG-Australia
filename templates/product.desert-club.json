@@ -9,6 +9,60 @@
  */
 {
   "sections": {
+    "image_with_text_AaW37P": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6RTYWK": {
+          "type": "caption",
+          "settings": {
+            "caption": "New",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "text_eFkQxc": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ product.title }}</h1><h1> </h1><p>Meet the PXG Desert Club – your go-to for extreme lies and great escapes! Built from raw, hardened stainless steel, it's designed to take the hits your gamer clubs shouldn’t. With a Pitching Wedge loft and an 8-Iron length, this durable iron has the versatility to get your round back on track. Avoid the dings, dents, and scrapes to your irons, and call on the Desert Club to conquer every wild shot with confidence.  </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_6RTYWK",
+        "text_eFkQxc"
+      ],
+      "settings": {
+        "grid_layout": "full_bleed",
+        "image": "shopify://shop_images/Mask_Group_10.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#ffffff",
+        "gradient_heading": "",
+        "color_text": "#ffffff",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#ffffff",
+        "color_countdown": "#ffffff",
+        "color_button_text": "rgba(0,0,0,0)",
+        "color_button": "rgba(0,0,0,0)",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "background_image_section": "shopify://shop_images/GEN7-2100x700.jpg",
+        "enable_parallax_scrolling_effect": false,
+        "overlay_color": "#1f2428"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -711,6 +765,7 @@
     }
   },
   "order": [
+    "image_with_text_AaW37P",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
