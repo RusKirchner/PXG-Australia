@@ -33,7 +33,7 @@
         "text_eFkQxc"
       ],
       "settings": {
-        "grid_layout": "full_bleed",
+        "grid_layout": "stretched_grid",
         "image": "shopify://shop_images/Mask_Group_10.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
