@@ -63,6 +63,204 @@
         "overlay_color": "#1f2428"
       }
     },
+    "video_zJxNTt": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/1949136933-84d8cfab037f70c3709bef0b1d2c1847907204cc425837b5a720956872c844ea-d.webp",
+        "video_url": "https://player.vimeo.com/video/1028903759?controls=0&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_FFyP6U": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_q63faJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>GAME CHANGING TECHNOLOGY</p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_q63faJ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gallery_below_6eezCB": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_QnkB7P": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_72.webp",
+            "link": "",
+            "text": "More durable than 8620 or 431 stainless steels; less wear and scratches. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Crafted from Raw 17-4 Hardened Stainless Steel",
+            "heading_size": "h3",
+            "heading_uppercase": true,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_UcbpkX": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_69.webp",
+            "link": "",
+            "text": "Providing long-lasting, rust-free performance. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Raw Finish",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_g7mfhn": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_73.webp",
+            "link": "",
+            "text": "Ideal for a range of shots, from the desert to rough or rocky terrain. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Versatile Shot-making",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_ANRbbK": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_70.webp",
+            "link": "",
+            "text": "Enables full swings to achieve distances between 100-150 yards. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Pitching Wedge Loft (44°) and 8-Iron Length (36.5\")",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_9gRHUj": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_71.png",
+            "link": "",
+            "text": "Balances forgiveness and versatility for varying conditions and shot types. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Mid-Bounce, Versatile Sole",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_QnkB7P",
+        "text_overlay_image_UcbpkX",
+        "text_overlay_image_g7mfhn",
+        "text_overlay_image_ANRbbK",
+        "text_overlay_image_9gRHUj"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -766,6 +964,9 @@
   },
   "order": [
     "image_with_text_AaW37P",
+    "video_zJxNTt",
+    "rich_text_FFyP6U",
+    "gallery_below_6eezCB",
     "169699214611e587ad",
     "main",
     "5f037c15-7714-4621-afad-1e999cc27872",
