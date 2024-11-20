@@ -538,6 +538,7 @@
       "blocks": {
         "cpb_custom_product_builder_customproductbuilder_dawn_mHt6d7": {
           "type": "shopify://apps/cpb-custom-product-builder/blocks/customproductbuilder-dawn/b7770087-aa6d-4fd6-8268-128702bb3d67",
+          "disabled": true,
           "settings": {
             "personalize_it": true,
             "personalizeit-button-text": "Personalize & Add To Cart",
@@ -576,12 +577,11 @@
         "price": {
           "type": "price",
           "settings": {
-            "variant_price": false
+            "variant_price": true
           }
         },
         "afterpay_on_site_messaging_payments_messaging_qGRiNB": {
           "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
-          "disabled": true,
           "settings": {
             "text_align": "inherit",
             "margin_top": 16,
