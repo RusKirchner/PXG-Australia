@@ -567,6 +567,14 @@
             "title_size": "h2"
           }
         },
+        "text_73cigq": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "PRE-ORDER - ETA SHIPPING FROM DEC 1",
+            "text_style": "body"
+          }
+        },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "disabled": true,
@@ -678,6 +686,7 @@
       },
       "block_order": [
         "title",
+        "text_73cigq",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
         "afterpay_on_site_messaging_payments_messaging_qGRiNB",
