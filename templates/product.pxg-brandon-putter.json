@@ -507,6 +507,38 @@
         "padding_bottom": 40
       }
     },
+    "rich_text_ibkzma": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aBJ4gp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>WE GOT YOUR STICKS. PERIOD.</h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_zXCtTm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Performance is our only measure of success. That’s why the nitty-gritty details matter – so your clubs feel like a hand-tailored Italian suit. On the off chance you discover that your club specs could use a little tweak, don’t sweat it. Parsons Xtreme Golf always backs your play. As our performance promise, we offer a complimentary spec check at our retail locations and fitting studios within 1 year of club receipt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aBJ4gp",
+        "text_zXCtTm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -729,6 +761,7 @@
     "custom_liquid_qWNcGp",
     "image_with_text_VXaBwB",
     "gallery_zWEwPX",
+    "rich_text_ibkzma",
     "169699214611e587ad",
     "main",
     "product-recommendations"
