@@ -82,6 +82,31 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_KefiAe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gLcFRq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>TECHNOLOGY THAT PERFORMS</p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gLcFRq"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -299,6 +324,7 @@
   "order": [
     "image_with_text_c6AqJx",
     "video_pANUqg",
+    "rich_text_KefiAe",
     "169699214611e587ad",
     "main",
     "product-recommendations"
