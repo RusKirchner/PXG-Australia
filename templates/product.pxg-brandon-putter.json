@@ -286,6 +286,15 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_qWNcGp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center\">\n<h2>\nBRANDON TOUR SERIES SPECS\n</h2>\n</div>\n<div class=\"page-width sticky-first-column\">\n<table class=\"table-dark text-center table-alternating-rows\">\n<tbody><tr>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\" class=\"table-head\">\n\t\t\t\t\t\t\t\t\t<b>HOSEL TYPE</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> STOCK WEIGHT</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> MIN HEAD WEIGHT </b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th scope=\"col\">\n\t\t\t\t\t\t\t\t\t<b> MAX HEAD WEIGHT</b>\n\t\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th class=\"table-head\" scope=\"row\">Plumbers Neck</th>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>360g</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>345g</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>380g</td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t</tbody></table></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -505,6 +514,7 @@
     "video_pANUqg",
     "rich_text_KefiAe",
     "gallery_below_CwRjzt",
+    "custom_liquid_qWNcGp",
     "169699214611e587ad",
     "main",
     "product-recommendations"
