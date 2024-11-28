@@ -348,6 +348,165 @@
         "overlay_color": "#1E40AF"
       }
     },
+    "gallery_zWEwPX": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_XrRFP9": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Brandon-Lifestyle-01.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_VWYVrx": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Brandon-Lifestyle-02.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_XMfjtW": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Brandon-Lifestyle-03.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_fNYJNz": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Brandon-Lifestyle-04.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_DCR67F": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Brandon-Lifestyle-06.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_XrRFP9",
+        "text_overlay_image_VWYVrx",
+        "text_overlay_image_XMfjtW",
+        "text_overlay_image_fNYJNz",
+        "text_overlay_image_DCR67F"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 2,
+        "columns_tablet": "2",
+        "full_width": true,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -569,6 +728,7 @@
     "gallery_below_CwRjzt",
     "custom_liquid_qWNcGp",
     "image_with_text_VXaBwB",
+    "gallery_zWEwPX",
     "169699214611e587ad",
     "main",
     "product-recommendations"
