@@ -62,6 +62,26 @@
         "overlay_color": "#1f2428"
       }
     },
+    "video_pANUqg": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/1953390720-3e418570c232ad56e1bb9a7e8bd1c4f02de71e8b4ed7d2d7b397d57298765e0a-d.webp",
+        "video_url": "https://player.vimeo.com/video/1032463895?controls=0&app_id=122963&texttrack=false",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -278,6 +298,7 @@
   },
   "order": [
     "image_with_text_c6AqJx",
+    "video_pANUqg",
     "169699214611e587ad",
     "main",
     "product-recommendations"
