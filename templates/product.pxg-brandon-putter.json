@@ -234,6 +234,31 @@
             "overlay_color": "#000",
             "overlay_opacity": 0
           }
+        },
+        "text_overlay_image_irt3dC": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_125.webp",
+            "link": "",
+            "text": "The Brandon features a soft ballast option, while the Brandon II delivers defined ballasts – both options are offered to suit the player’s visual preferences at address. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
@@ -241,7 +266,8 @@
         "text_overlay_image_YmNrf7",
         "text_overlay_image_fejCbr",
         "text_overlay_image_3hECcr",
-        "text_overlay_image_zzpJEe"
+        "text_overlay_image_zzpJEe",
+        "text_overlay_image_irt3dC"
       ],
       "settings": {
         "title": "",
