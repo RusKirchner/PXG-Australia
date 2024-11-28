@@ -107,6 +107,159 @@
         "padding_bottom": 40
       }
     },
+    "gallery_below_CwRjzt": {
+      "type": "gallery-below",
+      "blocks": {
+        "text_overlay_image_6FainW": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_130.webp",
+            "link": "",
+            "text": "The shallow fly-cut face delivers a firm feel and solid sound, providing tour-level response and feedback at impact. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "TOUR-INSPIRED FACE MILLING",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_YmNrf7": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_129.webp",
+            "link": "",
+            "text": "Orients the shaft in a heel location with a mid-toe hang angle, optimal for players with mild face rotation, but versatile for both straight and arced strokes. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Plumber’s Neck Hosel",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_fejCbr": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_128.webp",
+            "link": "",
+            "text": "Brandon: 42° toe hang and Brandon II: 43° toe hang. The slight difference in toe hang between the two models gives players the option to choose the one that best matches their stroke for improved control and smoother putting performance. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Toe Hang Angle",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_3hECcr": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_127.webp",
+            "link": "",
+            "text": "Offers flexibility to fine-tune the putter’s performance based on personal preferences and stroke type for better accuracy and control. ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Precision Weighting Technology",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        },
+        "text_overlay_image_zzpJEe": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/Group_126.webp",
+            "link": "",
+            "text": "Enhances alignment, helping golfers improve accuracy and consistency on the green.  ",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "High-Contrast Sightline",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "center",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_6FainW",
+        "text_overlay_image_YmNrf7",
+        "text_overlay_image_fejCbr",
+        "text_overlay_image_3hECcr",
+        "text_overlay_image_zzpJEe"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 3,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "color_scheme": "inverse",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -325,6 +478,7 @@
     "image_with_text_c6AqJx",
     "video_pANUqg",
     "rich_text_KefiAe",
+    "gallery_below_CwRjzt",
     "169699214611e587ad",
     "main",
     "product-recommendations"
