@@ -295,6 +295,59 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_VXaBwB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_z7heVr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ultimate Adjustability",
+            "heading_size": "h1",
+            "enable_bold_heading": false
+          }
+        },
+        "text_g8QTfp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PXG’s Precision Weighting Technology allows for the customization of head weight and balance to suit player preferences and correct stroke tendencies.  </p><p>Heavier weights in the toe prevent pulling putts, while heavier heel weights help close the face to avoid pushing putts. Weights are available in 2.5, 5, 7.5, 10, 12.5, 15, 17.5, and 20-gram options and can also be used to adjust the overall head mass. In the standard configuration, 10g Weights are included. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z7heVr",
+        "text_g8QTfp"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/MDP_20241105_1388_copy.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "color_heading": "#fdfdfd",
+        "gradient_heading": "",
+        "color_text": "#fdfdfd",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#fdfdfd",
+        "color_countdown": "#fdfdfd",
+        "color_button_text": "#fff",
+        "color_button": "#fdfdfd",
+        "background_container": "rgba(0,0,0,0)",
+        "gradient_background_container": "",
+        "background_section": "#000000",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "169699214611e587ad": {
       "type": "apps",
       "blocks": {
@@ -515,6 +568,7 @@
     "rich_text_KefiAe",
     "gallery_below_CwRjzt",
     "custom_liquid_qWNcGp",
+    "image_with_text_VXaBwB",
     "169699214611e587ad",
     "main",
     "product-recommendations"
