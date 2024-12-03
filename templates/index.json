@@ -560,10 +560,9 @@
         "description_XQicbx",
         "share_jzbzRd"
       ],
-      "disabled": true,
       "settings": {
-        "product": "black-and-gold-limited-edition-driver-and-irons",
-        "section_width": "page-width--full",
+        "product": "pxg-desert-club",
+        "section_width": "page-width",
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
         "hide_when_empty_content": true,
