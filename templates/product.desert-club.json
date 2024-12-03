@@ -585,7 +585,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "variant_price": true
+            "variant_price": false
           }
         },
         "afterpay_on_site_messaging_payments_messaging_qGRiNB": {
