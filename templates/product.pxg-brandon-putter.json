@@ -129,9 +129,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -154,16 +154,16 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
         "text_overlay_image_fejCbr": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/Group_128.webp",
+            "image": "shopify://shop_images/Group_20131.png",
             "link": "",
             "text": "Brandon: 42° toe hang and Brandon II: 43° toe hang. The slight difference in toe hang between the two models gives players the option to choose the one that best matches their stroke for improved control and smoother putting performance. ",
             "text_style": "subtitle",
@@ -179,9 +179,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -204,9 +204,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -229,9 +229,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         },
@@ -254,9 +254,9 @@
             "vertical_alignment": "center",
             "heading_color": "#000000",
             "caption_color": "#000000",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 0
           }
         }
@@ -335,17 +335,17 @@
         "color_heading": "#fdfdfd",
         "gradient_heading": "",
         "color_text": "#fdfdfd",
-        "color_highlight_text": "#DA2127",
+        "color_highlight_text": "#da2127",
         "color_caption": "#fdfdfd",
         "color_countdown": "#fdfdfd",
-        "color_button_text": "#fff",
+        "color_button_text": "#ffffff",
         "color_button": "#fdfdfd",
         "background_container": "rgba(0,0,0,0)",
         "gradient_background_container": "",
         "background_section": "#000000",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "gallery_zWEwPX": {
@@ -369,11 +369,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -395,11 +395,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -421,11 +421,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -447,11 +447,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -473,11 +473,11 @@
             "button_pin_bottom": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         }
