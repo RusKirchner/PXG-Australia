@@ -16,11 +16,11 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/MDP_20240708_0663.jpg",
-            "badge_label": "PRE-ORDER AVAILABLE",
+            "badge_label": "",
             "heading": "MAKE MORE PUTTS WITH ALLAN",
             "text": "",
             "hide_text_on_mobile": false,
-            "button_label": "SHIPPING DEC 15 - PRE-ORDER",
+            "button_label": "ORDER NOW",
             "price": "899.95",
             "link": "shopify://products/pxg-allan-putter",
             "button_style": "primary",
