@@ -522,7 +522,7 @@
           "settings": {
             "show_free_shipping_bar": true,
             "enable_compare": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "enable_color_swatches": true,
             "color_swatches_style": "variant",
             "size_chart_enable": true,
